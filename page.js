@@ -1,6 +1,4 @@
 import { Mark } from './mark.js'
-let stepCount = 12
-
 
 export class Page {
   constructor (canvasId) {
@@ -9,20 +7,18 @@ export class Page {
     this.canvasParams = {
       width: 480,
       height: 640,
-      backgroundColor: '#f0ebe8' //'#084e47'  '#000000'
+      backgroundColor: '#f0ebe8'
     }
     this.tempMarks = []
     this.transitioning = false
-    this.stepCount = stepCount
+    this.stepCount = 12
   }
 
   addMark (mark) {
-    // console.log('2')
     this.marks.push(mark)
   }
 
   addTempMark (mark) {
-    // console.log('2')
     this.tempMarks.push(mark)
   }
 
@@ -30,8 +26,8 @@ export class Page {
     this.marks.pop()
   }
 
-  clearCanvas () {
-    const canvas = document.getElementById(this.canvasId)
+  clearCanvas (targetCanvas) {
+    const canvas = targetCanvas || document.getElementById(this.canvasId)
     const ctx = canvas.getContext('2d')
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     ctx.fillStyle = this.canvasParams.backgroundColor
@@ -50,47 +46,29 @@ export class Page {
     }
   }
 
-  render (trans = false) {
-    this.clearCanvas()
-
+  render (trans = false, targetCanvas) {
+    this.clearCanvas(targetCanvas)
     this.marks.forEach(mark => {
-      // console.log('mark.filled', mark.filled);
       try {
-        if (mark.filled) {
-          // console.log('mark.filled', mark.filled)
-          // this.drawFilledMark(mark)
-          mark.render(this.alpha, trans)
-        } else {
-          mark.render(this.alpha, trans)
-        }
+        mark.render(this.alpha, trans, targetCanvas)
       } catch (error) {
         console.log(error)
       }
     })
     this.tempMarks.forEach(mark => {
-      // console.log('mark.filled', mark.filled);
       try {
-        if (mark.filled) {
-          // console.log('mark.filled', mark.filled)
-          // this.drawFilledMark(mark)
-          mark.render(this.alpha, trans)
-        } else {
-          mark.render(this.alpha, trans)
-        }
+        mark.render(this.alpha, trans, targetCanvas)
       } catch (error) {
         console.log(error)
       }
     })
   }
 
-  // No change to the isPointInPolygon function
   isPointInPolygon (x, y, points) {
     let inside = false
     for (let i = 0, j = points.length - 1; i < points.length; j = i++) {
-      const xi = points[i].x,
-        yi = points[i].y
-      const xj = points[j].x,
-        yj = points[j].y
+      const xi = points[i].x, yi = points[i].y
+      const xj = points[j].x, yj = points[j].y
       const intersect =
         yi > y != yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi
       if (intersect) inside = !inside
@@ -106,15 +84,11 @@ export class Page {
   }
 
   loadFromJSON (json_file) {
-    // console.log('loading', json_file)
     try {
       const data =
         typeof json_file === 'object' ? json_file : JSON.parse(json_file)
-
       this.canvasParams = data.canvasParams
-      // console.log(this.canvasParams)
       this.marks = data.marks.map(markData => Mark.fromJSON(markData))
-
       this.render()
     } catch (error) {
       console.error('Error loading JSON:', error)
@@ -122,60 +96,36 @@ export class Page {
   }
 
   svgToJson (svgString) {
-    // console.log('Start')
     noise.seed(Math.random())
-    // Parse SVG string to DOM element
     const parser = new DOMParser()
     const svgDOM = parser.parseFromString(
       svgString,
       'image/svg+xml'
     ).documentElement
-
-    // Initialize svg.js with the parsed SVG
     const draw = SVG().addTo('body').size('400', '700').svg(svgDOM.outerHTML)
-
-    // console.log('SVG loaded:', draw)
-
-    const backgroundColor = this.backgroundColor // Set a default background color
+    const backgroundColor = this.backgroundColor
     const canvasParams = {
       width: parseFloat(draw.attr('width')),
       height: parseFloat(draw.attr('height')),
       backgroundColor: backgroundColor
     }
-
     const marks = []
-
     draw.find('path').each(function (element) {
-      // console.log('Processing path:', element)
-
       const path = element
-      const pathData = path.attr('d')
-      const pathStyle = path.attr('style')
-
-      // Calculate total length of the path
       const length = path.length()
       const points = []
-      // var dist = Math.max(Math.max(Math.random() * 9, 5), 2.5)
       const dist = 2
-      // console.log(dist)
-      // Extract points from the path data
       for (let i = 0; i <= length; i += dist) {
         const point = path.pointAt(i)
         var value = noise.simplex2(point.x / 50, point.y / 50)
-        // console.log(value)
         points.push({
           x: parseInt(point.x + value * 2),
           y: parseInt(point.y + value * 2),
           visible: true
         })
-        // dist = Math.max(Math.min(Math.random() * 3, 3), 1)
-        // console.log(dist)
       }
-
-      // var value = path.attr('stroke')
       var attributes = path.attr('style')
       const styleDict = styleStringToDict(attributes)
-      console.log(styleDict)
       var myColor = hexToRgba(styleDict['stroke'], 0.75)
       try {
         var myWidth = styleDict['stroke-width']
@@ -184,12 +134,8 @@ export class Page {
         var myWidth = 1.0
         var mySat = 0.7
       }
-
-      // console.log(myWidth)
-
-      // color: this.namedColorToRgba(myColor) || 'rgba(0,0,0,1.00)', // Get color from path if available
       const mark = {
-        color: myColor, //'rgba(0,0,0,1.00)', // Get color from path if available
+        color: myColor,
         minDistance: 3,
         distanceThreshold: 8,
         connectionProbability: 75,
@@ -199,7 +145,6 @@ export class Page {
         hatchAngle: mySat,
         alpha: 0.75
       }
-
       marks.push(mark)
     })
     draw.clear()
@@ -210,45 +155,127 @@ export class Page {
   }
 
   namedColorToRgba (color) {
-    // console.log(color)
     const colors = {
       black: 'rgba(0, 0, 0, 1)',
       white: 'rgba(255, 255, 255, 1)',
       red: 'rgba(255, 0, 0, 1)',
       green: 'rgba(0, 255, 0, 1)',
       blue: 'rgba(0, 0, 255, 1)'
-      // Add more named colors as needed
     }
-    return colors[color.toLowerCase()] || 'rgba(0, 0, 0, 1)' // Default to black
+    return colors[color.toLowerCase()] || 'rgba(0, 0, 0, 1)'
   }
 
-  getPointIndex (marksData, pointIndex) {
-    let cumulativePoints = 0
+  // --- Transition helpers ---
 
-    for (let markIndex = 0; markIndex < marksData.length; markIndex++) {
-      // console.log(markIndex, 'need point', pointIndex)
-      const mark = marksData[markIndex]
-      const numPoints = mark.points.length
-      // console.log(numPoints)
-      // Check if the pointIndex falls within the current mark's points
-      if (pointIndex < cumulativePoints + numPoints) {
-        // console.log('Full')
-        const pointWithinMarkIndex = pointIndex - cumulativePoints
-        return {
-          markIndex: markIndex,
-          pointIndex: pointWithinMarkIndex
+  computeCentroid (points) {
+    const sum = points.reduce(
+      (acc, p) => ({ x: acc.x + p.x, y: acc.y + p.y }),
+      { x: 0, y: 0 }
+    )
+    return { x: sum.x / points.length, y: sum.y / points.length }
+  }
+
+  resamplePoints (points, targetCount) {
+    if (points.length === targetCount) return points
+    if (points.length === 1) {
+      return Array(targetCount).fill({ ...points[0] })
+    }
+    const result = []
+    const step = (points.length - 1) / (targetCount - 1)
+    for (let i = 0; i < targetCount; i++) {
+      const t = i * step
+      const idx = Math.floor(t)
+      const frac = t - idx
+      const p1 = points[idx]
+      const p2 = points[Math.min(idx + 1, points.length - 1)]
+      result.push({
+        x: p1.x + (p2.x - p1.x) * frac,
+        y: p1.y + (p2.y - p1.y) * frac,
+        visible: true
+      })
+    }
+    return result
+  }
+
+  scorePair (markA, markB) {
+    const centA = this.computeCentroid(markA.points)
+    const centB = this.computeCentroid(markB.points)
+    const dist = Math.hypot(centB.x - centA.x, centB.y - centA.y)
+    const typePenalty = markA.filled !== markB.filled ? 500 : 0
+    const countDiff = Math.abs(markA.points.length - markB.points.length)
+    return dist + typePenalty + countDiff * 0.5
+  }
+
+  matchMarks (fromMarks, toMarks) {
+    const matched = []
+    const usedTo = new Set()
+
+    fromMarks.forEach((fromMark, fromIdx) => {
+      let bestScore = Infinity
+      let bestToIdx = -1
+      toMarks.forEach((toMark, toIdx) => {
+        if (usedTo.has(toIdx)) return
+        const score = this.scorePair(fromMark, toMark)
+        if (score < bestScore) {
+          bestScore = score
+          bestToIdx = toIdx
         }
+      })
+      if (bestToIdx >= 0) {
+        matched.push({ fromIdx, toIdx: bestToIdx })
+        usedTo.add(bestToIdx)
       }
+    })
 
-      cumulativePoints += numPoints // Increment the cumulative points
-      // console.log('cumulativePoints',cumulativePoints)
-    }
+    const unmatchedFrom = fromMarks
+      .map((_, i) => i)
+      .filter(i => !matched.find(m => m.fromIdx === i))
 
-    // Return null if the pointIndex is out of bounds
-    return null
+    const unmatchedTo = toMarks
+      .map((_, i) => i)
+      .filter(i => !usedTo.has(i))
+
+    return { matched, unmatchedFrom, unmatchedTo }
   }
 
-  // Helper function to interpolate color with fallback for missing colors
+  nearestToCentroid (fromMark, toMarks, matched) {
+    let bestDist = Infinity
+    let bestCentroid = null
+    const centFrom = this.computeCentroid(fromMark.points)
+    matched.forEach(({ toIdx }) => {
+      const cent = this.computeCentroid(toMarks[toIdx].points)
+      const dist = Math.hypot(cent.x - centFrom.x, cent.y - centFrom.y)
+      if (dist < bestDist) {
+        bestDist = dist
+        bestCentroid = cent
+      }
+    })
+    return bestCentroid || centFrom
+  }
+
+  nearestFromCentroid (toMark, fromMarks, matched) {
+    let bestDist = Infinity
+    let bestCentroid = null
+    const centTo = this.computeCentroid(toMark.points)
+    matched.forEach(({ fromIdx }) => {
+      const cent = this.computeCentroid(fromMarks[fromIdx].points)
+      const dist = Math.hypot(cent.x - centTo.x, cent.y - centTo.y)
+      if (dist < bestDist) {
+        bestDist = dist
+        bestCentroid = cent
+      }
+    })
+    return bestCentroid || centTo
+  }
+
+  interpolatePoints (fromPoints, toPoints, t) {
+    return fromPoints.map((p, i) => ({
+      x: p.x + (toPoints[i].x - p.x) * t,
+      y: p.y + (toPoints[i].y - p.y) * t,
+      visible: true
+    }))
+  }
+
   interpolateColor (color1, color2, t) {
     const parseColor = color => {
       const match = color.match(
@@ -256,216 +283,187 @@ export class Page {
       )
       if (match) {
         const [, r, g, b, a] = match.map(Number)
-        return [r, g, b, a !== undefined ? a : 1] // Default alpha to 1 if not present
+        return [r, g, b, a !== undefined ? a : 1]
       }
-      return [0, 0, 0, 1] // Fallback to black with full opacity
+      return [0, 0, 0, 1]
     }
-
     const [r1, g1, b1, a1] = parseColor(color1)
     const [r2, g2, b2, a2] = parseColor(color2)
-
-    // Interpolate between the colors
     const r = Math.round(r1 + (r2 - r1) * t)
     const g = Math.round(g1 + (g2 - g1) * t)
     const b = Math.round(b1 + (b2 - b1) * t)
-    const a = (a1 + (a2 - a1) * t).toFixed(2) // Alpha interpolated between 0 and 1
-
+    const a = (a1 + (a2 - a1) * t).toFixed(2)
     return `rgba(${r},${g},${b},${a})`
   }
 
-  startTransition (newJSON) {
-    this.transitioning = true
-    const newMarks = newJSON.marks.map(markData => Mark.fromJSON(markData))
-    const currentMarks = this.marks.map(markData => Mark.fromJSON(markData))
-    // console.log(currentMarks)
-    this.shuffle(currentMarks)
+  async startTransition (newJSON) {
+    const FRAMES = 15
+    const FRAME_DURATION = 80
 
-    const flattenPoints = marks =>
-      marks.reduce((acc, mark) => acc.concat(mark.points), [])
+    // Deep copy current marks safely
+    const fromMarks = this.marks.map(m => Mark.fromJSON(m.toJSON()))
+    const toMarks = newJSON.marks.map(markData => Mark.fromJSON(markData))
 
-    // console.log(flattenPoints(newMarks))
-    // console.log(flattenPoints(currentMarks))
-    var current_mark_count = flattenPoints(currentMarks).length
-    var mark_count = flattenPoints(newMarks).length
-    var points_to_count = Math.max(current_mark_count, mark_count)
-    var cnt = 0
-    const transitionSteps = this.stepCount// Number of steps for the transition
-    const stepInterval = 60 // Time between each step in milliseconds
-    let step = 0
+    // If no current marks just load directly
+    if (fromMarks.length === 0) {
+      this.marks = toMarks
+      this.tempMarks = []
+      this.render()
+      return
+    }
 
-    // Helper function to calculate interpolation for points
-    const interpolate = (p1, p2, t) => ({
-      x: p1.x + (p2.x - p1.x) * t,
-      y: p1.y + (p2.y - p1.y) * t
+    // --- Match marks ---
+    const { matched, unmatchedFrom, unmatchedTo } = this.matchMarks(
+      fromMarks,
+      toMarks
+    )
+
+    // --- Precompute resampled point arrays for matched pairs ---
+    const matchedPairs = matched.map(({ fromIdx, toIdx }) => {
+      const from = fromMarks[fromIdx]
+      const to = toMarks[toIdx]
+      const targetCount = Math.max(from.points.length, to.points.length)
+      return {
+        fromPoints: this.resamplePoints(from.points, targetCount),
+        toPoints: this.resamplePoints(to.points, targetCount),
+        fromMark: from,
+        toMark: to
+      }
     })
 
-    const interpolateLinear = (p1, p2, t) => ({
-      value: p1 + (p2 - p1) * t
+    // --- Precompute unmatched "from" collapse targets ---
+    const unmatchedFromData = unmatchedFrom.map(fromIdx => {
+      const fromMark = fromMarks[fromIdx]
+      const target = this.nearestToCentroid(fromMark, toMarks, matched)
+      const targetPoints = fromMark.points.map(() => ({
+        x: target.x,
+        y: target.y,
+        visible: true
+      }))
+      return { fromMark, targetPoints }
     })
 
-    const performTransition = () => {
-      if (step < transitionSteps) {
-        // this.marks = currentMarks
-        // console.log('step', step)
-        const progress = (step + 1) / transitionSteps
-        cnt = 0
-        var trigger = true
-        var addedMark = new Mark('', 0, 0, 0, 0, 0, 0, 0, false, null)
-        this.tempMarks = []
-        for (let pnt = 0; pnt < points_to_count; pnt++) {
-          try {
-            if (current_mark_count > 0) {
-              var from_point = this.getPointIndex(this.marks, pnt)
-              var to_point = this.getPointIndex(newMarks, pnt)
-              if (!!from_point && !!to_point) {
-                const oldPoint =
-                  this.marks[from_point.markIndex].points[from_point.pointIndex]
-                const newPoint =
-                  newMarks[to_point.markIndex].points[to_point.pointIndex]
-                Object.assign(
-                  oldPoint,
-                  interpolate(oldPoint, newPoint, progress)
-                )
+    // --- Precompute unmatched "to" emerge sources ---
+    const unmatchedToData = unmatchedTo.map(toIdx => {
+      const toMark = toMarks[toIdx]
+      const source = this.nearestFromCentroid(toMark, fromMarks, matched)
+      const sourcePoints = toMark.points.map(() => ({
+        x: source.x,
+        y: source.y,
+        visible: true
+      }))
+      return { toMark, sourcePoints }
+    })
 
-                try {
-                  this.marks[from_point.markIndex].color =
-                    this.interpolateColor(
-                      this.marks[from_point.markIndex].color,
-                      newMarks[to_point.markIndex].color,
-                      progress
-                    )
-                  const oldMarkWidth =
-                    this.marks[from_point.markIndex].markWidth
-                  const newMarkWidth = newMarks[to_point.markIndex].markWidth
-                  this.marks[from_point.markIndex].markWidth =
-                    interpolateLinear(
-                      oldMarkWidth,
-                      newMarkWidth,
-                      progress
-                    ).value
-                  // console.log(
-                  //   oldMarkWidth,
-                  //   newMarkWidth,
-                  //   progress,
-                  //   this.marks[from_point.markIndex].markWidth
-                  // )
-                  const oldHatchAngle =
-                    this.marks[from_point.markIndex].hatchAngle
-                  const newHatchAngle = newMarks[to_point.markIndex].hatchAngle
-                  this.marks[from_point.markIndex].hatchAngle =
-                    interpolateLinear(
-                      oldHatchAngle,
-                      newHatchAngle,
-                      progress
-                    ).value
-                  // console.log(
-                  //   oldHatchAngle,
-                  //   newHatchAngle,
-                  //   progress,
-                  //   this.marks[from_point.markIndex].hatchAngle
-                  // )
-                } catch (error) {
-                  console.log(error)
-                }
-              } else if (!!from_point && to_point == null) {
-                // first json has more points
-                // fade the whole mark
-                // console.log('first json has more points')
-                // this.marks[from_point.markIndex].alpha = Math.max(
-                //   Math.min(1, 1 - progress * 2),
-                //   0
-                // )
+    // --- Precompute all frames into ImageBitmap array ---
+    const offscreen = document.createElement('canvas')
+    offscreen.width = this.canvasParams.width
+    offscreen.height = this.canvasParams.height
 
-                if (trigger) {
-                  addedMark = new Mark(
-                    this.marks[from_point.markIndex].color,
-                    this.marks[from_point.markIndex].minDistance,
-                    this.marks[from_point.markIndex].distanceThreshold,
-                    this.marks[from_point.markIndex].connectionProbability,
-                    this.marks[from_point.markIndex].filled,
-                    this.marks[from_point.markIndex].markWidth, // Pass the current markWidth
-                    this.marks[from_point.markIndex].hatchAngle, // Pass the current hatchAngle
-                    0.75,
-                    this.marks[from_point.markIndex].trace,
-                    this.marks[from_point.markIndex].gradient
-                  )
+    const frames = []
 
-                  trigger = false
-                }
+    for (let f = 0; f < FRAMES; f++) {
+      const t = f / (FRAMES - 1)
 
-                addedMark.addPoint(
-                  this.marks[from_point.markIndex].points[from_point.pointIndex]
-                    .x,
-                  this.marks[from_point.markIndex].points[from_point.pointIndex]
-                    .y,
-                  false
-                )
+      // Clear offscreen
+      const offCtx = offscreen.getContext('2d')
+      offCtx.fillStyle = this.canvasParams.backgroundColor
+      offCtx.fillRect(0, 0, offscreen.width, offscreen.height)
 
-                this.marks[from_point.markIndex].points[
-                  from_point.pointIndex
-                ].visible = true
+      // Draw matched pairs
+      matchedPairs.forEach(({ fromPoints, toPoints, fromMark, toMark }) => {
+        const interpPoints = this.interpolatePoints(fromPoints, toPoints, t)
+        const color = this.interpolateColor(fromMark.color, toMark.color, t)
+        const width =
+          fromMark.markWidth + (toMark.markWidth - fromMark.markWidth) * t
+        const hatch =
+          fromMark.hatchAngle + (toMark.hatchAngle - fromMark.hatchAngle) * t
 
-                addedMark.alpha = Math.max(Math.min(1, 1 - progress), 0)
-                // console.log(addedMark.alpha)
-              } else if (!!to_point) {
-                // next json has more points
-                // console.log('next json has more points')
-                if (trigger) {
-                  addedMark = new Mark(
-                    newMarks[to_point.markIndex].color,
-                    newMarks[to_point.markIndex].minDistance,
-                    newMarks[to_point.markIndex].distanceThreshold,
-                    newMarks[to_point.markIndex].connectionProbability,
-                    newMarks[to_point.markIndex].filled,
-                    newMarks[to_point.markIndex].markWidth, // Pass the current markWidth
-                    newMarks[to_point.markIndex].hatchAngle, // Pass the current hatchAngle
-                    newMarks[to_point.markIndex].alpha,
-                    newMarks[to_point.markIndex].trace,
-                    newMarks[to_point.markIndex].gradient
-                  )
+        const tempMark = Mark.fromJSON({
+          ...toMark.toJSON(),
+          color,
+          markWidth: width,
+          hatchAngle: hatch,
+          points: interpPoints,
+          alpha: 1
+        })
+        tempMark.render(1, false, offscreen)
+      })
 
-                  trigger = false
-                }
-                var to_point = this.getPointIndex(newMarks, pnt)
-                addedMark.addPoint(
-                  newMarks[to_point.markIndex].points[to_point.pointIndex].x,
-                  newMarks[to_point.markIndex].points[to_point.pointIndex].y
-                )
-                addedMark.alpha = Math.max(Math.min(1, progress / 3), 0)
-                // console.log(addedMark.alpha, progress)
-              } else {
-              }
-            } else {
-            }
-          } catch (error) {
-            console.log(error)
-          }
-        }
-        this.addTempMark(addedMark)
-        this.render()
-        step += 1
-        this.marks = currentMarks
-        setTimeout(performTransition, stepInterval)
+      // Draw unmatched "from" marks — collapse to point and fade out
+      unmatchedFromData.forEach(({ fromMark, targetPoints }) => {
+        const interpPoints = this.interpolatePoints(
+          fromMark.points,
+          targetPoints,
+          t
+        )
+        const alpha = 1 - t
+        const tempMark = Mark.fromJSON({
+          ...fromMark.toJSON(),
+          points: interpPoints,
+          alpha
+        })
+        tempMark.render(1, false, offscreen)
+      })
+
+      // Draw unmatched "to" marks — emerge from point and fade in
+      unmatchedToData.forEach(({ toMark, sourcePoints }) => {
+        const interpPoints = this.interpolatePoints(
+          sourcePoints,
+          toMark.points,
+          t
+        )
+        const alpha = t
+        const tempMark = Mark.fromJSON({
+          ...toMark.toJSON(),
+          points: interpPoints,
+          alpha
+        })
+        tempMark.render(1, false, offscreen)
+      })
+
+      // Capture frame as ImageBitmap
+      const bitmap = await createImageBitmap(offscreen)
+      frames.push(bitmap)
+    }
+
+    // --- Playback ---
+    const mainCanvas = document.getElementById(this.canvasId)
+    const mainCtx = mainCanvas.getContext('2d')
+
+    let frameIndex = 0
+    let lastTime = null
+
+    const playFrame = (timestamp) => {
+      if (!lastTime) lastTime = timestamp
+      const elapsed = timestamp - lastTime
+
+      if (elapsed >= FRAME_DURATION) {
+        mainCtx.drawImage(frames[frameIndex], 0, 0)
+        frames[frameIndex].close()
+        frameIndex++
+        lastTime = timestamp
+      }
+
+      if (frameIndex < frames.length) {
+        requestAnimationFrame(playFrame)
       } else {
-        // Final render to ensure full transition is shown
-        this.marks = newMarks
+        // Final full quality render
+        this.marks = toMarks
         this.tempMarks = []
         this.render()
       }
     }
 
-    performTransition()
-    this.transitioning = false
-    this.render()
+    requestAnimationFrame(playFrame)
   }
 }
 
+// --- Module-level helpers (used by svgToJson) ---
+
 function hexToRgba (hex, alpha = 0.75) {
   try {
-    // Remove the '#' if it's there
     hex = hex.replace(/^#/, '')
-    console.log(hex)
-    // Parse the hex values depending on the length (3 or 6)
     let r, g, b
     if (hex.length === 3) {
       r = parseInt(hex[0] + hex[0], 16)
@@ -478,7 +476,6 @@ function hexToRgba (hex, alpha = 0.75) {
     } else {
       throw new Error('Invalid hex color format.')
     }
-
     return `rgba(${r}, ${g}, ${b}, ${alpha})`
   } catch (error) {
     console.log(error)
@@ -488,139 +485,13 @@ function hexToRgba (hex, alpha = 0.75) {
 
 function styleStringToDict (styleString) {
   const styleDict = {}
-
   styleString.split(';').forEach(style => {
     if (style) {
-      // Check if there's a valid key-value pair
       let [key, value] = style.split(':')
-      key = key.trim() // Remove any extra spaces around the key
-      value = value.trim() // Remove any extra spaces around the value
+      key = key.trim()
+      value = value.trim()
       styleDict[key] = value
     }
   })
-
   return styleDict
 }
-
-/*
- (c) 2017, Vladimir Agafonkin
- Simplify.js, a high-performance JS polyline simplification library
- mourner.github.io/simplify-js
-*/
-
-;(function () {
-  'use strict'
-
-  // to suit your point format, run search/replace for '.x' and '.y';
-  // for 3D version, see 3d branch (configurability would draw significant performance overhead)
-
-  // square distance between 2 points
-  function getSqDist (p1, p2) {
-    var dx = p1.x - p2.x,
-      dy = p1.y - p2.y
-
-    return dx * dx + dy * dy
-  }
-
-  // square distance from a point to a segment
-  function getSqSegDist (p, p1, p2) {
-    var x = p1.x,
-      y = p1.y,
-      dx = p2.x - x,
-      dy = p2.y - y
-
-    if (dx !== 0 || dy !== 0) {
-      var t = ((p.x - x) * dx + (p.y - y) * dy) / (dx * dx + dy * dy)
-
-      if (t > 1) {
-        x = p2.x
-        y = p2.y
-      } else if (t > 0) {
-        x += dx * t
-        y += dy * t
-      }
-    }
-
-    dx = p.x - x
-    dy = p.y - y
-
-    return dx * dx + dy * dy
-  }
-  // rest of the code doesn't care about point format
-
-  // basic distance-based simplification
-  function simplifyRadialDist (points, sqTolerance) {
-    var prevPoint = points[0],
-      newPoints = [prevPoint],
-      point
-
-    for (var i = 1, len = points.length; i < len; i++) {
-      point = points[i]
-
-      if (getSqDist(point, prevPoint) > sqTolerance) {
-        newPoints.push(point)
-        prevPoint = point
-      }
-    }
-
-    if (prevPoint !== point) newPoints.push(point)
-
-    return newPoints
-  }
-
-  function simplifyDPStep (points, first, last, sqTolerance, simplified) {
-    var maxSqDist = sqTolerance,
-      index
-
-    for (var i = first + 1; i < last; i++) {
-      var sqDist = getSqSegDist(points[i], points[first], points[last])
-
-      if (sqDist > maxSqDist) {
-        index = i
-        maxSqDist = sqDist
-      }
-    }
-
-    if (maxSqDist > sqTolerance) {
-      if (index - first > 1)
-        simplifyDPStep(points, first, index, sqTolerance, simplified)
-      simplified.push(points[index])
-      if (last - index > 1)
-        simplifyDPStep(points, index, last, sqTolerance, simplified)
-    }
-  }
-
-  // simplification using Ramer-Douglas-Peucker algorithm
-  function simplifyDouglasPeucker (points, sqTolerance) {
-    var last = points.length - 1
-
-    var simplified = [points[0]]
-    simplifyDPStep(points, 0, last, sqTolerance, simplified)
-    simplified.push(points[last])
-
-    return simplified
-  }
-
-  // both algorithms combined for awesome performance
-  function simplify (points, tolerance, highestQuality) {
-    if (points.length <= 2) return points
-
-    var sqTolerance = tolerance !== undefined ? tolerance * tolerance : 1
-
-    points = highestQuality ? points : simplifyRadialDist(points, sqTolerance)
-    points = simplifyDouglasPeucker(points, sqTolerance)
-
-    return points
-  }
-
-  // export as AMD module / Node module / browser or worker variable
-  if (typeof define === 'function' && define.amd)
-    define(function () {
-      return simplify
-    })
-  else if (typeof module !== 'undefined') {
-    module.exports = simplify
-    module.exports.default = simplify
-  } else if (typeof self !== 'undefined') self.simplify = simplify
-  else window.simplify = simplify
-})()

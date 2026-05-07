@@ -297,8 +297,8 @@ export class Page {
   }
 
   async startTransition (newJSON) {
-    const FRAMES = 15
-    const FRAME_DURATION = 80
+    const FRAMES = 7
+    const FRAME_DURATION = 100
 
     // Deep copy current marks safely
     const fromMarks = this.marks.map(m => Mark.fromJSON(m.toJSON()))

@@ -1,3 +1,2 @@
-netlify/
-  functions/
-    postToGitHub.mjs
+[functions]
+  directory = "netlify/functions"

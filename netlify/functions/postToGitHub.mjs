@@ -2,7 +2,7 @@ exports.handler = async (event) => {
   const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
   const { content } = JSON.parse(event.body);
 
-  const githubUsername = 'BirdHau5';
+  const githubUsername = 'rgv-4292';
   const repoName = 'sketcher';
   const folderPath = 'json';
   const branch = 'main';

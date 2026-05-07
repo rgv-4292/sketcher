@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+
+        #controls {
+            display: none;
+            margin-top: 10px;
+        }
+
+        #controls label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #controls input {
+            margin-bottom: 10px;
+        }
+
+        #controls input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="480" height="640"></canvas>
+    <script src="./perlin.js"></script>
+    <script type="module" src="./viewer.js"></script>
+</body>
+
+</html>

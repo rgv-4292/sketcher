@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketcher</title>
+    <style>
+        canvas {
+            touch-action: none;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+
+        #navbar {
+            background-color: #333;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: center; /* Center the buttons */
+        }
+
+        #navbar button {
+            color: white;
+            background-color: #444;
+            width: 72px;
+            border: none;
+            padding: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+            user-select: none; /* Prevent text selection */
+        }
+
+        #navbar button:hover {
+            background-color: #555;
+        }
+
+        #controls {
+            display: none;
+            margin-top: 10px;
+        }
+
+        #controls label {
+            display: block;
+            margin-bottom: 5px;
+            user-select: none; /* Prevent label text selection */
+        }
+
+        #controls input {
+            margin-bottom: 10px;
+        }
+
+        #controls input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        /* Disable text selection for the entire body if necessary */
+        body {
+            -webkit-touch-callout: none; /* Disable callout, e.g., on long-press */
+            -webkit-user-select: none; /* Disable text selection */
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <button id="controlButton">Props</button>
+        <button id="colorButton">Color</button>
+        <button id="deleteButton">Del Last</button>
+        <button id="downloadButton">Send</button>
+        <button id="loadButton">Load</button>
+    </div>
+    <div id="controls">
+        <label for="minDistance">Min Distance: </label>
+        <input type="number" id="minDistance" value="3" step="0.1"><br>
+        
+        <label for="slider1">Steps: </label>
+        <input type="range" id="slider1" min="0" max="20" step="1" value="6"><br>
+        
+        <label for="slider2">Slider 2: </label>
+        <input type="range" id="slider2" min="0" max="10" step="0.1" value="5"><br>
+        
+        <label for="slider3">Slider 3: </label>
+        <input type="range" id="slider3" min="0" max="10" step="0.1" value="5"><br>
+        
+        <label for="name">Name: </label>
+        <input type="text" id="nameInput" placeholder="Enter name"><br>
+
+        <label for="checkbox1">
+            <input type="checkbox" id="checkbox1"> Trace
+        </label><br>
+
+        <label for="checkbox2">
+            <input type="checkbox" id="checkbox2"> Set Gradient
+        </label><br>
+
+        <label for="distanceThreshold">Distance Threshold: </label>
+        <input type="number" id="distanceThreshold" value="12"><br>
+        
+        <label for="connectionProbability">Connection Probability (%): </label>
+        <input type="number" id="connectionProbability" value="75"><br>
+
+        <label for="markWidth">Width: </label>
+        <input type="number" id="markWidth" value="2" step="0.1"><br>
+
+        <label for="hatchAngle">Saturation: </label>
+        <input type="number" id="hatchAngle" value="0.7" step="0.1"><br>
+
+        <label for="scatter">Scatter: </label>
+        <input type="number" id="scatter" value="0"><br>
+
+        <label>
+            <input type="checkbox" id="filledMarkToggle"> Draw Filled Marks
+        </label>
+    </div>
+
+    <canvas id="myCanvas" width="480" height="640"></canvas>
+    <script src="./svg.min.js"></script>
+    <script src="./perlin.js"></script>
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>

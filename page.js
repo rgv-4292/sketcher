@@ -289,7 +289,7 @@ export class Page {
     var mark_count = flattenPoints(newMarks).length
     var points_to_count = Math.max(current_mark_count, mark_count)
     var cnt = 0
-    const transitionSteps = stepCount // Number of steps for the transition
+    const transitionSteps = this.stepCount// Number of steps for the transition
     const stepInterval = 60 // Time between each step in milliseconds
     let step = 0
 

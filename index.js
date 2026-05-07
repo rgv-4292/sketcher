@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let connectionProbability = parseInt(
     document.getElementById('connectionProbability').value
   )
-  let markWidth = 2
+  let markWidth = parseFloat(document.getElementById('markWidth').value)
   let hatchAngle = 0.7
 
   // Listeners for new sliders, textbox, and checkboxes
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Event listener for sliders
   slider1.addEventListener('input', function (event) {
     console.log('Slider 1 value:', event.target.value)
-    Page.stepCount = event.target.value
+    page.stepCount = parseInt(event.target.value)
   })
 
   slider2.addEventListener('input', function (event) {
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const dx = event.offsetX - lastPoint.x
     const dy = event.offsetY - lastPoint.y
     // console.log("B")
-    if (Math.sqrt(dx * dx + dy * dy) > minDistance + scatter) {
+    if (Math.sqrt(dx * dx + dy * dy) > minDistance + (scatter > 0 ? Math.random() * scatter : 0)) {
       // console.log("C")
       currentMark.addPoint(event.offsetX, event.offsetY)
       currentMark.addPoint(

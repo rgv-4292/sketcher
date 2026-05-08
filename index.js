@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let hatchAngle = parseFloat(document.getElementById('hatchAngle').value)
   let scatter = parseInt(document.getElementById('scatter').value)
   let density = parseFloat(document.getElementById('density').value)
-  let drawFilledMarks = false
   let doTrace = false
   // fillMode: 'none' | 'gradient' | 'solid'
   let fillMode = 'none'
@@ -246,9 +245,6 @@ document.addEventListener('DOMContentLoaded', function () {
   fillModeButtons.solid.addEventListener('pointerdown', () => setFillMode('solid'))
 
   // --- Props controls ---
-  document.getElementById('filledMarkToggle').addEventListener('change', (e) => {
-    drawFilledMarks = e.target.checked
-  })
 
   document.getElementById('checkbox1').addEventListener('change', (e) => {
     doTrace = e.target.checked
@@ -308,7 +304,6 @@ document.addEventListener('DOMContentLoaded', function () {
       hatchAngle,
       scatter,
       density,
-      drawFilledMarks,
       doTrace,
       fillMode
     }
@@ -323,7 +318,6 @@ document.addEventListener('DOMContentLoaded', function () {
     hatchAngle = s.hatchAngle
     scatter = s.scatter ?? 0
     density = s.density ?? 3
-    drawFilledMarks = s.drawFilledMarks
     doTrace = s.doTrace
     fillMode = s.fillMode ?? 'none'
 
@@ -335,7 +329,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('hatchAngle').value = hatchAngle
     document.getElementById('scatter').value = scatter
     document.getElementById('density').value = density
-    document.getElementById('filledMarkToggle').checked = drawFilledMarks
     document.getElementById('checkbox1').checked = doTrace
     setFillMode(fillMode)
     syncColorIndicator()
@@ -400,7 +393,7 @@ document.addEventListener('DOMContentLoaded', function () {
       minDistance,
       distanceThreshold,
       connectionProbability,
-      drawFilledMarks,
+      fillMode !== 'none',
       markWidth,
       hatchAngle,
       0.75,

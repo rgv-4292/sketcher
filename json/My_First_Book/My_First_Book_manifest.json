@@ -7,6 +7,14 @@
   "defaultTransitionDuration": 1,
   "pages": [
     {
+      "id": "My_First_Book_MOXB2UEX",
+      "filename": "My_First_Book_MOXB2UEX.json",
+      "caption": "Title Page",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
       "id": "My_First_Book_MOXAZ17U",
       "filename": "My_First_Book_MOXAZ17U.json",
       "caption": "",
@@ -17,14 +25,6 @@
       "id": "My_First_Book_MOXB1OW4",
       "filename": "My_First_Book_MOXB1OW4.json",
       "caption": "",
-      "pageDuration": null,
-      "transitionDuration": null,
-      "bgColor": "#f0ebe8"
-    },
-    {
-      "id": "My_First_Book_MOXB2UEX",
-      "filename": "My_First_Book_MOXB2UEX.json",
-      "caption": "Title Page",
       "pageDuration": null,
       "transitionDuration": null,
       "bgColor": "#f0ebe8"

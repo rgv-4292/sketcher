@@ -1,10 +1,16 @@
+import { Mark } from './mark.js'
+import { Page } from './page.js'
+
 const CACHE_KEY = 'sketcher_manager_cache'
 const ACTIVE_BOOK_KEY = 'sketcher_active_book'
+const VIDEO_PAGE_LIMIT = 20
 
 let books = []
 let activeBook = null
 let activeManifest = null
 let dragSrcIndex = null
+let selectedPageIndex = null
+let exportCancelled = false
 
 // --- API ---
 
@@ -48,6 +54,30 @@ function setStatus (msg) {
   document.getElementById('statusBar').textContent = msg
 }
 
+// --- Progress ---
+
+function showProgress (label, percent) {
+  const container = document.getElementById('progressContainer')
+  container.classList.add('visible')
+  document.getElementById('progressLabel').textContent = label
+  document.getElementById('progressBarInner').style.width = `${percent}%`
+}
+
+function updateProgress (label, percent) {
+  document.getElementById('progressLabel').textContent = label
+  document.getElementById('progressBarInner').style.width = `${percent}%`
+}
+
+function hideProgress () {
+  document.getElementById('progressContainer').classList.remove('visible')
+}
+
+document.getElementById('progressCancel').addEventListener('click', () => {
+  exportCancelled = true
+  hideProgress()
+  setStatus('Export cancelled')
+})
+
 // --- Book list ---
 
 async function loadBooks (forceRefresh = false) {
@@ -83,10 +113,10 @@ function renderBookList () {
 
 async function selectBook (name) {
   activeBook = name
+  selectedPageIndex = null
   localStorage.setItem(ACTIVE_BOOK_KEY, name)
   renderBookList()
   setStatus(`Loading ${name}...`)
-
   try {
     let manifest = getCachedManifest(name)
     if (!manifest) {
@@ -121,7 +151,7 @@ function renderPagePanel () {
   emptyState.style.display = activeManifest.pages.length === 0 ? 'flex' : 'none'
   pageList.style.display = activeManifest.pages.length > 0 ? 'flex' : 'none'
   newPageBtn.style.display = 'block'
-  exportPngBtn.disabled = activeManifest.pages.length === 0
+  exportPngBtn.disabled = selectedPageIndex === null
   exportVideoBtn.disabled = activeManifest.pages.length === 0
 
   pageList.innerHTML = ''
@@ -132,15 +162,23 @@ function renderPagePanel () {
 
 function createPageItem (page, index) {
   const item = document.createElement('div')
-  item.className = 'page-item'
+  item.className = 'page-item' + (selectedPageIndex === index ? ' selected' : '')
   item.draggable = true
   item.dataset.index = index
 
-  // Thumbnail placeholder
+  item.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT') return
+    selectedPageIndex = index
+    document.getElementById('exportPngBtn').disabled = false
+    document.querySelectorAll('.page-item').forEach((el, i) => {
+      el.classList.toggle('selected', i === index)
+    })
+  })
+
+  // Thumbnail
   const thumb = document.createElement('div')
   thumb.className = 'page-thumb'
-  thumb.style.background = activeManifest.pages[index].bgColor ||
-    (activeManifest.orientation === 'landscape' ? '#1a1a2e' : '#f0ebe8')
+  thumb.style.background = page.bgColor || '#f0ebe8'
   thumb.textContent = index + 1
   thumb.style.color = '#888'
 
@@ -151,8 +189,9 @@ function createPageItem (page, index) {
   const captionDisplay = document.createElement('div')
   captionDisplay.className = 'page-caption'
   captionDisplay.textContent = page.caption || `Page ${index + 1}`
-  captionDisplay.title = 'Click to edit'
-  captionDisplay.addEventListener('click', () => {
+  captionDisplay.title = 'Click to edit caption'
+  captionDisplay.addEventListener('click', (e) => {
+    e.stopPropagation()
     const input = document.createElement('input')
     input.className = 'page-caption-input'
     input.value = page.caption || ''
@@ -187,6 +226,7 @@ function createPageItem (page, index) {
   pageDurInput.value = page.pageDuration ?? ''
   pageDurInput.placeholder = activeManifest.defaultPageDuration
   pageDurInput.title = 'Page duration (s)'
+  pageDurInput.addEventListener('click', e => e.stopPropagation())
   pageDurInput.addEventListener('change', async () => {
     page.pageDuration = pageDurInput.value === '' ? null : parseFloat(pageDurInput.value)
     await saveManifest()
@@ -199,6 +239,7 @@ function createPageItem (page, index) {
   transDurInput.value = page.transitionDuration ?? ''
   transDurInput.placeholder = activeManifest.defaultTransitionDuration
   transDurInput.title = 'Transition duration (s)'
+  transDurInput.addEventListener('click', e => e.stopPropagation())
   transDurInput.addEventListener('change', async () => {
     page.transitionDuration = transDurInput.value === '' ? null : parseFloat(transDurInput.value)
     await saveManifest()
@@ -213,23 +254,19 @@ function createPageItem (page, index) {
   const editBtn = document.createElement('button')
   editBtn.className = 'page-btn'
   editBtn.textContent = 'Edit'
-  editBtn.title = 'Load in Sketcher'
-  editBtn.addEventListener('click', () => loadPageInSketcher(page))
+  editBtn.addEventListener('click', e => { e.stopPropagation(); loadPageInSketcher(page) })
 
   const dupBtn = document.createElement('button')
   dupBtn.className = 'page-btn'
   dupBtn.textContent = 'Dup'
-  dupBtn.title = 'Duplicate page'
-  dupBtn.addEventListener('click', () => duplicatePage(index))
+  dupBtn.addEventListener('click', e => { e.stopPropagation(); duplicatePage(index) })
 
   const delBtn = document.createElement('button')
   delBtn.className = 'page-btn danger'
   delBtn.textContent = 'Del'
-  delBtn.title = 'Delete page'
-  delBtn.addEventListener('click', () => deletePage(index))
+  delBtn.addEventListener('click', e => { e.stopPropagation(); deletePage(index) })
 
   actions.append(editBtn, dupBtn, delBtn)
-
   item.append(thumb, info, durations, actions)
 
   // Drag and drop
@@ -238,19 +275,16 @@ function createPageItem (page, index) {
     item.classList.add('dragging')
     e.dataTransfer.effectAllowed = 'move'
   })
-
   item.addEventListener('dragend', () => {
     item.classList.remove('dragging')
     document.querySelectorAll('.page-item').forEach(el => el.classList.remove('drag-over'))
   })
-
   item.addEventListener('dragover', (e) => {
     e.preventDefault()
     e.dataTransfer.dropEffect = 'move'
     document.querySelectorAll('.page-item').forEach(el => el.classList.remove('drag-over'))
     item.classList.add('drag-over')
   })
-
   item.addEventListener('drop', async (e) => {
     e.preventDefault()
     if (dragSrcIndex === null || dragSrcIndex === index) return
@@ -269,10 +303,7 @@ function createPageItem (page, index) {
 
 async function saveManifest () {
   try {
-    await api('saveManifest', {
-      bookName: activeBook,
-      manifest: activeManifest
-    })
+    await api('saveManifest', { bookName: activeBook, manifest: activeManifest })
     setCachedManifest(activeBook, activeManifest)
     setStatus('Saved')
   } catch (err) {
@@ -295,11 +326,7 @@ async function createNewPage () {
   }
   setStatus('Creating page...')
   try {
-    await api('savePage', {
-      bookName: activeBook,
-      pageId: id,
-      pageData: emptyPage
-    })
+    await api('savePage', { bookName: activeBook, pageId: id, pageData: emptyPage })
     activeManifest.pages.push({
       id,
       filename: `${id}.json`,
@@ -319,18 +346,11 @@ async function createNewPage () {
 async function duplicatePage (index) {
   if (!activeManifest) return
   const srcPage = activeManifest.pages[index]
-  setStatus('Loading page to duplicate...')
+  setStatus('Duplicating page...')
   try {
-    const data = await api('getPage', {
-      bookName: activeBook,
-      pageId: srcPage.id
-    })
+    const data = await api('getPage', { bookName: activeBook, pageId: srcPage.id })
     const newId = generatePageId()
-    await api('savePage', {
-      bookName: activeBook,
-      pageId: newId,
-      pageData: data.pageData
-    })
+    await api('savePage', { bookName: activeBook, pageId: newId, pageData: data.pageData })
     const newEntry = {
       ...srcPage,
       id: newId,
@@ -351,11 +371,9 @@ async function deletePage (index) {
   const page = activeManifest.pages[index]
   setStatus(`Deleting ${page.id}...`)
   try {
-    await api('deletePage', {
-      bookName: activeBook,
-      pageId: page.id
-    })
+    await api('deletePage', { bookName: activeBook, pageId: page.id })
     activeManifest.pages.splice(index, 1)
+    if (selectedPageIndex === index) selectedPageIndex = null
     await saveManifest()
     renderPagePanel()
     setStatus(`Deleted ${page.id}`)
@@ -377,6 +395,266 @@ function generatePageId () {
   return `${activeBook}_${ts}`
 }
 
+// --- Render helpers ---
+
+function renderPageToCanvas (pageJSON, targetCanvas) {
+  const ctx = targetCanvas.getContext('2d')
+  const bg = pageJSON.canvasParams.backgroundColor || '#f0ebe8'
+  ctx.fillStyle = bg
+  ctx.fillRect(0, 0, targetCanvas.width, targetCanvas.height)
+  pageJSON.marks.forEach(markData => {
+    try {
+      const mark = Mark.fromJSON(markData)
+      mark.render(1, false, targetCanvas)
+    } catch (err) {
+      console.error('Error rendering mark:', err)
+    }
+  })
+}
+
+function renderTransitionFrame (fromJSON, toJSON, t, targetCanvas, pageInstance) {
+  // Uses Page's transition helpers synchronously for a single frame
+  const fromMarks = fromJSON.marks.map(m => Mark.fromJSON(m))
+  const toMarks = toJSON.marks.map(m => Mark.fromJSON(m))
+
+  const fromBg = fromJSON.canvasParams.backgroundColor || '#f0ebe8'
+  const toBg = toJSON.canvasParams.backgroundColor || '#f0ebe8'
+
+  const ctx = targetCanvas.getContext('2d')
+  ctx.fillStyle = pageInstance.lerpHexColor(fromBg, toBg, t)
+  ctx.fillRect(0, 0, targetCanvas.width, targetCanvas.height)
+
+  const { matched, unmatchedFrom, unmatchedTo } = pageInstance.matchMarks(fromMarks, toMarks)
+
+  matched.forEach(({ fromIdx, toIdx }) => {
+    const from = fromMarks[fromIdx]
+    const to = toMarks[toIdx]
+    const targetCount = Math.max(from.points.length, to.points.length)
+    const fromPts = pageInstance.resamplePoints(from.points, targetCount)
+    const toPts = pageInstance.resamplePoints(to.points, targetCount)
+    const interpPoints = pageInstance.interpolatePoints(fromPts, toPts, t)
+    const color = pageInstance.interpolateColor(from.color, to.color, t)
+    const width = from.markWidth + (to.markWidth - from.markWidth) * t
+    const hatch = from.hatchAngle + (to.hatchAngle - from.hatchAngle) * t
+    const tempMark = Mark.fromJSON({
+      ...to.toJSON(),
+      color,
+      markWidth: width,
+      hatchAngle: hatch,
+      points: interpPoints,
+      alpha: 1
+    })
+    tempMark.render(1, false, targetCanvas)
+  })
+
+  unmatchedFrom.forEach(fromIdx => {
+    const fromMark = fromMarks[fromIdx]
+    const target = pageInstance.nearestToCentroid(fromMark, toMarks, matched)
+    const targetPoints = fromMark.points.map(() => ({ x: target.x, y: target.y, visible: true }))
+    const interpPoints = pageInstance.interpolatePoints(fromMark.points, targetPoints, t)
+    const tempMark = Mark.fromJSON({ ...fromMark.toJSON(), points: interpPoints, alpha: 1 - t })
+    tempMark.render(1, false, targetCanvas)
+  })
+
+  unmatchedTo.forEach(toIdx => {
+    const toMark = toMarks[toIdx]
+    const source = pageInstance.nearestFromCentroid(toMark, fromMarks, matched)
+    const sourcePoints = toMark.points.map(() => ({ x: source.x, y: source.y, visible: true }))
+    const interpPoints = pageInstance.interpolatePoints(sourcePoints, toMark.points, t)
+    const tempMark = Mark.fromJSON({ ...toMark.toJSON(), points: interpPoints, alpha: t })
+    tempMark.render(1, false, targetCanvas)
+  })
+}
+
+// --- PNG Export ---
+
+async function exportPng () {
+  if (selectedPageIndex === null || !activeManifest) return
+  const pageEntry = activeManifest.pages[selectedPageIndex]
+  setStatus('Fetching page...')
+
+  try {
+    const data = await api('getPage', { bookName: activeBook, pageId: pageEntry.id })
+    const offscreen = document.createElement('canvas')
+    offscreen.width = activeManifest.width
+    offscreen.height = activeManifest.height
+    renderPageToCanvas(data.pageData, offscreen)
+
+    offscreen.toBlob(blob => {
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `${pageEntry.id}.png`
+      a.click()
+      URL.revokeObjectURL(url)
+      setStatus('PNG exported')
+    }, 'image/png')
+  } catch (err) {
+    setStatus(`PNG export error: ${err.message}`)
+  }
+}
+
+// --- Video Export ---
+
+async function exportVideo () {
+  if (!activeManifest || activeManifest.pages.length === 0) return
+
+  const pageCount = Math.min(activeManifest.pages.length, VIDEO_PAGE_LIMIT)
+  if (activeManifest.pages.length > VIDEO_PAGE_LIMIT) {
+    setStatus(`Warning: only first ${VIDEO_PAGE_LIMIT} pages will be exported`)
+  }
+
+  exportCancelled = false
+  showProgress('Loading ffmpeg...', 0)
+
+  // Load ffmpeg on demand
+  let ffmpeg
+  try {
+    const { FFmpeg } = await import('https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.7/dist/esm/index.js')
+    const { fetchFile, toBlobURL } = await import('https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.1/dist/esm/index.js')
+
+    ffmpeg = new FFmpeg()
+
+    const baseURL = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm'
+    await ffmpeg.load({
+      coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
+      wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm')
+    })
+
+    if (exportCancelled) return
+
+    updateProgress('Fetching pages...', 5)
+
+    // Fetch all page JSONs
+    const pageJSONs = []
+    for (let i = 0; i < pageCount; i++) {
+      if (exportCancelled) return
+      const entry = activeManifest.pages[i]
+      const data = await api('getPage', { bookName: activeBook, pageId: entry.id })
+      pageJSONs.push(data.pageData)
+      updateProgress(`Fetching page ${i + 1} of ${pageCount}...`, 5 + (i / pageCount) * 15)
+    }
+
+    if (exportCancelled) return
+
+    const FPS = 24
+    const TRANS_STEPS = 12
+    const offscreen = document.createElement('canvas')
+    offscreen.width = activeManifest.width
+    offscreen.height = activeManifest.height
+
+    // We need a temporary Page instance for transition helpers
+    const pageHelper = new Page('_offscreen_')
+    pageHelper.canvasParams = {
+      width: activeManifest.width,
+      height: activeManifest.height,
+      backgroundColor: '#f0ebe8'
+    }
+
+    let frameIndex = 0
+    const totalFrames = calculateTotalFrames(pageCount, FPS, TRANS_STEPS)
+
+    // Render and write frames
+    for (let p = 0; p < pageCount; p++) {
+      if (exportCancelled) return
+
+      const entry = activeManifest.pages[p]
+      const pageDuration = entry.pageDuration ?? activeManifest.defaultPageDuration
+      const transDuration = entry.transitionDuration ?? activeManifest.defaultTransitionDuration
+      const pageFrames = Math.round(pageDuration * FPS)
+
+      updateProgress(
+        `Rendering page ${p + 1} of ${pageCount}...`,
+        20 + (frameIndex / totalFrames) * 60
+      )
+
+      // Render static page frame once
+      renderPageToCanvas(pageJSONs[p], offscreen)
+      const pageBlob = await canvasToBlob(offscreen)
+      const pageData = new Uint8Array(await pageBlob.arrayBuffer())
+
+      // Write page hold frames
+      for (let f = 0; f < pageFrames; f++) {
+        if (exportCancelled) return
+        const fname = `frame${String(frameIndex).padStart(6, '0')}.png`
+        await ffmpeg.writeFile(fname, pageData)
+        frameIndex++
+      }
+
+      // Render transition to next page
+      if (p < pageCount - 1) {
+        const transFrames = Math.round(transDuration * FPS)
+        updateProgress(
+          `Rendering transition ${p + 1}→${p + 2}...`,
+          20 + (frameIndex / totalFrames) * 60
+        )
+
+        for (let f = 0; f < transFrames; f++) {
+          if (exportCancelled) return
+          const t = f / (transFrames - 1)
+          renderTransitionFrame(pageJSONs[p], pageJSONs[p + 1], t, offscreen, pageHelper)
+          const transBlob = await canvasToBlob(offscreen)
+          const transData = new Uint8Array(await transBlob.arrayBuffer())
+          const fname = `frame${String(frameIndex).padStart(6, '0')}.png`
+          await ffmpeg.writeFile(fname, transData)
+          frameIndex++
+        }
+      }
+    }
+
+    if (exportCancelled) return
+    updateProgress('Encoding video...', 80)
+
+    // Encode
+    await ffmpeg.exec([
+      '-framerate', String(FPS),
+      '-i', 'frame%06d.png',
+      '-c:v', 'libx264',
+      '-pix_fmt', 'yuv420p',
+      '-crf', '23',
+      '-movflags', '+faststart',
+      `${activeManifest.name}.mp4`
+    ])
+
+    updateProgress('Preparing download...', 95)
+
+    const output = await ffmpeg.readFile(`${activeManifest.name}.mp4`)
+    const blob = new Blob([output.buffer], { type: 'video/mp4' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `${activeManifest.name}.mp4`
+    a.click()
+    URL.revokeObjectURL(url)
+
+    hideProgress()
+    setStatus('Video exported successfully')
+
+  } catch (err) {
+    hideProgress()
+    setStatus(`Video export error: ${err.message}`)
+    console.error(err)
+  }
+}
+
+function calculateTotalFrames (pageCount, fps, transSteps) {
+  let total = 0
+  for (let p = 0; p < pageCount; p++) {
+    const entry = activeManifest.pages[p]
+    const pageDuration = entry.pageDuration ?? activeManifest.defaultPageDuration
+    total += Math.round(pageDuration * fps)
+    if (p < pageCount - 1) {
+      const transDuration = entry.transitionDuration ?? activeManifest.defaultTransitionDuration
+      total += Math.round(transDuration * fps)
+    }
+  }
+  return total
+}
+
+function canvasToBlob (canvas) {
+  return new Promise(resolve => canvas.toBlob(resolve, 'image/png'))
+}
+
 // --- Book creation ---
 
 function openNewBookModal () {
@@ -395,7 +673,7 @@ document.getElementById('modalConfirm').addEventListener('click', async () => {
   document.getElementById('modal').classList.remove('visible')
   setStatus(`Creating book ${name}...`)
   try {
-    const data = await api('createBook', { bookName: name, orientation })
+    await api('createBook', { bookName: name, orientation })
     const cache = loadCache()
     cache._books = [...(cache._books || []), name]
     saveCache(cache)
@@ -421,7 +699,7 @@ document.getElementById('saveBookSettingsBtn').addEventListener('click', async (
   await saveManifest()
 })
 
-// --- Navbar buttons ---
+// --- Navbar ---
 
 document.getElementById('newBookBtn').addEventListener('click', openNewBookModal)
 document.getElementById('newPageBtn').addEventListener('click', createNewPage)
@@ -447,13 +725,13 @@ document.getElementById('openViewerBtn').addEventListener('click', () => {
   }
 })
 
-document.getElementById('exportPngBtn').addEventListener('click', () => {
-  setStatus('PNG export coming soon')
-})
+document.getElementById('exportPngBtn').addEventListener('click', exportPng)
+document.getElementById('exportVideoBtn').addEventListener('click', exportVideo)
 
-document.getElementById('exportVideoBtn').addEventListener('click', () => {
-  setStatus('Video export coming soon')
-})
+// --- Selected page style ---
+const style = document.createElement('style')
+style.textContent = `.page-item.selected { border-color: #6a8a6a; background: #333; }`
+document.head.appendChild(style)
 
 // --- Init ---
 

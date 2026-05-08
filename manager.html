@@ -327,6 +327,48 @@
       color: #666;
       flex-shrink: 0;
     }
+
+    /* Progress bar */
+#progressContainer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#progressContainer.visible {
+  display: flex;
+}
+
+#progressLabel {
+  color: #ccc;
+  font-size: 14px;
+}
+
+#progressBarOuter {
+  width: 320px;
+  height: 12px;
+  background: #333;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#progressBarInner {
+  height: 100%;
+  background: #6a8a6a;
+  border-radius: 6px;
+  width: 0%;
+  transition: width 0.1s;
+}
+
+#progressCancel {
+  margin-top: 8px;
+}
   </style>
 </head>
 <body>
@@ -388,6 +430,15 @@
       <button class="nav-btn primary" id="modalConfirm">Create</button>
     </div>
   </div>
+</div>
+
+<!-- Progress overlay -->
+<div id="progressContainer">
+  <div id="progressLabel">Preparing export...</div>
+  <div id="progressBarOuter">
+    <div id="progressBarInner"></div>
+  </div>
+  <button class="nav-btn danger" id="progressCancel">Cancel</button>
 </div>
 
 <script type="module" src="./manager.js"></script>

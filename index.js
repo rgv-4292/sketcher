@@ -583,8 +583,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       console.log(`Saved as ${pageId}`)
-      page.marks = []
-      page.render()
+      // page.marks = []
+      // page.render()
     } catch (err) {
       console.error('Save error:', err)
     }

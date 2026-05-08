@@ -496,7 +496,7 @@ async function exportPng() {
 
 // --- Video Export ---
 
-async function exportVideo () {
+async function exportVideo() {
   if (!activeManifest || activeManifest.pages.length === 0) return
 
   const pageCount = Math.min(activeManifest.pages.length, VIDEO_PAGE_LIMIT)
@@ -522,7 +522,7 @@ async function exportVideo () {
 
     const { createFFmpeg } = window.FFmpeg
     ffmpeg = createFFmpeg({
-      corePath: '/ffmpeg/ffmpeg-core.js',
+      corePath: `${window.location.origin}/ffmpeg/ffmpeg-core.js`,
       log: false
     })
 

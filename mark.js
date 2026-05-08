@@ -216,7 +216,7 @@ export class Mark {
                 }
               }
               // stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, 2, 5))
-              stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.hatchAngle, this.hatchAngle+5))
+              stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, 2, this.hatchAngle))
               console.log('stepVal', stepVal)
             } else {
               // fillMode === 'none' — uniform default density

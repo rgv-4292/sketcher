@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sketcher</title>
     <style>
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             margin: 0;
@@ -21,7 +24,10 @@
             user-select: none;
         }
 
-        canvas { touch-action: none; display: block; }
+        canvas {
+            touch-action: none;
+            display: block;
+        }
 
         #navbar {
             background-color: #333;
@@ -42,7 +48,9 @@
             font-size: 13px;
         }
 
-        #navbar button:hover { background-color: #555; }
+        #navbar button:hover {
+            background-color: #555;
+        }
 
         #colorIndicator {
             width: 28px;
@@ -50,7 +58,7 @@
             border-radius: 50%;
             border: 2px solid #888;
             cursor: pointer;
-            background: rgba(0,0,0,0.75);
+            background: rgba(0, 0, 0, 0.75);
             flex-shrink: 0;
             align-self: center;
         }
@@ -129,7 +137,7 @@
             flex: 1;
             justify-content: flex-end;
         }
-        
+
 
         #fillModeGroup button {
             flex: 1;
@@ -176,8 +184,14 @@
             font-size: 12px;
         }
 
-        .preset-row button:hover { background: #555; }
-        .preset-row button:disabled { opacity: 0.4; cursor: default; }
+        .preset-row button:hover {
+            background: #555;
+        }
+
+        .preset-row button:disabled {
+            opacity: 0.4;
+            cursor: default;
+        }
 
         /* Background color row */
         #bgColorRow {
@@ -207,10 +221,12 @@
             padding: 16px;
             z-index: 1000;
             width: 280px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
         }
 
-        #colorPopup.visible { display: block; }
+        #colorPopup.visible {
+            display: block;
+        }
 
         #colorPopupTitle {
             color: #aaa;
@@ -258,7 +274,9 @@
             background: transparent;
         }
 
-        .palette-swatch.filled { border-color: #888; }
+        .palette-swatch.filled {
+            border-color: #888;
+        }
 
         #paletteSaveBtn {
             width: 100%;
@@ -272,7 +290,9 @@
             margin-bottom: 8px;
         }
 
-        #paletteSaveBtn:hover { background: #555; }
+        #paletteSaveBtn:hover {
+            background: #555;
+        }
 
         #colorPopupClose {
             width: 100%;
@@ -285,7 +305,9 @@
             font-size: 13px;
         }
 
-        #colorPopupClose:hover { background: #666; }
+        #colorPopupClose:hover {
+            background: #666;
+        }
 
         #colorPopupOverlay {
             display: none;
@@ -294,14 +316,18 @@
             z-index: 999;
         }
 
-        #colorPopupOverlay.visible { display: block; }
+        #colorPopupOverlay.visible {
+            display: block;
+        }
     </style>
 </head>
+
 <body>
     <div id="navbar">
         <button id="controlButton">Props</button>
         <div id="colorIndicator" title="Mark Color"></div>
         <div id="bgColorIndicator" title="Background Color"></div>
+        <button id="bookBtn" class="nav-btn">No Book</button>
         <button id="deleteButton">Del Last</button>
         <button id="downloadButton">Send</button>
         <button id="loadButton">Load</button>
@@ -417,4 +443,5 @@
     <script src="./perlin.js"></script>
     <script type="module" src="./index.js"></script>
 </body>
+
 </html>

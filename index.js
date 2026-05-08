@@ -5,6 +5,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const canvas = document.getElementById('myCanvas')
   const ctx = canvas.getContext('2d')
 
+  // --- Book state ---
+  let activeBookName = localStorage.getItem('sketcher_active_book') || null
+  let activeBookManifest = null
+  let activePageId = null
+
+  // Check if manager sent a page to load
+  const pendingLoad = JSON.parse(localStorage.getItem('sketcher_load_page') || 'null')
+  if (pendingLoad) {
+    localStorage.removeItem('sketcher_load_page')
+    activeBookName = pendingLoad.bookName
+    activePageId = pendingLoad.pageId
+    localStorage.setItem('sketcher_active_book', activeBookName)
+  }
+
   let page = new Page('myCanvas')
   const fillColor = page.canvasParams.backgroundColor
   ctx.fillStyle = fillColor
@@ -439,6 +453,50 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  async function loadActiveBook() {
+    if (!activeBookName) {
+      const create = confirm('No active book. Open manager to create or select one?')
+      if (create) window.location.href = 'manager.html'
+      return
+    }
+
+    try {
+      const res = await fetch('/.netlify/functions/github', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ operation: 'getManifest', bookName: activeBookName })
+      })
+      const data = await res.json()
+      activeBookManifest = data.manifest
+      updateBookIndicator()
+
+      if (activePageId) {
+        const pageRes = await fetch('/.netlify/functions/github', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            operation: 'getPage',
+            bookName: activeBookName,
+            pageId: activePageId
+          })
+        })
+        const pageData = await pageRes.json()
+        page.loadFromJSON(pageData.pageData)
+        if (page.canvasParams.backgroundColor) {
+          currentBgColor = page.canvasParams.backgroundColor
+          syncBgIndicator()
+        }
+      }
+    } catch (err) {
+      console.error('Error loading book:', err)
+    }
+  }
+
+  function updateBookIndicator() {
+    const btn = document.getElementById('bookBtn')
+    btn.textContent = activeBookName || 'No Book'
+  }
+
   // --- Toolbar buttons ---
   document.getElementById('controlButton').addEventListener('pointerdown', () => {
     controlsVisible = !controlsVisible
@@ -454,32 +512,81 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('downloadButton').addEventListener('pointerdown', async (event) => {
     const json = page.toJSON()
-    if (page.marks.length > 0) {
-      if (event.button === 2) {
-        const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' })
-        const url = URL.createObjectURL(blob)
-        const a = document.createElement('a')
-        a.href = url
-        a.download = 'page.json'
-        a.click()
-        URL.revokeObjectURL(url)
-      } else {
-        const response = await fetch('/.netlify/functions/postToGitHub', {
+    if (page.marks.length === 0) {
+      console.log('Nothing to export')
+      return
+    }
+
+    if (event.button === 2) {
+      // Right click — download locally
+      const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' })
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = 'page.json'
+      a.click()
+      URL.revokeObjectURL(url)
+      return
+    }
+
+    if (!activeBookName || !activeBookManifest) {
+      const go = confirm('No active book. Open manager?')
+      if (go) window.location.href = 'manager.html'
+      return
+    }
+
+    // Save to active book
+    try {
+      let pageId = activePageId
+      let isNew = false
+
+      if (!pageId) {
+        // New page
+        pageId = `${activeBookName}_${Date.now().toString(36).toUpperCase()}`
+        isNew = true
+      }
+
+      const res = await fetch('/.netlify/functions/github', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          operation: 'savePage',
+          bookName: activeBookName,
+          pageId,
+          pageData: json
+        })
+      })
+
+      const result = await res.json()
+      if (!res.ok) throw new Error(result.error)
+
+      if (isNew) {
+        // Add to manifest
+        activeBookManifest.pages.push({
+          id: pageId,
+          filename: `${pageId}.json`,
+          caption: '',
+          pageDuration: null,
+          transitionDuration: null,
+          bgColor: json.canvasParams.backgroundColor
+        })
+        await fetch('/.netlify/functions/github', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ content: JSON.stringify(json, null, 2) })
+          body: JSON.stringify({
+            operation: 'saveManifest',
+            bookName: activeBookName,
+            manifest: activeBookManifest
+          })
         })
-        const result = await response.json()
-        if (response.ok) {
-          console.log(result.success)
-          page.marks = []
-          page.render()
-        } else {
-          console.error('Error committing file to GitHub:', result.error)
-        }
+        activePageId = pageId
       }
-    } else {
-      console.log('Nothing to export')
+
+      console.log(`Saved as ${pageId}`)
+      page.marks = []
+      page.render()
+    } catch (err) {
+      console.error('Save error:', err)
     }
   })
 
@@ -522,4 +629,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     input.click()
   })
+
+  document.getElementById('bookBtn').addEventListener('pointerdown', () => {
+    if (page.marks.length > 0) {
+      const leave = confirm('You have unsaved marks. Leave anyway?')
+      if (!leave) return
+    }
+    window.location.href = 'manager.html'
+  })
+
+  loadActiveBook()
 })

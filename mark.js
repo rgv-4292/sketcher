@@ -1,5 +1,5 @@
 export class Mark {
-  constructor (
+  constructor(
     color,
     minDistance,
     distanceThreshold,
@@ -28,7 +28,7 @@ export class Mark {
     this.density = density || 3
   }
 
-  addPoint (x, y) {
+  addPoint(x, y) {
     var visible = true
     this.points.push({ x, y, visible })
     if (this.points.length > 1) {
@@ -36,7 +36,7 @@ export class Mark {
     }
   }
 
-  connectNewPoint (newPoint, targetCanvas) {
+  connectNewPoint(newPoint, targetCanvas) {
     const canvas = targetCanvas || document.getElementById('myCanvas')
     const ctx = canvas.getContext('2d')
     ctx.linecap = 'round'
@@ -57,7 +57,7 @@ export class Mark {
     }
   }
 
-  drawLinesBatch (lines, canvas) {
+  drawLinesBatch(lines, canvas) {
     const ctx = canvas.getContext('2d')
     ctx.beginPath()
     lines.forEach(line => {
@@ -66,7 +66,7 @@ export class Mark {
     ctx.stroke()
   }
 
-  drawLine (point1, point2, targetCanvas) {
+  drawLine(point1, point2, targetCanvas) {
     const canvas = targetCanvas || document.getElementById('myCanvas')
     const ctx = canvas.getContext('2d')
     ctx.strokeStyle = this.color
@@ -77,14 +77,14 @@ export class Mark {
     ctx.stroke()
   }
 
-  getRGB (str) {
+  getRGB(str) {
     var match = str.match(
       /rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)?(?:, ?(\d(?:\.\d*)?)\))?/
     )
     return `${match[1]}, ${match[2]}, ${match[3]}`
   }
 
-  drawSquigglyLine (ctx, point1, point2) {
+  drawSquigglyLine(ctx, point1, point2) {
     const pressure = this.markWidth
     const step = Math.max(
       1,
@@ -114,7 +114,7 @@ export class Mark {
     }
   }
 
-  render (alpha = 1, transition = false, targetCanvas) {
+  render(alpha = 1, transition = false, targetCanvas) {
     const canvas = targetCanvas || document.getElementById('myCanvas')
     const ctx = canvas.getContext('2d')
     ctx.globalAlpha = this.alpha
@@ -135,7 +135,7 @@ export class Mark {
     ctx.globalAlpha = 1
   }
 
-  drawFilledMark (targetCanvas) {
+  drawFilledMark(targetCanvas) {
     const canvas = targetCanvas || document.getElementById('myCanvas')
     const ctx = canvas.getContext('2d')
 
@@ -224,11 +224,11 @@ export class Mark {
     ctx.restore()
   }
 
-  distanceBetweenPoints (x1, y1, x2, y2) {
+  distanceBetweenPoints(x1, y1, x2, y2) {
     return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))
   }
 
-  farthestDistance (point, points) {
+  farthestDistance(point, points) {
     let maxDistance = 0
     let farthestPoint = null
     points.forEach(p => {
@@ -241,7 +241,7 @@ export class Mark {
     return { maxDistance, farthestPoint }
   }
 
-  mapValue (val, startRangeBegin, startRangeFinish, endRangeBegin, endRangeFinish) {
+  mapValue(val, startRangeBegin, startRangeFinish, endRangeBegin, endRangeFinish) {
     const proportion = (val - startRangeBegin) / (startRangeFinish - startRangeBegin)
     var answer = endRangeBegin + proportion * (endRangeFinish - endRangeBegin)
     answer = answer.toFixed(2)
@@ -249,7 +249,7 @@ export class Mark {
     return answer
   }
 
-  clipToPolygon (ctx, points) {
+  clipToPolygon(ctx, points) {
     ctx.save()
     ctx.beginPath()
     ctx.moveTo(points[0].x, points[0].y)
@@ -260,7 +260,7 @@ export class Mark {
     ctx.clip()
   }
 
-  drawHatchLine (ctx, x, y, angle) {
+  drawHatchLine(ctx, x, y, angle) {
     const length = 10
     const radians = (Math.PI / 180) * angle
     ctx.beginPath()
@@ -269,7 +269,7 @@ export class Mark {
     ctx.stroke()
   }
 
-  isPointInPolygon (x, y, points) {
+  isPointInPolygon(x, y, points) {
     let inside = false
     for (let i = 0, j = points.length - 1; i < points.length; j = i++) {
       const xi = points[i].x, yi = points[i].y
@@ -281,7 +281,7 @@ export class Mark {
   }
 
   // Convert this mark to SVG path string for transition rendering
-  toSVGPath () {
+  toSVGPath() {
     if (this.points.length < 2) return ''
     let d = `M ${this.points[0].x} ${this.points[0].y}`
     for (let i = 1; i < this.points.length; i++) {
@@ -290,7 +290,7 @@ export class Mark {
     return d
   }
 
-  toJSON () {
+  toJSON() {
     return {
       color: this.color,
       minDistance: this.minDistance,
@@ -308,7 +308,7 @@ export class Mark {
     }
   }
 
-  static fromJSON (data) {
+  static fromJSON(data) {
     const mark = new Mark(
       data.color,
       data.minDistance,
@@ -331,7 +331,7 @@ export class Mark {
     return mark
   }
 
-  hexToRgb (color) {
+  hexToRgb(color) {
     const colorHexMap = {
       black: '#000000',
       white: '#FFFFFF',

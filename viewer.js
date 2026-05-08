@@ -1,7 +1,7 @@
 import { Mark } from './mark.js'
 import { Page } from './page.js'
 
-function setCookie (name, value, days) {
+function setCookie(name, value, days) {
   let expires = ''
   if (days) {
     const date = new Date()
@@ -11,7 +11,7 @@ function setCookie (name, value, days) {
   document.cookie = name + '=' + (value || '') + expires + '; path=/'
 }
 
-function getCookie (name) {
+function getCookie(name) {
   const nameEQ = name + '='
   const ca = document.cookie.split(';')
   for (let i = 0; i < ca.length; i++) {
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const jsonFolderPath = './json/'
   let currentIndex = parseInt(getCookie('currentIndex')) || 1
   const page = new Page('myCanvas')
-  
-  async function loadAndRenderJson (index) {
+
+  async function loadAndRenderJson(index) {
     const jsonFileName = `Page_${index.toString().padStart(6, '0')}.json`
     const jsonFilePath = `${jsonFolderPath}${jsonFileName}`
 

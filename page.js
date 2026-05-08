@@ -1,7 +1,7 @@
 import { Mark } from './mark.js'
 
 export class Page {
-  constructor (canvasId) {
+  constructor(canvasId) {
     this.canvasId = canvasId
     this.marks = []
     this.canvasParams = {
@@ -14,19 +14,19 @@ export class Page {
     this.stepCount = 12
   }
 
-  addMark (mark) {
+  addMark(mark) {
     this.marks.push(mark)
   }
 
-  addTempMark (mark) {
+  addTempMark(mark) {
     this.tempMarks.push(mark)
   }
 
-  removeLastMark () {
+  removeLastMark() {
     this.marks.pop()
   }
 
-  clearCanvas (targetCanvas) {
+  clearCanvas(targetCanvas) {
     const canvas = targetCanvas || document.getElementById(this.canvasId)
     const ctx = canvas.getContext('2d')
     ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -34,19 +34,19 @@ export class Page {
     ctx.fillRect(0, 0, canvas.width, canvas.height)
   }
 
-  shuffle (array) {
+  shuffle(array) {
     let currentIndex = array.length
     while (currentIndex != 0) {
       let randomIndex = Math.floor(Math.random() * currentIndex)
       currentIndex--
-      ;[array[currentIndex], array[randomIndex]] = [
-        array[randomIndex],
-        array[currentIndex]
-      ]
+        ;[array[currentIndex], array[randomIndex]] = [
+          array[randomIndex],
+          array[currentIndex]
+        ]
     }
   }
 
-  render (trans = false, targetCanvas) {
+  render(trans = false, targetCanvas) {
     this.clearCanvas(targetCanvas)
     this.marks.forEach(mark => {
       try {
@@ -64,7 +64,7 @@ export class Page {
     })
   }
 
-  isPointInPolygon (x, y, points) {
+  isPointInPolygon(x, y, points) {
     let inside = false
     for (let i = 0, j = points.length - 1; i < points.length; j = i++) {
       const xi = points[i].x, yi = points[i].y
@@ -76,14 +76,14 @@ export class Page {
     return inside
   }
 
-  toJSON () {
+  toJSON() {
     return {
       canvasParams: this.canvasParams,
       marks: this.marks.map(mark => mark.toJSON())
     }
   }
 
-  loadFromJSON (json_file) {
+  loadFromJSON(json_file) {
     try {
       const data =
         typeof json_file === 'object' ? json_file : JSON.parse(json_file)
@@ -95,7 +95,7 @@ export class Page {
     }
   }
 
-  svgToJson (svgString) {
+  svgToJson(svgString) {
     noise.seed(Math.random())
     const parser = new DOMParser()
     const svgDOM = parser.parseFromString(
@@ -154,7 +154,7 @@ export class Page {
     }
   }
 
-  namedColorToRgba (color) {
+  namedColorToRgba(color) {
     const colors = {
       black: 'rgba(0, 0, 0, 1)',
       white: 'rgba(255, 255, 255, 1)',
@@ -167,7 +167,7 @@ export class Page {
 
   // --- Transition helpers ---
 
-  computeCentroid (points) {
+  computeCentroid(points) {
     const sum = points.reduce(
       (acc, p) => ({ x: acc.x + p.x, y: acc.y + p.y }),
       { x: 0, y: 0 }
@@ -175,7 +175,7 @@ export class Page {
     return { x: sum.x / points.length, y: sum.y / points.length }
   }
 
-  resamplePoints (points, targetCount) {
+  resamplePoints(points, targetCount) {
     if (points.length === targetCount) return points
     if (points.length === 1) {
       return Array(targetCount).fill({ ...points[0] })
@@ -197,7 +197,7 @@ export class Page {
     return result
   }
 
-  scorePair (markA, markB) {
+  scorePair(markA, markB) {
     const centA = this.computeCentroid(markA.points)
     const centB = this.computeCentroid(markB.points)
     const dist = Math.hypot(centB.x - centA.x, centB.y - centA.y)
@@ -206,7 +206,7 @@ export class Page {
     return dist + typePenalty + countDiff * 0.5
   }
 
-  matchMarks (fromMarks, toMarks) {
+  matchMarks(fromMarks, toMarks) {
     const matched = []
     const usedTo = new Set()
 
@@ -238,7 +238,7 @@ export class Page {
     return { matched, unmatchedFrom, unmatchedTo }
   }
 
-  nearestToCentroid (fromMark, toMarks, matched) {
+  nearestToCentroid(fromMark, toMarks, matched) {
     let bestDist = Infinity
     let bestCentroid = null
     const centFrom = this.computeCentroid(fromMark.points)
@@ -253,7 +253,7 @@ export class Page {
     return bestCentroid || centFrom
   }
 
-  nearestFromCentroid (toMark, fromMarks, matched) {
+  nearestFromCentroid(toMark, fromMarks, matched) {
     let bestDist = Infinity
     let bestCentroid = null
     const centTo = this.computeCentroid(toMark.points)
@@ -268,7 +268,7 @@ export class Page {
     return bestCentroid || centTo
   }
 
-  interpolatePoints (fromPoints, toPoints, t) {
+  interpolatePoints(fromPoints, toPoints, t) {
     return fromPoints.map((p, i) => ({
       x: p.x + (toPoints[i].x - p.x) * t,
       y: p.y + (toPoints[i].y - p.y) * t,
@@ -276,7 +276,7 @@ export class Page {
     }))
   }
 
-  interpolateColor (color1, color2, t) {
+  interpolateColor(color1, color2, t) {
     const parseColor = color => {
       const match = color.match(
         /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.?\d*))?\)/
@@ -296,7 +296,7 @@ export class Page {
     return `rgba(${r},${g},${b},${a})`
   }
 
-  lerpHexColor (hex1, hex2, t) {
+  lerpHexColor(hex1, hex2, t) {
     const parse = hex => {
       const r = parseInt(hex.slice(1, 3), 16)
       const g = parseInt(hex.slice(3, 5), 16)
@@ -311,7 +311,7 @@ export class Page {
     return `#${r}${g}${b}`
   }
 
-  async startTransition (newJSON) {
+  async startTransition(newJSON) {
     const FRAMES = 7
     const FRAME_DURATION = 100
 
@@ -480,7 +480,7 @@ export class Page {
 
 // --- Module-level helpers (used by svgToJson) ---
 
-function hexToRgba (hex, alpha = 0.75) {
+function hexToRgba(hex, alpha = 0.75) {
   try {
     hex = hex.replace(/^#/, '')
     let r, g, b
@@ -502,7 +502,7 @@ function hexToRgba (hex, alpha = 0.75) {
   }
 }
 
-function styleStringToDict (styleString) {
+function styleStringToDict(styleString) {
   const styleDict = {}
   styleString.split(';').forEach(style => {
     if (style) {

@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const bgColorIndicator = document.getElementById('bgColorIndicator')
   const bgColorSwatch = document.getElementById('bgColorSwatch')
 
-  function syncColorIndicator () {
+  function syncColorIndicator() {
     colorIndicator.style.background = currentColor
   }
   syncColorIndicator()
 
-  function syncBgIndicator () {
+  function syncBgIndicator() {
     bgColorIndicator.style.background = currentBgColor
     bgColorSwatch.style.background = currentBgColor
   }
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentWheelColor = { h: 0, s: 0, b: 85 }
   let palette = JSON.parse(localStorage.getItem('sketcher_palette') || '[]')
 
-  function drawColorWheel (brightness) {
+  function drawColorWheel(brightness) {
     const size = colorWheelCanvas.width
     const cx = size / 2, cy = size / 2, r = size / 2
     colorWheelCtx.clearRect(0, 0, size, size)
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     colorWheelCtx.putImageData(imageData, 0, 0)
   }
 
-  function hslToRgb (h, s, l) {
+  function hslToRgb(h, s, l) {
     let r, g, b
     if (s === 0) {
       r = g = b = l
@@ -93,21 +93,21 @@ document.addEventListener('DOMContentLoaded', function () {
       const hue2rgb = (p, q, t) => {
         if (t < 0) t += 1
         if (t > 1) t -= 1
-        if (t < 1/6) return p + (q - p) * 6 * t
-        if (t < 1/2) return q
-        if (t < 2/3) return p + (q - p) * (2/3 - t) * 6
+        if (t < 1 / 6) return p + (q - p) * 6 * t
+        if (t < 1 / 2) return q
+        if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6
         return p
       }
       const q = l < 0.5 ? l * (1 + s) : l + s - l * s
       const p = 2 * l - q
-      r = hue2rgb(p, q, h + 1/3)
+      r = hue2rgb(p, q, h + 1 / 3)
       g = hue2rgb(p, q, h)
-      b = hue2rgb(p, q, h - 1/3)
+      b = hue2rgb(p, q, h - 1 / 3)
     }
     return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)]
   }
 
-  function getColorFromWheel (x, y) {
+  function getColorFromWheel(x, y) {
     const size = colorWheelCanvas.width
     const cx = size / 2, cy = size / 2, r = size / 2
     const dx = x - cx, dy = y - cy
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.75)`
   }
 
-  function updateColorPreview (color) {
+  function updateColorPreview(color) {
     colorPreviewBox.style.background = color
     if (colorPopupTarget === 'mark') {
       currentColor = color
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function rgbaToHex (rgba) {
+  function rgbaToHex(rgba) {
     const match = rgba.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/)
     if (!match) return '#f0ebe8'
     const r = parseInt(match[1]).toString(16).padStart(2, '0')
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return `#${r}${g}${b}`
   }
 
-  function renderPalette () {
+  function renderPalette() {
     paletteRow.innerHTML = ''
     for (let i = 0; i < 8; i++) {
       const swatch = document.createElement('div')
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function openColorPopup (target) {
+  function openColorPopup(target) {
     colorPopupTarget = target
     document.getElementById('colorPopupTitle').textContent =
       target === 'mark' ? 'Mark Color' : 'Background Color'
@@ -226,12 +226,19 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   const densityRow = document.getElementById('densityRow')
 
-  function setFillMode (mode) {
+  function setFillMode(mode) {
     fillMode = mode
     Object.keys(fillModeButtons).forEach(k => {
       fillModeButtons[k].classList.toggle('active', k === mode)
     })
     densityRow.style.display = mode === 'solid' ? 'flex' : 'none'
+    updateGradientRowVisibility()  // add this line
+  }
+
+  // Show/hide Set Gradient checkbox based on fill mode
+  function updateGradientRowVisibility() {
+    const row = document.getElementById('setGradientRow')
+    row.style.display = fillMode === 'gradient' ? 'flex' : 'none'
   }
 
   fillModeButtons.none.addEventListener('pointerdown', () => setFillMode('none'))
@@ -245,6 +252,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('checkbox1').addEventListener('change', (e) => {
     doTrace = e.target.checked
+  })
+
+  document.getElementById('checkbox2').addEventListener('change', (e) => {
+    // unchecks itself after use — handled in startDrawing
   })
 
   document.getElementById('minDistance').addEventListener('input', (e) => {
@@ -278,15 +289,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- Presets ---
   const PRESET_KEY = 'sketcher_presets'
 
-  function getPresets () {
+  function getPresets() {
     return JSON.parse(localStorage.getItem(PRESET_KEY) || '[null,null,null]')
   }
 
-  function savePresets (presets) {
+  function savePresets(presets) {
     localStorage.setItem(PRESET_KEY, JSON.stringify(presets))
   }
 
-  function getCurrentSettings () {
+  function getCurrentSettings() {
     return {
       name: '',
       currentColor,
@@ -303,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function applySettings (s) {
+  function applySettings(s) {
     currentColor = s.currentColor
     minDistance = s.minDistance
     distanceThreshold = s.distanceThreshold
@@ -330,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function () {
     syncColorIndicator()
   }
 
-  function initPresetUI () {
+  function initPresetUI() {
     const presets = getPresets()
     for (let i = 0; i < 3; i++) {
       const nameInput = document.getElementById(`preset${i}name`)
@@ -368,16 +379,17 @@ document.addEventListener('DOMContentLoaded', function () {
   canvas.addEventListener('pointermove', draw)
   canvas.addEventListener('pointerup', stopDrawing)
 
-  function startDrawing (event) {
+  function startDrawing(event) {
     event.preventDefault()
     if (controlsVisible) return
 
-    // Set Gradient mode — only applies when fillMode is 'gradient'
-    if (fillMode === 'gradient' && lastFilledMark >= 0) {
+    const setGradientCheckbox = document.getElementById('checkbox2')
+    if (fillMode === 'gradient' && setGradientCheckbox.checked && lastFilledMark >= 0) {
       page.marks[lastFilledMark].gradient = {
         x: event.offsetX,
         y: event.offsetY
       }
+      setGradientCheckbox.checked = false
       page.render()
       return
     }
@@ -400,7 +412,7 @@ document.addEventListener('DOMContentLoaded', function () {
     currentMark.addPoint(event.offsetX, event.offsetY)
   }
 
-  function draw (event) {
+  function draw(event) {
     event.preventDefault()
     if (!drawing || controlsVisible) return
     const lastPoint = currentMark.points[currentMark.points.length - 1]
@@ -416,7 +428,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function stopDrawing () {
+  function stopDrawing() {
     if (drawing) {
       if (currentMark.points.length > 4) {
         page.addMark(currentMark)

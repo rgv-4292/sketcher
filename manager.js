@@ -14,7 +14,7 @@ let exportCancelled = false
 
 // --- API ---
 
-async function api (operation, params = {}) {
+async function api(operation, params = {}) {
   const res = await fetch('/.netlify/functions/github', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -27,22 +27,22 @@ async function api (operation, params = {}) {
 
 // --- Cache ---
 
-function loadCache () {
+function loadCache() {
   try {
     return JSON.parse(localStorage.getItem(CACHE_KEY) || '{}')
   } catch { return {} }
 }
 
-function saveCache (cache) {
+function saveCache(cache) {
   localStorage.setItem(CACHE_KEY, JSON.stringify(cache))
 }
 
-function getCachedManifest (bookName) {
+function getCachedManifest(bookName) {
   const cache = loadCache()
   return cache[bookName] || null
 }
 
-function setCachedManifest (bookName, manifest) {
+function setCachedManifest(bookName, manifest) {
   const cache = loadCache()
   cache[bookName] = manifest
   saveCache(cache)
@@ -50,25 +50,25 @@ function setCachedManifest (bookName, manifest) {
 
 // --- Status ---
 
-function setStatus (msg) {
+function setStatus(msg) {
   document.getElementById('statusBar').textContent = msg
 }
 
 // --- Progress ---
 
-function showProgress (label, percent) {
+function showProgress(label, percent) {
   const container = document.getElementById('progressContainer')
   container.classList.add('visible')
   document.getElementById('progressLabel').textContent = label
   document.getElementById('progressBarInner').style.width = `${percent}%`
 }
 
-function updateProgress (label, percent) {
+function updateProgress(label, percent) {
   document.getElementById('progressLabel').textContent = label
   document.getElementById('progressBarInner').style.width = `${percent}%`
 }
 
-function hideProgress () {
+function hideProgress() {
   document.getElementById('progressContainer').classList.remove('visible')
 }
 
@@ -80,7 +80,7 @@ document.getElementById('progressCancel').addEventListener('click', () => {
 
 // --- Book list ---
 
-async function loadBooks (forceRefresh = false) {
+async function loadBooks(forceRefresh = false) {
   setStatus('Loading books...')
   try {
     const cache = loadCache()
@@ -99,7 +99,7 @@ async function loadBooks (forceRefresh = false) {
   }
 }
 
-function renderBookList () {
+function renderBookList() {
   const list = document.getElementById('bookList')
   list.innerHTML = ''
   books.forEach(name => {
@@ -111,7 +111,7 @@ function renderBookList () {
   })
 }
 
-async function selectBook (name) {
+async function selectBook(name) {
   activeBook = name
   selectedPageIndex = null
   localStorage.setItem(ACTIVE_BOOK_KEY, name)
@@ -134,7 +134,7 @@ async function selectBook (name) {
 
 // --- Page panel ---
 
-function renderPagePanel () {
+function renderPagePanel() {
   const title = document.getElementById('pagePanelTitle')
   const emptyState = document.getElementById('emptyState')
   const pageList = document.getElementById('pageList')
@@ -160,7 +160,7 @@ function renderPagePanel () {
   })
 }
 
-function createPageItem (page, index) {
+function createPageItem(page, index) {
   const item = document.createElement('div')
   item.className = 'page-item' + (selectedPageIndex === index ? ' selected' : '')
   item.draggable = true
@@ -301,7 +301,7 @@ function createPageItem (page, index) {
 
 // --- Manifest save ---
 
-async function saveManifest () {
+async function saveManifest() {
   try {
     await api('saveManifest', { bookName: activeBook, manifest: activeManifest })
     setCachedManifest(activeBook, activeManifest)
@@ -313,7 +313,7 @@ async function saveManifest () {
 
 // --- Page operations ---
 
-async function createNewPage () {
+async function createNewPage() {
   if (!activeManifest) return
   const id = generatePageId()
   const emptyPage = {
@@ -343,7 +343,7 @@ async function createNewPage () {
   }
 }
 
-async function duplicatePage (index) {
+async function duplicatePage(index) {
   if (!activeManifest) return
   const srcPage = activeManifest.pages[index]
   setStatus('Duplicating page...')
@@ -366,7 +366,7 @@ async function duplicatePage (index) {
   }
 }
 
-async function deletePage (index) {
+async function deletePage(index) {
   if (!activeManifest) return
   const page = activeManifest.pages[index]
   setStatus(`Deleting ${page.id}...`)
@@ -382,7 +382,7 @@ async function deletePage (index) {
   }
 }
 
-function loadPageInSketcher (page) {
+function loadPageInSketcher(page) {
   localStorage.setItem('sketcher_load_page', JSON.stringify({
     bookName: activeBook,
     pageId: page.id
@@ -390,14 +390,14 @@ function loadPageInSketcher (page) {
   window.location.href = 'index.html'
 }
 
-function generatePageId () {
+function generatePageId() {
   const ts = Date.now().toString(36).toUpperCase()
   return `${activeBook}_${ts}`
 }
 
 // --- Render helpers ---
 
-function renderPageToCanvas (pageJSON, targetCanvas) {
+function renderPageToCanvas(pageJSON, targetCanvas) {
   const ctx = targetCanvas.getContext('2d')
   const bg = pageJSON.canvasParams.backgroundColor || '#f0ebe8'
   ctx.fillStyle = bg
@@ -412,7 +412,7 @@ function renderPageToCanvas (pageJSON, targetCanvas) {
   })
 }
 
-function renderTransitionFrame (fromJSON, toJSON, t, targetCanvas, pageInstance) {
+function renderTransitionFrame(fromJSON, toJSON, t, targetCanvas, pageInstance) {
   // Uses Page's transition helpers synchronously for a single frame
   const fromMarks = fromJSON.marks.map(m => Mark.fromJSON(m))
   const toMarks = toJSON.marks.map(m => Mark.fromJSON(m))
@@ -468,7 +468,7 @@ function renderTransitionFrame (fromJSON, toJSON, t, targetCanvas, pageInstance)
 
 // --- PNG Export ---
 
-async function exportPng () {
+async function exportPng() {
   if (selectedPageIndex === null || !activeManifest) return
   const pageEntry = activeManifest.pages[selectedPageIndex]
   setStatus('Fetching page...')
@@ -496,7 +496,7 @@ async function exportPng () {
 
 // --- Video Export ---
 
-async function exportVideo () {
+async function exportVideo() {
   if (!activeManifest || activeManifest.pages.length === 0) return
 
   const pageCount = Math.min(activeManifest.pages.length, VIDEO_PAGE_LIMIT)
@@ -510,8 +510,18 @@ async function exportVideo () {
   let ffmpeg
 
   try {
-    const { FFmpeg } = await import('/ffmpeg/ffmpeg.js')
+    // Load ffmpeg UMD bundle via script tag if not already loaded
+    if (!window.FFmpegWASM) {
+      await new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = '/ffmpeg/ffmpeg.umd.js'
+        script.onload = resolve
+        script.onerror = reject
+        document.head.appendChild(script)
+      })
+    }
 
+    const { FFmpeg } = window.FFmpegWASM
     ffmpeg = new FFmpeg()
 
     await ffmpeg.load({
@@ -640,7 +650,7 @@ async function exportVideo () {
   }
 }
 
-function calculateTotalFrames (pageCount, fps, transSteps) {
+function calculateTotalFrames(pageCount, fps, transSteps) {
   let total = 0
   for (let p = 0; p < pageCount; p++) {
     const entry = activeManifest.pages[p]
@@ -654,13 +664,13 @@ function calculateTotalFrames (pageCount, fps, transSteps) {
   return total
 }
 
-function canvasToBlob (canvas) {
+function canvasToBlob(canvas) {
   return new Promise(resolve => canvas.toBlob(resolve, 'image/png'))
 }
 
 // --- Book creation ---
 
-function openNewBookModal () {
+function openNewBookModal() {
   document.getElementById('modalBookName').value = ''
   document.getElementById('modal').classList.add('visible')
 }
@@ -738,7 +748,7 @@ document.head.appendChild(style)
 
 // --- Init ---
 
-async function init () {
+async function init() {
   const saved = localStorage.getItem(ACTIVE_BOOK_KEY)
   await loadBooks()
   if (saved && books.includes(saved)) {

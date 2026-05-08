@@ -198,7 +198,8 @@ export class Mark {
               const val = this.distanceBetweenPoints(
                 this.gradient.x, this.gradient.y, x, y
               )
-              ctx.lineWidth = this.mapValue(val, 0, farthest * 1.1, 0.6, 0.0)
+              // ctx.lineWidth = this.mapValue(val, 0, farthest * 1.1, 0.6, 0.0)
+              ctx.lineWidth = this.mapValue(val, 0, farthest * 1.1, this.hatchAngle, 0.0)
 
               if (val < farthest * 0.9 && ctx.lineWidth >= 0.2) {
                 if (ctx.lineWidth < 0.3) {

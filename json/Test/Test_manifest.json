@@ -5,5 +5,14 @@
   "height": 480,
   "defaultPageDuration": 5,
   "defaultTransitionDuration": 1,
-  "pages": []
+  "pages": [
+    {
+      "id": "Test_MOXFPN8X",
+      "filename": "Test_MOXFPN8X.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    }
+  ]
 }

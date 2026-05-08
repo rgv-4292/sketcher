@@ -9,7 +9,9 @@ export class Mark {
     hatchAngle = 0.7,
     alpha = 1.0,
     trace = false,
-    gradient = null
+    gradient = null,
+    fillMode = 'none',
+    density = 3
   ) {
     this.color = color
     this.minDistance = minDistance
@@ -22,6 +24,8 @@ export class Mark {
     this.alpha = alpha
     this.trace = trace
     this.gradient = gradient
+    this.fillMode = fillMode || 'none'
+    this.density = density || 3
   }
 
   addPoint (x, y) {
@@ -42,8 +46,7 @@ export class Mark {
       const dx = newPoint.x - existingPoint.x
       const dy = newPoint.y - existingPoint.y
       const distance = Math.sqrt(dx * dx + dy * dy)
-      if (!newPoint.visible) {
-      } else {
+      if (newPoint.visible) {
         if (
           distance <= this.distanceThreshold &&
           Math.random() < this.connectionProbability / 100
@@ -90,38 +93,22 @@ export class Mark {
         Math.hypot(point2.x - point1.x, point2.y - point1.y)
       )
     )
-
-    let lastx = point1.x,
-      lasty = point1.y
-
+    let lastx = point1.x, lasty = point1.y
     ctx.lineWidth = this.hatchAngle
 
     for (let i = 0; i <= step; i++) {
       const t = i / step
-      const x =
-        point1.x +
-        (point2.x - point1.x) * t +
-        (Math.random() * 2 - 1) * pressure
-      const y =
-        point1.y +
-        (point2.y - point1.y) * t +
-        (Math.random() * 2 - 1) * pressure
-
+      const x = point1.x + (point2.x - point1.x) * t + (Math.random() * 2 - 1) * pressure
+      const y = point1.y + (point2.y - point1.y) * t + (Math.random() * 2 - 1) * pressure
       try {
-        ctx.strokeStyle = `rgba(${this.getRGB(this.color)}, ${
-          i === 0 || i === step ? 0.03 : 0.25
-        })`
+        ctx.strokeStyle = `rgba(${this.getRGB(this.color)}, ${i === 0 || i === step ? 0.03 : 0.25})`
       } catch (error) {
-        ctx.strokeStyle = `rgba(255,0,0, ${
-          i === 0 || i === step ? 0.03 : 0.25
-        })`
+        ctx.strokeStyle = `rgba(255,0,0, ${i === 0 || i === step ? 0.03 : 0.25})`
       }
-
       ctx.beginPath()
       ctx.moveTo(lastx, lasty)
       ctx.lineTo(x, y)
       ctx.stroke()
-
       lastx = x
       lasty = y
     }
@@ -133,10 +120,8 @@ export class Mark {
     ctx.globalAlpha = this.alpha
 
     if (this.filled) {
-      if (!transition) {
-        this.drawFilledMark(targetCanvas)
-      }
-      if (this.trace || transition) {
+      this.drawFilledMark(targetCanvas)
+      if (this.trace) {
         for (let i = 1; i < this.points.length; i++) {
           this.connectNewPoint(this.points[i], targetCanvas)
         }
@@ -154,57 +139,84 @@ export class Mark {
     const canvas = targetCanvas || document.getElementById('myCanvas')
     const ctx = canvas.getContext('2d')
 
-    const markWidth = this.markWidth
-    var stepVal = markWidth
-    let hatchAngle = Math.random() * 360
-    ctx.strokeStyle = this.color
-    ctx.lineWidth = 0.3
-
     const points = this.points.map(p => ({ x: p.x, y: p.y }))
+    if (points.length < 3) return
+
     const minX = Math.min(...points.map(p => p.x))
     const maxX = Math.max(...points.map(p => p.x))
     const minY = Math.min(...points.map(p => p.y))
     const maxY = Math.max(...points.map(p => p.y))
 
+    ctx.strokeStyle = this.color
+    ctx.lineWidth = 0.3
+
     this.clipToPolygon(ctx, points)
 
-    if (this.gradient == null) {
-      this.gradient = points[0]
-    }
+    if (this.fillMode === 'solid') {
+      // Uniform density hatch — no gradient falloff
+      const stepVal = this.density
+      let hatchAngle = Math.random() * 360
+      ctx.lineWidth = this.hatchAngle
+      for (let y = minY; y <= maxY; y += stepVal) {
+        for (let x = minX; x <= maxX; x += stepVal) {
+          if (this.isPointInPolygon(x, y, points)) {
+            hatchAngle = Math.random() * 360
+            const offsetX = Math.random() * stepVal - stepVal / 2
+            const offsetY = Math.random() * stepVal - stepVal / 2
+            this.drawHatchLine(ctx, x + offsetX, y + offsetY, hatchAngle)
+          }
+        }
+      }
+    } else {
+      // Gradient or none mode — use existing gradient falloff
+      const markWidth = this.markWidth
+      let stepVal = markWidth
+      let hatchAngle = Math.random() * 360
+      ctx.lineWidth = 0.3
 
-    const farthest = this.farthestDistance(
-      this.gradient,
-      this.points
-    ).maxDistance
+      if (this.gradient == null) {
+        this.gradient = points[0]
+      }
 
-    for (let y = minY; y <= maxY; y += stepVal) {
-      for (let x = minX; x <= maxX; x += stepVal) {
-        if (this.isPointInPolygon(x, y, points)) {
-          hatchAngle = Math.random() * 360
-          const val = this.distanceBetweenPoints(
-            this.gradient.x,
-            this.gradient.y,
-            x,
-            y
-          )
-          ctx.lineWidth = 0.5
-          ctx.lineWidth = this.mapValue(val, 0, farthest * 1.1, 0.6, 0.0)
+      // Only use gradient falloff in 'gradient' mode
+      const useGradient = this.fillMode === 'gradient'
+      const farthest = useGradient
+        ? this.farthestDistance(this.gradient, this.points).maxDistance
+        : 1
 
-          if (val < farthest * 0.9 && ctx.lineWidth >= 0.2) {
-            if (ctx.lineWidth < 0.3) {
-              const test = Math.random() * 50
-              if (test > 10) {
-                const offsetX = Math.random() * stepVal - stepVal / 2
-                const offsetY = Math.random() * stepVal - stepVal / 2
-                this.drawHatchLine(ctx, x + offsetX, y + offsetY, hatchAngle)
+      for (let y = minY; y <= maxY; y += stepVal) {
+        for (let x = minX; x <= maxX; x += stepVal) {
+          if (this.isPointInPolygon(x, y, points)) {
+            hatchAngle = Math.random() * 360
+
+            if (useGradient) {
+              const val = this.distanceBetweenPoints(
+                this.gradient.x, this.gradient.y, x, y
+              )
+              ctx.lineWidth = this.mapValue(val, 0, farthest * 1.1, 0.6, 0.0)
+
+              if (val < farthest * 0.9 && ctx.lineWidth >= 0.2) {
+                if (ctx.lineWidth < 0.3) {
+                  if (Math.random() * 50 > 10) {
+                    const offsetX = Math.random() * stepVal - stepVal / 2
+                    const offsetY = Math.random() * stepVal - stepVal / 2
+                    this.drawHatchLine(ctx, x + offsetX, y + offsetY, hatchAngle)
+                  }
+                } else {
+                  const offsetX = Math.random() * stepVal - stepVal / 2
+                  const offsetY = Math.random() * stepVal - stepVal / 2
+                  this.drawHatchLine(ctx, x + offsetX, y + offsetY, hatchAngle)
+                }
               }
+              stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, 2, 5))
             } else {
+              // fillMode === 'none' — uniform default density
+              ctx.lineWidth = this.hatchAngle
               const offsetX = Math.random() * stepVal - stepVal / 2
               const offsetY = Math.random() * stepVal - stepVal / 2
               this.drawHatchLine(ctx, x + offsetX, y + offsetY, hatchAngle)
             }
           }
-          stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, 2, 5))
         }
       }
     }
@@ -220,9 +232,7 @@ export class Mark {
     let maxDistance = 0
     let farthestPoint = null
     points.forEach(p => {
-      const distance = Math.sqrt(
-        Math.pow(p.x - point.x, 2) + Math.pow(p.y - point.y, 2)
-      )
+      const distance = Math.sqrt(Math.pow(p.x - point.x, 2) + Math.pow(p.y - point.y, 2))
       if (distance > maxDistance) {
         maxDistance = distance
         farthestPoint = p
@@ -232,13 +242,10 @@ export class Mark {
   }
 
   mapValue (val, startRangeBegin, startRangeFinish, endRangeBegin, endRangeFinish) {
-    const proportion =
-      (val - startRangeBegin) / (startRangeFinish - startRangeBegin)
+    const proportion = (val - startRangeBegin) / (startRangeFinish - startRangeBegin)
     var answer = endRangeBegin + proportion * (endRangeFinish - endRangeBegin)
     answer = answer.toFixed(2)
-    if (answer < 0.0) {
-      answer = 0.0
-    }
+    if (answer < 0.0) answer = 0.0
     return answer
   }
 
@@ -267,11 +274,20 @@ export class Mark {
     for (let i = 0, j = points.length - 1; i < points.length; j = i++) {
       const xi = points[i].x, yi = points[i].y
       const xj = points[j].x, yj = points[j].y
-      const intersect =
-        yi > y != yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi
+      const intersect = yi > y != yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi
       if (intersect) inside = !inside
     }
     return inside
+  }
+
+  // Convert this mark to SVG path string for transition rendering
+  toSVGPath () {
+    if (this.points.length < 2) return ''
+    let d = `M ${this.points[0].x} ${this.points[0].y}`
+    for (let i = 1; i < this.points.length; i++) {
+      d += ` L ${this.points[i].x} ${this.points[i].y}`
+    }
+    return d
   }
 
   toJSON () {
@@ -286,7 +302,9 @@ export class Mark {
       hatchAngle: this.hatchAngle,
       alpha: this.alpha,
       trace: this.trace,
-      gradient: this.gradient
+      gradient: this.gradient,
+      fillMode: this.fillMode,
+      density: this.density
     }
   }
 
@@ -301,20 +319,15 @@ export class Mark {
       data.hatchAngle,
       data.alpha,
       data.trace,
-      data.gradient
+      data.gradient,
+      data.fillMode || 'none',
+      data.density || 3
     )
     mark.points = data.points.map(point => ({
       x: Math.floor(point.x),
       y: Math.floor(point.y),
-      visible: point.visible
+      visible: point.visible != null ? point.visible : true
     }))
-    mark.points.forEach(point => {
-      try {
-        if (point.visible == null) {
-          point.visible = true
-        }
-      } catch (error) {}
-    })
     return mark
   }
 

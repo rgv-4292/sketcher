@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sketcher</title>
     <style>
-        canvas {
-            touch-action: none;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -19,117 +16,404 @@
             align-items: center;
             justify-content: flex-start;
             height: 100vh;
+            background: #222;
+            -webkit-user-select: none;
+            user-select: none;
         }
+
+        canvas { touch-action: none; display: block; }
 
         #navbar {
             background-color: #333;
             width: 100%;
-            padding: 10px;
+            padding: 8px 10px;
             display: flex;
-            justify-content: center; /* Center the buttons */
+            justify-content: center;
+            gap: 8px;
         }
 
         #navbar button {
             color: white;
             background-color: #444;
-            width: 72px;
             border: none;
-            padding: 10px;
-            margin-right: 10px;
+            padding: 8px 12px;
             cursor: pointer;
-            user-select: none; /* Prevent text selection */
+            border-radius: 4px;
+            font-size: 13px;
         }
 
-        #navbar button:hover {
-            background-color: #555;
+        #navbar button:hover { background-color: #555; }
+
+        #colorIndicator {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid #888;
+            cursor: pointer;
+            background: rgba(0,0,0,0.75);
+            flex-shrink: 0;
+            align-self: center;
         }
 
+        #bgColorIndicator {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid #888;
+            cursor: pointer;
+            background: #f0ebe8;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        /* Props Panel */
         #controls {
             display: none;
-            margin-top: 10px;
+            background: #2a2a2a;
+            color: #ddd;
+            width: 100%;
+            max-width: 480px;
+            padding: 12px 16px;
+            overflow-y: auto;
+            max-height: calc(100vh - 50px);
         }
 
-        #controls label {
+        .section-label {
+            color: #aaa;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 14px 0 6px 0;
+            border-bottom: 1px solid #444;
+            padding-bottom: 4px;
+        }
+
+        .control-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .control-row label {
+            font-size: 13px;
+            color: #ccc;
+            min-width: 130px;
+        }
+
+        .control-row input[type="number"] {
+            width: 70px;
+            background: #333;
+            border: 1px solid #555;
+            color: #fff;
+            padding: 4px 6px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+
+        .control-row input[type="range"] {
+            flex: 1;
+        }
+
+        .control-row input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        /* Fill mode 3-way toggle */
+        #fillModeGroup {
+            display: flex;
+            gap: 6px;
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+        #fillModeGroup button {
+            flex: 1;
+            background: #444;
+            color: #ccc;
+            border: 1px solid #555;
+            padding: 5px 4px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        #fillModeGroup button.active {
+            background: #666;
+            color: #fff;
+            border-color: #888;
+        }
+
+        /* Presets */
+        .preset-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        .preset-row input[type="text"] {
+            flex: 1;
+            background: #333;
+            border: 1px solid #555;
+            color: #fff;
+            padding: 4px 6px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+
+        .preset-row button {
+            background: #444;
+            color: #ccc;
+            border: 1px solid #555;
+            padding: 5px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .preset-row button:hover { background: #555; }
+        .preset-row button:disabled { opacity: 0.4; cursor: default; }
+
+        /* Background color row */
+        #bgColorRow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bg-swatch {
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            border: 2px solid #666;
+            cursor: pointer;
+        }
+
+        /* Color wheel popup */
+        #colorPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #2a2a2a;
+            border: 1px solid #555;
+            border-radius: 8px;
+            padding: 16px;
+            z-index: 1000;
+            width: 280px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+        }
+
+        #colorPopup.visible { display: block; }
+
+        #colorPopupTitle {
+            color: #aaa;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        #colorWheel {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
             display: block;
-            margin-bottom: 5px;
-            user-select: none; /* Prevent label text selection */
+            margin: 0 auto 12px auto;
+            cursor: crosshair;
         }
 
-        #controls input {
-            margin-bottom: 10px;
+        #colorWheelBrightness {
+            width: 100%;
+            margin-bottom: 12px;
         }
 
-        #controls input[type="checkbox"] {
-            margin-right: 5px;
+        #colorPreviewBox {
+            width: 100%;
+            height: 32px;
+            border-radius: 4px;
+            border: 1px solid #555;
+            margin-bottom: 12px;
         }
 
-        /* Disable text selection for the entire body if necessary */
-        body {
-            -webkit-touch-callout: none; /* Disable callout, e.g., on long-press */
-            -webkit-user-select: none; /* Disable text selection */
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+        #paletteRow {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
         }
+
+        .palette-swatch {
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            border: 2px solid #555;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .palette-swatch.filled { border-color: #888; }
+
+        #paletteSaveBtn {
+            width: 100%;
+            background: #444;
+            color: #ccc;
+            border: 1px solid #555;
+            padding: 6px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        #paletteSaveBtn:hover { background: #555; }
+
+        #colorPopupClose {
+            width: 100%;
+            background: #555;
+            color: #fff;
+            border: none;
+            padding: 7px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        #colorPopupClose:hover { background: #666; }
+
+        #colorPopupOverlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+        }
+
+        #colorPopupOverlay.visible { display: block; }
     </style>
 </head>
-
 <body>
     <div id="navbar">
         <button id="controlButton">Props</button>
-        <button id="colorButton">Color</button>
+        <div id="colorIndicator" title="Mark Color"></div>
+        <div id="bgColorIndicator" title="Background Color"></div>
         <button id="deleteButton">Del Last</button>
         <button id="downloadButton">Send</button>
         <button id="loadButton">Load</button>
     </div>
+
     <div id="controls">
-        <label for="minDistance">Min Distance: </label>
-        <input type="number" id="minDistance" value="3" step="0.1"><br>
-        
-        <label for="slider1">Steps: </label>
-        <input type="range" id="slider1" min="0" max="20" step="1" value="6"><br>
-        
-        <label for="slider2">Slider 2: </label>
-        <input type="range" id="slider2" min="0" max="10" step="0.1" value="5"><br>
-        
-        <label for="slider3">Slider 3: </label>
-        <input type="range" id="slider3" min="0" max="10" step="0.1" value="5"><br>
-        
-        <label for="name">Name: </label>
-        <input type="text" id="nameInput" placeholder="Enter name"><br>
+        <!-- Drawing Mode -->
+        <div class="section-label">Drawing Mode</div>
 
-        <label for="checkbox1">
-            <input type="checkbox" id="checkbox1"> Trace
-        </label><br>
+        <div class="control-row">
+            <label>Draw Filled Marks</label>
+            <input type="checkbox" id="filledMarkToggle">
+        </div>
 
-        <label for="checkbox2">
-            <input type="checkbox" id="checkbox2"> Set Gradient
-        </label><br>
+        <div class="control-row">
+            <label>Fill Mode</label>
+            <div id="fillModeGroup">
+                <button id="fillModeNone" class="active">None</button>
+                <button id="fillModeGradient">Gradient</button>
+                <button id="fillModeSolid">Solid</button>
+            </div>
+        </div>
 
-        <label for="distanceThreshold">Distance Threshold: </label>
-        <input type="number" id="distanceThreshold" value="12"><br>
-        
-        <label for="connectionProbability">Connection Probability (%): </label>
-        <input type="number" id="connectionProbability" value="75"><br>
+        <div class="control-row">
+            <label>Trace Outline</label>
+            <input type="checkbox" id="checkbox1">
+        </div>
 
-        <label for="markWidth">Width: </label>
-        <input type="number" id="markWidth" value="2" step="0.1"><br>
+        <!-- Mark Style -->
+        <div class="section-label">Mark Style</div>
 
-        <label for="hatchAngle">Saturation: </label>
-        <input type="number" id="hatchAngle" value="0.7" step="0.1"><br>
+        <div class="control-row">
+            <label>Width</label>
+            <input type="number" id="markWidth" value="2" step="0.1">
+        </div>
 
-        <label for="scatter">Scatter: </label>
-        <input type="number" id="scatter" value="0"><br>
+        <div class="control-row">
+            <label>Saturation</label>
+            <input type="number" id="hatchAngle" value="0.7" step="0.1">
+        </div>
 
-        <label>
-            <input type="checkbox" id="filledMarkToggle"> Draw Filled Marks
-        </label>
+        <div class="control-row">
+            <label>Scatter</label>
+            <input type="number" id="scatter" value="0">
+        </div>
+
+        <div class="control-row" id="densityRow" style="display:none;">
+            <label>Density</label>
+            <input type="number" id="density" value="3" step="0.5" min="1" max="20">
+        </div>
+
+        <!-- Connection -->
+        <div class="section-label">Connection</div>
+
+        <div class="control-row">
+            <label>Min Distance</label>
+            <input type="number" id="minDistance" value="3" step="0.1">
+        </div>
+
+        <div class="control-row">
+            <label>Distance Threshold</label>
+            <input type="number" id="distanceThreshold" value="12">
+        </div>
+
+        <div class="control-row">
+            <label>Connection %</label>
+            <input type="number" id="connectionProbability" value="75">
+        </div>
+
+        <!-- Page -->
+        <div class="section-label">Page</div>
+
+        <div class="control-row" id="bgColorRow">
+            <label>Background Color</label>
+            <div id="bgColorSwatch" class="bg-swatch" style="background:#f0ebe8;"></div>
+        </div>
+
+        <!-- Presets -->
+        <div class="section-label">Presets</div>
+
+        <div class="preset-row" id="preset0row">
+            <input type="text" id="preset0name" placeholder="Preset 1">
+            <button id="preset0save">Save</button>
+            <button id="preset0load" disabled>Load</button>
+        </div>
+        <div class="preset-row" id="preset1row">
+            <input type="text" id="preset1name" placeholder="Preset 2">
+            <button id="preset1save">Save</button>
+            <button id="preset1load" disabled>Load</button>
+        </div>
+        <div class="preset-row" id="preset2row">
+            <input type="text" id="preset2name" placeholder="Preset 3">
+            <button id="preset2save">Save</button>
+            <button id="preset2load" disabled>Load</button>
+        </div>
     </div>
 
     <canvas id="myCanvas" width="480" height="640"></canvas>
+
+    <!-- Color Wheel Overlay -->
+    <div id="colorPopupOverlay"></div>
+    <div id="colorPopup">
+        <div id="colorPopupTitle">Select Color</div>
+        <canvas id="colorWheel" width="220" height="220"></canvas>
+        <input type="range" id="colorWheelBrightness" min="0" max="100" value="85">
+        <div id="colorPreviewBox"></div>
+        <div id="paletteRow"></div>
+        <button id="paletteSaveBtn">Save to Palette</button>
+        <button id="colorPopupClose">Done</button>
+    </div>
+
     <script src="./svg.min.js"></script>
     <script src="./perlin.js"></script>
     <script type="module" src="./index.js"></script>
 </body>
-
 </html>

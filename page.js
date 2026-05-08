@@ -296,6 +296,21 @@ export class Page {
     return `rgba(${r},${g},${b},${a})`
   }
 
+  lerpHexColor (hex1, hex2, t) {
+    const parse = hex => {
+      const r = parseInt(hex.slice(1, 3), 16)
+      const g = parseInt(hex.slice(3, 5), 16)
+      const b = parseInt(hex.slice(5, 7), 16)
+      return [r, g, b]
+    }
+    const [r1, g1, b1] = parse(hex1)
+    const [r2, g2, b2] = parse(hex2)
+    const r = Math.round(r1 + (r2 - r1) * t).toString(16).padStart(2, '0')
+    const g = Math.round(g1 + (g2 - g1) * t).toString(16).padStart(2, '0')
+    const b = Math.round(b1 + (b2 - b1) * t).toString(16).padStart(2, '0')
+    return `#${r}${g}${b}`
+  }
+
   async startTransition (newJSON) {
     const FRAMES = 7
     const FRAME_DURATION = 100
@@ -303,6 +318,9 @@ export class Page {
     // Deep copy current marks safely
     const fromMarks = this.marks.map(m => Mark.fromJSON(m.toJSON()))
     const toMarks = newJSON.marks.map(markData => Mark.fromJSON(markData))
+
+    const fromBg = this.canvasParams.backgroundColor || '#f0ebe8'
+    const toBg = newJSON.canvasParams.backgroundColor || '#f0ebe8'
 
     // If no current marks just load directly
     if (fromMarks.length === 0) {
@@ -367,7 +385,7 @@ export class Page {
 
       // Clear offscreen
       const offCtx = offscreen.getContext('2d')
-      offCtx.fillStyle = this.canvasParams.backgroundColor
+      offCtx.fillStyle = this.lerpHexColor(fromBg, toBg, t)
       offCtx.fillRect(0, 0, offscreen.width, offscreen.height)
 
       // Draw matched pairs
@@ -451,6 +469,7 @@ export class Page {
         // Final full quality render
         this.marks = toMarks
         this.tempMarks = []
+        this.canvasParams.backgroundColor = toBg
         this.render()
       }
     }

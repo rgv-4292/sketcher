@@ -176,6 +176,7 @@ export class Mark {
 
       // const markWidth = this.markWidth
       let stepVal = this.density
+      console.log('stepVal', stepVal)
       let hatchAngle = Math.random() * 360
       ctx.lineWidth = this.hatchAngle
 
@@ -215,6 +216,7 @@ export class Mark {
                 }
               }
               stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, 2, 5))
+              console.log('stepVal', stepVal)
             } else {
               // fillMode === 'none' — uniform default density
               ctx.lineWidth = this.hatchAngle

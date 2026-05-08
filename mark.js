@@ -169,10 +169,15 @@ export class Mark {
       }
     } else {
       // Gradient or none mode — use existing gradient falloff
-      const markWidth = this.markWidth
-      let stepVal = markWidth
+      // const markWidth = this.markWidth
+      // let stepVal = markWidth
+      // let hatchAngle = Math.random() * 360
+      // ctx.lineWidth = 0.3
+
+      // const markWidth = this.markWidth
+      let stepVal = this.density
       let hatchAngle = Math.random() * 360
-      ctx.lineWidth = 0.3
+      ctx.lineWidth = this.hatchAngle
 
       if (this.gradient == null) {
         this.gradient = points[0]

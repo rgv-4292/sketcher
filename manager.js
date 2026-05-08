@@ -496,7 +496,7 @@ async function exportPng() {
 
 // --- Video Export ---
 
-async function exportVideo() {
+async function exportVideo () {
   if (!activeManifest || activeManifest.pages.length === 0) return
 
   const pageCount = Math.min(activeManifest.pages.length, VIDEO_PAGE_LIMIT)
@@ -510,24 +510,23 @@ async function exportVideo() {
   let ffmpeg
 
   try {
-    // Load ffmpeg UMD bundle via script tag if not already loaded
-    if (!window.FFmpegWASM) {
+    if (!window.FFmpeg) {
       await new Promise((resolve, reject) => {
         const script = document.createElement('script')
-        script.src = '/ffmpeg/ffmpeg.umd.js'
+        script.src = '/ffmpeg/ffmpeg.min.js'
         script.onload = resolve
         script.onerror = reject
         document.head.appendChild(script)
       })
     }
 
-    const { FFmpeg } = window.FFmpegWASM
-    ffmpeg = new FFmpeg()
-
-    await ffmpeg.load({
-      coreURL: '/ffmpeg/ffmpeg-core.js',
-      wasmURL: '/ffmpeg/ffmpeg-core.wasm'
+    const { createFFmpeg } = window.FFmpeg
+    ffmpeg = createFFmpeg({
+      corePath: '/ffmpeg/ffmpeg-core.js',
+      log: false
     })
+
+    await ffmpeg.load()
 
     if (exportCancelled) return
 
@@ -546,12 +545,10 @@ async function exportVideo() {
     if (exportCancelled) return
 
     const FPS = 24
-    const TRANS_STEPS = 12
     const offscreen = document.createElement('canvas')
     offscreen.width = activeManifest.width
     offscreen.height = activeManifest.height
 
-    // Temporary Page instance for transition math helpers only
     const pageHelper = new Page('_offscreen_')
     pageHelper.canvasParams = {
       width: activeManifest.width,
@@ -562,7 +559,6 @@ async function exportVideo() {
     let frameIndex = 0
     const totalFrames = calculateTotalFrames(pageCount, FPS)
 
-    // Render and write frames
     for (let p = 0; p < pageCount; p++) {
       if (exportCancelled) return
 
@@ -582,11 +578,11 @@ async function exportVideo() {
       const pageBlob = await canvasToBlob(offscreen)
       const pageData = new Uint8Array(await pageBlob.arrayBuffer())
 
-      // Write page hold frames — reuse same image data
+      // Write page hold frames
       for (let f = 0; f < pageFrames; f++) {
         if (exportCancelled) return
         const fname = `frame${String(frameIndex).padStart(6, '0')}.png`
-        await ffmpeg.writeFile(fname, pageData)
+        ffmpeg.FS('writeFile', fname, pageData)
         frameIndex++
       }
 
@@ -610,7 +606,7 @@ async function exportVideo() {
           const transBlob = await canvasToBlob(offscreen)
           const transData = new Uint8Array(await transBlob.arrayBuffer())
           const fname = `frame${String(frameIndex).padStart(6, '0')}.png`
-          await ffmpeg.writeFile(fname, transData)
+          ffmpeg.FS('writeFile', fname, transData)
           frameIndex++
         }
       }
@@ -619,7 +615,7 @@ async function exportVideo() {
     if (exportCancelled) return
     updateProgress('Encoding video...', 80)
 
-    await ffmpeg.exec([
+    await ffmpeg.run(
       '-framerate', String(FPS),
       '-i', 'frame%06d.png',
       '-c:v', 'libx264',
@@ -627,11 +623,11 @@ async function exportVideo() {
       '-crf', '23',
       '-movflags', '+faststart',
       `${activeManifest.name}.mp4`
-    ])
+    )
 
     updateProgress('Preparing download...', 95)
 
-    const output = await ffmpeg.readFile(`${activeManifest.name}.mp4`)
+    const output = ffmpeg.FS('readFile', `${activeManifest.name}.mp4`)
     const blob = new Blob([output.buffer], { type: 'video/mp4' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')

@@ -507,18 +507,16 @@ async function exportVideo () {
   exportCancelled = false
   showProgress('Loading ffmpeg...', 0)
 
-  // Load ffmpeg on demand
   let ffmpeg
+
   try {
-    const { FFmpeg } = await import('https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.7/dist/esm/index.js')
-    const { fetchFile, toBlobURL } = await import('https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.1/dist/esm/index.js')
+    const { FFmpeg } = await import('/ffmpeg/ffmpeg.js')
 
     ffmpeg = new FFmpeg()
 
-    const baseURL = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm'
     await ffmpeg.load({
-      coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
-      wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm')
+      coreURL: '/ffmpeg/ffmpeg-core.js',
+      wasmURL: '/ffmpeg/ffmpeg-core.wasm'
     })
 
     if (exportCancelled) return
@@ -543,7 +541,7 @@ async function exportVideo () {
     offscreen.width = activeManifest.width
     offscreen.height = activeManifest.height
 
-    // We need a temporary Page instance for transition helpers
+    // Temporary Page instance for transition math helpers only
     const pageHelper = new Page('_offscreen_')
     pageHelper.canvasParams = {
       width: activeManifest.width,
@@ -552,7 +550,7 @@ async function exportVideo () {
     }
 
     let frameIndex = 0
-    const totalFrames = calculateTotalFrames(pageCount, FPS, TRANS_STEPS)
+    const totalFrames = calculateTotalFrames(pageCount, FPS)
 
     // Render and write frames
     for (let p = 0; p < pageCount; p++) {
@@ -562,18 +560,19 @@ async function exportVideo () {
       const pageDuration = entry.pageDuration ?? activeManifest.defaultPageDuration
       const transDuration = entry.transitionDuration ?? activeManifest.defaultTransitionDuration
       const pageFrames = Math.round(pageDuration * FPS)
+      const transFrames = Math.round(transDuration * FPS)
 
       updateProgress(
         `Rendering page ${p + 1} of ${pageCount}...`,
         20 + (frameIndex / totalFrames) * 60
       )
 
-      // Render static page frame once
+      // Render static page once
       renderPageToCanvas(pageJSONs[p], offscreen)
       const pageBlob = await canvasToBlob(offscreen)
       const pageData = new Uint8Array(await pageBlob.arrayBuffer())
 
-      // Write page hold frames
+      // Write page hold frames — reuse same image data
       for (let f = 0; f < pageFrames; f++) {
         if (exportCancelled) return
         const fname = `frame${String(frameIndex).padStart(6, '0')}.png`
@@ -583,16 +582,21 @@ async function exportVideo () {
 
       // Render transition to next page
       if (p < pageCount - 1) {
-        const transFrames = Math.round(transDuration * FPS)
         updateProgress(
-          `Rendering transition ${p + 1}→${p + 2}...`,
+          `Rendering transition ${p + 1} → ${p + 2}...`,
           20 + (frameIndex / totalFrames) * 60
         )
 
         for (let f = 0; f < transFrames; f++) {
           if (exportCancelled) return
-          const t = f / (transFrames - 1)
-          renderTransitionFrame(pageJSONs[p], pageJSONs[p + 1], t, offscreen, pageHelper)
+          const t = transFrames <= 1 ? 1 : f / (transFrames - 1)
+          renderTransitionFrame(
+            pageJSONs[p],
+            pageJSONs[p + 1],
+            t,
+            offscreen,
+            pageHelper
+          )
           const transBlob = await canvasToBlob(offscreen)
           const transData = new Uint8Array(await transBlob.arrayBuffer())
           const fname = `frame${String(frameIndex).padStart(6, '0')}.png`
@@ -605,7 +609,6 @@ async function exportVideo () {
     if (exportCancelled) return
     updateProgress('Encoding video...', 80)
 
-    // Encode
     await ffmpeg.exec([
       '-framerate', String(FPS),
       '-i', 'frame%06d.png',

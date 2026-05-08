@@ -5,4 +5,9 @@
   for = "/*"
   [headers.values]
     Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Embedder-Policy = "credentialless"
+    Cross-Origin-Embedder-Policy = "require-corp"
+
+[[headers]]
+  for = "/ffmpeg/*"
+  [headers.values]
+    Cross-Origin-Resource-Policy = "cross-origin"

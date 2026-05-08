@@ -5,5 +5,13 @@
   "height": 640,
   "defaultPageDuration": 5,
   "defaultTransitionDuration": 1,
-  "pages": []
+  "pages": [
+    {
+      "id": "My_First_Book_MOXAZ17U",
+      "filename": "My_First_Book_MOXAZ17U.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null
+    }
+  ]
 }

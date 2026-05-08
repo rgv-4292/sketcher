@@ -1,0 +1,41 @@
+{
+  "name": "My_First_Book",
+  "orientation": "portrait",
+  "width": 480,
+  "height": 640,
+  "defaultPageDuration": 5,
+  "defaultTransitionDuration": 1,
+  "pages": [
+    {
+      "id": "My_First_Book_MOXB2UEX",
+      "filename": "My_First_Book_MOXB2UEX.json",
+      "caption": "Title Page",
+      "pageDuration": 10,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "My_First_Book_MOXAZ17U",
+      "filename": "My_First_Book_MOXAZ17U.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null
+    },
+    {
+      "id": "My_First_Book_MOXB1OW4",
+      "filename": "My_First_Book_MOXB1OW4.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "My_First_Book_MOXB6HCD",
+      "filename": "My_First_Book_MOXB6HCD.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    }
+  ]
+}

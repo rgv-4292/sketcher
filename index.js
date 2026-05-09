@@ -73,30 +73,42 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentWheelColor = { h: 0, s: 0, b: 85 }
   let palette = JSON.parse(localStorage.getItem('sketcher_palette') || '[]')
 
-  function drawColorWheel(brightness) {
-    const size = colorWheelCanvas.width
-    const cx = size / 2, cy = size / 2, r = size / 2
-    colorWheelCtx.clearRect(0, 0, size, size)
-    const imageData = colorWheelCtx.createImageData(size, size)
-    for (let y = 0; y < size; y++) {
-      for (let x = 0; x < size; x++) {
-        const dx = x - cx, dy = y - cy
-        const dist = Math.sqrt(dx * dx + dy * dy)
-        if (dist <= r) {
-          const angle = Math.atan2(dy, dx) * 180 / Math.PI + 360
-          const hue = angle % 360
-          const sat = dist / r
-          const rgb = hslToRgb(hue / 360, sat, brightness / 100 * 0.5 + 0.1)
-          const idx = (y * size + x) * 4
-          imageData.data[idx] = rgb[0]
-          imageData.data[idx + 1] = rgb[1]
-          imageData.data[idx + 2] = rgb[2]
-          imageData.data[idx + 3] = 255
-        }
+function drawColorWheel (brightness) {
+  const size = colorWheelCanvas.width
+  const cx = size / 2, cy = size / 2, r = size / 2
+  colorWheelCtx.clearRect(0, 0, size, size)
+  const imageData = colorWheelCtx.createImageData(size, size)
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      const dx = x - cx, dy = y - cy
+      const dist = Math.sqrt(dx * dx + dy * dy)
+      if (dist <= r) {
+        const angle = (Math.atan2(dy, dx) * 180 / Math.PI + 360) % 360
+        const sat = dist / r
+        const l = brightness / 100
+        const rgb = hslToRgb(angle / 360, sat, l)
+        const idx = (y * size + x) * 4
+        imageData.data[idx] = rgb[0]
+        imageData.data[idx + 1] = rgb[1]
+        imageData.data[idx + 2] = rgb[2]
+        imageData.data[idx + 3] = 255
       }
     }
-    colorWheelCtx.putImageData(imageData, 0, 0)
   }
+  colorWheelCtx.putImageData(imageData, 0, 0)
+}
+
+function getColorFromWheel (x, y) {
+  const size = colorWheelCanvas.width
+  const cx = size / 2, cy = size / 2, r = size / 2
+  const dx = x - cx, dy = y - cy
+  const dist = Math.min(Math.sqrt(dx * dx + dy * dy), r)
+  const angle = (Math.atan2(dy, dx) * 180 / Math.PI + 360) % 360
+  const sat = dist / r
+  const l = parseInt(brightnessSlider.value) / 100
+  const rgb = hslToRgb(angle / 360, sat, l)
+  return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.75)`
+}
 
   function hslToRgb(h, s, l) {
     let r, g, b
@@ -118,19 +130,6 @@ document.addEventListener('DOMContentLoaded', function () {
       b = hue2rgb(p, q, h - 1 / 3)
     }
     return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)]
-  }
-
-  function getColorFromWheel(x, y) {
-    const size = colorWheelCanvas.width
-    const cx = size / 2, cy = size / 2, r = size / 2
-    const dx = x - cx, dy = y - cy
-    const dist = Math.min(Math.sqrt(dx * dx + dy * dy), r)
-    const angle = (Math.atan2(dy, dx) * 180 / Math.PI + 360) % 360
-    const sat = dist / r
-    const bri = parseInt(brightnessSlider.value)
-    const l = bri / 100 * 0.5 + 0.1
-    const rgb = hslToRgb(angle / 360, sat, l)
-    return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.75)`
   }
 
   function updateColorPreview(color) {
@@ -470,6 +469,13 @@ document.addEventListener('DOMContentLoaded', function () {
       activeBookManifest = data.manifest
       updateBookIndicator()
 
+      // Resize canvas to match book orientation
+      const canvas = document.getElementById('myCanvas')
+      canvas.width = activeBookManifest.width
+      canvas.height = activeBookManifest.height
+      page.canvasParams.width = activeBookManifest.width
+      page.canvasParams.height = activeBookManifest.height
+
       if (activePageId) {
         const pageRes = await fetch('/.netlify/functions/github', {
           method: 'POST',
@@ -486,6 +492,8 @@ document.addEventListener('DOMContentLoaded', function () {
           currentBgColor = page.canvasParams.backgroundColor
           syncBgIndicator()
         }
+      } else {
+        page.render()
       }
     } catch (err) {
       console.error('Error loading book:', err)

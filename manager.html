@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sketcher — Manager</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: Arial, sans-serif;
@@ -43,11 +48,27 @@
       font-size: 13px;
     }
 
-    .nav-btn:hover { background: #555; }
-    .nav-btn.primary { background: #5a7a5a; color: #fff; }
-    .nav-btn.primary:hover { background: #6a8a6a; }
-    .nav-btn.danger { background: #7a3a3a; color: #fff; }
-    .nav-btn.danger:hover { background: #8a4a4a; }
+    .nav-btn:hover {
+      background: #555;
+    }
+
+    .nav-btn.primary {
+      background: #5a7a5a;
+      color: #fff;
+    }
+
+    .nav-btn.primary:hover {
+      background: #6a8a6a;
+    }
+
+    .nav-btn.danger {
+      background: #7a3a3a;
+      color: #fff;
+    }
+
+    .nav-btn.danger:hover {
+      background: #8a4a4a;
+    }
 
     #main {
       display: flex;
@@ -87,7 +108,9 @@
       border-left: 3px solid transparent;
     }
 
-    .book-item:hover { background: #2a2a2a; }
+    .book-item:hover {
+      background: #2a2a2a;
+    }
 
     .book-item.active {
       background: #2a2a2a;
@@ -163,9 +186,17 @@
       transition: background 0.1s;
     }
 
-    .page-item:hover { background: #333; }
-    .page-item.dragging { opacity: 0.4; }
-    .page-item.drag-over { border-color: #6a8a6a; }
+    .page-item:hover {
+      background: #333;
+    }
+
+    .page-item.dragging {
+      opacity: 0.4;
+    }
+
+    .page-item.drag-over {
+      border-color: #6a8a6a;
+    }
 
     .page-thumb {
       width: 36px;
@@ -245,8 +276,15 @@
       font-size: 11px;
     }
 
-    .page-btn:hover { background: #4a4a4a; color: #fff; }
-    .page-btn.danger:hover { background: #7a3a3a; color: #fff; }
+    .page-btn:hover {
+      background: #4a4a4a;
+      color: #fff;
+    }
+
+    .page-btn.danger:hover {
+      background: #7a3a3a;
+      color: #fff;
+    }
 
     #newPageBtn {
       margin: 8px;
@@ -268,13 +306,15 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0, 0, 0, 0.7);
       z-index: 100;
       align-items: center;
       justify-content: center;
     }
 
-    #modal.visible { display: flex; }
+    #modal.visible {
+      display: flex;
+    }
 
     #modalBox {
       background: #2a2a2a;
@@ -329,118 +369,121 @@
     }
 
     /* Progress bar */
-#progressContainer {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  z-index: 200;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 16px;
-}
+    #progressContainer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
 
-#progressContainer.visible {
-  display: flex;
-}
+    #progressContainer.visible {
+      display: flex;
+    }
 
-#progressLabel {
-  color: #ccc;
-  font-size: 14px;
-}
+    #progressLabel {
+      color: #ccc;
+      font-size: 14px;
+    }
 
-#progressBarOuter {
-  width: 320px;
-  height: 12px;
-  background: #333;
-  border-radius: 6px;
-  overflow: hidden;
-}
+    #progressBarOuter {
+      width: 320px;
+      height: 12px;
+      background: #333;
+      border-radius: 6px;
+      overflow: hidden;
+    }
 
-#progressBarInner {
-  height: 100%;
-  background: #6a8a6a;
-  border-radius: 6px;
-  width: 0%;
-  transition: width 0.1s;
-}
+    #progressBarInner {
+      height: 100%;
+      background: #6a8a6a;
+      border-radius: 6px;
+      width: 0%;
+      transition: width 0.1s;
+    }
 
-#progressCancel {
-  margin-top: 8px;
-}
+    #progressCancel {
+      margin-top: 8px;
+    }
   </style>
 </head>
+
 <body>
 
-<div id="navbar">
-  <h1>Sketcher — Book Manager</h1>
-  <button class="nav-btn" id="refreshBtn">Refresh</button>
-  <button class="nav-btn" id="openViewerBtn">Open Viewer</button>
-  <button class="nav-btn" id="openSketcherBtn">Open Sketcher</button>
-  <button class="nav-btn primary" id="exportPngBtn" disabled>Export PNG</button>
-  <button class="nav-btn primary" id="exportVideoBtn" disabled>Export Video</button>
-</div>
-
-<div id="main">
-  <div id="bookPanel">
-    <h2>Books</h2>
-    <div id="bookList"></div>
-    <button class="nav-btn" id="newBookBtn">+ New Book</button>
+  <div id="navbar">
+    <h1>Sketcher — Book Manager</h1>
+    <button class="nav-btn" id="refreshBtn">Refresh</button>
+    <button class="nav-btn" id="openViewerBtn">Open Viewer</button>
+    <button class="nav-btn" id="openSketcherBtn">Open Sketcher</button>
+    <button class="nav-btn primary" id="exportPngBtn" disabled>Export PNG</button>
+    <button class="nav-btn primary" id="exportVideoBtn" disabled>Export Video</button>
   </div>
 
-  <div id="pagePanel">
-    <div id="pagePanelHeader">
-      <h2 id="pagePanelTitle">Select a Book</h2>
-      <div id="bookSettings" style="display:none;">
-        <span>Page dur:</span>
-        <input type="number" id="defaultPageDuration" value="5" min="1" max="60">
-        <span>s &nbsp; Trans:</span>
-        <input type="number" id="defaultTransDuration" value="1" min="0" max="10">
-        <span>s</span>
-        <button class="nav-btn" id="saveBookSettingsBtn" style="padding:3px 8px;font-size:12px;">Save</button>
+  <div id="main">
+    <div id="bookPanel">
+      <h2>Books</h2>
+      <button class="nav-btn" id="newBookBtn">+ New Book</button>
+      <div id="bookList"></div>
+    </div>
+
+    <div id="pagePanel">
+      <div id="pagePanelHeader">
+        <h2 id="pagePanelTitle">Select a Book</h2>
+        <button class="nav-btn" id="newPageBtn" style="display:none;">+ New Page</button>
+        <div id="bookSettings" style="display:none;">
+          <span>Page dur:</span>
+          <input type="number" id="defaultPageDuration" value="5" min="1" max="60">
+          <span>s &nbsp; Trans:</span>
+          <input type="number" id="defaultTransDuration" value="1" min="0" max="10">
+          <span>s</span>
+          <button class="nav-btn" id="saveBookSettingsBtn" style="padding:3px 8px;font-size:12px;">Save</button>
+        </div>
+      </div>
+
+      <div id="emptyState">Select or create a book</div>
+      <div id="pageList" style="display:none;"></div>
+      <button class="nav-btn" id="newPageBtn" style="display:none;">+ New Page</button>
+    </div>
+  </div>
+
+  <div id="statusBar">Ready</div>
+
+  <!-- Modal -->
+  <div id="modal">
+    <div id="modalBox">
+      <h3 id="modalTitle">New Book</h3>
+      <div class="modal-row">
+        <label>Book Name</label>
+        <input type="text" id="modalBookName" placeholder="MyBook">
+      </div>
+      <div class="modal-row">
+        <label>Orientation</label>
+        <select id="modalOrientation">
+          <option value="portrait">Portrait (480 × 640)</option>
+          <option value="landscape">Landscape (640 × 480)</option>
+        </select>
+      </div>
+      <div class="modal-buttons">
+        <button class="nav-btn" id="modalCancel">Cancel</button>
+        <button class="nav-btn primary" id="modalConfirm">Create</button>
       </div>
     </div>
-
-    <div id="emptyState">Select or create a book</div>
-    <div id="pageList" style="display:none;"></div>
-    <button class="nav-btn" id="newPageBtn" style="display:none;">+ New Page</button>
   </div>
-</div>
 
-<div id="statusBar">Ready</div>
-
-<!-- Modal -->
-<div id="modal">
-  <div id="modalBox">
-    <h3 id="modalTitle">New Book</h3>
-    <div class="modal-row">
-      <label>Book Name</label>
-      <input type="text" id="modalBookName" placeholder="MyBook">
+  <!-- Progress overlay -->
+  <div id="progressContainer">
+    <div id="progressLabel">Preparing export...</div>
+    <div id="progressBarOuter">
+      <div id="progressBarInner"></div>
     </div>
-    <div class="modal-row">
-      <label>Orientation</label>
-      <select id="modalOrientation">
-        <option value="portrait">Portrait (480 × 640)</option>
-        <option value="landscape">Landscape (640 × 480)</option>
-      </select>
-    </div>
-    <div class="modal-buttons">
-      <button class="nav-btn" id="modalCancel">Cancel</button>
-      <button class="nav-btn primary" id="modalConfirm">Create</button>
-    </div>
+    <button class="nav-btn danger" id="progressCancel">Cancel</button>
   </div>
-</div>
 
-<!-- Progress overlay -->
-<div id="progressContainer">
-  <div id="progressLabel">Preparing export...</div>
-  <div id="progressBarOuter">
-    <div id="progressBarInner"></div>
-  </div>
-  <button class="nav-btn danger" id="progressCancel">Cancel</button>
-</div>
-
-<script type="module" src="./manager.js"></script>
+  <script type="module" src="./manager.js"></script>
 </body>
+
 </html>

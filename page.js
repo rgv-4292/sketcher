@@ -4,9 +4,10 @@ export class Page {
   constructor(canvasId) {
     this.canvasId = canvasId
     this.marks = []
+    const canvas = document.getElementById(canvasId)
     this.canvasParams = {
-      width: 480,
-      height: 640,
+      width: canvas ? canvas.width : 480,
+      height: canvas ? canvas.height : 640,
       backgroundColor: '#f0ebe8'
     }
     this.tempMarks = []

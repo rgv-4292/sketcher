@@ -5,5 +5,14 @@
   "height": 480,
   "defaultPageDuration": 5,
   "defaultTransitionDuration": 1,
-  "pages": []
+  "pages": [
+    {
+      "id": "Blah_MOXVYJNG",
+      "filename": "Blah_MOXVYJNG.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    }
+  ]
 }

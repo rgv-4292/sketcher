@@ -62,6 +62,13 @@ async function runBookViewer (bookName, cookieKey, page) {
 
   if (!manifest || manifest.pages.length === 0) return
 
+  // Resize canvas to match book orientation
+  const canvas = document.getElementById('myCanvas')
+  canvas.width = manifest.width
+  canvas.height = manifest.height
+  page.canvasParams.width = manifest.width
+  page.canvasParams.height = manifest.height
+
   let currentIndex = parseInt(getCookie(cookieKey)) || 0
   if (currentIndex >= manifest.pages.length) currentIndex = 0
 

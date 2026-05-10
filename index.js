@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let controlsVisible = false
   let currentMark = null
   let lastFilledMark = -1
+  let unsavedChanges = false
 
   // --- State ---
   let currentColor = 'rgba(0,0,0,0.75)'
@@ -45,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- Color indicator sync ---
   const colorIndicator = document.getElementById('colorIndicator')
-  const bgColorIndicator = document.getElementById('bgColorIndicator')
   const bgColorSwatch = document.getElementById('bgColorSwatch')
 
   function syncColorIndicator() {
@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function syncBgIndicator() {
     bgColorIndicator.style.background = currentBgColor
-    bgColorSwatch.style.background = currentBgColor
   }
 
   // --- Color Wheel Popup ---
@@ -70,45 +69,47 @@ document.addEventListener('DOMContentLoaded', function () {
   const colorPopupClose = document.getElementById('colorPopupClose')
 
   let colorPopupTarget = 'mark' // 'mark' or 'bg'
+  let lastWheelX = null
+  let lastWheelY = null
   let currentWheelColor = { h: 0, s: 0, b: 85 }
   let palette = JSON.parse(localStorage.getItem('sketcher_palette') || '[]')
 
-function drawColorWheel (brightness) {
-  const size = colorWheelCanvas.width
-  const cx = size / 2, cy = size / 2, r = size / 2
-  colorWheelCtx.clearRect(0, 0, size, size)
-  const imageData = colorWheelCtx.createImageData(size, size)
-  for (let y = 0; y < size; y++) {
-    for (let x = 0; x < size; x++) {
-      const dx = x - cx, dy = y - cy
-      const dist = Math.sqrt(dx * dx + dy * dy)
-      if (dist <= r) {
-        const angle = (Math.atan2(dy, dx) * 180 / Math.PI + 360) % 360
-        const sat = dist / r
-        const l = brightness / 100
-        const rgb = hslToRgb(angle / 360, sat, l)
-        const idx = (y * size + x) * 4
-        imageData.data[idx] = rgb[0]
-        imageData.data[idx + 1] = rgb[1]
-        imageData.data[idx + 2] = rgb[2]
-        imageData.data[idx + 3] = 255
+  function drawColorWheel(brightness) {
+    const size = colorWheelCanvas.width
+    const cx = size / 2, cy = size / 2, r = size / 2
+    colorWheelCtx.clearRect(0, 0, size, size)
+    const imageData = colorWheelCtx.createImageData(size, size)
+    for (let y = 0; y < size; y++) {
+      for (let x = 0; x < size; x++) {
+        const dx = x - cx, dy = y - cy
+        const dist = Math.sqrt(dx * dx + dy * dy)
+        if (dist <= r) {
+          const angle = (Math.atan2(dy, dx) * 180 / Math.PI + 360) % 360
+          const sat = dist / r
+          const l = brightness / 100
+          const rgb = hslToRgb(angle / 360, sat, l)
+          const idx = (y * size + x) * 4
+          imageData.data[idx] = rgb[0]
+          imageData.data[idx + 1] = rgb[1]
+          imageData.data[idx + 2] = rgb[2]
+          imageData.data[idx + 3] = 255
+        }
       }
     }
+    colorWheelCtx.putImageData(imageData, 0, 0)
   }
-  colorWheelCtx.putImageData(imageData, 0, 0)
-}
 
-function getColorFromWheel (x, y) {
-  const size = colorWheelCanvas.width
-  const cx = size / 2, cy = size / 2, r = size / 2
-  const dx = x - cx, dy = y - cy
-  const dist = Math.min(Math.sqrt(dx * dx + dy * dy), r)
-  const angle = (Math.atan2(dy, dx) * 180 / Math.PI + 360) % 360
-  const sat = dist / r
-  const l = parseInt(brightnessSlider.value) / 100
-  const rgb = hslToRgb(angle / 360, sat, l)
-  return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.75)`
-}
+  function getColorFromWheel(x, y) {
+    const size = colorWheelCanvas.width
+    const cx = size / 2, cy = size / 2, r = size / 2
+    const dx = x - cx, dy = y - cy
+    const dist = Math.min(Math.sqrt(dx * dx + dy * dy), r)
+    const angle = (Math.atan2(dy, dx) * 180 / Math.PI + 360) % 360
+    const sat = dist / r
+    const l = parseInt(brightnessSlider.value) / 100
+    const rgb = hslToRgb(angle / 360, sat, l)
+    return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.75)`
+  }
 
   function hslToRgb(h, s, l) {
     let r, g, b
@@ -156,7 +157,7 @@ function getColorFromWheel (x, y) {
 
   function renderPalette() {
     paletteRow.innerHTML = ''
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 14; i++) {
       const swatch = document.createElement('div')
       swatch.className = 'palette-swatch' + (palette[i] ? ' filled' : '')
       swatch.style.background = palette[i] || 'transparent'
@@ -189,9 +190,9 @@ function getColorFromWheel (x, y) {
     const rect = colorWheelCanvas.getBoundingClientRect()
     const scaleX = colorWheelCanvas.width / rect.width
     const scaleY = colorWheelCanvas.height / rect.height
-    const x = (e.clientX - rect.left) * scaleX
-    const y = (e.clientY - rect.top) * scaleY
-    const color = getColorFromWheel(x, y)
+    lastWheelX = (e.clientX - rect.left) * scaleX
+    lastWheelY = (e.clientY - rect.top) * scaleY
+    const color = getColorFromWheel(lastWheelX, lastWheelY)
     updateColorPreview(color)
   })
 
@@ -200,19 +201,24 @@ function getColorFromWheel (x, y) {
     const rect = colorWheelCanvas.getBoundingClientRect()
     const scaleX = colorWheelCanvas.width / rect.width
     const scaleY = colorWheelCanvas.height / rect.height
-    const x = (e.clientX - rect.left) * scaleX
-    const y = (e.clientY - rect.top) * scaleY
-    const color = getColorFromWheel(x, y)
+    lastWheelX = (e.clientX - rect.left) * scaleX
+    lastWheelY = (e.clientY - rect.top) * scaleY
+    const color = getColorFromWheel(lastWheelX, lastWheelY)
     updateColorPreview(color)
   })
 
   brightnessSlider.addEventListener('input', () => {
-    drawColorWheel(parseInt(brightnessSlider.value))
+    const bri = parseInt(brightnessSlider.value)
+    drawColorWheel(bri)
+    if (lastWheelX !== null && lastWheelY !== null) {
+      const color = getColorFromWheel(lastWheelX, lastWheelY)
+      updateColorPreview(color)
+    }
   })
 
   paletteSaveBtn.addEventListener('pointerdown', () => {
     const color = colorPopupTarget === 'mark' ? currentColor : currentBgColor
-    if (palette.length >= 8) {
+    if (palette.length >= 14) {
       palette.shift()
     }
     palette.push(color)
@@ -236,15 +242,13 @@ function getColorFromWheel (x, y) {
     gradient: document.getElementById('fillModeGradient'),
     solid: document.getElementById('fillModeSolid')
   }
-  const densityRow = document.getElementById('densityRow')
 
   function setFillMode(mode) {
     fillMode = mode
     Object.keys(fillModeButtons).forEach(k => {
       fillModeButtons[k].classList.toggle('active', k === mode)
     })
-    densityRow.style.display = mode === 'solid' ? 'flex' : 'none'
-    updateGradientRowVisibility()  // add this line
+    updateGradientRowVisibility()
   }
 
   // Show/hide Set Gradient checkbox based on fill mode
@@ -297,9 +301,10 @@ function getColorFromWheel (x, y) {
 
   // --- Presets ---
   const PRESET_KEY = 'sketcher_presets'
+  const ACTIVE_PRESET_KEY = 'sketcher_active_preset'
 
   function getPresets() {
-    return JSON.parse(localStorage.getItem(PRESET_KEY) || '[null,null,null]')
+    return JSON.parse(localStorage.getItem(PRESET_KEY) || '[null,null,null,null,null,null,null,null,null,null]')
   }
 
   function savePresets(presets) {
@@ -349,7 +354,7 @@ function getColorFromWheel (x, y) {
 
   function initPresetUI() {
     const presets = getPresets()
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 10; i++) {
       const nameInput = document.getElementById(`preset${i}name`)
       const loadBtn = document.getElementById(`preset${i}load`)
       if (presets[i]) {
@@ -357,9 +362,13 @@ function getColorFromWheel (x, y) {
         loadBtn.disabled = false
       }
     }
+    const activePreset = localStorage.getItem(ACTIVE_PRESET_KEY)
+    if (activePreset !== null && presets[activePreset]) {
+      applySettings(presets[activePreset])
+    }
   }
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 10; i++) {
     document.getElementById(`preset${i}save`).addEventListener('pointerdown', () => {
       const presets = getPresets()
       const settings = getCurrentSettings()
@@ -374,6 +383,7 @@ function getColorFromWheel (x, y) {
       if (presets[i]) {
         applySettings(presets[i])
         document.getElementById(`preset${i}name`).value = presets[i].name || `Preset ${i + 1}`
+        localStorage.setItem(ACTIVE_PRESET_KEY, i)
       }
     })
   }
@@ -441,6 +451,7 @@ function getColorFromWheel (x, y) {
         if (currentMark.filled) {
           lastFilledMark = page.marks.length - 1
         }
+        unsavedChanges = true
         currentMark = null
         drawing = false
         page.render()
@@ -455,7 +466,11 @@ function getColorFromWheel (x, y) {
   async function loadActiveBook() {
     if (!activeBookName) {
       const create = confirm('No active book. Open manager to create or select one?')
-      if (create) window.location.href = 'manager.html'
+      if (create) {
+        window.location.href = 'manager.html'
+      } else {
+        document.getElementById('myCanvas').style.display = 'block'
+      }
       return
     }
 
@@ -475,6 +490,7 @@ function getColorFromWheel (x, y) {
       canvas.height = activeBookManifest.height
       page.canvasParams.width = activeBookManifest.width
       page.canvasParams.height = activeBookManifest.height
+      canvas.style.display = 'block'
 
       if (activePageId) {
         const pageRes = await fetch('/.netlify/functions/github', {
@@ -491,6 +507,7 @@ function getColorFromWheel (x, y) {
         if (page.canvasParams.backgroundColor) {
           currentBgColor = page.canvasParams.backgroundColor
           syncBgIndicator()
+          unsavedChanges = false
         }
       } else {
         page.render()
@@ -499,6 +516,51 @@ function getColorFromWheel (x, y) {
       console.error('Error loading book:', err)
     }
   }
+
+  async function navigatePage(direction) {
+    if (!activeBookManifest || activeBookManifest.pages.length === 0) return
+
+    if (unsavedChanges) {
+      const leave = confirm('You have unsaved changes. Leave anyway?')
+      if (!leave) return
+    }
+
+    const pages = activeBookManifest.pages
+    let currentIdx = pages.findIndex(p => p.id === activePageId)
+
+    if (direction === 'prev') {
+      currentIdx = currentIdx <= 0 ? pages.length - 1 : currentIdx - 1
+    } else {
+      currentIdx = currentIdx >= pages.length - 1 ? 0 : currentIdx + 1
+    }
+
+    const targetPage = pages[currentIdx]
+    activePageId = targetPage.id
+
+    try {
+      const res = await fetch('/.netlify/functions/github', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          operation: 'getPage',
+          bookName: activeBookName,
+          pageId: activePageId
+        })
+      })
+      const data = await res.json()
+      page.loadFromJSON(data.pageData)
+      if (page.canvasParams.backgroundColor) {
+        currentBgColor = page.canvasParams.backgroundColor
+        syncBgIndicator()
+      }
+      unsavedChanges = false
+    } catch (err) {
+      console.error('Error navigating page:', err)
+    }
+  }
+
+  document.getElementById('prevPageBtn').addEventListener('pointerdown', () => navigatePage('prev'))
+  document.getElementById('nextPageBtn').addEventListener('pointerdown', () => navigatePage('next'))
 
   function updateBookIndicator() {
     const btn = document.getElementById('bookBtn')
@@ -515,6 +577,7 @@ function getColorFromWheel (x, y) {
 
   document.getElementById('deleteButton').addEventListener('pointerdown', () => {
     page.removeLastMark()
+    unsavedChanges = true
     page.render()
   })
 
@@ -590,10 +653,15 @@ function getColorFromWheel (x, y) {
         activePageId = pageId
       }
 
-      console.log(`Saved as ${pageId}`)
-      // page.marks = []
-      // page.render()
+      unsavedChanges = false
+      const saveBtn = document.getElementById('downloadButton')
+      saveBtn.classList.add('saved')
+      setTimeout(() => saveBtn.classList.remove('saved'), 1500)
+
     } catch (err) {
+      const saveBtn = document.getElementById('downloadButton')
+      saveBtn.classList.add('error')
+      setTimeout(() => saveBtn.classList.remove('error'), 1500)
       console.error('Save error:', err)
     }
   })
@@ -639,8 +707,8 @@ function getColorFromWheel (x, y) {
   })
 
   document.getElementById('bookBtn').addEventListener('pointerdown', () => {
-    if (page.marks.length > 0) {
-      const leave = confirm('You have unsaved marks. Leave anyway?')
+    if (unsavedChanges) {
+      const leave = confirm('You have unsaved changes. Leave anyway?')
       if (!leave) return
     }
     window.location.href = 'manager.html'

@@ -1,0 +1,90 @@
+{
+  "name": "Blah",
+  "orientation": "landscape",
+  "width": 640,
+  "height": 480,
+  "defaultPageDuration": 10,
+  "defaultTransitionDuration": 3,
+  "pages": [
+    {
+      "id": "Blah_MOXVYJNG",
+      "filename": "Blah_MOXVYJNG.json",
+      "caption": "",
+      "pageDuration": 10,
+      "transitionDuration": 3,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOXW0PK6",
+      "filename": "Blah_MOXW0PK6.json",
+      "caption": "",
+      "pageDuration": 10,
+      "transitionDuration": 3,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOXWA50F",
+      "filename": "Blah_MOXWA50F.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": 3,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOXWCR53",
+      "filename": "Blah_MOXWCR53.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": 3,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOXWDDQB",
+      "filename": "Blah_MOXWDDQB.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": 3,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOXWF79V",
+      "filename": "Blah_MOXWF79V.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": 3,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOXWOKVZ",
+      "filename": "Blah_MOXWOKVZ.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOXXNCPM",
+      "filename": "Blah_MOXXNCPM.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOXXS712",
+      "filename": "Blah_MOXXS712.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOXXWTMD",
+      "filename": "Blah_MOXXWTMD.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    }
+  ]
+}

@@ -617,15 +617,20 @@ document.addEventListener('DOMContentLoaded', function () {
         isNew = true
       }
 
-      // Generate thumbnail: render to 72x96 offscreen canvas, export as JPEG base64
-      const THUMB_W = 72
-      const THUMB_H = 96
-      const thumbCanvas = document.createElement('canvas')
-      thumbCanvas.width = THUMB_W
-      thumbCanvas.height = THUMB_H
-      const thumbCtx = thumbCanvas.getContext('2d')
+      // Generate orientation-aware thumbnail (long edge = 96px at 2x for display at 48px)
       const srcCanvas = document.getElementById('myCanvas')
-      thumbCtx.drawImage(srcCanvas, 0, 0, srcCanvas.width, srcCanvas.height, 0, 0, THUMB_W, THUMB_H)
+      const THUMB_LONG = 96
+      const isPortrait = srcCanvas.height >= srcCanvas.width
+      const thumbW = isPortrait
+        ? Math.round(THUMB_LONG * srcCanvas.width / srcCanvas.height)
+        : THUMB_LONG
+      const thumbH = isPortrait
+        ? THUMB_LONG
+        : Math.round(THUMB_LONG * srcCanvas.height / srcCanvas.width)
+      const thumbCanvas = document.createElement('canvas')
+      thumbCanvas.width = thumbW
+      thumbCanvas.height = thumbH
+      thumbCanvas.getContext('2d').drawImage(srcCanvas, 0, 0, srcCanvas.width, srcCanvas.height, 0, 0, thumbW, thumbH)
       const thumbnail = thumbCanvas.toDataURL('image/jpeg', 0.6)
 
       const pageData = { ...json, thumbnail }

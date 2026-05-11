@@ -199,8 +199,6 @@
     }
 
     .page-thumb {
-      width: 36px;
-      height: 48px;
       border-radius: 3px;
       display: flex;
       align-items: center;
@@ -211,6 +209,15 @@
       border: 1px solid #444;
       overflow: hidden;
       padding: 0;
+    }
+
+    .page-btn.active {
+      background: #5a7a5a;
+      color: #fff;
+    }
+
+    .page-btn.active:hover {
+      background: #6a8a6a;
     }
 
     .page-info {
@@ -286,15 +293,6 @@
     .page-btn.danger:hover {
       background: #7a3a3a;
       color: #fff;
-    }
-
-    .page-btn.active {
-      background: #5a7a5a;
-      color: #fff;
-    }
-
-    .page-btn.active:hover {
-      background: #6a8a6a;
     }
 
     #newPageBtn {

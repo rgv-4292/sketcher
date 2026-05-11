@@ -261,12 +261,23 @@ function createPageItem(page, index) {
   dupBtn.textContent = 'Dup'
   dupBtn.addEventListener('click', e => { e.stopPropagation(); duplicatePage(index) })
 
+  const threeXBtn = document.createElement('button')
+  threeXBtn.className = 'page-btn' + (page.threeX ? ' active' : '')
+  threeXBtn.textContent = '3x'
+  threeXBtn.title = 'Triple render for sketch flicker effect in video'
+  threeXBtn.addEventListener('click', async e => {
+    e.stopPropagation()
+    page.threeX = !page.threeX
+    threeXBtn.className = 'page-btn' + (page.threeX ? ' active' : '')
+    await saveManifest()
+  })
+
   const delBtn = document.createElement('button')
   delBtn.className = 'page-btn danger'
   delBtn.textContent = 'Del'
   delBtn.addEventListener('click', e => { e.stopPropagation(); deletePage(index) })
 
-  actions.append(editBtn, dupBtn, delBtn)
+  actions.append(editBtn, dupBtn, threeXBtn, delBtn)
   item.append(thumb, info, durations, actions)
 
   // Drag and drop
@@ -402,14 +413,23 @@ function renderPageToCanvas(pageJSON, targetCanvas) {
   const bg = pageJSON.canvasParams.backgroundColor || '#f0ebe8'
   ctx.fillStyle = bg
   ctx.fillRect(0, 0, targetCanvas.width, targetCanvas.height)
-  const activeMaskPolygons = []
-  pageJSON.marks.forEach(markData => {
+
+  // Pass 1: collect mask polygons with their index
+  const masksByIndex = []
+  pageJSON.marks.forEach((markData, i) => {
+    if (markData.isMask && markData.points && markData.points.length >= 3) {
+      masksByIndex.push({ index: i, polygon: markData.points.map(p => ({ x: p.x, y: p.y })) })
+    }
+  })
+
+  // Pass 2: render each mark with only masks that appear after it
+  pageJSON.marks.forEach((markData, i) => {
     try {
       const mark = Mark.fromJSON(markData)
-      mark.render(1, false, targetCanvas, activeMaskPolygons)
-      if (mark.isMask && mark.points.length >= 3) {
-        activeMaskPolygons.push(mark.points.map(p => ({ x: p.x, y: p.y })))
-      }
+      const maskPolygons = masksByIndex
+        .filter(m => m.index > i)
+        .map(m => m.polygon)
+      mark.render(1, false, targetCanvas, maskPolygons)
     } catch (err) {
       console.error('Error rendering mark:', err)
     }
@@ -577,18 +597,26 @@ async function exportVideo() {
         20 + (frameIndex / totalFrames) * 60
       )
 
-      // Render 3 variations of the page for the sketching flicker effect
-      const pageVariants = []
-      for (let v = 0; v < 3; v++) {
+      // Render page — 3 variants if threeX is enabled, otherwise just one
+      let pageVariants
+      if (entry.threeX) {
+        pageVariants = []
+        for (let v = 0; v < 3; v++) {
+          renderPageToCanvas(pageJSONs[p], offscreen)
+          const blob = await canvasToBlob(offscreen)
+          pageVariants.push(new Uint8Array(await blob.arrayBuffer()))
+        }
+      } else {
         renderPageToCanvas(pageJSONs[p], offscreen)
         const blob = await canvasToBlob(offscreen)
-        pageVariants.push(new Uint8Array(await blob.arrayBuffer()))
+        const data = new Uint8Array(await blob.arrayBuffer())
+        pageVariants = [data]
       }
 
-      // Write page hold frames cycling A,A,B,B,C,C,A,A,...
+      // Write page hold frames; if threeX, cycle A,A,B,B,C,C
       for (let f = 0; f < pageFrames; f++) {
         if (exportCancelled) return
-        const variantIndex = Math.floor(f / 2) % 3
+        const variantIndex = entry.threeX ? Math.floor(f / 2) % 3 : 0
         const fname = `frame${String(frameIndex).padStart(6, '0')}.png`
         ffmpeg.FS('writeFile', fname, pageVariants[variantIndex])
         frameIndex++

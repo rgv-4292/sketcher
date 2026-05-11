@@ -49,24 +49,32 @@ export class Page {
 
   render(trans = false, targetCanvas) {
     this.clearCanvas(targetCanvas)
-    const activeMaskPolygons = []
 
-    this.marks.forEach(mark => {
+    // Pass 1: collect all mask polygons with their array index
+    const masksByIndex = []
+    this.marks.forEach((mark, i) => {
+      if (mark.isMask && mark.points.length >= 3) {
+        masksByIndex.push({ index: i, polygon: mark.points.map(p => ({ x: p.x, y: p.y })) })
+      }
+    })
+
+    // Pass 2: render each mark, passing only masks that appear AFTER it in the array
+    this.marks.forEach((mark, i) => {
       try {
-        // Pass currently accumulated masks to this mark's render
-        mark.render(this.alpha, trans, targetCanvas, activeMaskPolygons)
-        // After rendering, if this mark is a mask, add its polygon to the list
-        if (mark.isMask && mark.points.length >= 3) {
-          activeMaskPolygons.push(mark.points.map(p => ({ x: p.x, y: p.y })))
-        }
+        const maskPolygons = masksByIndex
+          .filter(m => m.index > i)
+          .map(m => m.polygon)
+        mark.render(this.alpha, trans, targetCanvas, maskPolygons)
       } catch (error) {
         console.log(error)
       }
     })
 
+    // tempMarks: apply all masks
+    const allMaskPolygons = masksByIndex.map(m => m.polygon)
     this.tempMarks.forEach(mark => {
       try {
-        mark.render(this.alpha, trans, targetCanvas, activeMaskPolygons)
+        mark.render(this.alpha, trans, targetCanvas, allMaskPolygons)
       } catch (error) {
         console.log(error)
       }

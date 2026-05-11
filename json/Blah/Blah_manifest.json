@@ -3,7 +3,7 @@
   "orientation": "landscape",
   "width": 640,
   "height": 480,
-  "defaultPageDuration": 10,
+  "defaultPageDuration": 1,
   "defaultTransitionDuration": 3,
   "pages": [
     {
@@ -81,6 +81,30 @@
     {
       "id": "Blah_MOXXWTMD",
       "filename": "Blah_MOXXWTMD.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOZ8HKX7",
+      "filename": "Blah_MOZ8HKX7.json",
+      "caption": "",
+      "pageDuration": 1,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOZ8KV5A",
+      "filename": "Blah_MOZ8KV5A.json",
+      "caption": "",
+      "pageDuration": 1,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Blah_MOZ8N90J",
+      "filename": "Blah_MOZ8N90J.json",
       "caption": "",
       "pageDuration": null,
       "transitionDuration": null,

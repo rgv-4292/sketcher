@@ -1,0 +1,58 @@
+{
+  "name": "Free",
+  "orientation": "landscape",
+  "width": 640,
+  "height": 480,
+  "defaultPageDuration": 5,
+  "defaultTransitionDuration": 1,
+  "pages": [
+    {
+      "id": "Free_MOZD0J2L",
+      "filename": "Free_MOZD0J2L.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Free_MOZD48V3",
+      "filename": "Free_MOZD48V3.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Free_MOZD711Y",
+      "filename": "Free_MOZD711Y.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Free_MOZD9S7I",
+      "filename": "Free_MOZD9S7I.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Free_MOZDHP7A",
+      "filename": "Free_MOZDHP7A.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Free_MOZDLVBF",
+      "filename": "Free_MOZDLVBF.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    }
+  ]
+}

@@ -9,7 +9,8 @@ let books = []
 let activeBook = null
 let activeManifest = null
 let dragSrcIndex = null
-let selectedPageIndex = null
+let dragOverIndex = null
+let selectedPages = new Set() // indices of selected pages for export
 let exportCancelled = false
 
 // --- API ---
@@ -113,7 +114,7 @@ function renderBookList() {
 
 async function selectBook(name) {
   activeBook = name
-  selectedPageIndex = null
+  selectedPages = new Set()
   localStorage.setItem(ACTIVE_BOOK_KEY, name)
   renderBookList()
   setStatus(`Loading ${name}...`)
@@ -151,8 +152,10 @@ function renderPagePanel() {
   emptyState.style.display = activeManifest.pages.length === 0 ? 'flex' : 'none'
   pageList.style.display = activeManifest.pages.length > 0 ? 'flex' : 'none'
   newPageBtn.style.display = 'block'
-  exportPngBtn.disabled = selectedPageIndex === null
-  exportVideoBtn.disabled = activeManifest.pages.length === 0
+  document.getElementById('selectAllBtn').style.display = 'inline-block'
+  document.getElementById('deselectAllBtn').style.display = 'inline-block'
+  exportPngBtn.disabled = selectedPages.size === 0
+  exportVideoBtn.disabled = selectedPages.size === 0
 
   pageList.innerHTML = ''
   activeManifest.pages.forEach((page, index) => {
@@ -161,6 +164,17 @@ function renderPagePanel() {
 
   // Kick off background thumbnail loading
   loadThumbnailsInBackground()
+}
+
+function updateSelectionUI() {
+  document.getElementById('exportPngBtn').disabled = selectedPages.size === 0
+  document.getElementById('exportVideoBtn').disabled =
+    !activeManifest || activeManifest.pages.length === 0
+  document.querySelectorAll('.page-item').forEach((el, i) => {
+    el.classList.toggle('selected', selectedPages.has(i))
+    const cb = el.querySelector('.page-select-cb')
+    if (cb) cb.checked = selectedPages.has(i)
+  })
 }
 
 // --- Thumbnail lazy loader ---
@@ -198,17 +212,34 @@ async function loadThumbnailsInBackground() {
 
 function createPageItem(page, index) {
   const item = document.createElement('div')
-  item.className = 'page-item' + (selectedPageIndex === index ? ' selected' : '')
+  item.className = 'page-item' + (selectedPages.has(index) ? ' selected' : '')
   item.draggable = true
   item.dataset.index = index
 
+  // Selection checkbox
+  const selectCb = document.createElement('input')
+  selectCb.type = 'checkbox'
+  selectCb.className = 'page-select-cb'
+  selectCb.checked = selectedPages.has(index)
+  selectCb.title = 'Select for export'
+  selectCb.addEventListener('click', (e) => {
+    e.stopPropagation()
+    if (selectCb.checked) {
+      selectedPages.add(index)
+    } else {
+      selectedPages.delete(index)
+    }
+    updateSelectionUI()
+  })
+
   item.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT') return
-    selectedPageIndex = index
-    document.getElementById('exportPngBtn').disabled = false
-    document.querySelectorAll('.page-item').forEach((el, i) => {
-      el.classList.toggle('selected', i === index)
-    })
+    if (selectedPages.has(index)) {
+      selectedPages.delete(index)
+    } else {
+      selectedPages.add(index)
+    }
+    updateSelectionUI()
   })
 
   // Thumbnail — size based on book orientation, long edge = 48px
@@ -324,31 +355,51 @@ function createPageItem(page, index) {
   delBtn.addEventListener('click', e => { e.stopPropagation(); deletePage(index) })
 
   actions.append(editBtn, dupBtn, threeXBtn, delBtn)
-  item.append(thumb, info, durations, actions)
+  item.append(selectCb, thumb, info, durations, actions)
 
-  // Drag and drop
+  // Drag and drop — handle on item, ignore child pointer events via CSS
   item.addEventListener('dragstart', (e) => {
     dragSrcIndex = index
-    item.classList.add('dragging')
     e.dataTransfer.effectAllowed = 'move'
+    e.dataTransfer.setData('text/plain', String(index))
+    setTimeout(() => item.classList.add('dragging'), 0)
   })
   item.addEventListener('dragend', () => {
     item.classList.remove('dragging')
     document.querySelectorAll('.page-item').forEach(el => el.classList.remove('drag-over'))
+    dragSrcIndex = null
+    dragOverIndex = null
+  })
+  item.addEventListener('dragenter', (e) => {
+    e.preventDefault()
+    if (dragSrcIndex === null || dragSrcIndex === index) return
+    document.querySelectorAll('.page-item').forEach(el => el.classList.remove('drag-over'))
+    item.classList.add('drag-over')
+    dragOverIndex = index
   })
   item.addEventListener('dragover', (e) => {
     e.preventDefault()
     e.dataTransfer.dropEffect = 'move'
-    document.querySelectorAll('.page-item').forEach(el => el.classList.remove('drag-over'))
-    item.classList.add('drag-over')
+  })
+  item.addEventListener('dragleave', (e) => {
+    // Only clear if leaving to outside this item entirely
+    if (!item.contains(e.relatedTarget)) {
+      item.classList.remove('drag-over')
+    }
   })
   item.addEventListener('drop', async (e) => {
     e.preventDefault()
+    e.stopPropagation()
+    item.classList.remove('drag-over')
     if (dragSrcIndex === null || dragSrcIndex === index) return
-    const pages = activeManifest.pages
-    const moved = pages.splice(dragSrcIndex, 1)[0]
-    pages.splice(index, 0, moved)
+    const src = dragSrcIndex
     dragSrcIndex = null
+    dragOverIndex = null
+    const pages = activeManifest.pages
+    const moved = pages.splice(src, 1)[0]
+    pages.splice(index, 0, moved)
+    // Remap selectedPages indices
+    selectedPages = remapSelectedAfterDrag(selectedPages, src, index, pages.length)
     renderPagePanel()
     await saveManifest()
   })
@@ -356,12 +407,33 @@ function createPageItem(page, index) {
   return item
 }
 
+// --- Drag remap helper ---
+
+function remapSelectedAfterDrag(selected, src, dst, total) {
+  const next = new Set()
+  selected.forEach(i => {
+    if (i === src) {
+      next.add(dst)
+    } else {
+      let ni = i
+      if (src < dst) {
+        if (i > src && i <= dst) ni = i - 1
+      } else {
+        if (i >= dst && i < src) ni = i + 1
+      }
+      next.add(ni)
+    }
+  })
+  return next
+}
+
 // --- Manifest save ---
 
 async function saveManifest() {
   try {
     await api('saveManifest', { bookName: activeBook, manifest: activeManifest })
-    setCachedManifest(activeBook, activeManifest)
+    // Always update cache with latest manifest so durations persist on refresh
+    setCachedManifest(activeBook, JSON.parse(JSON.stringify(activeManifest)))
     setStatus('Saved')
   } catch (err) {
     setStatus(`Save error: ${err.message}`)
@@ -430,7 +502,11 @@ async function deletePage(index) {
   try {
     await api('deletePage', { bookName: activeBook, pageId: page.id })
     activeManifest.pages.splice(index, 1)
-    if (selectedPageIndex === index) selectedPageIndex = null
+    selectedPages.delete(index)
+    // Shift down any selected indices above the deleted one
+    const next = new Set()
+    selectedPages.forEach(i => next.add(i > index ? i - 1 : i))
+    selectedPages = next
     await saveManifest()
     renderPagePanel()
     setStatus(`Deleted ${page.id}`)
@@ -537,39 +613,54 @@ function renderTransitionFrame(fromJSON, toJSON, t, targetCanvas, pageInstance) 
 // --- PNG Export ---
 
 async function exportPng() {
-  if (selectedPageIndex === null || !activeManifest) return
-  const pageEntry = activeManifest.pages[selectedPageIndex]
-  setStatus('Fetching page...')
+  if (selectedPages.size === 0 || !activeManifest) return
+  const indices = [...selectedPages].sort((a, b) => a - b)
+  setStatus(`Exporting ${indices.length} PNG(s)...`)
 
-  try {
-    const data = await api('getPage', { bookName: activeBook, pageId: pageEntry.id })
-    const offscreen = document.createElement('canvas')
-    offscreen.width = activeManifest.width
-    offscreen.height = activeManifest.height
-    renderPageToCanvas(data.pageData, offscreen)
+  const offscreen = document.createElement('canvas')
+  offscreen.width = activeManifest.width
+  offscreen.height = activeManifest.height
 
-    offscreen.toBlob(blob => {
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = `${pageEntry.id}.png`
-      a.click()
-      URL.revokeObjectURL(url)
-      setStatus('PNG exported')
-    }, 'image/png')
-  } catch (err) {
-    setStatus(`PNG export error: ${err.message}`)
+  for (const idx of indices) {
+    const pageEntry = activeManifest.pages[idx]
+    if (!pageEntry) continue
+    try {
+      const data = await api('getPage', { bookName: activeBook, pageId: pageEntry.id })
+      renderPageToCanvas(data.pageData, offscreen)
+      await new Promise(resolve => {
+        offscreen.toBlob(blob => {
+          const url = URL.createObjectURL(blob)
+          const a = document.createElement('a')
+          a.href = url
+          a.download = `${pageEntry.id}.png`
+          a.click()
+          URL.revokeObjectURL(url)
+          resolve()
+        }, 'image/png')
+      })
+    } catch (err) {
+      setStatus(`PNG export error: ${err.message}`)
+      return
+    }
   }
+  setStatus(`Exported ${indices.length} PNG(s)`)
 }
 
 // --- Video Export ---
 
 async function exportVideo() {
-  if (!activeManifest || activeManifest.pages.length === 0) return
+  if (!activeManifest || selectedPages.size === 0) return
 
-  const pageCount = Math.min(activeManifest.pages.length, VIDEO_PAGE_LIMIT)
-  if (activeManifest.pages.length > VIDEO_PAGE_LIMIT) {
-    setStatus(`Warning: only first ${VIDEO_PAGE_LIMIT} pages will be exported`)
+  // Use selected pages in order, capped to VIDEO_PAGE_LIMIT
+  const allSelected = [...selectedPages].sort((a, b) => a - b)
+  const selectedEntries = allSelected
+    .map(i => activeManifest.pages[i])
+    .filter(Boolean)
+    .slice(0, VIDEO_PAGE_LIMIT)
+  const pageCount = selectedEntries.length
+
+  if (allSelected.length > VIDEO_PAGE_LIMIT) {
+    setStatus(`Warning: only first ${VIDEO_PAGE_LIMIT} selected pages will be exported`)
   }
 
   exportCancelled = false
@@ -600,11 +691,11 @@ async function exportVideo() {
 
     updateProgress('Fetching pages...', 5)
 
-    // Fetch all page JSONs
+    // Fetch all selected page JSONs
     const pageJSONs = []
     for (let i = 0; i < pageCount; i++) {
       if (exportCancelled) return
-      const entry = activeManifest.pages[i]
+      const entry = selectedEntries[i]
       const data = await api('getPage', { bookName: activeBook, pageId: entry.id })
       pageJSONs.push(data.pageData)
       updateProgress(`Fetching page ${i + 1} of ${pageCount}...`, 5 + (i / pageCount) * 15)
@@ -625,12 +716,12 @@ async function exportVideo() {
     }
 
     let frameIndex = 0
-    const totalFrames = calculateTotalFrames(pageCount, FPS)
+    const totalFrames = calculateTotalFrames(selectedEntries, FPS)
 
     for (let p = 0; p < pageCount; p++) {
       if (exportCancelled) return
 
-      const entry = activeManifest.pages[p]
+      const entry = selectedEntries[p]
       const pageDuration = entry.pageDuration ?? activeManifest.defaultPageDuration
       const transDuration = entry.transitionDuration ?? activeManifest.defaultTransitionDuration
       const pageFrames = Math.round(pageDuration * FPS)
@@ -725,13 +816,13 @@ async function exportVideo() {
   }
 }
 
-function calculateTotalFrames(pageCount, fps, transSteps) {
+function calculateTotalFrames(entries, fps) {
   let total = 0
-  for (let p = 0; p < pageCount; p++) {
-    const entry = activeManifest.pages[p]
+  for (let p = 0; p < entries.length; p++) {
+    const entry = entries[p]
     const pageDuration = entry.pageDuration ?? activeManifest.defaultPageDuration
     total += Math.round(pageDuration * fps)
-    if (p < pageCount - 1) {
+    if (p < entries.length - 1) {
       const transDuration = entry.transitionDuration ?? activeManifest.defaultTransitionDuration
       total += Math.round(transDuration * fps)
     }
@@ -820,6 +911,17 @@ document.getElementById('exportVideoBtn').addEventListener('click', exportVideo)
 const style = document.createElement('style')
 style.textContent = `.page-item.selected { border-color: #6a8a6a; background: #333; }`
 document.head.appendChild(style)
+
+// --- Select All / Deselect All ---
+document.getElementById('selectAllBtn').addEventListener('click', () => {
+  if (!activeManifest) return
+  activeManifest.pages.forEach((_, i) => selectedPages.add(i))
+  updateSelectionUI()
+})
+document.getElementById('deselectAllBtn').addEventListener('click', () => {
+  selectedPages.clear()
+  updateSelectionUI()
+})
 
 // --- Init ---
 

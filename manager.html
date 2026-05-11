@@ -270,10 +270,25 @@
       background: #3a3a3a;
       color: #aaa;
       border: none;
-      padding: 4px 7px;
+      padding: 6px 10px;
       border-radius: 3px;
       cursor: pointer;
-      font-size: 11px;
+      font-size: 12px;
+    }
+
+    /* Prevent child elements from intercepting drag events */
+    .page-item > *:not(button):not(input) {
+      pointer-events: none;
+    }
+
+    .page-select-cb {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+      cursor: pointer;
+      accent-color: #6a8a6a;
+      margin-right: 2px;
+      pointer-events: auto;
     }
 
     .page-btn:hover {
@@ -442,6 +457,8 @@
     <div id="pagePanel">
       <div id="pagePanelHeader">
         <h2 id="pagePanelTitle">Select a Book</h2>
+        <button class="nav-btn" id="selectAllBtn" style="display:none;padding:3px 8px;font-size:12px;">All</button>
+        <button class="nav-btn" id="deselectAllBtn" style="display:none;padding:3px 8px;font-size:12px;">None</button>
         <button class="nav-btn" id="newPageBtn" style="display:none;">+ New Page</button>
         <div id="bookSettings" style="display:none;">
           <span>Page dur:</span>

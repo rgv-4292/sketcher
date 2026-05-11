@@ -2,7 +2,7 @@
   "canvasParams": {
     "width": 640,
     "height": 480,
-    "backgroundColor": "#f0ebe8"
+    "backgroundColor": "#d3d0bb"
   },
   "marks": [
     {
@@ -11647,7 +11647,967 @@
       "fillMode": "gradient",
       "density": 3,
       "isMask": false
+    },
+    {
+      "color": "rgba(255, 255, 255, 0.75)",
+      "minDistance": 3,
+      "distanceThreshold": 12,
+      "connectionProbability": 75,
+      "filled": true,
+      "points": [
+        {
+          "x": 305.3419189453125,
+          "y": 143.4113006591797,
+          "visible": true
+        },
+        {
+          "x": 301.22930908203125,
+          "y": 143.60983276367188,
+          "visible": true
+        },
+        {
+          "x": 302.22930908203125,
+          "y": 142.60983276367188,
+          "visible": true
+        },
+        {
+          "x": 299.01055908203125,
+          "y": 143.70497131347656,
+          "visible": true
+        },
+        {
+          "x": 298.01055908203125,
+          "y": 143.70497131347656,
+          "visible": true
+        },
+        {
+          "x": 294.1203918457031,
+          "y": 144.63418579101562,
+          "visible": true
+        },
+        {
+          "x": 296.1203918457031,
+          "y": 143.63418579101562,
+          "visible": true
+        },
+        {
+          "x": 293.1797180175781,
+          "y": 145.0105743408203,
+          "visible": true
+        },
+        {
+          "x": 293.1797180175781,
+          "y": 146.0105743408203,
+          "visible": true
+        },
+        {
+          "x": 289.8607482910156,
+          "y": 146.58731079101562,
+          "visible": true
+        },
+        {
+          "x": 288.8607482910156,
+          "y": 148.58731079101562,
+          "visible": true
+        },
+        {
+          "x": 286.238525390625,
+          "y": 150.36029052734375,
+          "visible": true
+        },
+        {
+          "x": 288.238525390625,
+          "y": 149.36029052734375,
+          "visible": true
+        },
+        {
+          "x": 285.5330810546875,
+          "y": 151.55055236816406,
+          "visible": true
+        },
+        {
+          "x": 286.5330810546875,
+          "y": 150.55055236816406,
+          "visible": true
+        },
+        {
+          "x": 284.4016418457031,
+          "y": 153.81158447265625,
+          "visible": true
+        },
+        {
+          "x": 284.4016418457031,
+          "y": 152.81158447265625,
+          "visible": true
+        },
+        {
+          "x": 283.64935302734375,
+          "y": 155.8106689453125,
+          "visible": true
+        },
+        {
+          "x": 285.64935302734375,
+          "y": 154.8106689453125,
+          "visible": true
+        },
+        {
+          "x": 282.7330017089844,
+          "y": 157.59605407714844,
+          "visible": true
+        },
+        {
+          "x": 282.7330017089844,
+          "y": 158.59605407714844,
+          "visible": true
+        },
+        {
+          "x": 280.6842956542969,
+          "y": 160.86949157714844,
+          "visible": true
+        },
+        {
+          "x": 282.6842956542969,
+          "y": 160.86949157714844,
+          "visible": true
+        },
+        {
+          "x": 280.0726013183594,
+          "y": 162.84605407714844,
+          "visible": true
+        },
+        {
+          "x": 280.0726013183594,
+          "y": 163.84605407714844,
+          "visible": true
+        },
+        {
+          "x": 280.4724426269531,
+          "y": 166.87086486816406,
+          "visible": true
+        },
+        {
+          "x": 282.4724426269531,
+          "y": 165.87086486816406,
+          "visible": true
+        },
+        {
+          "x": 280.07305908203125,
+          "y": 169.00965881347656,
+          "visible": true
+        },
+        {
+          "x": 282.07305908203125,
+          "y": 171.00965881347656,
+          "visible": true
+        },
+        {
+          "x": 280.1893310546875,
+          "y": 173.94622802734375,
+          "visible": true
+        },
+        {
+          "x": 280.1893310546875,
+          "y": 173.94622802734375,
+          "visible": true
+        },
+        {
+          "x": 280.3552551269531,
+          "y": 178.02206420898438,
+          "visible": true
+        },
+        {
+          "x": 282.3552551269531,
+          "y": 177.02206420898438,
+          "visible": true
+        },
+        {
+          "x": 280.84881591796875,
+          "y": 180.49179077148438,
+          "visible": true
+        },
+        {
+          "x": 282.84881591796875,
+          "y": 180.49179077148438,
+          "visible": true
+        },
+        {
+          "x": 283.27252197265625,
+          "y": 183.6452178955078,
+          "visible": true
+        },
+        {
+          "x": 284.27252197265625,
+          "y": 183.6452178955078,
+          "visible": true
+        },
+        {
+          "x": 286.2077331542969,
+          "y": 186.10116577148438,
+          "visible": true
+        },
+        {
+          "x": 285.2077331542969,
+          "y": 186.10116577148438,
+          "visible": true
+        },
+        {
+          "x": 288.0813293457031,
+          "y": 187.17324829101562,
+          "visible": true
+        },
+        {
+          "x": 287.0813293457031,
+          "y": 189.17324829101562,
+          "visible": true
+        },
+        {
+          "x": 290.1387939453125,
+          "y": 187.3625946044922,
+          "visible": true
+        },
+        {
+          "x": 291.1387939453125,
+          "y": 188.3625946044922,
+          "visible": true
+        },
+        {
+          "x": 294.1424560546875,
+          "y": 187.9981689453125,
+          "visible": true
+        },
+        {
+          "x": 295.1424560546875,
+          "y": 187.9981689453125,
+          "visible": true
+        },
+        {
+          "x": 298.4177551269531,
+          "y": 187.85800170898438,
+          "visible": true
+        },
+        {
+          "x": 298.4177551269531,
+          "y": 188.85800170898438,
+          "visible": true
+        },
+        {
+          "x": 301.36444091796875,
+          "y": 188.23300170898438,
+          "visible": true
+        },
+        {
+          "x": 303.36444091796875,
+          "y": 189.23300170898438,
+          "visible": true
+        },
+        {
+          "x": 305.6714172363281,
+          "y": 187.2688446044922,
+          "visible": true
+        },
+        {
+          "x": 306.6714172363281,
+          "y": 189.2688446044922,
+          "visible": true
+        },
+        {
+          "x": 308.277587890625,
+          "y": 186.58824157714844,
+          "visible": true
+        },
+        {
+          "x": 310.277587890625,
+          "y": 187.58824157714844,
+          "visible": true
+        },
+        {
+          "x": 312.7297668457031,
+          "y": 185.38648986816406,
+          "visible": true
+        },
+        {
+          "x": 311.7297668457031,
+          "y": 187.38648986816406,
+          "visible": true
+        },
+        {
+          "x": 314.18841552734375,
+          "y": 185.3391571044922,
+          "visible": true
+        },
+        {
+          "x": 316.18841552734375,
+          "y": 186.3391571044922,
+          "visible": true
+        },
+        {
+          "x": 317.7596435546875,
+          "y": 183.69393920898438,
+          "visible": true
+        },
+        {
+          "x": 317.7596435546875,
+          "y": 185.69393920898438,
+          "visible": true
+        },
+        {
+          "x": 319.9535827636719,
+          "y": 183.01011657714844,
+          "visible": true
+        },
+        {
+          "x": 318.9535827636719,
+          "y": 184.01011657714844,
+          "visible": true
+        },
+        {
+          "x": 321.8336486816406,
+          "y": 181.9765625,
+          "visible": true
+        },
+        {
+          "x": 320.8336486816406,
+          "y": 180.9765625,
+          "visible": true
+        },
+        {
+          "x": 323.2233581542969,
+          "y": 179.0808868408203,
+          "visible": true
+        },
+        {
+          "x": 325.2233581542969,
+          "y": 179.0808868408203,
+          "visible": true
+        },
+        {
+          "x": 323.8120422363281,
+          "y": 176.25550842285156,
+          "visible": true
+        },
+        {
+          "x": 323.8120422363281,
+          "y": 178.25550842285156,
+          "visible": true
+        },
+        {
+          "x": 324.0238952636719,
+          "y": 175.19715881347656,
+          "visible": true
+        },
+        {
+          "x": 326.0238952636719,
+          "y": 177.19715881347656,
+          "visible": true
+        },
+        {
+          "x": 324.39935302734375,
+          "y": 174.2578125,
+          "visible": true
+        },
+        {
+          "x": 324.39935302734375,
+          "y": 173.2578125,
+          "visible": true
+        },
+        {
+          "x": 324.5643310546875,
+          "y": 170.21054077148438,
+          "visible": true
+        },
+        {
+          "x": 324.5643310546875,
+          "y": 172.21054077148438,
+          "visible": true
+        },
+        {
+          "x": 324.1410827636719,
+          "y": 168.91636657714844,
+          "visible": true
+        },
+        {
+          "x": 326.1410827636719,
+          "y": 168.91636657714844,
+          "visible": true
+        },
+        {
+          "x": 323.9995422363281,
+          "y": 166.25918579101562,
+          "visible": true
+        },
+        {
+          "x": 324.9995422363281,
+          "y": 166.25918579101562,
+          "visible": true
+        },
+        {
+          "x": 323.9342956542969,
+          "y": 163.37362670898438,
+          "visible": true
+        },
+        {
+          "x": 324.9342956542969,
+          "y": 163.37362670898438,
+          "visible": true
+        },
+        {
+          "x": 323.2233581542969,
+          "y": 160.2578125,
+          "visible": true
+        },
+        {
+          "x": 325.2233581542969,
+          "y": 160.2578125,
+          "visible": true
+        },
+        {
+          "x": 322.8469543457031,
+          "y": 157.66957092285156,
+          "visible": true
+        },
+        {
+          "x": 323.8469543457031,
+          "y": 159.66957092285156,
+          "visible": true
+        },
+        {
+          "x": 322.7766418457031,
+          "y": 156.6590118408203,
+          "visible": true
+        },
+        {
+          "x": 321.7766418457031,
+          "y": 158.6590118408203,
+          "visible": true
+        },
+        {
+          "x": 322.4471435546875,
+          "y": 155.01194763183594,
+          "visible": true
+        },
+        {
+          "x": 324.4471435546875,
+          "y": 155.01194763183594,
+          "visible": true
+        },
+        {
+          "x": 321.8589172363281,
+          "y": 153.24632263183594,
+          "visible": true
+        },
+        {
+          "x": 322.8589172363281,
+          "y": 155.24632263183594,
+          "visible": true
+        },
+        {
+          "x": 321.55377197265625,
+          "y": 152.16819763183594,
+          "visible": true
+        },
+        {
+          "x": 321.55377197265625,
+          "y": 152.16819763183594,
+          "visible": true
+        },
+        {
+          "x": 321.0115051269531,
+          "y": 149.10523986816406,
+          "visible": true
+        },
+        {
+          "x": 320.0115051269531,
+          "y": 149.10523986816406,
+          "visible": true
+        },
+        {
+          "x": 319.4825439453125,
+          "y": 146.04647827148438,
+          "visible": true
+        },
+        {
+          "x": 319.4825439453125,
+          "y": 146.04647827148438,
+          "visible": true
+        },
+        {
+          "x": 316.5882263183594,
+          "y": 144.39935302734375,
+          "visible": true
+        },
+        {
+          "x": 315.5882263183594,
+          "y": 145.39935302734375,
+          "visible": true
+        },
+        {
+          "x": 313.3672180175781,
+          "y": 143.3409881591797,
+          "visible": true
+        },
+        {
+          "x": 312.3672180175781,
+          "y": 142.3409881591797,
+          "visible": true
+        },
+        {
+          "x": 309.2477111816406,
+          "y": 142.70542907714844,
+          "visible": true
+        },
+        {
+          "x": 309.2477111816406,
+          "y": 144.70542907714844,
+          "visible": true
+        },
+        {
+          "x": 306.05194091796875,
+          "y": 142.70542907714844,
+          "visible": true
+        },
+        {
+          "x": 306.05194091796875,
+          "y": 142.70542907714844,
+          "visible": true
+        },
+        {
+          "x": 302.69805908203125,
+          "y": 142.25918579101562,
+          "visible": true
+        },
+        {
+          "x": 304.69805908203125,
+          "y": 141.25918579101562,
+          "visible": true
+        }
+      ],
+      "markWidth": 2,
+      "hatchAngle": 0.7,
+      "alpha": 0.75,
+      "trace": false,
+      "gradient": {
+        "x": 305.3419189453125,
+        "y": 143.4113006591797
+      },
+      "fillMode": "gradient",
+      "density": 3,
+      "isMask": false
+    },
+    {
+      "color": "rgba(255, 255, 255, 0.75)",
+      "minDistance": 3,
+      "distanceThreshold": 12,
+      "connectionProbability": 75,
+      "filled": true,
+      "points": [
+        {
+          "x": 242.80422973632812,
+          "y": 143.5997314453125,
+          "visible": true
+        },
+        {
+          "x": 239.4889678955078,
+          "y": 144.89154052734375,
+          "visible": true
+        },
+        {
+          "x": 241.4889678955078,
+          "y": 144.89154052734375,
+          "visible": true
+        },
+        {
+          "x": 238.0045928955078,
+          "y": 146.32904052734375,
+          "visible": true
+        },
+        {
+          "x": 238.0045928955078,
+          "y": 148.32904052734375,
+          "visible": true
+        },
+        {
+          "x": 234.57444763183594,
+          "y": 148.60707092285156,
+          "visible": true
+        },
+        {
+          "x": 233.57444763183594,
+          "y": 148.60707092285156,
+          "visible": true
+        },
+        {
+          "x": 231.01930236816406,
+          "y": 151.4090118408203,
+          "visible": true
+        },
+        {
+          "x": 230.01930236816406,
+          "y": 151.4090118408203,
+          "visible": true
+        },
+        {
+          "x": 227.32675170898438,
+          "y": 153.58961486816406,
+          "visible": true
+        },
+        {
+          "x": 228.32675170898438,
+          "y": 153.58961486816406,
+          "visible": true
+        },
+        {
+          "x": 227.2527618408203,
+          "y": 157.078125,
+          "visible": true
+        },
+        {
+          "x": 226.2527618408203,
+          "y": 159.078125,
+          "visible": true
+        },
+        {
+          "x": 223.70175170898438,
+          "y": 161.30055236816406,
+          "visible": true
+        },
+        {
+          "x": 223.70175170898438,
+          "y": 160.30055236816406,
+          "visible": true
+        },
+        {
+          "x": 223.19393920898438,
+          "y": 163.82997131347656,
+          "visible": true
+        },
+        {
+          "x": 223.19393920898438,
+          "y": 163.82997131347656,
+          "visible": true
+        },
+        {
+          "x": 222.52297973632812,
+          "y": 166.89292907714844,
+          "visible": true
+        },
+        {
+          "x": 222.52297973632812,
+          "y": 168.89292907714844,
+          "visible": true
+        },
+        {
+          "x": 223.3106689453125,
+          "y": 172.34925842285156,
+          "visible": true
+        },
+        {
+          "x": 225.3106689453125,
+          "y": 171.34925842285156,
+          "visible": true
+        },
+        {
+          "x": 224.65992736816406,
+          "y": 174.2780303955078,
+          "visible": true
+        },
+        {
+          "x": 225.65992736816406,
+          "y": 175.2780303955078,
+          "visible": true
+        },
+        {
+          "x": 228.8019256591797,
+          "y": 177.171875,
+          "visible": true
+        },
+        {
+          "x": 230.8019256591797,
+          "y": 178.171875,
+          "visible": true
+        },
+        {
+          "x": 233.72242736816406,
+          "y": 179.31617736816406,
+          "visible": true
+        },
+        {
+          "x": 234.72242736816406,
+          "y": 180.31617736816406,
+          "visible": true
+        },
+        {
+          "x": 238.1456756591797,
+          "y": 181.1511993408203,
+          "visible": true
+        },
+        {
+          "x": 237.1456756591797,
+          "y": 183.1511993408203,
+          "visible": true
+        },
+        {
+          "x": 239.98069763183594,
+          "y": 181.5983428955078,
+          "visible": true
+        },
+        {
+          "x": 238.98069763183594,
+          "y": 180.5983428955078,
+          "visible": true
+        },
+        {
+          "x": 242.11856079101562,
+          "y": 182.09237670898438,
+          "visible": true
+        },
+        {
+          "x": 242.11856079101562,
+          "y": 184.09237670898438,
+          "visible": true
+        },
+        {
+          "x": 243.69439697265625,
+          "y": 181.50689697265625,
+          "visible": true
+        },
+        {
+          "x": 243.69439697265625,
+          "y": 183.50689697265625,
+          "visible": true
+        },
+        {
+          "x": 245.36488342285156,
+          "y": 180.91590881347656,
+          "visible": true
+        },
+        {
+          "x": 245.36488342285156,
+          "y": 180.91590881347656,
+          "visible": true
+        },
+        {
+          "x": 248.35247802734375,
+          "y": 179.74179077148438,
+          "visible": true
+        },
+        {
+          "x": 247.35247802734375,
+          "y": 180.74179077148438,
+          "visible": true
+        },
+        {
+          "x": 250.11949157714844,
+          "y": 179.0344696044922,
+          "visible": true
+        },
+        {
+          "x": 252.11949157714844,
+          "y": 179.0344696044922,
+          "visible": true
+        },
+        {
+          "x": 255.24449157714844,
+          "y": 176.7081756591797,
+          "visible": true
+        },
+        {
+          "x": 257.24449157714844,
+          "y": 175.7081756591797,
+          "visible": true
+        },
+        {
+          "x": 258.9977111816406,
+          "y": 173.0983428955078,
+          "visible": true
+        },
+        {
+          "x": 258.9977111816406,
+          "y": 175.0983428955078,
+          "visible": true
+        },
+        {
+          "x": 259.9779357910156,
+          "y": 171.69668579101562,
+          "visible": true
+        },
+        {
+          "x": 259.9779357910156,
+          "y": 172.69668579101562,
+          "visible": true
+        },
+        {
+          "x": 260.4255676269531,
+          "y": 168.97012329101562,
+          "visible": true
+        },
+        {
+          "x": 260.4255676269531,
+          "y": 170.97012329101562,
+          "visible": true
+        },
+        {
+          "x": 260.5671081542969,
+          "y": 167.95542907714844,
+          "visible": true
+        },
+        {
+          "x": 262.5671081542969,
+          "y": 167.95542907714844,
+          "visible": true
+        },
+        {
+          "x": 261.9319763183594,
+          "y": 163.97886657714844,
+          "visible": true
+        },
+        {
+          "x": 263.9319763183594,
+          "y": 163.97886657714844,
+          "visible": true
+        },
+        {
+          "x": 261.4379577636719,
+          "y": 161.07997131347656,
+          "visible": true
+        },
+        {
+          "x": 260.4379577636719,
+          "y": 160.07997131347656,
+          "visible": true
+        },
+        {
+          "x": 260.6153564453125,
+          "y": 156.5886993408203,
+          "visible": true
+        },
+        {
+          "x": 260.6153564453125,
+          "y": 158.5886993408203,
+          "visible": true
+        },
+        {
+          "x": 260.4623107910156,
+          "y": 155.17929077148438,
+          "visible": true
+        },
+        {
+          "x": 260.4623107910156,
+          "y": 156.17929077148438,
+          "visible": true
+        },
+        {
+          "x": 260.1443176269531,
+          "y": 152.47012329101562,
+          "visible": true
+        },
+        {
+          "x": 262.1443176269531,
+          "y": 153.47012329101562,
+          "visible": true
+        },
+        {
+          "x": 259.7913513183594,
+          "y": 151.26976013183594,
+          "visible": true
+        },
+        {
+          "x": 258.7913513183594,
+          "y": 152.26976013183594,
+          "visible": true
+        },
+        {
+          "x": 259.3442077636719,
+          "y": 148.84559631347656,
+          "visible": true
+        },
+        {
+          "x": 258.3442077636719,
+          "y": 147.84559631347656,
+          "visible": true
+        },
+        {
+          "x": 256.45037841796875,
+          "y": 145.10523986816406,
+          "visible": true
+        },
+        {
+          "x": 257.45037841796875,
+          "y": 144.10523986816406,
+          "visible": true
+        },
+        {
+          "x": 254.05055236816406,
+          "y": 142.28216552734375,
+          "visible": true
+        },
+        {
+          "x": 254.05055236816406,
+          "y": 143.28216552734375,
+          "visible": true
+        },
+        {
+          "x": 251.1466064453125,
+          "y": 141.0597381591797,
+          "visible": true
+        },
+        {
+          "x": 252.1466064453125,
+          "y": 142.0597381591797,
+          "visible": true
+        },
+        {
+          "x": 249.8405303955078,
+          "y": 140.04733276367188,
+          "visible": true
+        },
+        {
+          "x": 248.8405303955078,
+          "y": 139.04733276367188,
+          "visible": true
+        },
+        {
+          "x": 245.79550170898438,
+          "y": 139.8327178955078,
+          "visible": true
+        },
+        {
+          "x": 246.79550170898438,
+          "y": 141.8327178955078,
+          "visible": true
+        },
+        {
+          "x": 243.6511993408203,
+          "y": 140.54090881347656,
+          "visible": true
+        },
+        {
+          "x": 243.6511993408203,
+          "y": 139.54090881347656,
+          "visible": true
+        },
+        {
+          "x": 241.48667907714844,
+          "y": 141.6700439453125,
+          "visible": true
+        },
+        {
+          "x": 241.48667907714844,
+          "y": 140.6700439453125,
+          "visible": true
+        }
+      ],
+      "markWidth": 2,
+      "hatchAngle": 0.7,
+      "alpha": 0.75,
+      "trace": false,
+      "gradient": {
+        "x": 242.80422973632812,
+        "y": 143.5997314453125
+      },
+      "fillMode": "gradient",
+      "density": 3,
+      "isMask": false
     }
   ],
-  "thumbnail": "data:image/jpeg;base64,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"
+  "thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCABIAGADASIAAhEBAxEB/8QAGgABAQEAAwEAAAAAAAAAAAAAAAMEAQIFBv/EACsQAAICAgIABQQCAgMAAAAAAAECAxEABBIhBRMxQWEiMlGBFHFCkSNicv/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A+xxjGcWjGMYEptiGChLIAzAlUHbPQs8VHZNewyexuwayh5y6ITRby2IX8ljX0j5NDJaNSx7GyOJmeWRCwHsjsqjv8V6elkn3zFPsyPvQ68AHKRuiVtU6u2/Q/Z6sXgey7KiF3YKqiySaAGQ1vENHbkMerua8zgWVjlViB+aByWrpa3h8MaQqztEnFWkYu/GhYBPoOh0KHxmiRY9iNopktTVg36+tg/ket/GBbGR15OYeMtyeFuDn9Aj2HZBB667y2AxjGAxjGAyc80evC0srcUX4JJPoAAOySegB2TnZ3WNGeRgqKCWZjQA/JzNHGNqaLckWQBAfKjcVV9ciPUNVjvsAkUCTgYdTc8vX3dp4CmnG5d1of8Zs+Z/6IItgAey1Mx6G4vKNgpq6RYJQeR24LXqQvux7HsF7IuwRkJfDHl5wvNEdWTmHXyakKueTLzBoAn4uve/qyscE0R4iNHVJjLGzTEH6i3KwFrrkQB3fXplRQFN3UDBR3YKtR4sLBU0SLBsGj+clruxH1nqzRN+gNA/Pt/Ry2pCmvB/H5Iz20kgHQLMxZjRJoEk9Xk2eLR1vN2ZFjjQfUzGu/br8+wyK5iLHxbYBc8fIiIT2B5SWf31/rNeZdHnIjbM0LRSTf4NXJVH2g0P3XdFjmrAYxjAYxjAyzMZd2LXH2KvmyFXoiiOAI9aJ5G/+le+Vn2INZOexNHEhNcpGCi/x3nMkEMrq8sUbsoIUsoJAPqB/dDOyRpGoWNFVQKAUUBgZ5N6MAeQkuyzAlRCtg17culB/sjIbT7/mL3FDDzILI3JiOuN2BQPYIHdlaPrXo55/jm3/AAvC5ZlgE8qjlHGfQsv1X+uJP667rA4h0o1i/jsgZGWnViG5X91/m/e/Uk3eSbw3R8O3oN7W19XXBIhk4xAWGNLxodHkQPkE3dCt2zKYBGsMYeSSRVC/Fjk36Fn/AEPUjJeMOIvB9ubiGMMTSrYumUclP6IBwNuMYwGMYwGMYwGMYwJ7EXn60sPmSR+YhXnGaZbFWD7HPnp/Ctzw7wnalfxGOdhrP5ss8LPIRXYUl/pBABqiLs+lAfS5OaKOeCSGZQ8cilHU+4IojFEtbUWBjI0ss8zCmklayR8AUF/QF133kvGVMvhOzrr9+whgTq6Z/pBPwLs/AOZTteIQeLa+lJNrypLX1eUVeuLlj91eqoOh/n6emdPBRLubE8+5PNK2tMFijk4jyiYkLfaosjmy2fb+zdHt4xjIGMYwGMYwGMYwGMYwME0TN49py+WSia04510pLRV37EgH/RyXgum2nP4qp58Zd5plZhXIMiE1+QDY/WMYHqYxjAYxjA//2Q=="
 }

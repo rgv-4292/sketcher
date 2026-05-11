@@ -357,7 +357,11 @@ function createPageItem(page, index) {
   actions.append(editBtn, dupBtn, threeXBtn, delBtn)
   item.append(selectCb, thumb, info, durations, actions)
 
-  // Drag and drop — handle on item, ignore child pointer events via CSS
+  // Drag and drop — disable dragging when interacting with buttons/inputs
+  item.addEventListener('mousedown', (e) => {
+    const tag = e.target.tagName
+    item.draggable = (tag !== 'BUTTON' && tag !== 'INPUT')
+  })
   item.addEventListener('dragstart', (e) => {
     dragSrcIndex = index
     e.dataTransfer.effectAllowed = 'move'

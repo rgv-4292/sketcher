@@ -70,7 +70,7 @@ export class Page {
       }
     })
 
-    // tempMarks: apply all masks
+    // tempMarks get all masks applied
     const allMaskPolygons = masksByIndex.map(m => m.polygon)
     this.tempMarks.forEach(mark => {
       try {

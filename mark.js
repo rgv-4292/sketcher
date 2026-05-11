@@ -160,14 +160,13 @@ export class Mark {
 
     this.clipToPolygon(ctx, points)
 
-    // Helper: check if a point is masked
+    // Helper: check if a hatch point is inside any mask polygon
     const isMasked = (x, y) => {
       if (!maskPolygons || maskPolygons.length === 0) return false
       return maskPolygons.some(poly => this.isPointInPolygon(x, y, poly))
     }
 
     if (this.fillMode === 'solid') {
-      // Uniform density hatch — no gradient falloff
       const stepVal = this.density
       let hatchAngle = Math.random() * 360
       ctx.lineWidth = this.hatchAngle
@@ -194,7 +193,6 @@ export class Mark {
         this.gradient = points[0]
       }
 
-      // Only use gradient falloff in 'gradient' mode
       const useGradient = this.fillMode === 'gradient'
       const farthest = useGradient
         ? this.farthestDistance(this.gradient, this.points).maxDistance
@@ -231,7 +229,6 @@ export class Mark {
               stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.density, this.density + 3))
               console.log('stepVal', stepVal)
             } else {
-              // fillMode === 'none' — uniform default density
               ctx.lineWidth = this.hatchAngle
               const offsetX = Math.random() * stepVal - stepVal / 2
               const offsetY = Math.random() * stepVal - stepVal / 2
@@ -304,7 +301,6 @@ export class Mark {
     return inside
   }
 
-  // Convert this mark to SVG path string for transition rendering
   toSVGPath() {
     if (this.points.length < 2) return ''
     let d = `M ${this.points[0].x} ${this.points[0].y}`

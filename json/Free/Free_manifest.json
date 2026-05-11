@@ -12,7 +12,8 @@
       "caption": "",
       "pageDuration": null,
       "transitionDuration": null,
-      "bgColor": "#f0ebe8"
+      "bgColor": "#f0ebe8",
+      "threeX": true
     },
     {
       "id": "Free_MOZD48V3",
@@ -53,14 +54,6 @@
       "pageDuration": null,
       "transitionDuration": null,
       "bgColor": "#f0ebe8"
-    },
-    {
-      "id": "Free_MP0KNE7S",
-      "filename": "Free_MP0KNE7S.json",
-      "caption": "",
-      "pageDuration": null,
-      "transitionDuration": null,
-      "bgColor": "#4463bb"
     }
   ]
 }

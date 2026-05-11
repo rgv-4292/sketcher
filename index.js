@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const color = getColorFromWheel(lastWheelX, lastWheelY)
     updateColorPreview(color)
   })
-
+ 
   brightnessSlider.addEventListener('input', () => {
     const bri = parseInt(brightnessSlider.value)
     drawColorWheel(bri)

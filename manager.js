@@ -1,6 +1,6 @@
 import { Mark } from './mark.js'
 import { Page } from './page.js'
-
+ 
 const CACHE_KEY = 'sketcher_manager_cache'
 const ACTIVE_BOOK_KEY = 'sketcher_active_book'
 const VIDEO_PAGE_LIMIT = 20

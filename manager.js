@@ -402,10 +402,14 @@ function renderPageToCanvas(pageJSON, targetCanvas) {
   const bg = pageJSON.canvasParams.backgroundColor || '#f0ebe8'
   ctx.fillStyle = bg
   ctx.fillRect(0, 0, targetCanvas.width, targetCanvas.height)
+  const activeMaskPolygons = []
   pageJSON.marks.forEach(markData => {
     try {
       const mark = Mark.fromJSON(markData)
-      mark.render(1, false, targetCanvas)
+      mark.render(1, false, targetCanvas, activeMaskPolygons)
+      if (mark.isMask && mark.points.length >= 3) {
+        activeMaskPolygons.push(mark.points.map(p => ({ x: p.x, y: p.y })))
+      }
     } catch (err) {
       console.error('Error rendering mark:', err)
     }
@@ -573,16 +577,20 @@ async function exportVideo() {
         20 + (frameIndex / totalFrames) * 60
       )
 
-      // Render static page once
-      renderPageToCanvas(pageJSONs[p], offscreen)
-      const pageBlob = await canvasToBlob(offscreen)
-      const pageData = new Uint8Array(await pageBlob.arrayBuffer())
+      // Render 3 variations of the page for the sketching flicker effect
+      const pageVariants = []
+      for (let v = 0; v < 3; v++) {
+        renderPageToCanvas(pageJSONs[p], offscreen)
+        const blob = await canvasToBlob(offscreen)
+        pageVariants.push(new Uint8Array(await blob.arrayBuffer()))
+      }
 
-      // Write page hold frames
+      // Write page hold frames cycling A,A,B,B,C,C,A,A,...
       for (let f = 0; f < pageFrames; f++) {
         if (exportCancelled) return
+        const variantIndex = Math.floor(f / 2) % 3
         const fname = `frame${String(frameIndex).padStart(6, '0')}.png`
-        ffmpeg.FS('writeFile', fname, pageData)
+        ffmpeg.FS('writeFile', fname, pageVariants[variantIndex])
         frameIndex++
       }
 

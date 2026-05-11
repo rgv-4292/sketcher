@@ -11,7 +11,8 @@ export class Mark {
     trace = false,
     gradient = null,
     fillMode = 'none',
-    density = 3
+    density = 3,
+    isMask = false
   ) {
     this.color = color
     this.minDistance = minDistance
@@ -26,6 +27,7 @@ export class Mark {
     this.gradient = gradient
     this.fillMode = fillMode || 'none'
     this.density = density || 3
+    this.isMask = isMask || false
   }
 
   addPoint(x, y) {
@@ -36,7 +38,7 @@ export class Mark {
     }
   }
 
-  connectNewPoint(newPoint, targetCanvas) {
+  connectNewPoint(newPoint, targetCanvas, maskPolygons) {
     const canvas = targetCanvas || document.getElementById('myCanvas')
     const ctx = canvas.getContext('2d')
     ctx.linecap = 'round'
@@ -51,6 +53,12 @@ export class Mark {
           distance <= this.distanceThreshold &&
           Math.random() < this.connectionProbability / 100
         ) {
+          // Check if midpoint of this segment falls inside any mask polygon
+          if (maskPolygons && maskPolygons.length > 0) {
+            const mx = (existingPoint.x + newPoint.x) / 2
+            const my = (existingPoint.y + newPoint.y) / 2
+            if (maskPolygons.some(poly => this.isPointInPolygon(mx, my, poly))) continue
+          }
           this.drawSquigglyLine(ctx, existingPoint, newPoint)
         }
       }
@@ -114,28 +122,28 @@ export class Mark {
     }
   }
 
-  render(alpha = 1, transition = false, targetCanvas) {
+  render(alpha = 1, transition = false, targetCanvas, maskPolygons) {
     const canvas = targetCanvas || document.getElementById('myCanvas')
     const ctx = canvas.getContext('2d')
     ctx.globalAlpha = this.alpha
 
     if (this.filled) {
-      this.drawFilledMark(targetCanvas)
+      this.drawFilledMark(targetCanvas, maskPolygons)
       if (this.trace) {
         for (let i = 1; i < this.points.length; i++) {
-          this.connectNewPoint(this.points[i], targetCanvas)
+          this.connectNewPoint(this.points[i], targetCanvas, maskPolygons)
         }
       }
     } else {
       for (let i = 1; i < this.points.length; i++) {
-        this.connectNewPoint(this.points[i], targetCanvas)
+        this.connectNewPoint(this.points[i], targetCanvas, maskPolygons)
       }
     }
 
     ctx.globalAlpha = 1
   }
 
-  drawFilledMark(targetCanvas) {
+  drawFilledMark(targetCanvas, maskPolygons) {
     const canvas = targetCanvas || document.getElementById('myCanvas')
     const ctx = canvas.getContext('2d')
 
@@ -152,6 +160,12 @@ export class Mark {
 
     this.clipToPolygon(ctx, points)
 
+    // Helper: check if a point is masked
+    const isMasked = (x, y) => {
+      if (!maskPolygons || maskPolygons.length === 0) return false
+      return maskPolygons.some(poly => this.isPointInPolygon(x, y, poly))
+    }
+
     if (this.fillMode === 'solid') {
       // Uniform density hatch — no gradient falloff
       const stepVal = this.density
@@ -163,18 +177,14 @@ export class Mark {
             hatchAngle = Math.random() * 360
             const offsetX = Math.random() * stepVal - stepVal / 2
             const offsetY = Math.random() * stepVal - stepVal / 2
-            this.drawHatchLine(ctx, x + offsetX, y + offsetY, hatchAngle)
+            const hx = x + offsetX
+            const hy = y + offsetY
+            if (isMasked(hx, hy)) continue
+            this.drawHatchLine(ctx, hx, hy, hatchAngle)
           }
         }
       }
     } else {
-      // Gradient or none mode — use existing gradient falloff
-      // const markWidth = this.markWidth
-      // let stepVal = markWidth
-      // let hatchAngle = Math.random() * 360
-      // ctx.lineWidth = 0.3
-
-      // const markWidth = this.markWidth
       let stepVal = this.density
       console.log('stepVal', stepVal)
       let hatchAngle = Math.random() * 360
@@ -199,31 +209,36 @@ export class Mark {
               const val = this.distanceBetweenPoints(
                 this.gradient.x, this.gradient.y, x, y
               )
-              // ctx.lineWidth = this.mapValue(val, 0, farthest * 1.1, 0.6, 0.0)
               ctx.lineWidth = this.mapValue(val, 0, farthest * 1.1, this.hatchAngle, 0.0)
 
               if (val < farthest * 0.9 && ctx.lineWidth >= 0.2) {
+                const offsetX = Math.random() * stepVal - stepVal / 2
+                const offsetY = Math.random() * stepVal - stepVal / 2
+                const hx = x + offsetX
+                const hy = y + offsetY
+                if (isMasked(hx, hy)) {
+                  stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.density, this.density + 3))
+                  continue
+                }
                 if (ctx.lineWidth < 0.3) {
                   if (Math.random() * 50 > 10) {
-                    const offsetX = Math.random() * stepVal - stepVal / 2
-                    const offsetY = Math.random() * stepVal - stepVal / 2
-                    this.drawHatchLine(ctx, x + offsetX, y + offsetY, hatchAngle)
+                    this.drawHatchLine(ctx, hx, hy, hatchAngle)
                   }
                 } else {
-                  const offsetX = Math.random() * stepVal - stepVal / 2
-                  const offsetY = Math.random() * stepVal - stepVal / 2
-                  this.drawHatchLine(ctx, x + offsetX, y + offsetY, hatchAngle)
+                  this.drawHatchLine(ctx, hx, hy, hatchAngle)
                 }
               }
-              // stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, 2, 5))
-              stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.density, this.density+3))
+              stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.density, this.density + 3))
               console.log('stepVal', stepVal)
             } else {
               // fillMode === 'none' — uniform default density
               ctx.lineWidth = this.hatchAngle
               const offsetX = Math.random() * stepVal - stepVal / 2
               const offsetY = Math.random() * stepVal - stepVal / 2
-              this.drawHatchLine(ctx, x + offsetX, y + offsetY, hatchAngle)
+              const hx = x + offsetX
+              const hy = y + offsetY
+              if (isMasked(hx, hy)) continue
+              this.drawHatchLine(ctx, hx, hy, hatchAngle)
             }
           }
         }
@@ -313,7 +328,8 @@ export class Mark {
       trace: this.trace,
       gradient: this.gradient,
       fillMode: this.fillMode,
-      density: this.density
+      density: this.density,
+      isMask: this.isMask
     }
   }
 
@@ -330,7 +346,8 @@ export class Mark {
       data.trace,
       data.gradient,
       data.fillMode || 'none',
-      data.density || 3
+      data.density || 3,
+      data.isMask || false
     )
     mark.points = data.points.map(point => ({
       x: Math.floor(point.x),

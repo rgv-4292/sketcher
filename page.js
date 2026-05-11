@@ -49,16 +49,24 @@ export class Page {
 
   render(trans = false, targetCanvas) {
     this.clearCanvas(targetCanvas)
+    const activeMaskPolygons = []
+
     this.marks.forEach(mark => {
       try {
-        mark.render(this.alpha, trans, targetCanvas)
+        // Pass currently accumulated masks to this mark's render
+        mark.render(this.alpha, trans, targetCanvas, activeMaskPolygons)
+        // After rendering, if this mark is a mask, add its polygon to the list
+        if (mark.isMask && mark.points.length >= 3) {
+          activeMaskPolygons.push(mark.points.map(p => ({ x: p.x, y: p.y })))
+        }
       } catch (error) {
         console.log(error)
       }
     })
+
     this.tempMarks.forEach(mark => {
       try {
-        mark.render(this.alpha, trans, targetCanvas)
+        mark.render(this.alpha, trans, targetCanvas, activeMaskPolygons)
       } catch (error) {
         console.log(error)
       }

@@ -158,6 +158,46 @@ function renderPagePanel() {
   activeManifest.pages.forEach((page, index) => {
     pageList.appendChild(createPageItem(page, index))
   })
+
+  // Kick off background thumbnail loading
+  loadThumbnailsInBackground()
+}
+
+// --- Thumbnail lazy loader ---
+
+let _thumbLoadId = 0 // incremented on each new book/render to cancel stale runs
+
+async function loadThumbnailsInBackground() {
+  if (!activeManifest || !activeBook) return
+  const runId = ++_thumbLoadId
+  const pages = activeManifest.pages
+
+  for (let i = 0; i < pages.length; i++) {
+    // Abort if a newer load run has started (e.g. user switched book)
+    if (runId !== _thumbLoadId) return
+
+    const page = pages[i]
+    try {
+      const data = await api('getPage', { bookName: activeBook, pageId: page.id })
+      if (runId !== _thumbLoadId) return
+      const thumbnail = data.pageData && data.pageData.thumbnail
+      if (thumbnail) {
+        // Find the img inside the thumb div for this page id
+        const thumbDiv = document.querySelector(`.page-thumb[data-page-id="${page.id}"]`)
+        if (thumbDiv) {
+          const img = thumbDiv.querySelector('img')
+          if (img) {
+            img.src = thumbnail
+            img.style.display = 'block'
+            thumbDiv.style.background = 'none'
+          }
+        }
+      }
+    } catch (err) {
+      // Non-fatal — just skip this thumbnail
+      console.warn(`Thumbnail load failed for ${page.id}:`, err)
+    }
+  }
 }
 
 function createPageItem(page, index) {
@@ -179,8 +219,11 @@ function createPageItem(page, index) {
   const thumb = document.createElement('div')
   thumb.className = 'page-thumb'
   thumb.style.background = page.bgColor || '#f0ebe8'
-  thumb.textContent = index + 1
-  thumb.style.color = '#888'
+  thumb.dataset.pageId = page.id
+
+  const thumbImg = document.createElement('img')
+  thumbImg.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:3px;display:none;'
+  thumb.appendChild(thumbImg)
 
   // Info
   const info = document.createElement('div')
@@ -261,23 +304,12 @@ function createPageItem(page, index) {
   dupBtn.textContent = 'Dup'
   dupBtn.addEventListener('click', e => { e.stopPropagation(); duplicatePage(index) })
 
-  const threeXBtn = document.createElement('button')
-  threeXBtn.className = 'page-btn' + (page.threeX ? ' active' : '')
-  threeXBtn.textContent = '3x'
-  threeXBtn.title = 'Triple render for sketch flicker effect in video'
-  threeXBtn.addEventListener('click', async e => {
-    e.stopPropagation()
-    page.threeX = !page.threeX
-    threeXBtn.className = 'page-btn' + (page.threeX ? ' active' : '')
-    await saveManifest()
-  })
-
   const delBtn = document.createElement('button')
   delBtn.className = 'page-btn danger'
   delBtn.textContent = 'Del'
   delBtn.addEventListener('click', e => { e.stopPropagation(); deletePage(index) })
 
-  actions.append(editBtn, dupBtn, threeXBtn, delBtn)
+  actions.append(editBtn, dupBtn, delBtn)
   item.append(thumb, info, durations, actions)
 
   // Drag and drop
@@ -413,23 +445,10 @@ function renderPageToCanvas(pageJSON, targetCanvas) {
   const bg = pageJSON.canvasParams.backgroundColor || '#f0ebe8'
   ctx.fillStyle = bg
   ctx.fillRect(0, 0, targetCanvas.width, targetCanvas.height)
-
-  // Pass 1: collect mask polygons with their index
-  const masksByIndex = []
-  pageJSON.marks.forEach((markData, i) => {
-    if (markData.isMask && markData.points && markData.points.length >= 3) {
-      masksByIndex.push({ index: i, polygon: markData.points.map(p => ({ x: p.x, y: p.y })) })
-    }
-  })
-
-  // Pass 2: render each mark with only masks that appear after it
-  pageJSON.marks.forEach((markData, i) => {
+  pageJSON.marks.forEach(markData => {
     try {
       const mark = Mark.fromJSON(markData)
-      const maskPolygons = masksByIndex
-        .filter(m => m.index > i)
-        .map(m => m.polygon)
-      mark.render(1, false, targetCanvas, maskPolygons)
+      mark.render(1, false, targetCanvas)
     } catch (err) {
       console.error('Error rendering mark:', err)
     }
@@ -597,28 +616,16 @@ async function exportVideo() {
         20 + (frameIndex / totalFrames) * 60
       )
 
-      // Render page — 3 variants if threeX is enabled, otherwise just one
-      let pageVariants
-      if (entry.threeX) {
-        pageVariants = []
-        for (let v = 0; v < 3; v++) {
-          renderPageToCanvas(pageJSONs[p], offscreen)
-          const blob = await canvasToBlob(offscreen)
-          pageVariants.push(new Uint8Array(await blob.arrayBuffer()))
-        }
-      } else {
-        renderPageToCanvas(pageJSONs[p], offscreen)
-        const blob = await canvasToBlob(offscreen)
-        const data = new Uint8Array(await blob.arrayBuffer())
-        pageVariants = [data]
-      }
+      // Render static page once
+      renderPageToCanvas(pageJSONs[p], offscreen)
+      const pageBlob = await canvasToBlob(offscreen)
+      const pageData = new Uint8Array(await pageBlob.arrayBuffer())
 
-      // Write page hold frames; if threeX, cycle A,A,B,B,C,C
+      // Write page hold frames
       for (let f = 0; f < pageFrames; f++) {
         if (exportCancelled) return
-        const variantIndex = entry.threeX ? Math.floor(f / 2) % 3 : 0
         const fname = `frame${String(frameIndex).padStart(6, '0')}.png`
-        ffmpeg.FS('writeFile', fname, pageVariants[variantIndex])
+        ffmpeg.FS('writeFile', fname, pageData)
         frameIndex++
       }
 

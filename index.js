@@ -41,14 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
   let scatter = parseInt(document.getElementById('scatter').value)
   let density = parseFloat(document.getElementById('density').value)
   let doTrace = false
-  let doMask = false
   // fillMode: 'none' | 'gradient' | 'solid'
   let fillMode = 'none'
 
   // --- Color indicator sync ---
   const colorIndicator = document.getElementById('colorIndicator')
   const bgColorSwatch = document.getElementById('bgColorSwatch')
-  const bgColorIndicator = bgColorSwatch
 
   function syncColorIndicator() {
     colorIndicator.style.background = currentColor
@@ -57,10 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function syncBgIndicator() {
     bgColorIndicator.style.background = currentBgColor
-    page.canvasParams.backgroundColor = currentBgColor
-    page.render()
   }
-  syncBgIndicator()
 
   // --- Color Wheel Popup ---
   const colorPopup = document.getElementById('colorPopup')
@@ -272,10 +267,6 @@ document.addEventListener('DOMContentLoaded', function () {
     doTrace = e.target.checked
   })
 
-  document.getElementById('checkboxMask').addEventListener('change', (e) => {
-    doMask = e.target.checked
-  })
-
   document.getElementById('checkbox2').addEventListener('change', (e) => {
     // unchecks itself after use — handled in startDrawing
   })
@@ -332,7 +323,6 @@ document.addEventListener('DOMContentLoaded', function () {
       scatter,
       density,
       doTrace,
-      doMask,
       fillMode
     }
   }
@@ -347,7 +337,6 @@ document.addEventListener('DOMContentLoaded', function () {
     scatter = s.scatter ?? 0
     density = s.density ?? 3
     doTrace = s.doTrace
-    doMask = s.doMask ?? false
     fillMode = s.fillMode ?? 'none'
 
     // Sync UI
@@ -359,7 +348,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('scatter').value = scatter
     document.getElementById('density').value = density
     document.getElementById('checkbox1').checked = doTrace
-    document.getElementById('checkboxMask').checked = doMask
     setFillMode(fillMode)
     syncColorIndicator()
   }
@@ -435,8 +423,7 @@ document.addEventListener('DOMContentLoaded', function () {
       doTrace,
       null,
       fillMode,
-      density,
-      doMask
+      density
     )
     currentMark.addPoint(event.offsetX, event.offsetY)
   }
@@ -630,6 +617,19 @@ document.addEventListener('DOMContentLoaded', function () {
         isNew = true
       }
 
+      // Generate thumbnail: render to 72x96 offscreen canvas, export as JPEG base64
+      const THUMB_W = 72
+      const THUMB_H = 96
+      const thumbCanvas = document.createElement('canvas')
+      thumbCanvas.width = THUMB_W
+      thumbCanvas.height = THUMB_H
+      const thumbCtx = thumbCanvas.getContext('2d')
+      const srcCanvas = document.getElementById('myCanvas')
+      thumbCtx.drawImage(srcCanvas, 0, 0, srcCanvas.width, srcCanvas.height, 0, 0, THUMB_W, THUMB_H)
+      const thumbnail = thumbCanvas.toDataURL('image/jpeg', 0.6)
+
+      const pageData = { ...json, thumbnail }
+
       const res = await fetch('/.netlify/functions/github', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -637,7 +637,7 @@ document.addEventListener('DOMContentLoaded', function () {
           operation: 'savePage',
           bookName: activeBookName,
           pageId,
-          pageData: json
+          pageData
         })
       })
 

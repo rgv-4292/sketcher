@@ -91,9 +91,10 @@
       "id": "Free_MP0NRLXQ",
       "filename": "Free_MP0NRLXQ.json",
       "caption": "",
-      "pageDuration": 2,
+      "pageDuration": null,
       "transitionDuration": null,
-      "bgColor": "#f0ebe8"
+      "bgColor": "#f0ebe8",
+      "threeX": true
     }
   ]
 }

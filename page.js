@@ -120,6 +120,8 @@ export class Page {
       'image/svg+xml'
     ).documentElement
     let minDistance = parseFloat(document.getElementById('minDistance').value)
+    let distanceThreshold = parseInt(document.getElementById('distanceThreshold').value)
+    let connectionProbability = parseInt(document.getElementById('connectionProbability').value)
     const draw = SVG().addTo('body').size('400', '700').svg(svgDOM.outerHTML)
     const backgroundColor = this.backgroundColor
     const canvasParams = {
@@ -155,8 +157,8 @@ export class Page {
       const mark = {
         color: myColor,
         minDistance: minDistance,
-        distanceThreshold: 8,
-        connectionProbability: 75,
+        distanceThreshold: distanceThreshold,
+        connectionProbability: connectionProbability,
         filled: false,
         points: points,
         markWidth: myWidth,

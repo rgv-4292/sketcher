@@ -123,57 +123,67 @@ export class Page {
     let distanceThreshold = parseInt(document.getElementById('distanceThreshold').value)
     let connectionProbability = parseInt(document.getElementById('connectionProbability').value)
     let markWidth = parseFloat(document.getElementById('markWidth').value)
-    let hatchAngle = parseFloat(document.getElementById('hatchAngle').value) //saturation
+    let hatchAngle = parseFloat(document.getElementById('hatchAngle').value)
     console.log(minDistance, distanceThreshold, connectionProbability, markWidth, hatchAngle)
-    const draw = SVG().addTo('body').size('400', '700').svg(svgDOM.outerHTML)
-    const backgroundColor = this.backgroundColor
-    const canvasParams = {
-      width: parseFloat(draw.attr('width')),
-      height: parseFloat(draw.attr('height')),
-      backgroundColor: backgroundColor
-    }
-    const marks = []
-    draw.find('path').each(function (element) {
-      const path = element
-      const length = path.length()
-      const points = []
-      const dist = 2
-      for (let i = 0; i <= length; i += dist) {
-        const point = path.pointAt(i)
-        var value = noise.simplex2(point.x / 50, point.y / 50)
-        points.push({
-          x: parseInt(point.x + value * 2),
-          y: parseInt(point.y + value * 2),
-          visible: true
-        })
+
+    // Mount into a hidden offscreen container so SVG.js can work but layout is unaffected
+    const container = document.createElement('div')
+    container.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;width:0;height:0;overflow:hidden;'
+    document.body.appendChild(container)
+
+    try {
+      const draw = SVG().addTo(container).size('400', '700').svg(svgDOM.outerHTML)
+      const backgroundColor = this.backgroundColor
+      const canvasParams = {
+        width: parseFloat(draw.attr('width')),
+        height: parseFloat(draw.attr('height')),
+        backgroundColor: backgroundColor
       }
-      var attributes = path.attr('style')
-      const styleDict = styleStringToDict(attributes)
-      var myColor = hexToRgba(styleDict['stroke'], 0.75)
-      try {
-        var myWidth = styleDict['stroke-width']
-        var mySat = Math.max(0.7, Math.max(myWidth / 4, 2.7))
-      } catch (error) {
-        var myWidth = 1.0
-        var mySat = 0.7
+      const marks = []
+      draw.find('path').each(function (element) {
+        const path = element
+        const length = path.length()
+        const points = []
+        const dist = 2
+        for (let i = 0; i <= length; i += dist) {
+          const point = path.pointAt(i)
+          var value = noise.simplex2(point.x / 50, point.y / 50)
+          points.push({
+            x: parseInt(point.x + value * 2),
+            y: parseInt(point.y + value * 2),
+            visible: true
+          })
+        }
+        var attributes = path.attr('style')
+        const styleDict = styleStringToDict(attributes)
+        var myColor = hexToRgba(styleDict['stroke'], 0.75)
+        try {
+          var myWidth = styleDict['stroke-width']
+          var mySat = Math.max(0.7, Math.max(myWidth / 4, 2.7))
+        } catch (error) {
+          var myWidth = 1.0
+          var mySat = 0.7
+        }
+        const mark = {
+          color: myColor,
+          minDistance: minDistance,
+          distanceThreshold: distanceThreshold,
+          connectionProbability: connectionProbability,
+          filled: false,
+          points: points,
+          markWidth: markWidth,
+          hatchAngle: hatchAngle,
+          alpha: 0.75
+        }
+        marks.push(mark)
+      })
+      return {
+        canvasParams: canvasParams,
+        marks: marks
       }
-      const mark = {
-        color: myColor,
-        minDistance: minDistance,
-        distanceThreshold: distanceThreshold,
-        connectionProbability: connectionProbability,
-        filled: false,
-        points: points,
-        markWidth: markWidth,
-        hatchAngle: hatchAngle,
-        alpha: 0.75
-      }
-      marks.push(mark)
-    })
-    draw.clear()
-    return {
-      canvasParams: canvasParams,
-      marks: marks
+    } finally {
+      // Always remove the container from the DOM regardless of success or error
+      document.body.removeChild(container)
     }
   }
 
@@ -338,14 +348,12 @@ export class Page {
     const FRAMES = 7
     const FRAME_DURATION = 100
 
-    // Deep copy current marks safely
     const fromMarks = this.marks.map(m => Mark.fromJSON(m.toJSON()))
     const toMarks = newJSON.marks.map(markData => Mark.fromJSON(markData))
 
     const fromBg = this.canvasParams.backgroundColor || '#f0ebe8'
     const toBg = newJSON.canvasParams.backgroundColor || '#f0ebe8'
 
-    // If no current marks just load directly
     if (fromMarks.length === 0) {
       this.marks = toMarks
       this.tempMarks = []
@@ -353,13 +361,11 @@ export class Page {
       return
     }
 
-    // --- Match marks ---
     const { matched, unmatchedFrom, unmatchedTo } = this.matchMarks(
       fromMarks,
       toMarks
     )
 
-    // --- Precompute resampled point arrays for matched pairs ---
     const matchedPairs = matched.map(({ fromIdx, toIdx }) => {
       const from = fromMarks[fromIdx]
       const to = toMarks[toIdx]
@@ -372,7 +378,6 @@ export class Page {
       }
     })
 
-    // --- Precompute unmatched "from" collapse targets ---
     const unmatchedFromData = unmatchedFrom.map(fromIdx => {
       const fromMark = fromMarks[fromIdx]
       const target = this.nearestToCentroid(fromMark, toMarks, matched)
@@ -384,7 +389,6 @@ export class Page {
       return { fromMark, targetPoints }
     })
 
-    // --- Precompute unmatched "to" emerge sources ---
     const unmatchedToData = unmatchedTo.map(toIdx => {
       const toMark = toMarks[toIdx]
       const source = this.nearestFromCentroid(toMark, fromMarks, matched)
@@ -396,7 +400,6 @@ export class Page {
       return { toMark, sourcePoints }
     })
 
-    // --- Precompute all frames into ImageBitmap array ---
     const offscreen = document.createElement('canvas')
     offscreen.width = this.canvasParams.width
     offscreen.height = this.canvasParams.height
@@ -406,12 +409,10 @@ export class Page {
     for (let f = 0; f < FRAMES; f++) {
       const t = f / (FRAMES - 1)
 
-      // Clear offscreen
       const offCtx = offscreen.getContext('2d')
       offCtx.fillStyle = this.lerpHexColor(fromBg, toBg, t)
       offCtx.fillRect(0, 0, offscreen.width, offscreen.height)
 
-      // Draw matched pairs
       matchedPairs.forEach(({ fromPoints, toPoints, fromMark, toMark }) => {
         const interpPoints = this.interpolatePoints(fromPoints, toPoints, t)
         const color = this.interpolateColor(fromMark.color, toMark.color, t)
@@ -431,7 +432,6 @@ export class Page {
         tempMark.render(1, false, offscreen)
       })
 
-      // Draw unmatched "from" marks — collapse to point and fade out
       unmatchedFromData.forEach(({ fromMark, targetPoints }) => {
         const interpPoints = this.interpolatePoints(
           fromMark.points,
@@ -447,7 +447,6 @@ export class Page {
         tempMark.render(1, false, offscreen)
       })
 
-      // Draw unmatched "to" marks — emerge from point and fade in
       unmatchedToData.forEach(({ toMark, sourcePoints }) => {
         const interpPoints = this.interpolatePoints(
           sourcePoints,
@@ -463,12 +462,10 @@ export class Page {
         tempMark.render(1, false, offscreen)
       })
 
-      // Capture frame as ImageBitmap
       const bitmap = await createImageBitmap(offscreen)
       frames.push(bitmap)
     }
 
-    // --- Playback ---
     const mainCanvas = document.getElementById(this.canvasId)
     const mainCtx = mainCanvas.getContext('2d')
 
@@ -489,7 +486,6 @@ export class Page {
       if (frameIndex < frames.length) {
         requestAnimationFrame(playFrame)
       } else {
-        // Final full quality render
         this.marks = toMarks
         this.tempMarks = []
         this.canvasParams.backgroundColor = toBg

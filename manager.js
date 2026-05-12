@@ -3,7 +3,7 @@ import { Page } from './page.js'
 
 const CACHE_KEY = 'sketcher_manager_cache'
 const ACTIVE_BOOK_KEY = 'sketcher_active_book'
-const THUMB_CACHE_KEY = 'sketcher_thumb_cache'
+const THUMB_PREFIX = 'sketcher_thumb::'
 const VIDEO_PAGE_LIMIT = 20
 
 let books = []
@@ -51,42 +51,41 @@ function setCachedManifest(bookName, manifest) {
 }
 
 // --- Thumbnail cache ---
-// Thumbnails are stored in the page JSON on GitHub. We cache them locally so
-// the manager doesn't re-fetch every page on every render/drag/drop.
-// The cache is invalidated only when index.js saves a page (it writes
-// sketcher_thumb_cache directly) or when a page is deleted here.
+// Each thumbnail is stored as its own localStorage key: sketcher_thumb::book::pageId
+// This avoids the quota problem of serialising all thumbnails into one large JSON blob.
+// index.js invalidates a single key when it saves a page; the manager re-fetches only
+// that page on the next render. All other pages continue to use their cached value.
 
-function loadThumbCache() {
-  try {
-    return JSON.parse(localStorage.getItem(THUMB_CACHE_KEY) || '{}')
-  } catch { return {} }
-}
-
-function saveThumbCache(cache) {
-  try {
-    localStorage.setItem(THUMB_CACHE_KEY, JSON.stringify(cache))
-  } catch {
-    // Storage full — drop oldest half and retry
-    const keys = Object.keys(cache)
-    keys.slice(0, Math.ceil(keys.length / 2)).forEach(k => delete cache[k])
-    try { localStorage.setItem(THUMB_CACHE_KEY, JSON.stringify(cache)) } catch {}
-  }
+function thumbKey(bookName, pageId) {
+  return `${THUMB_PREFIX}${bookName}::${pageId}`
 }
 
 function getCachedThumb(bookName, pageId) {
-  return loadThumbCache()[`${bookName}::${pageId}`] || null
+  try {
+    return localStorage.getItem(thumbKey(bookName, pageId)) || null
+  } catch { return null }
 }
 
 function setCachedThumb(bookName, pageId, dataUrl) {
-  const cache = loadThumbCache()
-  cache[`${bookName}::${pageId}`] = dataUrl
-  saveThumbCache(cache)
+  try {
+    localStorage.setItem(thumbKey(bookName, pageId), dataUrl)
+  } catch {
+    // Storage full — evict the oldest sketcher_thumb:: entries until it fits
+    const victims = []
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i)
+      if (k && k.startsWith(THUMB_PREFIX)) victims.push(k)
+    }
+    // Remove half of them (oldest-ish) and retry once
+    victims.slice(0, Math.ceil(victims.length / 2)).forEach(k => localStorage.removeItem(k))
+    try { localStorage.setItem(thumbKey(bookName, pageId), dataUrl) } catch {}
+  }
 }
 
 function clearCachedThumb(bookName, pageId) {
-  const cache = loadThumbCache()
-  delete cache[`${bookName}::${pageId}`]
-  saveThumbCache(cache)
+  try {
+    localStorage.removeItem(thumbKey(bookName, pageId))
+  } catch {}
 }
 
 // --- Status ---
@@ -219,7 +218,7 @@ function updateSelectionUI() {
 
 // --- Thumbnail background loader ---
 // Only fetches pages whose thumbnail is NOT already in localStorage cache.
-// When index.js saves a page it invalidates that page's cache entry, so the
+// When index.js saves a page it removes that page's localStorage key, so the
 // next time the manager renders it will re-fetch just that one page.
 
 let _thumbLoadId = 0
@@ -233,12 +232,9 @@ async function loadThumbnailsInBackground() {
     if (runId !== _thumbLoadId) return // a newer render cycle started — bail
     const page = pages[i]
 
-    // Check local cache first — if present, apply immediately without fetching
+    // Check local cache first — if present, skip entirely
     const cached = getCachedThumb(activeBook, page.id)
-    if (cached) {
-      applyThumbToDOM(page.id, cached)
-      continue
-    }
+    if (cached) continue
 
     // Not cached — fetch from GitHub, cache it, then apply
     try {
@@ -315,8 +311,7 @@ function createPageItem(page, index) {
   thumbImg.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:3px;display:none;'
   thumb.appendChild(thumbImg)
 
-  // If already cached, show immediately (loadThumbnailsInBackground will also apply it,
-  // but this avoids a flicker for pages that are already known)
+  // Show immediately from cache if available — no flicker, no fetch
   const cached = getCachedThumb(activeBook, page.id)
   if (cached) {
     thumbImg.src = cached
@@ -546,7 +541,7 @@ async function duplicatePage(index) {
     const data = await api('getPage', { bookName: activeBook, pageId: srcPage.id })
     const newId = generatePageId()
     await api('savePage', { bookName: activeBook, pageId: newId, pageData: data.pageData })
-    // Duplicate carries the same thumbnail — cache it directly
+    // Duplicate carries the same thumbnail — cache it directly so no re-fetch needed
     if (data.pageData.thumbnail) {
       setCachedThumb(activeBook, newId, data.pageData.thumbnail)
     }

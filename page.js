@@ -196,6 +196,7 @@ export class Page {
           myColor = hexToRgba(myFill, 0.75)
           const fillOpacity = parseFloat(styleDict['fill-opacity'] ?? '1')
           myDensity = mapRange(fillOpacity, 0, 1, 16, 2)
+          consoloe.log('fillOpacity', fillOpacity, 'myDensity', myDensity)
           if (fillOpacity >= 1) isMask = true
           isFilled = true
           myFillMode = 'solid'

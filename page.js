@@ -194,11 +194,11 @@ export class Page {
           markWidth: markWidth,
           hatchAngle: hatchAngle,
           alpha: 0.75,
-          trace = myTrace,
-          // gradient = myGradient,
-          fillMode = myFillMode,
-          density = myDensity,
-          isMask = isMask,
+          trace: myTrace,
+          // gradient: myGradient,
+          fillMode: myFillMode,
+          density: myDensity,
+          isMask: isMask,
         }
         marks.push(mark)
       })

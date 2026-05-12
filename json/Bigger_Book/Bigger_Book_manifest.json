@@ -1,0 +1,26 @@
+{
+  "name": "Bigger_Book",
+  "orientation": "portrait",
+  "width": 480,
+  "height": 640,
+  "defaultPageDuration": 5,
+  "defaultTransitionDuration": 1,
+  "pages": [
+    {
+      "id": "Bigger_Book_MP2Y4BCT",
+      "filename": "Bigger_Book_MP2Y4BCT.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "Bigger_Book_MP2Y63SU",
+      "filename": "Bigger_Book_MP2Y63SU.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    }
+  ]
+}

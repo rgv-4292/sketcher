@@ -5,5 +5,14 @@
   "height": 640,
   "defaultPageDuration": 5,
   "defaultTransitionDuration": 1,
-  "pages": []
+  "pages": [
+    {
+      "id": "BBP_MP33TX6D",
+      "filename": "BBP_MP33TX6D.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    }
+  ]
 }

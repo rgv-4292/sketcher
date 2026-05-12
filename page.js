@@ -163,6 +163,7 @@ export class Page {
         } catch (error) {
           var myWidth = 1.0
           var mySat = 0.7
+          console.log(error)
         }
         var isFilled = false
         var fillOpacity = parseFloat(styleDict['fill-opacity'])
@@ -170,7 +171,7 @@ export class Page {
         var myTrace = false
         var isMask = false
         // var myGradient = false
-        var myFillMode = 'solid'
+        var myFillMode = 'none'
         try {
           var myFill = styleDict['fill']
           if (myFill && myFill !== 'none') {
@@ -178,10 +179,11 @@ export class Page {
             myDensity = mapRange(parseFloat(styleDict['fill-opacity'] || 1), 0, 1, 16, 2)
             if (fillOpacity == 1) { isMask = true }
             isFilled = true
+            myFillMode = 'solid'
           }
 
         } catch (error) {
-
+          console.log(error)
         }
 
         const mark = {

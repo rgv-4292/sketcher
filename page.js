@@ -6,8 +6,8 @@ export class Page {
     this.marks = []
     const canvas = document.getElementById(canvasId)
     this.canvasParams = {
-      width: canvas ? canvas.width : 480,
-      height: canvas ? canvas.height : 640,
+      width: canvas ? canvas.width : 720,
+      height: canvas ? canvas.height : 960,
       backgroundColor: '#f0ebe8'
     }
     this.tempMarks = []

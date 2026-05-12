@@ -124,6 +124,7 @@ export class Page {
     let connectionProbability = parseInt(document.getElementById('connectionProbability').value)
     let markWidth = parseFloat(document.getElementById('markWidth').value)
     let hatchAngle = parseFloat(document.getElementById('hatchAngle').value) //saturation
+    console.log(minDistance, distanceThreshold, connectionProbability, markWidth, hatchAngle)
     const draw = SVG().addTo('body').size('400', '700').svg(svgDOM.outerHTML)
     const backgroundColor = this.backgroundColor
     const canvasParams = {

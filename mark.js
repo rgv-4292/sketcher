@@ -113,6 +113,7 @@ export class Mark {
       } catch (error) {
         ctx.strokeStyle = `rgba(255,0,0, ${i === 0 || i === step ? 0.03 : 0.25})`
       }
+      ctx.lineCap = "round"
       ctx.beginPath()
       ctx.moveTo(lastx, lasty)
       ctx.lineTo(x, y)
@@ -284,6 +285,7 @@ export class Mark {
   drawHatchLine(ctx, x, y, angle) {
     const length = 10
     const radians = (Math.PI / 180) * angle
+    ctx.lineCap = "round"
     ctx.beginPath()
     ctx.moveTo(x, y)
     ctx.lineTo(x + Math.cos(radians) * length, y + Math.sin(radians) * length)

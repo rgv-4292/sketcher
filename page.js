@@ -119,6 +119,7 @@ export class Page {
       svgString,
       'image/svg+xml'
     ).documentElement
+    let minDistance = parseFloat(document.getElementById('minDistance').value)
     const draw = SVG().addTo('body').size('400', '700').svg(svgDOM.outerHTML)
     const backgroundColor = this.backgroundColor
     const canvasParams = {
@@ -153,7 +154,7 @@ export class Page {
       }
       const mark = {
         color: myColor,
-        minDistance: 3,
+        minDistance: minDistance,
         distanceThreshold: 8,
         connectionProbability: 75,
         filled: false,

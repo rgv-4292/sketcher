@@ -50,7 +50,6 @@ export class Page {
   render(trans = false, targetCanvas) {
     this.clearCanvas(targetCanvas)
 
-    // Pass 1: collect all mask polygons with their array index
     const masksByIndex = []
     this.marks.forEach((mark, i) => {
       if (mark.isMask && mark.points.length >= 3) {
@@ -58,7 +57,6 @@ export class Page {
       }
     })
 
-    // Pass 2: render each mark, passing only masks that appear AFTER it in the array
     this.marks.forEach((mark, i) => {
       try {
         const maskPolygons = masksByIndex
@@ -70,7 +68,6 @@ export class Page {
       }
     })
 
-    // tempMarks get all masks applied
     const allMaskPolygons = masksByIndex.map(m => m.polygon)
     this.tempMarks.forEach(mark => {
       try {
@@ -115,30 +112,60 @@ export class Page {
   svgToJson(svgString) {
     noise.seed(Math.random())
     const parser = new DOMParser()
-    const svgDOM = parser.parseFromString(
-      svgString,
-      'image/svg+xml'
-    ).documentElement
+    const svgDOM = parser.parseFromString(svgString, 'image/svg+xml').documentElement
+
     let minDistance = parseFloat(document.getElementById('minDistance').value)
     let distanceThreshold = parseInt(document.getElementById('distanceThreshold').value)
     let connectionProbability = parseInt(document.getElementById('connectionProbability').value)
     let myMarkWidth = parseFloat(document.getElementById('markWidth').value)
     let myHatchAngle = parseFloat(document.getElementById('hatchAngle').value)
-    console.log(minDistance, distanceThreshold, connectionProbability, myMarkWidth, myHatchAngle)
 
-    // Mount into a hidden offscreen container so SVG.js can work but layout is unaffected
+    // --- Resolve SVG dimensions to pixels ---
+    // Priority: explicit px width/height → viewBox → fallback 744×1052 (A4 at 96dpi)
+    const svgPxDims = resolveSvgDimensions(svgDOM)
+    const svgW = svgPxDims.width
+    const svgH = svgPxDims.height
+
+    // Target canvas dimensions
+    const targetCanvas = document.getElementById(this.canvasId)
+    const canvasW = targetCanvas ? targetCanvas.width : this.canvasParams.width
+    const canvasH = targetCanvas ? targetCanvas.height : this.canvasParams.height
+
+    // Scale factor: fit SVG into canvas preserving aspect ratio
+    const scale = Math.min(canvasW / svgW, canvasH / svgH)
+    const offsetX = (canvasW - svgW * scale) / 2
+    const offsetY = (canvasH - svgH * scale) / 2
+
+    // viewBox origin (for coordinate remapping)
+    const vb = svgDOM.getAttribute('viewBox')
+    let vbX = 0, vbY = 0, vbW = svgW, vbH = svgH
+    if (vb) {
+      const parts = vb.trim().split(/[\s,]+/).map(parseFloat)
+      if (parts.length === 4) { vbX = parts[0]; vbY = parts[1]; vbW = parts[2]; vbH = parts[3] }
+    }
+
+    // Mount into a hidden container so SVG.js can traverse paths without affecting layout
     const container = document.createElement('div')
     container.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;width:0;height:0;overflow:hidden;'
     document.body.appendChild(container)
 
     try {
-      const draw = SVG().addTo(container).size('400', '700').svg(svgDOM.outerHTML)
-      const backgroundColor = this.backgroundColor
+      // Give SVG.js the SVG at its native viewBox size so pointAt() returns viewBox coords
+      const draw = SVG().addTo(container).size(vbW, vbH).svg(svgDOM.outerHTML)
+
+      const backgroundColor = this.canvasParams.backgroundColor
       const canvasParams = {
-        width: parseFloat(draw.attr('width')),
-        height: parseFloat(draw.attr('height')),
+        width: canvasW,
+        height: canvasH,
         backgroundColor: backgroundColor
       }
+
+      // Map a viewBox coordinate to canvas pixel coordinate
+      const toCanvas = (vx, vy) => ({
+        x: offsetX + ((vx - vbX) / vbW) * svgW * scale,
+        y: offsetY + ((vy - vbY) / vbH) * svgH * scale
+      })
+
       const marks = []
       draw.find('path').each(function (element) {
         const path = element
@@ -146,74 +173,54 @@ export class Page {
         const points = []
         const dist = 2
         for (let i = 0; i <= length; i += dist) {
-          const point = path.pointAt(i)
-          var value = noise.simplex2(point.x / 50, point.y / 50)
-          points.push({
-            x: parseInt(point.x + value * 2),
-            y: parseInt(point.y + value * 2),
-            visible: true
-          })
-        }
-        var attributes = path.attr('style')
-        const styleDict = styleStringToDict(attributes)
-        var myColor = hexToRgba(styleDict['stroke'], 0.75)
-        try {
-          var myWidth = styleDict['stroke-width']
-          var mySat = Math.max(0.7, Math.max(myWidth / 4, 2.7))
-        } catch (error) {
-          var myWidth = 1.0
-          var mySat = 0.7
-          console.log(error)
-        }
-        var isFilled = false
-        var fillOpacity
-        
-        var myDensity = 3
-        var myTrace = false
-        var isMask = false
-        // var myGradient = false
-        var myFillMode = 'none'
-        try {
-          var myFill = styleDict['fill']
-          console.log(myFill)
-          if (myFill && myFill !== 'none') {
-            myColor = hexToRgba(myFill, 0.75)
-            fillOpacity = styleDict['fill-opacity']
-            console.log(styleDict)
-            myDensity = mapRange(parseFloat(fillOpacity), 0, 1, 16, 2)
-            if (fillOpacity == 1) { isMask = true }
-            isFilled = true
-            myFillMode = 'solid'
-          }
-
-        } catch (error) {
-          console.log(error)
+          const pt = path.pointAt(i)
+          const value = noise.simplex2(pt.x / 50, pt.y / 50)
+          const canvas = toCanvas(pt.x + value * 2, pt.y + value * 2)
+          points.push({ x: Math.round(canvas.x), y: Math.round(canvas.y), visible: true })
         }
 
-        const mark = {
+        const styleAttr = path.attr('style') || ''
+        const styleDict = styleStringToDict(styleAttr)
+
+        let myColor = hexToRgba(styleDict['stroke'] || '#000000', 0.75)
+        let myWidth = parseFloat(styleDict['stroke-width']) || 1.0
+
+        let isFilled = false
+        let myDensity = 3
+        let myTrace = false
+        let isMask = false
+        let myFillMode = 'none'
+
+        const myFill = styleDict['fill']
+        if (myFill && myFill !== 'none') {
+          myColor = hexToRgba(myFill, 0.75)
+          const fillOpacity = parseFloat(styleDict['fill-opacity'] ?? '1')
+          myDensity = mapRange(fillOpacity, 0, 1, 16, 2)
+          if (fillOpacity >= 1) isMask = true
+          isFilled = true
+          myFillMode = 'solid'
+        }
+
+        marks.push({
           color: myColor,
-          minDistance: minDistance,
-          distanceThreshold: distanceThreshold,
-          connectionProbability: connectionProbability,
+          minDistance,
+          distanceThreshold,
+          connectionProbability,
           filled: isFilled,
-          points: points,
+          points,
           markWidth: myMarkWidth,
           hatchAngle: myHatchAngle,
           alpha: 0.75,
           trace: myTrace,
-          // gradient: myGradient,
           fillMode: myFillMode,
           density: myDensity,
-          isMask: isMask,
-        }
-        marks.push(mark)
+          isMask
+        })
       })
-      return {
-        canvasParams: canvasParams,
-        marks: marks
-      }
+
+      return { canvasParams, marks }
+
     } finally {
-      // Always remove the container from the DOM regardless of success or error
       document.body.removeChild(container)
     }
   }
@@ -375,8 +382,6 @@ export class Page {
     return `#${r}${g}${b}`
   }
 
-
-
   async startTransition(newJSON) {
     const FRAMES = 7
     const FRAME_DURATION = 100
@@ -394,10 +399,7 @@ export class Page {
       return
     }
 
-    const { matched, unmatchedFrom, unmatchedTo } = this.matchMarks(
-      fromMarks,
-      toMarks
-    )
+    const { matched, unmatchedFrom, unmatchedTo } = this.matchMarks(fromMarks, toMarks)
 
     const matchedPairs = matched.map(({ fromIdx, toIdx }) => {
       const from = fromMarks[fromIdx]
@@ -414,22 +416,14 @@ export class Page {
     const unmatchedFromData = unmatchedFrom.map(fromIdx => {
       const fromMark = fromMarks[fromIdx]
       const target = this.nearestToCentroid(fromMark, toMarks, matched)
-      const targetPoints = fromMark.points.map(() => ({
-        x: target.x,
-        y: target.y,
-        visible: true
-      }))
+      const targetPoints = fromMark.points.map(() => ({ x: target.x, y: target.y, visible: true }))
       return { fromMark, targetPoints }
     })
 
     const unmatchedToData = unmatchedTo.map(toIdx => {
       const toMark = toMarks[toIdx]
       const source = this.nearestFromCentroid(toMark, fromMarks, matched)
-      const sourcePoints = toMark.points.map(() => ({
-        x: source.x,
-        y: source.y,
-        visible: true
-      }))
+      const sourcePoints = toMark.points.map(() => ({ x: source.x, y: source.y, visible: true }))
       return { toMark, sourcePoints }
     })
 
@@ -449,49 +443,23 @@ export class Page {
       matchedPairs.forEach(({ fromPoints, toPoints, fromMark, toMark }) => {
         const interpPoints = this.interpolatePoints(fromPoints, toPoints, t)
         const color = this.interpolateColor(fromMark.color, toMark.color, t)
-        const width =
-          fromMark.markWidth + (toMark.markWidth - fromMark.markWidth) * t
-        const hatch =
-          fromMark.hatchAngle + (toMark.hatchAngle - fromMark.hatchAngle) * t
-
+        const width = fromMark.markWidth + (toMark.markWidth - fromMark.markWidth) * t
+        const hatch = fromMark.hatchAngle + (toMark.hatchAngle - fromMark.hatchAngle) * t
         const tempMark = Mark.fromJSON({
-          ...toMark.toJSON(),
-          color,
-          markWidth: width,
-          hatchAngle: hatch,
-          points: interpPoints,
-          alpha: 1
+          ...toMark.toJSON(), color, markWidth: width, hatchAngle: hatch, points: interpPoints, alpha: 1
         })
         tempMark.render(1, false, offscreen)
       })
 
       unmatchedFromData.forEach(({ fromMark, targetPoints }) => {
-        const interpPoints = this.interpolatePoints(
-          fromMark.points,
-          targetPoints,
-          t
-        )
-        const alpha = 1 - t
-        const tempMark = Mark.fromJSON({
-          ...fromMark.toJSON(),
-          points: interpPoints,
-          alpha
-        })
+        const interpPoints = this.interpolatePoints(fromMark.points, targetPoints, t)
+        const tempMark = Mark.fromJSON({ ...fromMark.toJSON(), points: interpPoints, alpha: 1 - t })
         tempMark.render(1, false, offscreen)
       })
 
       unmatchedToData.forEach(({ toMark, sourcePoints }) => {
-        const interpPoints = this.interpolatePoints(
-          sourcePoints,
-          toMark.points,
-          t
-        )
-        const alpha = t
-        const tempMark = Mark.fromJSON({
-          ...toMark.toJSON(),
-          points: interpPoints,
-          alpha
-        })
+        const interpPoints = this.interpolatePoints(sourcePoints, toMark.points, t)
+        const tempMark = Mark.fromJSON({ ...toMark.toJSON(), points: interpPoints, alpha: t })
         tempMark.render(1, false, offscreen)
       })
 
@@ -530,9 +498,55 @@ export class Page {
   }
 }
 
-// --- Module-level helpers (used by svgToJson) ---
+// --- Module-level helpers ---
+
+// Convert SVG attribute value with units to pixels at 96dpi
+function svgLengthToPx(value) {
+  if (value === null || value === undefined || value === '') return null
+  const s = String(value).trim()
+  const num = parseFloat(s)
+  if (isNaN(num)) return null
+  if (s.endsWith('mm')) return num * 3.7795275591    // 96/25.4
+  if (s.endsWith('cm')) return num * 37.795275591    // 96/2.54
+  if (s.endsWith('in')) return num * 96
+  if (s.endsWith('pt')) return num * 1.3333333333    // 96/72
+  if (s.endsWith('pc')) return num * 16              // 96/6
+  if (s.endsWith('px') || s.endsWith('%') || /^\d/.test(s)) return num
+  return num // unitless — treat as px
+}
+
+// Resolve the true pixel width/height of an SVG element.
+// Priority: explicit px width+height > viewBox w/h > fallback 744×1052 (A4 @ 96dpi)
+function resolveSvgDimensions(svgEl) {
+  const wAttr = svgEl.getAttribute('width')
+  const hAttr = svgEl.getAttribute('height')
+  const vb = svgEl.getAttribute('viewBox')
+
+  let vbX = 0, vbY = 0, vbW = null, vbH = null
+  if (vb) {
+    const parts = vb.trim().split(/[\s,]+/).map(parseFloat)
+    if (parts.length === 4) { vbX = parts[0]; vbY = parts[1]; vbW = parts[2]; vbH = parts[3] }
+  }
+
+  let w = svgLengthToPx(wAttr)
+  let h = svgLengthToPx(hAttr)
+
+  // If width/height are percentages or missing, fall back to viewBox
+  const wIsRelative = wAttr && String(wAttr).trim().endsWith('%')
+  const hIsRelative = hAttr && String(hAttr).trim().endsWith('%')
+
+  if (!w || wIsRelative) w = vbW
+  if (!h || hIsRelative) h = vbH
+
+  // Final fallback: A4 at 96dpi
+  if (!w) w = 744
+  if (!h) h = 1052
+
+  return { width: w, height: h, vbX, vbY, vbW: vbW || w, vbH: vbH || h }
+}
 
 function hexToRgba(hex, alpha = 0.75) {
+  if (!hex || hex === 'none') return `rgba(0, 0, 0, ${alpha})`
   try {
     hex = hex.replace(/^#/, '')
     let r, g, b
@@ -549,23 +563,21 @@ function hexToRgba(hex, alpha = 0.75) {
     }
     return `rgba(${r}, ${g}, ${b}, ${alpha})`
   } catch (error) {
-    console.log(error)
     return `rgba(0, 0, 0, ${alpha})`
   }
 }
 
-  function mapRange(value, inMin, inMax, outMin, outMax) {
-    return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
-  }
+function mapRange(value, inMin, inMax, outMin, outMax) {
+  return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin
+}
 
 function styleStringToDict(styleString) {
   const styleDict = {}
+  if (!styleString) return styleDict
   styleString.split(';').forEach(style => {
-    if (style) {
-      let [key, value] = style.split(':')
-      key = key.trim()
-      value = value.trim()
-      styleDict[key] = value
+    if (style && style.includes(':')) {
+      let [key, ...rest] = style.split(':')
+      styleDict[key.trim()] = rest.join(':').trim()
     }
   })
   return styleDict

@@ -2,6 +2,7 @@ import { Mark } from './mark.js'
 import { Page } from './page.js'
 
 const THUMB_PREFIX = 'sketcher_thumb::'
+const LIVE_SETTINGS_KEY = 'sketcher_live_settings'
 
 document.addEventListener('DOMContentLoaded', function () {
   const canvas = document.getElementById('myCanvas')
@@ -12,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let activeBookManifest = null
   let activePageId = null
 
-  // Check if manager sent a page to load
   const pendingLoad = JSON.parse(localStorage.getItem('sketcher_load_page') || 'null')
   if (pendingLoad) {
     localStorage.removeItem('sketcher_load_page')
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let density = parseFloat(document.getElementById('density').value)
   let doTrace = false
   let doMask = false
-  // fillMode: 'none' | 'gradient' | 'solid'
   let fillMode = 'none'
 
   // --- Color indicator sync ---
@@ -75,10 +74,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const paletteSaveBtn = document.getElementById('paletteSaveBtn')
   const colorPopupClose = document.getElementById('colorPopupClose')
 
-  let colorPopupTarget = 'mark' // 'mark' or 'bg'
+  let colorPopupTarget = 'mark'
   let lastWheelX = null
   let lastWheelY = null
-  let currentWheelColor = { h: 0, s: 0, b: 85 }
   let palette = JSON.parse(localStorage.getItem('sketcher_palette') || '[]')
 
   function drawColorWheel(brightness) {
@@ -151,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
       syncBgIndicator()
       page.render()
     }
+    saveLiveSettings()
   }
 
   function rgbaToHex(rgba) {
@@ -199,8 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const scaleY = colorWheelCanvas.height / rect.height
     lastWheelX = (e.clientX - rect.left) * scaleX
     lastWheelY = (e.clientY - rect.top) * scaleY
-    const color = getColorFromWheel(lastWheelX, lastWheelY)
-    updateColorPreview(color)
+    updateColorPreview(getColorFromWheel(lastWheelX, lastWheelY))
   })
 
   colorWheelCanvas.addEventListener('pointermove', (e) => {
@@ -210,24 +208,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const scaleY = colorWheelCanvas.height / rect.height
     lastWheelX = (e.clientX - rect.left) * scaleX
     lastWheelY = (e.clientY - rect.top) * scaleY
-    const color = getColorFromWheel(lastWheelX, lastWheelY)
-    updateColorPreview(color)
+    updateColorPreview(getColorFromWheel(lastWheelX, lastWheelY))
   })
 
   brightnessSlider.addEventListener('input', () => {
-    const bri = parseInt(brightnessSlider.value)
-    drawColorWheel(bri)
+    drawColorWheel(parseInt(brightnessSlider.value))
     if (lastWheelX !== null && lastWheelY !== null) {
-      const color = getColorFromWheel(lastWheelX, lastWheelY)
-      updateColorPreview(color)
+      updateColorPreview(getColorFromWheel(lastWheelX, lastWheelY))
     }
   })
 
   paletteSaveBtn.addEventListener('pointerdown', () => {
     const color = colorPopupTarget === 'mark' ? currentColor : currentBgColor
-    if (palette.length >= 14) {
-      palette.shift()
-    }
+    if (palette.length >= 14) palette.shift()
     palette.push(color)
     localStorage.setItem('sketcher_palette', JSON.stringify(palette))
     renderPalette()
@@ -263,67 +256,56 @@ document.addEventListener('DOMContentLoaded', function () {
     row.style.display = fillMode === 'gradient' ? 'flex' : 'none'
   }
 
-  fillModeButtons.none.addEventListener('pointerdown', () => setFillMode('none'))
-  fillModeButtons.gradient.addEventListener('pointerdown', () => setFillMode('gradient'))
-  fillModeButtons.solid.addEventListener('pointerdown', () => setFillMode('solid'))
+  fillModeButtons.none.addEventListener('pointerdown', () => { setFillMode('none'); saveLiveSettings() })
+  fillModeButtons.gradient.addEventListener('pointerdown', () => { setFillMode('gradient'); saveLiveSettings() })
+  fillModeButtons.solid.addEventListener('pointerdown', () => { setFillMode('solid'); saveLiveSettings() })
 
   // --- Props controls ---
 
   document.getElementById('checkbox1').addEventListener('change', (e) => {
-    doTrace = e.target.checked
+    doTrace = e.target.checked; saveLiveSettings()
   })
 
   document.getElementById('checkboxMask').addEventListener('change', (e) => {
-    doMask = e.target.checked
+    doMask = e.target.checked; saveLiveSettings()
   })
 
-  document.getElementById('checkbox2').addEventListener('change', (e) => {
-    // unchecks itself after use — handled in startDrawing
-  })
+  document.getElementById('checkbox2').addEventListener('change', () => {})
 
   document.getElementById('minDistance').addEventListener('input', (e) => {
-    minDistance = parseFloat(e.target.value)
+    minDistance = parseFloat(e.target.value); saveLiveSettings()
   })
 
   document.getElementById('distanceThreshold').addEventListener('input', (e) => {
-    distanceThreshold = parseInt(e.target.value)
+    distanceThreshold = parseInt(e.target.value); saveLiveSettings()
   })
 
   document.getElementById('connectionProbability').addEventListener('input', (e) => {
-    connectionProbability = parseInt(e.target.value)
+    connectionProbability = parseInt(e.target.value); saveLiveSettings()
   })
 
   document.getElementById('markWidth').addEventListener('input', (e) => {
-    markWidth = parseFloat(e.target.value)
+    markWidth = parseFloat(e.target.value); saveLiveSettings()
   })
 
   document.getElementById('hatchAngle').addEventListener('input', (e) => {
-    hatchAngle = parseFloat(e.target.value)
+    hatchAngle = parseFloat(e.target.value); saveLiveSettings()
   })
 
   document.getElementById('scatter').addEventListener('input', (e) => {
-    scatter = parseInt(e.target.value)
+    scatter = parseInt(e.target.value); saveLiveSettings()
   })
 
   document.getElementById('density').addEventListener('input', (e) => {
-    density = parseFloat(e.target.value)
+    density = parseFloat(e.target.value); saveLiveSettings()
   })
 
-  // --- Presets ---
-  const PRESET_KEY = 'sketcher_presets'
-  const ACTIVE_PRESET_KEY = 'sketcher_active_preset'
-
-  function getPresets() {
-    return JSON.parse(localStorage.getItem(PRESET_KEY) || '[null,null,null,null,null,null,null,null,null,null]')
-  }
-
-  function savePresets(presets) {
-    localStorage.setItem(PRESET_KEY, JSON.stringify(presets))
-  }
+  // --- Live settings persistence ---
+  // Saved on every prop change, restored on every page/book load.
+  // This is independent of named presets so settings survive navigation.
 
   function getCurrentSettings() {
     return {
-      name: '',
       currentColor,
       minDistance,
       distanceThreshold,
@@ -338,16 +320,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function saveLiveSettings() {
+    try {
+      localStorage.setItem(LIVE_SETTINGS_KEY, JSON.stringify(getCurrentSettings()))
+    } catch {}
+  }
+
   function applySettings(s) {
-    currentColor = s.currentColor
-    minDistance = s.minDistance
-    distanceThreshold = s.distanceThreshold
-    connectionProbability = s.connectionProbability
-    markWidth = s.markWidth
-    hatchAngle = s.hatchAngle
+    currentColor = s.currentColor ?? currentColor
+    minDistance = s.minDistance ?? minDistance
+    distanceThreshold = s.distanceThreshold ?? distanceThreshold
+    connectionProbability = s.connectionProbability ?? connectionProbability
+    markWidth = s.markWidth ?? markWidth
+    hatchAngle = s.hatchAngle ?? hatchAngle
     scatter = s.scatter ?? 0
     density = s.density ?? 3
-    doTrace = s.doTrace
+    doTrace = s.doTrace ?? false
     doMask = s.doMask ?? false
     fillMode = s.fillMode ?? 'none'
 
@@ -364,6 +352,27 @@ document.addEventListener('DOMContentLoaded', function () {
     syncColorIndicator()
   }
 
+  function restoreLiveSettings() {
+    try {
+      const saved = localStorage.getItem(LIVE_SETTINGS_KEY)
+      if (saved) applySettings(JSON.parse(saved))
+    } catch {}
+  }
+
+  // --- Presets ---
+  const PRESET_KEY = 'sketcher_presets'
+  const ACTIVE_PRESET_KEY = 'sketcher_active_preset'
+
+  function getPresets() {
+    try {
+      return JSON.parse(localStorage.getItem(PRESET_KEY) || '[null,null,null,null,null,null,null,null,null,null]')
+    } catch { return Array(10).fill(null) }
+  }
+
+  function savePresets(presets) {
+    localStorage.setItem(PRESET_KEY, JSON.stringify(presets))
+  }
+
   function initPresetUI() {
     const presets = getPresets()
     for (let i = 0; i < 10; i++) {
@@ -374,17 +383,12 @@ document.addEventListener('DOMContentLoaded', function () {
         loadBtn.disabled = false
       }
     }
-    const activePreset = localStorage.getItem(ACTIVE_PRESET_KEY)
-    if (activePreset !== null && presets[activePreset]) {
-      applySettings(presets[activePreset])
-    }
   }
 
   for (let i = 0; i < 10; i++) {
     document.getElementById(`preset${i}save`).addEventListener('pointerdown', () => {
       const presets = getPresets()
-      const settings = getCurrentSettings()
-      settings.name = document.getElementById(`preset${i}name`).value || `Preset ${i + 1}`
+      const settings = { ...getCurrentSettings(), name: document.getElementById(`preset${i}name`).value || `Preset ${i + 1}` }
       presets[i] = settings
       savePresets(presets)
       document.getElementById(`preset${i}load`).disabled = false
@@ -396,10 +400,13 @@ document.addEventListener('DOMContentLoaded', function () {
         applySettings(presets[i])
         document.getElementById(`preset${i}name`).value = presets[i].name || `Preset ${i + 1}`
         localStorage.setItem(ACTIVE_PRESET_KEY, i)
+        saveLiveSettings()
       }
     })
   }
 
+  // Restore live settings first, then init preset name labels
+  restoreLiveSettings()
   initPresetUI()
 
   // --- Canvas drawing ---
@@ -413,10 +420,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const setGradientCheckbox = document.getElementById('checkbox2')
     if (fillMode === 'gradient' && setGradientCheckbox.checked && lastFilledMark >= 0) {
-      page.marks[lastFilledMark].gradient = {
-        x: event.offsetX,
-        y: event.offsetY
-      }
+      page.marks[lastFilledMark].gradient = { x: event.offsetX, y: event.offsetY }
       setGradientCheckbox.checked = false
       page.render()
       return
@@ -424,19 +428,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     drawing = true
     currentMark = new Mark(
-      currentColor,
-      minDistance,
-      distanceThreshold,
-      connectionProbability,
-      fillMode !== 'none',
-      markWidth,
-      hatchAngle,
-      0.75,
-      doTrace,
-      null,
-      fillMode,
-      density,
-      doMask
+      currentColor, minDistance, distanceThreshold, connectionProbability,
+      fillMode !== 'none', markWidth, hatchAngle, 0.75, doTrace, null, fillMode, density, doMask
     )
     currentMark.addPoint(event.offsetX, event.offsetY)
   }
@@ -461,9 +454,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (drawing) {
       if (currentMark.points.length > 4) {
         page.addMark(currentMark)
-        if (currentMark.filled) {
-          lastFilledMark = page.marks.length - 1
-        }
+        if (currentMark.filled) lastFilledMark = page.marks.length - 1
         unsavedChanges = true
         currentMark = null
         drawing = false
@@ -479,11 +470,8 @@ document.addEventListener('DOMContentLoaded', function () {
   async function loadActiveBook() {
     if (!activeBookName) {
       const create = confirm('No active book. Open manager to create or select one?')
-      if (create) {
-        window.location.href = 'manager.html'
-      } else {
-        document.getElementById('myCanvas').style.display = 'block'
-      }
+      if (create) window.location.href = 'manager.html'
+      else document.getElementById('myCanvas').style.display = 'block'
       return
     }
 
@@ -508,11 +496,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const pageRes = await fetch('/.netlify/functions/github', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            operation: 'getPage',
-            bookName: activeBookName,
-            pageId: activePageId
-          })
+          body: JSON.stringify({ operation: 'getPage', bookName: activeBookName, pageId: activePageId })
         })
         const pageData = await pageRes.json()
         page.loadFromJSON(pageData.pageData)
@@ -530,8 +514,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // --- Save current page to book ---
-  // Writes to GitHub, then removes the per-key localStorage thumb entry so
-  // the manager will re-fetch only this page's thumbnail on next render.
 
   async function savePageToBook() {
     if (!activeBookName || !activeBookManifest) return false
@@ -539,22 +521,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const json = page.toJSON()
 
-    // Generate thumbnail from live canvas
     const srcCanvas = document.getElementById('myCanvas')
     const THUMB_LONG = 96
     const isPortrait = srcCanvas.height >= srcCanvas.width
-    const thumbW = isPortrait
-      ? Math.round(THUMB_LONG * srcCanvas.width / srcCanvas.height)
-      : THUMB_LONG
-    const thumbH = isPortrait
-      ? THUMB_LONG
-      : Math.round(THUMB_LONG * srcCanvas.height / srcCanvas.width)
+    const thumbW = isPortrait ? Math.round(THUMB_LONG * srcCanvas.width / srcCanvas.height) : THUMB_LONG
+    const thumbH = isPortrait ? THUMB_LONG : Math.round(THUMB_LONG * srcCanvas.height / srcCanvas.width)
     const thumbCanvas = document.createElement('canvas')
     thumbCanvas.width = thumbW
     thumbCanvas.height = thumbH
-    thumbCanvas.getContext('2d').drawImage(
-      srcCanvas, 0, 0, srcCanvas.width, srcCanvas.height, 0, 0, thumbW, thumbH
-    )
+    thumbCanvas.getContext('2d').drawImage(srcCanvas, 0, 0, srcCanvas.width, srcCanvas.height, 0, 0, thumbW, thumbH)
     const thumbnail = thumbCanvas.toDataURL('image/jpeg', 0.6)
 
     const pageData = { ...json, thumbnail }
@@ -576,28 +551,17 @@ document.addEventListener('DOMContentLoaded', function () {
       const result = await res.json()
       if (!res.ok) throw new Error(result.error)
 
-      // Invalidate the per-key thumbnail entry so manager re-fetches this page only
-      try {
-        localStorage.removeItem(`${THUMB_PREFIX}${activeBookName}::${pageId}`)
-      } catch {}
+      try { localStorage.removeItem(`${THUMB_PREFIX}${activeBookName}::${pageId}`) } catch {}
 
       if (isNew) {
         activeBookManifest.pages.push({
-          id: pageId,
-          filename: `${pageId}.json`,
-          caption: '',
-          pageDuration: null,
-          transitionDuration: null,
-          bgColor: json.canvasParams.backgroundColor
+          id: pageId, filename: `${pageId}.json`, caption: '',
+          pageDuration: null, transitionDuration: null, bgColor: json.canvasParams.backgroundColor
         })
         await fetch('/.netlify/functions/github', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            operation: 'saveManifest',
-            bookName: activeBookName,
-            manifest: activeBookManifest
-          })
+          body: JSON.stringify({ operation: 'saveManifest', bookName: activeBookName, manifest: activeBookManifest })
         })
         activePageId = pageId
       }
@@ -613,9 +577,7 @@ document.addEventListener('DOMContentLoaded', function () {
   async function navigatePage(direction) {
     if (!activeBookManifest || activeBookManifest.pages.length === 0) return
 
-    if (unsavedChanges && activeBookName && activeBookManifest) {
-      await savePageToBook()
-    }
+    if (unsavedChanges && activeBookName && activeBookManifest) await savePageToBook()
 
     const pages = activeBookManifest.pages
     let currentIdx = pages.findIndex(p => p.id === activePageId)
@@ -626,18 +588,13 @@ document.addEventListener('DOMContentLoaded', function () {
       currentIdx = currentIdx >= pages.length - 1 ? 0 : currentIdx + 1
     }
 
-    const targetPage = pages[currentIdx]
-    activePageId = targetPage.id
+    activePageId = pages[currentIdx].id
 
     try {
       const res = await fetch('/.netlify/functions/github', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          operation: 'getPage',
-          bookName: activeBookName,
-          pageId: activePageId
-        })
+        body: JSON.stringify({ operation: 'getPage', bookName: activeBookName, pageId: activePageId })
       })
       const data = await res.json()
       page.loadFromJSON(data.pageData)
@@ -655,15 +612,13 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('nextPageBtn').addEventListener('pointerdown', () => navigatePage('next'))
 
   function updateBookIndicator() {
-    const btn = document.getElementById('bookBtn')
-    btn.textContent = activeBookName || 'No Book'
+    document.getElementById('bookBtn').textContent = activeBookName || 'No Book'
   }
 
   // --- Toolbar buttons ---
   document.getElementById('controlButton').addEventListener('pointerdown', () => {
     controlsVisible = !controlsVisible
-    const controls = document.getElementById('controls')
-    controls.style.display = controlsVisible ? 'block' : 'none'
+    document.getElementById('controls').style.display = controlsVisible ? 'block' : 'none'
     canvas.style.display = controlsVisible ? 'none' : 'block'
   })
 
@@ -673,13 +628,10 @@ document.addEventListener('DOMContentLoaded', function () {
     page.render()
   })
 
-  // Save button — exports page JSON locally (does NOT save to book)
+  // Save button — exports page JSON locally
   document.getElementById('downloadButton').addEventListener('pointerdown', () => {
     const json = page.toJSON()
-    if (page.marks.length === 0) {
-      console.log('Nothing to export')
-      return
-    }
+    if (page.marks.length === 0) return
     const filename = activePageId ? `${activePageId}.json` : 'page.json'
     const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
@@ -731,15 +683,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (file.type === 'image/svg+xml') {
           try {
-            const loadedJSON = page.svgToJson(content)
-            applyLoaded(loadedJSON, true)
+            applyLoaded(page.svgToJson(content), true)
           } catch (error) {
             console.error('Error converting SVG to JSON:', error)
           }
         } else if (file.type === 'application/json') {
           try {
-            const loadedJSON = JSON.parse(content)
-            applyLoaded(loadedJSON, false)
+            applyLoaded(JSON.parse(content), false)
           } catch (error) {
             console.error('Error loading JSON:', error)
           }
@@ -752,9 +702,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Book button — auto-saves before returning to manager
   document.getElementById('bookBtn').addEventListener('pointerdown', async () => {
-    if (unsavedChanges && activeBookName && activeBookManifest) {
-      await savePageToBook()
-    }
+    if (unsavedChanges && activeBookName && activeBookManifest) await savePageToBook()
     window.location.href = 'manager.html'
   })
 

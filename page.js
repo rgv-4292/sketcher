@@ -122,6 +122,8 @@ export class Page {
     let minDistance = parseFloat(document.getElementById('minDistance').value)
     let distanceThreshold = parseInt(document.getElementById('distanceThreshold').value)
     let connectionProbability = parseInt(document.getElementById('connectionProbability').value)
+    let markWidth = parseFloat(document.getElementById('markWidth').value)
+    let hatchAngle = parseFloat(document.getElementById('hatchAngle').value) //saturation
     const draw = SVG().addTo('body').size('400', '700').svg(svgDOM.outerHTML)
     const backgroundColor = this.backgroundColor
     const canvasParams = {
@@ -161,8 +163,8 @@ export class Page {
         connectionProbability: connectionProbability,
         filled: false,
         points: points,
-        markWidth: myWidth,
-        hatchAngle: mySat,
+        markWidth: markWidth,
+        hatchAngle: hatchAngle,
         alpha: 0.75
       }
       marks.push(mark)

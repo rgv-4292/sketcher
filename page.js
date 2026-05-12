@@ -132,14 +132,11 @@ export class Page {
     document.body.appendChild(container)
 
     try {
-      const canvas = document.getElementById('myCanvas')
-      const draw = SVG().addTo(container).svg(svgDOM.outerHTML)
+      const draw = SVG().addTo(container).size('400', '700').svg(svgDOM.outerHTML)
       const backgroundColor = this.backgroundColor
-      
-      
       const canvasParams = {
-        width: this.width,
-        height: this.height,
+        width: parseFloat(draw.attr('width')),
+        height: parseFloat(draw.attr('height')),
         backgroundColor: backgroundColor
       }
       const marks = []
@@ -170,7 +167,7 @@ export class Page {
         }
         var isFilled = false
         var fillOpacity
-
+        
         var myDensity = 3
         var myTrace = false
         var isMask = false
@@ -557,9 +554,9 @@ function hexToRgba(hex, alpha = 0.75) {
   }
 }
 
-function mapRange(value, inMin, inMax, outMin, outMax) {
-  return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
-}
+  function mapRange(value, inMin, inMax, outMin, outMax) {
+    return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+  }
 
 function styleStringToDict(styleString) {
   const styleDict = {}

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let page = new Page('myCanvas')
   const fillColor = page.canvasParams.backgroundColor
   ctx.fillStyle = fillColor
-  ctx.fillRect(0, 0, canvas.width, canvas.height)
+  ctx.fillRect(0, 0, page.canvasParams.width, page.canvasParams.height)
 
   let drawing = false
   let controlsVisible = false

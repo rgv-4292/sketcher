@@ -32,7 +32,7 @@
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
+     inkscape:current-layer="layer2">
     <inkscape:grid
        id="grid1"
        units="mm"
@@ -51,17 +51,16 @@
   <defs
      id="defs1" />
   <g
-     inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-37.281147,-254)">
+     id="layer2"
+     inkscape:label="Layer 1">
     <path
        id="rect1"
-       style="fill:#1a1a1a;stroke:#000000;stroke-width:0"
-       d="m 304.56693,302.36221 h 373.54334 c 22.16,0 40,17.84 40,40 v 222.36222 c 0,22.16 -17.84,40 -40,40 H 304.56693 c -22.16,0 -40,-17.84 -40,-40 V 342.36221 c 0,-22.16 17.84,-40 40,-40 z" />
-    <path
        style="fill:#1a1a1a;stroke:#000000;stroke-width:3.77953"
-       d="M 75.590555,415.74805 264.56693,453.54332"
-       id="path1" />
+       d="M 78.309406,48.362213 H 640.82912 c 22.16,0 40,17.84 40,40 V 197.33859 c 0,22.16 -17.84,40 -40,40 H 78.309406 c -22.16,0 -40,-17.84 -40,-40 V 88.362213 c 0,-22.16 17.84,-40 40,-40 z" />
+    <path
+       id="rect2"
+       style="fill:none;stroke:#000000;stroke-width:7.55906"
+       d="M 78.309406,275.13388 H 640.82912 c 22.16,0 40,17.84 40,40 v 71.18111 c 0,22.16 -17.84,40 -40,40 H 78.309406 c -22.16,0 -40,-17.84 -40,-40 v -71.18111 c 0,-22.16 17.84,-40 40,-40 z" />
   </g>
 </svg>

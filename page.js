@@ -132,13 +132,14 @@ export class Page {
     document.body.appendChild(container)
 
     try {
-      const draw = SVG().addTo(container).size(this.width, this.height).svg(svgDOM.outerHTML)
+      const canvas = document.getElementById('myCanvas')
+      const draw = SVG().addTo(container).svg(svgDOM.outerHTML)
       const backgroundColor = this.backgroundColor
       
       
       const canvasParams = {
-        width: parseFloat(draw.attr('width')),
-        height: parseFloat(draw.attr('height')),
+        width: this.width,
+        height: this.height,
         backgroundColor: backgroundColor
       }
       const marks = []

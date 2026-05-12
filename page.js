@@ -122,9 +122,9 @@ export class Page {
     let minDistance = parseFloat(document.getElementById('minDistance').value)
     let distanceThreshold = parseInt(document.getElementById('distanceThreshold').value)
     let connectionProbability = parseInt(document.getElementById('connectionProbability').value)
-    let markWidth = parseFloat(document.getElementById('markWidth').value)
-    let hatchAngle = parseFloat(document.getElementById('hatchAngle').value)
-    console.log(minDistance, distanceThreshold, connectionProbability, markWidth, hatchAngle)
+    let myMarkWidth = parseFloat(document.getElementById('markWidth').value)
+    let myHatchAngle = parseFloat(document.getElementById('hatchAngle').value)
+    console.log(minDistance, distanceThreshold, connectionProbability, myMarkWidth, myHatchAngle)
 
     // Mount into a hidden offscreen container so SVG.js can work but layout is unaffected
     const container = document.createElement('div')
@@ -197,8 +197,8 @@ export class Page {
           connectionProbability: connectionProbability,
           filled: isFilled,
           points: points,
-          markWidth: markWidth,
-          hatchAngle: hatchAngle,
+          markWidth: myMarkWidth,
+          hatchAngle: myHatchAngle,
           alpha: 0.75,
           trace: myTrace,
           // gradient: myGradient,

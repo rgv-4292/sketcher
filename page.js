@@ -164,12 +164,24 @@ export class Page {
           var myWidth = 1.0
           var mySat = 0.7
         }
+        var isFilled = false
+        try {
+          var myFill = styleDict['fill']
+          if (myFill && myFill !== 'none') {
+            myColor = hexToRgba(myFill, 0.75)
+            isFilled = true
+          }
+
+        } catch (error) {
+
+        }
+
         const mark = {
           color: myColor,
           minDistance: minDistance,
           distanceThreshold: distanceThreshold,
           connectionProbability: connectionProbability,
-          filled: false,
+          filled: isFilled,
           points: points,
           markWidth: markWidth,
           hatchAngle: hatchAngle,

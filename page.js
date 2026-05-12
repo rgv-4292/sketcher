@@ -165,10 +165,18 @@ export class Page {
           var mySat = 0.7
         }
         var isFilled = false
+        var fillOpacity = parseFloat(styleDict['fill-opacity'])
+        var myDensity = 3
+        var myTrace = false
+        var isMask = false
+        // var myGradient = false
+        var myFillMode = 'solid'
         try {
           var myFill = styleDict['fill']
           if (myFill && myFill !== 'none') {
             myColor = hexToRgba(myFill, 0.75)
+            myDensity = mapRange(parseFloat(styleDict['fill-opacity'] || 1), 0, 1, 16, 2)
+            if (fillOpacity == 1) { isMask = true }
             isFilled = true
           }
 
@@ -185,7 +193,12 @@ export class Page {
           points: points,
           markWidth: markWidth,
           hatchAngle: hatchAngle,
-          alpha: 0.75
+          alpha: 0.75,
+          trace = myTrace,
+          // gradient = myGradient,
+          fillMode = myFillMode,
+          density = myDensity,
+          isMask = isMask,
         }
         marks.push(mark)
       })
@@ -354,6 +367,10 @@ export class Page {
     const g = Math.round(g1 + (g2 - g1) * t).toString(16).padStart(2, '0')
     const b = Math.round(b1 + (b2 - b1) * t).toString(16).padStart(2, '0')
     return `#${r}${g}${b}`
+  }
+
+  mapRange(value, inMin, inMax, outMin, outMax) {
+    return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
   }
 
   async startTransition(newJSON) {

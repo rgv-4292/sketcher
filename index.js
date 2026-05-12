@@ -301,8 +301,6 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   // --- Live settings persistence ---
-  // Saved on every prop change, restored on every page/book load.
-  // This is independent of named presets so settings survive navigation.
 
   function getCurrentSettings() {
     return {
@@ -405,14 +403,25 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  // Restore live settings first, then init preset name labels
   restoreLiveSettings()
   initPresetUI()
+
+  // --- Pressure helpers ---
+  // PointerEvent.pressure is 0.5 for mouse/touch (no real pressure), 0.0–1.0 for stylus.
+  // We only treat it as real pressure when pointerType is 'pen'.
+
+  function getEventPressure(event) {
+    if (event.pointerType === 'pen') {
+      return event.pressure
+    }
+    return null
+  }
 
   // --- Canvas drawing ---
   canvas.addEventListener('pointerdown', startDrawing)
   canvas.addEventListener('pointermove', draw)
   canvas.addEventListener('pointerup', stopDrawing)
+  canvas.addEventListener('pointercancel', stopDrawing)
 
   function startDrawing(event) {
     event.preventDefault()
@@ -431,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function () {
       currentColor, minDistance, distanceThreshold, connectionProbability,
       fillMode !== 'none', markWidth, hatchAngle, 0.75, doTrace, null, fillMode, density, doMask
     )
-    currentMark.addPoint(event.offsetX, event.offsetY)
+    currentMark.addPoint(event.offsetX, event.offsetY, getEventPressure(event))
   }
 
   function draw(event) {
@@ -442,10 +451,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const dy = event.offsetY - lastPoint.y
     const scatterAmount = scatter > 0 ? Math.random() * scatter : 0
     if (Math.sqrt(dx * dx + dy * dy) > minDistance + scatterAmount) {
-      currentMark.addPoint(event.offsetX, event.offsetY)
+      const pressure = getEventPressure(event)
+      currentMark.addPoint(event.offsetX, event.offsetY, pressure)
       currentMark.addPoint(
         event.offsetX + Math.ceil(Math.random() * 4 - 2),
-        event.offsetY + Math.ceil(Math.random() * 4 - 2)
+        event.offsetY + Math.ceil(Math.random() * 4 - 2),
+        pressure
       )
     }
   }

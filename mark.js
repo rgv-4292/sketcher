@@ -30,9 +30,10 @@ export class Mark {
     this.isMask = isMask || false
   }
 
-  addPoint(x, y) {
+  addPoint(x, y, pressure) {
+    // pressure: 0.0–1.0 from PointerEvent, undefined/null when not a stylus
     var visible = true
-    this.points.push({ x, y, visible })
+    this.points.push({ x, y, visible, pressure: pressure ?? null })
     if (this.points.length > 1) {
       this.connectNewPoint(this.points[this.points.length - 1])
     }
@@ -53,7 +54,6 @@ export class Mark {
           distance <= this.distanceThreshold &&
           Math.random() < this.connectionProbability / 100
         ) {
-          // Check if midpoint of this segment falls inside any mask polygon
           if (maskPolygons && maskPolygons.length > 0) {
             const mx = (existingPoint.x + newPoint.x) / 2
             const my = (existingPoint.y + newPoint.y) / 2
@@ -92,8 +92,19 @@ export class Mark {
     return `${match[1]}, ${match[2]}, ${match[3]}`
   }
 
+  // Resolve effective markWidth for a point pair, blending pressure from both endpoints.
+  // If neither point has pressure data (mouse/touch), returns this.markWidth unchanged.
+  _effectiveWidth(point1, point2) {
+    const p1 = point1.pressure
+    const p2 = point2.pressure
+    if (p1 === null && p2 === null) return this.markWidth
+    const avg = ((p1 ?? p2) + (p2 ?? p1)) / 2
+    // Map pressure 0→1 to 10%→200% of markWidth, with a floor so marks stay visible
+    return Math.max(0.1, this.markWidth * (0.1 + avg * 1.9))
+  }
+
   drawSquigglyLine(ctx, point1, point2) {
-    const pressure = this.markWidth
+    const pressure = this._effectiveWidth(point1, point2)
     const step = Math.max(
       1,
       Math.min(
@@ -161,7 +172,6 @@ export class Mark {
 
     this.clipToPolygon(ctx, points)
 
-    // Helper: check if a hatch point is inside any mask polygon
     const isMasked = (x, y) => {
       if (!maskPolygons || maskPolygons.length === 0) return false
       return maskPolygons.some(poly => this.isPointInPolygon(x, y, poly))
@@ -186,7 +196,6 @@ export class Mark {
       }
     } else {
       let stepVal = this.density
-      console.log('stepVal', stepVal)
       let hatchAngle = Math.random() * 360
       ctx.lineWidth = this.hatchAngle
 
@@ -228,7 +237,6 @@ export class Mark {
                 }
               }
               stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.density, this.density + 3))
-              console.log('stepVal', stepVal)
             } else {
               ctx.lineWidth = this.hatchAngle
               const offsetX = Math.random() * stepVal - stepVal / 2
@@ -350,7 +358,8 @@ export class Mark {
     mark.points = data.points.map(point => ({
       x: Math.floor(point.x),
       y: Math.floor(point.y),
-      visible: point.visible != null ? point.visible : true
+      visible: point.visible != null ? point.visible : true,
+      pressure: point.pressure ?? null
     }))
     return mark
   }

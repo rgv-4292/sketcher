@@ -179,7 +179,7 @@ export class Page {
           if (myFill && myFill !== 'none') {
             myColor = hexToRgba(myFill, 0.75)
             fillOpacity = parseFloat(styleDict['fill-opacity'])
-            console.log(fillOpacity)
+            console.log(styleDict['fill-opacity'])
             myDensity = mapRange(parseFloat(fillOpacity), 0, 1, 16, 2)
             if (fillOpacity == 1) { isMask = true }
             isFilled = true

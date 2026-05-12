@@ -3,6 +3,7 @@ import { Page } from './page.js'
 
 const CACHE_KEY = 'sketcher_manager_cache'
 const ACTIVE_BOOK_KEY = 'sketcher_active_book'
+const THUMB_CACHE_KEY = 'sketcher_thumb_cache'
 const VIDEO_PAGE_LIMIT = 20
 
 let books = []
@@ -47,6 +48,45 @@ function setCachedManifest(bookName, manifest) {
   const cache = loadCache()
   cache[bookName] = manifest
   saveCache(cache)
+}
+
+// --- Thumbnail cache ---
+// Thumbnails are stored in the page JSON on GitHub. We cache them locally so
+// the manager doesn't re-fetch every page on every render/drag/drop.
+// The cache is invalidated only when index.js saves a page (it writes
+// sketcher_thumb_cache directly) or when a page is deleted here.
+
+function loadThumbCache() {
+  try {
+    return JSON.parse(localStorage.getItem(THUMB_CACHE_KEY) || '{}')
+  } catch { return {} }
+}
+
+function saveThumbCache(cache) {
+  try {
+    localStorage.setItem(THUMB_CACHE_KEY, JSON.stringify(cache))
+  } catch {
+    // Storage full — drop oldest half and retry
+    const keys = Object.keys(cache)
+    keys.slice(0, Math.ceil(keys.length / 2)).forEach(k => delete cache[k])
+    try { localStorage.setItem(THUMB_CACHE_KEY, JSON.stringify(cache)) } catch {}
+  }
+}
+
+function getCachedThumb(bookName, pageId) {
+  return loadThumbCache()[`${bookName}::${pageId}`] || null
+}
+
+function setCachedThumb(bookName, pageId, dataUrl) {
+  const cache = loadThumbCache()
+  cache[`${bookName}::${pageId}`] = dataUrl
+  saveThumbCache(cache)
+}
+
+function clearCachedThumb(bookName, pageId) {
+  const cache = loadThumbCache()
+  delete cache[`${bookName}::${pageId}`]
+  saveThumbCache(cache)
 }
 
 // --- Status ---
@@ -162,7 +202,7 @@ function renderPagePanel() {
     pageList.appendChild(createPageItem(page, index))
   })
 
-  // Kick off background thumbnail loading
+  // Load any thumbnails not yet in local cache from GitHub
   loadThumbnailsInBackground()
 }
 
@@ -177,7 +217,10 @@ function updateSelectionUI() {
   })
 }
 
-// --- Thumbnail lazy loader ---
+// --- Thumbnail background loader ---
+// Only fetches pages whose thumbnail is NOT already in localStorage cache.
+// When index.js saves a page it invalidates that page's cache entry, so the
+// next time the manager renders it will re-fetch just that one page.
 
 let _thumbLoadId = 0
 
@@ -187,26 +230,39 @@ async function loadThumbnailsInBackground() {
   const pages = activeManifest.pages
 
   for (let i = 0; i < pages.length; i++) {
-    if (runId !== _thumbLoadId) return
+    if (runId !== _thumbLoadId) return // a newer render cycle started — bail
     const page = pages[i]
+
+    // Check local cache first — if present, apply immediately without fetching
+    const cached = getCachedThumb(activeBook, page.id)
+    if (cached) {
+      applyThumbToDOM(page.id, cached)
+      continue
+    }
+
+    // Not cached — fetch from GitHub, cache it, then apply
     try {
       const data = await api('getPage', { bookName: activeBook, pageId: page.id })
       if (runId !== _thumbLoadId) return
       const thumbnail = data.pageData && data.pageData.thumbnail
       if (thumbnail) {
-        const thumbDiv = document.querySelector(`.page-thumb[data-page-id="${page.id}"]`)
-        if (thumbDiv) {
-          const img = thumbDiv.querySelector('img')
-          if (img) {
-            img.src = thumbnail
-            img.style.display = 'block'
-            thumbDiv.style.background = 'none'
-          }
-        }
+        setCachedThumb(activeBook, page.id, thumbnail)
+        applyThumbToDOM(page.id, thumbnail)
       }
     } catch (err) {
       console.warn(`Thumbnail load failed for ${page.id}:`, err)
     }
+  }
+}
+
+function applyThumbToDOM(pageId, dataUrl) {
+  const thumbDiv = document.querySelector(`.page-thumb[data-page-id="${pageId}"]`)
+  if (!thumbDiv) return
+  const img = thumbDiv.querySelector('img')
+  if (img) {
+    img.src = dataUrl
+    img.style.display = 'block'
+    thumbDiv.style.background = 'none'
   }
 }
 
@@ -258,6 +314,15 @@ function createPageItem(page, index) {
   const thumbImg = document.createElement('img')
   thumbImg.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:3px;display:none;'
   thumb.appendChild(thumbImg)
+
+  // If already cached, show immediately (loadThumbnailsInBackground will also apply it,
+  // but this avoids a flicker for pages that are already known)
+  const cached = getCachedThumb(activeBook, page.id)
+  if (cached) {
+    thumbImg.src = cached
+    thumbImg.style.display = 'block'
+    thumb.style.background = 'none'
+  }
 
   // Info
   const info = document.createElement('div')
@@ -386,7 +451,6 @@ function createPageItem(page, index) {
     e.dataTransfer.dropEffect = 'move'
   })
   item.addEventListener('dragleave', (e) => {
-    // Only clear if leaving to outside this item entirely
     if (!item.contains(e.relatedTarget)) {
       item.classList.remove('drag-over')
     }
@@ -402,7 +466,6 @@ function createPageItem(page, index) {
     const pages = activeManifest.pages
     const moved = pages.splice(src, 1)[0]
     pages.splice(index, 0, moved)
-    // Remap selectedPages indices
     selectedPages = remapSelectedAfterDrag(selectedPages, src, index, pages.length)
     renderPagePanel()
     await saveManifest()
@@ -436,7 +499,6 @@ function remapSelectedAfterDrag(selected, src, dst, total) {
 async function saveManifest() {
   try {
     await api('saveManifest', { bookName: activeBook, manifest: activeManifest })
-    // Always update cache with latest manifest so durations persist on refresh
     setCachedManifest(activeBook, JSON.parse(JSON.stringify(activeManifest)))
     setStatus('Saved')
   } catch (err) {
@@ -484,6 +546,10 @@ async function duplicatePage(index) {
     const data = await api('getPage', { bookName: activeBook, pageId: srcPage.id })
     const newId = generatePageId()
     await api('savePage', { bookName: activeBook, pageId: newId, pageData: data.pageData })
+    // Duplicate carries the same thumbnail — cache it directly
+    if (data.pageData.thumbnail) {
+      setCachedThumb(activeBook, newId, data.pageData.thumbnail)
+    }
     const newEntry = {
       ...srcPage,
       id: newId,
@@ -505,9 +571,9 @@ async function deletePage(index) {
   setStatus(`Deleting ${page.id}...`)
   try {
     await api('deletePage', { bookName: activeBook, pageId: page.id })
+    clearCachedThumb(activeBook, page.id)
     activeManifest.pages.splice(index, 1)
     selectedPages.delete(index)
-    // Shift down any selected indices above the deleted one
     const next = new Set()
     selectedPages.forEach(i => next.add(i > index ? i - 1 : i))
     selectedPages = next
@@ -540,7 +606,6 @@ function renderPageToCanvas(pageJSON, targetCanvas) {
   ctx.fillStyle = bg
   ctx.fillRect(0, 0, targetCanvas.width, targetCanvas.height)
 
-  // Pass 1: collect mask polygons with their index
   const masksByIndex = []
   pageJSON.marks.forEach((markData, i) => {
     if (markData.isMask && markData.points && markData.points.length >= 3) {
@@ -548,7 +613,6 @@ function renderPageToCanvas(pageJSON, targetCanvas) {
     }
   })
 
-  // Pass 2: render each mark with only masks that appear after it
   pageJSON.marks.forEach((markData, i) => {
     try {
       const mark = Mark.fromJSON(markData)
@@ -561,7 +625,6 @@ function renderPageToCanvas(pageJSON, targetCanvas) {
 }
 
 function renderTransitionFrame(fromJSON, toJSON, t, targetCanvas, pageInstance) {
-  // Uses Page's transition helpers synchronously for a single frame
   const fromMarks = fromJSON.marks.map(m => Mark.fromJSON(m))
   const toMarks = toJSON.marks.map(m => Mark.fromJSON(m))
 
@@ -655,7 +718,6 @@ async function exportPng() {
 async function exportVideo() {
   if (!activeManifest || selectedPages.size === 0) return
 
-  // Use selected pages in order, capped to VIDEO_PAGE_LIMIT
   const allSelected = [...selectedPages].sort((a, b) => a - b)
   const selectedEntries = allSelected
     .map(i => activeManifest.pages[i])
@@ -695,7 +757,6 @@ async function exportVideo() {
 
     updateProgress('Fetching pages...', 5)
 
-    // Fetch all selected page JSONs
     const pageJSONs = []
     for (let i = 0; i < pageCount; i++) {
       if (exportCancelled) return
@@ -736,7 +797,6 @@ async function exportVideo() {
         20 + (frameIndex / totalFrames) * 60
       )
 
-      // Render page — 3 variants if threeX enabled, otherwise just one
       let pageVariants
       if (entry.threeX) {
         pageVariants = []
@@ -751,7 +811,6 @@ async function exportVideo() {
         pageVariants = [new Uint8Array(await blob.arrayBuffer())]
       }
 
-      // Write page hold frames; if threeX cycle A,A,B,B,C,C
       for (let f = 0; f < pageFrames; f++) {
         if (exportCancelled) return
         const variantIndex = entry.threeX ? Math.floor(f / 2) % 3 : 0
@@ -760,7 +819,6 @@ async function exportVideo() {
         frameIndex++
       }
 
-      // Render transition to next page
       if (p < pageCount - 1) {
         updateProgress(
           `Rendering transition ${p + 1} → ${p + 2}...`,

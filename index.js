@@ -530,12 +530,94 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // --- Save current page to book (shared helper) ---
+  // Generates a thumbnail from the live canvas, saves to GitHub, and
+  // invalidates the manager's thumbnail cache for this page so the manager
+  // will re-fetch it on next render.
+
+  async function savePageToBook() {
+    if (!activeBookName || !activeBookManifest) return false
+    if (page.marks.length === 0) return true // nothing to save
+
+    const json = page.toJSON()
+
+    // Generate thumbnail from live canvas
+    const srcCanvas = document.getElementById('myCanvas')
+    const THUMB_LONG = 96
+    const isPortrait = srcCanvas.height >= srcCanvas.width
+    const thumbW = isPortrait
+      ? Math.round(THUMB_LONG * srcCanvas.width / srcCanvas.height)
+      : THUMB_LONG
+    const thumbH = isPortrait
+      ? THUMB_LONG
+      : Math.round(THUMB_LONG * srcCanvas.height / srcCanvas.width)
+    const thumbCanvas = document.createElement('canvas')
+    thumbCanvas.width = thumbW
+    thumbCanvas.height = thumbH
+    thumbCanvas.getContext('2d').drawImage(srcCanvas, 0, 0, srcCanvas.width, srcCanvas.height, 0, 0, thumbW, thumbH)
+    const thumbnail = thumbCanvas.toDataURL('image/jpeg', 0.6)
+
+    const pageData = { ...json, thumbnail }
+
+    try {
+      let pageId = activePageId
+      let isNew = false
+
+      if (!pageId) {
+        pageId = `${activeBookName}_${Date.now().toString(36).toUpperCase()}`
+        isNew = true
+      }
+
+      const res = await fetch('/.netlify/functions/github', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ operation: 'savePage', bookName: activeBookName, pageId, pageData })
+      })
+      const result = await res.json()
+      if (!res.ok) throw new Error(result.error)
+
+      // Invalidate thumbnail cache so manager re-fetches on next render
+      try {
+        const thumbCache = JSON.parse(localStorage.getItem('sketcher_thumb_cache') || '{}')
+        delete thumbCache[`${activeBookName}::${pageId}`]
+        localStorage.setItem('sketcher_thumb_cache', JSON.stringify(thumbCache))
+      } catch {}
+
+      if (isNew) {
+        activeBookManifest.pages.push({
+          id: pageId,
+          filename: `${pageId}.json`,
+          caption: '',
+          pageDuration: null,
+          transitionDuration: null,
+          bgColor: json.canvasParams.backgroundColor
+        })
+        await fetch('/.netlify/functions/github', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            operation: 'saveManifest',
+            bookName: activeBookName,
+            manifest: activeBookManifest
+          })
+        })
+        activePageId = pageId
+      }
+
+      unsavedChanges = false
+      return true
+    } catch (err) {
+      console.error('Save error:', err)
+      return false
+    }
+  }
+
   async function navigatePage(direction) {
     if (!activeBookManifest || activeBookManifest.pages.length === 0) return
 
-    if (unsavedChanges) {
-      const leave = confirm('You have unsaved changes. Leave anyway?')
-      if (!leave) return
+    // Auto-save before navigating away
+    if (unsavedChanges && activeBookName && activeBookManifest) {
+      await savePageToBook()
     }
 
     const pages = activeBookManifest.pages
@@ -594,109 +676,24 @@ document.addEventListener('DOMContentLoaded', function () {
     page.render()
   })
 
-  document.getElementById('downloadButton').addEventListener('pointerdown', async (event) => {
+  // Save button — exports page JSON locally (does NOT save to book)
+  document.getElementById('downloadButton').addEventListener('pointerdown', () => {
     const json = page.toJSON()
     if (page.marks.length === 0) {
       console.log('Nothing to export')
       return
     }
-
-    if (event.button === 2) {
-      // Right click — download locally
-      const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' })
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = 'page.json'
-      a.click()
-      URL.revokeObjectURL(url)
-      return
-    }
-
-    if (!activeBookName || !activeBookManifest) {
-      const go = confirm('No active book. Open manager?')
-      if (go) window.location.href = 'manager.html'
-      return
-    }
-
-    // Save to active book
-    try {
-      let pageId = activePageId
-      let isNew = false
-
-      if (!pageId) {
-        // New page
-        pageId = `${activeBookName}_${Date.now().toString(36).toUpperCase()}`
-        isNew = true
-      }
-
-      // Generate orientation-aware thumbnail (long edge = 96px at 2x for display at 48px)
-      const srcCanvas = document.getElementById('myCanvas')
-      const THUMB_LONG = 96
-      const isPortrait = srcCanvas.height >= srcCanvas.width
-      const thumbW = isPortrait
-        ? Math.round(THUMB_LONG * srcCanvas.width / srcCanvas.height)
-        : THUMB_LONG
-      const thumbH = isPortrait
-        ? THUMB_LONG
-        : Math.round(THUMB_LONG * srcCanvas.height / srcCanvas.width)
-      const thumbCanvas = document.createElement('canvas')
-      thumbCanvas.width = thumbW
-      thumbCanvas.height = thumbH
-      thumbCanvas.getContext('2d').drawImage(srcCanvas, 0, 0, srcCanvas.width, srcCanvas.height, 0, 0, thumbW, thumbH)
-      const thumbnail = thumbCanvas.toDataURL('image/jpeg', 0.6)
-
-      const pageData = { ...json, thumbnail }
-
-      const res = await fetch('/.netlify/functions/github', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          operation: 'savePage',
-          bookName: activeBookName,
-          pageId,
-          pageData
-        })
-      })
-
-      const result = await res.json()
-      if (!res.ok) throw new Error(result.error)
-
-      if (isNew) {
-        // Add to manifest
-        activeBookManifest.pages.push({
-          id: pageId,
-          filename: `${pageId}.json`,
-          caption: '',
-          pageDuration: null,
-          transitionDuration: null,
-          bgColor: json.canvasParams.backgroundColor
-        })
-        await fetch('/.netlify/functions/github', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            operation: 'saveManifest',
-            bookName: activeBookName,
-            manifest: activeBookManifest
-          })
-        })
-        activePageId = pageId
-      }
-
-      unsavedChanges = false
-      const saveBtn = document.getElementById('downloadButton')
-      saveBtn.classList.add('saved')
-      setTimeout(() => saveBtn.classList.remove('saved'), 1500)
-
-    } catch (err) {
-      const saveBtn = document.getElementById('downloadButton')
-      saveBtn.classList.add('error')
-      setTimeout(() => saveBtn.classList.remove('error'), 1500)
-      console.error('Save error:', err)
-    }
+    const filename = activePageId ? `${activePageId}.json` : 'page.json'
+    const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = filename
+    a.click()
+    URL.revokeObjectURL(url)
   })
 
+  // Load button — SVG or JSON; prompts merge vs overwrite when page has marks
   document.getElementById('loadButton').addEventListener('pointerdown', () => {
     const input = document.createElement('input')
     input.type = 'file'
@@ -706,27 +703,48 @@ document.addEventListener('DOMContentLoaded', function () {
       const reader = new FileReader()
       reader.onload = (e) => {
         const content = e.target.result
+        const hasExistingMarks = page.marks.length > 0
+
+        const applyLoaded = (loadedJSON, isSVG) => {
+          if (hasExistingMarks) {
+            const merge = confirm(
+              'Current page has marks.\n\nOK = Merge (add loaded marks to page)\nCancel = Overwrite (replace page)'
+            )
+            if (merge) {
+              // Append loaded marks to existing page
+              const loadedMarks = loadedJSON.marks.map(m => Mark.fromJSON(m))
+              loadedMarks.forEach(m => {
+                page.marks.push(m)
+                if (m.filled) lastFilledMark = page.marks.length - 1
+              })
+              page.render()
+              unsavedChanges = true
+              return
+            }
+          }
+          // Overwrite
+          page.loadFromJSON(loadedJSON)
+          for (let i = 0; i < page.marks.length; i++) {
+            if (page.marks[i].filled) lastFilledMark = i
+          }
+          if (!isSVG && page.canvasParams.backgroundColor) {
+            currentBgColor = page.canvasParams.backgroundColor
+            syncBgIndicator()
+          }
+          unsavedChanges = true
+        }
+
         if (file.type === 'image/svg+xml') {
           try {
-            const jsonContent = page.svgToJson(content)
-            page.loadFromJSON(jsonContent)
-            for (let i = 0; i < page.marks.length; i++) {
-              if (page.marks[i].filled) lastFilledMark = i
-            }
+            const loadedJSON = page.svgToJson(content)
+            applyLoaded(loadedJSON, true)
           } catch (error) {
             console.error('Error converting SVG to JSON:', error)
           }
         } else if (file.type === 'application/json') {
           try {
-            page.loadFromJSON(content)
-            for (let i = 0; i < page.marks.length; i++) {
-              if (page.marks[i].filled) lastFilledMark = i
-            }
-            // Sync bg color from loaded page
-            if (page.canvasParams.backgroundColor) {
-              currentBgColor = page.canvasParams.backgroundColor
-              syncBgIndicator()
-            }
+            const loadedJSON = JSON.parse(content)
+            applyLoaded(loadedJSON, false)
           } catch (error) {
             console.error('Error loading JSON:', error)
           }
@@ -737,10 +755,10 @@ document.addEventListener('DOMContentLoaded', function () {
     input.click()
   })
 
-  document.getElementById('bookBtn').addEventListener('pointerdown', () => {
-    if (unsavedChanges) {
-      const leave = confirm('You have unsaved changes. Leave anyway?')
-      if (!leave) return
+  // Book button — auto-saves before returning to manager
+  document.getElementById('bookBtn').addEventListener('pointerdown', async () => {
+    if (unsavedChanges && activeBookName && activeBookManifest) {
+      await savePageToBook()
     }
     window.location.href = 'manager.html'
   })

@@ -4,26 +4,64 @@
 <svg
    width="720"
    height="960"
-   viewBox="0 0 190.5 254"
+   viewBox="0 0 720 960"
    version="1.1"
    id="svg1"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="fill.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="0.75811588"
+     inkscape:cx="252.59991"
+     inkscape:cy="428.03483"
+     inkscape:window-width="1920"
+     inkscape:window-height="1111"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="-37.281147"
+       originy="-254"
+       spacingx="3.7795276"
+       spacingy="3.7795276"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
   <defs
      id="defs1" />
   <g
-     id="layer1">
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-37.281147,-254)">
     <path
        id="rect1"
-       style="fill:#868686;fill-opacity:0.4;stroke:#000000;stroke-width:1.2996"
-       d="M 25.484973,127 H 165.01503 v 45.42516 H 25.484973 Z" />
+       style="fill:#1a1a1a;stroke:#000000;stroke-width:0"
+       d="m 304.56693,302.36221 h 373.54334 c 22.16,0 40,17.84 40,40 v 222.36222 c 0,22.16 -17.84,40 -40,40 H 304.56693 c -22.16,0 -40,-17.84 -40,-40 V 342.36221 c 0,-22.16 17.84,-40 40,-40 z" />
     <path
-       id="rect2"
-       style="fill:none;stroke:#000000;stroke-width:2.04884"
-       d="m 55.059414,191.91228 h 95.880676 v 33.68881 H 55.059414 Z" />
-    <path
-       id="rect1-1"
-       style="fill:#868686;stroke:#000000;stroke-width:1.2996"
-       d="M 24.711393,18.096807 H 164.24145 V 63.521968 H 24.711393 Z" />
+       style="fill:#1a1a1a;stroke:#000000;stroke-width:3.77953"
+       d="M 75.590555,415.74805 264.56693,453.54332"
+       id="path1" />
   </g>
 </svg>

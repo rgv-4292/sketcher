@@ -132,8 +132,10 @@ export class Page {
     document.body.appendChild(container)
 
     try {
-      const draw = SVG().addTo(container).size('400', '700').svg(svgDOM.outerHTML)
+      const draw = SVG().addTo(container).size(this.width, this.height).svg(svgDOM.outerHTML)
       const backgroundColor = this.backgroundColor
+      
+      
       const canvasParams = {
         width: parseFloat(draw.attr('width')),
         height: parseFloat(draw.attr('height')),

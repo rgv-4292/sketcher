@@ -1,6 +1,8 @@
 import { Mark } from './mark.js'
 import { Page } from './page.js'
 
+const THUMB_PREFIX = 'sketcher_thumb::'
+
 document.addEventListener('DOMContentLoaded', function () {
   const canvas = document.getElementById('myCanvas')
   const ctx = canvas.getContext('2d')
@@ -256,7 +258,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updateGradientRowVisibility()
   }
 
-  // Show/hide Set Gradient checkbox based on fill mode
   function updateGradientRowVisibility() {
     const row = document.getElementById('setGradientRow')
     row.style.display = fillMode === 'gradient' ? 'flex' : 'none'
@@ -350,7 +351,6 @@ document.addEventListener('DOMContentLoaded', function () {
     doMask = s.doMask ?? false
     fillMode = s.fillMode ?? 'none'
 
-    // Sync UI
     document.getElementById('minDistance').value = minDistance
     document.getElementById('distanceThreshold').value = distanceThreshold
     document.getElementById('connectionProbability').value = connectionProbability
@@ -497,7 +497,6 @@ document.addEventListener('DOMContentLoaded', function () {
       activeBookManifest = data.manifest
       updateBookIndicator()
 
-      // Resize canvas to match book orientation
       const canvas = document.getElementById('myCanvas')
       canvas.width = activeBookManifest.width
       canvas.height = activeBookManifest.height
@@ -530,14 +529,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // --- Save current page to book (shared helper) ---
-  // Generates a thumbnail from the live canvas, saves to GitHub, and
-  // invalidates the manager's thumbnail cache for this page so the manager
-  // will re-fetch it on next render.
+  // --- Save current page to book ---
+  // Writes to GitHub, then removes the per-key localStorage thumb entry so
+  // the manager will re-fetch only this page's thumbnail on next render.
 
   async function savePageToBook() {
     if (!activeBookName || !activeBookManifest) return false
-    if (page.marks.length === 0) return true // nothing to save
+    if (page.marks.length === 0) return true
 
     const json = page.toJSON()
 
@@ -554,7 +552,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const thumbCanvas = document.createElement('canvas')
     thumbCanvas.width = thumbW
     thumbCanvas.height = thumbH
-    thumbCanvas.getContext('2d').drawImage(srcCanvas, 0, 0, srcCanvas.width, srcCanvas.height, 0, 0, thumbW, thumbH)
+    thumbCanvas.getContext('2d').drawImage(
+      srcCanvas, 0, 0, srcCanvas.width, srcCanvas.height, 0, 0, thumbW, thumbH
+    )
     const thumbnail = thumbCanvas.toDataURL('image/jpeg', 0.6)
 
     const pageData = { ...json, thumbnail }
@@ -576,11 +576,9 @@ document.addEventListener('DOMContentLoaded', function () {
       const result = await res.json()
       if (!res.ok) throw new Error(result.error)
 
-      // Invalidate thumbnail cache so manager re-fetches on next render
+      // Invalidate the per-key thumbnail entry so manager re-fetches this page only
       try {
-        const thumbCache = JSON.parse(localStorage.getItem('sketcher_thumb_cache') || '{}')
-        delete thumbCache[`${activeBookName}::${pageId}`]
-        localStorage.setItem('sketcher_thumb_cache', JSON.stringify(thumbCache))
+        localStorage.removeItem(`${THUMB_PREFIX}${activeBookName}::${pageId}`)
       } catch {}
 
       if (isNew) {
@@ -615,7 +613,6 @@ document.addEventListener('DOMContentLoaded', function () {
   async function navigatePage(direction) {
     if (!activeBookManifest || activeBookManifest.pages.length === 0) return
 
-    // Auto-save before navigating away
     if (unsavedChanges && activeBookName && activeBookManifest) {
       await savePageToBook()
     }
@@ -711,7 +708,6 @@ document.addEventListener('DOMContentLoaded', function () {
               'Current page has marks.\n\nOK = Merge (add loaded marks to page)\nCancel = Overwrite (replace page)'
             )
             if (merge) {
-              // Append loaded marks to existing page
               const loadedMarks = loadedJSON.marks.map(m => Mark.fromJSON(m))
               loadedMarks.forEach(m => {
                 page.marks.push(m)
@@ -722,7 +718,6 @@ document.addEventListener('DOMContentLoaded', function () {
               return
             }
           }
-          // Overwrite
           page.loadFromJSON(loadedJSON)
           for (let i = 0; i < page.marks.length; i++) {
             if (page.marks[i].filled) lastFilledMark = i

@@ -166,7 +166,8 @@ export class Page {
           console.log(error)
         }
         var isFilled = false
-        var fillOpacity = parseFloat(styleDict['fill-opacity'])
+        var fillOpacity
+        
         var myDensity = 3
         var myTrace = false
         var isMask = false
@@ -174,9 +175,12 @@ export class Page {
         var myFillMode = 'none'
         try {
           var myFill = styleDict['fill']
+          console.log(myFill)
           if (myFill && myFill !== 'none') {
             myColor = hexToRgba(myFill, 0.75)
-            myDensity = mapRange(parseFloat(styleDict['fill-opacity'] || 1), 0, 1, 16, 2)
+            fillOpacity = parseFloat(styleDict['fill-opacity'])
+            console.log(fillOpacity)
+            myDensity = mapRange(parseFloat(fillOpacity), 0, 1, 16, 2)
             if (fillOpacity == 1) { isMask = true }
             isFilled = true
             myFillMode = 'solid'

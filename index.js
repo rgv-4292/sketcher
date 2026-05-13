@@ -89,7 +89,11 @@ document.addEventListener('DOMContentLoaded', function () {
     importRotationDeg = 0
     document.getElementById('importRotation').value = 0
     document.getElementById('importRotationVal').textContent = '0°'
+
+    // Store original centroid before normalising — used by draw() for ghost offset
     importCentroid = getImportCentroid(marks)
+
+    // Normalise marks to centroid-origin for rotation and placement maths
     importMarks = marks.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x - importCentroid.x, y: p.y - importCentroid.y }))
@@ -99,16 +103,23 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       return clone
     })
+
     if (importGhostBitmap) { importGhostBitmap.close(); importGhostBitmap = null }
+
+    // Bake ghost at original positions (shift back by centroid) so the bitmap
+    // covers the full canvas and the centroid is at (importCentroid.x, importCentroid.y)
+    // inside the bitmap. draw() then offsets the bitmap by (cursorX - centroidX, cursorY - centroidY).
     const shifted = importMarks.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
-      if (clone.gradient) clone.gradient = { x: clone.gradient.x + importCentroid.x, y: clone.gradient.y + importCentroid.y }
+      if (clone.gradient) clone.gradient = {
+        x: clone.gradient.x + importCentroid.x,
+        y: clone.gradient.y + importCentroid.y
+      }
       return clone
     })
     importGhostBitmap = await bakeGhostBitmap(shifted)
-    // Guard: ignore canvas input for 300ms after entering import mode to prevent
-    // button/dialog pointerup events bleeding through to the canvas.
+
     importReadyTime = performance.now() + 300
     importMode = true
     canvas.style.cursor = 'crosshair'
@@ -143,8 +154,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const rotated = rotateMarks(importMarks, importRotationDeg)
 
     let ownerTag
-    if (importReplaceOwner) {
-      // Re-place: remove old marks for this instance, reuse the same owner tag
+    if (importReplaceOwner && !isImportLayer(importReplaceOwner)) {
+      // Drawn layer re-place: update transform offset, don't touch marks
+      const existing = getTransform(importReplaceOwner)
+      setTransform(importReplaceOwner, {
+        offsetX: existing.offsetX + offsetX,
+        offsetY: existing.offsetY + offsetY
+      })
+      cancelImportMode()
+      refreshLayerList()
+      return
+    } else if (importReplaceOwner) {
+      // Import re-place: remove old marks, reuse owner tag
       page.marks = page.marks.filter(m => m.owner !== importReplaceOwner)
       ownerTag = importReplaceOwner
     } else {
@@ -244,6 +265,20 @@ document.addEventListener('DOMContentLoaded', function () {
           const ownerMarks = page.marks.filter(m => m.owner === owner).map(m => Mark.fromJSON(m.toJSON()))
           const base = owner.replace(/_\d+$/, '')
           await enterImportMode(ownerMarks, base, owner)
+        })
+        row.appendChild(reBtn)
+      }
+
+      if (owner !== null && !isImportLayer(owner)) {
+        const reBtn = document.createElement('button')
+        reBtn.textContent = 'Re-place'
+        reBtn.addEventListener('pointerdown', async () => {
+          // For drawn layers, gather actual marks (excluding anchor empties)
+          const ownerMarks = page.marks
+            .filter(m => m.owner === owner && m.points.length > 0)
+            .map(m => Mark.fromJSON(m.toJSON()))
+          if (ownerMarks.length === 0) return
+          await enterImportMode(ownerMarks, owner, owner)
         })
         row.appendChild(reBtn)
       }
@@ -864,6 +899,8 @@ document.addEventListener('DOMContentLoaded', function () {
   canvas.addEventListener('pointermove', draw)
   canvas.addEventListener('pointerup', stopDrawing)
   canvas.addEventListener('pointercancel', stopDrawing)
+  // Keep ghost preview moving even when no button is held (hover on desktop/pen)
+  canvas.addEventListener('mousemove', drawGhostPreview)
 
   function startDrawing(event) {
     event.preventDefault()
@@ -896,26 +933,32 @@ document.addEventListener('DOMContentLoaded', function () {
     currentMark.addPoint(pt.x, pt.y, getEventPressure(event))
   }
 
+  function renderGhostAt(pt) {
+    if (!importGhostBitmap) return
+    // Offset so the centroid of the ghost sits at the cursor
+    const dx = pt.x - importCentroid.x
+    const dy = pt.y - importCentroid.y
+    const mainCtx = canvas.getContext('2d')
+    if (page._bufferDirty) page._renderToBuffer()
+    mainCtx.clearRect(0, 0, canvas.width, canvas.height)
+    mainCtx.fillStyle = page.canvasParams.backgroundColor
+    mainCtx.fillRect(0, 0, canvas.width, canvas.height)
+    mainCtx.drawImage(page._bufferCanvas, 0, 0)
+    mainCtx.globalAlpha = 0.5
+    mainCtx.drawImage(importGhostBitmap, dx, dy)
+    mainCtx.globalAlpha = 1
+  }
+
+  function drawGhostPreview(event) {
+    if (!importMode) return
+    renderGhostAt(getCanvasPoint(event))
+  }
+
   function draw(event) {
     event.preventDefault()
 
-    // Ghost preview in placement mode
     if (importMode) {
-      if (!importGhostBitmap) return
-      const pt = getCanvasPoint(event)
-      const offsetX = pt.x - importCentroid.x
-      const offsetY = pt.y - importCentroid.y
-      const mainCtx = canvas.getContext('2d')
-      // Blit background + committed marks
-      if (page._bufferDirty) page._renderToBuffer()
-      mainCtx.clearRect(0, 0, canvas.width, canvas.height)
-      mainCtx.fillStyle = page.canvasParams.backgroundColor
-      mainCtx.fillRect(0, 0, canvas.width, canvas.height)
-      mainCtx.drawImage(page._bufferCanvas, 0, 0)
-      // Draw ghost at 50% opacity offset to cursor
-      mainCtx.globalAlpha = 0.5
-      mainCtx.drawImage(importGhostBitmap, offsetX, offsetY)
-      mainCtx.globalAlpha = 1
+      renderGhostAt(getCanvasPoint(event))
       return
     }
 

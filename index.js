@@ -155,11 +155,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let ownerTag
     if (importReplaceOwner && !isImportLayer(importReplaceOwner)) {
-      // Drawn layer re-place: update transform offset, don't touch marks
-      const existing = getTransform(importReplaceOwner)
+      // Drawn layer re-place: tap gives new visual centroid position.
+      // The delta from original centroid to tap becomes the new transform offset
+      // (replacing, not accumulating, since we pre-applied the old transform).
+      const t = getTransform(importReplaceOwner)
       setTransform(importReplaceOwner, {
-        offsetX: existing.offsetX + offsetX,
-        offsetY: existing.offsetY + offsetY
+        offsetX: t.offsetX + offsetX,
+        offsetY: t.offsetY + offsetY
       })
       cancelImportMode()
       refreshLayerList()
@@ -273,12 +275,33 @@ document.addEventListener('DOMContentLoaded', function () {
         const reBtn = document.createElement('button')
         reBtn.textContent = 'Re-place'
         reBtn.addEventListener('pointerdown', async () => {
-          // For drawn layers, gather actual marks (excluding anchor empties)
-          const ownerMarks = page.marks
+          const rawMarks = page.marks
             .filter(m => m.owner === owner && m.points.length > 0)
             .map(m => Mark.fromJSON(m.toJSON()))
-          if (ownerMarks.length === 0) return
-          await enterImportMode(ownerMarks, owner, owner)
+          if (rawMarks.length === 0) return
+          // Apply existing layer transform to marks so ghost shows current visual position
+          const t = getTransform(owner)
+          const rad = (t.rotation * Math.PI) / 180
+          const cos = Math.cos(rad), sin = Math.sin(rad)
+          const cx = page.canvasParams.width / 2
+          const cy = page.canvasParams.height / 2
+          const transformedMarks = rawMarks.map(m => {
+            const clone = Mark.fromJSON(m.toJSON())
+            clone.points = m.points.map(p => {
+              // Apply translation
+              let x = p.x + t.offsetX
+              let y = p.y + t.offsetY
+              // Apply rotation around canvas center
+              if (t.rotation !== 0) {
+                const rx = cx + (x - cx) * cos - (y - cy) * sin
+                const ry = cy + (x - cx) * sin + (y - cy) * cos
+                x = rx; y = ry
+              }
+              return { ...p, x, y }
+            })
+            return clone
+          })
+          await enterImportMode(transformedMarks, owner, owner)
         })
         row.appendChild(reBtn)
       }

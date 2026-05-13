@@ -83,13 +83,13 @@ document.addEventListener('DOMContentLoaded', function () {
     return createImageBitmap(off)
   }
 
-  async function enterImportMode(marks, ownerBase) {
+  async function enterImportMode(marks, ownerBase, replaceOwner = null) {
     importOwnerBase = ownerBase
+    importReplaceOwner = replaceOwner
     importRotationDeg = 0
     document.getElementById('importRotation').value = 0
     document.getElementById('importRotationVal').textContent = '0°'
     importCentroid = getImportCentroid(marks)
-    // Normalise: shift all points so centroid = (0,0) for easy offset-on-placement
     importMarks = marks.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x - importCentroid.x, y: p.y - importCentroid.y }))
@@ -100,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function () {
       return clone
     })
     if (importGhostBitmap) { importGhostBitmap.close(); importGhostBitmap = null }
-    // Bake at page dims with centroid offset applied so bitmap aligns with (0,0) origin
     const shifted = importMarks.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
@@ -108,11 +107,10 @@ document.addEventListener('DOMContentLoaded', function () {
       return clone
     })
     importGhostBitmap = await bakeGhostBitmap(shifted)
-    // Set mode AFTER async bake and defer by one frame so any pending
-    // pointerdown/pointerup from the confirm dialog dismissal cannot bleed through.
-    await new Promise(resolve => requestAnimationFrame(resolve))
+    // Guard: ignore canvas input for 300ms after entering import mode to prevent
+    // button/dialog pointerup events bleeding through to the canvas.
+    importReadyTime = performance.now() + 300
     importMode = true
-    console.log('[Import] importMode SET TO TRUE')
     canvas.style.cursor = 'crosshair'
     document.getElementById('placementBanner').classList.add('visible')
   }
@@ -140,13 +138,22 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function placeImport(tapX, tapY) {
-    console.log('[placeImport] tapX:', tapX, 'tapY:', tapY, 'importOwnerBase:', importOwnerBase, 'importMarks.length:', importMarks.length)
     const offsetX = tapX - importCentroid.x
     const offsetY = tapY - importCentroid.y
     const rotated = rotateMarks(importMarks, importRotationDeg)
-    const instanceNum = (importInstanceCounters[importOwnerBase] || 0) + 1
-    importInstanceCounters[importOwnerBase] = instanceNum
-    const ownerTag = `${importOwnerBase}_${String(instanceNum).padStart(2, '0')}`
+
+    let ownerTag
+    if (importReplaceOwner) {
+      // Re-place: remove old marks for this instance, reuse the same owner tag
+      page.marks = page.marks.filter(m => m.owner !== importReplaceOwner)
+      ownerTag = importReplaceOwner
+    } else {
+      // New placement: assign next instance number
+      const instanceNum = (importInstanceCounters[importOwnerBase] || 0) + 1
+      importInstanceCounters[importOwnerBase] = instanceNum
+      ownerTag = `${importOwnerBase}_${String(instanceNum).padStart(2, '0')}`
+    }
+
     rotated.forEach(m => {
       const placed = Mark.fromJSON(m.toJSON())
       placed.points = m.points.map(p => ({ ...p, x: Math.round(p.x + importCentroid.x + offsetX), y: Math.round(p.y + importCentroid.y + offsetY) }))
@@ -184,12 +191,11 @@ document.addEventListener('DOMContentLoaded', function () {
       const reBtn = document.createElement('button')
       reBtn.textContent = 'Re-place'
       reBtn.addEventListener('pointerdown', async () => {
-        // Gather the marks for this owner, strip the owner tag for re-placement
         const ownerMarks = page.marks
           .filter(m => m.owner === owner)
           .map(m => Mark.fromJSON(m.toJSON()))
         const base = owner.replace(/_\d+$/, '')
-        await enterImportMode(ownerMarks, base)
+        await enterImportMode(ownerMarks, base, owner)  // pass owner as replaceOwner
       })
       const delBtn = document.createElement('button')
       delBtn.textContent = 'Del'
@@ -228,7 +234,9 @@ document.addEventListener('DOMContentLoaded', function () {
   let importCentroid = { x: 0, y: 0 }
   let importGhostBitmap = null  // pre-rendered ImageBitmap
   let importOwnerBase = ''
+  let importReplaceOwner = null // non-null when re-placing an existing instance
   let importRotationDeg = 0
+  let importReadyTime = 0       // timestamp after which canvas input is accepted
   const importInstanceCounters = {}  // basename -> next instance number
 
   // --- Sidebar toggle ---
@@ -666,10 +674,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function stopDrawing(event) {
-    console.log('[stopDrawing] event.type:', event?.type, 'importMode:', importMode)
     // In placement mode, pointerup on the canvas places the import
     if (importMode) {
-      if (event && event.type === 'pointerup') {
+      if (event && event.type === 'pointerup' && performance.now() >= importReadyTime) {
         const pt = getCanvasPoint(event)
         placeImport(pt.x, pt.y)
       }
@@ -864,19 +871,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (!hasMarks) {
-          // Nothing on canvas — overwrite directly
-          page.loadFromJSON(loadedJSON)
-          page.invalidateBuffer()
-          if (loadedJSON.canvasParams?.backgroundColor) {
-            currentBgColor = loadedJSON.canvasParams.backgroundColor
-            syncBgIndicator()
+          // Nothing on canvas — offer place or overwrite
+          const placeOnEmpty = confirm(
+            'Place mode: tap the canvas to position the import.\n\nOK = Place (tap to position)\nCancel = Load at original position'
+          )
+          if (placeOnEmpty) {
+            const incomingMarks = loadedJSON.marks.map(m => Mark.fromJSON(m))
+            await enterImportMode(incomingMarks, baseName)
+          } else {
+            page.loadFromJSON(loadedJSON)
+            page.invalidateBuffer()
+            if (loadedJSON.canvasParams?.backgroundColor) {
+              currentBgColor = loadedJSON.canvasParams.backgroundColor
+              syncBgIndicator()
+            }
+            for (let i = 0; i < page.marks.length; i++) {
+              if (page.marks[i].filled) lastFilledMark = i
+            }
+            page.render()
+            unsavedChanges = true
+            refreshImportList()
           }
-          for (let i = 0; i < page.marks.length; i++) {
-            if (page.marks[i].filled) lastFilledMark = i
-          }
-          page.render()
-          unsavedChanges = true
-          refreshImportList()
           return
         }
 
@@ -904,13 +919,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const placeMode = confirm(
           'Place mode: tap the canvas to position the import.\n\nOK = Place (tap to position)\nCancel = Merge immediately at original position'
         )
-        console.log('[Import] placeMode confirm result:', placeMode)
         const incomingMarks = loadedJSON.marks.map(m => Mark.fromJSON(m))
-        console.log('[Import] incomingMarks count:', incomingMarks.length)
         if (placeMode) {
-          console.log('[Import] calling enterImportMode, baseName:', baseName)
           await enterImportMode(incomingMarks, baseName)
-          console.log('[Import] enterImportMode resolved, importMode:', importMode)
         } else {
           // Immediate merge — no owner tag
           incomingMarks.forEach(m => {

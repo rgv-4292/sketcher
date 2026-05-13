@@ -5,5 +5,14 @@
   "height": 720,
   "defaultPageDuration": 5,
   "defaultTransitionDuration": 1,
-  "pages": []
+  "pages": [
+    {
+      "id": "New_book_MP4EZCJ0",
+      "filename": "New_book_MP4EZCJ0.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    }
+  ]
 }

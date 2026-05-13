@@ -17,6 +17,8 @@ export class Page {
     this._bufferCanvas = document.createElement('canvas')
     this._bufferCanvas.width = this.canvasParams.width
     this._bufferCanvas.height = this.canvasParams.height
+    this.layerOrder = []       // owner[] in render order; set from index.js
+    this.layerTransforms = {}  // { [owner]: { offsetX, offsetY, rotation } }
   }
 
   addMark(mark) {
@@ -43,6 +45,47 @@ export class Page {
     this._bufferDirty = true
   }
 
+  // Returns marks grouped by owner in layerOrder, then any remaining owners.
+  _groupedByLayer() {
+    const groups = new Map()  // owner -> Mark[]
+    this.marks.forEach(m => {
+      const key = m.owner === null ? '__page__' : m.owner
+      if (!groups.has(key)) groups.set(key, [])
+      groups.get(key).push(m)
+    })
+    // Build ordered list: layerOrder entries first, then any not listed
+    const ordered = []
+    const ownerToKey = o => o === null ? '__page__' : o
+    const seen = new Set()
+    this.layerOrder.forEach(owner => {
+      const key = ownerToKey(owner)
+      if (groups.has(key)) { ordered.push({ owner, marks: groups.get(key) }); seen.add(key) }
+    })
+    groups.forEach((marks, key) => {
+      if (!seen.has(key)) {
+        ordered.push({ owner: key === '__page__' ? null : key, marks })
+      }
+    })
+    return ordered
+  }
+
+  _applyLayerTransform(ctx, owner) {
+    const t = this.layerTransforms[owner === null ? '__page__' : owner]
+    if (!t) return false
+    const { offsetX, offsetY, rotation } = t
+    if (offsetX === 0 && offsetY === 0 && rotation === 0) return false
+    ctx.save()
+    ctx.translate(offsetX, offsetY)
+    if (rotation !== 0) {
+      const cx = this.canvasParams.width / 2
+      const cy = this.canvasParams.height / 2
+      ctx.translate(cx, cy)
+      ctx.rotate((rotation * Math.PI) / 180)
+      ctx.translate(-cx, -cy)
+    }
+    return true  // caller must ctx.restore()
+  }
+
   _renderToBuffer() {
     const buf = this._bufferCanvas
     buf.width = this.canvasParams.width
@@ -50,6 +93,7 @@ export class Page {
     const ctx = buf.getContext('2d')
     ctx.clearRect(0, 0, buf.width, buf.height)
 
+    // Build mask list from ALL marks (un-transformed, masks apply globally)
     const masksByIndex = []
     this.marks.forEach((mark, i) => {
       if (mark.isMask && mark.points.length >= 3) {
@@ -57,11 +101,18 @@ export class Page {
       }
     })
 
-    this.marks.forEach((mark, i) => {
-      try {
+    // Render layer by layer in order, applying per-layer transform
+    const flatIndexOf = m => this.marks.indexOf(m)
+    this._groupedByLayer().forEach(({ owner, marks }) => {
+      const transformed = this._applyLayerTransform(ctx, owner)
+      marks.forEach(mark => {
+        if (mark.points.length === 0) return
+        const i = flatIndexOf(mark)
         const maskPolygons = masksByIndex.filter(m => m.index > i).map(m => m.polygon)
-        mark.render(this.alpha, false, buf, maskPolygons)
-      } catch (error) { console.log(error) }
+        try { mark.render(this.alpha, false, buf, maskPolygons) }
+        catch (error) { console.log(error) }
+      })
+      if (transformed) ctx.restore()
     })
 
     this._bufferDirty = false
@@ -74,9 +125,11 @@ export class Page {
       .map((m, i) => ({ m, i }))
       .filter(({ m, i }) => m.isMask && m.points.length >= 3 && i > markIndex)
       .map(({ m }) => m.points.map(p => ({ x: p.x, y: p.y })))
-    try {
-      mark.render(this.alpha, false, buf, maskPolygons)
-    } catch (error) { console.log(error) }
+    const ctx = buf.getContext('2d')
+    const transformed = this._applyLayerTransform(ctx, mark.owner)
+    try { mark.render(this.alpha, false, buf, maskPolygons) }
+    catch (error) { console.log(error) }
+    if (transformed) ctx.restore()
   }
 
   shuffle(array) {
@@ -95,17 +148,25 @@ export class Page {
     // Explicit target (transition/export): full direct render, bypass buffer.
     if (targetCanvas) {
       this.clearCanvas(targetCanvas)
+      const ctx = targetCanvas.getContext('2d')
       const masksByIndex = []
       this.marks.forEach((mark, i) => {
         if (mark.isMask && mark.points.length >= 3) {
           masksByIndex.push({ index: i, polygon: mark.points.map(p => ({ x: p.x, y: p.y })) })
         }
       })
-      this.marks.forEach((mark, i) => {
-        try {
-          const maskPolygons = masksByIndex.filter(m => m.index > i).map(m => m.polygon)
-          mark.render(this.alpha, trans, targetCanvas, maskPolygons)
-        } catch (error) { console.log(error) }
+      const flatIndexOf = m => this.marks.indexOf(m)
+      this._groupedByLayer().forEach(({ owner, marks }) => {
+        const transformed = this._applyLayerTransform(ctx, owner)
+        marks.forEach(mark => {
+          if (mark.points.length === 0) return
+          const i = flatIndexOf(mark)
+          try {
+            const maskPolygons = masksByIndex.filter(m => m.index > i).map(m => m.polygon)
+            mark.render(this.alpha, trans, targetCanvas, maskPolygons)
+          } catch (error) { console.log(error) }
+        })
+        if (transformed) ctx.restore()
       })
       const allMaskPolygons = masksByIndex.map(m => m.polygon)
       this.tempMarks.forEach(mark => {
@@ -155,16 +216,19 @@ export class Page {
   toJSON() {
     return {
       canvasParams: this.canvasParams,
-      marks: this.marks.map(mark => mark.toJSON())
+      marks: this.marks.map(mark => mark.toJSON()),
+      layerOrder: this.layerOrder,
+      layerTransforms: this.layerTransforms
     }
   }
 
   loadFromJSON(json_file) {
     try {
-      const data =
-        typeof json_file === 'object' ? json_file : JSON.parse(json_file)
+      const data = typeof json_file === 'object' ? json_file : JSON.parse(json_file)
       this.canvasParams = data.canvasParams
       this.marks = data.marks.map(markData => Mark.fromJSON(markData))
+      this.layerOrder = data.layerOrder || []
+      this.layerTransforms = data.layerTransforms || {}
       this.render()
     } catch (error) {
       console.error('Error loading JSON:', error)

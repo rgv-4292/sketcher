@@ -205,15 +205,23 @@ document.addEventListener('DOMContentLoaded', function () {
     list.innerHTML = ''
     const layers = getLayerOrder()
 
-    // Sync bottom bar counter
     const idx = layers.indexOf(activeLayer)
     const safeIdx = idx === -1 ? 0 : idx
-    document.getElementById('layerCounter').textContent =
-      `${safeIdx + 1} / ${layers.length}`
+    document.getElementById('layerCounter').textContent = `${safeIdx + 1} / ${layers.length}`
 
     layers.forEach(owner => {
+      const isActive = owner === activeLayer
+      const t = getTransform(owner)
+
+      // --- Main row ---
       const row = document.createElement('div')
-      row.className = 'import-row' + (owner === activeLayer ? ' active-layer' : '')
+      row.className = 'import-row' + (isActive ? ' active-layer' : '')
+      row.draggable = true
+      row.dataset.owner = owner === null ? '__page__' : owner
+
+      const drag = document.createElement('span')
+      drag.textContent = '\u283f'
+      drag.style.cssText = 'cursor:grab;color:#666;padding:0 5px 0 0;font-size:14px;user-select:none;'
 
       const name = document.createElement('span')
       name.className = 'import-name'
@@ -222,9 +230,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const selBtn = document.createElement('button')
       selBtn.textContent = 'Select'
-      if (owner === activeLayer) selBtn.style.background = '#5a7a5a'
+      if (isActive) selBtn.style.background = '#5a7a5a'
       selBtn.addEventListener('pointerdown', () => setActiveLayer(owner))
 
+      row.appendChild(drag)
       row.appendChild(name)
       row.appendChild(selBtn)
 
@@ -232,9 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const reBtn = document.createElement('button')
         reBtn.textContent = 'Re-place'
         reBtn.addEventListener('pointerdown', async () => {
-          const ownerMarks = page.marks
-            .filter(m => m.owner === owner)
-            .map(m => Mark.fromJSON(m.toJSON()))
+          const ownerMarks = page.marks.filter(m => m.owner === owner).map(m => Mark.fromJSON(m.toJSON()))
           const base = owner.replace(/_\d+$/, '')
           await enterImportMode(ownerMarks, base, owner)
         })
@@ -247,6 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
         delBtn.className = 'danger'
         delBtn.addEventListener('pointerdown', () => {
           page.marks = page.marks.filter(m => m.owner !== owner)
+          delete page.layerTransforms[owner]
           if (activeLayer === owner) setActiveLayer(null)
           page.invalidateBuffer()
           unsavedChanges = true
@@ -257,6 +265,113 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       list.appendChild(row)
+
+      // --- Transform sub-row (only shown for active layer) ---
+      if (isActive) {
+        const sub = document.createElement('div')
+        sub.style.cssText = 'padding:6px 4px 6px 18px;display:flex;flex-direction:column;gap:5px;border-left:3px solid #5a7a5a;margin-bottom:4px;'
+
+        // Set Origin checkbox
+        const originRow = document.createElement('div')
+        originRow.style.cssText = 'display:flex;align-items:center;gap:6px;'
+        const originChk = document.createElement('input')
+        originChk.type = 'checkbox'
+        originChk.id = 'setLayerOriginChk'
+        originChk.checked = setLayerOriginPending
+        originChk.addEventListener('change', () => { setLayerOriginPending = originChk.checked })
+        const originLbl = document.createElement('label')
+        originLbl.htmlFor = 'setLayerOriginChk'
+        originLbl.textContent = 'Set Origin (tap canvas)'
+        originLbl.style.cssText = 'font-size:11px;color:#aaa;cursor:pointer;'
+        originRow.appendChild(originChk)
+        originRow.appendChild(originLbl)
+        sub.appendChild(originRow)
+
+        // X offset
+        const xRow = document.createElement('div')
+        xRow.style.cssText = 'display:flex;align-items:center;gap:6px;'
+        const xLbl = document.createElement('label')
+        xLbl.textContent = 'X'
+        xLbl.style.cssText = 'font-size:11px;color:#aaa;width:12px;'
+        const xInput = document.createElement('input')
+        xInput.type = 'number'
+        xInput.value = Math.round(t.offsetX)
+        xInput.step = 1
+        xInput.style.cssText = 'width:70px;background:#444;border:1px solid #555;color:#fff;padding:2px 4px;border-radius:3px;font-size:12px;'
+        xInput.addEventListener('change', () => { setTransform(owner, { offsetX: parseFloat(xInput.value) || 0 }) })
+        xRow.appendChild(xLbl); xRow.appendChild(xInput)
+        sub.appendChild(xRow)
+
+        // Y offset
+        const yRow = document.createElement('div')
+        yRow.style.cssText = 'display:flex;align-items:center;gap:6px;'
+        const yLbl = document.createElement('label')
+        yLbl.textContent = 'Y'
+        yLbl.style.cssText = 'font-size:11px;color:#aaa;width:12px;'
+        const yInput = document.createElement('input')
+        yInput.type = 'number'
+        yInput.value = Math.round(t.offsetY)
+        yInput.step = 1
+        yInput.style.cssText = 'width:70px;background:#444;border:1px solid #555;color:#fff;padding:2px 4px;border-radius:3px;font-size:12px;'
+        yInput.addEventListener('change', () => { setTransform(owner, { offsetY: parseFloat(yInput.value) || 0 }) })
+        yRow.appendChild(yLbl); yRow.appendChild(yInput)
+        sub.appendChild(yRow)
+
+        // Rotation
+        const rRow = document.createElement('div')
+        rRow.style.cssText = 'display:flex;align-items:center;gap:6px;'
+        const rLbl = document.createElement('label')
+        rLbl.textContent = 'R'
+        rLbl.style.cssText = 'font-size:11px;color:#aaa;width:12px;'
+        const rSlider = document.createElement('input')
+        rSlider.type = 'range'
+        rSlider.min = -180; rSlider.max = 180; rSlider.step = 1
+        rSlider.value = t.rotation
+        rSlider.style.cssText = 'flex:1;'
+        const rVal = document.createElement('span')
+        rVal.textContent = `${Math.round(t.rotation)}\u00b0`
+        rVal.style.cssText = 'font-size:11px;color:#aaa;width:32px;text-align:right;'
+        rSlider.addEventListener('input', () => {
+          const v = parseFloat(rSlider.value)
+          rVal.textContent = `${Math.round(v)}\u00b0`
+          setTransform(owner, { rotation: v })
+        })
+        rRow.appendChild(rLbl); rRow.appendChild(rSlider); rRow.appendChild(rVal)
+        sub.appendChild(rRow)
+
+        list.appendChild(sub)
+      }
+    })
+
+    // --- Drag-to-reorder ---
+    let dragSrc = null
+    list.querySelectorAll('.import-row').forEach(row => {
+      row.addEventListener('dragstart', e => {
+        dragSrc = row
+        e.dataTransfer.effectAllowed = 'move'
+      })
+      row.addEventListener('dragover', e => {
+        e.preventDefault()
+        e.dataTransfer.dropEffect = 'move'
+        if (row !== dragSrc) row.style.borderTop = '2px solid #7a9a7a'
+      })
+      row.addEventListener('dragleave', () => { row.style.borderTop = '' })
+      row.addEventListener('drop', e => {
+        e.preventDefault()
+        row.style.borderTop = ''
+        if (!dragSrc || dragSrc === row) return
+        // Re-order DOM then read back order
+        list.insertBefore(dragSrc, row)
+        // Read new order from DOM, skipping sub-rows (no dataset.owner)
+        const newOrder = [...list.querySelectorAll('.import-row')]
+          .map(r => r.dataset.owner === '__page__' ? null : r.dataset.owner)
+        page.layerOrder = newOrder
+        syncLayerOrder()
+        refreshLayerList()
+      })
+      row.addEventListener('dragend', () => {
+        list.querySelectorAll('.import-row').forEach(r => { r.style.borderTop = '' })
+      })
     })
   }
 
@@ -286,8 +401,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const importInstanceCounters = {}
 
   // --- Layer state ---
-  let activeLayer = null          // null = Page layer (owner === null)
-  let drawingLayerCounter = 1     // increments for each new user drawing layer
+  let activeLayer = null
+  let drawingLayerCounter = 1
+  let setLayerOriginPending = false  // true while waiting for canvas tap to set offset
 
   // --- Sidebar toggle ---
   const sidebar = document.getElementById('sidebar')
@@ -317,6 +433,42 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && importMode) cancelImportMode()
   })
+
+  // --- Layer transform helpers ---
+
+  function getTransform(owner) {
+    const key = owner === null ? '__page__' : owner
+    if (!page.layerTransforms[key]) page.layerTransforms[key] = { offsetX: 0, offsetY: 0, rotation: 0 }
+    return page.layerTransforms[key]
+  }
+
+  function setTransform(owner, patch) {
+    const key = owner === null ? '__page__' : owner
+    if (!page.layerTransforms[key]) page.layerTransforms[key] = { offsetX: 0, offsetY: 0, rotation: 0 }
+    Object.assign(page.layerTransforms[key], patch)
+    page.invalidateBuffer()
+    unsavedChanges = true
+    page.render()
+  }
+
+  // Push current layer list order into page.layerOrder
+  function syncLayerOrder() {
+    page.layerOrder = getLayerOrder()
+    page.invalidateBuffer()
+    unsavedChanges = true
+    page.render()
+  }
+
+  // After loading from JSON, sync layerTransforms and layerOrder back to index state
+  function syncFromPage() {
+    // Rebuild drawingLayerCounter from existing layer names
+    getLayerOrder().forEach(owner => {
+      if (owner !== null && !isImportLayer(owner)) {
+        const m = owner.match(/^Layer (\d+)$/)
+        if (m) drawingLayerCounter = Math.max(drawingLayerCounter, parseInt(m[1]))
+      }
+    })
+  }
 
   // --- Bottom bar layer controls ---
   const layerNameInput = document.getElementById('layerNameInput')
@@ -720,6 +872,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // In placement mode, ignore pointerdown — placement fires on pointerup
     if (importMode) return
 
+    // Set layer origin: capture tap as offsetX/Y for active layer
+    if (setLayerOriginPending) {
+      setTransform(activeLayer, { offsetX: pt.x, offsetY: pt.y })
+      setLayerOriginPending = false
+      refreshLayerList()  // uncheck the checkbox and update spinners
+      return
+    }
+
     const setGradientCheckbox = document.getElementById('checkbox2')
     if (fillMode === 'gradient' && setGradientCheckbox.checked && lastFilledMark >= 0) {
       page.marks[lastFilledMark].gradient = { x: pt.x, y: pt.y }
@@ -839,6 +999,8 @@ document.addEventListener('DOMContentLoaded', function () {
           syncBgIndicator()
           unsavedChanges = false
         }
+        syncFromPage()
+        page.layerOrder = page.layerOrder.length ? page.layerOrder : getLayerOrder()
         refreshLayerList()
       } else {
         page.render()
@@ -922,6 +1084,8 @@ document.addEventListener('DOMContentLoaded', function () {
         syncBgIndicator()
       }
       unsavedChanges = false
+      syncFromPage()
+      page.layerOrder = page.layerOrder.length ? page.layerOrder : getLayerOrder()
       refreshLayerList()
     } catch (err) {
       console.error('Error navigating page:', err)

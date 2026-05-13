@@ -11,7 +11,7 @@ let activeBook = null
 let activeManifest = null
 let dragSrcIndex = null
 let dragOverIndex = null
-let selectedPages = new Set() // indices of selected pages for export
+let selectedPages = new Set()
 let exportCancelled = false
 
 // --- API ---
@@ -30,9 +30,8 @@ async function api(operation, params = {}) {
 // --- Cache ---
 
 function loadCache() {
-  try {
-    return JSON.parse(localStorage.getItem(CACHE_KEY) || '{}')
-  } catch { return {} }
+  try { return JSON.parse(localStorage.getItem(CACHE_KEY) || '{}') }
+  catch { return {} }
 }
 
 function saveCache(cache) {
@@ -40,8 +39,7 @@ function saveCache(cache) {
 }
 
 function getCachedManifest(bookName) {
-  const cache = loadCache()
-  return cache[bookName] || null
+  return loadCache()[bookName] || null
 }
 
 function setCachedManifest(bookName, manifest) {
@@ -51,41 +49,32 @@ function setCachedManifest(bookName, manifest) {
 }
 
 // --- Thumbnail cache ---
-// Each thumbnail is stored as its own localStorage key: sketcher_thumb::book::pageId
-// This avoids the quota problem of serialising all thumbnails into one large JSON blob.
-// index.js invalidates a single key when it saves a page; the manager re-fetches only
-// that page on the next render. All other pages continue to use their cached value.
 
 function thumbKey(bookName, pageId) {
   return `${THUMB_PREFIX}${bookName}::${pageId}`
 }
 
 function getCachedThumb(bookName, pageId) {
-  try {
-    return localStorage.getItem(thumbKey(bookName, pageId)) || null
-  } catch { return null }
+  try { return localStorage.getItem(thumbKey(bookName, pageId)) || null }
+  catch { return null }
 }
 
 function setCachedThumb(bookName, pageId, dataUrl) {
   try {
     localStorage.setItem(thumbKey(bookName, pageId), dataUrl)
   } catch {
-    // Storage full — evict the oldest sketcher_thumb:: entries until it fits
     const victims = []
     for (let i = 0; i < localStorage.length; i++) {
       const k = localStorage.key(i)
       if (k && k.startsWith(THUMB_PREFIX)) victims.push(k)
     }
-    // Remove half of them (oldest-ish) and retry once
     victims.slice(0, Math.ceil(victims.length / 2)).forEach(k => localStorage.removeItem(k))
     try { localStorage.setItem(thumbKey(bookName, pageId), dataUrl) } catch {}
   }
 }
 
 function clearCachedThumb(bookName, pageId) {
-  try {
-    localStorage.removeItem(thumbKey(bookName, pageId))
-  } catch {}
+  try { localStorage.removeItem(thumbKey(bookName, pageId)) } catch {}
 }
 
 // --- Status ---
@@ -97,8 +86,7 @@ function setStatus(msg) {
 // --- Progress ---
 
 function showProgress(label, percent) {
-  const container = document.getElementById('progressContainer')
-  container.classList.add('visible')
+  document.getElementById('progressContainer').classList.add('visible')
   document.getElementById('progressLabel').textContent = label
   document.getElementById('progressBarInner').style.width = `${percent}%`
 }
@@ -180,8 +168,6 @@ function renderPagePanel() {
   const pageList = document.getElementById('pageList')
   const newPageBtn = document.getElementById('newPageBtn')
   const bookSettings = document.getElementById('bookSettings')
-  const exportPngBtn = document.getElementById('exportPngBtn')
-  const exportVideoBtn = document.getElementById('exportVideoBtn')
 
   title.textContent = activeManifest.name
   bookSettings.style.display = 'flex'
@@ -193,22 +179,20 @@ function renderPagePanel() {
   newPageBtn.style.display = 'block'
   document.getElementById('selectAllBtn').style.display = 'inline-block'
   document.getElementById('deselectAllBtn').style.display = 'inline-block'
-  exportPngBtn.disabled = selectedPages.size === 0
-  exportVideoBtn.disabled = selectedPages.size === 0
+  document.getElementById('exportPngBtn').disabled = selectedPages.size === 0
+  document.getElementById('exportVideoBtn').disabled = selectedPages.size === 0
 
   pageList.innerHTML = ''
   activeManifest.pages.forEach((page, index) => {
     pageList.appendChild(createPageItem(page, index))
   })
 
-  // Load any thumbnails not yet in local cache from GitHub
   loadThumbnailsInBackground()
 }
 
 function updateSelectionUI() {
   document.getElementById('exportPngBtn').disabled = selectedPages.size === 0
-  document.getElementById('exportVideoBtn').disabled =
-    !activeManifest || activeManifest.pages.length === 0
+  document.getElementById('exportVideoBtn').disabled = !activeManifest || activeManifest.pages.length === 0
   document.querySelectorAll('.page-item').forEach((el, i) => {
     el.classList.toggle('selected', selectedPages.has(i))
     const cb = el.querySelector('.page-select-cb')
@@ -217,9 +201,6 @@ function updateSelectionUI() {
 }
 
 // --- Thumbnail background loader ---
-// Only fetches pages whose thumbnail is NOT already in localStorage cache.
-// When index.js saves a page it removes that page's localStorage key, so the
-// next time the manager renders it will re-fetch just that one page.
 
 let _thumbLoadId = 0
 
@@ -229,14 +210,10 @@ async function loadThumbnailsInBackground() {
   const pages = activeManifest.pages
 
   for (let i = 0; i < pages.length; i++) {
-    if (runId !== _thumbLoadId) return // a newer render cycle started — bail
+    if (runId !== _thumbLoadId) return
     const page = pages[i]
-
-    // Check local cache first — if present, skip entirely
     const cached = getCachedThumb(activeBook, page.id)
     if (cached) continue
-
-    // Not cached — fetch from GitHub, cache it, then apply
     try {
       const data = await api('getPage', { bookName: activeBook, pageId: page.id })
       if (runId !== _thumbLoadId) return
@@ -268,7 +245,6 @@ function createPageItem(page, index) {
   item.draggable = true
   item.dataset.index = index
 
-  // Selection checkbox
   const selectCb = document.createElement('input')
   selectCb.type = 'checkbox'
   selectCb.className = 'page-select-cb'
@@ -276,25 +252,16 @@ function createPageItem(page, index) {
   selectCb.title = 'Select for export'
   selectCb.addEventListener('click', (e) => {
     e.stopPropagation()
-    if (selectCb.checked) {
-      selectedPages.add(index)
-    } else {
-      selectedPages.delete(index)
-    }
+    selectedPages[selectCb.checked ? 'add' : 'delete'](index)
     updateSelectionUI()
   })
 
   item.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT') return
-    if (selectedPages.has(index)) {
-      selectedPages.delete(index)
-    } else {
-      selectedPages.add(index)
-    }
+    selectedPages[selectedPages.has(index) ? 'delete' : 'add'](index)
     updateSelectionUI()
   })
 
-  // Thumbnail — size based on book orientation, long edge = 48px
   const THUMB_LONG = 48
   const isPortrait = activeManifest.height >= activeManifest.width
   const thumbW = isPortrait ? Math.round(THUMB_LONG * activeManifest.width / activeManifest.height) : THUMB_LONG
@@ -302,16 +269,13 @@ function createPageItem(page, index) {
 
   const thumb = document.createElement('div')
   thumb.className = 'page-thumb'
-  thumb.style.background = page.bgColor || '#f0ebe8'
-  thumb.style.width = `${thumbW}px`
-  thumb.style.height = `${thumbH}px`
+  thumb.style.cssText = `background:${page.bgColor || '#f0ebe8'};width:${thumbW}px;height:${thumbH}px;`
   thumb.dataset.pageId = page.id
 
   const thumbImg = document.createElement('img')
   thumbImg.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:3px;display:none;'
   thumb.appendChild(thumbImg)
 
-  // Show immediately from cache if available — no flicker, no fetch
   const cached = getCachedThumb(activeBook, page.id)
   if (cached) {
     thumbImg.src = cached
@@ -319,7 +283,6 @@ function createPageItem(page, index) {
     thumb.style.background = 'none'
   }
 
-  // Info
   const info = document.createElement('div')
   info.className = 'page-info'
 
@@ -349,42 +312,32 @@ function createPageItem(page, index) {
   meta.className = 'page-meta'
   meta.textContent = page.id
 
-  info.appendChild(captionDisplay)
-  info.appendChild(meta)
+  info.append(captionDisplay, meta)
 
-  // Durations
   const durations = document.createElement('div')
   durations.className = 'page-durations'
 
-  const pageDurLabel = document.createElement('span')
-  pageDurLabel.textContent = 'pg:'
-  const pageDurInput = document.createElement('input')
-  pageDurInput.type = 'number'
-  pageDurInput.value = page.pageDuration ?? ''
-  pageDurInput.placeholder = activeManifest.defaultPageDuration
-  pageDurInput.title = 'Page duration (s)'
-  pageDurInput.addEventListener('click', e => e.stopPropagation())
-  pageDurInput.addEventListener('change', async () => {
-    page.pageDuration = pageDurInput.value === '' ? null : parseFloat(pageDurInput.value)
-    await saveManifest()
-  })
+  const makeDurInput = (label, getVal, setVal) => {
+    const lbl = document.createElement('span')
+    lbl.textContent = label
+    const inp = document.createElement('input')
+    inp.type = 'number'
+    inp.value = getVal() ?? ''
+    inp.placeholder = label === 'pg:' ? activeManifest.defaultPageDuration : activeManifest.defaultTransitionDuration
+    inp.title = label === 'pg:' ? 'Page duration (s)' : 'Transition duration (s)'
+    inp.addEventListener('click', e => e.stopPropagation())
+    inp.addEventListener('change', async () => {
+      setVal(inp.value === '' ? null : parseFloat(inp.value))
+      await saveManifest()
+    })
+    return [lbl, inp]
+  }
 
-  const transDurLabel = document.createElement('span')
-  transDurLabel.textContent = 'tr:'
-  const transDurInput = document.createElement('input')
-  transDurInput.type = 'number'
-  transDurInput.value = page.transitionDuration ?? ''
-  transDurInput.placeholder = activeManifest.defaultTransitionDuration
-  transDurInput.title = 'Transition duration (s)'
-  transDurInput.addEventListener('click', e => e.stopPropagation())
-  transDurInput.addEventListener('change', async () => {
-    page.transitionDuration = transDurInput.value === '' ? null : parseFloat(transDurInput.value)
-    await saveManifest()
-  })
+  durations.append(
+    ...makeDurInput('pg:', () => page.pageDuration, v => { page.pageDuration = v }),
+    ...makeDurInput('tr:', () => page.transitionDuration, v => { page.transitionDuration = v })
+  )
 
-  durations.append(pageDurLabel, pageDurInput, transDurLabel, transDurInput)
-
-  // Actions
   const actions = document.createElement('div')
   actions.className = 'page-actions'
 
@@ -417,10 +370,8 @@ function createPageItem(page, index) {
   actions.append(editBtn, dupBtn, threeXBtn, delBtn)
   item.append(selectCb, thumb, info, durations, actions)
 
-  // Drag and drop — disable dragging when interacting with buttons/inputs
   item.addEventListener('mousedown', (e) => {
-    const tag = e.target.tagName
-    item.draggable = (tag !== 'BUTTON' && tag !== 'INPUT')
+    item.draggable = (e.target.tagName !== 'BUTTON' && e.target.tagName !== 'INPUT')
   })
   item.addEventListener('dragstart', (e) => {
     dragSrcIndex = index
@@ -446,9 +397,7 @@ function createPageItem(page, index) {
     e.dataTransfer.dropEffect = 'move'
   })
   item.addEventListener('dragleave', (e) => {
-    if (!item.contains(e.relatedTarget)) {
-      item.classList.remove('drag-over')
-    }
+    if (!item.contains(e.relatedTarget)) item.classList.remove('drag-over')
   })
   item.addEventListener('drop', async (e) => {
     e.preventDefault()
@@ -469,22 +418,14 @@ function createPageItem(page, index) {
   return item
 }
 
-// --- Drag remap helper ---
-
 function remapSelectedAfterDrag(selected, src, dst, total) {
   const next = new Set()
   selected.forEach(i => {
-    if (i === src) {
-      next.add(dst)
-    } else {
-      let ni = i
-      if (src < dst) {
-        if (i > src && i <= dst) ni = i - 1
-      } else {
-        if (i >= dst && i < src) ni = i + 1
-      }
-      next.add(ni)
-    }
+    if (i === src) { next.add(dst); return }
+    let ni = i
+    if (src < dst) { if (i > src && i <= dst) ni = i - 1 }
+    else { if (i >= dst && i < src) ni = i + 1 }
+    next.add(ni)
   })
   return next
 }
@@ -507,24 +448,13 @@ async function createNewPage() {
   if (!activeManifest) return
   const id = generatePageId()
   const emptyPage = {
-    canvasParams: {
-      width: activeManifest.width,
-      height: activeManifest.height,
-      backgroundColor: '#f0ebe8'
-    },
+    canvasParams: { width: activeManifest.width, height: activeManifest.height, backgroundColor: '#f0ebe8' },
     marks: []
   }
   setStatus('Creating page...')
   try {
     await api('savePage', { bookName: activeBook, pageId: id, pageData: emptyPage })
-    activeManifest.pages.push({
-      id,
-      filename: `${id}.json`,
-      caption: '',
-      pageDuration: null,
-      transitionDuration: null,
-      bgColor: '#f0ebe8'
-    })
+    activeManifest.pages.push({ id, filename: `${id}.json`, caption: '', pageDuration: null, transitionDuration: null, bgColor: '#f0ebe8' })
     await saveManifest()
     renderPagePanel()
     setStatus(`Created ${id}`)
@@ -541,17 +471,11 @@ async function duplicatePage(index) {
     const data = await api('getPage', { bookName: activeBook, pageId: srcPage.id })
     const newId = generatePageId()
     await api('savePage', { bookName: activeBook, pageId: newId, pageData: data.pageData })
-    // Duplicate carries the same thumbnail — cache it directly so no re-fetch needed
-    if (data.pageData.thumbnail) {
-      setCachedThumb(activeBook, newId, data.pageData.thumbnail)
-    }
-    const newEntry = {
-      ...srcPage,
-      id: newId,
-      filename: `${newId}.json`,
+    if (data.pageData.thumbnail) setCachedThumb(activeBook, newId, data.pageData.thumbnail)
+    activeManifest.pages.splice(index + 1, 0, {
+      ...srcPage, id: newId, filename: `${newId}.json`,
       caption: srcPage.caption ? `${srcPage.caption} (copy)` : ''
-    }
-    activeManifest.pages.splice(index + 1, 0, newEntry)
+    })
     await saveManifest()
     renderPagePanel()
     setStatus(`Duplicated as ${newId}`)
@@ -581,24 +505,19 @@ async function deletePage(index) {
 }
 
 function loadPageInSketcher(page) {
-  localStorage.setItem('sketcher_load_page', JSON.stringify({
-    bookName: activeBook,
-    pageId: page.id
-  }))
+  localStorage.setItem('sketcher_load_page', JSON.stringify({ bookName: activeBook, pageId: page.id }))
   window.location.href = 'index.html'
 }
 
 function generatePageId() {
-  const ts = Date.now().toString(36).toUpperCase()
-  return `${activeBook}_${ts}`
+  return `${activeBook}_${Date.now().toString(36).toUpperCase()}`
 }
 
 // --- Render helpers ---
 
 function renderPageToCanvas(pageJSON, targetCanvas) {
   const ctx = targetCanvas.getContext('2d')
-  const bg = pageJSON.canvasParams.backgroundColor || '#f0ebe8'
-  ctx.fillStyle = bg
+  ctx.fillStyle = pageJSON.canvasParams.backgroundColor || '#f0ebe8'
   ctx.fillRect(0, 0, targetCanvas.width, targetCanvas.height)
 
   const masksByIndex = []
@@ -619,6 +538,9 @@ function renderPageToCanvas(pageJSON, targetCanvas) {
   })
 }
 
+// Renders one transition frame using Page's shared interpolation logic.
+// All color blending goes through pageInstance.interpolateColor for consistency
+// with the live viewer's startTransition.
 function renderTransitionFrame(fromJSON, toJSON, t, targetCanvas, pageInstance) {
   const fromMarks = fromJSON.marks.map(m => Mark.fromJSON(m))
   const toMarks = toJSON.marks.map(m => Mark.fromJSON(m))
@@ -630,46 +552,14 @@ function renderTransitionFrame(fromJSON, toJSON, t, targetCanvas, pageInstance) 
   ctx.fillStyle = pageInstance.lerpHexColor(fromBg, toBg, t)
   ctx.fillRect(0, 0, targetCanvas.width, targetCanvas.height)
 
-  const { matched, unmatchedFrom, unmatchedTo } = pageInstance.matchMarks(fromMarks, toMarks)
+  const { matchedPairs, unmatchedFromData, unmatchedToData } =
+    pageInstance.buildTransitionData(fromMarks, toMarks)
 
-  matched.forEach(({ fromIdx, toIdx }) => {
-    const from = fromMarks[fromIdx]
-    const to = toMarks[toIdx]
-    const targetCount = Math.max(from.points.length, to.points.length)
-    const fromPts = pageInstance.resamplePoints(from.points, targetCount)
-    const toPts = pageInstance.resamplePoints(to.points, targetCount)
-    const interpPoints = pageInstance.interpolatePoints(fromPts, toPts, t)
-    const color = pageInstance.interpolateColor(from.color, to.color, t)
-    const width = from.markWidth + (to.markWidth - from.markWidth) * t
-    const hatch = from.hatchAngle + (to.hatchAngle - from.hatchAngle) * t
-    const tempMark = Mark.fromJSON({
-      ...to.toJSON(),
-      color,
-      markWidth: width,
-      hatchAngle: hatch,
-      points: interpPoints,
-      alpha: 1
-    })
-    tempMark.render(1, false, targetCanvas)
-  })
-
-  unmatchedFrom.forEach(fromIdx => {
-    const fromMark = fromMarks[fromIdx]
-    const target = pageInstance.nearestToCentroid(fromMark, toMarks, matched)
-    const targetPoints = fromMark.points.map(() => ({ x: target.x, y: target.y, visible: true }))
-    const interpPoints = pageInstance.interpolatePoints(fromMark.points, targetPoints, t)
-    const tempMark = Mark.fromJSON({ ...fromMark.toJSON(), points: interpPoints, alpha: 1 - t })
-    tempMark.render(1, false, targetCanvas)
-  })
-
-  unmatchedTo.forEach(toIdx => {
-    const toMark = toMarks[toIdx]
-    const source = pageInstance.nearestFromCentroid(toMark, fromMarks, matched)
-    const sourcePoints = toMark.points.map(() => ({ x: source.x, y: source.y, visible: true }))
-    const interpPoints = pageInstance.interpolatePoints(sourcePoints, toMark.points, t)
-    const tempMark = Mark.fromJSON({ ...toMark.toJSON(), points: interpPoints, alpha: t })
-    tempMark.render(1, false, targetCanvas)
-  })
+  pageInstance.renderTransitionStep(
+    fromMarks, toMarks,
+    matchedPairs, unmatchedFromData, unmatchedToData,
+    t, targetCanvas
+  )
 }
 
 // --- PNG Export ---
@@ -714,20 +604,13 @@ async function exportVideo() {
   if (!activeManifest || selectedPages.size === 0) return
 
   const allSelected = [...selectedPages].sort((a, b) => a - b)
-  const selectedEntries = allSelected
-    .map(i => activeManifest.pages[i])
-    .filter(Boolean)
-    .slice(0, VIDEO_PAGE_LIMIT)
+  const selectedEntries = allSelected.map(i => activeManifest.pages[i]).filter(Boolean).slice(0, VIDEO_PAGE_LIMIT)
   const pageCount = selectedEntries.length
 
-  if (allSelected.length > VIDEO_PAGE_LIMIT) {
-    setStatus(`Warning: only first ${VIDEO_PAGE_LIMIT} selected pages will be exported`)
-  }
+  if (allSelected.length > VIDEO_PAGE_LIMIT) setStatus(`Warning: only first ${VIDEO_PAGE_LIMIT} selected pages will be exported`)
 
   exportCancelled = false
   showProgress('Loading ffmpeg...', 0)
-
-  let ffmpeg
 
   try {
     if (!window.FFmpeg) {
@@ -741,26 +624,18 @@ async function exportVideo() {
     }
 
     const { createFFmpeg } = window.FFmpeg
-    ffmpeg = createFFmpeg({
-      corePath: `${window.location.origin}/ffmpeg/ffmpeg-core.js`,
-      log: false
-    })
-
+    const ffmpeg = createFFmpeg({ corePath: `${window.location.origin}/ffmpeg/ffmpeg-core.js`, log: false })
     await ffmpeg.load()
-
     if (exportCancelled) return
 
     updateProgress('Fetching pages...', 5)
-
     const pageJSONs = []
     for (let i = 0; i < pageCount; i++) {
       if (exportCancelled) return
-      const entry = selectedEntries[i]
-      const data = await api('getPage', { bookName: activeBook, pageId: entry.id })
+      const data = await api('getPage', { bookName: activeBook, pageId: selectedEntries[i].id })
       pageJSONs.push(data.pageData)
       updateProgress(`Fetching page ${i + 1} of ${pageCount}...`, 5 + (i / pageCount) * 15)
     }
-
     if (exportCancelled) return
 
     const FPS = 24
@@ -768,12 +643,9 @@ async function exportVideo() {
     offscreen.width = activeManifest.width
     offscreen.height = activeManifest.height
 
+    // pageHelper provides access to Page's interpolation and transition methods
     const pageHelper = new Page('_offscreen_')
-    pageHelper.canvasParams = {
-      width: activeManifest.width,
-      height: activeManifest.height,
-      backgroundColor: '#f0ebe8'
-    }
+    pageHelper.canvasParams = { width: activeManifest.width, height: activeManifest.height, backgroundColor: '#f0ebe8' }
 
     let frameIndex = 0
     const totalFrames = calculateTotalFrames(selectedEntries, FPS)
@@ -787,53 +659,34 @@ async function exportVideo() {
       const pageFrames = Math.round(pageDuration * FPS)
       const transFrames = Math.round(transDuration * FPS)
 
-      updateProgress(
-        `Rendering page ${p + 1} of ${pageCount}...`,
-        20 + (frameIndex / totalFrames) * 60
-      )
+      updateProgress(`Rendering page ${p + 1} of ${pageCount}...`, 20 + (frameIndex / totalFrames) * 60)
 
       let pageVariants
       if (entry.threeX) {
         pageVariants = []
         for (let v = 0; v < 3; v++) {
           renderPageToCanvas(pageJSONs[p], offscreen)
-          const blob = await canvasToBlob(offscreen)
-          pageVariants.push(new Uint8Array(await blob.arrayBuffer()))
+          pageVariants.push(new Uint8Array(await (await canvasToBlob(offscreen)).arrayBuffer()))
         }
       } else {
         renderPageToCanvas(pageJSONs[p], offscreen)
-        const blob = await canvasToBlob(offscreen)
-        pageVariants = [new Uint8Array(await blob.arrayBuffer())]
+        pageVariants = [new Uint8Array(await (await canvasToBlob(offscreen)).arrayBuffer())]
       }
 
       for (let f = 0; f < pageFrames; f++) {
         if (exportCancelled) return
-        const variantIndex = entry.threeX ? Math.floor(f / 2) % 3 : 0
-        const fname = `frame${String(frameIndex).padStart(6, '0')}.png`
-        ffmpeg.FS('writeFile', fname, pageVariants[variantIndex])
+        ffmpeg.FS('writeFile', `frame${String(frameIndex).padStart(6, '0')}.png`, pageVariants[entry.threeX ? Math.floor(f / 2) % 3 : 0])
         frameIndex++
       }
 
       if (p < pageCount - 1) {
-        updateProgress(
-          `Rendering transition ${p + 1} → ${p + 2}...`,
-          20 + (frameIndex / totalFrames) * 60
-        )
-
+        updateProgress(`Rendering transition ${p + 1} → ${p + 2}...`, 20 + (frameIndex / totalFrames) * 60)
         for (let f = 0; f < transFrames; f++) {
           if (exportCancelled) return
           const t = transFrames <= 1 ? 1 : f / (transFrames - 1)
-          renderTransitionFrame(
-            pageJSONs[p],
-            pageJSONs[p + 1],
-            t,
-            offscreen,
-            pageHelper
-          )
-          const transBlob = await canvasToBlob(offscreen)
-          const transData = new Uint8Array(await transBlob.arrayBuffer())
-          const fname = `frame${String(frameIndex).padStart(6, '0')}.png`
-          ffmpeg.FS('writeFile', fname, transData)
+          renderTransitionFrame(pageJSONs[p], pageJSONs[p + 1], t, offscreen, pageHelper)
+          const transData = new Uint8Array(await (await canvasToBlob(offscreen)).arrayBuffer())
+          ffmpeg.FS('writeFile', `frame${String(frameIndex).padStart(6, '0')}.png`, transData)
           frameIndex++
         }
       }
@@ -842,18 +695,9 @@ async function exportVideo() {
     if (exportCancelled) return
     updateProgress('Encoding video...', 80)
 
-    await ffmpeg.run(
-      '-framerate', String(FPS),
-      '-i', 'frame%06d.png',
-      '-c:v', 'libx264',
-      '-pix_fmt', 'yuv420p',
-      '-crf', '23',
-      '-movflags', '+faststart',
-      `${activeManifest.name}.mp4`
-    )
+    await ffmpeg.run('-framerate', String(FPS), '-i', 'frame%06d.png', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '23', '-movflags', '+faststart', `${activeManifest.name}.mp4`)
 
     updateProgress('Preparing download...', 95)
-
     const output = ffmpeg.FS('readFile', `${activeManifest.name}.mp4`)
     const blob = new Blob([output.buffer], { type: 'video/mp4' })
     const url = URL.createObjectURL(blob)
@@ -874,17 +718,13 @@ async function exportVideo() {
 }
 
 function calculateTotalFrames(entries, fps) {
-  let total = 0
-  for (let p = 0; p < entries.length; p++) {
-    const entry = entries[p]
-    const pageDuration = entry.pageDuration ?? activeManifest.defaultPageDuration
-    total += Math.round(pageDuration * fps)
+  return entries.reduce((total, entry, p) => {
+    total += Math.round((entry.pageDuration ?? activeManifest.defaultPageDuration) * fps)
     if (p < entries.length - 1) {
-      const transDuration = entry.transitionDuration ?? activeManifest.defaultTransitionDuration
-      total += Math.round(transDuration * fps)
+      total += Math.round((entry.transitionDuration ?? activeManifest.defaultTransitionDuration) * fps)
     }
-  }
-  return total
+    return total
+  }, 0)
 }
 
 function canvasToBlob(canvas) {
@@ -922,20 +762,12 @@ document.getElementById('modalConfirm').addEventListener('click', async () => {
   }
 })
 
-// --- Book settings ---
-
 document.getElementById('saveBookSettingsBtn').addEventListener('click', async () => {
   if (!activeManifest) return
-  activeManifest.defaultPageDuration = parseFloat(
-    document.getElementById('defaultPageDuration').value
-  ) || 5
-  activeManifest.defaultTransitionDuration = parseFloat(
-    document.getElementById('defaultTransDuration').value
-  ) || 1
+  activeManifest.defaultPageDuration = parseFloat(document.getElementById('defaultPageDuration').value) || 5
+  activeManifest.defaultTransitionDuration = parseFloat(document.getElementById('defaultTransDuration').value) || 1
   await saveManifest()
 })
-
-// --- Navbar ---
 
 document.getElementById('newBookBtn').addEventListener('click', openNewBookModal)
 document.getElementById('newPageBtn').addEventListener('click', createNewPage)
@@ -949,27 +781,18 @@ document.getElementById('refreshBtn').addEventListener('click', async () => {
   if (activeBook) await selectBook(activeBook)
 })
 
-document.getElementById('openSketcherBtn').addEventListener('click', () => {
-  window.location.href = 'index.html'
-})
-
+document.getElementById('openSketcherBtn').addEventListener('click', () => { window.location.href = 'index.html' })
 document.getElementById('openViewerBtn').addEventListener('click', () => {
-  if (activeBook) {
-    window.location.href = `viewer.html?book=${encodeURIComponent(activeBook)}`
-  } else {
-    window.location.href = 'viewer.html'
-  }
+  window.location.href = activeBook ? `viewer.html?book=${encodeURIComponent(activeBook)}` : 'viewer.html'
 })
 
 document.getElementById('exportPngBtn').addEventListener('click', exportPng)
 document.getElementById('exportVideoBtn').addEventListener('click', exportVideo)
 
-// --- Selected page style ---
 const style = document.createElement('style')
 style.textContent = `.page-item.selected { border-color: #6a8a6a; background: #333; }`
 document.head.appendChild(style)
 
-// --- Select All / Deselect All ---
 document.getElementById('selectAllBtn').addEventListener('click', () => {
   if (!activeManifest) return
   activeManifest.pages.forEach((_, i) => selectedPages.add(i))
@@ -980,14 +803,10 @@ document.getElementById('deselectAllBtn').addEventListener('click', () => {
   updateSelectionUI()
 })
 
-// --- Init ---
-
 async function init() {
   const saved = localStorage.getItem(ACTIVE_BOOK_KEY)
   await loadBooks()
-  if (saved && books.includes(saved)) {
-    await selectBook(saved)
-  }
+  if (saved && books.includes(saved)) await selectBook(saved)
 }
 
 init()

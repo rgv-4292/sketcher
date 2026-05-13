@@ -120,23 +120,18 @@ export class Page {
     let myMarkWidth = parseFloat(document.getElementById('markWidth').value)
     let myHatchAngle = parseFloat(document.getElementById('hatchAngle').value)
 
-    // --- Resolve SVG dimensions to pixels ---
-    // Priority: explicit px width/height → viewBox → fallback 744×1052 (A4 at 96dpi)
     const svgPxDims = resolveSvgDimensions(svgDOM)
     const svgW = svgPxDims.width
     const svgH = svgPxDims.height
 
-    // Target canvas dimensions
     const targetCanvas = document.getElementById(this.canvasId)
     const canvasW = targetCanvas ? targetCanvas.width : this.canvasParams.width
     const canvasH = targetCanvas ? targetCanvas.height : this.canvasParams.height
 
-    // Scale factor: fit SVG into canvas preserving aspect ratio
     const scale = Math.min(canvasW / svgW, canvasH / svgH)
     const offsetX = (canvasW - svgW * scale) / 2
     const offsetY = (canvasH - svgH * scale) / 2
 
-    // viewBox origin (for coordinate remapping)
     const vb = svgDOM.getAttribute('viewBox')
     let vbX = 0, vbY = 0, vbW = svgW, vbH = svgH
     if (vb) {
@@ -144,23 +139,16 @@ export class Page {
       if (parts.length === 4) { vbX = parts[0]; vbY = parts[1]; vbW = parts[2]; vbH = parts[3] }
     }
 
-    // Mount into a hidden container so SVG.js can traverse paths without affecting layout
     const container = document.createElement('div')
     container.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;width:0;height:0;overflow:hidden;'
     document.body.appendChild(container)
 
     try {
-      // Give SVG.js the SVG at its native viewBox size so pointAt() returns viewBox coords
       const draw = SVG().addTo(container).size(vbW, vbH).svg(svgDOM.outerHTML)
 
       const backgroundColor = this.canvasParams.backgroundColor
-      const canvasParams = {
-        width: canvasW,
-        height: canvasH,
-        backgroundColor: backgroundColor
-      }
+      const canvasParams = { width: canvasW, height: canvasH, backgroundColor }
 
-      // Map a viewBox coordinate to canvas pixel coordinate
       const toCanvas = (vx, vy) => ({
         x: offsetX + ((vx - vbX) / vbW) * svgW * scale,
         y: offsetY + ((vy - vbY) / vbH) * svgH * scale
@@ -183,7 +171,6 @@ export class Page {
         const styleDict = styleStringToDict(styleAttr)
 
         let myColor = hexToRgba(styleDict['stroke'] || '#000000', 0.75)
-        let myWidth = parseFloat(styleDict['stroke-width']) || 1.0
 
         let isFilled = false
         let myDensity = 3
@@ -196,7 +183,6 @@ export class Page {
           myColor = hexToRgba(myFill, 0.75)
           const fillOpacity = parseFloat(styleDict['fill-opacity'] ?? '1')
           myDensity = mapRange(fillOpacity, 0, 1, 16, 2)
-          console.log('fillOpacity', fillOpacity, 'myDensity', myDensity)
           if (fillOpacity >= 1) isMask = true
           isFilled = true
           myFillMode = 'solid'
@@ -249,9 +235,7 @@ export class Page {
 
   resamplePoints(points, targetCount) {
     if (points.length === targetCount) return points
-    if (points.length === 1) {
-      return Array(targetCount).fill({ ...points[0] })
-    }
+    if (points.length === 1) return Array(targetCount).fill({ ...points[0] })
     const result = []
     const step = (points.length - 1) / (targetCount - 1)
     for (let i = 0; i < targetCount; i++) {
@@ -317,10 +301,7 @@ export class Page {
     matched.forEach(({ toIdx }) => {
       const cent = this.computeCentroid(toMarks[toIdx].points)
       const dist = Math.hypot(cent.x - centFrom.x, cent.y - centFrom.y)
-      if (dist < bestDist) {
-        bestDist = dist
-        bestCentroid = cent
-      }
+      if (dist < bestDist) { bestDist = dist; bestCentroid = cent }
     })
     return bestCentroid || centFrom
   }
@@ -332,10 +313,7 @@ export class Page {
     matched.forEach(({ fromIdx }) => {
       const cent = this.computeCentroid(fromMarks[fromIdx].points)
       const dist = Math.hypot(cent.x - centTo.x, cent.y - centTo.y)
-      if (dist < bestDist) {
-        bestDist = dist
-        bestCentroid = cent
-      }
+      if (dist < bestDist) { bestDist = dist; bestCentroid = cent }
     })
     return bestCentroid || centTo
   }
@@ -348,19 +326,18 @@ export class Page {
     }))
   }
 
+  // Per-channel RGBA interpolation. Both inputs must be rgba(...) strings.
   interpolateColor(color1, color2, t) {
-    const parseColor = color => {
-      const match = color.match(
-        /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.?\d*))?\)/
-      )
+    const parse = color => {
+      const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.?\d*))?\)/)
       if (match) {
         const [, r, g, b, a] = match.map(Number)
         return [r, g, b, a !== undefined ? a : 1]
       }
       return [0, 0, 0, 1]
     }
-    const [r1, g1, b1, a1] = parseColor(color1)
-    const [r2, g2, b2, a2] = parseColor(color2)
+    const [r1, g1, b1, a1] = parse(color1)
+    const [r2, g2, b2, a2] = parse(color2)
     const r = Math.round(r1 + (r2 - r1) * t)
     const g = Math.round(g1 + (g2 - g1) * t)
     const b = Math.round(b1 + (b2 - b1) * t)
@@ -369,37 +346,68 @@ export class Page {
   }
 
   lerpHexColor(hex1, hex2, t) {
-    const parse = hex => {
-      const r = parseInt(hex.slice(1, 3), 16)
-      const g = parseInt(hex.slice(3, 5), 16)
-      const b = parseInt(hex.slice(5, 7), 16)
-      return [r, g, b]
-    }
+    const parse = hex => [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16))
     const [r1, g1, b1] = parse(hex1)
     const [r2, g2, b2] = parse(hex2)
-    const r = Math.round(r1 + (r2 - r1) * t).toString(16).padStart(2, '0')
-    const g = Math.round(g1 + (g2 - g1) * t).toString(16).padStart(2, '0')
-    const b = Math.round(b1 + (b2 - b1) * t).toString(16).padStart(2, '0')
-    return `#${r}${g}${b}`
+    return '#' + [
+      Math.round(r1 + (r2 - r1) * t),
+      Math.round(g1 + (g2 - g1) * t),
+      Math.round(b1 + (b2 - b1) * t)
+    ].map(v => v.toString(16).padStart(2, '0')).join('')
   }
 
-  async startTransition(newJSON) {
-    const FRAMES = 7
-    const FRAME_DURATION = 100
+  // Build one transition frame into targetCanvas at interpolation value t (0..1).
+  // Used by both startTransition (live viewer) and manager.renderTransitionFrame (video export).
+  renderTransitionStep(fromMarks, toMarks, matchedPairs, unmatchedFromData, unmatchedToData, t, targetCanvas) {
+    matchedPairs.forEach(({ fromPoints, toPoints, fromMark, toMark }) => {
+      const interpPoints = this.interpolatePoints(fromPoints, toPoints, t)
+      // interpolateColor gives smooth per-channel RGBA blend at every step
+      const color = this.interpolateColor(fromMark.color, toMark.color, t)
+      const width = fromMark.markWidth + (toMark.markWidth - fromMark.markWidth) * t
+      const hatch = fromMark.hatchAngle + (toMark.hatchAngle - fromMark.hatchAngle) * t
+      const density = fromMark.density + (toMark.density - fromMark.density) * t
+      const tempMark = Mark.fromJSON({
+        ...toMark.toJSON(),
+        color,
+        markWidth: width,
+        hatchAngle: hatch,
+        density,
+        points: interpPoints,
+        alpha: 1
+      })
+      tempMark.render(1, false, targetCanvas)
+    })
 
-    const fromMarks = this.marks.map(m => Mark.fromJSON(m.toJSON()))
-    const toMarks = newJSON.marks.map(markData => Mark.fromJSON(markData))
+    unmatchedFromData.forEach(({ fromMark, targetPoints }) => {
+      const interpPoints = this.interpolatePoints(fromMark.points, targetPoints, t)
+      // Fade out: interpolate toward transparent
+      const color = this.interpolateColor(fromMark.color, 'rgba(0,0,0,0)', t)
+      const tempMark = Mark.fromJSON({
+        ...fromMark.toJSON(),
+        points: interpPoints,
+        color,
+        alpha: 1 - t
+      })
+      tempMark.render(1, false, targetCanvas)
+    })
 
-    const fromBg = this.canvasParams.backgroundColor || '#f0ebe8'
-    const toBg = newJSON.canvasParams.backgroundColor || '#f0ebe8'
+    unmatchedToData.forEach(({ toMark, sourcePoints }) => {
+      const interpPoints = this.interpolatePoints(sourcePoints, toMark.points, t)
+      // Fade in: interpolate from transparent
+      const color = this.interpolateColor('rgba(0,0,0,0)', toMark.color, t)
+      const tempMark = Mark.fromJSON({
+        ...toMark.toJSON(),
+        points: interpPoints,
+        color,
+        alpha: t
+      })
+      tempMark.render(1, false, targetCanvas)
+    })
+  }
 
-    if (fromMarks.length === 0) {
-      this.marks = toMarks
-      this.tempMarks = []
-      this.render()
-      return
-    }
-
+  // Prepare the matched/unmatched data structures from two mark arrays.
+  // Returns { matchedPairs, unmatchedFromData, unmatchedToData } ready for renderTransitionStep.
+  buildTransitionData(fromMarks, toMarks) {
     const { matched, unmatchedFrom, unmatchedTo } = this.matchMarks(fromMarks, toMarks)
 
     const matchedPairs = matched.map(({ fromIdx, toIdx }) => {
@@ -428,6 +436,29 @@ export class Page {
       return { toMark, sourcePoints }
     })
 
+    return { matchedPairs, unmatchedFromData, unmatchedToData }
+  }
+
+  async startTransition(newJSON) {
+    const FRAMES = 7
+    const FRAME_DURATION = 100
+
+    const fromMarks = this.marks.map(m => Mark.fromJSON(m.toJSON()))
+    const toMarks = newJSON.marks.map(markData => Mark.fromJSON(markData))
+
+    const fromBg = this.canvasParams.backgroundColor || '#f0ebe8'
+    const toBg = newJSON.canvasParams.backgroundColor || '#f0ebe8'
+
+    if (fromMarks.length === 0) {
+      this.marks = toMarks
+      this.tempMarks = []
+      this.render()
+      return
+    }
+
+    const { matchedPairs, unmatchedFromData, unmatchedToData } =
+      this.buildTransitionData(fromMarks, toMarks)
+
     const offscreen = document.createElement('canvas')
     offscreen.width = this.canvasParams.width
     offscreen.height = this.canvasParams.height
@@ -441,28 +472,11 @@ export class Page {
       offCtx.fillStyle = this.lerpHexColor(fromBg, toBg, t)
       offCtx.fillRect(0, 0, offscreen.width, offscreen.height)
 
-      matchedPairs.forEach(({ fromPoints, toPoints, fromMark, toMark }) => {
-        const interpPoints = this.interpolatePoints(fromPoints, toPoints, t)
-        const color = this.interpolateColor(fromMark.color, toMark.color, t)
-        const width = fromMark.markWidth + (toMark.markWidth - fromMark.markWidth) * t
-        const hatch = fromMark.hatchAngle + (toMark.hatchAngle - fromMark.hatchAngle) * t
-        const tempMark = Mark.fromJSON({
-          ...toMark.toJSON(), color, markWidth: width, hatchAngle: hatch, points: interpPoints, alpha: 1
-        })
-        tempMark.render(1, false, offscreen)
-      })
-
-      unmatchedFromData.forEach(({ fromMark, targetPoints }) => {
-        const interpPoints = this.interpolatePoints(fromMark.points, targetPoints, t)
-        const tempMark = Mark.fromJSON({ ...fromMark.toJSON(), points: interpPoints, alpha: 1 - t })
-        tempMark.render(1, false, offscreen)
-      })
-
-      unmatchedToData.forEach(({ toMark, sourcePoints }) => {
-        const interpPoints = this.interpolatePoints(sourcePoints, toMark.points, t)
-        const tempMark = Mark.fromJSON({ ...toMark.toJSON(), points: interpPoints, alpha: t })
-        tempMark.render(1, false, offscreen)
-      })
+      this.renderTransitionStep(
+        fromMarks, toMarks,
+        matchedPairs, unmatchedFromData, unmatchedToData,
+        t, offscreen
+      )
 
       const bitmap = await createImageBitmap(offscreen)
       frames.push(bitmap)
@@ -470,21 +484,17 @@ export class Page {
 
     const mainCanvas = document.getElementById(this.canvasId)
     const mainCtx = mainCanvas.getContext('2d')
-
     let frameIndex = 0
     let lastTime = null
 
     const playFrame = (timestamp) => {
       if (!lastTime) lastTime = timestamp
-      const elapsed = timestamp - lastTime
-
-      if (elapsed >= FRAME_DURATION) {
+      if (timestamp - lastTime >= FRAME_DURATION) {
         mainCtx.drawImage(frames[frameIndex], 0, 0)
         frames[frameIndex].close()
         frameIndex++
         lastTime = timestamp
       }
-
       if (frameIndex < frames.length) {
         requestAnimationFrame(playFrame)
       } else {
@@ -501,49 +511,42 @@ export class Page {
 
 // --- Module-level helpers ---
 
-// Convert SVG attribute value with units to pixels at 96dpi
 function svgLengthToPx(value) {
   if (value === null || value === undefined || value === '') return null
   const s = String(value).trim()
   const num = parseFloat(s)
   if (isNaN(num)) return null
-  if (s.endsWith('mm')) return num * 3.7795275591    // 96/25.4
-  if (s.endsWith('cm')) return num * 37.795275591    // 96/2.54
+  if (s.endsWith('mm')) return num * 3.7795275591
+  if (s.endsWith('cm')) return num * 37.795275591
   if (s.endsWith('in')) return num * 96
-  if (s.endsWith('pt')) return num * 1.3333333333    // 96/72
-  if (s.endsWith('pc')) return num * 16              // 96/6
-  if (s.endsWith('px') || s.endsWith('%') || /^\d/.test(s)) return num
-  return num // unitless — treat as px
+  if (s.endsWith('pt')) return num * 1.3333333333
+  if (s.endsWith('pc')) return num * 16
+  return num
 }
 
-// Resolve the true pixel width/height of an SVG element.
-// Priority: explicit px width+height > viewBox w/h > fallback 744×1052 (A4 @ 96dpi)
 function resolveSvgDimensions(svgEl) {
   const wAttr = svgEl.getAttribute('width')
   const hAttr = svgEl.getAttribute('height')
   const vb = svgEl.getAttribute('viewBox')
 
-  let vbX = 0, vbY = 0, vbW = null, vbH = null
+  let vbW = null, vbH = null
   if (vb) {
     const parts = vb.trim().split(/[\s,]+/).map(parseFloat)
-    if (parts.length === 4) { vbX = parts[0]; vbY = parts[1]; vbW = parts[2]; vbH = parts[3] }
+    if (parts.length === 4) { vbW = parts[2]; vbH = parts[3] }
   }
 
   let w = svgLengthToPx(wAttr)
   let h = svgLengthToPx(hAttr)
 
-  // If width/height are percentages or missing, fall back to viewBox
   const wIsRelative = wAttr && String(wAttr).trim().endsWith('%')
   const hIsRelative = hAttr && String(hAttr).trim().endsWith('%')
 
   if (!w || wIsRelative) w = vbW
   if (!h || hIsRelative) h = vbH
-
-  // Final fallback: A4 at 96dpi
   if (!w) w = 744
   if (!h) h = 1052
 
-  return { width: w, height: h, vbX, vbY, vbW: vbW || w, vbH: vbH || h }
+  return { width: w, height: h, vbW: vbW || w, vbH: vbH || h }
 }
 
 function hexToRgba(hex, alpha = 0.75) {
@@ -555,17 +558,13 @@ function hexToRgba(hex, alpha = 0.75) {
       r = parseInt(hex[0] + hex[0], 16)
       g = parseInt(hex[1] + hex[1], 16)
       b = parseInt(hex[2] + hex[2], 16)
-    } else if (hex.length === 6) {
+    } else {
       r = parseInt(hex.substring(0, 2), 16)
       g = parseInt(hex.substring(2, 4), 16)
       b = parseInt(hex.substring(4, 6), 16)
-    } else {
-      throw new Error('Invalid hex color format.')
     }
     return `rgba(${r}, ${g}, ${b}, ${alpha})`
-  } catch (error) {
-    return `rgba(0, 0, 0, ${alpha})`
-  }
+  } catch { return `rgba(0, 0, 0, ${alpha})` }
 }
 
 function mapRange(value, inMin, inMax, outMin, outMax) {
@@ -577,7 +576,7 @@ function styleStringToDict(styleString) {
   if (!styleString) return styleDict
   styleString.split(';').forEach(style => {
     if (style && style.includes(':')) {
-      let [key, ...rest] = style.split(':')
+      const [key, ...rest] = style.split(':')
       styleDict[key.trim()] = rest.join(':').trim()
     }
   })

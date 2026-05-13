@@ -9,7 +9,7 @@ export class Mark {
     hatchAngle = 0.7,
     alpha = 1.0,
     trace = false,
-    gradient = null,
+    gradient = { x: 0, y: 0 },
     fillMode = 'none',
     density = 3,
     isMask = false,

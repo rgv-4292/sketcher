@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
   let lastFilledMark = -1
   let unsavedChanges = false
 
+  function debounce(fn, ms) {
+    let timer
+    return (...args) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), ms) }
+  }
+
   // --- State ---
   let currentColor = 'rgba(0,0,0,0.75)'
   let currentBgColor = '#f0ebe8'
@@ -92,10 +97,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   syncColorIndicator()
 
+  const _renderBgDebounced = debounce(() => page.render(), 150)
+
   function syncBgIndicator() {
     bgColorSwatch.style.background = currentBgColor
     page.canvasParams.backgroundColor = currentBgColor
-    page.render()
+    page.invalidateBuffer()
+    _renderBgDebounced()
   }
   syncBgIndicator()
 
@@ -429,6 +437,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentMark.points.length > 4) {
       page.addMark(currentMark)
       if (currentMark.filled) lastFilledMark = page.marks.length - 1
+      if (currentMark.isMask) {
+        page.invalidateBuffer()
+      } else {
+        page.appendMarkToBuffer(currentMark)
+      }
       unsavedChanges = true
     }
     currentMark = null
@@ -566,7 +579,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- Remaining toolbar buttons ---
   document.getElementById('deleteButton').addEventListener('pointerdown', () => {
-    page.removeLastMark(); unsavedChanges = true; page.render()
+    page.removeLastMark(); page.invalidateBuffer(); unsavedChanges = true; page.render()
   })
 
   document.getElementById('downloadButton').addEventListener('pointerdown', () => {

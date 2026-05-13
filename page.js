@@ -13,6 +13,10 @@ export class Page {
     this.tempMarks = []
     this.transitioning = false
     this.stepCount = 12
+    this._bufferDirty = true
+    this._bufferCanvas = document.createElement('canvas')
+    this._bufferCanvas.width = this.canvasParams.width
+    this._bufferCanvas.height = this.canvasParams.height
   }
 
   addMark(mark) {
@@ -35,6 +39,46 @@ export class Page {
     ctx.fillRect(0, 0, canvas.width, canvas.height)
   }
 
+  invalidateBuffer() {
+    this._bufferDirty = true
+  }
+
+  _renderToBuffer() {
+    const buf = this._bufferCanvas
+    buf.width = this.canvasParams.width
+    buf.height = this.canvasParams.height
+    const ctx = buf.getContext('2d')
+    ctx.clearRect(0, 0, buf.width, buf.height)
+
+    const masksByIndex = []
+    this.marks.forEach((mark, i) => {
+      if (mark.isMask && mark.points.length >= 3) {
+        masksByIndex.push({ index: i, polygon: mark.points.map(p => ({ x: p.x, y: p.y })) })
+      }
+    })
+
+    this.marks.forEach((mark, i) => {
+      try {
+        const maskPolygons = masksByIndex.filter(m => m.index > i).map(m => m.polygon)
+        mark.render(this.alpha, false, buf, maskPolygons)
+      } catch (error) { console.log(error) }
+    })
+
+    this._bufferDirty = false
+  }
+
+  appendMarkToBuffer(mark) {
+    const buf = this._bufferCanvas
+    const markIndex = this.marks.length - 1
+    const maskPolygons = this.marks
+      .map((m, i) => ({ m, i }))
+      .filter(({ m, i }) => m.isMask && m.points.length >= 3 && i > markIndex)
+      .map(({ m }) => m.points.map(p => ({ x: p.x, y: p.y })))
+    try {
+      mark.render(this.alpha, false, buf, maskPolygons)
+    } catch (error) { console.log(error) }
+  }
+
   shuffle(array) {
     let currentIndex = array.length
     while (currentIndex != 0) {
@@ -48,34 +92,52 @@ export class Page {
   }
 
   render(trans = false, targetCanvas) {
-    this.clearCanvas(targetCanvas)
+    // Explicit target (transition/export): full direct render, bypass buffer.
+    if (targetCanvas) {
+      this.clearCanvas(targetCanvas)
+      const masksByIndex = []
+      this.marks.forEach((mark, i) => {
+        if (mark.isMask && mark.points.length >= 3) {
+          masksByIndex.push({ index: i, polygon: mark.points.map(p => ({ x: p.x, y: p.y })) })
+        }
+      })
+      this.marks.forEach((mark, i) => {
+        try {
+          const maskPolygons = masksByIndex.filter(m => m.index > i).map(m => m.polygon)
+          mark.render(this.alpha, trans, targetCanvas, maskPolygons)
+        } catch (error) { console.log(error) }
+      })
+      const allMaskPolygons = masksByIndex.map(m => m.polygon)
+      this.tempMarks.forEach(mark => {
+        try { mark.render(this.alpha, trans, targetCanvas, allMaskPolygons) }
+        catch (error) { console.log(error) }
+      })
+      return
+    }
 
-    const masksByIndex = []
-    this.marks.forEach((mark, i) => {
-      if (mark.isMask && mark.points.length >= 3) {
-        masksByIndex.push({ index: i, polygon: mark.points.map(p => ({ x: p.x, y: p.y })) })
-      }
-    })
+    // Main canvas: ensure buffer is current, then blit.
+    if (this._bufferDirty) this._renderToBuffer()
 
-    this.marks.forEach((mark, i) => {
-      try {
-        const maskPolygons = masksByIndex
-          .filter(m => m.index > i)
-          .map(m => m.polygon)
-        mark.render(this.alpha, trans, targetCanvas, maskPolygons)
-      } catch (error) {
-        console.log(error)
-      }
-    })
+    const canvas = document.getElementById(this.canvasId)
+    const ctx = canvas.getContext('2d')
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    ctx.fillStyle = this.canvasParams.backgroundColor
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+    ctx.drawImage(this._bufferCanvas, 0, 0)
 
-    const allMaskPolygons = masksByIndex.map(m => m.polygon)
-    this.tempMarks.forEach(mark => {
-      try {
-        mark.render(this.alpha, trans, targetCanvas, allMaskPolygons)
-      } catch (error) {
-        console.log(error)
-      }
-    })
+    if (this.tempMarks.length > 0) {
+      const masksByIndex = []
+      this.marks.forEach((mark, i) => {
+        if (mark.isMask && mark.points.length >= 3) {
+          masksByIndex.push({ index: i, polygon: mark.points.map(p => ({ x: p.x, y: p.y })) })
+        }
+      })
+      const allMaskPolygons = masksByIndex.map(m => m.polygon)
+      this.tempMarks.forEach(mark => {
+        try { mark.render(this.alpha, trans, null, allMaskPolygons) }
+        catch (error) { console.log(error) }
+      })
+    }
   }
 
   isPointInPolygon(x, y, points) {

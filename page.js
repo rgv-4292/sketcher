@@ -12,7 +12,7 @@ export class Page {
     }
     this.tempMarks = []
     this.transitioning = false
-    this.stepCount = 12
+    this.stepCount = 24
   }
 
   addMark(mark) {

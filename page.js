@@ -237,7 +237,7 @@ export class Page {
         let isFilled = false
         let myDensity = 3
         let myTrace = false
-        let isMask = false
+        let myIsMask = false
         let myFillMode = 'none'
 
         const myFill = styleDict['fill']
@@ -245,7 +245,7 @@ export class Page {
           myColor = hexToRgba(myFill, 0.75)
           const fillOpacity = parseFloat(styleDict['fill-opacity'] ?? '1')
           myDensity = mapRange(fillOpacity, 0, 1, 16, 2)
-          if (fillOpacity >= 1) isMask = true
+          if (fillOpacity >= 1) myIsMask = true
           isFilled = true
           myFillMode = 'solid'
         }
@@ -263,7 +263,7 @@ export class Page {
           trace: myTrace,
           fillMode: myFillMode,
           density: myDensity,
-          isMask
+          isMask: myIsMask
         })
       })
 

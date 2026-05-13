@@ -1,0 +1,34 @@
+{
+  "name": "New_book",
+  "orientation": "landscape",
+  "width": 960,
+  "height": 720,
+  "defaultPageDuration": 5,
+  "defaultTransitionDuration": 1,
+  "pages": [
+    {
+      "id": "New_book_MP4EZCJ0",
+      "filename": "New_book_MP4EZCJ0.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "New_book_MP4F066F",
+      "filename": "New_book_MP4F066F.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    },
+    {
+      "id": "New_book_MP4F1RIF",
+      "filename": "New_book_MP4F1RIF.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    }
+  ]
+}

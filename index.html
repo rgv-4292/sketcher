@@ -7,161 +7,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sketcher</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             height: 100vh;
             background: #222;
             -webkit-user-select: none;
             user-select: none;
+            overflow: hidden;
         }
 
-        canvas {
-            touch-action: none;
-            display: block;
-        }
-
+        /* ── Navbar ─────────────────────────────────────────────── */
         #navbar {
             background-color: #333;
             width: 100%;
-            padding: 8px 10px;
+            padding: 6px 10px;
             display: flex;
-            justify-content: center;
+            align-items: center;
             gap: 8px;
+            flex-shrink: 0;
+            z-index: 10;
         }
 
         #navbar button {
             color: white;
             background-color: #444;
             border: none;
-            padding: 8px 12px;
+            padding: 7px 11px;
             cursor: pointer;
             border-radius: 4px;
             font-size: 13px;
+            white-space: nowrap;
         }
 
-        #navbar button:hover {
-            background-color: #555;
-        }
+        #navbar button:hover { background-color: #555; }
+        #navbar button.active { background-color: #5a7a5a; }
 
         #colorIndicator {
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             border: 2px solid #888;
             cursor: pointer;
-            background: rgba(0, 0, 0, 0.75);
+            background: rgba(0,0,0,0.75);
             flex-shrink: 0;
-            align-self: center;
         }
 
-        #bgColorIndicator {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            border: 2px solid #888;
-            cursor: pointer;
-            background: #f0ebe8;
-            flex-shrink: 0;
-            align-self: center;
+        /* ── Main area: sidebar + canvas ────────────────────────── */
+        #main {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            position: relative;
         }
 
-        /* Props Panel */
-        #controls {
-            display: none;
+        /* ── Left sidebar ───────────────────────────────────────── */
+        #sidebar {
+            width: 28%;
+            min-width: 200px;
+            max-width: 320px;
             background: #2a2a2a;
             color: #ddd;
-            width: 100%;
-            max-width: 480px;
-            padding: 12px 16px;
-            overflow-y: auto;
-            max-height: calc(100vh - 50px);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            transition: width 0.2s ease, min-width 0.2s ease, padding 0.2s ease;
+            overflow: hidden;
+            z-index: 5;
         }
 
+        #sidebar.collapsed {
+            width: 0;
+            min-width: 0;
+            padding: 0;
+        }
+
+        #sidebarScroll {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 10px 12px 20px 12px;
+            /* Allow stylus/touch to scroll sidebar without starting a draw stroke */
+            touch-action: pan-y;
+        }
+
+        /* ── Canvas area ────────────────────────────────────────── */
+        #canvasArea {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        canvas {
+            touch-action: none;
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* ── Section labels ─────────────────────────────────────── */
         .section-label {
             color: #aaa;
-            font-size: 11px;
+            font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin: 14px 0 6px 0;
+            margin: 12px 0 5px 0;
             border-bottom: 1px solid #444;
-            padding-bottom: 4px;
+            padding-bottom: 3px;
         }
 
+        .section-label:first-child { margin-top: 4px; }
+
+        /* ── Control rows ───────────────────────────────────────── */
         .control-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 8px;
-            gap: 10px;
+            margin-bottom: 7px;
+            gap: 8px;
         }
 
         .control-row label {
-            font-size: 13px;
+            font-size: 12px;
             color: #ccc;
-            min-width: 130px;
+            flex: 1;
         }
 
         .control-row input[type="number"] {
-            width: 70px;
+            width: 62px;
             background: #333;
             border: 1px solid #555;
             color: #fff;
-            padding: 4px 6px;
+            padding: 4px 5px;
             border-radius: 3px;
-            font-size: 13px;
+            font-size: 12px;
         }
 
-        .control-row input[type="range"] {
-            flex: 1;
-        }
+        .control-row input[type="range"] { flex: 1; }
 
         .control-row input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
+            width: 17px;
+            height: 17px;
             cursor: pointer;
+            flex-shrink: 0;
         }
 
-        /* Fill mode 3-way toggle */
+        /* Disabled state for fill-mode-dependent rows */
+        .control-row.disabled {
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        .control-row.disabled label { color: #888; }
+
+        /* ── Fill mode toggle ───────────────────────────────────── */
         #fillModeGroup {
             display: flex;
-            gap: 6px;
+            gap: 4px;
             flex: 1;
             justify-content: flex-end;
         }
-
 
         #fillModeGroup button {
             flex: 1;
             background: #444;
             color: #ccc;
             border: 1px solid #555;
-            padding: 5px 4px;
+            padding: 5px 3px;
             border-radius: 3px;
             cursor: pointer;
-            font-size: 12px;
+            font-size: 11px;
         }
 
         #fillModeGroup button.active {
-            background: #666;
+            background: #5a7a5a;
             color: #fff;
-            border-color: #888;
+            border-color: #7a9a7a;
         }
 
-        /* Presets */
+        /* ── Gradient point row ─────────────────────────────────── */
+        /* Always visible; checkbox disabled unless fillMode=gradient */
+        #setGradientRow label { color: #ccc; }
+
+        /* ── Background color swatch ────────────────────────────── */
+        .bg-swatch {
+            width: 26px;
+            height: 26px;
+            border-radius: 4px;
+            border: 2px solid #666;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        /* ── Presets ────────────────────────────────────────────── */
         .preset-row {
             display: flex;
             align-items: center;
-            gap: 6px;
-            margin-bottom: 8px;
+            gap: 5px;
+            margin-bottom: 6px;
         }
 
         .preset-row input[type="text"] {
@@ -169,46 +219,31 @@
             background: #333;
             border: 1px solid #555;
             color: #fff;
-            padding: 4px 6px;
+            padding: 4px 5px;
             border-radius: 3px;
-            font-size: 13px;
+            font-size: 11px;
+            min-width: 0;
         }
 
         .preset-row button {
             background: #444;
             color: #ccc;
             border: 1px solid #555;
-            padding: 5px 8px;
+            padding: 4px 7px;
             border-radius: 3px;
             cursor: pointer;
-            font-size: 12px;
+            font-size: 11px;
+            white-space: nowrap;
         }
 
-        .preset-row button:hover {
-            background: #555;
-        }
+        .preset-row button:hover { background: #555; }
 
         .preset-row button:disabled {
             opacity: 0.4;
             cursor: default;
         }
 
-        /* Background color row */
-        #bgColorRow {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .bg-swatch {
-            width: 28px;
-            height: 28px;
-            border-radius: 4px;
-            border: 2px solid #666;
-            cursor: pointer;
-        }
-
-        /* Color wheel popup */
+        /* ── Color wheel popup ──────────────────────────────────── */
         #colorPopup {
             display: none;
             position: fixed;
@@ -221,16 +256,14 @@
             padding: 16px;
             z-index: 1000;
             width: 280px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.6);
         }
 
-        #colorPopup.visible {
-            display: block;
-        }
+        #colorPopup.visible { display: block; }
 
         #colorPopupTitle {
             color: #aaa;
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 12px;
@@ -245,10 +278,7 @@
             cursor: crosshair;
         }
 
-        #colorWheelBrightness {
-            width: 100%;
-            margin-bottom: 12px;
-        }
+        #colorWheelBrightness { width: 100%; margin-bottom: 12px; }
 
         #colorPreviewBox {
             width: 100%;
@@ -260,23 +290,20 @@
 
         #paletteRow {
             display: flex;
-            gap: 6px;
+            gap: 5px;
             margin-bottom: 12px;
             flex-wrap: wrap;
         }
 
         .palette-swatch {
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             border-radius: 4px;
             border: 2px solid #555;
             cursor: pointer;
-            background: transparent;
         }
 
-        .palette-swatch.filled {
-            border-color: #888;
-        }
+        .palette-swatch.filled { border-color: #888; }
 
         #paletteSaveBtn {
             width: 100%;
@@ -290,9 +317,7 @@
             margin-bottom: 8px;
         }
 
-        #paletteSaveBtn:hover {
-            background: #555;
-        }
+        #paletteSaveBtn:hover { background: #555; }
 
         #colorPopupClose {
             width: 100%;
@@ -305,9 +330,7 @@
             font-size: 13px;
         }
 
-        #colorPopupClose:hover {
-            background: #666;
-        }
+        #colorPopupClose:hover { background: #666; }
 
         #colorPopupOverlay {
             display: none;
@@ -316,25 +339,17 @@
             z-index: 999;
         }
 
-        #colorPopupOverlay.visible {
-            display: block;
-        }
-
-        #downloadButton.saved {
-            background-color: #5a7a5a;
-        }
-
-        #downloadButton.error {
-            background-color: #7a3a3a;
-        }
+        #colorPopupOverlay.visible { display: block; }
     </style>
 </head>
 
 <body>
+
+    <!-- ── Navbar ───────────────────────────────────────────────── -->
     <div id="navbar">
-        <button id="controlButton">Props</button>
+        <button id="controlButton" title="Toggle props panel">Props</button>
         <div id="colorIndicator" title="Mark Color"></div>
-        <button id="bookBtn" class="nav-btn">No Book</button>
+        <button id="bookBtn">No Book</button>
         <button id="deleteButton">Del Last</button>
         <button id="prevPageBtn">◀</button>
         <button id="nextPageBtn">▶</button>
@@ -342,143 +357,157 @@
         <button id="loadButton">Load</button>
     </div>
 
-    <div id="controls">
-        <!-- Drawing Mode -->
-        <div class="section-label">Drawing Mode</div>
+    <!-- ── Main layout ──────────────────────────────────────────── -->
+    <div id="main">
 
-        <div class="control-row">
-            <label>Fill Mode</label>
-            <div id="fillModeGroup">
-                <button id="fillModeNone" class="active">None</button>
-                <button id="fillModeGradient">Gradient</button>
-                <button id="fillModeSolid">Solid</button>
-            </div>
+        <!-- ── Left sidebar ─────────────────────────────────────── -->
+        <div id="sidebar">
+            <div id="sidebarScroll">
+
+                <!-- Drawing Mode -->
+                <div class="section-label">Drawing Mode</div>
+
+                <div class="control-row">
+                    <label>Fill Mode</label>
+                    <div id="fillModeGroup">
+                        <button id="fillModeNone" class="active">None</button>
+                        <button id="fillModeGradient">Gradient</button>
+                        <button id="fillModeSolid">Solid</button>
+                    </div>
+                </div>
+
+                <!-- Always visible; disabled unless fillMode = gradient -->
+                <div class="control-row" id="setGradientRow">
+                    <label>Set Gradient Point</label>
+                    <input type="checkbox" id="checkbox2" disabled>
+                </div>
+
+                <!-- Trace Outline: only meaningful when fill is active -->
+                <div class="control-row" id="traceRow">
+                    <label>Trace Outline</label>
+                    <input type="checkbox" id="checkbox1">
+                </div>
+
+                <!-- Density: only meaningful for filled modes -->
+                <div class="control-row" id="densityRow">
+                    <label>Density</label>
+                    <input type="number" id="density" value="3" step="0.5" min="1" max="20">
+                </div>
+
+                <div class="control-row">
+                    <label>Mask Below</label>
+                    <input type="checkbox" id="checkboxMask">
+                </div>
+
+                <!-- Mark Style -->
+                <div class="section-label">Mark Style</div>
+
+                <div class="control-row">
+                    <label>Width</label>
+                    <input type="number" id="markWidth" value="2" step="0.1">
+                </div>
+
+                <div class="control-row">
+                    <label>Saturation</label>
+                    <input type="number" id="hatchAngle" value="0.7" step="0.1">
+                </div>
+
+                <div class="control-row">
+                    <label>Scatter</label>
+                    <input type="number" id="scatter" value="0">
+                </div>
+
+                <!-- Connection -->
+                <div class="section-label">Connection</div>
+
+                <div class="control-row">
+                    <label>Min Distance</label>
+                    <input type="number" id="minDistance" value="3" step="0.1">
+                </div>
+
+                <div class="control-row">
+                    <label>Distance Threshold</label>
+                    <input type="number" id="distanceThreshold" value="12">
+                </div>
+
+                <div class="control-row">
+                    <label>Connection %</label>
+                    <input type="number" id="connectionProbability" value="75">
+                </div>
+
+                <!-- Page -->
+                <div class="section-label">Page</div>
+
+                <div class="control-row">
+                    <label>Background Color</label>
+                    <div id="bgColorSwatch" class="bg-swatch" style="background:#f0ebe8;"></div>
+                </div>
+
+                <!-- Presets -->
+                <div class="section-label">Presets</div>
+
+                <div class="preset-row">
+                    <input type="text" id="preset0name" placeholder="Preset 1">
+                    <button id="preset0save">Save</button>
+                    <button id="preset0load" disabled>Load</button>
+                </div>
+                <div class="preset-row">
+                    <input type="text" id="preset1name" placeholder="Preset 2">
+                    <button id="preset1save">Save</button>
+                    <button id="preset1load" disabled>Load</button>
+                </div>
+                <div class="preset-row">
+                    <input type="text" id="preset2name" placeholder="Preset 3">
+                    <button id="preset2save">Save</button>
+                    <button id="preset2load" disabled>Load</button>
+                </div>
+                <div class="preset-row">
+                    <input type="text" id="preset3name" placeholder="Preset 4">
+                    <button id="preset3save">Save</button>
+                    <button id="preset3load" disabled>Load</button>
+                </div>
+                <div class="preset-row">
+                    <input type="text" id="preset4name" placeholder="Preset 5">
+                    <button id="preset4save">Save</button>
+                    <button id="preset4load" disabled>Load</button>
+                </div>
+                <div class="preset-row">
+                    <input type="text" id="preset5name" placeholder="Preset 6">
+                    <button id="preset5save">Save</button>
+                    <button id="preset5load" disabled>Load</button>
+                </div>
+                <div class="preset-row">
+                    <input type="text" id="preset6name" placeholder="Preset 7">
+                    <button id="preset6save">Save</button>
+                    <button id="preset6load" disabled>Load</button>
+                </div>
+                <div class="preset-row">
+                    <input type="text" id="preset7name" placeholder="Preset 8">
+                    <button id="preset7save">Save</button>
+                    <button id="preset7load" disabled>Load</button>
+                </div>
+                <div class="preset-row">
+                    <input type="text" id="preset8name" placeholder="Preset 9">
+                    <button id="preset8save">Save</button>
+                    <button id="preset8load" disabled>Load</button>
+                </div>
+                <div class="preset-row">
+                    <input type="text" id="preset9name" placeholder="Preset 10">
+                    <button id="preset9save">Save</button>
+                    <button id="preset9load" disabled>Load</button>
+                </div>
+
+            </div><!-- /sidebarScroll -->
+        </div><!-- /sidebar -->
+
+        <!-- ── Canvas area ───────────────────────────────────────── -->
+        <div id="canvasArea">
+            <canvas id="myCanvas" width="720" height="960" style="display:none;"></canvas>
         </div>
 
-        <div class="control-row" id="setGradientRow" style="display:none;">
-            <label>Set Gradient Point</label>
-            <input type="checkbox" id="checkbox2">
-        </div>
+    </div><!-- /main -->
 
-        <div class="control-row">
-            <label>Trace Outline</label>
-            <input type="checkbox" id="checkbox1">
-        </div>
-
-        <div class="control-row">
-            <label>Mask Below</label>
-            <input type="checkbox" id="checkboxMask">
-        </div>
-
-        <!-- Mark Style -->
-        <div class="section-label">Mark Style</div>
-
-        <div class="control-row">
-            <label>Width</label>
-            <input type="number" id="markWidth" value="2" step="0.1">
-        </div>
-
-        <div class="control-row">
-            <label>Saturation</label>
-            <input type="number" id="hatchAngle" value="0.7" step="0.1">
-        </div>
-
-        <div class="control-row">
-            <label>Scatter</label>
-            <input type="number" id="scatter" value="0">
-        </div>
-
-        <div class="control-row" id="densityRow">
-            <label>Density</label>
-            <input type="number" id="density" value="3" step="0.5" min="1" max="20">
-        </div>
-
-        <!-- Connection -->
-        <div class="section-label">Connection</div>
-
-        <div class="control-row">
-            <label>Min Distance</label>
-            <input type="number" id="minDistance" value="3" step="0.1">
-        </div>
-
-        <div class="control-row">
-            <label>Distance Threshold</label>
-            <input type="number" id="distanceThreshold" value="12">
-        </div>
-
-        <div class="control-row">
-            <label>Connection %</label>
-            <input type="number" id="connectionProbability" value="75">
-        </div>
-
-        <!-- Page -->
-        <div class="section-label">Page</div>
-
-        <div class="control-row" id="bgColorRow">
-            <label>Background Color</label>
-            <div id="bgColorSwatch" class="bg-swatch" style="background:#f0ebe8;"></div>
-        </div>
-
-        <!-- Presets -->
-        <div class="section-label">Presets</div>
-
-        <div class="preset-row" id="preset0row">
-            <input type="text" id="preset0name" placeholder="Preset 1">
-            <button id="preset0save">Save</button>
-            <button id="preset0load" disabled>Load</button>
-        </div>
-        <div class="preset-row" id="preset1row">
-            <input type="text" id="preset1name" placeholder="Preset 2">
-            <button id="preset1save">Save</button>
-            <button id="preset1load" disabled>Load</button>
-        </div>
-        <div class="preset-row" id="preset2row">
-            <input type="text" id="preset2name" placeholder="Preset 3">
-            <button id="preset2save">Save</button>
-            <button id="preset2load" disabled>Load</button>
-        </div>
-        <div class="preset-row" id="preset3row">
-            <input type="text" id="preset3name" placeholder="Preset 4">
-            <button id="preset3save">Save</button>
-            <button id="preset3load" disabled>Load</button>
-        </div>
-        <div class="preset-row" id="preset4row">
-            <input type="text" id="preset4name" placeholder="Preset 5">
-            <button id="preset4save">Save</button>
-            <button id="preset4load" disabled>Load</button>
-        </div>
-        <div class="preset-row" id="preset5row">
-            <input type="text" id="preset5name" placeholder="Preset 6">
-            <button id="preset5save">Save</button>
-            <button id="preset5load" disabled>Load</button>
-        </div>
-        <div class="preset-row" id="preset6row">
-            <input type="text" id="preset6name" placeholder="Preset 7">
-            <button id="preset6save">Save</button>
-            <button id="preset6load" disabled>Load</button>
-        </div>
-        <div class="preset-row" id="preset7row">
-            <input type="text" id="preset7name" placeholder="Preset 8">
-            <button id="preset7save">Save</button>
-            <button id="preset7load" disabled>Load</button>
-        </div>
-        <div class="preset-row" id="preset8row">
-            <input type="text" id="preset8name" placeholder="Preset 9">
-            <button id="preset8save">Save</button>
-            <button id="preset8load" disabled>Load</button>
-        </div>
-        <div class="preset-row" id="preset9row">
-            <input type="text" id="preset9name" placeholder="Preset 10">
-            <button id="preset9save">Save</button>
-            <button id="preset9load" disabled>Load</button>
-        </div>
-    </div>
-
-    <div id="canvasWrapper" style="flex:1; display:flex; align-items:center; justify-content:center; width:100%;">
-        <canvas id="myCanvas" width="720" height="960" style="display:none; max-width:100%; max-height:100%;"></canvas>
-    </div>
-
-    <!-- Color Wheel Overlay -->
+    <!-- ── Color Wheel Popup ─────────────────────────────────────── -->
     <div id="colorPopupOverlay"></div>
     <div id="colorPopup">
         <div id="colorPopupTitle">Select Color</div>
@@ -494,5 +523,4 @@
     <script src="./perlin.js"></script>
     <script type="module" src="./index.js"></script>
 </body>
-
 </html>

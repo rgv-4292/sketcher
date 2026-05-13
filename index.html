@@ -391,6 +391,55 @@
         }
 
         #placementBanner.visible { display: block; }
+
+        /* ── Bottom layer bar ────────────────────────────────────── */
+        #bottomBar {
+            background: #333;
+            width: 100%;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+            z-index: 10;
+        }
+
+        #bottomBar button {
+            color: white;
+            background: #444;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        #bottomBar button:hover { background: #555; }
+
+        #layerNameInput {
+            flex: 1;
+            max-width: 220px;
+            background: #444;
+            border: 1px solid #555;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        #layerNameInput:disabled {
+            color: #888;
+            background: #383838;
+            border-color: #444;
+        }
+
+        #layerNameInput:focus { outline: 1px solid #7a9a7a; }
+
+        /* Active layer row highlight */
+        .import-row.active-layer {
+            border-left: 3px solid #5a7a5a;
+            padding-left: 4px;
+        }
     </style>
 </head>
 
@@ -548,8 +597,12 @@
                     <button id="preset9load" disabled>Load</button>
                 </div>
 
-                <!-- Imports -->
-                <div class="section-label">Imports</div>
+                <!-- Layers -->
+                <div class="section-label">Layers</div>
+
+                <div style="margin-bottom:6px;">
+                    <button id="addLayerBtn" style="width:100%;background:#444;color:#ccc;border:1px solid #555;padding:5px;border-radius:3px;cursor:pointer;font-size:12px;">+ New Drawing Layer</button>
+                </div>
 
                 <div class="control-row" id="importRotationRow">
                     <label>Rotation</label>
@@ -569,6 +622,14 @@
         </div>
 
     </div><!-- /main -->
+
+    <!-- ── Bottom layer bar ────────────────────────────────────── -->
+    <div id="bottomBar">
+        <button id="layerPrevBtn">◄</button>
+        <input id="layerNameInput" type="text" placeholder="Layer name" autocomplete="off">
+        <button id="layerNextBtn">►</button>
+        <span id="layerCounter" style="color:#aaa;font-size:12px;white-space:nowrap;"></span>
+    </div>
 
     <!-- ── Color Wheel Popup ─────────────────────────────────────── -->
     <div id="colorPopupOverlay"></div>

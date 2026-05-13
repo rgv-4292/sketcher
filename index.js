@@ -168,48 +168,94 @@ document.addEventListener('DOMContentLoaded', function () {
     page.invalidateBuffer()
     unsavedChanges = true
     cancelImportMode()
-    refreshImportList()
+    refreshLayerList()
   }
 
-  function refreshImportList() {
+  // --- Layer helpers ---
+
+  // Returns true if owner is an import (has _NN suffix from a file placement)
+  function isImportLayer(owner) {
+    return owner !== null && /_\d+$/.test(owner)
+  }
+
+  // Ordered list of all layers: [null, ...unique non-null owners in insertion order]
+  function getLayerOrder() {
+    const seen = []
+    page.marks.forEach(m => {
+      if (m.owner !== null && !seen.includes(m.owner)) seen.push(m.owner)
+    })
+    return [null, ...seen]
+  }
+
+  function layerDisplayName(owner) {
+    return owner === null ? 'Page' : owner
+  }
+
+  function setActiveLayer(owner) {
+    activeLayer = owner
+    const nameInput = document.getElementById('layerNameInput')
+    const isDrawing = owner !== null && !isImportLayer(owner)
+    nameInput.value = layerDisplayName(owner)
+    nameInput.disabled = !isDrawing
+    refreshLayerList()
+  }
+
+  function refreshLayerList() {
     const list = document.getElementById('importList')
     list.innerHTML = ''
-    // Collect unique owner instances that are currently in page.marks
-    const seen = new Set()
-    page.marks.forEach(m => { if (m.owner) seen.add(m.owner) })
-    if (seen.size === 0) {
-      list.innerHTML = '<div style="color:#666;font-size:11px;">No imports placed</div>'
-      return
-    }
-    seen.forEach(owner => {
+    const layers = getLayerOrder()
+
+    // Sync bottom bar counter
+    const idx = layers.indexOf(activeLayer)
+    const safeIdx = idx === -1 ? 0 : idx
+    document.getElementById('layerCounter').textContent =
+      `${safeIdx + 1} / ${layers.length}`
+
+    layers.forEach(owner => {
       const row = document.createElement('div')
-      row.className = 'import-row'
+      row.className = 'import-row' + (owner === activeLayer ? ' active-layer' : '')
+
       const name = document.createElement('span')
       name.className = 'import-name'
-      name.textContent = owner
-      name.title = owner
-      const reBtn = document.createElement('button')
-      reBtn.textContent = 'Re-place'
-      reBtn.addEventListener('pointerdown', async () => {
-        const ownerMarks = page.marks
-          .filter(m => m.owner === owner)
-          .map(m => Mark.fromJSON(m.toJSON()))
-        const base = owner.replace(/_\d+$/, '')
-        await enterImportMode(ownerMarks, base, owner)  // pass owner as replaceOwner
-      })
-      const delBtn = document.createElement('button')
-      delBtn.textContent = 'Del'
-      delBtn.className = 'danger'
-      delBtn.addEventListener('pointerdown', () => {
-        page.marks = page.marks.filter(m => m.owner !== owner)
-        page.invalidateBuffer()
-        unsavedChanges = true
-        page.render()
-        refreshImportList()
-      })
+      name.textContent = layerDisplayName(owner)
+      name.title = layerDisplayName(owner)
+
+      const selBtn = document.createElement('button')
+      selBtn.textContent = 'Select'
+      if (owner === activeLayer) selBtn.style.background = '#5a7a5a'
+      selBtn.addEventListener('pointerdown', () => setActiveLayer(owner))
+
       row.appendChild(name)
-      row.appendChild(reBtn)
-      row.appendChild(delBtn)
+      row.appendChild(selBtn)
+
+      if (owner !== null && isImportLayer(owner)) {
+        const reBtn = document.createElement('button')
+        reBtn.textContent = 'Re-place'
+        reBtn.addEventListener('pointerdown', async () => {
+          const ownerMarks = page.marks
+            .filter(m => m.owner === owner)
+            .map(m => Mark.fromJSON(m.toJSON()))
+          const base = owner.replace(/_\d+$/, '')
+          await enterImportMode(ownerMarks, base, owner)
+        })
+        row.appendChild(reBtn)
+      }
+
+      if (owner !== null) {
+        const delBtn = document.createElement('button')
+        delBtn.textContent = 'Del'
+        delBtn.className = 'danger'
+        delBtn.addEventListener('pointerdown', () => {
+          page.marks = page.marks.filter(m => m.owner !== owner)
+          if (activeLayer === owner) setActiveLayer(null)
+          page.invalidateBuffer()
+          unsavedChanges = true
+          page.render()
+          refreshLayerList()
+        })
+        row.appendChild(delBtn)
+      }
+
       list.appendChild(row)
     })
   }
@@ -230,14 +276,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- Import placement state ---
   let importMode = false
-  let importMarks = []          // centroid-normalised Mark[] pending placement
+  let importMarks = []
   let importCentroid = { x: 0, y: 0 }
-  let importGhostBitmap = null  // pre-rendered ImageBitmap
+  let importGhostBitmap = null
   let importOwnerBase = ''
-  let importReplaceOwner = null // non-null when re-placing an existing instance
+  let importReplaceOwner = null
   let importRotationDeg = 0
-  let importReadyTime = 0       // timestamp after which canvas input is accepted
-  const importInstanceCounters = {}  // basename -> next instance number
+  let importReadyTime = 0
+  const importInstanceCounters = {}
+
+  // --- Layer state ---
+  let activeLayer = null          // null = Page layer (owner === null)
+  let drawingLayerCounter = 1     // increments for each new user drawing layer
 
   // --- Sidebar toggle ---
   const sidebar = document.getElementById('sidebar')
@@ -266,6 +316,59 @@ document.addEventListener('DOMContentLoaded', function () {
   // ESC cancels placement mode
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && importMode) cancelImportMode()
+  })
+
+  // --- Bottom bar layer controls ---
+  const layerNameInput = document.getElementById('layerNameInput')
+  const layerCounter = document.getElementById('layerCounter')
+
+  // Rename: only fires for user drawing layers (input is disabled for Page/import)
+  layerNameInput.addEventListener('change', () => {
+    const newName = layerNameInput.value.trim()
+    if (!newName || activeLayer === null || isImportLayer(activeLayer)) return
+    if (newName === activeLayer) return
+    // Rename all marks on this layer
+    page.marks.forEach(m => { if (m.owner === activeLayer) m.owner = newName })
+    activeLayer = newName
+    page.invalidateBuffer()
+    unsavedChanges = true
+    page.render()
+    refreshLayerList()
+  })
+
+  document.getElementById('layerPrevBtn').addEventListener('pointerdown', () => {
+    const layers = getLayerOrder()
+    const idx = layers.indexOf(activeLayer)
+    const next = idx <= 0 ? layers.length - 1 : idx - 1
+    setActiveLayer(layers[next])
+  })
+
+  document.getElementById('layerNextBtn').addEventListener('pointerdown', () => {
+    const layers = getLayerOrder()
+    const idx = layers.indexOf(activeLayer)
+    const next = idx >= layers.length - 1 ? 0 : idx + 1
+    setActiveLayer(layers[next])
+  })
+
+  // + New Drawing Layer button
+  document.getElementById('addLayerBtn').addEventListener('pointerdown', () => {
+    drawingLayerCounter++
+    const newOwner = `Layer ${drawingLayerCounter}`
+    // Add a sentinel mark with 0 points so the layer appears in getLayerOrder
+    // without requiring an actual drawn mark first.
+    // Instead, we track pending empty layers separately.
+    // Simpler: just set active, it will appear in list when first mark is drawn.
+    // To show it immediately, push a placeholder that getLayerOrder sees.
+    // We use a real empty mark as a layer anchor.
+    const anchor = Mark.fromJSON({
+      color: 'rgba(0,0,0,0)', minDistance: 1, distanceThreshold: 1,
+      connectionProbability: 0, filled: false, points: [],
+      markWidth: 1, hatchAngle: 0, alpha: 0, trace: false,
+      gradient: null, fillMode: 'none', density: 3, isMask: false, owner: newOwner
+    })
+    page.marks.push(anchor)
+    setActiveLayer(newOwner)
+    unsavedChanges = true
   })
 
   // --- Fill-mode-aware UI ---

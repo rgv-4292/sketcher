@@ -511,8 +511,8 @@ export class Page {
   }
 
   async startTransition(newJSON) {
-    const FRAMES = 12
-    const FRAME_DURATION = 83
+    const FRAMES = 7
+    const FRAME_DURATION = 100
 
     const fromMarks = this.marks.map(m => Mark.fromJSON(m.toJSON()))
     const toMarks = newJSON.marks.map(markData => Mark.fromJSON(markData))

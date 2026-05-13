@@ -108,6 +108,9 @@ document.addEventListener('DOMContentLoaded', function () {
       return clone
     })
     importGhostBitmap = await bakeGhostBitmap(shifted)
+    // Set mode AFTER async bake and defer by one frame so any pending
+    // pointerdown/pointerup from the confirm dialog dismissal cannot bleed through.
+    await new Promise(resolve => requestAnimationFrame(resolve))
     importMode = true
     canvas.style.cursor = 'crosshair'
     document.getElementById('placementBanner').classList.add('visible')
@@ -601,11 +604,8 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault()
     const pt = getCanvasPoint(event)
 
-    // In placement mode a tap places the import, not a new mark
-    if (importMode) {
-      placeImport(pt.x, pt.y)
-      return
-    }
+    // In placement mode, ignore pointerdown — placement fires on pointerup
+    if (importMode) return
 
     const setGradientCheckbox = document.getElementById('checkbox2')
     if (fillMode === 'gradient' && setGradientCheckbox.checked && lastFilledMark >= 0) {
@@ -663,7 +663,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function stopDrawing() {
+  function stopDrawing(event) {
+    // In placement mode, pointerup on the canvas places the import
+    if (importMode) {
+      if (event && event.type === 'pointerup') {
+        const pt = getCanvasPoint(event)
+        placeImport(pt.x, pt.y)
+      }
+      return
+    }
     if (!drawing) return
     if (currentMark.points.length > 4) {
       page.addMark(currentMark)

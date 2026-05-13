@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // pointerdown/pointerup from the confirm dialog dismissal cannot bleed through.
     await new Promise(resolve => requestAnimationFrame(resolve))
     importMode = true
+    console.log('[Import] importMode SET TO TRUE')
     canvas.style.cursor = 'crosshair'
     document.getElementById('placementBanner').classList.add('visible')
   }
@@ -139,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function placeImport(tapX, tapY) {
+    console.log('[placeImport] tapX:', tapX, 'tapY:', tapY, 'importOwnerBase:', importOwnerBase, 'importMarks.length:', importMarks.length)
     const offsetX = tapX - importCentroid.x
     const offsetY = tapY - importCentroid.y
     const rotated = rotateMarks(importMarks, importRotationDeg)
@@ -664,6 +666,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function stopDrawing(event) {
+    console.log('[stopDrawing] event.type:', event?.type, 'importMode:', importMode)
     // In placement mode, pointerup on the canvas places the import
     if (importMode) {
       if (event && event.type === 'pointerup') {
@@ -901,9 +904,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const placeMode = confirm(
           'Place mode: tap the canvas to position the import.\n\nOK = Place (tap to position)\nCancel = Merge immediately at original position'
         )
+        console.log('[Import] placeMode confirm result:', placeMode)
         const incomingMarks = loadedJSON.marks.map(m => Mark.fromJSON(m))
+        console.log('[Import] incomingMarks count:', incomingMarks.length)
         if (placeMode) {
+          console.log('[Import] calling enterImportMode, baseName:', baseName)
           await enterImportMode(incomingMarks, baseName)
+          console.log('[Import] enterImportMode resolved, importMode:', importMode)
         } else {
           // Immediate merge — no owner tag
           incomingMarks.forEach(m => {

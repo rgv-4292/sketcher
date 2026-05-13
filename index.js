@@ -401,34 +401,64 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
 
-    // --- Drag-to-reorder ---
+    // --- Pointer-based drag-to-reorder on the ⠿ handle ---
     let dragSrc = null
+    let dragPlaceholder = null
+
     list.querySelectorAll('.import-row').forEach(row => {
-      row.addEventListener('dragstart', e => {
+      const handle = row.querySelector('span')
+      if (!handle) return
+
+      handle.addEventListener('pointerdown', e => {
+        e.preventDefault()
         dragSrc = row
-        e.dataTransfer.effectAllowed = 'move'
+        dragSrc.style.opacity = '0.4'
+        // Create a placeholder to mark the insertion point
+        dragPlaceholder = document.createElement('div')
+        dragPlaceholder.style.cssText = 'height:2px;background:#7a9a7a;margin:2px 0;pointer-events:none;'
+        handle.setPointerCapture(e.pointerId)
       })
-      row.addEventListener('dragover', e => {
+
+      handle.addEventListener('pointermove', e => {
+        if (!dragSrc) return
         e.preventDefault()
-        e.dataTransfer.dropEffect = 'move'
-        if (row !== dragSrc) row.style.borderTop = '2px solid #7a9a7a'
+        const rows = [...list.querySelectorAll('.import-row')].filter(r => r !== dragSrc)
+        let inserted = false
+        for (const r of rows) {
+          const rect = r.getBoundingClientRect()
+          if (e.clientY < rect.top + rect.height / 2) {
+            list.insertBefore(dragPlaceholder, r)
+            inserted = true
+            break
+          }
+        }
+        if (!inserted) list.appendChild(dragPlaceholder)
       })
-      row.addEventListener('dragleave', () => { row.style.borderTop = '' })
-      row.addEventListener('drop', e => {
-        e.preventDefault()
-        row.style.borderTop = ''
-        if (!dragSrc || dragSrc === row) return
-        // Re-order DOM then read back order
-        list.insertBefore(dragSrc, row)
-        // Read new order from DOM, skipping sub-rows (no dataset.owner)
+
+      handle.addEventListener('pointerup', e => {
+        if (!dragSrc) return
+        dragSrc.style.opacity = ''
+        if (dragPlaceholder && dragPlaceholder.parentNode) {
+          list.insertBefore(dragSrc, dragPlaceholder)
+          dragPlaceholder.remove()
+        }
+        dragSrc = null
+        dragPlaceholder = null
+        // Read new order from DOM
         const newOrder = [...list.querySelectorAll('.import-row')]
           .map(r => r.dataset.owner === '__page__' ? null : r.dataset.owner)
         page.layerOrder = newOrder
-        syncLayerOrder()
+        page.invalidateBuffer()
+        unsavedChanges = true
+        page.render()
         refreshLayerList()
       })
-      row.addEventListener('dragend', () => {
-        list.querySelectorAll('.import-row').forEach(r => { r.style.borderTop = '' })
+
+      handle.addEventListener('pointercancel', () => {
+        if (dragSrc) dragSrc.style.opacity = ''
+        if (dragPlaceholder) dragPlaceholder.remove()
+        dragSrc = null
+        dragPlaceholder = null
       })
     })
   }
@@ -1236,7 +1266,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             page.render()
             unsavedChanges = true
-            refreshImportList()
+            refreshLayerList()
           }
           return
         }
@@ -1257,7 +1287,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
           page.render()
           unsavedChanges = true
-          refreshImportList()
+          refreshLayerList()
           return
         }
 
@@ -1277,7 +1307,7 @@ document.addEventListener('DOMContentLoaded', function () {
           page.invalidateBuffer()
           page.render()
           unsavedChanges = true
-          refreshImportList()
+          refreshLayerList()
         }
       }
       reader.readAsText(file)

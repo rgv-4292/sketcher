@@ -113,8 +113,8 @@ exports.handler = async (event) => {
 
       case 'createBook': {
         const { bookName, orientation } = body
-        const width = orientation === 'landscape' ? 640 : 480
-        const height = orientation === 'landscape' ? 480 : 640
+        const width = orientation === 'landscape' ? 960 : 720
+        const height = orientation === 'landscape' ? 720 : 960
         const manifest = {
           name: bookName,
           orientation,

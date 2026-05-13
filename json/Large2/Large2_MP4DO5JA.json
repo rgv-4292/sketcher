@@ -4,5 +4,1639 @@
     "height": 960,
     "backgroundColor": "#f0ebe8"
   },
-  "marks": []
+  "marks": [
+    {
+      "color": "rgba(0,0,0,0.75)",
+      "minDistance": 2.5,
+      "distanceThreshold": 10,
+      "connectionProbability": 96,
+      "filled": false,
+      "points": [
+        {
+          "x": 346,
+          "y": 179,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 342,
+          "y": 177,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 344,
+          "y": 176,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 341,
+          "y": 177,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 342,
+          "y": 178,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 339,
+          "y": 177,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 339,
+          "y": 178,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 333,
+          "y": 177,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 332,
+          "y": 178,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 329,
+          "y": 177,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 331,
+          "y": 177,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 328,
+          "y": 177,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 330,
+          "y": 177,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 326,
+          "y": 179,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 326,
+          "y": 181,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 322,
+          "y": 181,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 322,
+          "y": 183,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 319,
+          "y": 184,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 318,
+          "y": 183,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 316,
+          "y": 187,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 316,
+          "y": 186,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 314,
+          "y": 189,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 316,
+          "y": 190,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 312,
+          "y": 190,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 312,
+          "y": 191,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 310,
+          "y": 193,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 309,
+          "y": 195,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 305,
+          "y": 197,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 305,
+          "y": 197,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 303,
+          "y": 199,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 303,
+          "y": 199,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 300,
+          "y": 202,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 302,
+          "y": 201,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 299,
+          "y": 203,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 301,
+          "y": 205,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 298,
+          "y": 204,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 299,
+          "y": 204,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 296,
+          "y": 205,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 296,
+          "y": 206,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 293,
+          "y": 206,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 292,
+          "y": 208,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 287,
+          "y": 208,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286,
+          "y": 210,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283,
+          "y": 209,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 284,
+          "y": 210,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 280,
+          "y": 211,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 281,
+          "y": 212,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 278,
+          "y": 211,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 278,
+          "y": 212,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 274,
+          "y": 213,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 274,
+          "y": 212,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 271,
+          "y": 215,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 272,
+          "y": 215,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 267,
+          "y": 218,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 269,
+          "y": 218,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 263,
+          "y": 220,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 262,
+          "y": 221,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 260,
+          "y": 224,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 261,
+          "y": 223,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 258,
+          "y": 225,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 258,
+          "y": 227,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 254,
+          "y": 229,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 256,
+          "y": 229,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 253,
+          "y": 231,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 254,
+          "y": 230,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 251,
+          "y": 234,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 253,
+          "y": 233,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 251,
+          "y": 235,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 251,
+          "y": 235,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 249,
+          "y": 238,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 250,
+          "y": 239,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 249,
+          "y": 242,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 248,
+          "y": 244,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 249,
+          "y": 252,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 249,
+          "y": 254,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 249,
+          "y": 258,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 250,
+          "y": 258,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 249,
+          "y": 265,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 251,
+          "y": 266,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 249,
+          "y": 271,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 248,
+          "y": 272,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 249,
+          "y": 276,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 251,
+          "y": 275,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 250,
+          "y": 282,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 250,
+          "y": 282,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 251,
+          "y": 286,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 252,
+          "y": 285,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 252,
+          "y": 288,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 252,
+          "y": 289,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 254,
+          "y": 292,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 256,
+          "y": 291,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 257,
+          "y": 294,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 256,
+          "y": 293,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 259,
+          "y": 297,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 258,
+          "y": 298,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 262,
+          "y": 299,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 261,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 265,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 267,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 275,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 275,
+          "y": 309,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 282,
+          "y": 310,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 282,
+          "y": 312,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285,
+          "y": 311,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 287,
+          "y": 313,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 291,
+          "y": 312,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 292,
+          "y": 311,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 294,
+          "y": 313,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 294,
+          "y": 312,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 301,
+          "y": 315,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 301,
+          "y": 316,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 305,
+          "y": 316,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 306,
+          "y": 318,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 310,
+          "y": 317,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 311,
+          "y": 318,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 317,
+          "y": 317,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 316,
+          "y": 317,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 321,
+          "y": 318,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 322,
+          "y": 318,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 326,
+          "y": 320,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 328,
+          "y": 321,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 331,
+          "y": 322,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 330,
+          "y": 324,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 332,
+          "y": 322,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 331,
+          "y": 323,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 334,
+          "y": 323,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 335,
+          "y": 325,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 340,
+          "y": 325,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 342,
+          "y": 327,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 346,
+          "y": 328,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 347,
+          "y": 328,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 351,
+          "y": 329,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 353,
+          "y": 329,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 356,
+          "y": 332,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 356,
+          "y": 332,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 362,
+          "y": 334,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 362,
+          "y": 334,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 373,
+          "y": 337,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 372,
+          "y": 339,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 382,
+          "y": 339,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 381,
+          "y": 339,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 388,
+          "y": 339,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 390,
+          "y": 341,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 397,
+          "y": 339,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 396,
+          "y": 341,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 399,
+          "y": 339,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 400,
+          "y": 338,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 404,
+          "y": 339,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 406,
+          "y": 338,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 410,
+          "y": 336,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 410,
+          "y": 338,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 417,
+          "y": 333,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 418,
+          "y": 333,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 424,
+          "y": 331,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 423,
+          "y": 330,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 435,
+          "y": 328,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 434,
+          "y": 330,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 441,
+          "y": 325,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 443,
+          "y": 326,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 446,
+          "y": 324,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 447,
+          "y": 324,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 318,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 320,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 464,
+          "y": 315,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 465,
+          "y": 315,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 470,
+          "y": 312,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 472,
+          "y": 312,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 477,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 476,
+          "y": 309,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 479,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 478,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 483,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 485,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 485,
+          "y": 296,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 485,
+          "y": 295,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 488,
+          "y": 287,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 488,
+          "y": 288,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 490,
+          "y": 279,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 489,
+          "y": 281,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 491,
+          "y": 273,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 493,
+          "y": 274,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 491,
+          "y": 264,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 492,
+          "y": 265,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 492,
+          "y": 259,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 494,
+          "y": 259,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 492,
+          "y": 253,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 493,
+          "y": 252,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 492,
+          "y": 248,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 494,
+          "y": 249,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 492,
+          "y": 246,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 491,
+          "y": 248,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 492,
+          "y": 243,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 493,
+          "y": 245,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 491,
+          "y": 241,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 493,
+          "y": 241,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 490,
+          "y": 236,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 491,
+          "y": 235,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 489,
+          "y": 233,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 488,
+          "y": 235,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 488,
+          "y": 231,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 490,
+          "y": 232,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 487,
+          "y": 231,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 489,
+          "y": 231,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 486,
+          "y": 229,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 488,
+          "y": 230,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 484,
+          "y": 228,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 484,
+          "y": 227,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 478,
+          "y": 224,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 479,
+          "y": 226,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 470,
+          "y": 220,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 469,
+          "y": 221,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 466,
+          "y": 217,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 467,
+          "y": 218,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 460,
+          "y": 215,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 460,
+          "y": 216,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 213,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 456,
+          "y": 212,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 442,
+          "y": 210,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 441,
+          "y": 212,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 426,
+          "y": 207,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 426,
+          "y": 206,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 418,
+          "y": 206,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 417,
+          "y": 208,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 411,
+          "y": 205,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 410,
+          "y": 206,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 406,
+          "y": 204,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 407,
+          "y": 204,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 397,
+          "y": 203,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 396,
+          "y": 202,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 393,
+          "y": 203,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 392,
+          "y": 205,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 390,
+          "y": 203,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 389,
+          "y": 205,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 388,
+          "y": 202,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 388,
+          "y": 201,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 385,
+          "y": 201,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 387,
+          "y": 200,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 383,
+          "y": 199,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 383,
+          "y": 200,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 381,
+          "y": 198,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 382,
+          "y": 199,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 379,
+          "y": 196,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 379,
+          "y": 198,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 376,
+          "y": 195,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 375,
+          "y": 196,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 374,
+          "y": 193,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 376,
+          "y": 195,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 373,
+          "y": 192,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 374,
+          "y": 192,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 371,
+          "y": 192,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 370,
+          "y": 192,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 368,
+          "y": 189,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 367,
+          "y": 188,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 364,
+          "y": 187,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 365,
+          "y": 189,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 364,
+          "y": 186,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 363,
+          "y": 185,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 361,
+          "y": 183,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 363,
+          "y": 184,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 360,
+          "y": 183,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 361,
+          "y": 183,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 358,
+          "y": 181,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 358,
+          "y": 181,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 355,
+          "y": 180,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 356,
+          "y": 181,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 354,
+          "y": 179,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 354,
+          "y": 179,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 350,
+          "y": 178,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 349,
+          "y": 177,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 2,
+      "hatchAngle": 1.8,
+      "alpha": 0.75,
+      "trace": false,
+      "gradient": null,
+      "fillMode": "none",
+      "density": 3,
+      "isMask": true,
+      "owner": null
+    }
+  ],
+  "thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCABgAEgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD0KiiikUFFFFABRRRQAUUUUAFFFFABRRRQAVXna4lHl2w8sE4aZh90cg7QercDrxyDzjBsVH56IoM2IcttAcgZ5wMc9+o780ARtBLG4e3lOMsXjkYsHyOMHquCB04xnjkESh5AuZIxndj5G3YHrzin0juka7nYKMgZPqTgD86ABWDqGXoRkUtR24AgUiMxbsuUbGVLHJBwSM5NSUAFFFFABRRRQAUUUUAMjijiz5UaoGYsQoxknqT7mhYY1cOFy4BAduWAJyRk84zjj2HpT6KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//9k="
 }

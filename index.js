@@ -787,6 +787,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if (!drawing) return
     if (currentMark.points.length > 4) {
+      currentMark.owner = activeLayer
       page.addMark(currentMark)
       if (currentMark.filled) lastFilledMark = page.marks.length - 1
       if (currentMark.isMask) {
@@ -838,7 +839,7 @@ document.addEventListener('DOMContentLoaded', function () {
           syncBgIndicator()
           unsavedChanges = false
         }
-        refreshImportList()
+        refreshLayerList()
       } else {
         page.render()
       }
@@ -846,6 +847,9 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error('Error loading book:', err)
     }
   }
+
+  // Initialise layer UI on startup
+  setActiveLayer(null)
 
   // --- Save page to book ---
   async function savePageToBook() {
@@ -918,7 +922,7 @@ document.addEventListener('DOMContentLoaded', function () {
         syncBgIndicator()
       }
       unsavedChanges = false
-      refreshImportList()
+      refreshLayerList()
     } catch (err) {
       console.error('Error navigating page:', err)
     }
@@ -933,7 +937,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- Remaining toolbar buttons ---
   document.getElementById('deleteButton').addEventListener('pointerdown', () => {
-    page.removeLastMark(); page.invalidateBuffer(); unsavedChanges = true; page.render()
+    // Find and remove the last mark belonging to the active layer
+    for (let i = page.marks.length - 1; i >= 0; i--) {
+      if (page.marks[i].owner === activeLayer) {
+        page.marks.splice(i, 1)
+        break
+      }
+    }
+    page.invalidateBuffer()
+    unsavedChanges = true
+    page.render()
   })
 
   document.getElementById('downloadButton').addEventListener('pointerdown', () => {

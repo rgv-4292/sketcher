@@ -437,13 +437,13 @@ export class Page {
 
       const tempMark = Mark.fromJSON({
         ...toMark.toJSON(),
-        color,
+        color:color,
         markWidth: width,
         hatchAngle: hatch,
-        density,
-        distanceThreshold,
-        connectionProbability,
-        gradient,
+        density:density,
+        distanceThreshold: distanceThreshold,
+        connectionProbability: connectionProbability,
+        gradient: gradient,
         points: interpPoints,
         alpha: 1.0
       

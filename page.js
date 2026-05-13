@@ -428,14 +428,21 @@ export class Page {
       const width = fromMark.markWidth + (toMark.markWidth - fromMark.markWidth) * t
       const hatch = fromMark.hatchAngle + (toMark.hatchAngle - fromMark.hatchAngle) * t
       const density = fromMark.density + (toMark.density - fromMark.density) * t
+      const distanceThreshold = fromMark.distanceThreshold + (toMark.distanceThreshold - fromMark.distanceThreshold) * t
+      const connectionProbability = fromMark.connectionProbability + (toMark.connectionProbability - fromMark.connectionProbability) * t
+      // const gradient = fromMark.gradient + (toMark.gradient - fromMark.gradient) * t
+
       const tempMark = Mark.fromJSON({
         ...toMark.toJSON(),
         color,
         markWidth: width,
         hatchAngle: hatch,
         density,
+        distanceThreshold,
+        connectionProbability,
         points: interpPoints,
-        alpha: 1
+        alpha: 1.0
+      
       })
       tempMark.render(1, false, targetCanvas)
     })

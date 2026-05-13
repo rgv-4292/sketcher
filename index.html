@@ -340,6 +340,57 @@
         }
 
         #colorPopupOverlay.visible { display: block; }
+
+        /* ── Import list ────────────────────────────────────────── */
+        .import-row {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+
+        .import-row .import-name {
+            flex: 1;
+            font-size: 11px;
+            color: #ccc;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .import-row button {
+            background: #444;
+            color: #ccc;
+            border: 1px solid #555;
+            padding: 3px 7px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        .import-row button:hover { background: #555; }
+        .import-row button.danger { border-color: #844; }
+        .import-row button.danger:hover { background: #633; }
+
+        /* Placement mode indicator */
+        #placementBanner {
+            display: none;
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(90,122,90,0.92);
+            color: #fff;
+            font-size: 12px;
+            padding: 5px 14px;
+            border-radius: 4px;
+            pointer-events: none;
+            z-index: 20;
+            white-space: nowrap;
+        }
+
+        #placementBanner.visible { display: block; }
     </style>
 </head>
 
@@ -497,11 +548,23 @@
                     <button id="preset9load" disabled>Load</button>
                 </div>
 
+                <!-- Imports -->
+                <div class="section-label">Imports</div>
+
+                <div class="control-row" id="importRotationRow">
+                    <label>Rotation</label>
+                    <input type="range" id="importRotation" min="-180" max="180" value="0" style="flex:1;">
+                    <span id="importRotationVal" style="color:#aaa;font-size:11px;width:32px;text-align:right;">0°</span>
+                </div>
+
+                <div id="importList" style="margin-top:4px;"></div>
+
             </div><!-- /sidebarScroll -->
         </div><!-- /sidebar -->
 
         <!-- ── Canvas area ───────────────────────────────────────── -->
         <div id="canvasArea">
+            <div id="placementBanner">Placement mode — tap to place · ESC to cancel</div>
             <canvas id="myCanvas" width="720" height="960" style="display:none;"></canvas>
         </div>
 

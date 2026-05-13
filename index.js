@@ -36,6 +36,173 @@ document.addEventListener('DOMContentLoaded', function () {
     return (...args) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), ms) }
   }
 
+  // --- Import helpers ---
+
+  function getImportCentroid(marks) {
+    let sx = 0, sy = 0, count = 0
+    marks.forEach(m => m.points.forEach(p => { sx += p.x; sy += p.y; count++ }))
+    return count ? { x: sx / count, y: sy / count } : { x: 0, y: 0 }
+  }
+
+  function rotatePoint(x, y, cx, cy, deg) {
+    const rad = (deg * Math.PI) / 180
+    const cos = Math.cos(rad), sin = Math.sin(rad)
+    return {
+      x: cx + (x - cx) * cos - (y - cy) * sin,
+      y: cy + (x - cx) * sin + (y - cy) * cos
+    }
+  }
+
+  // Return a deep clone of marks with all points rotated around their collective centroid.
+  function rotateMarks(marks, deg) {
+    const c = getImportCentroid(marks)
+    return marks.map(m => {
+      const clone = Mark.fromJSON(m.toJSON())
+      clone.points = m.points.map(p => {
+        const r = rotatePoint(p.x, p.y, c.x, c.y, deg)
+        return { ...p, x: r.x, y: r.y }
+      })
+      if (clone.gradient) {
+        const rg = rotatePoint(clone.gradient.x, clone.gradient.y, c.x, c.y, deg)
+        clone.gradient = { x: rg.x, y: rg.y }
+      }
+      return clone
+    })
+  }
+
+  // Render marks onto a transparent offscreen canvas and return an ImageBitmap.
+  async function bakeGhostBitmap(marks) {
+    const w = page.canvasParams.width
+    const h = page.canvasParams.height
+    const off = document.createElement('canvas')
+    off.width = w
+    off.height = h
+    marks.forEach(m => {
+      try { m.render(1, false, off, []) } catch (e) { console.log(e) }
+    })
+    return createImageBitmap(off)
+  }
+
+  async function enterImportMode(marks, ownerBase) {
+    importOwnerBase = ownerBase
+    importRotationDeg = 0
+    document.getElementById('importRotation').value = 0
+    document.getElementById('importRotationVal').textContent = '0°'
+    importCentroid = getImportCentroid(marks)
+    // Normalise: shift all points so centroid = (0,0) for easy offset-on-placement
+    importMarks = marks.map(m => {
+      const clone = Mark.fromJSON(m.toJSON())
+      clone.points = m.points.map(p => ({ ...p, x: p.x - importCentroid.x, y: p.y - importCentroid.y }))
+      if (clone.gradient) clone.gradient = {
+        x: clone.gradient.x - importCentroid.x,
+        y: clone.gradient.y - importCentroid.y
+      }
+      return clone
+    })
+    if (importGhostBitmap) { importGhostBitmap.close(); importGhostBitmap = null }
+    // Bake at page dims with centroid offset applied so bitmap aligns with (0,0) origin
+    const shifted = importMarks.map(m => {
+      const clone = Mark.fromJSON(m.toJSON())
+      clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
+      if (clone.gradient) clone.gradient = { x: clone.gradient.x + importCentroid.x, y: clone.gradient.y + importCentroid.y }
+      return clone
+    })
+    importGhostBitmap = await bakeGhostBitmap(shifted)
+    importMode = true
+    canvas.style.cursor = 'crosshair'
+    document.getElementById('placementBanner').classList.add('visible')
+  }
+
+  function cancelImportMode() {
+    importMode = false
+    if (importGhostBitmap) { importGhostBitmap.close(); importGhostBitmap = null }
+    importMarks = []
+    canvas.style.cursor = ''
+    document.getElementById('placementBanner').classList.remove('visible')
+    page.render()
+  }
+
+  async function rebakeGhost() {
+    if (!importMode) return
+    const rotated = rotateMarks(importMarks, importRotationDeg)
+    const shifted = rotated.map(m => {
+      const clone = Mark.fromJSON(m.toJSON())
+      clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
+      if (clone.gradient) clone.gradient = { x: clone.gradient.x + importCentroid.x, y: clone.gradient.y + importCentroid.y }
+      return clone
+    })
+    if (importGhostBitmap) { importGhostBitmap.close(); importGhostBitmap = null }
+    importGhostBitmap = await bakeGhostBitmap(shifted)
+  }
+
+  function placeImport(tapX, tapY) {
+    const offsetX = tapX - importCentroid.x
+    const offsetY = tapY - importCentroid.y
+    const rotated = rotateMarks(importMarks, importRotationDeg)
+    const instanceNum = (importInstanceCounters[importOwnerBase] || 0) + 1
+    importInstanceCounters[importOwnerBase] = instanceNum
+    const ownerTag = `${importOwnerBase}_${String(instanceNum).padStart(2, '0')}`
+    rotated.forEach(m => {
+      const placed = Mark.fromJSON(m.toJSON())
+      placed.points = m.points.map(p => ({ ...p, x: Math.round(p.x + importCentroid.x + offsetX), y: Math.round(p.y + importCentroid.y + offsetY) }))
+      if (placed.gradient) placed.gradient = {
+        x: placed.gradient.x + importCentroid.x + offsetX,
+        y: placed.gradient.y + importCentroid.y + offsetY
+      }
+      placed.owner = ownerTag
+      page.marks.push(placed)
+      if (placed.filled) lastFilledMark = page.marks.length - 1
+    })
+    page.invalidateBuffer()
+    unsavedChanges = true
+    cancelImportMode()
+    refreshImportList()
+  }
+
+  function refreshImportList() {
+    const list = document.getElementById('importList')
+    list.innerHTML = ''
+    // Collect unique owner instances that are currently in page.marks
+    const seen = new Set()
+    page.marks.forEach(m => { if (m.owner) seen.add(m.owner) })
+    if (seen.size === 0) {
+      list.innerHTML = '<div style="color:#666;font-size:11px;">No imports placed</div>'
+      return
+    }
+    seen.forEach(owner => {
+      const row = document.createElement('div')
+      row.className = 'import-row'
+      const name = document.createElement('span')
+      name.className = 'import-name'
+      name.textContent = owner
+      name.title = owner
+      const reBtn = document.createElement('button')
+      reBtn.textContent = 'Re-place'
+      reBtn.addEventListener('pointerdown', async () => {
+        // Gather the marks for this owner, strip the owner tag for re-placement
+        const ownerMarks = page.marks
+          .filter(m => m.owner === owner)
+          .map(m => Mark.fromJSON(m.toJSON()))
+        const base = owner.replace(/_\d+$/, '')
+        await enterImportMode(ownerMarks, base)
+      })
+      const delBtn = document.createElement('button')
+      delBtn.textContent = 'Del'
+      delBtn.className = 'danger'
+      delBtn.addEventListener('pointerdown', () => {
+        page.marks = page.marks.filter(m => m.owner !== owner)
+        page.invalidateBuffer()
+        unsavedChanges = true
+        page.render()
+        refreshImportList()
+      })
+      row.appendChild(name)
+      row.appendChild(reBtn)
+      row.appendChild(delBtn)
+      list.appendChild(row)
+    })
+  }
+
   // --- State ---
   let currentColor = 'rgba(0,0,0,0.75)'
   let currentBgColor = '#f0ebe8'
@@ -49,6 +216,15 @@ document.addEventListener('DOMContentLoaded', function () {
   let doTrace = false
   let doMask = false
   let fillMode = 'none'
+
+  // --- Import placement state ---
+  let importMode = false
+  let importMarks = []          // centroid-normalised Mark[] pending placement
+  let importCentroid = { x: 0, y: 0 }
+  let importGhostBitmap = null  // pre-rendered ImageBitmap
+  let importOwnerBase = ''
+  let importRotationDeg = 0
+  const importInstanceCounters = {}  // basename -> next instance number
 
   // --- Sidebar toggle ---
   const sidebar = document.getElementById('sidebar')
@@ -64,6 +240,20 @@ document.addEventListener('DOMContentLoaded', function () {
   setSidebar(true)
 
   controlButton.addEventListener('pointerdown', () => setSidebar(!sidebarVisible))
+
+  // --- Import rotation slider ---
+  const importRotationSlider = document.getElementById('importRotation')
+  const importRotationVal = document.getElementById('importRotationVal')
+  importRotationSlider.addEventListener('input', async () => {
+    importRotationDeg = parseInt(importRotationSlider.value)
+    importRotationVal.textContent = `${importRotationDeg}\u00b0`
+    await rebakeGhost()
+  })
+
+  // ESC cancels placement mode
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && importMode) cancelImportMode()
+  })
 
   // --- Fill-mode-aware UI ---
   // Controls that only apply to filled modes
@@ -389,6 +579,18 @@ document.addEventListener('DOMContentLoaded', function () {
     return event.pointerType === 'pen' ? event.pressure : null
   }
 
+  // --- Canvas coordinate helper ---
+  // Corrects for CSS scaling when canvas is displayed smaller/larger than its pixel dimensions.
+  function getCanvasPoint(event) {
+    const rect = canvas.getBoundingClientRect()
+    const scaleX = canvas.width / rect.width
+    const scaleY = canvas.height / rect.height
+    return {
+      x: (event.clientX - rect.left) * scaleX,
+      y: (event.clientY - rect.top) * scaleY
+    }
+  }
+
   // --- Canvas drawing ---
   canvas.addEventListener('pointerdown', startDrawing)
   canvas.addEventListener('pointermove', draw)
@@ -397,10 +599,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function startDrawing(event) {
     event.preventDefault()
+    const pt = getCanvasPoint(event)
+
+    // In placement mode a tap places the import, not a new mark
+    if (importMode) {
+      placeImport(pt.x, pt.y)
+      return
+    }
 
     const setGradientCheckbox = document.getElementById('checkbox2')
     if (fillMode === 'gradient' && setGradientCheckbox.checked && lastFilledMark >= 0) {
-      page.marks[lastFilledMark].gradient = { x: event.offsetX, y: event.offsetY }
+      page.marks[lastFilledMark].gradient = { x: pt.x, y: pt.y }
       setGradientCheckbox.checked = false
       page.render()
       return
@@ -411,22 +620,44 @@ document.addEventListener('DOMContentLoaded', function () {
       currentColor, minDistance, distanceThreshold, connectionProbability,
       fillMode !== 'none', markWidth, hatchAngle, 0.75, doTrace, null, fillMode, density, doMask
     )
-    currentMark.addPoint(event.offsetX, event.offsetY, getEventPressure(event))
+    currentMark.addPoint(pt.x, pt.y, getEventPressure(event))
   }
 
   function draw(event) {
     event.preventDefault()
+
+    // Ghost preview in placement mode
+    if (importMode) {
+      if (!importGhostBitmap) return
+      const pt = getCanvasPoint(event)
+      const offsetX = pt.x - importCentroid.x
+      const offsetY = pt.y - importCentroid.y
+      const mainCtx = canvas.getContext('2d')
+      // Blit background + committed marks
+      if (page._bufferDirty) page._renderToBuffer()
+      mainCtx.clearRect(0, 0, canvas.width, canvas.height)
+      mainCtx.fillStyle = page.canvasParams.backgroundColor
+      mainCtx.fillRect(0, 0, canvas.width, canvas.height)
+      mainCtx.drawImage(page._bufferCanvas, 0, 0)
+      // Draw ghost at 50% opacity offset to cursor
+      mainCtx.globalAlpha = 0.5
+      mainCtx.drawImage(importGhostBitmap, offsetX, offsetY)
+      mainCtx.globalAlpha = 1
+      return
+    }
+
     if (!drawing) return
+    const pt = getCanvasPoint(event)
     const lastPoint = currentMark.points[currentMark.points.length - 1]
-    const dx = event.offsetX - lastPoint.x
-    const dy = event.offsetY - lastPoint.y
+    const dx = pt.x - lastPoint.x
+    const dy = pt.y - lastPoint.y
     const scatterAmount = scatter > 0 ? Math.random() * scatter : 0
     if (Math.sqrt(dx * dx + dy * dy) > minDistance + scatterAmount) {
       const pressure = getEventPressure(event)
-      currentMark.addPoint(event.offsetX, event.offsetY, pressure)
+      currentMark.addPoint(pt.x, pt.y, pressure)
       currentMark.addPoint(
-        event.offsetX + Math.ceil(Math.random() * 4 - 2),
-        event.offsetY + Math.ceil(Math.random() * 4 - 2),
+        pt.x + Math.ceil(Math.random() * 4 - 2),
+        pt.y + Math.ceil(Math.random() * 4 - 2),
         pressure
       )
     }
@@ -486,6 +717,7 @@ document.addEventListener('DOMContentLoaded', function () {
           syncBgIndicator()
           unsavedChanges = false
         }
+        refreshImportList()
       } else {
         page.render()
       }
@@ -496,7 +728,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- Save page to book ---
   async function savePageToBook() {
-    if (!activeBookName || !activeBookManifest || page.marks.length === 0) return false
+    if (!activeBookName || !activeBookManifest || !unsavedChanges) return false
     const json = page.toJSON()
 
     const srcCanvas = document.getElementById('myCanvas')
@@ -565,6 +797,7 @@ document.addEventListener('DOMContentLoaded', function () {
         syncBgIndicator()
       }
       unsavedChanges = false
+      refreshImportList()
     } catch (err) {
       console.error('Error navigating page:', err)
     }
@@ -600,41 +833,79 @@ document.addEventListener('DOMContentLoaded', function () {
     input.accept = 'application/json, image/svg+xml'
     input.onchange = (event) => {
       const file = event.target.files[0]
+      const baseName = file.name.replace(/\.[^.]+$/, '') // strip extension
       const reader = new FileReader()
-      reader.onload = (e) => {
+      reader.onload = async (e) => {
         const content = e.target.result
         const hasMarks = page.marks.length > 0
 
-        const applyLoaded = (loadedJSON, isSVG) => {
-          if (hasMarks) {
-            const merge = confirm('Current page has marks.\n\nOK = Merge (add loaded marks)\nCancel = Overwrite (replace page)')
-            if (merge) {
-              loadedJSON.marks.map(m => Mark.fromJSON(m)).forEach(m => {
-                page.marks.push(m)
-                if (m.filled) lastFilledMark = page.marks.length - 1
-              })
-              page.render()
-              unsavedChanges = true
-              return
-            }
+        // Parse to a common JSON structure regardless of source format
+        let loadedJSON
+        try {
+          if (file.type === 'image/svg+xml') {
+            loadedJSON = page.svgToJson(content)
+          } else {
+            loadedJSON = JSON.parse(content)
           }
+        } catch (err) {
+          console.error('Load parse error:', err)
+          return
+        }
+
+        if (!hasMarks) {
+          // Nothing on canvas — overwrite directly
           page.loadFromJSON(loadedJSON)
+          page.invalidateBuffer()
+          if (loadedJSON.canvasParams?.backgroundColor) {
+            currentBgColor = loadedJSON.canvasParams.backgroundColor
+            syncBgIndicator()
+          }
           for (let i = 0; i < page.marks.length; i++) {
             if (page.marks[i].filled) lastFilledMark = i
           }
-          if (!isSVG && page.canvasParams.backgroundColor) {
-            currentBgColor = page.canvasParams.backgroundColor
-            syncBgIndicator()
-          }
+          page.render()
           unsavedChanges = true
+          refreshImportList()
+          return
         }
 
-        if (file.type === 'image/svg+xml') {
-          try { applyLoaded(page.svgToJson(content), true) }
-          catch (err) { console.error('SVG load error:', err) }
+        // Canvas has marks — ask what to do
+        const overwrite = confirm(
+          'Current page has marks.\n\nOK = Overwrite page\nCancel = Add to page'
+        )
+        if (overwrite) {
+          page.loadFromJSON(loadedJSON)
+          page.invalidateBuffer()
+          if (loadedJSON.canvasParams?.backgroundColor) {
+            currentBgColor = loadedJSON.canvasParams.backgroundColor
+            syncBgIndicator()
+          }
+          for (let i = 0; i < page.marks.length; i++) {
+            if (page.marks[i].filled) lastFilledMark = i
+          }
+          page.render()
+          unsavedChanges = true
+          refreshImportList()
+          return
+        }
+
+        // Adding to page — place or merge immediately?
+        const placeMode = confirm(
+          'Place mode: tap the canvas to position the import.\n\nOK = Place (tap to position)\nCancel = Merge immediately at original position'
+        )
+        const incomingMarks = loadedJSON.marks.map(m => Mark.fromJSON(m))
+        if (placeMode) {
+          await enterImportMode(incomingMarks, baseName)
         } else {
-          try { applyLoaded(JSON.parse(content), false) }
-          catch (err) { console.error('JSON load error:', err) }
+          // Immediate merge — no owner tag
+          incomingMarks.forEach(m => {
+            page.marks.push(m)
+            if (m.filled) lastFilledMark = page.marks.length - 1
+          })
+          page.invalidateBuffer()
+          page.render()
+          unsavedChanges = true
+          refreshImportList()
         }
       }
       reader.readAsText(file)

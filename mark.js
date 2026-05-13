@@ -12,7 +12,8 @@ export class Mark {
     gradient = null,
     fillMode = 'none',
     density = 3,
-    isMask = false
+    isMask = false,
+    owner = null
   ) {
     this.color = color
     this.minDistance = minDistance
@@ -28,6 +29,7 @@ export class Mark {
     this.fillMode = fillMode || 'none'
     this.density = density || 3
     this.isMask = isMask || false
+    this.owner = owner || null
   }
 
   addPoint(x, y, pressure) {
@@ -335,7 +337,8 @@ export class Mark {
       gradient: this.gradient,
       fillMode: this.fillMode,
       density: this.density,
-      isMask: this.isMask
+      isMask: this.isMask,
+      owner: this.owner
     }
   }
 
@@ -353,7 +356,8 @@ export class Mark {
       data.gradient,
       data.fillMode || 'none',
       data.density || 3,
-      data.isMask || false
+      data.isMask || false,
+      data.owner || null
     )
     mark.points = data.points.map(point => ({
       x: Math.floor(point.x),

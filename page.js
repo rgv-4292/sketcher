@@ -12,7 +12,7 @@ export class Page {
     }
     this.tempMarks = []
     this.transitioning = false
-    this.stepCount = 24
+    this.stepCount = 12
   }
 
   addMark(mark) {
@@ -440,8 +440,8 @@ export class Page {
   }
 
   async startTransition(newJSON) {
-    const FRAMES = 7
-    const FRAME_DURATION = 100
+    const FRAMES = 24
+    const FRAME_DURATION = 42
 
     const fromMarks = this.marks.map(m => Mark.fromJSON(m.toJSON()))
     const toMarks = newJSON.marks.map(markData => Mark.fromJSON(markData))

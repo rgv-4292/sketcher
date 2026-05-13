@@ -430,7 +430,8 @@ export class Page {
       const density = fromMark.density + (toMark.density - fromMark.density) * t
       const distanceThreshold = fromMark.distanceThreshold + (toMark.distanceThreshold - fromMark.distanceThreshold) * t
       const connectionProbability = fromMark.connectionProbability + (toMark.connectionProbability - fromMark.connectionProbability) * t
-      // const gradient = fromMark.gradient + (toMark.gradient - fromMark.gradient) * t
+      const gradient = fromMark.gradient.x + (toMark.gradient.x - fromMark.gradient.x) * t
+      gradient = fromMark.gradient.y + (toMark.gradient.y - fromMark.gradient.y) * t
 
       const tempMark = Mark.fromJSON({
         ...toMark.toJSON(),
@@ -440,6 +441,7 @@ export class Page {
         density,
         distanceThreshold,
         connectionProbability,
+        gradient,
         points: interpPoints,
         alpha: 1.0
       

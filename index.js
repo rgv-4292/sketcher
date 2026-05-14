@@ -87,16 +87,11 @@ document.addEventListener('DOMContentLoaded', function () {
     importOwnerBase = ownerBase
     importReplaceOwner = replaceOwner
 
-    // Preserve existing rotation on re-place; reset to 0 for fresh placements
-    if (!replaceOwner) {
-      importRotationDeg = 0
-      document.getElementById('importRotation').value = 0
-      document.getElementById('importRotationVal').textContent = '0°'
-    } else {
-      // Sync slider to current importRotationDeg (already set from prior session or 0)
-      document.getElementById('importRotation').value = importRotationDeg
-      document.getElementById('importRotationVal').textContent = `${importRotationDeg}°`
-    }
+    // Always reset rotation to 0 — for re-place, incoming marks already have
+    // their previous rotation baked into the point coordinates.
+    importRotationDeg = 0
+    document.getElementById('importRotation').value = 0
+    document.getElementById('importRotationVal').textContent = '0°'
 
     // Store original centroid before normalising — used by draw() for ghost offset
     importCentroid = getImportCentroid(marks)
@@ -114,11 +109,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (importGhostBitmap) { importGhostBitmap.close(); importGhostBitmap = null }
 
-    // Bake ghost with current rotation applied (importRotationDeg already set above)
-    const toShift = importRotationDeg !== 0
-      ? rotateMarks(importMarks, importRotationDeg)
-      : importMarks
-    const shifted = toShift.map(m => {
+    // Bake ghost at centroid-restored positions (rotation is always 0 on entry)
+    const shifted = importMarks.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
       if (clone.gradient) clone.gradient = {

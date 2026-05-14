@@ -155,14 +155,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let ownerTag
     if (importReplaceOwner && !isImportLayer(importReplaceOwner)) {
-      // Drawn layer re-place: tap gives new visual centroid position.
-      // The delta from original centroid to tap becomes the new transform offset
-      // (replacing, not accumulating, since we pre-applied the old transform).
-      const t = getTransform(importReplaceOwner)
-      setTransform(importReplaceOwner, {
-        offsetX: t.offsetX + offsetX,
-        offsetY: t.offsetY + offsetY
-      })
+      // Drawn layer re-place: the transformedMarks passed in already have the
+      // old transform applied, so offsetX/offsetY is the pure delta from centroid
+      // to tap. Replace (don't accumulate) the transform offset.
+      setTransform(importReplaceOwner, { offsetX, offsetY })
       cancelImportMode()
       refreshLayerList()
       return
@@ -279,25 +275,24 @@ document.addEventListener('DOMContentLoaded', function () {
             .filter(m => m.owner === owner && m.points.length > 0)
             .map(m => Mark.fromJSON(m.toJSON()))
           if (rawMarks.length === 0) return
-          // Apply existing layer transform to marks so ghost shows current visual position
           const t = getTransform(owner)
+          // Compute centroid of raw marks (before transform)
+          let sx = 0, sy = 0, count = 0
+          rawMarks.forEach(m => m.points.forEach(p => { sx += p.x; sy += p.y; count++ }))
+          const cx = count ? sx / count : 0
+          const cy = count ? sy / count : 0
           const rad = (t.rotation * Math.PI) / 180
           const cos = Math.cos(rad), sin = Math.sin(rad)
-          const cx = page.canvasParams.width / 2
-          const cy = page.canvasParams.height / 2
           const transformedMarks = rawMarks.map(m => {
             const clone = Mark.fromJSON(m.toJSON())
             clone.points = m.points.map(p => {
-              // Apply translation
-              let x = p.x + t.offsetX
-              let y = p.y + t.offsetY
-              // Apply rotation around canvas center
+              // Rotate around mark centroid, then translate
+              let x = p.x, y = p.y
               if (t.rotation !== 0) {
-                const rx = cx + (x - cx) * cos - (y - cy) * sin
-                const ry = cy + (x - cx) * sin + (y - cy) * cos
-                x = rx; y = ry
+                x = cx + (p.x - cx) * cos - (p.y - cy) * sin
+                y = cy + (p.x - cx) * sin + (p.y - cy) * cos
               }
-              return { ...p, x, y }
+              return { ...p, x: x + t.offsetX, y: y + t.offsetY }
             })
             return clone
           })

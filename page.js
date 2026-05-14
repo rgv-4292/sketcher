@@ -70,20 +70,28 @@ export class Page {
   }
 
   _applyLayerTransform(ctx, owner) {
-    const t = this.layerTransforms[owner === null ? '__page__' : owner]
+    const key = owner === null ? '__page__' : owner
+    const t = this.layerTransforms[key]
     if (!t) return false
     const { offsetX, offsetY, rotation } = t
     if (offsetX === 0 && offsetY === 0 && rotation === 0) return false
     ctx.save()
     ctx.translate(offsetX, offsetY)
     if (rotation !== 0) {
-      const cx = this.canvasParams.width / 2
-      const cy = this.canvasParams.height / 2
+      // Rotate around the centroid of this layer's marks
+      let sx = 0, sy = 0, count = 0
+      this.marks.forEach(m => {
+        if ((m.owner === null ? '__page__' : m.owner) === key) {
+          m.points.forEach(p => { sx += p.x; sy += p.y; count++ })
+        }
+      })
+      const cx = count ? sx / count : this.canvasParams.width / 2
+      const cy = count ? sy / count : this.canvasParams.height / 2
       ctx.translate(cx, cy)
       ctx.rotate((rotation * Math.PI) / 180)
       ctx.translate(-cx, -cy)
     }
-    return true  // caller must ctx.restore()
+    return true
   }
 
   _renderToBuffer() {

@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
     importMode = true
     canvas.style.cursor = 'crosshair'
     document.getElementById('placementBanner').classList.add('visible')
+    refreshLayerList()  // show R slider on re-place target row
   }
 
   function cancelImportMode() {
@@ -183,6 +184,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // If rotation changed during bake, run again with final value
     if (importRotationDeg !== deg) rebakeGhost()
   }
+
+  const _rebakeDebounced = debounce(async () => { await rebakeGhost() }, 80)
 
   function placeImport(tapX, tapY) {
     const offsetX = tapX - importCentroid.x
@@ -390,8 +393,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       list.appendChild(row)
 
-      // --- Transform sub-row (only shown for active layer) ---
-      if (isActive) {
+      // --- Transform sub-row: show for active layer OR current re-place target ---
+      if (isActive || (importMode && importReplaceOwner === owner)) {
         const sub = document.createElement('div')
         sub.style.cssText = 'padding:6px 4px 6px 18px;display:flex;flex-direction:column;gap:5px;border-left:3px solid #5a7a5a;margin-bottom:4px;'
 
@@ -404,15 +407,24 @@ document.addEventListener('DOMContentLoaded', function () {
         const rSlider = document.createElement('input')
         rSlider.type = 'range'
         rSlider.min = -180; rSlider.max = 180; rSlider.step = 1
-        rSlider.value = t.rotation
+        // In re-place mode show importRotationDeg; otherwise show stored transform
+        rSlider.value = (importMode && importReplaceOwner === owner) ? importRotationDeg : t.rotation
         rSlider.style.cssText = 'flex:1;'
         const rVal = document.createElement('span')
-        rVal.textContent = `${Math.round(t.rotation)}\u00b0`
+        const displayRot = (importMode && importReplaceOwner === owner) ? importRotationDeg : Math.round(t.rotation)
+        rVal.textContent = `${displayRot}\u00b0`
         rVal.style.cssText = 'font-size:11px;color:#aaa;width:32px;text-align:right;'
         rSlider.addEventListener('input', () => {
           const v = parseFloat(rSlider.value)
           rVal.textContent = `${Math.round(v)}\u00b0`
-          setTransform(owner, { rotation: v })
+          if (importMode && importReplaceOwner === owner) {
+            // In re-place mode: drive the ghost preview rotation directly
+            importRotationDeg = v
+            renderGhostAtLast()
+            _rebakeDebounced()
+          } else {
+            setTransform(owner, { rotation: v })
+          }
         })
         rRow.appendChild(rLbl); rRow.appendChild(rSlider); rRow.appendChild(rVal)
         sub.appendChild(rRow)
@@ -522,17 +534,6 @@ document.addEventListener('DOMContentLoaded', function () {
   setSidebar(true)
 
   controlButton.addEventListener('pointerdown', () => setSidebar(!sidebarVisible))
-
-  // --- Import rotation slider ---
-  const importRotationSlider = document.getElementById('importRotation')
-  const importRotationVal = document.getElementById('importRotationVal')
-  const _rebakeDebounced = debounce(async () => { await rebakeGhost() }, 80)
-  importRotationSlider.addEventListener('input', () => {
-    importRotationDeg = parseInt(importRotationSlider.value)
-    importRotationVal.textContent = `${importRotationDeg}\u00b0`
-    renderGhostAtLast()
-    _rebakeDebounced()
-  })
 
   // ESC cancels placement mode
   document.addEventListener('keydown', (e) => {

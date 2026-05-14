@@ -73,23 +73,17 @@ export class Page {
     const key = owner === null ? '__page__' : owner
     const t = this.layerTransforms[key]
     if (!t) return false
-    const { offsetX, offsetY, rotation } = t
+    const { offsetX, offsetY, rotation, cx, cy } = t
     if (offsetX === 0 && offsetY === 0 && rotation === 0) return false
     ctx.save()
     ctx.translate(offsetX, offsetY)
     if (rotation !== 0) {
-      // Rotate around the centroid of this layer's marks
-      let sx = 0, sy = 0, count = 0
-      this.marks.forEach(m => {
-        if ((m.owner === null ? '__page__' : m.owner) === key) {
-          m.points.forEach(p => { sx += p.x; sy += p.y; count++ })
-        }
-      })
-      const cx = count ? sx / count : this.canvasParams.width / 2
-      const cy = count ? sy / count : this.canvasParams.height / 2
-      ctx.translate(cx, cy)
+      // Use stored centroid pivot; fall back to canvas centre if not set
+      const pivotX = cx !== undefined ? cx : this.canvasParams.width / 2
+      const pivotY = cy !== undefined ? cy : this.canvasParams.height / 2
+      ctx.translate(pivotX, pivotY)
       ctx.rotate((rotation * Math.PI) / 180)
-      ctx.translate(-cx, -cy)
+      ctx.translate(-pivotX, -pivotY)
     }
     return true
   }

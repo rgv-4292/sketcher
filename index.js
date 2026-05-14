@@ -254,6 +254,13 @@ document.addEventListener('DOMContentLoaded', function () {
       page.marks.push(placed)
       if (placed.filled) lastFilledMark = page.marks.length - 1
     })
+    // Store the placement centroid as the fixed rotation pivot for this layer
+    const placedCx = importCentroid.x + offsetX
+    const placedCy = importCentroid.y + offsetY
+    const tkey = ownerTag
+    if (!page.layerTransforms[tkey]) page.layerTransforms[tkey] = { offsetX: 0, offsetY: 0, rotation: 0 }
+    page.layerTransforms[tkey].cx = placedCx
+    page.layerTransforms[tkey].cy = placedCy
     page.invalidateBuffer()
     unsavedChanges = true
     cancelImportMode()
@@ -558,6 +565,22 @@ document.addEventListener('DOMContentLoaded', function () {
   function setTransform(owner, patch) {
     const key = owner === null ? '__page__' : owner
     if (!page.layerTransforms[key]) page.layerTransforms[key] = { offsetX: 0, offsetY: 0, rotation: 0 }
+    // When rotation is first set, compute and store the pivot centroid from current mark positions
+    if (patch.rotation !== undefined && page.layerTransforms[key].cx === undefined) {
+      let sx = 0, sy = 0, count = 0
+      page.marks.forEach(m => {
+        if ((m.owner === null ? '__page__' : m.owner) === key && m.points.length > 0) {
+          m.points.forEach(p => { sx += p.x; sy += p.y; count++ })
+        }
+      })
+      page.layerTransforms[key].cx = count ? sx / count : page.canvasParams.width / 2
+      page.layerTransforms[key].cy = count ? sy / count : page.canvasParams.height / 2
+    }
+    // When offset changes, clear stored pivot so it recomputes on next rotation use
+    if ((patch.offsetX !== undefined || patch.offsetY !== undefined) && patch.rotation === undefined) {
+      delete page.layerTransforms[key].cx
+      delete page.layerTransforms[key].cy
+    }
     Object.assign(page.layerTransforms[key], patch)
     page.invalidateBuffer()
     unsavedChanges = true
@@ -968,22 +991,11 @@ document.addEventListener('DOMContentLoaded', function () {
     ctx.save()
     ctx.translate(t.offsetX, t.offsetY)
     if (t.rotation !== 0) {
-      // Same centroid logic as page._applyLayerTransform
-      let sx = 0, sy = 0, count = 0
-      page.marks.forEach(m => {
-        if (m.owner === owner && m.points.length > 0) {
-          m.points.forEach(p => { sx += p.x; sy += p.y; count++ })
-        }
-      })
-      // Also include points drawn so far in currentMark
-      if (currentMark) {
-        currentMark.points.forEach(p => { sx += p.x; sy += p.y; count++ })
-      }
-      const cx = count ? sx / count : 0
-      const cy = count ? sy / count : 0
-      ctx.translate(cx, cy)
+      const pivotX = t.cx !== undefined ? t.cx : page.canvasParams.width / 2
+      const pivotY = t.cy !== undefined ? t.cy : page.canvasParams.height / 2
+      ctx.translate(pivotX, pivotY)
       ctx.rotate((t.rotation * Math.PI) / 180)
-      ctx.translate(-cx, -cy)
+      ctx.translate(-pivotX, -pivotY)
     }
     return true
   }
@@ -992,29 +1004,17 @@ document.addEventListener('DOMContentLoaded', function () {
   function toLayerSpace(pt, owner) {
     const t = getTransform(owner)
     if (t.offsetX === 0 && t.offsetY === 0 && t.rotation === 0) return pt
-
-    // Inverse translate
     let x = pt.x - t.offsetX
     let y = pt.y - t.offsetY
-
-    // Inverse rotate around layer centroid
     if (t.rotation !== 0) {
-      // Centroid of raw mark points on this layer
-      let sx = 0, sy = 0, count = 0
-      page.marks.forEach(m => {
-        if (m.owner === owner && m.points.length > 0) {
-          m.points.forEach(p => { sx += p.x; sy += p.y; count++ })
-        }
-      })
-      const cx = count ? sx / count : 0
-      const cy = count ? sy / count : 0
-      const rad = (-t.rotation * Math.PI) / 180  // negative = inverse rotation
+      const pivotX = t.cx !== undefined ? t.cx : 0
+      const pivotY = t.cy !== undefined ? t.cy : 0
+      const rad = (-t.rotation * Math.PI) / 180
       const cos = Math.cos(rad), sin = Math.sin(rad)
-      const rx = cx + (x - cx) * cos - (y - cy) * sin
-      const ry = cy + (x - cx) * sin + (y - cy) * cos
+      const rx = pivotX + (x - pivotX) * cos - (y - pivotY) * sin
+      const ry = pivotY + (x - pivotX) * sin + (y - pivotY) * cos
       x = rx; y = ry
     }
-
     return { x, y }
   }
 

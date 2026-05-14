@@ -173,7 +173,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     _rebaking = true
     const deg = importRotationDeg
-    const rotated = rotateMarks(importMarks, deg)
+    // const rotated = rotateMarks(importMarks, deg)  // this is un necessary
+    const rotated = importMarks
     const forBake = rotated.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))

@@ -137,8 +137,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (importGhostBitmap) { importGhostBitmap.bitmap.close(); importGhostBitmap = null }
 
     // Bake ghost with the current importRotationDeg applied
-    // const toRotate = importRotationDeg !== 0 ? rotateMarks(importMarks, importRotationDeg) : importMarks
-    const toRotate = importMarks
+    const toRotate = importRotationDeg !== 0 ? rotateMarks(importMarks, importRotationDeg) : importMarks
+    // const toRotate = importMarks
     const forBake = toRotate.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
@@ -173,8 +173,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     _rebaking = true
     const deg = importRotationDeg
-    const rotated = rotateMarks(importMarks, deg)  // this is un necessary
-    // const rotated = importMarks
+    // const rotated = rotateMarks(importMarks, deg)  // this is un necessary
+    const rotated = importMarks
     const forBake = rotated.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))

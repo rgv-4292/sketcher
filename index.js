@@ -310,7 +310,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const drag = document.createElement('span')
       drag.textContent = '\u283f'
-      drag.style.cssText = 'cursor:grab;color:#666;padding:0 5px 0 0;font-size:14px;user-select:none;'
+      drag.dataset.drag = '1'
+      drag.style.cssText = 'cursor:grab;color:#666;padding:0 5px 0 0;font-size:14px;user-select:none;touch-action:none;'
 
       const name = document.createElement('span')
       name.className = 'import-name'
@@ -326,37 +327,29 @@ document.addEventListener('DOMContentLoaded', function () {
       row.appendChild(name)
       row.appendChild(selBtn)
 
-      if (owner !== null && isImportLayer(owner)) {
-        const reBtn = document.createElement('button')
-        reBtn.textContent = 'Re-place'
-        reBtn.addEventListener('pointerdown', async () => {
-          const ownerMarks = page.marks.filter(m => m.owner === owner).map(m => Mark.fromJSON(m.toJSON()))
-          const base = owner.replace(/_\d+$/, '')
-          await enterImportMode(ownerMarks, base, owner)
-        })
-        row.appendChild(reBtn)
-      }
-
-      if (owner !== null && !isImportLayer(owner)) {
-        const reBtn = document.createElement('button')
-        reBtn.textContent = 'Re-place'
-        reBtn.addEventListener('pointerdown', async () => {
+      const reBtn = document.createElement('button')
+      reBtn.textContent = 'Re-place'
+      reBtn.addEventListener('pointerdown', async () => {
+        let marksForPlacement
+        if (isImportLayer(owner)) {
+          marksForPlacement = page.marks
+            .filter(m => m.owner === owner)
+            .map(m => Mark.fromJSON(m.toJSON()))
+        } else {
           const rawMarks = page.marks
             .filter(m => m.owner === owner && m.points.length > 0)
             .map(m => Mark.fromJSON(m.toJSON()))
           if (rawMarks.length === 0) return
           const t = getTransform(owner)
-          // Compute centroid of raw marks (before transform)
           let sx = 0, sy = 0, count = 0
           rawMarks.forEach(m => m.points.forEach(p => { sx += p.x; sy += p.y; count++ }))
           const cx = count ? sx / count : 0
           const cy = count ? sy / count : 0
           const rad = (t.rotation * Math.PI) / 180
           const cos = Math.cos(rad), sin = Math.sin(rad)
-          const transformedMarks = rawMarks.map(m => {
+          marksForPlacement = rawMarks.map(m => {
             const clone = Mark.fromJSON(m.toJSON())
             clone.points = m.points.map(p => {
-              // Rotate around mark centroid, then translate
               let x = p.x, y = p.y
               if (t.rotation !== 0) {
                 x = cx + (p.x - cx) * cos - (p.y - cy) * sin
@@ -366,10 +359,11 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             return clone
           })
-          await enterImportMode(transformedMarks, owner, owner)
-        })
-        row.appendChild(reBtn)
-      }
+        }
+        const base = isImportLayer(owner) ? owner.replace(/_\d+$/, '') : owner
+        await enterImportMode(marksForPlacement, base, owner)
+      })
+      row.appendChild(reBtn)
 
       if (owner !== null) {
         const delBtn = document.createElement('button')
@@ -393,52 +387,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (isActive) {
         const sub = document.createElement('div')
         sub.style.cssText = 'padding:6px 4px 6px 18px;display:flex;flex-direction:column;gap:5px;border-left:3px solid #5a7a5a;margin-bottom:4px;'
-
-        // Set Origin checkbox
-        const originRow = document.createElement('div')
-        originRow.style.cssText = 'display:flex;align-items:center;gap:6px;'
-        const originChk = document.createElement('input')
-        originChk.type = 'checkbox'
-        originChk.id = 'setLayerOriginChk'
-        originChk.checked = setLayerOriginPending
-        originChk.addEventListener('change', () => { setLayerOriginPending = originChk.checked })
-        const originLbl = document.createElement('label')
-        originLbl.htmlFor = 'setLayerOriginChk'
-        originLbl.textContent = 'Set Origin (tap canvas)'
-        originLbl.style.cssText = 'font-size:11px;color:#aaa;cursor:pointer;'
-        originRow.appendChild(originChk)
-        originRow.appendChild(originLbl)
-        sub.appendChild(originRow)
-
-        // X offset
-        const xRow = document.createElement('div')
-        xRow.style.cssText = 'display:flex;align-items:center;gap:6px;'
-        const xLbl = document.createElement('label')
-        xLbl.textContent = 'X'
-        xLbl.style.cssText = 'font-size:11px;color:#aaa;width:12px;'
-        const xInput = document.createElement('input')
-        xInput.type = 'number'
-        xInput.value = Math.round(t.offsetX)
-        xInput.step = 1
-        xInput.style.cssText = 'width:70px;background:#444;border:1px solid #555;color:#fff;padding:2px 4px;border-radius:3px;font-size:12px;'
-        xInput.addEventListener('change', () => { setTransform(owner, { offsetX: parseFloat(xInput.value) || 0 }) })
-        xRow.appendChild(xLbl); xRow.appendChild(xInput)
-        sub.appendChild(xRow)
-
-        // Y offset
-        const yRow = document.createElement('div')
-        yRow.style.cssText = 'display:flex;align-items:center;gap:6px;'
-        const yLbl = document.createElement('label')
-        yLbl.textContent = 'Y'
-        yLbl.style.cssText = 'font-size:11px;color:#aaa;width:12px;'
-        const yInput = document.createElement('input')
-        yInput.type = 'number'
-        yInput.value = Math.round(t.offsetY)
-        yInput.step = 1
-        yInput.style.cssText = 'width:70px;background:#444;border:1px solid #555;color:#fff;padding:2px 4px;border-radius:3px;font-size:12px;'
-        yInput.addEventListener('change', () => { setTransform(owner, { offsetY: parseFloat(yInput.value) || 0 }) })
-        yRow.appendChild(yLbl); yRow.appendChild(yInput)
-        sub.appendChild(yRow)
 
         // Rotation
         const rRow = document.createElement('div')
@@ -467,63 +415,59 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     // --- Pointer-based drag-to-reorder ---
-    // Single set of listeners on the list container via delegation.
     let dragSrc = null
     let dragPlaceholder = null
-    let dragPointerId = null
 
-    list.addEventListener('pointerdown', e => {
-      const handle = e.target.closest('span')
-      if (!handle) return
-      const row = handle.closest('.import-row')
-      if (!row) return
-      e.preventDefault()
-      dragSrc = row
-      dragPointerId = e.pointerId
-      dragSrc.style.opacity = '0.4'
-      dragPlaceholder = document.createElement('div')
-      dragPlaceholder.style.cssText = 'height:2px;background:#7a9a7a;margin:2px 0;pointer-events:none;'
-      list.setPointerCapture(e.pointerId)
-    })
+    list.querySelectorAll('.import-row [data-drag]').forEach(handle => {
+      handle.addEventListener('pointerdown', e => {
+        const row = handle.closest('.import-row')
+        if (!row) return
+        e.preventDefault()
+        e.stopPropagation()
+        dragSrc = row
+        dragSrc.style.opacity = '0.4'
+        dragPlaceholder = document.createElement('div')
+        dragPlaceholder.style.cssText = 'height:2px;background:#7a9a7a;margin:2px 0;pointer-events:none;'
 
-    list.addEventListener('pointermove', e => {
-      if (!dragSrc || e.pointerId !== dragPointerId) return
-      e.preventDefault()
-      const rows = [...list.querySelectorAll('.import-row')].filter(r => r !== dragSrc)
-      let inserted = false
-      for (const r of rows) {
-        const rect = r.getBoundingClientRect()
-        if (e.clientY < rect.top + rect.height / 2) {
-          list.insertBefore(dragPlaceholder, r)
-          inserted = true
-          break
+        const onMove = e => {
+          if (!dragSrc) return
+          const rows = [...list.querySelectorAll('.import-row')].filter(r => r !== dragSrc)
+          let inserted = false
+          for (const r of rows) {
+            const rect = r.getBoundingClientRect()
+            if (e.clientY < rect.top + rect.height / 2) {
+              list.insertBefore(dragPlaceholder, r)
+              inserted = true
+              break
+            }
+          }
+          if (!inserted) list.appendChild(dragPlaceholder)
         }
-      }
-      if (!inserted) list.appendChild(dragPlaceholder)
-    })
 
-    list.addEventListener('pointerup', e => {
-      if (!dragSrc || e.pointerId !== dragPointerId) return
-      dragSrc.style.opacity = ''
-      if (dragPlaceholder && dragPlaceholder.parentNode) {
-        list.insertBefore(dragSrc, dragPlaceholder)
-        dragPlaceholder.remove()
-      }
-      const newOrder = [...list.querySelectorAll('.import-row')]
-        .map(r => r.dataset.owner === '__page__' ? null : r.dataset.owner)
-      dragSrc = null; dragPlaceholder = null; dragPointerId = null
-      page.layerOrder = newOrder
-      page.invalidateBuffer()
-      unsavedChanges = true
-      page.render()
-      // Defer DOM rebuild until after pointer events settle
-      setTimeout(() => refreshLayerList(), 0)
-    })
+        const onUp = () => {
+          document.removeEventListener('pointermove', onMove)
+          document.removeEventListener('pointerup', onUp)
+          document.removeEventListener('pointercancel', onUp)
+          if (!dragSrc) return
+          dragSrc.style.opacity = ''
+          if (dragPlaceholder && dragPlaceholder.parentNode) {
+            list.insertBefore(dragSrc, dragPlaceholder)
+            dragPlaceholder.remove()
+          }
+          const newOrder = [...list.querySelectorAll('.import-row')]
+            .map(r => r.dataset.owner === '__page__' ? null : r.dataset.owner)
+          dragSrc = null; dragPlaceholder = null
+          page.layerOrder = newOrder
+          page.invalidateBuffer()
+          unsavedChanges = true
+          page.render()
+          setTimeout(() => refreshLayerList(), 0)
+        }
 
-    list.addEventListener('pointercancel', e => {
-      if (dragSrc) dragSrc.style.opacity = ''
-      if (dragPlaceholder) dragPlaceholder.remove()
-      dragSrc = null; dragPlaceholder = null; dragPointerId = null
+        document.addEventListener('pointermove', onMove)
+        document.addEventListener('pointerup', onUp)
+        document.addEventListener('pointercancel', onUp)
+      })
     })
   }
 
@@ -579,36 +523,22 @@ document.addEventListener('DOMContentLoaded', function () {
   importRotationSlider.addEventListener('input', () => {
     importRotationDeg = parseInt(importRotationSlider.value)
     importRotationVal.textContent = `${importRotationDeg}\u00b0`
-    if (importMode && _ghostLastPt) {
-      // Draw rotation synchronously using ctx transform so preview is instant
-      const rotated = rotateMarks(importMarks, importRotationDeg)
-      const cx = _ghostLastPt.x
-      const cy = _ghostLastPt.y
-      const mainCtx = canvas.getContext('2d')
-      if (page._bufferDirty) page._renderToBuffer()
-      mainCtx.clearRect(0, 0, canvas.width, canvas.height)
-      mainCtx.fillStyle = page.canvasParams.backgroundColor
-      mainCtx.fillRect(0, 0, canvas.width, canvas.height)
-      mainCtx.drawImage(page._bufferCanvas, 0, 0)
-      // Render rotated marks directly at cursor position
-      const offsetX = cx - importCentroid.x
-      const offsetY = cy - importCentroid.y
-      mainCtx.save()
-      mainCtx.globalAlpha = 0.5
-      mainCtx.translate(importCentroid.x + offsetX, importCentroid.y + offsetY)
-      mainCtx.rotate((importRotationDeg * Math.PI) / 180)
-      mainCtx.translate(-(importCentroid.x), -(importCentroid.y))
-      // Blit the unrotated ghost bitmap — the ctx rotation handles the angle
-      if (importGhostBitmap) {
-        const { bitmap, cx: bx, cy: by } = importGhostBitmap
-        mainCtx.globalAlpha = 0.5
-        // Draw at position that puts centroid at (importCentroid.x, importCentroid.y)
-        // after the ctx transform
-        mainCtx.drawImage(bitmap, importCentroid.x - bx, importCentroid.y - by)
-      }
-      mainCtx.restore()
-      mainCtx.globalAlpha = 1
-    }
+    if (!importMode || !importGhostBitmap || !_ghostLastPt) return
+    const { bitmap, cx: bx, cy: by } = importGhostBitmap
+    const pt = _ghostLastPt
+    const mainCtx = canvas.getContext('2d')
+    if (page._bufferDirty) page._renderToBuffer()
+    mainCtx.clearRect(0, 0, canvas.width, canvas.height)
+    mainCtx.fillStyle = page.canvasParams.backgroundColor
+    mainCtx.fillRect(0, 0, canvas.width, canvas.height)
+    mainCtx.drawImage(page._bufferCanvas, 0, 0)
+    mainCtx.save()
+    mainCtx.globalAlpha = 0.5
+    mainCtx.translate(pt.x, pt.y)
+    mainCtx.rotate((importRotationDeg * Math.PI) / 180)
+    mainCtx.drawImage(bitmap, -bx, -by)
+    mainCtx.restore()
+    mainCtx.globalAlpha = 1
     _rebakeDebounced()
   })
 

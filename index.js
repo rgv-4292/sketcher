@@ -114,10 +114,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (importGhostBitmap) { importGhostBitmap.close(); importGhostBitmap = null }
 
-    // Bake ghost at original positions (shift back by centroid) so the bitmap
-    // covers the full canvas and the centroid is at (importCentroid.x, importCentroid.y)
-    // inside the bitmap. draw() then offsets the bitmap by (cursorX - centroidX, cursorY - centroidY).
-    const shifted = importMarks.map(m => {
+    // Bake ghost with current rotation applied (importRotationDeg already set above)
+    const toShift = importRotationDeg !== 0
+      ? rotateMarks(importMarks, importRotationDeg)
+      : importMarks
+    const shifted = toShift.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
       if (clone.gradient) clone.gradient = {

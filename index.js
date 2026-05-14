@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return
     }
     _rebaking = true
-    const deg = importRotationDeg
+    const deg = -importRotationDeg
     const rotated = rotateMarks(importMarks, deg)
     const forBake = rotated.map(m => {
       const clone = Mark.fromJSON(m.toJSON())

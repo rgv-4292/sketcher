@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     _rebaking = false
     // If rotation changed during bake, run again with final value
-    // if (importRotationDeg !== deg) rebakeGhost()  // this is un necessary
+    if (importRotationDeg !== deg) rebakeGhost()  // this is un necessary
   }
 
   const _rebakeDebounced = debounce(async () => { await rebakeGhost() }, 80)

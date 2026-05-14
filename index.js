@@ -415,8 +415,8 @@ document.addEventListener('DOMContentLoaded', function () {
         rSlider.type = 'range'
         rSlider.min = -180; rSlider.max = 180; rSlider.step = 1
         // In re-place mode show importRotationDeg; otherwise show stored transform
-        // rSlider.value = (importMode && importReplaceOwner === owner) ? importRotationDeg : t.rotation
-        rSlider.value = t.rotation
+        rSlider.value = (importMode && importReplaceOwner === owner) ? importRotationDeg : t.rotation
+        // rSlider.value = t.rotation
         rSlider.style.cssText = 'flex:1;'
         const rVal = document.createElement('span')
         const displayRot = (importMode && importReplaceOwner === owner) ? importRotationDeg : Math.round(t.rotation)
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', function () {
             renderGhostAtLast()
             _rebakeDebounced()
           } else {
-            setTransform(owner, { rotation: v })
+            // setTransform(owner, { rotation: v })
           }
         })
         rRow.appendChild(rLbl); rRow.appendChild(rSlider); rRow.appendChild(rVal)

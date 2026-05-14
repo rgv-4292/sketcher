@@ -111,8 +111,14 @@ document.addEventListener('DOMContentLoaded', function () {
     importOwnerBase = ownerBase
     importReplaceOwner = replaceOwner
 
-    // Always reset rotation to 0 on entry
-    importRotationDeg = 0
+    // For re-place, start from the layer's existing stored rotation;
+    // for fresh placement, start at 0.
+    if (replaceOwner) {
+      const existingT = page.layerTransforms[replaceOwner]
+      importRotationDeg = (existingT && existingT.rotation) ? existingT.rotation : 0
+    } else {
+      importRotationDeg = 0
+    }
 
     // Store original centroid before normalising — used by draw() for ghost offset
     importCentroid = getImportCentroid(marks)
@@ -130,8 +136,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (importGhostBitmap) { importGhostBitmap.bitmap.close(); importGhostBitmap = null }
 
-    // Bake ghost: pass marks at their centroid-restored positions
-    const forBake = importMarks.map(m => {
+    // Bake ghost with the current importRotationDeg applied
+    const toRotate = importRotationDeg !== 0 ? rotateMarks(importMarks, importRotationDeg) : importMarks
+    const forBake = toRotate.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
       if (clone.gradient) clone.gradient = { x: clone.gradient.x + importCentroid.x, y: clone.gradient.y + importCentroid.y }

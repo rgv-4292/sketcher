@@ -157,17 +157,31 @@ document.addEventListener('DOMContentLoaded', function () {
     page.render()
   }
 
+  let _rebaking = false
   async function rebakeGhost() {
     if (!importMode) return
-    const rotated = rotateMarks(importMarks, importRotationDeg)
+    if (_rebaking) {
+      // Schedule a retry after current bake finishes
+      setTimeout(() => rebakeGhost(), 50)
+      return
+    }
+    _rebaking = true
+    const deg = importRotationDeg
+    const rotated = rotateMarks(importMarks, deg)
     const forBake = rotated.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
       if (clone.gradient) clone.gradient = { x: clone.gradient.x + importCentroid.x, y: clone.gradient.y + importCentroid.y }
       return clone
     })
-    if (importGhostBitmap) { importGhostBitmap.bitmap.close(); importGhostBitmap = null }
-    importGhostBitmap = await bakeGhostBitmap(forBake)
+    const result = await bakeGhostBitmap(forBake)
+    if (result) {
+      if (importGhostBitmap) { importGhostBitmap.bitmap.close(); importGhostBitmap = null }
+      importGhostBitmap = result
+    }
+    _rebaking = false
+    // If rotation changed during bake, run again with final value
+    if (importRotationDeg !== deg) rebakeGhost()
   }
 
   function placeImport(tapX, tapY) {
@@ -502,7 +516,8 @@ document.addEventListener('DOMContentLoaded', function () {
       page.invalidateBuffer()
       unsavedChanges = true
       page.render()
-      refreshLayerList()
+      // Defer DOM rebuild until after pointer events settle
+      setTimeout(() => refreshLayerList(), 0)
     })
 
     list.addEventListener('pointercancel', e => {
@@ -560,10 +575,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- Import rotation slider ---
   const importRotationSlider = document.getElementById('importRotation')
   const importRotationVal = document.getElementById('importRotationVal')
-  importRotationSlider.addEventListener('input', async () => {
+  const _rebakeDebounced = debounce(async () => { await rebakeGhost() }, 80)
+  importRotationSlider.addEventListener('input', () => {
     importRotationDeg = parseInt(importRotationSlider.value)
     importRotationVal.textContent = `${importRotationDeg}\u00b0`
-    await rebakeGhost()
+    _rebakeDebounced()
   })
 
   // ESC cancels placement mode

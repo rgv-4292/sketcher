@@ -86,9 +86,17 @@ document.addEventListener('DOMContentLoaded', function () {
   async function enterImportMode(marks, ownerBase, replaceOwner = null) {
     importOwnerBase = ownerBase
     importReplaceOwner = replaceOwner
-    importRotationDeg = 0
-    document.getElementById('importRotation').value = 0
-    document.getElementById('importRotationVal').textContent = '0°'
+
+    // Preserve existing rotation on re-place; reset to 0 for fresh placements
+    if (!replaceOwner) {
+      importRotationDeg = 0
+      document.getElementById('importRotation').value = 0
+      document.getElementById('importRotationVal').textContent = '0°'
+    } else {
+      // Sync slider to current importRotationDeg (already set from prior session or 0)
+      document.getElementById('importRotation').value = importRotationDeg
+      document.getElementById('importRotationVal').textContent = `${importRotationDeg}°`
+    }
 
     // Store original centroid before normalising — used by draw() for ghost offset
     importCentroid = getImportCentroid(marks)
@@ -930,6 +938,34 @@ document.addEventListener('DOMContentLoaded', function () {
     return event.pointerType === 'pen' ? event.pressure : null
   }
 
+  // Apply the forward layer transform to a canvas context for live preview.
+  // Returns true if ctx.save() was called (caller must ctx.restore()).
+  function applyLiveTransform(ctx, owner) {
+    const t = getTransform(owner)
+    if (t.offsetX === 0 && t.offsetY === 0 && t.rotation === 0) return false
+    ctx.save()
+    ctx.translate(t.offsetX, t.offsetY)
+    if (t.rotation !== 0) {
+      // Same centroid logic as page._applyLayerTransform
+      let sx = 0, sy = 0, count = 0
+      page.marks.forEach(m => {
+        if (m.owner === owner && m.points.length > 0) {
+          m.points.forEach(p => { sx += p.x; sy += p.y; count++ })
+        }
+      })
+      // Also include points drawn so far in currentMark
+      if (currentMark) {
+        currentMark.points.forEach(p => { sx += p.x; sy += p.y; count++ })
+      }
+      const cx = count ? sx / count : 0
+      const cy = count ? sy / count : 0
+      ctx.translate(cx, cy)
+      ctx.rotate((t.rotation * Math.PI) / 180)
+      ctx.translate(-cx, -cy)
+    }
+    return true
+  }
+
   // Convert a canvas point to a layer's local space by applying the inverse transform.
   function toLayerSpace(pt, owner) {
     const t = getTransform(owner)
@@ -1009,7 +1045,10 @@ document.addEventListener('DOMContentLoaded', function () {
       fillMode !== 'none', markWidth, hatchAngle, 0.75, doTrace, null, fillMode, density, doMask
     )
     const lpt = toLayerSpace(pt, activeLayer)
+    const liveCtx = canvas.getContext('2d')
+    const liveTransformed = applyLiveTransform(liveCtx, activeLayer)
     currentMark.addPoint(lpt.x, lpt.y, getEventPressure(event))
+    if (liveTransformed) liveCtx.restore()
   }
 
   function renderGhostAt(pt) {
@@ -1050,12 +1089,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const scatterAmount = scatter > 0 ? Math.random() * scatter : 0
     if (Math.sqrt(dx * dx + dy * dy) > minDistance + scatterAmount) {
       const pressure = getEventPressure(event)
+      const liveCtx = canvas.getContext('2d')
+      const liveTransformed = applyLiveTransform(liveCtx, activeLayer)
       currentMark.addPoint(lpt.x, lpt.y, pressure)
       currentMark.addPoint(
         lpt.x + Math.ceil(Math.random() * 4 - 2),
         lpt.y + Math.ceil(Math.random() * 4 - 2),
         pressure
       )
+      if (liveTransformed) liveCtx.restore()
     }
   }
 

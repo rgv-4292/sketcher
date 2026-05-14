@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function placeImport(tapX, tapY) {
     const offsetX = tapX - importCentroid.x
     const offsetY = tapY - importCentroid.y
-    // const rotated = rotateMarks(importMarks, importRotationDeg)
+    // const rotated = rotateMarks(importMarks, importRotationDeg)  // this is unnecessary
     const rotated = importMarks
 
 

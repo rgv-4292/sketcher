@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return
     }
     _rebaking = true
-    const deg = -importRotationDeg
+    const deg = importRotationDeg
     const rotated = rotateMarks(importMarks, deg)
     const forBake = rotated.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     _rebaking = false
     // If rotation changed during bake, run again with final value
-    if (importRotationDeg !== deg) rebakeGhost()
+    // if (importRotationDeg !== deg) rebakeGhost()
   }
 
   const _rebakeDebounced = debounce(async () => { await rebakeGhost() }, 80)

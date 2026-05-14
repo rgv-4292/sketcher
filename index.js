@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', function () {
             renderGhostAtLast()
             _rebakeDebounced()
           } else {
-            // setTransform(owner, { rotation: v })
+            setTransform(owner, { rotation: v })
           }
         })
         rRow.appendChild(rLbl); rRow.appendChild(rSlider); rRow.appendChild(rVal)

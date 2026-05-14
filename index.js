@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Bake ghost with the current importRotationDeg applied
     // const toRotate = importRotationDeg !== 0 ? rotateMarks(importMarks, importRotationDeg) : importMarks
+    const toRotate = importMarks
     const forBake = toRotate.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))

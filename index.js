@@ -930,6 +930,36 @@ document.addEventListener('DOMContentLoaded', function () {
     return event.pointerType === 'pen' ? event.pressure : null
   }
 
+  // Convert a canvas point to a layer's local space by applying the inverse transform.
+  function toLayerSpace(pt, owner) {
+    const t = getTransform(owner)
+    if (t.offsetX === 0 && t.offsetY === 0 && t.rotation === 0) return pt
+
+    // Inverse translate
+    let x = pt.x - t.offsetX
+    let y = pt.y - t.offsetY
+
+    // Inverse rotate around layer centroid
+    if (t.rotation !== 0) {
+      // Centroid of raw mark points on this layer
+      let sx = 0, sy = 0, count = 0
+      page.marks.forEach(m => {
+        if (m.owner === owner && m.points.length > 0) {
+          m.points.forEach(p => { sx += p.x; sy += p.y; count++ })
+        }
+      })
+      const cx = count ? sx / count : 0
+      const cy = count ? sy / count : 0
+      const rad = (-t.rotation * Math.PI) / 180  // negative = inverse rotation
+      const cos = Math.cos(rad), sin = Math.sin(rad)
+      const rx = cx + (x - cx) * cos - (y - cy) * sin
+      const ry = cy + (x - cx) * sin + (y - cy) * cos
+      x = rx; y = ry
+    }
+
+    return { x, y }
+  }
+
   // --- Canvas coordinate helper ---
   // Corrects for CSS scaling when canvas is displayed smaller/larger than its pixel dimensions.
   function getCanvasPoint(event) {
@@ -978,7 +1008,8 @@ document.addEventListener('DOMContentLoaded', function () {
       currentColor, minDistance, distanceThreshold, connectionProbability,
       fillMode !== 'none', markWidth, hatchAngle, 0.75, doTrace, null, fillMode, density, doMask
     )
-    currentMark.addPoint(pt.x, pt.y, getEventPressure(event))
+    const lpt = toLayerSpace(pt, activeLayer)
+    currentMark.addPoint(lpt.x, lpt.y, getEventPressure(event))
   }
 
   function renderGhostAt(pt) {
@@ -1012,16 +1043,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!drawing) return
     const pt = getCanvasPoint(event)
+    const lpt = toLayerSpace(pt, activeLayer)
     const lastPoint = currentMark.points[currentMark.points.length - 1]
-    const dx = pt.x - lastPoint.x
-    const dy = pt.y - lastPoint.y
+    const dx = lpt.x - lastPoint.x
+    const dy = lpt.y - lastPoint.y
     const scatterAmount = scatter > 0 ? Math.random() * scatter : 0
     if (Math.sqrt(dx * dx + dy * dy) > minDistance + scatterAmount) {
       const pressure = getEventPressure(event)
-      currentMark.addPoint(pt.x, pt.y, pressure)
+      currentMark.addPoint(lpt.x, lpt.y, pressure)
       currentMark.addPoint(
-        pt.x + Math.ceil(Math.random() * 4 - 2),
-        pt.y + Math.ceil(Math.random() * 4 - 2),
+        lpt.x + Math.ceil(Math.random() * 4 - 2),
+        lpt.y + Math.ceil(Math.random() * 4 - 2),
         pressure
       )
     }

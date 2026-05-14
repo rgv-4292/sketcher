@@ -579,6 +579,36 @@ document.addEventListener('DOMContentLoaded', function () {
   importRotationSlider.addEventListener('input', () => {
     importRotationDeg = parseInt(importRotationSlider.value)
     importRotationVal.textContent = `${importRotationDeg}\u00b0`
+    if (importMode && _ghostLastPt) {
+      // Draw rotation synchronously using ctx transform so preview is instant
+      const rotated = rotateMarks(importMarks, importRotationDeg)
+      const cx = _ghostLastPt.x
+      const cy = _ghostLastPt.y
+      const mainCtx = canvas.getContext('2d')
+      if (page._bufferDirty) page._renderToBuffer()
+      mainCtx.clearRect(0, 0, canvas.width, canvas.height)
+      mainCtx.fillStyle = page.canvasParams.backgroundColor
+      mainCtx.fillRect(0, 0, canvas.width, canvas.height)
+      mainCtx.drawImage(page._bufferCanvas, 0, 0)
+      // Render rotated marks directly at cursor position
+      const offsetX = cx - importCentroid.x
+      const offsetY = cy - importCentroid.y
+      mainCtx.save()
+      mainCtx.globalAlpha = 0.5
+      mainCtx.translate(importCentroid.x + offsetX, importCentroid.y + offsetY)
+      mainCtx.rotate((importRotationDeg * Math.PI) / 180)
+      mainCtx.translate(-(importCentroid.x), -(importCentroid.y))
+      // Blit the unrotated ghost bitmap — the ctx rotation handles the angle
+      if (importGhostBitmap) {
+        const { bitmap, cx: bx, cy: by } = importGhostBitmap
+        mainCtx.globalAlpha = 0.5
+        // Draw at position that puts centroid at (importCentroid.x, importCentroid.y)
+        // after the ctx transform
+        mainCtx.drawImage(bitmap, importCentroid.x - bx, importCentroid.y - by)
+      }
+      mainCtx.restore()
+      mainCtx.globalAlpha = 1
+    }
     _rebakeDebounced()
   })
 
@@ -1113,8 +1143,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (liveTransformed) liveCtx.restore()
   }
 
+  // Last known cursor position during import mode, for slider-driven re-render
+  let _ghostLastPt = null
+
   function renderGhostAt(pt) {
     if (!importGhostBitmap) return
+    _ghostLastPt = pt
     const { bitmap, cx, cy } = importGhostBitmap
     const mainCtx = canvas.getContext('2d')
     if (page._bufferDirty) page._renderToBuffer()
@@ -1126,6 +1160,10 @@ document.addEventListener('DOMContentLoaded', function () {
     mainCtx.globalAlpha = 0.5
     mainCtx.drawImage(bitmap, pt.x - cx, pt.y - cy)
     mainCtx.globalAlpha = 1
+  }
+
+  function renderGhostAtLast() {
+    if (_ghostLastPt) renderGhostAt(_ghostLastPt)
   }
 
   function drawGhostPreview(event) {

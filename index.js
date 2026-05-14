@@ -163,10 +163,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let ownerTag
     if (importReplaceOwner && !isImportLayer(importReplaceOwner)) {
-      // Drawn layer re-place: the transformedMarks passed in already have the
-      // old transform applied, so offsetX/offsetY is the pure delta from centroid
-      // to tap. Replace (don't accumulate) the transform offset.
-      setTransform(importReplaceOwner, { offsetX, offsetY })
+      // Drawn layer re-place: bake the transform into the raw mark points permanently,
+      // then zero out the transform so the layer's natural position is its new home.
+      const dx = offsetX  // delta from transformed centroid to tap
+      const dy = offsetY
+      const t = getTransform(importReplaceOwner)
+      const rad = (t.rotation * Math.PI) / 180
+      const cos = Math.cos(rad), sin = Math.sin(rad)
+      // Compute raw centroid for rotation pivot
+      let sx = 0, sy = 0, count = 0
+      page.marks.forEach(m => {
+        if (m.owner === importReplaceOwner && m.points.length > 0) {
+          m.points.forEach(p => { sx += p.x; sy += p.y; count++ })
+        }
+      })
+      const cx = count ? sx / count : 0
+      const cy = count ? sy / count : 0
+      // Apply full forward transform + tap delta to each raw point
+      page.marks.forEach(m => {
+        if (m.owner !== importReplaceOwner) return
+        m.points = m.points.map(p => {
+          let x = p.x, y = p.y
+          if (t.rotation !== 0) {
+            x = cx + (p.x - cx) * cos - (p.y - cy) * sin
+            y = cy + (p.x - cx) * sin + (p.y - cy) * cos
+          }
+          return { ...p, x: x + t.offsetX + dx, y: y + t.offsetY + dy }
+        })
+        if (m.gradient) {
+          let gx = m.gradient.x, gy = m.gradient.y
+          if (t.rotation !== 0) {
+            gx = cx + (m.gradient.x - cx) * cos - (m.gradient.y - cy) * sin
+            gy = cy + (m.gradient.x - cx) * sin + (m.gradient.y - cy) * cos
+          }
+          m.gradient = { x: gx + t.offsetX + dx, y: gy + t.offsetY + dy }
+        }
+      })
+      // Zero out the transform — layer is now at its natural position
+      setTransform(importReplaceOwner, { offsetX: 0, offsetY: 0, rotation: 0 })
       cancelImportMode()
       refreshLayerList()
       return

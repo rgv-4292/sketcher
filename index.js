@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     _rebaking = false
     // If rotation changed during bake, run again with final value
-    if (importRotationDeg !== deg) rebakeGhost()
+    if (importRotationDeg !== deg) rebakeGhost()  // Is this causing a double rotate to selection?
   }
 
   const _rebakeDebounced = debounce(async () => { await rebakeGhost() }, 80)
@@ -415,7 +415,8 @@ document.addEventListener('DOMContentLoaded', function () {
         rSlider.type = 'range'
         rSlider.min = -180; rSlider.max = 180; rSlider.step = 1
         // In re-place mode show importRotationDeg; otherwise show stored transform
-        rSlider.value = (importMode && importReplaceOwner === owner) ? importRotationDeg : t.rotation
+        // rSlider.value = (importMode && importReplaceOwner === owner) ? importRotationDeg : t.rotation
+        rSlider.value = t.rotation
         rSlider.style.cssText = 'flex:1;'
         const rVal = document.createElement('span')
         const displayRot = (importMode && importReplaceOwner === owner) ? importRotationDeg : Math.round(t.rotation)

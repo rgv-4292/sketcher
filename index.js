@@ -70,17 +70,41 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  // Render marks onto a transparent offscreen canvas and return an ImageBitmap.
+  // Bake ghost bitmap: marks rendered onto a tight bounding-box canvas.
+  // Returns { bitmap: ImageBitmap, cx: number, cy: number } where cx/cy is
+  // the centroid position within the bitmap (used to align to cursor).
   async function bakeGhostBitmap(marks) {
-    const w = page.canvasParams.width
-    const h = page.canvasParams.height
-    const off = document.createElement('canvas')
-    off.width = w
-    off.height = h
-    marks.forEach(m => {
-      try { m.render(1, false, off, []) } catch (e) { console.log(e) }
+    // Gather all points to find bounds
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity
+    marks.forEach(m => m.points.forEach(p => {
+      minX = Math.min(minX, p.x); minY = Math.min(minY, p.y)
+      maxX = Math.max(maxX, p.x); maxY = Math.max(maxY, p.y)
+    }))
+    if (!isFinite(minX)) return null
+    const pad = 20
+    minX -= pad; minY -= pad; maxX += pad; maxY += pad
+    const w = Math.max(1, Math.ceil(maxX - minX))
+    const h = Math.max(1, Math.ceil(maxY - minY))
+
+    // Shift marks so they sit inside the tight canvas
+    const shifted = marks.map(m => {
+      const clone = Mark.fromJSON(m.toJSON())
+      clone.points = m.points.map(p => ({ ...p, x: p.x - minX, y: p.y - minY }))
+      if (clone.gradient) clone.gradient = { x: clone.gradient.x - minX, y: clone.gradient.y - minY }
+      return clone
     })
-    return createImageBitmap(off)
+
+    const off = document.createElement('canvas')
+    off.width = w; off.height = h
+    shifted.forEach(m => { try { m.render(1, false, off, []) } catch (e) { console.log(e) } })
+
+    // Centroid within the bitmap
+    let sx = 0, sy = 0, count = 0
+    marks.forEach(m => m.points.forEach(p => { sx += p.x; sy += p.y; count++ }))
+    const cx = count ? sx / count - minX : w / 2
+    const cy = count ? sy / count - minY : h / 2
+
+    return { bitmap: await createImageBitmap(off), cx, cy }
   }
 
   async function enterImportMode(marks, ownerBase, replaceOwner = null) {
@@ -107,19 +131,16 @@ document.addEventListener('DOMContentLoaded', function () {
       return clone
     })
 
-    if (importGhostBitmap) { importGhostBitmap.close(); importGhostBitmap = null }
+    if (importGhostBitmap) { importGhostBitmap.bitmap.close(); importGhostBitmap = null }
 
-    // Bake ghost at centroid-restored positions (rotation is always 0 on entry)
-    const shifted = importMarks.map(m => {
+    // Bake ghost: pass marks at their centroid-restored positions
+    const forBake = importMarks.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
-      if (clone.gradient) clone.gradient = {
-        x: clone.gradient.x + importCentroid.x,
-        y: clone.gradient.y + importCentroid.y
-      }
+      if (clone.gradient) clone.gradient = { x: clone.gradient.x + importCentroid.x, y: clone.gradient.y + importCentroid.y }
       return clone
     })
-    importGhostBitmap = await bakeGhostBitmap(shifted)
+    importGhostBitmap = await bakeGhostBitmap(forBake)
 
     importReadyTime = performance.now() + 300
     importMode = true
@@ -129,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function cancelImportMode() {
     importMode = false
-    if (importGhostBitmap) { importGhostBitmap.close(); importGhostBitmap = null }
+    if (importGhostBitmap) { importGhostBitmap.bitmap.close(); importGhostBitmap = null }
     importMarks = []
     canvas.style.cursor = ''
     document.getElementById('placementBanner').classList.remove('visible')
@@ -139,14 +160,14 @@ document.addEventListener('DOMContentLoaded', function () {
   async function rebakeGhost() {
     if (!importMode) return
     const rotated = rotateMarks(importMarks, importRotationDeg)
-    const shifted = rotated.map(m => {
+    const forBake = rotated.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
       if (clone.gradient) clone.gradient = { x: clone.gradient.x + importCentroid.x, y: clone.gradient.y + importCentroid.y }
       return clone
     })
-    if (importGhostBitmap) { importGhostBitmap.close(); importGhostBitmap = null }
-    importGhostBitmap = await bakeGhostBitmap(shifted)
+    if (importGhostBitmap) { importGhostBitmap.bitmap.close(); importGhostBitmap = null }
+    importGhostBitmap = await bakeGhostBitmap(forBake)
   }
 
   function placeImport(tapX, tapY) {
@@ -431,65 +452,63 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
 
-    // --- Pointer-based drag-to-reorder on the ⠿ handle ---
+    // --- Pointer-based drag-to-reorder ---
+    // Single set of listeners on the list container via delegation.
     let dragSrc = null
     let dragPlaceholder = null
+    let dragPointerId = null
 
-    list.querySelectorAll('.import-row').forEach(row => {
-      const handle = row.querySelector('span')
+    list.addEventListener('pointerdown', e => {
+      const handle = e.target.closest('span')
       if (!handle) return
+      const row = handle.closest('.import-row')
+      if (!row) return
+      e.preventDefault()
+      dragSrc = row
+      dragPointerId = e.pointerId
+      dragSrc.style.opacity = '0.4'
+      dragPlaceholder = document.createElement('div')
+      dragPlaceholder.style.cssText = 'height:2px;background:#7a9a7a;margin:2px 0;pointer-events:none;'
+      list.setPointerCapture(e.pointerId)
+    })
 
-      handle.addEventListener('pointerdown', e => {
-        e.preventDefault()
-        dragSrc = row
-        dragSrc.style.opacity = '0.4'
-        // Create a placeholder to mark the insertion point
-        dragPlaceholder = document.createElement('div')
-        dragPlaceholder.style.cssText = 'height:2px;background:#7a9a7a;margin:2px 0;pointer-events:none;'
-        handle.setPointerCapture(e.pointerId)
-      })
-
-      handle.addEventListener('pointermove', e => {
-        if (!dragSrc) return
-        e.preventDefault()
-        const rows = [...list.querySelectorAll('.import-row')].filter(r => r !== dragSrc)
-        let inserted = false
-        for (const r of rows) {
-          const rect = r.getBoundingClientRect()
-          if (e.clientY < rect.top + rect.height / 2) {
-            list.insertBefore(dragPlaceholder, r)
-            inserted = true
-            break
-          }
+    list.addEventListener('pointermove', e => {
+      if (!dragSrc || e.pointerId !== dragPointerId) return
+      e.preventDefault()
+      const rows = [...list.querySelectorAll('.import-row')].filter(r => r !== dragSrc)
+      let inserted = false
+      for (const r of rows) {
+        const rect = r.getBoundingClientRect()
+        if (e.clientY < rect.top + rect.height / 2) {
+          list.insertBefore(dragPlaceholder, r)
+          inserted = true
+          break
         }
-        if (!inserted) list.appendChild(dragPlaceholder)
-      })
+      }
+      if (!inserted) list.appendChild(dragPlaceholder)
+    })
 
-      handle.addEventListener('pointerup', e => {
-        if (!dragSrc) return
-        dragSrc.style.opacity = ''
-        if (dragPlaceholder && dragPlaceholder.parentNode) {
-          list.insertBefore(dragSrc, dragPlaceholder)
-          dragPlaceholder.remove()
-        }
-        dragSrc = null
-        dragPlaceholder = null
-        // Read new order from DOM
-        const newOrder = [...list.querySelectorAll('.import-row')]
-          .map(r => r.dataset.owner === '__page__' ? null : r.dataset.owner)
-        page.layerOrder = newOrder
-        page.invalidateBuffer()
-        unsavedChanges = true
-        page.render()
-        refreshLayerList()
-      })
+    list.addEventListener('pointerup', e => {
+      if (!dragSrc || e.pointerId !== dragPointerId) return
+      dragSrc.style.opacity = ''
+      if (dragPlaceholder && dragPlaceholder.parentNode) {
+        list.insertBefore(dragSrc, dragPlaceholder)
+        dragPlaceholder.remove()
+      }
+      const newOrder = [...list.querySelectorAll('.import-row')]
+        .map(r => r.dataset.owner === '__page__' ? null : r.dataset.owner)
+      dragSrc = null; dragPlaceholder = null; dragPointerId = null
+      page.layerOrder = newOrder
+      page.invalidateBuffer()
+      unsavedChanges = true
+      page.render()
+      refreshLayerList()
+    })
 
-      handle.addEventListener('pointercancel', () => {
-        if (dragSrc) dragSrc.style.opacity = ''
-        if (dragPlaceholder) dragPlaceholder.remove()
-        dragSrc = null
-        dragPlaceholder = null
-      })
+    list.addEventListener('pointercancel', e => {
+      if (dragSrc) dragSrc.style.opacity = ''
+      if (dragPlaceholder) dragPlaceholder.remove()
+      dragSrc = null; dragPlaceholder = null; dragPointerId = null
     })
   }
 
@@ -1080,17 +1099,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function renderGhostAt(pt) {
     if (!importGhostBitmap) return
-    // Offset so the centroid of the ghost sits at the cursor
-    const dx = pt.x - importCentroid.x
-    const dy = pt.y - importCentroid.y
+    const { bitmap, cx, cy } = importGhostBitmap
     const mainCtx = canvas.getContext('2d')
     if (page._bufferDirty) page._renderToBuffer()
     mainCtx.clearRect(0, 0, canvas.width, canvas.height)
     mainCtx.fillStyle = page.canvasParams.backgroundColor
     mainCtx.fillRect(0, 0, canvas.width, canvas.height)
     mainCtx.drawImage(page._bufferCanvas, 0, 0)
+    // Draw bitmap so its centroid sits at the cursor
     mainCtx.globalAlpha = 0.5
-    mainCtx.drawImage(importGhostBitmap, dx, dy)
+    mainCtx.drawImage(bitmap, pt.x - cx, pt.y - cy)
     mainCtx.globalAlpha = 1
   }
 

@@ -111,11 +111,8 @@ document.addEventListener('DOMContentLoaded', function () {
     importOwnerBase = ownerBase
     importReplaceOwner = replaceOwner
 
-    // Always reset rotation to 0 — for re-place, incoming marks already have
-    // their previous rotation baked into the point coordinates.
+    // Always reset rotation to 0 on entry
     importRotationDeg = 0
-    document.getElementById('importRotation').value = 0
-    document.getElementById('importRotationVal').textContent = '0°'
 
     // Store original centroid before normalising — used by draw() for ghost offset
     importCentroid = getImportCentroid(marks)

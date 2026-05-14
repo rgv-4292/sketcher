@@ -530,22 +530,7 @@ document.addEventListener('DOMContentLoaded', function () {
   importRotationSlider.addEventListener('input', () => {
     importRotationDeg = parseInt(importRotationSlider.value)
     importRotationVal.textContent = `${importRotationDeg}\u00b0`
-    if (!importMode || !importGhostBitmap || !_ghostLastPt) return
-    const { bitmap, cx: bx, cy: by } = importGhostBitmap
-    const pt = _ghostLastPt
-    const mainCtx = canvas.getContext('2d')
-    if (page._bufferDirty) page._renderToBuffer()
-    mainCtx.clearRect(0, 0, canvas.width, canvas.height)
-    mainCtx.fillStyle = page.canvasParams.backgroundColor
-    mainCtx.fillRect(0, 0, canvas.width, canvas.height)
-    mainCtx.drawImage(page._bufferCanvas, 0, 0)
-    mainCtx.save()
-    mainCtx.globalAlpha = 0.5
-    mainCtx.translate(pt.x, pt.y)
-    mainCtx.rotate((importRotationDeg * Math.PI) / 180)
-    mainCtx.drawImage(bitmap, -bx, -by)
-    mainCtx.restore()
-    mainCtx.globalAlpha = 1
+    renderGhostAtLast()
     _rebakeDebounced()
   })
 
@@ -1086,9 +1071,15 @@ document.addEventListener('DOMContentLoaded', function () {
     mainCtx.fillStyle = page.canvasParams.backgroundColor
     mainCtx.fillRect(0, 0, canvas.width, canvas.height)
     mainCtx.drawImage(page._bufferCanvas, 0, 0)
-    // Draw bitmap so its centroid sits at the cursor
+    mainCtx.save()
     mainCtx.globalAlpha = 0.5
-    mainCtx.drawImage(bitmap, pt.x - cx, pt.y - cy)
+    // Always translate to cursor, rotate by current importRotationDeg, draw centred
+    mainCtx.translate(pt.x, pt.y)
+    if (importRotationDeg !== 0) {
+      mainCtx.rotate((importRotationDeg * Math.PI) / 180)
+    }
+    mainCtx.drawImage(bitmap, -cx, -cy)
+    mainCtx.restore()
     mainCtx.globalAlpha = 1
   }
 

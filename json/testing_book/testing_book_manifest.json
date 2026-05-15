@@ -5,5 +5,14 @@
   "height": 720,
   "defaultPageDuration": 5,
   "defaultTransitionDuration": 1,
-  "pages": []
+  "pages": [
+    {
+      "id": "testing_book_MP73NO36",
+      "filename": "testing_book_MP73NO36.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8"
+    }
+  ]
 }

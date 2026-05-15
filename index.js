@@ -136,10 +136,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (importGhostBitmap) { importGhostBitmap.bitmap.close(); importGhostBitmap = null }
 
-    // Bake ghost with the current importRotationDeg applied
-    // const toRotate = importRotationDeg !== 0 ? rotateMarks(importMarks, importRotationDeg) : importMarks   // this seems unnecessary
-    const toRotate = importMarks
-    const forBake = toRotate.map(m => {
+    // Bake at 0° — renderGhostAt applies ctx.rotate for the visual preview
+    const forBake = importMarks.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
       if (clone.gradient) clone.gradient = { x: clone.gradient.x + importCentroid.x, y: clone.gradient.y + importCentroid.y }
@@ -167,15 +165,13 @@ document.addEventListener('DOMContentLoaded', function () {
   async function rebakeGhost() {
     if (!importMode) return
     if (_rebaking) {
-      // Schedule a retry after current bake finishes
       setTimeout(() => rebakeGhost(), 50)
       return
     }
     _rebaking = true
     const deg = importRotationDeg
-    // const rotated = rotateMarks(importMarks, deg)  // this seems unnecessary
-    const rotated = importMarks
-    const forBake = rotated.map(m => {
+    // Bake at 0° — renderGhostAt applies ctx.rotate for the visual preview
+    const forBake = importMarks.map(m => {
       const clone = Mark.fromJSON(m.toJSON())
       clone.points = m.points.map(p => ({ ...p, x: p.x + importCentroid.x, y: p.y + importCentroid.y }))
       if (clone.gradient) clone.gradient = { x: clone.gradient.x + importCentroid.x, y: clone.gradient.y + importCentroid.y }
@@ -187,8 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
       importGhostBitmap = result
     }
     _rebaking = false
-    // If rotation changed during bake, run again with final value
-    if (importRotationDeg !== deg) rebakeGhost()  // Is this causing a double rotate to selection?
+    if (importRotationDeg !== deg) rebakeGhost()
   }
 
   const _rebakeDebounced = debounce(async () => { await rebakeGhost() }, 80)
@@ -196,19 +191,15 @@ document.addEventListener('DOMContentLoaded', function () {
   function placeImport(tapX, tapY) {
     const offsetX = tapX - importCentroid.x
     const offsetY = tapY - importCentroid.y
-    const rotated = rotateMarks(importMarks, importRotationDeg) 
-
 
     let ownerTag
     if (importReplaceOwner && !isImportLayer(importReplaceOwner)) {
-      // Drawn layer re-place: bake the transform into the raw mark points permanently,
-      // then zero out the transform so the layer's natural position is its new home.
-      const dx = offsetX  // delta from transformed centroid to tap
+      // Drawn layer re-place: bake full transform into raw points, zero out transform
+      const dx = offsetX
       const dy = offsetY
       const t = getTransform(importReplaceOwner)
       const rad = (t.rotation * Math.PI) / 180
       const cos = Math.cos(rad), sin = Math.sin(rad)
-      // Compute raw centroid for rotation pivot
       let sx = 0, sy = 0, count = 0
       page.marks.forEach(m => {
         if (m.owner === importReplaceOwner && m.points.length > 0) {
@@ -217,7 +208,6 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       const cx = count ? sx / count : 0
       const cy = count ? sy / count : 0
-      // Apply full forward transform + tap delta to each raw point
       page.marks.forEach(m => {
         if (m.owner !== importReplaceOwner) return
         m.points = m.points.map(p => {
@@ -237,25 +227,58 @@ document.addEventListener('DOMContentLoaded', function () {
           m.gradient = { x: gx + t.offsetX + dx, y: gy + t.offsetY + dy }
         }
       })
-      // Zero out the transform — layer is now at its natural position
       setTransform(importReplaceOwner, { offsetX: 0, offsetY: 0, rotation: 0 })
       cancelImportMode()
       refreshLayerList()
       return
     } else if (importReplaceOwner) {
-      // Import re-place: remove old marks, reuse owner tag
+      // Import layer re-place: remove old marks, store position+rotation in transform
       page.marks = page.marks.filter(m => m.owner !== importReplaceOwner)
       ownerTag = importReplaceOwner
+
+      // Place marks at their normalised (0°) positions with tap offset applied
+      importMarks.forEach(m => {
+        const placed = Mark.fromJSON(m.toJSON())
+        placed.points = m.points.map(p => ({ ...p,
+          x: Math.round(p.x + importCentroid.x + offsetX),
+          y: Math.round(p.y + importCentroid.y + offsetY)
+        }))
+        if (placed.gradient) placed.gradient = {
+          x: placed.gradient.x + importCentroid.x + offsetX,
+          y: placed.gradient.y + importCentroid.y + offsetY
+        }
+        placed.owner = ownerTag
+        page.marks.push(placed)
+        if (placed.filled) lastFilledMark = page.marks.length - 1
+      })
+
+      // Store tap position as centroid + rotation in layerTransforms
+      const placedCx = importCentroid.x + offsetX
+      const placedCy = importCentroid.y + offsetY
+      if (!page.layerTransforms[ownerTag]) page.layerTransforms[ownerTag] = { offsetX: 0, offsetY: 0, rotation: 0 }
+      page.layerTransforms[ownerTag].cx = placedCx
+      page.layerTransforms[ownerTag].cy = placedCy
+      page.layerTransforms[ownerTag].rotation = importRotationDeg
+      page.invalidateBuffer()
+      unsavedChanges = true
+      cancelImportMode()
+      refreshLayerList()
+      return
     } else {
-      // New placement: assign next instance number
+      // Fresh placement: bake rotation into points
       const instanceNum = (importInstanceCounters[importOwnerBase] || 0) + 1
       importInstanceCounters[importOwnerBase] = instanceNum
       ownerTag = `${importOwnerBase}_${String(instanceNum).padStart(2, '0')}`
     }
 
+    // Fresh placement only: rotate marks and place
+    const rotated = rotateMarks(importMarks, importRotationDeg)
     rotated.forEach(m => {
       const placed = Mark.fromJSON(m.toJSON())
-      placed.points = m.points.map(p => ({ ...p, x: Math.round(p.x + importCentroid.x + offsetX), y: Math.round(p.y + importCentroid.y + offsetY) }))
+      placed.points = m.points.map(p => ({ ...p,
+        x: Math.round(p.x + importCentroid.x + offsetX),
+        y: Math.round(p.y + importCentroid.y + offsetY)
+      }))
       if (placed.gradient) placed.gradient = {
         x: placed.gradient.x + importCentroid.x + offsetX,
         y: placed.gradient.y + importCentroid.y + offsetY
@@ -264,13 +287,11 @@ document.addEventListener('DOMContentLoaded', function () {
       page.marks.push(placed)
       if (placed.filled) lastFilledMark = page.marks.length - 1
     })
-    // Store the placement centroid as the fixed rotation pivot for this layer
     const placedCx = importCentroid.x + offsetX
     const placedCy = importCentroid.y + offsetY
-    const tkey = ownerTag
-    if (!page.layerTransforms[tkey]) page.layerTransforms[tkey] = { offsetX: 0, offsetY: 0, rotation: 0 }
-    page.layerTransforms[tkey].cx = placedCx
-    page.layerTransforms[tkey].cy = placedCy
+    if (!page.layerTransforms[ownerTag]) page.layerTransforms[ownerTag] = { offsetX: 0, offsetY: 0, rotation: 0 }
+    page.layerTransforms[ownerTag].cx = placedCx
+    page.layerTransforms[ownerTag].cy = placedCy
     page.invalidateBuffer()
     unsavedChanges = true
     cancelImportMode()

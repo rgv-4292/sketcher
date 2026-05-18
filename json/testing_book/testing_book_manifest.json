@@ -12,15 +12,8 @@
       "caption": "",
       "pageDuration": null,
       "transitionDuration": null,
-      "bgColor": "#f0ebe8"
-    },
-    {
-      "id": "testing_book_MPBOWV4M",
-      "filename": "testing_book_MPBOWV4M.json",
-      "caption": "",
-      "pageDuration": null,
-      "transitionDuration": null,
-      "bgColor": "#f0ebe8"
+      "bgColor": "#f0ebe8",
+      "interpOrder": true
     }
   ]
 }

@@ -705,12 +705,12 @@ async function exportVideo() {
         pageVariants = []
         for (let v = 0; v < 3; v++) {
           renderPageToCanvas(pageJSONs[p], offscreen)
-          if (pageCaption) drawCaption(offscreen, pageCaption, captionFontSize)
+          if (pageCaption) await drawCaption(offscreen, pageCaption, captionFontSize)
           pageVariants.push(new Uint8Array(await (await canvasToBlob(offscreen)).arrayBuffer()))
         }
       } else {
         renderPageToCanvas(pageJSONs[p], offscreen)
-        if (pageCaption) drawCaption(offscreen, pageCaption, captionFontSize)
+        if (pageCaption) await drawCaption(offscreen, pageCaption, captionFontSize)
         pageVariants = [new Uint8Array(await (await canvasToBlob(offscreen)).arrayBuffer())]
       }
 
@@ -773,18 +773,32 @@ function canvasToBlob(canvas) {
   return new Promise(resolve => canvas.toBlob(resolve, 'image/png'))
 }
 
+// Load the custom font once for canvas use in video export.
+let _customFontLoaded = false
+async function ensureCustomFont() {
+  if (_customFontLoaded) return
+  try {
+    const font = new FontFace('OldNewspaperTypes', 'url(/font/OldNewspaperTypes-Regular.ttf)')
+    await font.load()
+    document.fonts.add(font)
+    _customFontLoaded = true
+  } catch (e) {
+    console.warn('Could not load OldNewspaperTypes font:', e)
+  }
+}
+
 // Draw caption text onto a canvas context.
-function drawCaption(canvas, caption, fontSize) {
+async function drawCaption(canvas, caption, fontSize) {
   if (!caption) return
+  await ensureCustomFont()
   const ctx = canvas.getContext('2d')
   const size = Math.max(8, fontSize || 24)
   ctx.save()
-  ctx.font = `${size}px Arial`
+  ctx.font = `${size}px OldNewspaperTypes, Arial`
   ctx.textAlign = 'center'
   ctx.textBaseline = 'bottom'
   const x = canvas.width / 2
   const y = canvas.height - Math.round(size * 0.6)
-  // Subtle shadow for legibility
   ctx.shadowColor = 'rgba(255,255,255,0.8)'
   ctx.shadowBlur = size * 0.4
   ctx.fillStyle = 'black'

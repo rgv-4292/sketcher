@@ -390,7 +390,46 @@ export class Page {
     return dist + typePenalty + countDiff * 0.5
   }
 
-  matchMarks(fromMarks, toMarks) {
+  // Returns the fill-type bucket for a mark: 'none', 'gradient', or 'solid'
+  _fillBucket(mark) {
+    if (!mark.filled) return 'none'
+    return mark.fillMode === 'gradient' ? 'gradient' : 'solid'
+  }
+
+  matchMarks(fromMarks, toMarks, interpOrder = false) {
+    if (interpOrder) {
+      // Group each list by fill bucket, then match positionally within each bucket
+      const buckets = ['none', 'gradient', 'solid']
+      const matched = []
+      const usedTo = new Set()
+
+      buckets.forEach(bucket => {
+        const fromGroup = fromMarks
+          .map((m, i) => ({ m, i }))
+          .filter(({ m }) => this._fillBucket(m) === bucket)
+        const toGroup = toMarks
+          .map((m, i) => ({ m, i }))
+          .filter(({ m }) => this._fillBucket(m) === bucket)
+
+        const len = Math.min(fromGroup.length, toGroup.length)
+        for (let k = 0; k < len; k++) {
+          matched.push({ fromIdx: fromGroup[k].i, toIdx: toGroup[k].i })
+          usedTo.add(toGroup[k].i)
+        }
+      })
+
+      const unmatchedFrom = fromMarks
+        .map((_, i) => i)
+        .filter(i => !matched.find(m => m.fromIdx === i))
+
+      const unmatchedTo = toMarks
+        .map((_, i) => i)
+        .filter(i => !usedTo.has(i))
+
+      return { matched, unmatchedFrom, unmatchedTo }
+    }
+
+    // Default: spatial matching
     const matched = []
     const usedTo = new Set()
 
@@ -544,8 +583,8 @@ export class Page {
 
   // Prepare the matched/unmatched data structures from two mark arrays.
   // Returns { matchedPairs, unmatchedFromData, unmatchedToData } ready for renderTransitionStep.
-  buildTransitionData(fromMarks, toMarks) {
-    const { matched, unmatchedFrom, unmatchedTo } = this.matchMarks(fromMarks, toMarks)
+  buildTransitionData(fromMarks, toMarks, interpOrder = false) {
+    const { matched, unmatchedFrom, unmatchedTo } = this.matchMarks(fromMarks, toMarks, interpOrder)
 
     const matchedPairs = matched.map(({ fromIdx, toIdx }) => {
       const from = fromMarks[fromIdx]
@@ -576,7 +615,7 @@ export class Page {
     return { matchedPairs, unmatchedFromData, unmatchedToData }
   }
 
-  async startTransition(newJSON) {
+  async startTransition(newJSON, interpOrder = false) {
     const FRAMES = 7
     const FRAME_DURATION = 100
 
@@ -594,7 +633,7 @@ export class Page {
     }
 
     const { matchedPairs, unmatchedFromData, unmatchedToData } =
-      this.buildTransitionData(fromMarks, toMarks)
+      this.buildTransitionData(fromMarks, toMarks, interpOrder)
 
     const offscreen = document.createElement('canvas')
     offscreen.width = this.canvasParams.width

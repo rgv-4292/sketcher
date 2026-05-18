@@ -85,7 +85,7 @@ async function runBookViewer (bookName, cookieKey, page) {
         })
       })
       const data = await res.json()
-      page.startTransition(data.pageData)
+      page.startTransition(data.pageData, !!pageEntry.interpOrder)
       setCookie(cookieKey, index, 7)
     } catch (err) {
       console.error('Error loading page:', err)

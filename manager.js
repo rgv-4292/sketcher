@@ -338,6 +338,24 @@ function createPageItem(page, index) {
     ...makeDurInput('tr:', () => page.transitionDuration, v => { page.transitionDuration = v })
   )
 
+  // Interp Order checkbox
+  const interpLbl = document.createElement('span')
+  interpLbl.textContent = 'Interp Order'
+  interpLbl.title = 'Interpolate marks in draw order instead of by point size (still couples by fill type)'
+  interpLbl.style.cssText = 'font-size:11px;color:#777;white-space:nowrap;cursor:default;'
+  const interpCb = document.createElement('input')
+  interpCb.type = 'checkbox'
+  interpCb.checked = !!page.interpOrder
+  interpCb.title = interpLbl.title
+  interpCb.style.cssText = 'width:13px;height:13px;cursor:pointer;accent-color:#6a8a6a;flex-shrink:0;'
+  interpCb.addEventListener('click', async e => {
+    e.stopPropagation()
+    page.interpOrder = interpCb.checked
+    await saveManifest()
+  })
+  durations.appendChild(interpLbl)
+  durations.appendChild(interpCb)
+
   const actions = document.createElement('div')
   actions.className = 'page-actions'
 
@@ -541,7 +559,7 @@ function renderPageToCanvas(pageJSON, targetCanvas) {
 // Renders one transition frame using Page's shared interpolation logic.
 // All color blending goes through pageInstance.interpolateColor for consistency
 // with the live viewer's startTransition.
-function renderTransitionFrame(fromJSON, toJSON, t, targetCanvas, pageInstance) {
+function renderTransitionFrame(fromJSON, toJSON, t, targetCanvas, pageInstance, interpOrder = false) {
   const fromMarks = fromJSON.marks.map(m => Mark.fromJSON(m))
   const toMarks = toJSON.marks.map(m => Mark.fromJSON(m))
 
@@ -553,7 +571,7 @@ function renderTransitionFrame(fromJSON, toJSON, t, targetCanvas, pageInstance) 
   ctx.fillRect(0, 0, targetCanvas.width, targetCanvas.height)
 
   const { matchedPairs, unmatchedFromData, unmatchedToData } =
-    pageInstance.buildTransitionData(fromMarks, toMarks)
+    pageInstance.buildTransitionData(fromMarks, toMarks, interpOrder)
 
   pageInstance.renderTransitionStep(
     fromMarks, toMarks,
@@ -681,10 +699,11 @@ async function exportVideo() {
 
       if (p < pageCount - 1) {
         updateProgress(`Rendering transition ${p + 1} → ${p + 2}...`, 20 + (frameIndex / totalFrames) * 60)
+        const interpOrder = !!selectedEntries[p].interpOrder
         for (let f = 0; f < transFrames; f++) {
           if (exportCancelled) return
           const t = transFrames <= 1 ? 1 : f / (transFrames - 1)
-          renderTransitionFrame(pageJSONs[p], pageJSONs[p + 1], t, offscreen, pageHelper)
+          renderTransitionFrame(pageJSONs[p], pageJSONs[p + 1], t, offscreen, pageHelper, interpOrder)
           const transData = new Uint8Array(await (await canvasToBlob(offscreen)).arrayBuffer())
           ffmpeg.FS('writeFile', `frame${String(frameIndex).padStart(6, '0')}.png`, transData)
           frameIndex++
@@ -744,12 +763,12 @@ document.getElementById('modalCancel').addEventListener('click', () => {
 
 document.getElementById('modalConfirm').addEventListener('click', async () => {
   const name = document.getElementById('modalBookName').value.trim().replace(/\s+/g, '_')
-  const orientation = document.getElementById('modalOrientation').value
+  const format = document.getElementById('modalFormat').value
   if (!name) return
   document.getElementById('modal').classList.remove('visible')
   setStatus(`Creating book ${name}...`)
   try {
-    await api('createBook', { bookName: name, orientation })
+    await api('createBook', { bookName: name, format })
     const cache = loadCache()
     cache._books = [...(cache._books || []), name]
     saveCache(cache)

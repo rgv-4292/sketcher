@@ -533,6 +533,10 @@ document.addEventListener('DOMContentLoaded', function () {
   let doMask = false
   let fillMode = 'none'
 
+  // --- Undo/Redo ---
+  // redoStack holds { mark, index } entries removed by Undo; Redo restores them.
+  const redoStack = []
+
   // --- Import placement state ---
   let importMode = false
   let importMarks = []
@@ -1165,6 +1169,7 @@ document.addEventListener('DOMContentLoaded', function () {
       currentMark.owner = activeLayer
       page.addMark(currentMark)
       if (currentMark.filled) lastFilledMark = page.marks.length - 1
+      redoStack.length = 0  // new mark drawn: clear redo history
       if (currentMark.isMask) {
         page.invalidateBuffer()
       } else {
@@ -1315,14 +1320,25 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // --- Remaining toolbar buttons ---
+
   document.getElementById('deleteButton').addEventListener('pointerdown', () => {
-    // Find and remove the last mark belonging to the active layer
     for (let i = page.marks.length - 1; i >= 0; i--) {
       if (page.marks[i].owner === activeLayer) {
-        page.marks.splice(i, 1)
+        const removed = page.marks.splice(i, 1)[0]
+        redoStack.push({ mark: removed, index: i })
         break
       }
     }
+    page.invalidateBuffer()
+    unsavedChanges = true
+    page.render()
+  })
+
+  document.getElementById('redoButton').addEventListener('pointerdown', () => {
+    if (redoStack.length === 0) return
+    const { mark, index } = redoStack.pop()
+    const insertAt = Math.min(index, page.marks.length)
+    page.marks.splice(insertAt, 0, mark)
     page.invalidateBuffer()
     unsavedChanges = true
     page.render()

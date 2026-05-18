@@ -112,12 +112,33 @@ exports.handler = async (event) => {
       }
 
       case 'createBook': {
-        const { bookName, orientation } = body
-        const width = orientation === 'landscape' ? 960 : 720
-        const height = orientation === 'landscape' ? 720 : 960
+        const { bookName, orientation, format } = body
+        // format overrides legacy orientation
+        const FORMAT_SIZES = {
+          'portrait_720x960': { width: 720, height: 960 },
+          'landscape_960x720': { width: 960, height: 720 },
+          'portrait_480x640': { width: 480, height: 640 },
+          'landscape_640x480': { width: 640, height: 480 },
+          'portrait_240x360': { width: 240, height: 360 },
+          'landscape_360x240': { width: 360, height: 240 },
+          'square_360': { width: 360, height: 360 },
+          'square_480': { width: 480, height: 480 },
+          'square_640': { width: 640, height: 640 },
+          'square_720': { width: 720, height: 720 },
+          'square_960': { width: 960, height: 960 },
+        }
+        let width, height
+        if (format && FORMAT_SIZES[format]) {
+          width = FORMAT_SIZES[format].width
+          height = FORMAT_SIZES[format].height
+        } else {
+          // legacy fallback
+          width = orientation === 'landscape' ? 960 : 720
+          height = orientation === 'landscape' ? 720 : 960
+        }
         const manifest = {
           name: bookName,
-          orientation,
+          format: format || (orientation === 'landscape' ? 'landscape_960x720' : 'portrait_720x960'),
           width,
           height,
           defaultPageDuration: 5,

@@ -1372,12 +1372,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const canvasRect = canvasEl.getBoundingClientRect()
     const areaRect = areaEl.getBoundingClientRect()
     const fontSize = parseFloat(overlay.style.fontSize) || 24
+    const lineHeight = fontSize * 1.3
+    // Estimate lines by counting words and approximate chars-per-line
+    const charsPerLine = Math.floor(canvasRect.width / (fontSize * 0.55))
+    const words = overlay.textContent.trim().split(/\s+/)
+    let lines = 1, lineChars = 0
+    words.forEach(w => {
+      if (lineChars + w.length + 1 > charsPerLine && lineChars > 0) { lines++; lineChars = w.length }
+      else lineChars += w.length + 1
+    })
+    const blockHeight = lines * lineHeight + fontSize * 0.5
     overlay.style.left = `${canvasRect.left - areaRect.left}px`
     overlay.style.width = `${canvasRect.width}px`
-    overlay.style.whiteSpace = 'nowrap'
-    overlay.style.overflow = 'hidden'
-    overlay.style.textOverflow = 'ellipsis'
-    overlay.style.top = `${canvasRect.bottom - areaRect.top - fontSize * 2}px`
+    overlay.style.whiteSpace = 'normal'
+    overlay.style.wordBreak = 'break-word'
+    overlay.style.top = `${canvasRect.bottom - areaRect.top - blockHeight}px`
   }
 
   // Keep caption positioned correctly when the window resizes

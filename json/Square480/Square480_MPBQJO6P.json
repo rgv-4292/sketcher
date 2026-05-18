@@ -4,5 +4,3538 @@
     "height": 480,
     "backgroundColor": "#f0ebe8"
   },
-  "marks": []
+  "marks": [
+    {
+      "color": "rgba(0,0,0,0.75)",
+      "minDistance": 2,
+      "distanceThreshold": 6,
+      "connectionProbability": 90,
+      "filled": true,
+      "points": [
+        {
+          "x": 228,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 225.5999755859375,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 226.5999755859375,
+          "y": 302.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 223.20001220703125,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 223.20001220703125,
+          "y": 302.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 220.79998779296875,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 221.79998779296875,
+          "y": 299.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 219.20001220703125,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 218.20001220703125,
+          "y": 299.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 216,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 218,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 215.20001220703125,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 216.20001220703125,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 213.5999755859375,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 214.5999755859375,
+          "y": 302.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 212,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 212,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 208.79998779296875,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 208.79998779296875,
+          "y": 301.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 205.5999755859375,
+          "y": 300.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 206.5999755859375,
+          "y": 302.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 204.79998779296875,
+          "y": 300.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 205.79998779296875,
+          "y": 302.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 202.4000244140625,
+          "y": 298.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 203.4000244140625,
+          "y": 298.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 199.20001220703125,
+          "y": 296.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 200.20001220703125,
+          "y": 298.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 197.5999755859375,
+          "y": 296.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 199.5999755859375,
+          "y": 296.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 196,
+          "y": 293.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 195,
+          "y": 292.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 192,
+          "y": 291.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 192,
+          "y": 292.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 190.4000244140625,
+          "y": 289.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 191.4000244140625,
+          "y": 291.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 189.5999755859375,
+          "y": 288.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 191.5999755859375,
+          "y": 287.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 189.5999755859375,
+          "y": 287.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 190.5999755859375,
+          "y": 287.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 188,
+          "y": 286.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 187,
+          "y": 288.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 187.20001220703125,
+          "y": 284.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 186.20001220703125,
+          "y": 283.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 184,
+          "y": 282.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 185,
+          "y": 284.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 182.4000244140625,
+          "y": 281.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 181.4000244140625,
+          "y": 281.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 179.20001220703125,
+          "y": 277.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 180.20001220703125,
+          "y": 276.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 176,
+          "y": 275.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 177,
+          "y": 276.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 176,
+          "y": 273.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 176,
+          "y": 273.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 172.79998779296875,
+          "y": 270.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 172.79998779296875,
+          "y": 269.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 171.20001220703125,
+          "y": 268.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 170.20001220703125,
+          "y": 269.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 168.79998779296875,
+          "y": 266.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 169.79998779296875,
+          "y": 265.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 167.20001220703125,
+          "y": 264.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 168.20001220703125,
+          "y": 263.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 165.5999755859375,
+          "y": 260.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 167.5999755859375,
+          "y": 261.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 163.20001220703125,
+          "y": 257.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 165.20001220703125,
+          "y": 258.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 162.4000244140625,
+          "y": 255.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 162.4000244140625,
+          "y": 257.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 161.5999755859375,
+          "y": 252.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 162.5999755859375,
+          "y": 252.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160.79998779296875,
+          "y": 248.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160.79998779296875,
+          "y": 248.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 159.20001220703125,
+          "y": 244.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.20001220703125,
+          "y": 243.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.4000244140625,
+          "y": 240.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 159.4000244140625,
+          "y": 239.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.4000244140625,
+          "y": 235.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.4000244140625,
+          "y": 235.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.4000244140625,
+          "y": 232.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 157.4000244140625,
+          "y": 231.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.4000244140625,
+          "y": 223.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 157.4000244140625,
+          "y": 223.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.4000244140625,
+          "y": 220.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 157.4000244140625,
+          "y": 219.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.4000244140625,
+          "y": 216.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 157.4000244140625,
+          "y": 217.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.4000244140625,
+          "y": 215.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.4000244140625,
+          "y": 217.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.4000244140625,
+          "y": 212.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.4000244140625,
+          "y": 211.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 159.20001220703125,
+          "y": 208.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 161.20001220703125,
+          "y": 209.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160,
+          "y": 206.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160,
+          "y": 207.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160,
+          "y": 204.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 162,
+          "y": 206.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160,
+          "y": 203.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 159,
+          "y": 204.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160.79998779296875,
+          "y": 203.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 159.79998779296875,
+          "y": 202.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 161.5999755859375,
+          "y": 200.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 161.5999755859375,
+          "y": 202.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 161.5999755859375,
+          "y": 199.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 163.5999755859375,
+          "y": 200.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 162.4000244140625,
+          "y": 197.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 161.4000244140625,
+          "y": 196.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 164,
+          "y": 196.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 163,
+          "y": 196.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 165.5999755859375,
+          "y": 192.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 166.5999755859375,
+          "y": 193.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 167.20001220703125,
+          "y": 189.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 167.20001220703125,
+          "y": 189.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 169.5999755859375,
+          "y": 186.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 168.5999755859375,
+          "y": 187.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 171.20001220703125,
+          "y": 184.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 173.20001220703125,
+          "y": 186.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 171.20001220703125,
+          "y": 184.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 172.20001220703125,
+          "y": 184.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 173.5999755859375,
+          "y": 181.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 172.5999755859375,
+          "y": 183.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 173.5999755859375,
+          "y": 180.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 173.5999755859375,
+          "y": 180.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 175.20001220703125,
+          "y": 179.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 174.20001220703125,
+          "y": 179.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 176,
+          "y": 177.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 178,
+          "y": 178.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 178.4000244140625,
+          "y": 176.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 179.4000244140625,
+          "y": 178.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 179.20001220703125,
+          "y": 175.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 178.20001220703125,
+          "y": 177.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 180,
+          "y": 173.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 181,
+          "y": 174.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 182.4000244140625,
+          "y": 172.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 184.4000244140625,
+          "y": 172.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 184.79998779296875,
+          "y": 169.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 184.79998779296875,
+          "y": 169.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 189.5999755859375,
+          "y": 168.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 191.5999755859375,
+          "y": 168.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 197.5999755859375,
+          "y": 165.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 196.5999755859375,
+          "y": 167.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 201.5999755859375,
+          "y": 164.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 202.5999755859375,
+          "y": 164.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 204,
+          "y": 162.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 204,
+          "y": 162.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 206.4000244140625,
+          "y": 161.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 205.4000244140625,
+          "y": 161.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 209.5999755859375,
+          "y": 161.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 209.5999755859375,
+          "y": 162.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 212,
+          "y": 161.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 211,
+          "y": 160.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 215.20001220703125,
+          "y": 160.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 216.20001220703125,
+          "y": 159.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 221.5999755859375,
+          "y": 160.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 222.5999755859375,
+          "y": 159.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 225.5999755859375,
+          "y": 159.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 224.5999755859375,
+          "y": 158.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 226.4000244140625,
+          "y": 159.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 227.4000244140625,
+          "y": 159.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 229.5999755859375,
+          "y": 159.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 228.5999755859375,
+          "y": 160.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 230.4000244140625,
+          "y": 159.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 229.4000244140625,
+          "y": 161.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 231.20001220703125,
+          "y": 159.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 233.20001220703125,
+          "y": 161.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 232,
+          "y": 159.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 234,
+          "y": 158.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 236,
+          "y": 159.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 238,
+          "y": 161.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 240,
+          "y": 160.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 239,
+          "y": 161.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 244,
+          "y": 162.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 246,
+          "y": 163.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 248.79998779296875,
+          "y": 164.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 248.79998779296875,
+          "y": 164.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 251.20001220703125,
+          "y": 165.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 253.20001220703125,
+          "y": 167.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 256,
+          "y": 168.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 255,
+          "y": 169.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 257.5999755859375,
+          "y": 169.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 257.5999755859375,
+          "y": 170.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 260,
+          "y": 171.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 259,
+          "y": 170.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 260.79998779296875,
+          "y": 172.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 261.79998779296875,
+          "y": 171.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 263.20001220703125,
+          "y": 173.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 264.20001220703125,
+          "y": 175.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 266.4000244140625,
+          "y": 177.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 266.4000244140625,
+          "y": 176.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 268,
+          "y": 178.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 268,
+          "y": 177.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 269.5999755859375,
+          "y": 180.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 269.5999755859375,
+          "y": 181.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 271.20001220703125,
+          "y": 183.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 273.20001220703125,
+          "y": 183.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 273.5999755859375,
+          "y": 185.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 273.5999755859375,
+          "y": 184.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 275.20001220703125,
+          "y": 188.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 276.20001220703125,
+          "y": 190.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 276.79998779296875,
+          "y": 192.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 277.79998779296875,
+          "y": 194.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 279.20001220703125,
+          "y": 197.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 279.20001220703125,
+          "y": 199.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 280,
+          "y": 201.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 280,
+          "y": 201.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 282.4000244140625,
+          "y": 207.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 284.4000244140625,
+          "y": 209.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283.20001220703125,
+          "y": 212.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 284.20001220703125,
+          "y": 211.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 284,
+          "y": 214.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286,
+          "y": 216.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 284,
+          "y": 216.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286,
+          "y": 215.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285.5999755859375,
+          "y": 222.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285.5999755859375,
+          "y": 224.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286.4000244140625,
+          "y": 229.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286.4000244140625,
+          "y": 230.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 287.20001220703125,
+          "y": 232.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 287.20001220703125,
+          "y": 232.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 287.20001220703125,
+          "y": 236.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 287.20001220703125,
+          "y": 237.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 287.20001220703125,
+          "y": 243.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 287.20001220703125,
+          "y": 245.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286.4000244140625,
+          "y": 249.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285.4000244140625,
+          "y": 251.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285.5999755859375,
+          "y": 256.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 284.5999755859375,
+          "y": 257.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283.20001220703125,
+          "y": 261.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283.20001220703125,
+          "y": 261.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 281.5999755859375,
+          "y": 263.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 282.5999755859375,
+          "y": 262.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 279.20001220703125,
+          "y": 268.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 280.20001220703125,
+          "y": 269.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 278.4000244140625,
+          "y": 270.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 278.4000244140625,
+          "y": 271.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 276,
+          "y": 273.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 277,
+          "y": 273.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 275.20001220703125,
+          "y": 275.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 274.20001220703125,
+          "y": 274.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 272,
+          "y": 277.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 273,
+          "y": 278.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 269.5999755859375,
+          "y": 280.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 269.5999755859375,
+          "y": 279.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 267.20001220703125,
+          "y": 282.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 268.20001220703125,
+          "y": 281.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 263.20001220703125,
+          "y": 285.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 263.20001220703125,
+          "y": 284.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 259.20001220703125,
+          "y": 288.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 261.20001220703125,
+          "y": 290.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 258.4000244140625,
+          "y": 289.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 258.4000244140625,
+          "y": 290.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 256,
+          "y": 292.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 258,
+          "y": 293.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 255.20001220703125,
+          "y": 292.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 255.20001220703125,
+          "y": 292.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 252,
+          "y": 293.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 252,
+          "y": 293.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 248.79998779296875,
+          "y": 295.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 249.79998779296875,
+          "y": 296.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 246.4000244140625,
+          "y": 296.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 248.4000244140625,
+          "y": 297.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 243.20001220703125,
+          "y": 297.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 245.20001220703125,
+          "y": 296.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 241.5999755859375,
+          "y": 298.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 241.5999755859375,
+          "y": 298.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 239.20001220703125,
+          "y": 299.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 239.20001220703125,
+          "y": 298.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 236.79998779296875,
+          "y": 299.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 237.79998779296875,
+          "y": 301.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 235.20001220703125,
+          "y": 300.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 235.20001220703125,
+          "y": 299.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 232.79998779296875,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 233.79998779296875,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 231.20001220703125,
+          "y": 300.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 232.20001220703125,
+          "y": 302.99998474121094,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 1.5,
+      "hatchAngle": 2.5,
+      "alpha": 0.75,
+      "trace": true,
+      "gradient": {
+        "x": 228,
+        "y": 300.99998474121094
+      },
+      "fillMode": "gradient",
+      "density": 1,
+      "isMask": false,
+      "owner": null,
+      "stipple": true,
+      "fillColor": "rgba(213, 42, 106, 0.75)"
+    },
+    {
+      "color": "rgba(0,0,0,0.75)",
+      "minDistance": 2,
+      "distanceThreshold": 6,
+      "connectionProbability": 90,
+      "filled": false,
+      "points": [
+        {
+          "x": 179.20001220703125,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 175.20001220703125,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 175.20001220703125,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 172.79998779296875,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 173.79998779296875,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 170.4000244140625,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 169.4000244140625,
+          "y": 257.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 166.4000244140625,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 167.4000244140625,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 162.4000244140625,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 161.4000244140625,
+          "y": 258.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 159.20001220703125,
+          "y": 257.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 159.20001220703125,
+          "y": 259.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 156.79998779296875,
+          "y": 258.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 157.79998779296875,
+          "y": 258.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 155.20001220703125,
+          "y": 259.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 155.20001220703125,
+          "y": 259.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 152,
+          "y": 261.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 154,
+          "y": 262.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 149.5999755859375,
+          "y": 262.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 148.5999755859375,
+          "y": 263.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 146.4000244140625,
+          "y": 264.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 148.4000244140625,
+          "y": 263.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 144.79998779296875,
+          "y": 266.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 146.79998779296875,
+          "y": 265.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 142.4000244140625,
+          "y": 268.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 141.4000244140625,
+          "y": 267.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 140.79998779296875,
+          "y": 269.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 139.79998779296875,
+          "y": 270.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 137.5999755859375,
+          "y": 272.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 138.5999755859375,
+          "y": 271.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 136.79998779296875,
+          "y": 272.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 135.79998779296875,
+          "y": 273.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 134.4000244140625,
+          "y": 276.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 136.4000244140625,
+          "y": 275.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 134.4000244140625,
+          "y": 277.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 134.4000244140625,
+          "y": 279.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 132.79998779296875,
+          "y": 280.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 131.79998779296875,
+          "y": 279.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 132.79998779296875,
+          "y": 281.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 134.79998779296875,
+          "y": 280.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 132,
+          "y": 283.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 132,
+          "y": 285.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 129.5999755859375,
+          "y": 285.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 131.5999755859375,
+          "y": 285.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 128,
+          "y": 288.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 130,
+          "y": 287.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 127.20001220703125,
+          "y": 289.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 126.20001220703125,
+          "y": 289.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 126.4000244140625,
+          "y": 292.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 125.4000244140625,
+          "y": 291.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 126.4000244140625,
+          "y": 292.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 127.4000244140625,
+          "y": 291.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 126.4000244140625,
+          "y": 293.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 125.4000244140625,
+          "y": 295.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 125.5999755859375,
+          "y": 298.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 125.5999755859375,
+          "y": 298.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 124.79998779296875,
+          "y": 301.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 126.79998779296875,
+          "y": 302.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 124,
+          "y": 303.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 125,
+          "y": 302.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 124,
+          "y": 304.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 124,
+          "y": 305.1999969482422,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 1.5,
+      "hatchAngle": 2.5,
+      "alpha": 0.75,
+      "trace": true,
+      "gradient": null,
+      "fillMode": "none",
+      "density": 1,
+      "isMask": false,
+      "owner": null,
+      "stipple": true,
+      "fillColor": null
+    },
+    {
+      "color": "rgba(0,0,0,0.75)",
+      "minDistance": 2,
+      "distanceThreshold": 6,
+      "connectionProbability": 90,
+      "filled": false,
+      "points": [
+        {
+          "x": 157.5999755859375,
+          "y": 220.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 154.4000244140625,
+          "y": 219.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 155.4000244140625,
+          "y": 221.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 152.79998779296875,
+          "y": 218.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 152.79998779296875,
+          "y": 217.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 147.20001220703125,
+          "y": 216.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 147.20001220703125,
+          "y": 217.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 142.4000244140625,
+          "y": 215.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 141.4000244140625,
+          "y": 217.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 140,
+          "y": 214.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 140,
+          "y": 216.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 139.20001220703125,
+          "y": 214.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 141.20001220703125,
+          "y": 213.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 136.79998779296875,
+          "y": 214.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 138.79998779296875,
+          "y": 216.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 134.4000244140625,
+          "y": 214.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 134.4000244140625,
+          "y": 216.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 133.5999755859375,
+          "y": 214.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 133.5999755859375,
+          "y": 213.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 131.20001220703125,
+          "y": 214.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 130.20001220703125,
+          "y": 215.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 128,
+          "y": 214.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 129,
+          "y": 215.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 125.5999755859375,
+          "y": 215.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 125.5999755859375,
+          "y": 216.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 123.20001220703125,
+          "y": 216.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 125.20001220703125,
+          "y": 218.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 121.5999755859375,
+          "y": 216.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 122.5999755859375,
+          "y": 216.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 120,
+          "y": 217.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 121,
+          "y": 219.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 116,
+          "y": 219.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 116,
+          "y": 219.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 113.5999755859375,
+          "y": 220.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 113.5999755859375,
+          "y": 222.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 109.5999755859375,
+          "y": 222.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 109.5999755859375,
+          "y": 222.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 106.4000244140625,
+          "y": 223.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 107.4000244140625,
+          "y": 225.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 105.5999755859375,
+          "y": 224.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 106.5999755859375,
+          "y": 226.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 104.79998779296875,
+          "y": 224.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 105.79998779296875,
+          "y": 223.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 103.20001220703125,
+          "y": 226.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 105.20001220703125,
+          "y": 226.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 101.5999755859375,
+          "y": 226.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 103.5999755859375,
+          "y": 225.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 100.79998779296875,
+          "y": 228.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 99.79998779296875,
+          "y": 228.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 97.5999755859375,
+          "y": 230.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 97.5999755859375,
+          "y": 230.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 96,
+          "y": 233.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 97,
+          "y": 234.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.4000244140625,
+          "y": 236.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 95.4000244140625,
+          "y": 236.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 93.5999755859375,
+          "y": 240.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.5999755859375,
+          "y": 240.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 93.5999755859375,
+          "y": 243.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.5999755859375,
+          "y": 244.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 93.5999755859375,
+          "y": 246.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.5999755859375,
+          "y": 247.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 93.5999755859375,
+          "y": 249.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.5999755859375,
+          "y": 251.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.4000244140625,
+          "y": 249.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 95.4000244140625,
+          "y": 249.8000030517578,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 1.5,
+      "hatchAngle": 2.5,
+      "alpha": 0.75,
+      "trace": true,
+      "gradient": null,
+      "fillMode": "none",
+      "density": 1,
+      "isMask": false,
+      "owner": null,
+      "stipple": true,
+      "fillColor": null
+    },
+    {
+      "color": "rgba(0,0,0,0.75)",
+      "minDistance": 2,
+      "distanceThreshold": 6,
+      "connectionProbability": 90,
+      "filled": false,
+      "points": [
+        {
+          "x": 279.20001220703125,
+          "y": 202.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 280.79998779296875,
+          "y": 200.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 282.79998779296875,
+          "y": 199.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 284,
+          "y": 196.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285,
+          "y": 195.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 288.79998779296875,
+          "y": 193.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 288.79998779296875,
+          "y": 193.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 291.20001220703125,
+          "y": 192.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 291.20001220703125,
+          "y": 193.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 293.5999755859375,
+          "y": 191.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 295.5999755859375,
+          "y": 191.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 296,
+          "y": 188.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 295,
+          "y": 190.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 298.4000244140625,
+          "y": 187.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 298.4000244140625,
+          "y": 186.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 300.79998779296875,
+          "y": 186.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 302.79998779296875,
+          "y": 188.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 303.20001220703125,
+          "y": 185.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 303.20001220703125,
+          "y": 185.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 305.5999755859375,
+          "y": 184.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 306.5999755859375,
+          "y": 185.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 308,
+          "y": 184.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 309,
+          "y": 186.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 309.5999755859375,
+          "y": 184.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 310.5999755859375,
+          "y": 185.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 312.79998779296875,
+          "y": 183.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 314.79998779296875,
+          "y": 185.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 314.4000244140625,
+          "y": 183.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 315.4000244140625,
+          "y": 185.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 316.79998779296875,
+          "y": 183.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 318.79998779296875,
+          "y": 184.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 320.79998779296875,
+          "y": 184.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 319.79998779296875,
+          "y": 186.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 322.4000244140625,
+          "y": 184.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 322.4000244140625,
+          "y": 183.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 324.79998779296875,
+          "y": 184.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 324.79998779296875,
+          "y": 183.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 328,
+          "y": 186.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 327,
+          "y": 187.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 329.5999755859375,
+          "y": 187.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 328.5999755859375,
+          "y": 187.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 331.20001220703125,
+          "y": 188.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 333.20001220703125,
+          "y": 190.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 332,
+          "y": 188.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 331,
+          "y": 187.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 332.79998779296875,
+          "y": 189.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 331.79998779296875,
+          "y": 189.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 334.4000244140625,
+          "y": 190.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 334.4000244140625,
+          "y": 189.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 336,
+          "y": 192.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 337,
+          "y": 194.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 339.199951171875,
+          "y": 196.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 338.199951171875,
+          "y": 195.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 340,
+          "y": 196.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 341,
+          "y": 197.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 342.4000244140625,
+          "y": 200.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 343.4000244140625,
+          "y": 199.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 343.199951171875,
+          "y": 201.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 345.199951171875,
+          "y": 203.8000030517578,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 1.5,
+      "hatchAngle": 2.5,
+      "alpha": 0.75,
+      "trace": true,
+      "gradient": null,
+      "fillMode": "none",
+      "density": 1,
+      "isMask": false,
+      "owner": null,
+      "stipple": true,
+      "fillColor": null
+    },
+    {
+      "color": "rgba(0,0,0,0.75)",
+      "minDistance": 2,
+      "distanceThreshold": 6,
+      "connectionProbability": 90,
+      "filled": false,
+      "points": [
+        {
+          "x": 285.5999755859375,
+          "y": 243.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 291.20001220703125,
+          "y": 241.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 293.20001220703125,
+          "y": 243.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 293.5999755859375,
+          "y": 239.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 294.5999755859375,
+          "y": 240.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 297.5999755859375,
+          "y": 238.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 296.5999755859375,
+          "y": 238.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 302.4000244140625,
+          "y": 235.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 304.4000244140625,
+          "y": 237.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 305.5999755859375,
+          "y": 234.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 306.5999755859375,
+          "y": 235.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 308.79998779296875,
+          "y": 233.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 307.79998779296875,
+          "y": 232.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 310.4000244140625,
+          "y": 232.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 310.4000244140625,
+          "y": 232.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 312.79998779296875,
+          "y": 232.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 311.79998779296875,
+          "y": 234.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 313.5999755859375,
+          "y": 232.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 314.5999755859375,
+          "y": 233.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 316.79998779296875,
+          "y": 232.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 316.79998779296875,
+          "y": 232.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 319.20001220703125,
+          "y": 232.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 321.20001220703125,
+          "y": 231.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 324.79998779296875,
+          "y": 232.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 325.79998779296875,
+          "y": 231.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 330.4000244140625,
+          "y": 232.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 332.4000244140625,
+          "y": 234.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 331.20001220703125,
+          "y": 232.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 331.20001220703125,
+          "y": 233.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 335.20001220703125,
+          "y": 233.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 337.20001220703125,
+          "y": 232.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 338.4000244140625,
+          "y": 235.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 338.4000244140625,
+          "y": 236.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 341.5999755859375,
+          "y": 236.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 343.5999755859375,
+          "y": 237.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 345.5999755859375,
+          "y": 239.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 347.5999755859375,
+          "y": 240.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 350.4000244140625,
+          "y": 242.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 349.4000244140625,
+          "y": 241.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 351.199951171875,
+          "y": 244.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 352.199951171875,
+          "y": 243.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 354.4000244140625,
+          "y": 247.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 353.4000244140625,
+          "y": 247.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 356.800048828125,
+          "y": 249.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 356.800048828125,
+          "y": 250.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 358.4000244140625,
+          "y": 252.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 358.4000244140625,
+          "y": 254.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 360,
+          "y": 256.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 360,
+          "y": 255.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 360,
+          "y": 257.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 361,
+          "y": 257.8000030517578,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 1.5,
+      "hatchAngle": 2.5,
+      "alpha": 0.75,
+      "trace": true,
+      "gradient": null,
+      "fillMode": "none",
+      "density": 1,
+      "isMask": false,
+      "owner": null,
+      "stipple": true,
+      "fillColor": null
+    },
+    {
+      "color": "rgba(0,0,0,0.75)",
+      "minDistance": 2,
+      "distanceThreshold": 6,
+      "connectionProbability": 90,
+      "filled": false,
+      "points": [
+        {
+          "x": 217.5999755859375,
+          "y": 272.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 215.20001220703125,
+          "y": 273.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 214.20001220703125,
+          "y": 275.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 214.4000244140625,
+          "y": 273.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 216.4000244140625,
+          "y": 273.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 214.4000244140625,
+          "y": 274.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 213.4000244140625,
+          "y": 275.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 213.5999755859375,
+          "y": 277.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 215.5999755859375,
+          "y": 278.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 218.4000244140625,
+          "y": 280.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 220.4000244140625,
+          "y": 279.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 223.20001220703125,
+          "y": 280.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 223.20001220703125,
+          "y": 279.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 222.4000244140625,
+          "y": 276.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 222.4000244140625,
+          "y": 278.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 221.5999755859375,
+          "y": 276.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 222.5999755859375,
+          "y": 277.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 220.79998779296875,
+          "y": 275.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 220.79998779296875,
+          "y": 274.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 219.20001220703125,
+          "y": 272.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 218.20001220703125,
+          "y": 274.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 219.20001220703125,
+          "y": 271.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 221.20001220703125,
+          "y": 273.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 218.4000244140625,
+          "y": 270.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 217.4000244140625,
+          "y": 271.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 214.4000244140625,
+          "y": 270.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 213.4000244140625,
+          "y": 270.59999084472656,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 1.5,
+      "hatchAngle": 2.5,
+      "alpha": 0.75,
+      "trace": true,
+      "gradient": null,
+      "fillMode": "none",
+      "density": 1,
+      "isMask": false,
+      "owner": null,
+      "stipple": true,
+      "fillColor": null
+    },
+    {
+      "color": "rgba(0,0,0,0.75)",
+      "minDistance": 2,
+      "distanceThreshold": 6,
+      "connectionProbability": 90,
+      "filled": false,
+      "points": [
+        {
+          "x": 237.5999755859375,
+          "y": 268.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 235.20001220703125,
+          "y": 269.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 236.20001220703125,
+          "y": 269.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 233.5999755859375,
+          "y": 270.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 234.5999755859375,
+          "y": 271.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 232.79998779296875,
+          "y": 272.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 231.79998779296875,
+          "y": 272.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 233.5999755859375,
+          "y": 274.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 235.5999755859375,
+          "y": 275.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 236,
+          "y": 277.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 235,
+          "y": 279.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 236.79998779296875,
+          "y": 278.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 238.79998779296875,
+          "y": 278.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 240.79998779296875,
+          "y": 276.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 239.79998779296875,
+          "y": 277.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 241.5999755859375,
+          "y": 275.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 241.5999755859375,
+          "y": 275.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 242.4000244140625,
+          "y": 272.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 243.4000244140625,
+          "y": 271.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 242.4000244140625,
+          "y": 269.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 243.4000244140625,
+          "y": 269.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 240.79998779296875,
+          "y": 269.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 239.79998779296875,
+          "y": 268.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 237.5999755859375,
+          "y": 268.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 236.5999755859375,
+          "y": 268.1999969482422,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 1.5,
+      "hatchAngle": 2.5,
+      "alpha": 0.75,
+      "trace": true,
+      "gradient": null,
+      "fillMode": "none",
+      "density": 1,
+      "isMask": false,
+      "owner": null,
+      "stipple": true,
+      "fillColor": null
+    }
+  ],
+  "layerOrder": [
+    null
+  ],
+  "layerTransforms": {
+    "__page__": {
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    }
+  },
+  "thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCABgAGADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD0KiiikUFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRUNxeWts8aXNzDC0hwgkcKWPtnrQBNRRRQAUUUUAFFFFABRRRQAUVSuru4F3Ha2dt5rHBllZwqQqc4J7sePuj8SODVC+tNZGn3ZfVrYhoHBU2Rwpx1GGJ4Hru79eBQBbs5Z9QmluCxSxBKW6rwZhx+83A9CchQMZHPORiUabp8cBgj0+1WHO4xiFQpbpnGMUiBLWGGztEwkSiNFyeABwPyxTPtgmcRqGJYc44APGOev/wCqgtU29Rlwj2MourSTFuP9fAx+QIOrJx8rDrgcHB4yc059SmlkaPTrCW4CjPnSHyoj14DHlvqARyOafHciaP542YHrGVB+U+v61DbanaW1lFHJcvcOrNEPLiaSRtpZclVBP8JycYoFKLjuT2OofaZpbaeB7a6hwWjcghgf4kYfeXPGeD6gVdqtHdWk16YgQLmNMgOhVtp64yORwM49BmrNBIUUUUAFFFFADI4ljkldScysGOT6ADj8qpX1080z6fZ26TyMuJml/wBVEpBxuH8RP90dR1Kgg1oVS0q1ktoJWuAv2i4meWQhy3U/KMkDooVenagDCinu7O3nt9VdZJ7dlVX2MPNTI2tksQSQp47HI6dcifxFDDJPCsa7o0+ZCuRjjv07r3478V2Os6Pbaxbqk+5JYzuilT7yHuPcHHI7/UAjln8J6wHcJJYEDhXMjgkZ6ldvH0yfr3po78PVpKNpuz+8lttXjaBJcMY2VWXg5OQAoC56+nfJ/CussIDb2caOiLLtBk2dC2BnnAz6Z9qzdE8OxaZJ58032m47MYwqp1GUHJBIODyf6VtUmc+Iqxm/d2Iby2S8tmgkLKCQQynBVgQVYe4IB/CpU3BFDkFsckDAJ+lLRQYBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//Z"
 }

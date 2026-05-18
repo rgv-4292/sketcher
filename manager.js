@@ -173,6 +173,7 @@ function renderPagePanel() {
   bookSettings.style.display = 'flex'
   document.getElementById('defaultPageDuration').value = activeManifest.defaultPageDuration
   document.getElementById('defaultTransDuration').value = activeManifest.defaultTransitionDuration
+  document.getElementById('captionFontSize').value = activeManifest.captionFontSize || 24
 
   emptyState.style.display = activeManifest.pages.length === 0 ? 'flex' : 'none'
   pageList.style.display = activeManifest.pages.length > 0 ? 'flex' : 'none'
@@ -355,6 +356,24 @@ function createPageItem(page, index) {
   })
   durations.appendChild(interpLbl)
   durations.appendChild(interpCb)
+
+  // Captioned checkbox
+  const captionedLbl = document.createElement('span')
+  captionedLbl.textContent = 'Captioned'
+  captionedLbl.title = 'Show page caption as text overlay during video render'
+  captionedLbl.style.cssText = 'font-size:11px;color:#777;white-space:nowrap;cursor:default;'
+  const captionedCb = document.createElement('input')
+  captionedCb.type = 'checkbox'
+  captionedCb.checked = !!page.captioned
+  captionedCb.title = captionedLbl.title
+  captionedCb.style.cssText = 'width:13px;height:13px;cursor:pointer;accent-color:#6a8a6a;flex-shrink:0;'
+  captionedCb.addEventListener('click', async e => {
+    e.stopPropagation()
+    page.captioned = captionedCb.checked
+    await saveManifest()
+  })
+  durations.appendChild(captionedLbl)
+  durations.appendChild(captionedCb)
 
   const actions = document.createElement('div')
   actions.className = 'page-actions'
@@ -676,6 +695,8 @@ async function exportVideo() {
       const transDuration = entry.transitionDuration ?? activeManifest.defaultTransitionDuration
       const pageFrames = Math.round(pageDuration * FPS)
       const transFrames = Math.round(transDuration * FPS)
+      const captionFontSize = activeManifest.captionFontSize || 24
+      const pageCaption = (entry.captioned && entry.caption) ? entry.caption : null
 
       updateProgress(`Rendering page ${p + 1} of ${pageCount}...`, 20 + (frameIndex / totalFrames) * 60)
 
@@ -684,10 +705,12 @@ async function exportVideo() {
         pageVariants = []
         for (let v = 0; v < 3; v++) {
           renderPageToCanvas(pageJSONs[p], offscreen)
+          if (pageCaption) drawCaption(offscreen, pageCaption, captionFontSize)
           pageVariants.push(new Uint8Array(await (await canvasToBlob(offscreen)).arrayBuffer()))
         }
       } else {
         renderPageToCanvas(pageJSONs[p], offscreen)
+        if (pageCaption) drawCaption(offscreen, pageCaption, captionFontSize)
         pageVariants = [new Uint8Array(await (await canvasToBlob(offscreen)).arrayBuffer())]
       }
 
@@ -750,6 +773,26 @@ function canvasToBlob(canvas) {
   return new Promise(resolve => canvas.toBlob(resolve, 'image/png'))
 }
 
+// Draw caption text onto a canvas context.
+function drawCaption(canvas, caption, fontSize) {
+  if (!caption) return
+  const ctx = canvas.getContext('2d')
+  const size = Math.max(8, fontSize || 24)
+  ctx.save()
+  ctx.font = `${size}px Arial`
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'bottom'
+  const x = canvas.width / 2
+  const y = canvas.height - Math.round(size * 0.6)
+  // Subtle shadow for legibility
+  ctx.shadowColor = 'rgba(255,255,255,0.8)'
+  ctx.shadowBlur = size * 0.4
+  ctx.fillStyle = 'black'
+  ctx.fillText(caption, x, y)
+  ctx.shadowBlur = 0
+  ctx.restore()
+}
+
 // --- Book creation ---
 
 function openNewBookModal() {
@@ -785,6 +828,7 @@ document.getElementById('saveBookSettingsBtn').addEventListener('click', async (
   if (!activeManifest) return
   activeManifest.defaultPageDuration = parseFloat(document.getElementById('defaultPageDuration').value) || 5
   activeManifest.defaultTransitionDuration = parseFloat(document.getElementById('defaultTransDuration').value) || 1
+  activeManifest.captionFontSize = parseInt(document.getElementById('captionFontSize').value) || 24
   await saveManifest()
 })
 

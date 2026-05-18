@@ -1251,6 +1251,7 @@ document.addEventListener('DOMContentLoaded', function () {
         syncFromPage()
         page.layerOrder = page.layerOrder.length ? page.layerOrder : getLayerOrder()
         refreshLayerList()
+        updateCaptionOverlay()
       } else {
         page.render()
       }
@@ -1336,6 +1337,7 @@ document.addEventListener('DOMContentLoaded', function () {
       syncFromPage()
       page.layerOrder = page.layerOrder.length ? page.layerOrder : getLayerOrder()
       refreshLayerList()
+      updateCaptionOverlay()
     } catch (err) {
       console.error('Error navigating page:', err)
     }
@@ -1346,6 +1348,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function updateBookIndicator() {
     document.getElementById('bookBtn').textContent = activeBookName || 'No Book'
+  }
+
+  function updateCaptionOverlay() {
+    const overlay = document.getElementById('captionOverlay')
+    if (!activeBookManifest || !activePageId) { overlay.style.display = 'none'; return }
+    const entry = activeBookManifest.pages.find(p => p.id === activePageId)
+    if (!entry || !entry.captioned || !entry.caption) { overlay.style.display = 'none'; return }
+    const fontSize = activeBookManifest.captionFontSize || 24
+    overlay.style.fontSize = `${fontSize}px`
+    overlay.textContent = entry.caption
+    overlay.style.display = 'block'
   }
 
   // --- Remaining toolbar buttons ---

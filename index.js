@@ -1358,8 +1358,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const fontSize = activeBookManifest.captionFontSize || 24
     overlay.style.fontSize = `${fontSize}px`
     overlay.textContent = entry.caption
+    overlay.style.whiteSpace = 'pre-wrap'
+    overlay.style.wordBreak = 'break-word'
+    overlay.textContent = entry.caption.replace(/\|/g, '\n')
     overlay.style.display = 'block'
-    // Defer positioning until after layout so getBoundingClientRect is accurate
     requestAnimationFrame(() => requestAnimationFrame(() => positionCaptionOverlay()))
   }
 

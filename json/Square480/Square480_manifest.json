@@ -1,0 +1,30 @@
+{
+  "name": "Square480",
+  "format": "square_480",
+  "width": 480,
+  "height": 480,
+  "defaultPageDuration": 5,
+  "defaultTransitionDuration": 1,
+  "pages": [
+    {
+      "id": "Square480_MPBQG75J",
+      "filename": "Square480_MPBQG75J.json",
+      "caption": "This is a bug.",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "captioned": true,
+      "interpOrder": false
+    },
+    {
+      "id": "Square480_MPBQJO6P",
+      "filename": "Square480_MPBQJO6P.json",
+      "caption": "And another bug.",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": false,
+      "captioned": true
+    }
+  ]
+}

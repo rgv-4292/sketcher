@@ -1358,21 +1358,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const fontSize = activeBookManifest.captionFontSize || 24
     overlay.style.fontSize = `${fontSize}px`
     overlay.textContent = entry.caption
-    positionCaptionOverlay()
     overlay.style.display = 'block'
+    // Defer positioning until after layout so getBoundingClientRect is accurate
+    requestAnimationFrame(() => requestAnimationFrame(() => positionCaptionOverlay()))
   }
 
   function positionCaptionOverlay() {
     const overlay = document.getElementById('captionOverlay')
+    if (overlay.style.display === 'none') return
     const canvasEl = document.getElementById('myCanvas')
     const areaEl = document.getElementById('canvasArea')
-    if (!canvasEl || overlay.style.display === 'none') return
+    if (!canvasEl || !areaEl) return
     const canvasRect = canvasEl.getBoundingClientRect()
     const areaRect = areaEl.getBoundingClientRect()
     const fontSize = parseFloat(overlay.style.fontSize) || 24
     overlay.style.left = `${canvasRect.left - areaRect.left}px`
     overlay.style.width = `${canvasRect.width}px`
-    overlay.style.top = `${canvasRect.bottom - areaRect.top - fontSize * 1.6}px`
+    overlay.style.whiteSpace = 'nowrap'
+    overlay.style.overflow = 'hidden'
+    overlay.style.textOverflow = 'ellipsis'
+    overlay.style.top = `${canvasRect.bottom - areaRect.top - fontSize * 2}px`
   }
 
   // Keep caption positioned correctly when the window resizes

@@ -227,10 +227,8 @@ export class Mark {
         for (let x = minX; x <= maxX; x += stepVal) {
           if (this.isPointInPolygon(x, y, points)) {
             hatchAngle = Math.random() * 360
-            const offsetX = Math.random() * stepVal - stepVal / 2
-            const offsetY = Math.random() * stepVal - stepVal / 2
-            offsetX = offsetX * 2
-            offsetY = offsetY * 2
+            const offsetX = (Math.random()*3) * stepVal - stepVal / 2
+            const offsetY = (Math.random()*3) * stepVal - stepVal / 2
             const hx = x + offsetX
             const hy = y + offsetY
             if (isMasked(hx, hy)) continue
@@ -272,10 +270,8 @@ export class Mark {
                 // Radius maps from hatchAngle down to 0 with distance
                 const radius = this.mapValue(val, 0, farthest * 1.1, this.hatchAngle, 0.0)
                 if (val < farthest * 0.9 && radius >= 0.2) {
-                  const offsetX = Math.random() * stepVal - stepVal / 2
-                  const offsetY = Math.random() * stepVal - stepVal / 2
-                  offsetX = offsetX * 2
-                  offsetY = offsetY * 2
+                  const offsetX = (Math.random()*3) * stepVal - stepVal / 2
+                  const offsetY = (Math.random()*3) * stepVal - stepVal / 2
                   const hx = x + offsetX
                   const hy = y + offsetY
                   if (isMasked(hx, hy)) {
@@ -315,10 +311,8 @@ export class Mark {
               }
             } else {
               ctx.lineWidth = this.hatchAngle
-              const offsetX = Math.random() * stepVal - stepVal / 2
-              const offsetY = Math.random() * stepVal - stepVal / 2
-              offsetX = offsetX * 2
-              offsetY = offsetY * 2
+              const offsetX = (Math.random()*3) * stepVal - stepVal / 2
+              const offsetY = (Math.random()*3) * stepVal - stepVal / 2
               const hx = x + offsetX
               const hy = y + offsetY
               if (isMasked(hx, hy)) continue

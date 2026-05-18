@@ -229,6 +229,8 @@ export class Mark {
             hatchAngle = Math.random() * 360
             const offsetX = Math.random() * stepVal - stepVal / 2
             const offsetY = Math.random() * stepVal - stepVal / 2
+            offsetX = offsetX * 2
+            offsetY = offsetY * 2
             const hx = x + offsetX
             const hy = y + offsetY
             if (isMasked(hx, hy)) continue
@@ -272,6 +274,8 @@ export class Mark {
                 if (val < farthest * 0.9 && radius >= 0.2) {
                   const offsetX = Math.random() * stepVal - stepVal / 2
                   const offsetY = Math.random() * stepVal - stepVal / 2
+                  offsetX = offsetX * 2
+                  offsetY = offsetY * 2
                   const hx = x + offsetX
                   const hy = y + offsetY
                   if (isMasked(hx, hy)) {
@@ -313,6 +317,8 @@ export class Mark {
               ctx.lineWidth = this.hatchAngle
               const offsetX = Math.random() * stepVal - stepVal / 2
               const offsetY = Math.random() * stepVal - stepVal / 2
+              offsetX = offsetX * 2
+              offsetY = offsetY * 2
               const hx = x + offsetX
               const hy = y + offsetY
               if (isMasked(hx, hy)) continue

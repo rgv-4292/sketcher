@@ -1073,10 +1073,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const setGradientCheckbox = document.getElementById('checkbox2')
-    if (fillMode === 'gradient' && setGradientCheckbox.checked && lastFilledMark >= 0) {
-      page.marks[lastFilledMark].gradient = { x: pt.x, y: pt.y }
-      setGradientCheckbox.checked = false
-      page.render()
+    if (fillMode === 'gradient' && setGradientCheckbox.checked) {
+      // Find the last gradient-filled mark in the current active layer (or any layer)
+      let targetIdx = -1
+      for (let i = page.marks.length - 1; i >= 0; i--) {
+        if (page.marks[i].fillMode === 'gradient' && page.marks[i].points.length > 0) {
+          targetIdx = i
+          break
+        }
+      }
+      if (targetIdx >= 0) {
+        page.marks[targetIdx].gradient = { x: pt.x, y: pt.y }
+        setGradientCheckbox.checked = false
+        page.invalidateBuffer()
+        page.render()
+      }
       return
     }
 

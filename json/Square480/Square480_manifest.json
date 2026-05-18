@@ -9,10 +9,11 @@
     {
       "id": "Square480_MPBQG75J",
       "filename": "Square480_MPBQG75J.json",
-      "caption": "",
+      "caption": "This is a bug",
       "pageDuration": null,
       "transitionDuration": null,
-      "bgColor": "#f0ebe8"
+      "bgColor": "#f0ebe8",
+      "captioned": true
     }
   ]
 }

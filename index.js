@@ -532,6 +532,8 @@ document.addEventListener('DOMContentLoaded', function () {
   let doTrace = false
   let doMask = false
   let fillMode = 'none'
+  let doStipple = false
+  let currentFillColor = 'rgba(0,0,0,0.75)'
 
   // --- Undo/Redo ---
   // redoStack holds { mark, index } entries removed by Undo; Redo restores them.
@@ -704,6 +706,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- Color indicator sync ---
   const colorIndicator = document.getElementById('colorIndicator')
   const bgColorSwatch = document.getElementById('bgColorSwatch')
+  const fillColorSwatch = document.getElementById('fillColorSwatch')
+
+  function syncFillColorSwatch() {
+    fillColorSwatch.style.background = currentFillColor
+  }
+  syncFillColorSwatch()
 
   function syncColorIndicator() {
     colorIndicator.style.background = currentColor
@@ -800,6 +808,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (colorPopupTarget === 'mark') {
       currentColor = color
       syncColorIndicator()
+    } else if (colorPopupTarget === 'fill') {
+      currentFillColor = color
+      syncFillColorSwatch()
     } else {
       currentBgColor = rgbaToHex(color)
       syncBgIndicator()
@@ -835,8 +846,8 @@ document.addEventListener('DOMContentLoaded', function () {
   function openColorPopup(target) {
     colorPopupTarget = target
     document.getElementById('colorPopupTitle').textContent =
-      target === 'mark' ? 'Mark Color' : 'Background Color'
-    colorPreviewBox.style.background = target === 'mark' ? currentColor : currentBgColor
+      target === 'mark' ? 'Mark Color' : target === 'fill' ? 'Fill Color' : 'Background Color'
+    colorPreviewBox.style.background = target === 'mark' ? currentColor : target === 'fill' ? currentFillColor : currentBgColor
     drawColorWheel(parseInt(brightnessSlider.value))
     renderPalette()
     colorPopup.classList.add('visible')
@@ -845,6 +856,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   colorIndicator.addEventListener('pointerdown', () => openColorPopup('mark'))
   bgColorSwatch.addEventListener('pointerdown', () => openColorPopup('bg'))
+  fillColorSwatch.addEventListener('pointerdown', () => openColorPopup('fill'))
 
   colorWheelCanvas.addEventListener('pointerdown', (e) => {
     const rect = colorWheelCanvas.getBoundingClientRect()
@@ -906,6 +918,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- Props controls ---
   document.getElementById('checkbox1').addEventListener('change', (e) => { doTrace = e.target.checked; saveLiveSettings() })
   document.getElementById('checkboxMask').addEventListener('change', (e) => { doMask = e.target.checked; saveLiveSettings() })
+  document.getElementById('checkboxStipple').addEventListener('change', (e) => { doStipple = e.target.checked; saveLiveSettings() })
   document.getElementById('checkbox2').addEventListener('change', () => {})
   document.getElementById('minDistance').addEventListener('input', (e) => { minDistance = parseFloat(e.target.value); saveLiveSettings() })
   document.getElementById('distanceThreshold').addEventListener('input', (e) => { distanceThreshold = parseInt(e.target.value); saveLiveSettings() })
@@ -917,7 +930,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- Live settings persistence ---
   function getCurrentSettings() {
-    return { currentColor, minDistance, distanceThreshold, connectionProbability, markWidth, hatchAngle, scatter, density, doTrace, doMask, fillMode }
+    return { currentColor, currentFillColor, minDistance, distanceThreshold, connectionProbability, markWidth, hatchAngle, scatter, density, doTrace, doMask, doStipple, fillMode }
   }
 
   function saveLiveSettings() {
@@ -926,6 +939,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function applySettings(s) {
     currentColor = s.currentColor ?? currentColor
+    currentFillColor = s.currentFillColor ?? currentFillColor
     minDistance = s.minDistance ?? minDistance
     distanceThreshold = s.distanceThreshold ?? distanceThreshold
     connectionProbability = s.connectionProbability ?? connectionProbability
@@ -935,6 +949,7 @@ document.addEventListener('DOMContentLoaded', function () {
     density = s.density ?? 3
     doTrace = s.doTrace ?? false
     doMask = s.doMask ?? false
+    doStipple = s.doStipple ?? false
     fillMode = s.fillMode ?? 'none'
 
     document.getElementById('minDistance').value = minDistance
@@ -946,8 +961,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('density').value = density
     document.getElementById('checkbox1').checked = doTrace
     document.getElementById('checkboxMask').checked = doMask
+    document.getElementById('checkboxStipple').checked = doStipple
     setFillMode(fillMode)
     syncColorIndicator()
+    syncFillColorSwatch()
   }
 
   function restoreLiveSettings() {
@@ -1094,7 +1111,8 @@ document.addEventListener('DOMContentLoaded', function () {
     drawing = true
     currentMark = new Mark(
       currentColor, minDistance, distanceThreshold, connectionProbability,
-      fillMode !== 'none', markWidth, hatchAngle, 0.75, doTrace, null, fillMode, density, doMask
+      fillMode !== 'none', markWidth, hatchAngle, 0.75, doTrace, null, fillMode, density, doMask,
+      activeLayer, doStipple, fillMode !== 'none' ? currentFillColor : null
     )
     const lpt = toLayerSpace(pt, activeLayer)
     const liveCtx = canvas.getContext('2d')

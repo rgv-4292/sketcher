@@ -13,7 +13,9 @@ export class Mark {
     fillMode = 'none',
     density = 3,
     isMask = false,
-    owner = null
+    owner = null,
+    stipple = false,
+    fillColor = null
   ) {
     this.color = color
     this.minDistance = minDistance
@@ -30,6 +32,8 @@ export class Mark {
     this.density = density || 3
     this.isMask = isMask || false
     this.owner = owner || null
+    this.stipple = stipple || false
+    this.fillColor = fillColor || null  // null means use this.color
   }
 
   addPoint(x, y, pressure) {
@@ -107,6 +111,27 @@ export class Mark {
 
   drawSquigglyLine(ctx, point1, point2) {
     const pressure = this._effectiveWidth(point1, point2)
+
+    if (this.stipple) {
+      // Stipple mode: scatter dots along the line instead of squiggly strokes
+      const dist = Math.hypot(point2.x - point1.x, point2.y - point1.y)
+      const step = Math.max(1, this.hatchAngle * 2)
+      const dotCount = Math.max(1, Math.floor(dist / step))
+      const radius = Math.max(0.3, this.hatchAngle * 0.5)
+      try {
+        ctx.fillStyle = `rgba(${this.getRGB(this.color)}, 0.25)`
+      } catch (e) {
+        ctx.fillStyle = 'rgba(0,0,0,0.25)'
+      }
+      for (let i = 0; i <= dotCount; i++) {
+        const t = dotCount === 0 ? 0 : i / dotCount
+        const x = point1.x + (point2.x - point1.x) * t + (Math.random() * 2 - 1) * pressure
+        const y = point1.y + (point2.y - point1.y) * t + (Math.random() * 2 - 1) * pressure
+        this.drawStippleDot(ctx, x, y, radius + (Math.random() - 0.5) * radius)
+      }
+      return
+    }
+
     const step = Math.max(
       1,
       Math.min(
@@ -134,6 +159,12 @@ export class Mark {
       lastx = x
       lasty = y
     }
+  }
+
+  drawStippleDot(ctx, x, y, radius) {
+    ctx.beginPath()
+    ctx.arc(x, y, Math.max(0.2, radius), 0, Math.PI * 2)
+    ctx.fill()
   }
 
   render(alpha = 1, transition = false, targetCanvas, maskPolygons) {
@@ -169,7 +200,10 @@ export class Mark {
     const minY = Math.min(...points.map(p => p.y))
     const maxY = Math.max(...points.map(p => p.y))
 
-    ctx.strokeStyle = this.color
+    // Use fillColor for filled marks when set, otherwise fall back to this.color
+    const activeColor = (this.fillColor && this.fillColor !== this.color) ? this.fillColor : this.color
+
+    ctx.strokeStyle = activeColor
     ctx.lineWidth = 0.3
 
     this.clipToPolygon(ctx, points)
@@ -183,6 +217,12 @@ export class Mark {
       const stepVal = this.density
       let hatchAngle = Math.random() * 360
       ctx.lineWidth = this.hatchAngle
+
+      if (this.stipple) {
+        try { ctx.fillStyle = `rgba(${this.getRGB(activeColor)}, 0.4)` }
+        catch (e) { ctx.fillStyle = 'rgba(0,0,0,0.4)' }
+      }
+
       for (let y = minY; y <= maxY; y += stepVal) {
         for (let x = minX; x <= maxX; x += stepVal) {
           if (this.isPointInPolygon(x, y, points)) {
@@ -192,7 +232,13 @@ export class Mark {
             const hx = x + offsetX
             const hy = y + offsetY
             if (isMasked(hx, hy)) continue
-            this.drawHatchLine(ctx, hx, hy, hatchAngle)
+            if (this.stipple) {
+              const radius = Math.max(0.2, this.hatchAngle * (0.3 + Math.random() * 0.4))
+              this.drawStippleDot(ctx, hx, hy, radius)
+            } else {
+              ctx.strokeStyle = activeColor
+              this.drawHatchLine(ctx, hx, hy, hatchAngle)
+            }
           }
         }
       }
@@ -219,26 +265,50 @@ export class Mark {
               const val = this.distanceBetweenPoints(
                 this.gradient.x, this.gradient.y, x, y
               )
-              ctx.lineWidth = this.mapValue(val, 0, farthest * 1.1, this.hatchAngle, 0.0)
 
-              if (val < farthest * 0.9 && ctx.lineWidth >= 0.2) {
-                const offsetX = Math.random() * stepVal - stepVal / 2
-                const offsetY = Math.random() * stepVal - stepVal / 2
-                const hx = x + offsetX
-                const hy = y + offsetY
-                if (isMasked(hx, hy)) {
-                  stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.density, this.density + 3))
-                  continue
+              if (this.stipple) {
+                // Radius maps from hatchAngle down to 0 with distance
+                const radius = this.mapValue(val, 0, farthest * 1.1, this.hatchAngle, 0.0)
+                if (val < farthest * 0.9 && radius >= 0.2) {
+                  const offsetX = Math.random() * stepVal - stepVal / 2
+                  const offsetY = Math.random() * stepVal - stepVal / 2
+                  const hx = x + offsetX
+                  const hy = y + offsetY
+                  if (isMasked(hx, hy)) {
+                    stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.density, this.density + 3))
+                    continue
+                  }
+                  const alpha = parseFloat(radius) < 0.3 ? (Math.random() * 50 > 10 ? 0.4 : 0) : 0.4
+                  if (alpha > 0) {
+                    try { ctx.fillStyle = `rgba(${this.getRGB(activeColor)}, ${alpha})` }
+                    catch (e) { ctx.fillStyle = `rgba(0,0,0,${alpha})` }
+                    this.drawStippleDot(ctx, hx, hy, Math.max(0.2, parseFloat(radius)))
+                  }
                 }
-                if (ctx.lineWidth < 0.3) {
-                  if (Math.random() * 50 > 10) {
+                stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.density, this.density + 3))
+              } else {
+                ctx.lineWidth = this.mapValue(val, 0, farthest * 1.1, this.hatchAngle, 0.0)
+
+                if (val < farthest * 0.9 && ctx.lineWidth >= 0.2) {
+                  const offsetX = Math.random() * stepVal - stepVal / 2
+                  const offsetY = Math.random() * stepVal - stepVal / 2
+                  const hx = x + offsetX
+                  const hy = y + offsetY
+                  if (isMasked(hx, hy)) {
+                    stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.density, this.density + 3))
+                    continue
+                  }
+                  ctx.strokeStyle = activeColor
+                  if (ctx.lineWidth < 0.3) {
+                    if (Math.random() * 50 > 10) {
+                      this.drawHatchLine(ctx, hx, hy, hatchAngle)
+                    }
+                  } else {
                     this.drawHatchLine(ctx, hx, hy, hatchAngle)
                   }
-                } else {
-                  this.drawHatchLine(ctx, hx, hy, hatchAngle)
                 }
+                stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.density, this.density + 3))
               }
-              stepVal = parseInt(this.mapValue(val, 0, farthest * 1.02, this.density, this.density + 3))
             } else {
               ctx.lineWidth = this.hatchAngle
               const offsetX = Math.random() * stepVal - stepVal / 2
@@ -246,7 +316,15 @@ export class Mark {
               const hx = x + offsetX
               const hy = y + offsetY
               if (isMasked(hx, hy)) continue
-              this.drawHatchLine(ctx, hx, hy, hatchAngle)
+              if (this.stipple) {
+                const radius = Math.max(0.2, this.hatchAngle * (0.3 + Math.random() * 0.4))
+                try { ctx.fillStyle = `rgba(${this.getRGB(activeColor)}, 0.4)` }
+                catch (e) { ctx.fillStyle = 'rgba(0,0,0,0.4)' }
+                this.drawStippleDot(ctx, hx, hy, radius)
+              } else {
+                ctx.strokeStyle = activeColor
+                this.drawHatchLine(ctx, hx, hy, hatchAngle)
+              }
             }
           }
         }
@@ -338,7 +416,9 @@ export class Mark {
       fillMode: this.fillMode,
       density: this.density,
       isMask: this.isMask,
-      owner: this.owner
+      owner: this.owner,
+      stipple: this.stipple,
+      fillColor: this.fillColor
     }
   }
 
@@ -357,7 +437,9 @@ export class Mark {
       data.fillMode || 'none',
       data.density || 3,
       data.isMask || false,
-      data.owner || null
+      data.owner || null,
+      data.stipple || false,
+      data.fillColor || null
     )
     mark.points = data.points.map(point => ({
       x: Math.floor(point.x),

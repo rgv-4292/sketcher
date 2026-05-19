@@ -534,6 +534,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let fillMode = 'none'
   let doStipple = false
   let currentFillColor = 'rgba(0,0,0,0.75)'
+  let onionSkin = false
 
   // --- Undo/Redo ---
   // redoStack holds { mark, index } entries removed by Undo; Redo restores them.
@@ -1252,6 +1253,8 @@ document.addEventListener('DOMContentLoaded', function () {
         page.layerOrder = page.layerOrder.length ? page.layerOrder : getLayerOrder()
         refreshLayerList()
         updateCaptionOverlay()
+        if (onionSkin) await renderOnionSkin()
+        else clearOnionSkin()
       } else {
         page.render()
       }
@@ -1338,6 +1341,8 @@ document.addEventListener('DOMContentLoaded', function () {
       page.layerOrder = page.layerOrder.length ? page.layerOrder : getLayerOrder()
       refreshLayerList()
       updateCaptionOverlay()
+      if (onionSkin) await renderOnionSkin()
+      else clearOnionSkin()
     } catch (err) {
       console.error('Error navigating page:', err)
     }
@@ -1395,8 +1400,67 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Keep caption positioned correctly when the window resizes
-  const _captionResizeObs = new ResizeObserver(() => positionCaptionOverlay())
+  const _captionResizeObs = new ResizeObserver(() => {
+    positionCaptionOverlay()
+    positionOnionCanvas()
+  })
   _captionResizeObs.observe(document.getElementById('canvasArea'))
+
+  // --- Onion Skin ---
+  const onionCanvas = document.getElementById('onionCanvas')
+
+  function positionOnionCanvas() {
+    if (onionCanvas.style.display === 'none') return
+    const canvasEl = document.getElementById('myCanvas')
+    const areaEl = document.getElementById('canvasArea')
+    if (!canvasEl || !areaEl) return
+    const canvasRect = canvasEl.getBoundingClientRect()
+    const areaRect = areaEl.getBoundingClientRect()
+    onionCanvas.style.left = `${canvasRect.left - areaRect.left}px`
+    onionCanvas.style.top = `${canvasRect.top - areaRect.top}px`
+    onionCanvas.style.width = `${canvasRect.width}px`
+    onionCanvas.style.height = `${canvasRect.height}px`
+  }
+
+  async function renderOnionSkin() {
+    if (!activeBookManifest || !activePageId) { onionCanvas.style.display = 'none'; return }
+    const pages = activeBookManifest.pages
+    const idx = pages.findIndex(p => p.id === activePageId)
+    if (idx <= 0) { onionCanvas.style.display = 'none'; return }  // no previous page
+    const prevEntry = pages[idx - 1]
+    try {
+      const res = await fetch('/.netlify/functions/github', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ operation: 'getPage', bookName: activeBookName, pageId: prevEntry.id })
+      })
+      const data = await res.json()
+      const prevPage = new Page('onionCanvas')
+      onionCanvas.width = canvas.width
+      onionCanvas.height = canvas.height
+      prevPage.canvasParams.width = canvas.width
+      prevPage.canvasParams.height = canvas.height
+      prevPage.loadFromJSON(data.pageData)
+      prevPage.render()
+      onionCanvas.style.display = 'block'
+      requestAnimationFrame(() => positionOnionCanvas())
+    } catch (err) {
+      console.error('Onion skin error:', err)
+      onionCanvas.style.display = 'none'
+    }
+  }
+
+  function clearOnionSkin() {
+    onionCanvas.style.display = 'none'
+    const ctx = onionCanvas.getContext('2d')
+    ctx.clearRect(0, 0, onionCanvas.width, onionCanvas.height)
+  }
+
+  document.getElementById('checkboxOnion').addEventListener('change', async (e) => {
+    onionSkin = e.target.checked
+    if (onionSkin) await renderOnionSkin()
+    else clearOnionSkin()
+  })
 
   // --- Remaining toolbar buttons ---
 

@@ -7,6 +7,16 @@
   "defaultTransitionDuration": 1,
   "pages": [
     {
+      "id": "Square480_MPBRCG63",
+      "filename": "Square480_MPBRCG63.json",
+      "caption": "Bugs...||||||||",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": false,
+      "captioned": true
+    },
+    {
       "id": "Square480_MPBQG75J",
       "filename": "Square480_MPBQG75J.json",
       "caption": "This is a bug.",
@@ -14,12 +24,32 @@
       "transitionDuration": null,
       "bgColor": "#f0ebe8",
       "captioned": true,
-      "interpOrder": false
+      "interpOrder": true
     },
     {
       "id": "Square480_MPBQJO6P",
       "filename": "Square480_MPBQJO6P.json",
-      "caption": "And another bug. And this is more text to wrap.",
+      "caption": "And another bug.",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": true,
+      "captioned": true
+    },
+    {
+      "id": "Square480_MPBRG5L5",
+      "filename": "Square480_MPBRG5L5.json",
+      "caption": "Spider with a big head.",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": true,
+      "captioned": true
+    },
+    {
+      "id": "Square480_MPBRJ88V",
+      "filename": "Square480_MPBRJ88V.json",
+      "caption": "Bugs.||||||||",
       "pageDuration": null,
       "transitionDuration": null,
       "bgColor": "#f0ebe8",

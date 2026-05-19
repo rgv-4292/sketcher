@@ -1406,27 +1406,30 @@ document.addEventListener('DOMContentLoaded', function () {
   })
   _captionResizeObs.observe(document.getElementById('canvasArea'))
 
-  // --- Onion Skin ---
-  const onionCanvas = document.getElementById('onionCanvas')
+  // Remove the separate onion canvas — we draw on top of the main canvas after each render
+  // Remove onionCanvas element from HTML and replace with an offscreen bitmap approach.
+  let onionBitmap = null  // ImageBitmap of the previous page, refreshed on navigate
 
-  function positionOnionCanvas() {
-    if (onionCanvas.style.display === 'none') return
-    const canvasEl = document.getElementById('myCanvas')
-    const areaEl = document.getElementById('canvasArea')
-    if (!canvasEl || !areaEl) return
-    const canvasRect = canvasEl.getBoundingClientRect()
-    const areaRect = areaEl.getBoundingClientRect()
-    onionCanvas.style.left = `${canvasRect.left - areaRect.left}px`
-    onionCanvas.style.top = `${canvasRect.top - areaRect.top}px`
-    onionCanvas.style.width = `${canvasRect.width}px`
-    onionCanvas.style.height = `${canvasRect.height}px`
+  // Wrap page.render to composite the onion bitmap on top after each render
+  const _originalRender = page.render.bind(page)
+  page.render = function (...args) {
+    _originalRender(...args)
+    if (onionSkin && onionBitmap) {
+      const mainCtx = canvas.getContext('2d')
+      mainCtx.save()
+      mainCtx.globalAlpha = 0.3
+      mainCtx.drawImage(onionBitmap, 0, 0, canvas.width, canvas.height)
+      mainCtx.restore()
+    }
   }
 
+  function positionOnionCanvas() {}  // no-op, kept for ResizeObserver call compatibility
+
   async function renderOnionSkin() {
-    if (!activeBookManifest || !activePageId) { onionCanvas.style.display = 'none'; return }
+    if (!activeBookManifest || !activePageId) { onionBitmap = null; return }
     const pages = activeBookManifest.pages
     const idx = pages.findIndex(p => p.id === activePageId)
-    if (idx <= 0) { onionCanvas.style.display = 'none'; return }  // no previous page
+    if (idx <= 0) { onionBitmap = null; page.render(); return }  // no previous page
     const prevEntry = pages[idx - 1]
     try {
       const res = await fetch('/.netlify/functions/github', {
@@ -1435,25 +1438,29 @@ document.addEventListener('DOMContentLoaded', function () {
         body: JSON.stringify({ operation: 'getPage', bookName: activeBookName, pageId: prevEntry.id })
       })
       const data = await res.json()
-      const prevPage = new Page('onionCanvas')
-      onionCanvas.width = canvas.width
-      onionCanvas.height = canvas.height
+      // Render previous page to an offscreen canvas, then store as ImageBitmap
+      const off = document.createElement('canvas')
+      off.width = canvas.width
+      off.height = canvas.height
+      const prevPage = new Page(null)
       prevPage.canvasParams.width = canvas.width
       prevPage.canvasParams.height = canvas.height
+      prevPage.render = () => {}  // suppress internal render() call inside loadFromJSON
       prevPage.loadFromJSON(data.pageData)
-      prevPage.render()
-      onionCanvas.style.display = 'block'
-      requestAnimationFrame(() => positionOnionCanvas())
+      prevPage.render = Page.prototype.render.bind(prevPage)  // restore
+      prevPage.render(false, off)
+      if (onionBitmap) onionBitmap.close()
+      onionBitmap = await createImageBitmap(off)
+      page.render()  // redraw main canvas with onion on top
     } catch (err) {
       console.error('Onion skin error:', err)
-      onionCanvas.style.display = 'none'
+      onionBitmap = null
     }
   }
 
   function clearOnionSkin() {
-    onionCanvas.style.display = 'none'
-    const ctx = onionCanvas.getContext('2d')
-    ctx.clearRect(0, 0, onionCanvas.width, onionCanvas.height)
+    if (onionBitmap) { onionBitmap.close(); onionBitmap = null }
+    page.render()  // redraw without onion
   }
 
   document.getElementById('checkboxOnion').addEventListener('change', async (e) => {

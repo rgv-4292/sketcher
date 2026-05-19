@@ -880,7 +880,8 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   paletteSaveBtn.addEventListener('pointerdown', () => {
-    const color = colorPopupTarget === 'mark' ? currentColor : currentBgColor
+    const color = colorPreviewBox.style.background
+    if (!color) return
     if (palette.length >= 14) palette.shift()
     palette.push(color)
     localStorage.setItem('sketcher_palette', JSON.stringify(palette))
@@ -1417,7 +1418,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (onionSkin && onionBitmap) {
       const mainCtx = canvas.getContext('2d')
       mainCtx.save()
-      mainCtx.globalAlpha = 0.3
+      mainCtx.globalAlpha = 0.2
       mainCtx.drawImage(onionBitmap, 0, 0, canvas.width, canvas.height)
       mainCtx.restore()
     }

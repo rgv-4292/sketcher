@@ -1357,10 +1357,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!entry || !entry.captioned || !entry.caption) { overlay.style.display = 'none'; return }
     const fontSize = activeBookManifest.captionFontSize || 24
     overlay.style.fontSize = `${fontSize}px`
-    overlay.textContent = entry.caption
     overlay.style.whiteSpace = 'pre-wrap'
     overlay.style.wordBreak = 'break-word'
-    overlay.textContent = entry.caption.replace(/\|/g, '\n')
+    overlay.textContent = entry.caption.replace(/\s*\|\s*/g, '\n')
     overlay.style.display = 'block'
     requestAnimationFrame(() => requestAnimationFrame(() => positionCaptionOverlay()))
   }
@@ -1375,19 +1374,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const areaRect = areaEl.getBoundingClientRect()
     const fontSize = parseFloat(overlay.style.fontSize) || 24
     const lineHeight = fontSize * 1.3
-    // Estimate lines by counting words and approximate chars-per-line
     const charsPerLine = Math.floor(canvasRect.width / (fontSize * 0.55))
-    const words = overlay.textContent.trim().split(/\s+/)
-    let lines = 1, lineChars = 0
-    words.forEach(w => {
-      if (lineChars + w.length + 1 > charsPerLine && lineChars > 0) { lines++; lineChars = w.length }
-      else lineChars += w.length + 1
+    // Split on real newlines first, then estimate wrap lines per segment
+    const hardLines = overlay.textContent.split('\n')
+    let totalLines = 0
+    hardLines.forEach(seg => {
+      const words = seg.trim().split(/\s+/).filter(Boolean)
+      if (words.length === 0) { totalLines++; return }
+      let lineChars = 0, segLines = 1
+      words.forEach(w => {
+        if (lineChars + w.length + 1 > charsPerLine && lineChars > 0) { segLines++; lineChars = w.length }
+        else lineChars += w.length + 1
+      })
+      totalLines += segLines
     })
-    const blockHeight = lines * lineHeight + fontSize * 0.5
+    const blockHeight = totalLines * lineHeight + fontSize * 0.5
     overlay.style.left = `${canvasRect.left - areaRect.left}px`
     overlay.style.width = `${canvasRect.width}px`
-    overlay.style.whiteSpace = 'normal'
-    overlay.style.wordBreak = 'break-word'
     overlay.style.top = `${canvasRect.bottom - areaRect.top - blockHeight}px`
   }
 

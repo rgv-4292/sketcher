@@ -794,7 +794,7 @@ async function drawCaption(canvas, caption, fontSize) {
   const ctx = canvas.getContext('2d')
   const size = Math.max(8, fontSize || 24)
   const lineHeight = size * 1.3
-  const lines = caption.replace(/\|/g, '\n').split('\n')
+  const lines = caption.replace(/\s*\|\s*/g, '\n').split('\n')
   ctx.save()
   ctx.font = `${size}px OldNewspaperTypes, Arial`
   ctx.textAlign = 'center'

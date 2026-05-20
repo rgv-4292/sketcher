@@ -248,8 +248,9 @@ export class Page {
     let myMarkWidth = parseFloat(document.getElementById('markWidth').value)
     let myHatchAngle = parseFloat(document.getElementById('hatchAngle').value)
     let myStipple = document.getElementById('checkboxStipple').value
+    console.log('Stipple value:', myStipple)
     // if (myStipple === 'true') myStipple = true
-    if (myStipple === 'false') myStipple = false
+    // if (myStipple === 'false') myStipple = false
 
     const svgPxDims = resolveSvgDimensions(svgDOM)
     const svgW = svgPxDims.width

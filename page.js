@@ -324,7 +324,8 @@ export class Page {
           if (fillOpacity >= 1) myIsMask = true
           if (strokeWidth > 0) {
             myTrace = true
-            myHatchAngle = strokeWidth
+            myMarkWidth = strokeWidth
+            myHatchAngle = 5
           }
           isFilled = true
           myFillMode = 'solid'

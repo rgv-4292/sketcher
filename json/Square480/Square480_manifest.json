@@ -37,11 +37,10 @@
     {
       "id": "Square480_MPE5RJ7O",
       "filename": "Square480_MPE5RJ7O.json",
-      "caption": "This is a one line caption.",
+      "caption": "This is a one line caption.|This is two line.",
       "pageDuration": null,
       "transitionDuration": null,
-      "bgColor": "#f0ebe8",
-      "captioned": true
+      "bgColor": "#f0ebe8"
     }
   ],
   "captionFontSize": 24

@@ -40,7 +40,8 @@
       "caption": "This is a one line caption.",
       "pageDuration": null,
       "transitionDuration": null,
-      "bgColor": "#f0ebe8"
+      "bgColor": "#f0ebe8",
+      "captioned": true
     }
   ],
   "captionFontSize": 24

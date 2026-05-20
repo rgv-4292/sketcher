@@ -311,18 +311,21 @@ export class Page {
         let myFillMode = 'none'
 
         let myFill = styleDict['fill']
-        
+
         // style="fill:#338000;fill-opacity:0.72801304;stroke:#000000;stroke-width:2"
         if (myFill && myFill !== 'none') {
           console.log('style', styleDict)
-          
+
           // myFillColor = hexToRgba(myFill, 0.75)
           // myColor = hexToRgba(myFill, 0.75)
           const fillOpacity = parseFloat(styleDict['fill-opacity'] ?? '1')
           const strokeWidth = parseFloat(styleDict['stroke-width'] ?? '0')
           myDensity = mapRange(fillOpacity, 0, 1, 16, 2)
           if (fillOpacity >= 1) myIsMask = true
-          if (strokeWidth > 0) myTrace = true
+          if (strokeWidth > 0) {
+            myTrace = true
+            myHatchAngle = strokeWidthmyHatchAngle = strokeWidth
+          }
           isFilled = true
           myFillMode = 'solid'
         }
@@ -554,16 +557,16 @@ export class Page {
 
       const tempMark = Mark.fromJSON({
         ...toMark.toJSON(),
-        color:color,
+        color: color,
         markWidth: width,
         hatchAngle: hatch,
-        density:density,
+        density: density,
         distanceThreshold: distanceThreshold,
         connectionProbability: connectionProbability,
         // gradient: gradient,
         points: interpPoints,
         alpha: 1.0
-      
+
       })
       tempMark.render(1, false, targetCanvas)
     })

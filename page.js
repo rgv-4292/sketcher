@@ -340,7 +340,7 @@ export class Page {
           density: myDensity,
           isMask: myIsMask,
           owner: null,
-          stipple: stipple || false,
+          stipple: myStipple || false,
           fillColor: myFillColor
         })
       })

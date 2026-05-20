@@ -302,7 +302,7 @@ export class Page {
         const styleDict = styleStringToDict(styleAttr)
 
         let myColor = hexToRgba(styleDict['stroke'] || '#000000', 0.75)
-
+        let myFillColor = myColor
         let isFilled = false
         let myDensity = 3
         let myTrace = false
@@ -314,7 +314,7 @@ export class Page {
         // style="fill:#338000;fill-opacity:0.72801304;stroke:#000000;stroke-width:2"
         if (myFill && myFill !== 'none') {
           let myFillColor = hexToRgba(styleDict['fill'] || '#000000', 0.75)
-          myFillColor = hexToRgba(myFill, 0.75)
+          // myFillColor = hexToRgba(myFill, 0.75)
           // myColor = hexToRgba(myFill, 0.75)
           const fillOpacity = parseFloat(styleDict['fill-opacity'] ?? '1')
           const strokeWidth = parseFloat(styleDict['stroke-width'] ?? '0')

@@ -247,7 +247,7 @@ export class Page {
     let connectionProbability = parseInt(document.getElementById('connectionProbability').value)
     let myMarkWidth = parseFloat(document.getElementById('markWidth').value)
     let myHatchAngle = parseFloat(document.getElementById('hatchAngle').value)
-    let myStipple = document.getElementById('stipple').value
+    let myStipple = document.getElementById('checkboxStipple').value
     if (myStipple === 'true') myStipple = true
     if (myStipple === 'false') myStipple = false
 

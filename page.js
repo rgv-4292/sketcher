@@ -309,12 +309,12 @@ export class Page {
         let myIsMask = false
         let myFillMode = 'none'
 
-        const myFill = styleDict['fill']
-        const myColor = styleDict['stroke']
+        let myFill = styleDict['fill']
+        
         // style="fill:#338000;fill-opacity:0.72801304;stroke:#000000;stroke-width:2"
         if (myFill && myFill !== 'none') {
           myFillColor = hexToRgba(myFill, 0.75)
-          myColor = hexToRgba(myFill, 0.75)
+          // myColor = hexToRgba(myFill, 0.75)
           const fillOpacity = parseFloat(styleDict['fill-opacity'] ?? '1')
           const strokeWidth = parseFloat(styleDict['stroke-width'] ?? '0')
           myDensity = mapRange(fillOpacity, 0, 1, 16, 2)

@@ -325,7 +325,7 @@ export class Page {
           if (strokeWidth > 0) {
             myTrace = true
             myMarkWidth = strokeWidth
-            myHatchAngle = 5
+            myHatchAngle = 5 * strokeWidth
           }
           isFilled = true
           myFillMode = 'solid'

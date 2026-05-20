@@ -339,7 +339,7 @@ export class Page {
           fillMode: myFillMode,
           density: myDensity,
           isMask: myIsMask,
-          owner: owner || null,
+          owner: null,
           stipple: stipple || false,
           fillColor: myFillColor
         })

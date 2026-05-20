@@ -1,0 +1,5168 @@
+{
+  "canvasParams": {
+    "width": 480,
+    "height": 480,
+    "backgroundColor": "#f0ebe8"
+  },
+  "marks": [
+    {
+      "color": "rgba(0, 0, 0, 0.75)",
+      "minDistance": 2,
+      "distanceThreshold": 12,
+      "connectionProbability": 95,
+      "filled": true,
+      "points": [
+        {
+          "x": 458,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 448,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 443,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 438,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 432,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 427,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 421,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 416,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 410,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 404,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 399,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 393,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 388,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 382,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 377,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 371,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 366,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 361,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 356,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 351,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 346,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 341,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 336,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 331,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 326,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 321,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 316,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 311,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 306,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 301,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 295,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 290,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 280,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 275,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 271,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 266,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 261,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 256,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 251,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 246,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 240,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 235,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 230,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 225,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 220,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 216,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 211,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 207,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 202,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 198,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 194,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 190,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 185,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 181,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 176,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 171,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 165,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 154,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 149,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 143,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 137,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 132,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 126,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 121,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 116,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 111,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 106,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 100,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 95,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 90,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 85,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 80,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 75,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 70,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 65,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 61,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 56,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 51,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 47,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 42,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 38,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 33,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 28,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 28,
+          "y": 310,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 28,
+          "y": 315,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 27,
+          "y": 319,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 323,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 25,
+          "y": 328,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 24,
+          "y": 332,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 24,
+          "y": 336,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 23,
+          "y": 340,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 23,
+          "y": 345,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 350,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 355,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 359,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 364,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 370,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 375,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 380,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 23,
+          "y": 386,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 23,
+          "y": 391,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 24,
+          "y": 397,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 25,
+          "y": 402,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 27,
+          "y": 408,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 30,
+          "y": 413,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 34,
+          "y": 418,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 38,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 43,
+          "y": 425,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 47,
+          "y": 427,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 52,
+          "y": 428,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 56,
+          "y": 427,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 61,
+          "y": 427,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 65,
+          "y": 426,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 69,
+          "y": 425,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 74,
+          "y": 424,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 78,
+          "y": 424,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 83,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 88,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 92,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 97,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 102,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 107,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 112,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 117,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 121,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 126,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 131,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 137,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 142,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 147,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 159,
+          "y": 424,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 165,
+          "y": 424,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 170,
+          "y": 425,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 176,
+          "y": 426,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 182,
+          "y": 427,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 188,
+          "y": 427,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 193,
+          "y": 428,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 198,
+          "y": 428,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 203,
+          "y": 428,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 208,
+          "y": 428,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 213,
+          "y": 428,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 218,
+          "y": 428,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 223,
+          "y": 427,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 228,
+          "y": 427,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 232,
+          "y": 427,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 237,
+          "y": 426,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 241,
+          "y": 426,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 246,
+          "y": 425,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 250,
+          "y": 425,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 255,
+          "y": 424,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 259,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 264,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 268,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 273,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 278,
+          "y": 422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 284,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 289,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 295,
+          "y": 424,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 301,
+          "y": 425,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 307,
+          "y": 426,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 313,
+          "y": 426,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 318,
+          "y": 427,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 324,
+          "y": 428,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 330,
+          "y": 428,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 335,
+          "y": 429,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 340,
+          "y": 429,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 346,
+          "y": 429,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 351,
+          "y": 429,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 355,
+          "y": 429,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 360,
+          "y": 429,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 365,
+          "y": 428,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 370,
+          "y": 428,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 374,
+          "y": 427,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 378,
+          "y": 427,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 382,
+          "y": 426,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 387,
+          "y": 425,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 391,
+          "y": 424,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 395,
+          "y": 424,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 400,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 405,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 410,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 415,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 421,
+          "y": 424,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 427,
+          "y": 424,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 432,
+          "y": 424,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 438,
+          "y": 423,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 443,
+          "y": 421,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 447,
+          "y": 418,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 450,
+          "y": 415,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 452,
+          "y": 410,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 405,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 400,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 394,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 388,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 452,
+          "y": 383,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 452,
+          "y": 377,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 452,
+          "y": 372,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 451,
+          "y": 367,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 452,
+          "y": 362,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 452,
+          "y": 357,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 353,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 348,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 340,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 456,
+          "y": 336,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 456,
+          "y": 331,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 327,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 322,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 458,
+          "y": 317,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 458,
+          "y": 312,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 458,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 1.5,
+      "hatchAngle": 2.5,
+      "alpha": 0.75,
+      "trace": true,
+      "gradient": null,
+      "fillMode": "solid",
+      "density": 5.807817440000001,
+      "isMask": false,
+      "owner": null,
+      "stipple": "on",
+      "fillColor": "rgba(0, 0, 0, 0.75)"
+    },
+    {
+      "color": "rgba(0, 0, 0, 0.75)",
+      "minDistance": 2,
+      "distanceThreshold": 12,
+      "connectionProbability": 95,
+      "filled": true,
+      "points": [
+        {
+          "x": 458,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 296,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 290,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 456,
+          "y": 285,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 456,
+          "y": 280,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 456,
+          "y": 275,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 456,
+          "y": 270,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 456,
+          "y": 265,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 260,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 255,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 250,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 245,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 240,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 235,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 456,
+          "y": 230,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 456,
+          "y": 224,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 219,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 213,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 207,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 202,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 196,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 191,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 186,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 181,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 176,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 171,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 166,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 162,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 157,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 152,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 147,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 143,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 137,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 132,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 127,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 122,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 117,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 112,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 107,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 454,
+          "y": 102,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 97,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 92,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 87,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 82,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 77,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 72,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 67,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 62,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 57,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 455,
+          "y": 52,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 453,
+          "y": 47,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 451,
+          "y": 42,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 448,
+          "y": 37,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 445,
+          "y": 33,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 441,
+          "y": 29,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 436,
+          "y": 27,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 431,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 426,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 421,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 416,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 411,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 407,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 402,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 397,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 392,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 387,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 382,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 376,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 371,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 365,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 360,
+          "y": 24,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 354,
+          "y": 24,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 349,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 344,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 339,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 334,
+          "y": 24,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 330,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 326,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 322,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 317,
+          "y": 27,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 313,
+          "y": 28,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 309,
+          "y": 29,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 304,
+          "y": 29,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 299,
+          "y": 29,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 294,
+          "y": 29,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 288,
+          "y": 28,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283,
+          "y": 28,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 277,
+          "y": 27,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 271,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 265,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 259,
+          "y": 24,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 253,
+          "y": 24,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 248,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 242,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 237,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 233,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 228,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 223,
+          "y": 24,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 219,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 215,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 210,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 205,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 200,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 195,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 189,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 183,
+          "y": 24,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 177,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 172,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 166,
+          "y": 22,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160,
+          "y": 21,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 155,
+          "y": 21,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 150,
+          "y": 21,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 144,
+          "y": 20,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 139,
+          "y": 21,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 135,
+          "y": 21,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 130,
+          "y": 21,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 125,
+          "y": 22,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 121,
+          "y": 22,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 116,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 112,
+          "y": 23,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 107,
+          "y": 24,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 103,
+          "y": 24,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 98,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 89,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 84,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 79,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 75,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 70,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 65,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 59,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 54,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 48,
+          "y": 25,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 43,
+          "y": 26,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 38,
+          "y": 28,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 34,
+          "y": 31,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 31,
+          "y": 35,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 29,
+          "y": 40,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 27,
+          "y": 45,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 50,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 55,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 60,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 65,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 71,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 76,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 81,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 86,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 91,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 96,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 101,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 106,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 27,
+          "y": 111,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 27,
+          "y": 117,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 27,
+          "y": 122,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 27,
+          "y": 127,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 27,
+          "y": 132,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 27,
+          "y": 137,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 141,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 146,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 25,
+          "y": 150,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 25,
+          "y": 155,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 24,
+          "y": 159,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 23,
+          "y": 163,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 23,
+          "y": 168,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 172,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 21,
+          "y": 177,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 21,
+          "y": 181,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 21,
+          "y": 186,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 21,
+          "y": 191,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 21,
+          "y": 196,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 21,
+          "y": 201,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 21,
+          "y": 207,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 21,
+          "y": 212,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 21,
+          "y": 217,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 21,
+          "y": 222,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 227,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 232,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 238,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 243,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 22,
+          "y": 248,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 23,
+          "y": 254,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 24,
+          "y": 259,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 24,
+          "y": 265,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 25,
+          "y": 271,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 26,
+          "y": 277,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 27,
+          "y": 283,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 27,
+          "y": 289,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 28,
+          "y": 294,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 28,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 28,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 32,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 37,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 42,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 46,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 51,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 55,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 60,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 64,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 69,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 74,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 79,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 84,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 89,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 100,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 105,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 110,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 115,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 120,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 125,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 131,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 136,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 142,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 148,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 159,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 164,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 170,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 175,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 180,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 184,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 189,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 193,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 197,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 202,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 206,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 210,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 215,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 219,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 224,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 229,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 234,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 239,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 245,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 250,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 255,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 260,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 265,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 270,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 275,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 280,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 284,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 290,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 295,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 300,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 305,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 310,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 315,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 320,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 325,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 330,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 335,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 340,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 345,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 350,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 355,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 360,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 365,
+          "y": 300,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 370,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 376,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 381,
+          "y": 301,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 387,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 392,
+          "y": 302,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 398,
+          "y": 303,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 403,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 409,
+          "y": 304,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 415,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 420,
+          "y": 305,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 426,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 431,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 437,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 442,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 447,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 452,
+          "y": 307,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 457,
+          "y": 306,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 1.5,
+      "hatchAngle": 2.5,
+      "alpha": 0.75,
+      "trace": true,
+      "gradient": null,
+      "fillMode": "solid",
+      "density": 12.16938118,
+      "isMask": false,
+      "owner": null,
+      "stipple": "on",
+      "fillColor": "rgba(0, 0, 0, 0.75)"
+    },
+    {
+      "color": "rgba(0, 0, 0, 0.75)",
+      "minDistance": 2,
+      "distanceThreshold": 12,
+      "connectionProbability": 95,
+      "filled": true,
+      "points": [
+        {
+          "x": 155,
+          "y": 117,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 154,
+          "y": 117,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 151,
+          "y": 116,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 145,
+          "y": 115,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 140,
+          "y": 116,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 138,
+          "y": 119,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 135,
+          "y": 123,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 135,
+          "y": 128,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 134,
+          "y": 132,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 134,
+          "y": 136,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 134,
+          "y": 140,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 136,
+          "y": 143,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 138,
+          "y": 147,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 143,
+          "y": 148,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 148,
+          "y": 147,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153,
+          "y": 146,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 156,
+          "y": 143,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158,
+          "y": 139,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160,
+          "y": 137,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160,
+          "y": 141,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 162,
+          "y": 144,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 166,
+          "y": 146,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 170,
+          "y": 148,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 175,
+          "y": 148,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 180,
+          "y": 149,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 186,
+          "y": 148,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 191,
+          "y": 147,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 195,
+          "y": 144,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 198,
+          "y": 141,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 201,
+          "y": 138,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 202,
+          "y": 135,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 203,
+          "y": 132,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 203,
+          "y": 127,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 202,
+          "y": 125,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 207,
+          "y": 125,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 212,
+          "y": 123,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 216,
+          "y": 122,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 221,
+          "y": 121,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 225,
+          "y": 118,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 229,
+          "y": 116,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 233,
+          "y": 114,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 233,
+          "y": 108,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 235,
+          "y": 103,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 232,
+          "y": 100,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 231,
+          "y": 95,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 227,
+          "y": 92,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 222,
+          "y": 92,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 218,
+          "y": 93,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 214,
+          "y": 95,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 211,
+          "y": 98,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 212,
+          "y": 94,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 214,
+          "y": 90,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 215,
+          "y": 86,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 215,
+          "y": 82,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 214,
+          "y": 79,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 213,
+          "y": 75,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 211,
+          "y": 72,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 208,
+          "y": 71,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 206,
+          "y": 70,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 202,
+          "y": 70,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 197,
+          "y": 70,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 192,
+          "y": 70,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 188,
+          "y": 73,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 185,
+          "y": 76,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 182,
+          "y": 79,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 180,
+          "y": 84,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 180,
+          "y": 89,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 182,
+          "y": 92,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 183,
+          "y": 96,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 181,
+          "y": 95,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 178,
+          "y": 93,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 175,
+          "y": 89,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 171,
+          "y": 88,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 166,
+          "y": 86,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 161,
+          "y": 86,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158,
+          "y": 89,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 155,
+          "y": 92,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153,
+          "y": 97,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153,
+          "y": 102,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153,
+          "y": 107,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 154,
+          "y": 112,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 1.5,
+      "hatchAngle": 2.5,
+      "alpha": 0.75,
+      "trace": true,
+      "gradient": null,
+      "fillMode": "solid",
+      "density": 2,
+      "isMask": true,
+      "owner": null,
+      "stipple": "on",
+      "fillColor": "rgba(0, 0, 0, 0.75)"
+    },
+    {
+      "color": "rgba(0, 6, 51, 0.75)",
+      "minDistance": 2,
+      "distanceThreshold": 12,
+      "connectionProbability": 95,
+      "filled": false,
+      "points": [
+        {
+          "x": 94.01666259765625,
+          "y": 65.80000305175781,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.01666259765625,
+          "y": 69,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 96.01666259765625,
+          "y": 71,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.01666259765625,
+          "y": 71.39999389648438,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.01666259765625,
+          "y": 71.39999389648438,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.816650390625,
+          "y": 74.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.816650390625,
+          "y": 73.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.816650390625,
+          "y": 81.80000305175781,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 96.816650390625,
+          "y": 82.80000305175781,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.816650390625,
+          "y": 92.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 95.816650390625,
+          "y": 93.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.816650390625,
+          "y": 109.80000305175781,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 93.816650390625,
+          "y": 111.80000305175781,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 94.816650390625,
+          "y": 124.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 93.816650390625,
+          "y": 125.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 96.41668701171875,
+          "y": 148.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 98.41668701171875,
+          "y": 149.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 98.816650390625,
+          "y": 160.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 97.816650390625,
+          "y": 162.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 100.41668701171875,
+          "y": 168.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 100.41668701171875,
+          "y": 169.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 101.2166748046875,
+          "y": 176.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 101.2166748046875,
+          "y": 178.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 102.816650390625,
+          "y": 187.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 101.816650390625,
+          "y": 186.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 104.41668701171875,
+          "y": 191.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 105.41668701171875,
+          "y": 191.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 105.2166748046875,
+          "y": 195.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 106.2166748046875,
+          "y": 195.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 105.2166748046875,
+          "y": 202.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 107.2166748046875,
+          "y": 204.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 106.01666259765625,
+          "y": 209.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 106.01666259765625,
+          "y": 211.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 107.61663818359375,
+          "y": 223.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 108.61663818359375,
+          "y": 225.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 108.41668701171875,
+          "y": 228.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 110.41668701171875,
+          "y": 229.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 108.41668701171875,
+          "y": 240.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 110.41668701171875,
+          "y": 241.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 108.41668701171875,
+          "y": 245.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 108.41668701171875,
+          "y": 245.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 108.41668701171875,
+          "y": 252.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 110.41668701171875,
+          "y": 251.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 108.41668701171875,
+          "y": 256.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 107.41668701171875,
+          "y": 256.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 108.41668701171875,
+          "y": 258.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 110.41668701171875,
+          "y": 259.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 111.61663818359375,
+          "y": 257.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 110.61663818359375,
+          "y": 259.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 113.2166748046875,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 114.2166748046875,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 119.61663818359375,
+          "y": 256.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 118.61663818359375,
+          "y": 255.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 131.61663818359375,
+          "y": 254.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 131.61663818359375,
+          "y": 253.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153.2166748046875,
+          "y": 253.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 154.2166748046875,
+          "y": 255.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 175.61663818359375,
+          "y": 252.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 174.61663818359375,
+          "y": 251.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 204.41668701171875,
+          "y": 251.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 203.41668701171875,
+          "y": 250.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 220.41668701171875,
+          "y": 251.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 219.41668701171875,
+          "y": 250.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 236.41668701171875,
+          "y": 250.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 235.41668701171875,
+          "y": 249.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 250.01666259765625,
+          "y": 249.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 251.01666259765625,
+          "y": 248.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 266.01666259765625,
+          "y": 248.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 268.01666259765625,
+          "y": 250.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 281.2166748046875,
+          "y": 246.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283.2166748046875,
+          "y": 247.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286.816650390625,
+          "y": 246.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286.816650390625,
+          "y": 247.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286.816650390625,
+          "y": 244.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285.816650390625,
+          "y": 246.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286.816650390625,
+          "y": 243.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 288.816650390625,
+          "y": 243.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286.816650390625,
+          "y": 241.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 287.816650390625,
+          "y": 243.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286.01666259765625,
+          "y": 236.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285.01666259765625,
+          "y": 237.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285.2166748046875,
+          "y": 229.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286.2166748046875,
+          "y": 228.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 284.41668701171875,
+          "y": 222.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 286.41668701171875,
+          "y": 223.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283.61663818359375,
+          "y": 208.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285.61663818359375,
+          "y": 209.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283.61663818359375,
+          "y": 201.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 285.61663818359375,
+          "y": 202.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283.61663818359375,
+          "y": 197.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283.61663818359375,
+          "y": 196.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 282.816650390625,
+          "y": 200.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 284.816650390625,
+          "y": 202.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 282.816650390625,
+          "y": 200.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283.816650390625,
+          "y": 200.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 282.816650390625,
+          "y": 203.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 283.816650390625,
+          "y": 205.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 282.01666259765625,
+          "y": 204.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 282.01666259765625,
+          "y": 206.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 280.41668701171875,
+          "y": 204.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 280.41668701171875,
+          "y": 206.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 276.41668701171875,
+          "y": 204.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 276.41668701171875,
+          "y": 206.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 272.41668701171875,
+          "y": 204.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 272.41668701171875,
+          "y": 204.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 269.2166748046875,
+          "y": 205.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 268.2166748046875,
+          "y": 205.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 265.2166748046875,
+          "y": 206.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 264.2166748046875,
+          "y": 206.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 262.816650390625,
+          "y": 208.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 264.816650390625,
+          "y": 208.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 261.2166748046875,
+          "y": 208.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 260.2166748046875,
+          "y": 207.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 258.816650390625,
+          "y": 209.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 260.816650390625,
+          "y": 210.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 258.01666259765625,
+          "y": 210.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 258.01666259765625,
+          "y": 212.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 253.2166748046875,
+          "y": 212.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 255.2166748046875,
+          "y": 212.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 250.816650390625,
+          "y": 214.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 252.816650390625,
+          "y": 215.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 249.2166748046875,
+          "y": 214.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 248.2166748046875,
+          "y": 215.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 245.2166748046875,
+          "y": 216.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 247.2166748046875,
+          "y": 217.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 241.2166748046875,
+          "y": 218.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 243.2166748046875,
+          "y": 220.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 239.61663818359375,
+          "y": 219.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 239.61663818359375,
+          "y": 219.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 236.41668701171875,
+          "y": 220.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 235.41668701171875,
+          "y": 221.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 232.41668701171875,
+          "y": 220.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 233.41668701171875,
+          "y": 222.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 228.41668701171875,
+          "y": 221.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 228.41668701171875,
+          "y": 220.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 226.01666259765625,
+          "y": 222.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 225.01666259765625,
+          "y": 223.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 222.816650390625,
+          "y": 223.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 224.816650390625,
+          "y": 222.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 220.41668701171875,
+          "y": 224.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 222.41668701171875,
+          "y": 225.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 218.01666259765625,
+          "y": 224.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 219.01666259765625,
+          "y": 224.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 215.61663818359375,
+          "y": 224.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 215.61663818359375,
+          "y": 223.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 211.61663818359375,
+          "y": 224.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 210.61663818359375,
+          "y": 223.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 209.2166748046875,
+          "y": 225.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 211.2166748046875,
+          "y": 226.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 204.41668701171875,
+          "y": 225.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 205.41668701171875,
+          "y": 225.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 202.01666259765625,
+          "y": 226.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 201.01666259765625,
+          "y": 225.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 197.2166748046875,
+          "y": 227.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 196.2166748046875,
+          "y": 229.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 195.61663818359375,
+          "y": 227.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 196.61663818359375,
+          "y": 228.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 190.01666259765625,
+          "y": 228.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 190.01666259765625,
+          "y": 227.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 185.2166748046875,
+          "y": 229.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 186.2166748046875,
+          "y": 230.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 183.61663818359375,
+          "y": 229.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 182.61663818359375,
+          "y": 228.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 179.61663818359375,
+          "y": 230.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 179.61663818359375,
+          "y": 231.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 177.2166748046875,
+          "y": 230.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 177.2166748046875,
+          "y": 232.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 174.816650390625,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 175.816650390625,
+          "y": 230.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 173.2166748046875,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 173.2166748046875,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 170.01666259765625,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 170.01666259765625,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 167.61663818359375,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 169.61663818359375,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 166.01666259765625,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 165.01666259765625,
+          "y": 230.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 160.41668701171875,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 159.41668701171875,
+          "y": 230.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 157.2166748046875,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 158.2166748046875,
+          "y": 233.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 154.01666259765625,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 154.01666259765625,
+          "y": 232.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 151.61663818359375,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 151.61663818359375,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 149.2166748046875,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 148.2166748046875,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 146.01666259765625,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 145.01666259765625,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 142.816650390625,
+          "y": 232.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 143.816650390625,
+          "y": 232.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 141.2166748046875,
+          "y": 232.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 142.2166748046875,
+          "y": 231.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 134.01666259765625,
+          "y": 232.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 135.01666259765625,
+          "y": 231.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 131.61663818359375,
+          "y": 232.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 132.61663818359375,
+          "y": 234.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 126.816650390625,
+          "y": 232.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 128.816650390625,
+          "y": 233.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 121.2166748046875,
+          "y": 232.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 123.2166748046875,
+          "y": 234.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 117.2166748046875,
+          "y": 233.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 116.2166748046875,
+          "y": 235.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 113.2166748046875,
+          "y": 233.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 115.2166748046875,
+          "y": 232.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 112.41668701171875,
+          "y": 234.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 112.41668701171875,
+          "y": 233.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 112.41668701171875,
+          "y": 230.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 114.41668701171875,
+          "y": 232.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 112.41668701171875,
+          "y": 228.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 114.41668701171875,
+          "y": 227.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 113.2166748046875,
+          "y": 223.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 114.2166748046875,
+          "y": 223.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 113.2166748046875,
+          "y": 220.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 115.2166748046875,
+          "y": 222.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 113.2166748046875,
+          "y": 218.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 114.2166748046875,
+          "y": 218.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 113.2166748046875,
+          "y": 215.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 113.2166748046875,
+          "y": 214.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 113.2166748046875,
+          "y": 212.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 115.2166748046875,
+          "y": 213.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 113.2166748046875,
+          "y": 210.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 112.2166748046875,
+          "y": 211.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 114.01666259765625,
+          "y": 209.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 114.01666259765625,
+          "y": 208.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 117.2166748046875,
+          "y": 207.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 118.2166748046875,
+          "y": 208.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 118.816650390625,
+          "y": 205.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 119.816650390625,
+          "y": 207.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 120.41668701171875,
+          "y": 205.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 119.41668701171875,
+          "y": 204.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 123.61663818359375,
+          "y": 205.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 123.61663818359375,
+          "y": 204.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 127.61663818359375,
+          "y": 204.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 129.61663818359375,
+          "y": 205.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 132.41668701171875,
+          "y": 204.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 134.41668701171875,
+          "y": 205.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 136.41668701171875,
+          "y": 204.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 138.41668701171875,
+          "y": 206.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 137.2166748046875,
+          "y": 204.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 139.2166748046875,
+          "y": 206.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 138.816650390625,
+          "y": 204.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 139.816650390625,
+          "y": 205.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 142.816650390625,
+          "y": 205.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 143.816650390625,
+          "y": 206.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 146.01666259765625,
+          "y": 208.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 147.01666259765625,
+          "y": 208.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 148.41668701171875,
+          "y": 210.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 148.41668701171875,
+          "y": 212.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 150.816650390625,
+          "y": 212.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 152.816650390625,
+          "y": 211.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 151.61663818359375,
+          "y": 214.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153.61663818359375,
+          "y": 215.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 151.61663818359375,
+          "y": 215.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 152.61663818359375,
+          "y": 215.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 152.41668701171875,
+          "y": 217.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 151.41668701171875,
+          "y": 218.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153.2166748046875,
+          "y": 220.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 155.2166748046875,
+          "y": 222.1999969482422,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153.2166748046875,
+          "y": 220.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 155.2166748046875,
+          "y": 221.99998474121094,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153.2166748046875,
+          "y": 221.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 155.2166748046875,
+          "y": 220.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153.2166748046875,
+          "y": 223.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 154.2166748046875,
+          "y": 225.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153.2166748046875,
+          "y": 227.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 152.2166748046875,
+          "y": 227.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 153.2166748046875,
+          "y": 229.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 154.2166748046875,
+          "y": 231.8000030517578,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 152.41668701171875,
+          "y": 230.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 151.41668701171875,
+          "y": 229.59999084472656,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 152.41668701171875,
+          "y": 231.40000915527344,
+          "visible": true,
+          "pressure": null
+        },
+        {
+          "x": 152.41668701171875,
+          "y": 233.40000915527344,
+          "visible": true,
+          "pressure": null
+        }
+      ],
+      "markWidth": 1.5,
+      "hatchAngle": 2.5,
+      "alpha": 0.75,
+      "trace": false,
+      "gradient": null,
+      "fillMode": "none",
+      "density": 1,
+      "isMask": false,
+      "owner": null,
+      "stipple": false,
+      "fillColor": null
+    }
+  ],
+  "layerOrder": [],
+  "layerTransforms": {
+    "__page__": {
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    }
+  },
+  "thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCABgAGADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD0F22oWCliBwo6mm72xnyn6dMj/GiQqHjBJBLYHHU4NPIyCDnB44OKRRFK04A8mKNv9+Qr/IHtmnqZCo3KobHIDZGfyqGK4SW5ntNrFoQu8uuAwYcEdiOo+oqYbiCrHDY6r/P2oAarTeYweNAg+6Vckn6jAx+dNna5AU28MT5+8JJSmPyU5onuI7cr5jHL8KuM59en+eg70W91HcxM8O47TgqVKkHAOMH2I/OgAiknMJaaFN4JG2KTePzIWjzpPKL/AGWbdgHZlMn2+9j9akDnIBQ54zgjj/OKdzn2oAj3THaREoB67nwR+QI/WiSR0B2wSSf7hXn8yKeN2Ocdf0o525I59AaAGiRjGW8lwQM7Mrk+3XH60sciSrujYMMkceoOCPzFOAx3JqKHb5s23dksCc564A4/L+vegBtyQJ7UZAzKQAe/yNU5OOgJqGeIyzWzBgPKkLkHuNjL/wCzCpvxoAjKxxyS3G0B9gDN0yFyRz+J/Oqeq3X2a0ZlkUSgorDOzILAEg9RwTg9vetAE5xjt1rF1aC8ubho4IUmVosxmUIUifPBIPOOPQ9/bABQjd5Lwosky7UO2O5YgPggthlyeAPug4PpwaNOuZv7Q321y/kGXbJbLHnJ6McnJGCcnnuPxmbT79ysZgBwoV5Mou4ksSBtwQvOc4PUHaDmtiwsY7C3iiiRWcKqySkAM5A+8fU8frQItjGTSHk7cMcjk9KBkbQSCe/b8qXnPp/WgY1jwVIbB4yPf6c07nnOPag5yMEY700EAiMn5gM9+aAHA5AIzz6jFRRMGnnOBlWCE9zwD/7NUmWOPlxzg5PaooWLXE4OPlIHA9s4z68/rQAjoDqML9xFIPzKf4VPkbiueQM4qB3A1GFO5ikP5FP8amwMg4yfWgCncSNHqtuqrhZYny23qylSq5z6FyB7E9quA5B6ZBxgH/PauZ8dO1vpFrKrXKFb1MvayeW6g7gcdckgkcdzn1FU9Rkt7AJe6BY6s16ksZZI7adROg+8sm8Ybgt8xBbJHvVKN0K52eBuzjkcA0isG6Yz3x0/Oss6yruFs9M1G4kZST/oxhC47Fpdo79s96T7XrU0j+RpMUC9Ee6uhu6DkogYdc/xdu2aVmBqqGCgM249zjFJG6TIksUgeN13KykFWB5BB/z1rIbRjfQuNeu2ufMwPIhZoIV6ZAAbLc92J9gKuaZDb2thHDYwqkMe6NEWTco2k98nvn39aLIC5nOCpyP50pOCOvPHSk3A8KwzzilHToR9aQxDjhs47deOahtseddYznzRnP8AuLUwIPIIIzjimoFWWTaoBbDMQOp6ZP4AflQAx40+2QzMSHCPGvvnaT/6DUh3bskgKO3qP6VFdsyCNkj8xw/yruA5we59s0zzL7OBawbfVpyD+QQ0AQ6tYXN8lqba8W2mtrgTBjFvDABhtIyOobrmr5zg469qrq1ztD+TEGPbz2I/9B9v502Oa6BBmigCheds2WOAMnlQOD/Tp0ouBZC4B2/Lk9Me/JpQoGcdT1PrVYTzBmVbKRBgkM7IFz1OSCT+lNSa+UYmtbdTtJGy4Z+QOn3AfT/OMgFrYoKkZULwADgflUFjZW2nWcdnZxbIEztXcWxkknknJ5P608SXBkZfJjwO/mHn/wAdpUZ2UFETA4+/x15xx2/zigCTOcjkHHp0pQMAAZ445OarRtKoRPJijUjja/frjGB7/kaZcyagjAQRWrqcgl5yhB9hsbtQBcBBGQQe3FNA/eMeOQPr3qvNNNEEY2zyyHI8uF1Pvn5tvpj8ajsbyW5u50ls5rbZGjBZdmSCW7qxHagCzIN1zEC2MKzBeOvAz+RI/GmJAI5SY2+bILFnLMy84HPuT+VLKyfa4oyzK5R3GDxgFc5/MU5CI2WEKflToq4UY7DsPpQAgGNp43DkhDjI+mR39c0E5UxyncHJB+XaMY6D/J709xtVmXg9yFycdenfvTTwOikOTn/a9OO/H8qAEV3GwsjIpLbskHA5wSc8f/XpLcmRzKPlTaAEzypzzkDjPSldNqSGCNDIcnDcAk+v+e1Eg2qMIvyAlTuKgY6A47f4dKAHYIRQcsoGGI5zwc5zzSGI7XXcx3cgbiMH0z1A/wDr0gAbDt5hwvPJweueB1/KlUkOVzuwRkk89Ov+eOtACN+9VWEZYYBTeSvX1GMjj1HfFJuVsyQ4kLdwx6Dt6ZznjikX5SCWJTcBuzyW+7zjrnj9fanszMSnlnqMksBgev6UAAKDEjHYGOFBAHU/zP8AkUyBYmvLmVExICsTn+9gbh/6HT2DherFsZ4I4OMY6VHaRuk947AbZZgyY7jy0H8waAJLiLzFVlALody5JAJwRzj6/wBe1QsjTF4mtnCk5Zn2bX/LJ6cdOlW6KAKm/UQ2BbWzLjOTcMDn0xs6dfypVN+XXfDAE6tiYk9f9wcD9atUUAV7h3QBfsss4Y4byyoH1O5h/WoYprjJ3WN2p4JYtF8x47bz2H86vUUAU5VuSN8dpbF2GWLSlSDxkZCH0HPsKeoljVn8o8tkxxMDn3y2MfQep65qzRQBXVpgFRbZkQr13LlfbHT+nFGZzKcRso6ZYjawz2wSQQMjpySKsUUAQuJ1iIijjZh93c5XJ9TgfT8zS20bxxASbN55bYCF9OAfbFS0UAf/2Q=="
+}

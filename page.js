@@ -247,6 +247,9 @@ export class Page {
     let connectionProbability = parseInt(document.getElementById('connectionProbability').value)
     let myMarkWidth = parseFloat(document.getElementById('markWidth').value)
     let myHatchAngle = parseFloat(document.getElementById('hatchAngle').value)
+    let myStipple = document.getElementById('stipple').value
+    if (myStipple === 'true') myStipple = true
+    if (myStipple === 'false') myStipple = false
 
     const svgPxDims = resolveSvgDimensions(svgDOM)
     const svgW = svgPxDims.width
@@ -307,11 +310,16 @@ export class Page {
         let myFillMode = 'none'
 
         const myFill = styleDict['fill']
+        const myColor = styleDict['stroke']
+        // style="fill:#338000;fill-opacity:0.72801304;stroke:#000000;stroke-width:2"
         if (myFill && myFill !== 'none') {
+          myFillColor = hexToRgba(myFill, 0.75)
           myColor = hexToRgba(myFill, 0.75)
           const fillOpacity = parseFloat(styleDict['fill-opacity'] ?? '1')
+          const strokeWidth = parseFloat(styleDict['stroke-width'] ?? '0')
           myDensity = mapRange(fillOpacity, 0, 1, 16, 2)
           if (fillOpacity >= 1) myIsMask = true
+          if (strokeWidth > 0) myTrace = true
           isFilled = true
           myFillMode = 'solid'
         }
@@ -329,7 +337,10 @@ export class Page {
           trace: myTrace,
           fillMode: myFillMode,
           density: myDensity,
-          isMask: myIsMask
+          isMask: myIsMask,
+          owner: owner || null,
+          stipple: stipple || false,
+          fillColor: myFillColor
         })
       })
 

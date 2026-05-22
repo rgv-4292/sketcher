@@ -106,7 +106,7 @@
       "filename": "Square480_MPFL2Z6Y.json",
       "caption": "",
       "pageDuration": null,
-      "transitionDuration": null,
+      "transitionDuration": 1,
       "bgColor": "#f0ebe8",
       "interpOrder": true
     },
@@ -116,7 +116,8 @@
       "caption": "",
       "pageDuration": null,
       "transitionDuration": null,
-      "bgColor": "#f0ebe8"
+      "bgColor": "#f0ebe8",
+      "interpOrder": true
     }
   ],
   "captionFontSize": 24

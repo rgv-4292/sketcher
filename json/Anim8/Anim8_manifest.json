@@ -4,7 +4,7 @@
   "width": 720,
   "height": 720,
   "defaultPageDuration": 5,
-  "defaultTransitionDuration": 1,
+  "defaultTransitionDuration": 5,
   "pages": [
     {
       "id": "Anim8_MPRV1C7N",
@@ -14,5 +14,6 @@
       "transitionDuration": null,
       "bgColor": "#f0ebe8"
     }
-  ]
+  ],
+  "captionFontSize": 24
 }

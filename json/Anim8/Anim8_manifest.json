@@ -39,7 +39,8 @@
       "caption": "",
       "pageDuration": null,
       "transitionDuration": null,
-      "bgColor": "#f0ebe8"
+      "bgColor": "#f0ebe8",
+      "interpOrder": true
     }
   ],
   "captionFontSize": 24

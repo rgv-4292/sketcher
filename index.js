@@ -1,5 +1,6 @@
 import { Mark } from './mark.js'
 import { Page } from './page.js'
+import { computeCaptionLayout } from './caption.js'
 
 const THUMB_PREFIX = 'sketcher_thumb::'
 const LIVE_SETTINGS_KEY = 'sketcher_live_settings'
@@ -1356,16 +1357,17 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('bookBtn').textContent = activeBookName || 'No Book'
   }
 
+  let _lastCaptionRaw = ''  // raw caption text for re-measurement
+
   function updateCaptionOverlay() {
     const overlay = document.getElementById('captionOverlay')
     if (!activeBookManifest || !activePageId) { overlay.style.display = 'none'; return }
     const entry = activeBookManifest.pages.find(p => p.id === activePageId)
     if (!entry || !entry.captioned || !entry.caption) { overlay.style.display = 'none'; return }
+    _lastCaptionRaw = entry.caption
     const fontSize = activeBookManifest.captionFontSize || 24
     overlay.style.fontSize = `${fontSize}px`
-    overlay.style.whiteSpace = 'pre-wrap'
-    overlay.style.wordBreak = 'break-word'
-    overlay.textContent = entry.caption.replace(/\s*\|\s*/g, '\n')
+    overlay.style.whiteSpace = 'pre'
     overlay.style.display = 'block'
     requestAnimationFrame(() => requestAnimationFrame(() => positionCaptionOverlay()))
   }
@@ -1379,25 +1381,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const canvasRect = canvasEl.getBoundingClientRect()
     const areaRect = areaEl.getBoundingClientRect()
     const fontSize = parseFloat(overlay.style.fontSize) || 24
-    const lineHeight = fontSize * 1.3
-    const charsPerLine = Math.floor(canvasRect.width / (fontSize * 0.55))
-    // Split on real newlines first, then estimate wrap lines per segment
-    const hardLines = overlay.textContent.split('\n')
-    let totalLines = 0
-    hardLines.forEach(seg => {
-      const words = seg.trim().split(/\s+/).filter(Boolean)
-      if (words.length === 0) { totalLines++; return }
-      let lineChars = 0, segLines = 1
-      words.forEach(w => {
-        if (lineChars + w.length + 1 > charsPerLine && lineChars > 0) { segLines++; lineChars = w.length }
-        else lineChars += w.length + 1
-      })
-      totalLines += segLines
-    })
-    const blockHeight = totalLines * lineHeight + fontSize * 0.5
-    overlay.style.left = `${canvasRect.left - areaRect.left}px`
-    overlay.style.width = `${canvasRect.width}px`
-    overlay.style.top = `${canvasRect.bottom - areaRect.top - blockHeight}px`
+
+    // Measure text with an offscreen context using the caption font
+    const measureCanvas = document.createElement('canvas')
+    const measureCtx = measureCanvas.getContext('2d')
+    measureCtx.font = `${fontSize}px OldNewspaperTypes, Arial`
+
+    const layout = computeCaptionLayout(measureCtx, _lastCaptionRaw, fontSize, canvasRect.width)
+
+    // Set pre-wrapped text so CSS doesn't re-wrap
+    overlay.textContent = layout.lines.join('\n')
+
+    // Width: if text fits on one line, shrink to text width; else use canvas width
+    // The container width is already computed by computeCaptionLayout
+    overlay.style.width = `${layout.width}px`
+    overlay.style.left = `${canvasRect.left - areaRect.left + (canvasRect.width - layout.width) / 2}px`
+    overlay.style.top = `${canvasRect.bottom - areaRect.top - layout.blockHeight}px`
   }
 
   // Keep caption positioned correctly when the window resizes

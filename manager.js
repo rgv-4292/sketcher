@@ -1,5 +1,6 @@
 import { Mark } from './mark.js'
 import { Page } from './page.js'
+import { wrapText } from './caption.js'
 
 const CACHE_KEY = 'sketcher_manager_cache'
 const ACTIVE_BOOK_KEY = 'sketcher_active_book'
@@ -793,19 +794,28 @@ async function drawCaption(canvas, caption, fontSize) {
   await ensureCustomFont()
   const ctx = canvas.getContext('2d')
   const size = Math.max(8, fontSize || 24)
-  const lineHeight = size * 1.3
-  const lines = caption.replace(/\s*\|\s*/g, '\n').split('\n')
+  const lineHeight = Math.round(size * 1.3)
+  const maxWidth = canvas.width - Math.round(size * 0.5)
   ctx.save()
   ctx.font = `${size}px OldNewspaperTypes, Arial`
+
+  const hardParagraphs = caption.replace(/\s*\|\s*/g, '\n').split('\n')
+  const allLines = []
+  for (const para of hardParagraphs) {
+    const trimmed = para.trim()
+    if (!trimmed) { allLines.push(''); continue }
+    const wrapped = wrapText(ctx, trimmed, maxWidth)
+    allLines.push(...wrapped)
+  }
+
   ctx.textAlign = 'center'
   ctx.textBaseline = 'bottom'
-  const x = canvas.width / 2
-  const blockHeight = lines.length * lineHeight
   ctx.shadowColor = 'rgba(255,255,255,0.8)'
   ctx.shadowBlur = size * 0.4
   ctx.fillStyle = 'black'
-  lines.forEach((line, i) => {
-    const y = canvas.height - Math.round(size * 0.4) - (lines.length - 1 - i) * lineHeight
+  const x = canvas.width / 2
+  allLines.forEach((line, i) => {
+    const y = canvas.height - Math.round(size * 0.4) - (allLines.length - 1 - i) * lineHeight
     ctx.fillText(line, x, y)
   })
   ctx.shadowBlur = 0

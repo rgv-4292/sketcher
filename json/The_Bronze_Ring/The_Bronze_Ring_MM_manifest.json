@@ -1,0 +1,1401 @@
+[
+  {
+    "id": "The_Bronze_Ring_MM001",
+    "filename": "The_Bronze_Ring_MM001.json",
+    "scene": "The king's palace stood surrounded by a spacious garden. Though gardeners were many and the soil was good, the garden yielded neither flowers nor fruits, not even grass or shady trees.",
+    "characters": [
+      "King"
+    ],
+    "action": "None",
+    "caption": "[The royal garden yielded neither flowers nor fruits, not even grass or shady trees]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM002",
+    "filename": "The_Bronze_Ring_MM002.json",
+    "scene": "The king stood at the edge of his barren garden in despair. A wise old man approached with counsel about why the gardeners had failed.",
+    "characters": [
+      "King",
+      "Wise Old Man"
+    ],
+    "action": "None",
+    "caption": "\"Your gardeners do not understand their business: what can you expect of men whose fathers were cobblers and carpenters?\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM003",
+    "filename": "The_Bronze_Ring_MM003.json",
+    "scene": "The king sent messengers to every town, village, and hamlet in his dominions to find a hereditary gardener. After forty days, one was found.",
+    "characters": [
+      "King",
+      "Messengers"
+    ],
+    "action": "None",
+    "caption": "[The king's messengers searched every town, village, and hamlet until one gardener was found]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM004",
+    "filename": "The_Bronze_Ring_MM004.json",
+    "scene": "The gardener stood in his humble home as the messengers offered him the position. He protested his poverty and debts, but they provided new clothes and paid what he owed.",
+    "characters": [
+      "Gardener",
+      "Messengers"
+    ],
+    "action": "None",
+    "caption": "\"How can I go to the King, a poor wretch like me?\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM005",
+    "filename": "The_Bronze_Ring_MM005.json",
+    "scene": "The gardener, his wife, and his son departed with the messengers toward the royal palace.",
+    "characters": [
+      "Gardener",
+      "Wife",
+      "Son",
+      "Messengers"
+    ],
+    "action": "None",
+    "caption": "[The gardener allowed himself to be persuaded, taking his wife and son with him]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM006",
+    "filename": "The_Bronze_Ring_MM006.json",
+    "scene": "The royal garden flourished under the hereditary gardener's care. Flowers bloomed, fruit hung heavy on branches, and the park was transformed. The king showered gifts upon his new servant.",
+    "characters": [
+      "King",
+      "Gardener"
+    ],
+    "action": "None",
+    "caption": "[The garden produced flowers and fruit, and the king showered gifts upon his servant]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM007",
+    "filename": "The_Bronze_Ring_MM007.json",
+    "scene": "The gardener's handsome young son carried the prettiest flowers to the princess every day. The princess was just sixteen years old and wonderfully pretty.",
+    "characters": [
+      "Gardener's Son",
+      "Princess"
+    ],
+    "action": "None",
+    "caption": "[The gardener's son carried flowers to the princess, who was wonderfully pretty]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM008",
+    "filename": "The_Bronze_Ring_MM008.json",
+    "scene": "The king sat with his daughter and told her it was time she should be married. He intended her to wed the son of his prime minister.",
+    "characters": [
+      "King",
+      "Princess"
+    ],
+    "action": "None",
+    "caption": "\"My dear child, you are of an age to take a husband, therefore I am thinking of marrying you to the son of my prime minister.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM009",
+    "filename": "The_Bronze_Ring_MM009.json",
+    "scene": "The princess stood before her father and declared she would never marry the minister's son. She loved the gardener's son instead.",
+    "characters": [
+      "Princess",
+      "King"
+    ],
+    "action": "None",
+    "caption": "\"Father, I will never marry the son of the minister. Because I love the gardener's son.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM010",
+    "filename": "The_Bronze_Ring_MM010.json",
+    "scene": "The king wept and sighed at his daughter's declaration. He consulted his ministers, who devised a plan to send both suitors on a distant journey.",
+    "characters": [
+      "King",
+      "Ministers"
+    ],
+    "action": "None",
+    "caption": "[The ministers counseled the king to send both suitors to a distant land]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM011",
+    "filename": "The_Bronze_Ring_MM011.json",
+    "scene": "The minister's son rode off on a splendid horse with a purse full of gold. The gardener's son had only an old lame horse and a purse of copper money.",
+    "characters": [
+      "Minister's Son",
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "[The minister's son departed on a splendid horse; the gardener's son rode an old lame horse]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM012",
+    "filename": "The_Bronze_Ring_MM012.json",
+    "scene": "The day before they started, the princess met her lover in the garden. She gave him a purse full of jewels and told him to be brave.",
+    "characters": [
+      "Princess",
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "\"Be brave, and remember always that I love you. Take this purse full of jewels.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM013",
+    "filename": "The_Bronze_Ring_MM013.json",
+    "scene": "The two suitors left the town together. The minister's son galloped ahead on his good horse and was soon lost to sight behind the distant hills.",
+    "characters": [
+      "Minister's Son",
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "[The minister's son galloped away and was soon lost to sight behind the hills]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM014",
+    "filename": "The_Bronze_Ring_MM014.json",
+    "scene": "The minister's son reached a fountain where an old woman in rags sat upon a stone. She begged him for help, dying of hunger.",
+    "characters": [
+      "Minister's Son",
+      "Old Woman"
+    ],
+    "action": "None",
+    "caption": "\"Have pity upon me, traveler. I am dying of hunger, and three days have I been here.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM015",
+    "filename": "The_Bronze_Ring_MM015.json",
+    "scene": "The minister's son made no reply to the old woman's plea. He dismissed her cruelly and went on his way.",
+    "characters": [
+      "Minister's Son",
+      "Old Woman"
+    ],
+    "action": "None",
+    "caption": "\"Let me alone, old witch; I can do nothing for you.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM016",
+    "filename": "The_Bronze_Ring_MM016.json",
+    "scene": "That same evening the gardener's son rode up to the fountain on his lame gray horse. The old beggar-woman greeted him.",
+    "characters": [
+      "Gardener's Son",
+      "Old Woman"
+    ],
+    "action": "None",
+    "caption": "\"Good-day to you, young traveler.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM017",
+    "filename": "The_Bronze_Ring_MM017.json",
+    "scene": "The gardener's son offered the old woman his purse and invited her to ride behind him, saying her legs could not be very strong.",
+    "characters": [
+      "Gardener's Son",
+      "Old Woman"
+    ],
+    "action": "None",
+    "caption": "\"Take my purse, good woman, and mount behind me, for your legs can't be very strong.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM018",
+    "filename": "The_Bronze_Ring_MM018.json",
+    "scene": "The old woman mounted behind the gardener's son, and they rode together to the chief city of a powerful kingdom. The minister's son was lodged in a grand inn while they dismounted at the inn for beggars.",
+    "characters": [
+      "Gardener's Son",
+      "Old Woman",
+      "Minister's Son"
+    ],
+    "action": "None",
+    "caption": "[They reached the chief city of a powerful kingdom, where the minister's son lodged in a grand inn]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM019",
+    "filename": "The_Bronze_Ring_MM019.json",
+    "scene": "The next day heralds passed through the street blowing instruments and crying out that the old king was ill and would reward anyone who could cure him and restore his youth.",
+    "characters": [
+      "King's Heralds"
+    ],
+    "action": "None",
+    "caption": "[The king's heralds proclaimed a great reward for anyone who could cure the aging sovereign]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM020",
+    "filename": "The_Bronze_Ring_MM020.json",
+    "scene": "The old beggar-woman told the gardener's son how to obtain the reward. He must find three dogs of different colors, kill them, burn them, and scatter the ashes.",
+    "characters": [
+      "Old Woman",
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "\"Go out of the town by the south gate, and there you will find three little dogs of different colors.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM021",
+    "filename": "The_Bronze_Ring_MM021.json",
+    "scene": "The old woman revealed the full cure: boil the king in a cauldron, arrange his bones, scatter the ashes, and he would revive young and hearty. She told him to demand the bronze ring as his reward.",
+    "characters": [
+      "Old Woman",
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "\"For your reward you must demand the bronze ring which has the power to grant you everything you desire.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM022",
+    "filename": "The_Bronze_Ring_MM022.json",
+    "scene": "The gardener's son went out of the town and found the white, red, and black dogs. He killed them and burned them, gathering the ashes in three bags.",
+    "characters": [
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "[He found the three dogs, killed them, burned them, and gathered the ashes in bags]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM023",
+    "filename": "The_Bronze_Ring_MM023.json",
+    "scene": "The gardener's son ran to the palace and cried out that a celebrated physician from Janina in Albania had come to cure the king.",
+    "characters": [
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "\"A celebrated physician has just come from Janina in Albania. He alone can cure the King.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM024",
+    "filename": "The_Bronze_Ring_MM024.json",
+    "scene": "The king's physicians laughed at the unknown wayfarer, but the Sultan ordered that the stranger be admitted. They brought the cauldron and loads of wood.",
+    "characters": [
+      "Gardener's Son",
+      "King",
+      "Physicians"
+    ],
+    "action": "None",
+    "caption": "[The physicians laughed, but the Sultan ordered the stranger admitted]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM025",
+    "filename": "The_Bronze_Ring_MM025.json",
+    "scene": "The gardener's son threw the king into the boiling cauldron. Toward midday he arranged the bones in their places and scattered the ashes over them.",
+    "characters": [
+      "Gardener's Son",
+      "King"
+    ],
+    "action": "None",
+    "caption": "[He threw the king into the cauldron, arranged his bones, and scattered the ashes]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM026",
+    "filename": "The_Bronze_Ring_MM026.json",
+    "scene": "The old king revived, finding himself once more young and hearty. He offered the gardener's son half his treasures.",
+    "characters": [
+      "King",
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "\"How can I reward you, my benefactor? Will you take half my treasures?\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM027",
+    "filename": "The_Bronze_Ring_MM027.json",
+    "scene": "The gardener's son refused the treasures and the king's daughter. He asked only for the bronze ring.",
+    "characters": [
+      "Gardener's Son",
+      "King"
+    ],
+    "action": "None",
+    "caption": "\"Give me only the bronze ring which can instantly grant me anything I wish for.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM028",
+    "filename": "The_Bronze_Ring_MM028.json",
+    "scene": "The king reluctantly gave the bronze ring to the gardener's son. He went back to say farewell to the old beggar-woman.",
+    "characters": [
+      "King",
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "[The king gave him the bronze ring, and he went to say farewell to the old woman]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM029",
+    "filename": "The_Bronze_Ring_MM029.json",
+    "scene": "The gardener's son commanded the bronze ring to prepare a splendid ship with a golden hull, silver masts, and brocade sails, with twelve young men dressed like kings and St. Nicholas at the helm.",
+    "characters": [
+      "Gardener's Son",
+      "Genii"
+    ],
+    "action": "None",
+    "caption": "\"Prepare a splendid ship. Let the hull be of fine gold, the masts of silver, the sails of brocade.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM030",
+    "filename": "The_Bronze_Ring_MM030.json",
+    "scene": "A magnificent golden ship appeared upon the sea, exactly as commanded. The gardener's son stepped on board and continued his journey, carrying a cargo of diamonds, rubies, emeralds, and carbuncles.",
+    "characters": [
+      "Gardener's Son",
+      "St. Nicholas",
+      "Crew"
+    ],
+    "action": "None",
+    "caption": "[A splendid ship appeared with golden hull, silver masts, and brocade sails, laden with precious jewels]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM031",
+    "filename": "The_Bronze_Ring_MM031.json",
+    "scene": "The gardener's son arrived at a great town and established himself in a wonderful palace. After several days he met his rival, the minister's son, who had spent all his money.",
+    "characters": [
+      "Gardener's Son",
+      "Minister's Son"
+    ],
+    "action": "None",
+    "caption": "[He arrived at a great town and established himself in a wonderful palace]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM032",
+    "filename": "The_Bronze_Ring_MM032.json",
+    "scene": "The minister's son was reduced to the disagreeable employment of carrying dust and rubbish. The gardener's son asked him his name and country.",
+    "characters": [
+      "Gardener's Son",
+      "Minister's Son"
+    ],
+    "action": "None",
+    "caption": "\"What is your name, what is your family, and from what country do you come?\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM033",
+    "filename": "The_Bronze_Ring_MM033.json",
+    "scene": "The minister's son confessed he was the son of a prime minister, now reduced to carrying dust. The gardener's son offered to help him return home.",
+    "characters": [
+      "Gardener's Son",
+      "Minister's Son"
+    ],
+    "action": "None",
+    "caption": "\"I will give you a ship to take you back to your own country upon one condition.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM034",
+    "filename": "The_Bronze_Ring_MM034.json",
+    "scene": "The minister's son followed the rich stranger to his palace. The gardener's son made a sign to his slaves, who completely undressed the new-comer.",
+    "characters": [
+      "Gardener's Son",
+      "Minister's Son",
+      "Slaves"
+    ],
+    "action": "None",
+    "caption": "[The minister's son followed him to the palace, where slaves undressed him]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM035",
+    "filename": "The_Bronze_Ring_MM035.json",
+    "scene": "The gardener's son commanded his slaves to make the bronze ring red-hot and mark the minister's son upon his back.",
+    "characters": [
+      "Gardener's Son",
+      "Minister's Son",
+      "Slaves"
+    ],
+    "action": "None",
+    "caption": "\"Make this ring red-hot, and mark the man with it upon his back.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM036",
+    "filename": "The_Bronze_Ring_MM036.json",
+    "scene": "The gardener's son commanded the bronze ring to prepare a ship of half-rotten timbers painted black, with sails in rags, and sailors infirm and sickly—hunchbacks, lame, club-footed, blind, and covered with scars.",
+    "characters": [
+      "Gardener's Son",
+      "Genii"
+    ],
+    "action": "None",
+    "caption": "\"Prepare me a ship of which the half-rotten timbers shall be painted black, let the sails be in rags.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM037",
+    "filename": "The_Bronze_Ring_MM037.json",
+    "scene": "The minister's son embarked in the old vessel and thanks to favorable winds reached his own country. Despite his pitiable condition they received him joyfully.",
+    "characters": [
+      "Minister's Son"
+    ],
+    "action": "None",
+    "caption": "[The minister's son embarked in the old vessel and reached his own country in a pitiable condition]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM038",
+    "filename": "The_Bronze_Ring_MM038.json",
+    "scene": "The minister's son told the king he was the first to return and demanded the princess in marriage. They began to prepare for the wedding festivities.",
+    "characters": [
+      "Minister's Son",
+      "King"
+    ],
+    "action": "None",
+    "caption": "\"I am the first to come back; now fulfil your promise, and give me the princess in marriage.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM039",
+    "filename": "The_Bronze_Ring_MM039.json",
+    "scene": "The poor princess was sorrowful and angry about the wedding. The next morning at daybreak a wonderful ship with every sail set came to anchor before the town.",
+    "characters": [
+      "Princess",
+      "King"
+    ],
+    "action": "None",
+    "caption": "[The princess was sorrowful and angry as a wonderful ship appeared at dawn]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM040",
+    "filename": "The_Bronze_Ring_MM040.json",
+    "scene": "The king was at the palace window and saw the strange ship with a golden hull, silver masts, and silken sails. He saw young men like princes manning it and St. Nicholas at the helm.",
+    "characters": [
+      "King"
+    ],
+    "action": "None",
+    "caption": "\"What strange ship is this that has a golden hull, silver masts, and silken sails?\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM041",
+    "filename": "The_Bronze_Ring_MM041.json",
+    "scene": "The king ordered his servants to invite the captain of the ship to come to the palace.",
+    "characters": [
+      "King",
+      "Servants"
+    ],
+    "action": "None",
+    "caption": "[The king ordered his servants to invite the captain of the ship to the palace]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM042",
+    "filename": "The_Bronze_Ring_MM042.json",
+    "scene": "An enchantingly handsome young prince dressed in rich silk, ornamented with pearls and diamonds, entered the palace. The king welcomed him warmly.",
+    "characters": [
+      "Gardener's Son",
+      "King"
+    ],
+    "action": "None",
+    "caption": "\"Young man, you are welcome, whoever you may be. Do me the favor to be my guest.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM043",
+    "filename": "The_Bronze_Ring_MM043.json",
+    "scene": "The king asked the young captain to give his daughter away at her wedding. The captain said he would be charmed.",
+    "characters": [
+      "King",
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "\"My daughter is about to be married; will you give her away?\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM044",
+    "filename": "The_Bronze_Ring_MM044.json",
+    "scene": "The princess and her betrothed, the minister's son, came forward. The young captain asked why the charming princess was being married to such a man.",
+    "characters": [
+      "Gardener's Son",
+      "Princess",
+      "Minister's Son",
+      "King"
+    ],
+    "action": "None",
+    "caption": "\"Would you marry this charming princess to such a man as that?\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM045",
+    "filename": "The_Bronze_Ring_MM045.json",
+    "scene": "The king protested that the man was his prime minister's son. The young captain declared the betrothed was one of his servants.",
+    "characters": [
+      "King",
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "\"The man she is betrothed to is one of my servants.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM046",
+    "filename": "The_Bronze_Ring_MM046.json",
+    "scene": "The minister's son cried out in protest that he did not know this man. The young captain told the king to have the betrothed stripped to see the mark of his ring.",
+    "characters": [
+      "Minister's Son",
+      "Gardener's Son",
+      "King"
+    ],
+    "action": "None",
+    "caption": "\"Order your daughter's betrothed to be stripped, and see if the mark of my ring is not branded upon his back.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM047",
+    "filename": "The_Bronze_Ring_MM047.json",
+    "scene": "The minister's son, to save himself from such an indignity, admitted that the story was true. The young captain asked the king if he recognized him now.",
+    "characters": [
+      "Minister's Son",
+      "Gardener's Son",
+      "King"
+    ],
+    "action": "None",
+    "caption": "[The minister's son admitted the truth to save himself from being stripped]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM048",
+    "filename": "The_Bronze_Ring_MM048.json",
+    "scene": "The princess recognized the gardener's son and declared it was him she wished to marry. The king cried out that he should be his son-in-law.",
+    "characters": [
+      "Princess",
+      "Gardener's Son",
+      "King"
+    ],
+    "action": "None",
+    "caption": "\"I recognize you; you are the gardener's son whom I have always loved.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM049",
+    "filename": "The_Bronze_Ring_MM049.json",
+    "scene": "The king declared the marriage festivities were already begun, so the gardener's son should marry his daughter that very day.",
+    "characters": [
+      "King",
+      "Gardener's Son"
+    ],
+    "action": "None",
+    "caption": "\"The marriage festivities are already begun, so you shall marry my daughter this very day.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM050",
+    "filename": "The_Bronze_Ring_MM050.json",
+    "scene": "The gardener's son married the beautiful princess. Several months passed and the young couple were as happy as the day was long.",
+    "characters": [
+      "Gardener's Son",
+      "Princess"
+    ],
+    "action": "None",
+    "caption": "[The gardener's son married the beautiful princess, and they were happy as the day was long]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM051",
+    "filename": "The_Bronze_Ring_MM051.json",
+    "scene": "The captain of the golden ship found it necessary to take a long voyage. After embracing his wife tenderly, he embarked.",
+    "characters": [
+      "Gardener's Son",
+      "Princess"
+    ],
+    "action": "None",
+    "caption": "[The captain of the golden ship found it necessary to take a long voyage]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM052",
+    "filename": "The_Bronze_Ring_MM052.json",
+    "scene": "In the outskirts of the capital there lived an old man who had spent his life in studying black arts—alchemy, astrology, magic, and enchantment.",
+    "characters": [
+      "Old Sorcerer"
+    ],
+    "action": "None",
+    "caption": "[An old man who had studied black arts lived in the outskirts of the capital]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM053",
+    "filename": "The_Bronze_Ring_MM053.json",
+    "scene": "The old sorcerer found out that the gardener's son had succeeded in marrying the princess by the help of the genii who obeyed the bronze ring. He resolved to steal it.",
+    "characters": [
+      "Old Sorcerer"
+    ],
+    "action": "None",
+    "caption": "[The sorcerer discovered the secret of the bronze ring and resolved to steal it]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM054",
+    "filename": "The_Bronze_Ring_MM054.json",
+    "scene": "The sorcerer went to the sea-shore and caught some little red fishes, quite wonderfully pretty. Then he came back and cried out before the princess's window.",
+    "characters": [
+      "Old Sorcerer"
+    ],
+    "action": "None",
+    "caption": "\"Who wants some pretty little red fishes?\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM055",
+    "filename": "The_Bronze_Ring_MM055.json",
+    "scene": "The princess heard the peddler and sent out a slave to ask what he would take for his fish. He said a bronze ring.",
+    "characters": [
+      "Princess",
+      "Slave",
+      "Old Sorcerer"
+    ],
+    "action": "None",
+    "caption": "\"What will you take for your fish?\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM056",
+    "filename": "The_Bronze_Ring_MM056.json",
+    "scene": "The slave asked where she would find a bronze ring. The old man told her it was under the cushion in the princess's room.",
+    "characters": [
+      "Slave",
+      "Old Sorcerer"
+    ],
+    "action": "None",
+    "caption": "\"Under the cushion in the Princess's room.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM057",
+    "filename": "The_Bronze_Ring_MM057.json",
+    "scene": "The slave went back to her mistress. The princess said the old madman would take neither gold nor silver, but she told the slave to find the ring and give it to him.",
+    "characters": [
+      "Princess",
+      "Slave"
+    ],
+    "action": "None",
+    "caption": "\"Find the ring and give it to him.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM058",
+    "filename": "The_Bronze_Ring_MM058.json",
+    "scene": "The slave found the bronze ring, which the captain had accidentally left behind, and carried it to the sorcerer, who made off with it instantly.",
+    "characters": [
+      "Slave",
+      "Old Sorcerer"
+    ],
+    "action": "None",
+    "caption": "[The slave found the ring and carried it to the sorcerer, who made off instantly]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM059",
+    "filename": "The_Bronze_Ring_MM059.json",
+    "scene": "Hardly had the sorcerer reached his own house when he commanded the bronze ring to turn the golden ship to black wood, the crew to hideous negroes, St. Nicholas to leave the helm, and the cargo to be black cats.",
+    "characters": [
+      "Old Sorcerer",
+      "Genii"
+    ],
+    "action": "None",
+    "caption": "\"Bronze ring, obey thy master. I desire that the golden ship shall turn to black wood.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM060",
+    "filename": "The_Bronze_Ring_MM060.json",
+    "scene": "The genii of the bronze ring obeyed the sorcerer. The golden ship became a miserable black vessel.",
+    "characters": [
+      "Genii"
+    ],
+    "action": "None",
+    "caption": "[The genii obeyed, and the golden ship became a miserable black vessel]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM061",
+    "filename": "The_Bronze_Ring_MM061.json",
+    "scene": "Finding himself upon the sea in this miserable condition, the young captain understood that someone must have stolen the bronze ring from him. He lamented his misfortune loudly.",
+    "characters": [
+      "Captain"
+    ],
+    "action": "None",
+    "caption": "\"Alas! whoever has taken my ring has probably taken my dear wife also.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM062",
+    "filename": "The_Bronze_Ring_MM062.json",
+    "scene": "The captain sailed about from island to island, from shore to shore, his poverty growing so great that he and his crew and the black cats had nothing to eat but herbs and roots.",
+    "characters": [
+      "Captain"
+    ],
+    "action": "None",
+    "caption": "[He sailed from island to island, his poverty growing so great they had nothing but herbs and roots]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM063",
+    "filename": "The_Bronze_Ring_MM063.json",
+    "scene": "After wandering a long time he reached an island inhabited by mice. There were mice everywhere, and nothing but mice. The hungry black cats made terrible havoc among them.",
+    "characters": [
+      "Captain",
+      "Cats",
+      "Mice"
+    ],
+    "action": "None",
+    "caption": "[He reached an island inhabited only by mice, where the hungry cats made havoc]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM064",
+    "filename": "The_Bronze_Ring_MM064.json",
+    "scene": "The queen of the mice held a council. She said the cats would eat every one of them if the captain did not shut the ferocious animals up.",
+    "characters": [
+      "Queen Mouse"
+    ],
+    "action": "None",
+    "caption": "\"These cats will eat every one of us if the captain does not shut the ferocious animals up.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM065",
+    "filename": "The_Bronze_Ring_MM065.json",
+    "scene": "Several mice offered themselves for the mission and set out to find the young captain.",
+    "characters": [
+      "Mice"
+    ],
+    "action": "None",
+    "caption": "[Several brave mice set out to find the captain of the ship]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM066",
+    "filename": "The_Bronze_Ring_MM066.json",
+    "scene": "The mice told the captain to go away quickly or they would perish. The captain replied he would leave on one condition—they must first bring back the stolen bronze ring.",
+    "characters": [
+      "Captain",
+      "Mice"
+    ],
+    "action": "None",
+    "caption": "\"You shall first bring me back a bronze ring which some clever magician has stolen from me.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM067",
+    "filename": "The_Bronze_Ring_MM067.json",
+    "scene": "The mice withdrew in great dismay. The queen held a new council, calling in mice from every quarter of the globe.",
+    "characters": [
+      "Queen Mouse",
+      "Mice"
+    ],
+    "action": "None",
+    "caption": "[The mice held a council, calling in mice from every quarter of the globe]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM068",
+    "filename": "The_Bronze_Ring_MM068.json",
+    "scene": "Three mice arrived from a very distant country—one blind, one lame, and one with her ears cropped. They knew where the bronze ring was.",
+    "characters": [
+      "Three Mice"
+    ],
+    "action": "None",
+    "caption": "\"Ho, ho, ho! An old sorcerer has taken possession of it, and keeps it in his pocket by day and in his mouth by night.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM069",
+    "filename": "The_Bronze_Ring_MM069.json",
+    "scene": "The queen told the three mice to go and take the ring from the sorcerer and come back as soon as possible.",
+    "characters": [
+      "Queen Mouse",
+      "Three Mice"
+    ],
+    "action": "None",
+    "caption": "[The queen ordered the three mice to go and take the bronze ring]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM070",
+    "filename": "The_Bronze_Ring_MM070.json",
+    "scene": "The three mice made themselves a boat and set sail for the magician's country. They left the blind mouse on the shore to take care of the boat.",
+    "characters": [
+      "Three Mice"
+    ],
+    "action": "None",
+    "caption": "[The three mice made a boat and sailed for the magician's country]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM071",
+    "filename": "The_Bronze_Ring_MM071.json",
+    "scene": "At night the wicked old man lay down in bed and put the bronze ring into his mouth, and soon he was asleep.",
+    "characters": [
+      "Old Sorcerer"
+    ],
+    "action": "None",
+    "caption": "[The sorcerer put the bronze ring in his mouth and fell asleep]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM072",
+    "filename": "The_Bronze_Ring_MM072.json",
+    "scene": "The mouse with the cropped ears found a lamp full of oil and a bottle of pepper. She dipped her tail in oil and then pepper, and held it to the sorcerer's nose.",
+    "characters": [
+      "Mouse",
+      "Old Sorcerer"
+    ],
+    "action": "None",
+    "caption": "[The mouse dipped her tail in oil and pepper and held it to the sorcerer's nose]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM073",
+    "filename": "The_Bronze_Ring_MM073.json",
+    "scene": "The sorcerer sneezed without waking, and the shock made the bronze ring jump out of his mouth. The lame mouse snatched up the ring and carried it off to the boat.",
+    "characters": [
+      "Old Sorcerer",
+      "Three Mice"
+    ],
+    "action": "None",
+    "caption": "[The sorcerer sneezed, the ring jumped out of his mouth, and the lame mouse snatched it]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM074",
+    "filename": "The_Bronze_Ring_MM074.json",
+    "scene": "The magician awoke and found the bronze ring was nowhere to be found. He was in despair.",
+    "characters": [
+      "Old Sorcerer"
+    ],
+    "action": "None",
+    "caption": "[The magician awoke to find the bronze ring gone and was in despair]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM075",
+    "filename": "The_Bronze_Ring_MM075.json",
+    "scene": "The three mice set sail with their prize, a favoring breeze carrying them toward the island where the queen awaited them. They began to talk about the bronze ring.",
+    "characters": [
+      "Three Mice"
+    ],
+    "action": "None",
+    "caption": "[The three mice set sail with the bronze ring, arguing about credit]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM076",
+    "filename": "The_Bronze_Ring_MM076.json",
+    "scene": "The blind mouse claimed credit for watching the boat. The mouse with cropped ears claimed credit for making the ring jump. The lame mouse claimed credit for running off with the ring.",
+    "characters": [
+      "Three Mice"
+    ],
+    "action": "None",
+    "caption": "\"Which of us deserves the most credit?\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM077",
+    "filename": "The_Bronze_Ring_MM077.json",
+    "scene": "From high words they came to blows, and when the quarrel was fiercest the bronze ring fell into the sea.",
+    "characters": [
+      "Three Mice"
+    ],
+    "action": "None",
+    "caption": "[From high words they came to blows, and the bronze ring fell into the sea]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM078",
+    "filename": "The_Bronze_Ring_MM078.json",
+    "scene": "The three mice lamented that by their folly they had lost the talisman and condemned their people to extermination. They could not go back to their country.",
+    "characters": [
+      "Three Mice"
+    ],
+    "action": "None",
+    "caption": "\"How are we to face our queen when by our folly we have lost the talisman?\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM079",
+    "filename": "The_Bronze_Ring_MM079.json",
+    "scene": "The boat reached a desert island and the mice landed. The blind mouse was speedily deserted by her two sisters who went off to hunt flies.",
+    "characters": [
+      "Three Mice"
+    ],
+    "action": "None",
+    "caption": "[The mice landed on a desert island, and the blind mouse was deserted by her sisters]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM080",
+    "filename": "The_Bronze_Ring_MM080.json",
+    "scene": "The blind mouse wandered sadly along the shore and found a dead fish. While eating it she felt something very hard inside.",
+    "characters": [
+      "Blind Mouse"
+    ],
+    "action": "None",
+    "caption": "[The blind mouse found a dead fish and felt something very hard inside]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM081",
+    "filename": "The_Bronze_Ring_MM081.json",
+    "scene": "At her cries the other two mice ran up. It was the bronze ring! The talisman! They cried joyfully and got into their boat again.",
+    "characters": [
+      "Three Mice"
+    ],
+    "action": "None",
+    "caption": "\"It is the bronze ring! It is the talisman!\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM082",
+    "filename": "The_Bronze_Ring_MM082.json",
+    "scene": "The three mice reached the mouse island just as the captain was about to land his cargo of cats. A deputation of mice brought him the bronze ring.",
+    "characters": [
+      "Captain",
+      "Three Mice",
+      "Mice"
+    ],
+    "action": "None",
+    "caption": "[The mice returned with the bronze ring just as the captain was about to land his cats]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM083",
+    "filename": "The_Bronze_Ring_MM083.json",
+    "scene": "The captain commanded the bronze ring to let his ship appear as it was before. Immediately the genii set to work.",
+    "characters": [
+      "Captain",
+      "Genii"
+    ],
+    "action": "None",
+    "caption": "\"Bronze ring, obey thy master. Let my ship appear as it was before.\"",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM084",
+    "filename": "The_Bronze_Ring_MM084.json",
+    "scene": "The old black vessel became once more the wonderful golden ship with sails of brocade. The handsome sailors ran to the silver masts and silken ropes.",
+    "characters": [
+      "Captain",
+      "Crew"
+    ],
+    "action": "None",
+    "caption": "[The black vessel became once more the wonderful golden ship with sails of brocade]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM085",
+    "filename": "The_Bronze_Ring_MM085.json",
+    "scene": "The golden ship flew over the glassy sea toward the capital. The sailors sang merrily.",
+    "characters": [
+      "Captain",
+      "Crew"
+    ],
+    "action": "None",
+    "caption": "[The sailors sang merrily as the golden ship flew over the glassy sea]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM086",
+    "filename": "The_Bronze_Ring_MM086.json",
+    "scene": "The port was reached. The captain landed and ran to the palace, where he found the wicked old man asleep.",
+    "characters": [
+      "Captain",
+      "Old Sorcerer"
+    ],
+    "action": "None",
+    "caption": "[The captain landed and ran to the palace where the wicked old man was asleep]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM087",
+    "filename": "The_Bronze_Ring_MM087.json",
+    "scene": "The princess clasped her husband in a long embrace. The magician tried to escape but was seized and bound with strong cords.",
+    "characters": [
+      "Captain",
+      "Princess",
+      "Old Sorcerer"
+    ],
+    "action": "None",
+    "caption": "[The princess embraced her husband; the magician was seized and bound with strong cords]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Bronze_Ring_MM088",
+    "filename": "The_Bronze_Ring_MM088.json",
+    "scene": "The next day the sorcerer, tied to the tail of a savage mule loaded with nuts, was broken into as many pieces as there were nuts upon the mule's back.",
+    "characters": [
+      "Old Sorcerer",
+      "Mule"
+    ],
+    "action": "None",
+    "caption": "[The sorcerer was tied to the tail of a savage mule and torn to pieces]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  }
+]

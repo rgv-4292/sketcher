@@ -1,0 +1,1600 @@
+[
+  {
+    "id": "The_Master-Maid_MM001",
+    "filename": "The_Master-Maid_MM001.json",
+    "scene": "A castle with towers and flags. The prince stands at the gate in fine clothes. The road stretches behind him into the distance.",
+    "characters": [
+      "Prince"
+    ],
+    "action": "None",
+    "caption": "[A prince wanted to marry a princess, but one who was a real princess.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM002",
+    "filename": "The_Master-Maid_MM002.json",
+    "scene": "A wide landscape of forests, mountains, and distant castles. The prince walks along a winding road with a satchel.",
+    "characters": [
+      "Prince"
+    ],
+    "action": "Walking",
+    "caption": "[He went all over the world in search of one, but there was always something wrong.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM003",
+    "filename": "The_Master-Maid_MM003.json",
+    "scene": "A grand hall with chandeliers and mirrors. Many princesses in fine gowns stand around a throne. The prince looks uncertain.",
+    "characters": [
+      "Prince",
+      "Princesses"
+    ],
+    "action": "Prince observing",
+    "caption": "[Princesses there were in plenty, but whether they were real princesses he could not quite make out.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM004",
+    "filename": "The_Master-Maid_MM004.json",
+    "scene": "A throne room with a disappointed prince bowing to an elderly king on a golden throne. The prince's face shows sadness.",
+    "characters": [
+      "Prince",
+      "King"
+    ],
+    "action": "Prince bowing",
+    "caption": "[There was always something which was not as it should be.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM005",
+    "filename": "The_Master-Maid_MM005.json",
+    "scene": "The prince walks back through the castle gate at dusk. His shoulders are slumped and his expression is melancholy.",
+    "characters": [
+      "Prince"
+    ],
+    "action": "Walking home",
+    "caption": "[So he came home again, looking very sad, for he wanted very much to have a real princess.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM006",
+    "filename": "The_Master-Maid_MM006.json",
+    "scene": "Dark storm clouds over the palace. Rain lashes the stone walls. Lightning flashes across a purple sky.",
+    "characters": [],
+    "action": "None",
+    "caption": "[Now one stormy night there was a terrible knocking at the palace gate.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM007",
+    "filename": "The_Master-Maid_MM007.json",
+    "scene": "The palace gate with iron bars and torchlight. A young girl stands outside, soaked and bedraggled. Her hair drips with water.",
+    "characters": [
+      "Girl"
+    ],
+    "action": "None",
+    "caption": "[The old king went to open it, but what was his surprise to see a girl standing outside.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM008",
+    "filename": "The_Master-Maid_MM008.json",
+    "scene": "Close view of the girl in rags. Water streams from her clothes. Her shoes are broken at the heels and toes.",
+    "characters": [
+      "Girl"
+    ],
+    "action": "None",
+    "caption": "[Such a poor, bedraggled, wet creature! The water streamed from her hair and clothes.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM009",
+    "filename": "The_Master-Maid_MM009.json",
+    "scene": "The girl's shoes with water running in at the heels and out at the toes. Puddles form on the stone floor.",
+    "characters": [
+      "Girl"
+    ],
+    "action": "None",
+    "caption": "[It ran in at the heels of her shoes and out at the toes.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM010",
+    "filename": "The_Master-Maid_MM010.json",
+    "scene": "The girl looks up at the old king with earnest eyes. She speaks with quiet dignity despite her ragged appearance.",
+    "characters": [
+      "Girl",
+      "King"
+    ],
+    "action": "Girl speaking",
+    "caption": "[But she said she was a real princess.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM011",
+    "filename": "The_Master-Maid_MM011.json",
+    "scene": "The old queen in her chamber, looking thoughtful. She stands by a window with a knowing expression.",
+    "characters": [
+      "Queen"
+    ],
+    "action": "Thinking",
+    "caption": "[Well, we shall soon see about that, thought the old queen, but she said nothing.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM012",
+    "filename": "The_Master-Maid_MM012.json",
+    "scene": "The queen in a bedroom with a large four-poster bed. She removes the bed-clothes with careful hands.",
+    "characters": [
+      "Queen"
+    ],
+    "action": "Removing bed-clothes",
+    "caption": "[She went into the bedroom, took all the bed-clothes off the bed.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM013",
+    "filename": "The_Master-Maid_MM013.json",
+    "scene": "Three small peas placed on the bare wooden slats of the bed frame. The queen's hands arrange them carefully.",
+    "characters": [
+      "Queen"
+    ],
+    "action": "Placing peas",
+    "caption": "[And put three little peas on the bottom.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM014",
+    "filename": "The_Master-Maid_MM014.json",
+    "scene": "Twenty mattresses stacked one upon another, forming a high tower of bedding. The queen adjusts the top layer.",
+    "characters": [
+      "Queen"
+    ],
+    "action": "Stacking mattresses",
+    "caption": "[Then she took twenty mattresses and laid them on the three peas.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM015",
+    "filename": "The_Master-Maid_MM015.json",
+    "scene": "Twenty eider-down quilts placed atop the mattresses. The bed is now impossibly high, reaching near the ceiling.",
+    "characters": [
+      "Queen"
+    ],
+    "action": "Placing quilts",
+    "caption": "[And then twenty eider-down quilts on top of the mattresses.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM016",
+    "filename": "The_Master-Maid_MM016.json",
+    "scene": "The finished bed, towering high. The queen stands beside it, satisfied. A ladder leans against the bed for climbing.",
+    "characters": [
+      "Queen"
+    ],
+    "action": "None",
+    "caption": "[And this was the bed in which she was to sleep.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM017",
+    "filename": "The_Master-Maid_MM017.json",
+    "scene": "The girl climbing the ladder to the towering bed. Candlelight casts long shadows on the walls.",
+    "characters": [
+      "Girl"
+    ],
+    "action": "Climbing ladder",
+    "caption": "[None]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM018",
+    "filename": "The_Master-Maid_MM018.json",
+    "scene": "Morning light through the window. The king and queen stand at the bedroom door. The girl sits up in the high bed, looking exhausted.",
+    "characters": [
+      "King",
+      "Queen",
+      "Girl"
+    ],
+    "action": "Girl sitting up",
+    "caption": "[In the morning they asked her how she had slept.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM019",
+    "filename": "The_Master-Maid_MM019.json",
+    "scene": "The girl descends the ladder, her body showing bruises. She holds her back in pain, her face drawn with discomfort.",
+    "characters": [
+      "Girl"
+    ],
+    "action": "Descending ladder",
+    "caption": "[Oh, terribly! said she. I hardly closed my eyes all night long.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM020",
+    "filename": "The_Master-Maid_MM020.json",
+    "scene": "The girl gestures toward the bed, explaining her suffering. The king and queen listen with interest.",
+    "characters": [
+      "Girl",
+      "King",
+      "Queen"
+    ],
+    "action": "Girl speaking",
+    "caption": "[I don't know what was in the bed, but I lay on something hard.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM021",
+    "filename": "The_Master-Maid_MM021.json",
+    "scene": "The girl shows bruises on her arms and shoulders. The queen's expression shifts to understanding.",
+    "characters": [
+      "Girl",
+      "Queen"
+    ],
+    "action": "Girl showing bruises",
+    "caption": "[And it has made me black and blue all over my body. It was horrible!]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM022",
+    "filename": "The_Master-Maid_MM022.json",
+    "scene": "The king and queen exchange a knowing glance. The queen smiles knowingly. The girl watches them uncertainly.",
+    "characters": [
+      "King",
+      "Queen",
+      "Girl"
+    ],
+    "action": "King and queen exchanging glances",
+    "caption": "[Then they knew that she was a real princess.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM023",
+    "filename": "The_Master-Maid_MM023.json",
+    "scene": "The queen lifts the mattress corner, revealing the three peas still on the wooden slats below. Proof of the test.",
+    "characters": [
+      "Queen"
+    ],
+    "action": "Lifting mattress",
+    "caption": "[For through the twenty mattresses and the twenty eider-down quilts she had felt the three peas.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM024",
+    "filename": "The_Master-Maid_MM024.json",
+    "scene": "A grand wedding ceremony in a cathedral. The prince and princess stand at the altar, joined by clergy. Flowers adorn the pillars.",
+    "characters": [
+      "Prince",
+      "Princess"
+    ],
+    "action": "Standing at altar",
+    "caption": "[So the prince married her, for he knew that he had found a real princess.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM025",
+    "filename": "The_Master-Maid_MM025.json",
+    "scene": "A servant woman in the palace corridors, watching the royal couple from behind a tapestry. Her eyes are narrow with envy.",
+    "characters": [
+      "Servant/Witch"
+    ],
+    "action": "Watching from shadows",
+    "caption": "[Now there was a servant in the palace who was very envious of the young queen.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM026",
+    "filename": "The_Master-Maid_MM026.json",
+    "scene": "The servant woman alone in her room, her face transformed into a witch's cruel features. Dark magic swirls around her.",
+    "characters": [
+      "Witch"
+    ],
+    "action": "None",
+    "caption": "[And she was a witch.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM027",
+    "filename": "The_Master-Maid_MM027.json",
+    "scene": "The queen's bedchamber. A newborn baby lies in a cradle. The queen rests peacefully. The witch watches from the doorway.",
+    "characters": [
+      "Queen",
+      "Baby",
+      "Witch"
+    ],
+    "action": "Witch watching",
+    "caption": "[One day when the queen's first baby was born, the witch stole it.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM028",
+    "filename": "The_Master-Maid_MM028.json",
+    "scene": "The witch lifts the baby from the cradle with thin, claw-like hands. The queen sleeps unaware.",
+    "characters": [
+      "Witch",
+      "Baby"
+    ],
+    "action": "Witch stealing baby",
+    "caption": "[And put a little changeling in its place.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM029",
+    "filename": "The_Master-Maid_MM029.json",
+    "scene": "A changeling with a large head and tiny body lies in the cradle where the real baby was. It looks unnatural and wrong.",
+    "characters": [
+      "Changeling"
+    ],
+    "action": "None",
+    "caption": "[A little changeling, with a large head and a tiny body.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM030",
+    "filename": "The_Master-Maid_MM030.json",
+    "scene": "The witch flies through the night sky on a broomstick, clutching the stolen baby. The palace recedes below.",
+    "characters": [
+      "Witch",
+      "Baby"
+    ],
+    "action": "Flying",
+    "caption": "[Then she flew away with the baby to an enchanted castle.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM031",
+    "filename": "The_Master-Maid_MM031.json",
+    "scene": "A dark enchanted castle on a craggy mountain. The witch places the baby in a cradle inside its cold stone walls.",
+    "characters": [
+      "Witch",
+      "Baby"
+    ],
+    "action": "Placing baby in cradle",
+    "caption": "[Where she set it down in a cradle.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM032",
+    "filename": "The_Master-Maid_MM032.json",
+    "scene": "Morning. Servants enter the nursery and recoil in horror at the changeling in the cradle. Their hands cover their mouths.",
+    "characters": [
+      "Servants",
+      "Changeling"
+    ],
+    "action": "Servants recoiling",
+    "caption": "[Next morning, when the servants came to look at the baby, they were horrified.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM033",
+    "filename": "The_Master-Maid_MM033.json",
+    "scene": "Close view of the changeling — large head, tiny body, unnatural features. The servants whisper in fear.",
+    "characters": [
+      "Servants",
+      "Changeling"
+    ],
+    "action": "Servants whispering",
+    "caption": "[To see a little changeling, with a large head and a tiny body.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM034",
+    "filename": "The_Master-Maid_MM034.json",
+    "scene": "The servants kneel before the king in his throne room. They gesture toward the nursery with fearful expressions.",
+    "characters": [
+      "Servants",
+      "King"
+    ],
+    "action": "Servants speaking to king",
+    "caption": "[They told the king, but he was so fond of the queen that he did not wish to grieve her.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM035",
+    "filename": "The_Master-Maid_MM035.json",
+    "scene": "The king sits on his throne, his face troubled. He considers the situation with care, stroking his beard.",
+    "characters": [
+      "King"
+    ],
+    "action": "Thinking",
+    "caption": "[He ordered the changeling to be well cared for.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM036",
+    "filename": "The_Master-Maid_MM036.json",
+    "scene": "The king leans forward, speaking sternly to the servants. His finger points for emphasis.",
+    "characters": [
+      "King",
+      "Servants"
+    ],
+    "action": "King speaking",
+    "caption": "[And told the servants to say nothing to the queen.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM037",
+    "filename": "The_Master-Maid_MM037.json",
+    "scene": "Time passes. The queen holds a second newborn baby. She smiles lovingly. The witch watches from the shadows again.",
+    "characters": [
+      "Queen",
+      "Baby",
+      "Witch"
+    ],
+    "action": "Queen holding baby",
+    "caption": "[The next time the queen had a baby, the same thing happened.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM038",
+    "filename": "The_Master-Maid_MM038.json",
+    "scene": "The witch steals the second baby and replaces it with another changeling. The cradle holds the unnatural child.",
+    "characters": [
+      "Witch",
+      "Changeling"
+    ],
+    "action": "Witch stealing baby",
+    "caption": "[And again the king had the changeling cared for.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM039",
+    "filename": "The_Master-Maid_MM039.json",
+    "scene": "The king gestures for silence to the servants, his face drawn with worry. The changeling lies in the nursery.",
+    "characters": [
+      "King",
+      "Servants"
+    ],
+    "action": "King gesturing for silence",
+    "caption": "[And told the servants to be silent.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM040",
+    "filename": "The_Master-Maid_MM040.json",
+    "scene": "The queen cradles her third newborn. She gazes down with deep love. The room is warm with firelight.",
+    "characters": [
+      "Queen",
+      "Baby"
+    ],
+    "action": "Queen cradling baby",
+    "caption": "[But the third time, when the queen had a baby, the king himself watched by the door.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM041",
+    "filename": "The_Master-Maid_MM041.json",
+    "scene": "The king hides behind the nursery door, peering through a crack. His eye is sharp with determination.",
+    "characters": [
+      "King"
+    ],
+    "action": "Watching through door crack",
+    "caption": "[And he saw the witch come and steal the baby.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM042",
+    "filename": "The_Master-Maid_MM042.json",
+    "scene": "The witch enters the nursery, her hands reaching for the baby. She places a changeling in the cradle.",
+    "characters": [
+      "Witch",
+      "Baby",
+      "Changeling"
+    ],
+    "action": "Witch stealing baby",
+    "caption": "[And put a changeling in its place.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM043",
+    "filename": "The_Master-Maid_MM043.json",
+    "scene": "The king bursts through the door, pointing accusingly at the witch. Guards rush in behind him with drawn swords.",
+    "characters": [
+      "King",
+      "Witch",
+      "Guards"
+    ],
+    "action": "King confronting witch",
+    "caption": "[Then the king had the witch seized.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM044",
+    "filename": "The_Master-Maid_MM044.json",
+    "scene": "A pyre burns in the castle courtyard. The witch is consumed by flames. The king watches with grim resolve.",
+    "characters": [
+      "King",
+      "Witch"
+    ],
+    "action": "None",
+    "caption": "[And burned.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM045",
+    "filename": "The_Master-Maid_MM045.json",
+    "scene": "The changeling lies lifeless. The nursery is quiet. The king stands alone, grief etched on his face.",
+    "characters": [
+      "King",
+      "Changeling"
+    ],
+    "action": "None",
+    "caption": "[And the changeling was put to death.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM046",
+    "filename": "The_Master-Maid_MM046.json",
+    "scene": "Three empty cradles in the nursery. The king and queen stand together, their faces heavy with sorrow.",
+    "characters": [
+      "King",
+      "Queen"
+    ],
+    "action": "None",
+    "caption": "[But the three babies were still in the enchanted castle.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM047",
+    "filename": "The_Master-Maid_MM047.json",
+    "scene": "The king and queen sit in their chamber, heads bowed. The room is dim with grief. A candle flickers between them.",
+    "characters": [
+      "King",
+      "Queen"
+    ],
+    "action": "Sitting together",
+    "caption": "[The king and queen were very unhappy, for they did not know where their children were.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM048",
+    "filename": "The_Master-Maid_MM048.json",
+    "scene": "The king rises from his chair with determination. He clenches his fist, resolve hardening his features.",
+    "characters": [
+      "King"
+    ],
+    "action": "Rising from chair",
+    "caption": "[At last the king said he would go and search for them.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM049",
+    "filename": "The_Master-Maid_MM049.json",
+    "scene": "The king packs bread, cheese, and water into a leather bag. He places it over his shoulder.",
+    "characters": [
+      "King"
+    ],
+    "action": "Packing food",
+    "caption": "[He took a bag of food and set out.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM050",
+    "filename": "The_Master-Maid_MM050.json",
+    "scene": "The king walks through forests and over hills. The seasons change around him — leaves fall, snow comes, then melts.",
+    "characters": [
+      "King"
+    ],
+    "action": "Walking",
+    "caption": "[He walked for many days.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM051",
+    "filename": "The_Master-Maid_MM051.json",
+    "scene": "A massive mountain rises before the king. On its peak sits a giant's castle with iron gates and towers of black stone.",
+    "characters": [
+      "King"
+    ],
+    "action": "Approaching mountain",
+    "caption": "[And at last he came to a mountain. There he saw a giant's castle.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM052",
+    "filename": "The_Master-Maid_MM052.json",
+    "scene": "The king pushes open the iron gate and enters the castle courtyard. Shadows loom from the high walls.",
+    "characters": [
+      "King"
+    ],
+    "action": "Entering castle",
+    "caption": "[And he went in.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM053",
+    "filename": "The_Master-Maid_MM053.json",
+    "scene": "A vast kitchen with a roaring fire and enormous pots. A beautiful girl tends the cooking, her face sad but determined.",
+    "characters": [
+      "Girl (Master-Maid)"
+    ],
+    "action": "Tending fire",
+    "caption": "[In the kitchen was a girl who looked after everything for the giant.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM054",
+    "filename": "The_Master-Maid_MM054.json",
+    "scene": "The girl turns to face the king. Her beauty is striking, but her eyes hold deep sadness.",
+    "characters": [
+      "Girl",
+      "King"
+    ],
+    "action": "Girl turning",
+    "caption": "[She was very beautiful, but she was sad.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM055",
+    "filename": "The_Master-Maid_MM055.json",
+    "scene": "The king approaches the girl in the kitchen. He looks at her questioningly. Steam rises from the cooking pots.",
+    "characters": [
+      "King",
+      "Girl"
+    ],
+    "action": "King approaching",
+    "caption": "[The king asked her who she was.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM056",
+    "filename": "The_Master-Maid_MM056.json",
+    "scene": "The girl stands before the king, her hands clasped. She speaks with quiet dignity despite her servant's clothes.",
+    "characters": [
+      "Girl",
+      "King"
+    ],
+    "action": "Girl speaking",
+    "caption": "[And she told him she was the Master-Maid, and that she had been stolen by the giant.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM057",
+    "filename": "The_Master-Maid_MM057.json",
+    "scene": "The Master-Maid gestures toward the upper floors of the castle. She speaks in a hushed, urgent tone.",
+    "characters": [
+      "Master-Maid",
+      "King"
+    ],
+    "action": "Master-Maid gesturing",
+    "caption": "[She said that the giant had three children who had been stolen from a king and queen.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM058",
+    "filename": "The_Master-Maid_MM058.json",
+    "scene": "The king's face lights with recognition. His eyes widen and he steps forward eagerly.",
+    "characters": [
+      "King",
+      "Master-Maid"
+    ],
+    "action": "King stepping forward",
+    "caption": "[And that she had to look after them.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM059",
+    "filename": "The_Master-Maid_MM059.json",
+    "scene": "The king clasps the Master-Maid's hands, overcome with emotion. Tears of hope fill his eyes.",
+    "characters": [
+      "King",
+      "Master-Maid"
+    ],
+    "action": "King clasping her hands",
+    "caption": "[The king was overjoyed, for he knew that these were his children.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM060",
+    "filename": "The_Master-Maid_MM060.json",
+    "scene": "The Master-Maid holds up a finger, signaling caution. She glances toward the giant's chamber upstairs.",
+    "characters": [
+      "Master-Maid",
+      "King"
+    ],
+    "action": "Master-Maid signaling caution",
+    "caption": "[The Master-Maid told him that he must wait until the giant was asleep.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM061",
+    "filename": "The_Master-Maid_MM061.json",
+    "scene": "The Master-Maid speaks urgently, her eyes darting to the staircase. The king listens intently.",
+    "characters": [
+      "Master-Maid",
+      "King"
+    ],
+    "action": "Master-Maid speaking",
+    "caption": "[And then she would help him to carry the children away.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM062",
+    "filename": "The_Master-Maid_MM062.json",
+    "scene": "The Master-Maid hands the king a ball of white thread. It glows faintly in the dim kitchen light.",
+    "characters": [
+      "Master-Maid",
+      "King"
+    ],
+    "action": "Master-Maid handing thread",
+    "caption": "[She gave him a ball of thread.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM063",
+    "filename": "The_Master-Maid_MM063.json",
+    "scene": "The Master-Maid demonstrates, tying one end of the thread around the king's wrist. Her movements are precise and careful.",
+    "characters": [
+      "Master-Maid",
+      "King"
+    ],
+    "action": "Master-Maid tying thread",
+    "caption": "[And told him to tie one end of it to his wrist.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM064",
+    "filename": "The_Master-Maid_MM064.json",
+    "scene": "The ball of thread rests in the king's palm. The Master-Maid points upward toward the castle's upper rooms.",
+    "characters": [
+      "Master-Maid",
+      "King"
+    ],
+    "action": "Master-Maid pointing",
+    "caption": "[And then she would lead him to the room where the children were.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM065",
+    "filename": "The_Master-Maid_MM065.json",
+    "scene": "The giant sits at an enormous table, devouring whole roasted animals. His massive frame fills the chair.",
+    "characters": [
+      "Giant"
+    ],
+    "action": "Eating",
+    "caption": "[The king did as she told him.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM066",
+    "filename": "The_Master-Maid_MM066.json",
+    "scene": "The giant yawns hugely, his massive mouth opening wide. His eyes grow heavy with sleep.",
+    "characters": [
+      "Giant"
+    ],
+    "action": "Yawning",
+    "caption": "[And when the giant was asleep.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM067",
+    "filename": "The_Master-Maid_MM067.json",
+    "scene": "The giant lies snoring on a stone slab bed. The castle trembles with each breath. The Master-Maid creeps past.",
+    "characters": [
+      "Giant",
+      "Master-Maid"
+    ],
+    "action": "Giant sleeping, Master-Maid creeping",
+    "caption": "[The Master-Maid led him to the room where the three children were.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM068",
+    "filename": "The_Master-Maid_MM068.json",
+    "scene": "The Master-Maid leads the king up a dark spiral staircase. The thread trails behind them, glowing faintly.",
+    "characters": [
+      "Master-Maid",
+      "King"
+    ],
+    "action": "Climbing stairs",
+    "caption": "[None]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM069",
+    "filename": "The_Master-Maid_MM069.json",
+    "scene": "A small room at the top of the castle. Three children sleep in tiny beds. The Master-Maid opens the door gently.",
+    "characters": [
+      "Master-Maid",
+      "Children"
+    ],
+    "action": "Master-Maid opening door",
+    "caption": "[None]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM070",
+    "filename": "The_Master-Maid_MM070.json",
+    "scene": "The king sees his three children sleeping. His face breaks into tears of joy and relief. He reaches toward them.",
+    "characters": [
+      "King",
+      "Children"
+    ],
+    "action": "King reaching",
+    "caption": "[He took them on his back.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM071",
+    "filename": "The_Master-Maid_MM071.json",
+    "scene": "The king lifts the first child onto his back, then the second. The Master-Maid helps secure them.",
+    "characters": [
+      "King",
+      "Master-Maid",
+      "Children"
+    ],
+    "action": "Lifting children",
+    "caption": "[And she led him out of the castle.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM072",
+    "filename": "The_Master-Maid_MM072.json",
+    "scene": "The Master-Maid leads the king through dark corridors, past the sleeping giant's chamber. They move silently.",
+    "characters": [
+      "Master-Maid",
+      "King",
+      "Children"
+    ],
+    "action": "Creeping through corridors",
+    "caption": "[None]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM073",
+    "filename": "The_Master-Maid_MM073.json",
+    "scene": "The castle gate opens. The king steps into the night air with the children on his back. The Master-Maid holds the door.",
+    "characters": [
+      "King",
+      "Master-Maid",
+      "Children"
+    ],
+    "action": "Exiting castle",
+    "caption": "[Then he ran away with the children.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM074",
+    "filename": "The_Master-Maid_MM074.json",
+    "scene": "The Master-Maid closes the gate softly and returns to the kitchen. Her face shows determination mixed with fear.",
+    "characters": [
+      "Master-Maid"
+    ],
+    "action": "Returning to castle",
+    "caption": "[And the Master-Maid went back to the castle.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM075",
+    "filename": "The_Master-Maid_MM075.json",
+    "scene": "Dawn breaks over the mountain. The giant wakes and stretches. He calls out for the children.",
+    "characters": [
+      "Giant"
+    ],
+    "action": "Waking",
+    "caption": "[When the giant woke up.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM076",
+    "filename": "The_Master-Maid_MM076.json",
+    "scene": "The giant enters the children's room and finds the beds empty. His face contorts with rage.",
+    "characters": [
+      "Giant"
+    ],
+    "action": "Finding empty beds",
+    "caption": "[He was very angry to find that the children were gone.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM077",
+    "filename": "The_Master-Maid_MM077.json",
+    "scene": "The giant storms down to the kitchen, his massive footsteps shaking the stones. He towers over the Master-Maid.",
+    "characters": [
+      "Giant",
+      "Master-Maid"
+    ],
+    "action": "Giant storming down",
+    "caption": "[He asked the Master-Maid what had happened.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM078",
+    "filename": "The_Master-Maid_MM078.json",
+    "scene": "The Master-Maid stands before the giant, her face calm but her hands trembling. She speaks steadily.",
+    "characters": [
+      "Master-Maid",
+      "Giant"
+    ],
+    "action": "Master-Maid speaking",
+    "caption": "[And she told him that the king had come and taken them away.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM079",
+    "filename": "The_Master-Maid_MM079.json",
+    "scene": "The giant's face turns purple with fury. He grabs a massive club and smashes a table in half.",
+    "characters": [
+      "Giant"
+    ],
+    "action": "Smashing table",
+    "caption": "[The giant was furious.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM080",
+    "filename": "The_Master-Maid_MM080.json",
+    "scene": "The giant rushes out of the castle, club in hand. He scans the horizon and spots the king in the distance.",
+    "characters": [
+      "Giant"
+    ],
+    "action": "Rushing out",
+    "caption": "[And he set out to pursue the king.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM081",
+    "filename": "The_Master-Maid_MM081.json",
+    "scene": "The king runs down the mountain path with the children on his back. He looks back in terror at the pursuing giant.",
+    "characters": [
+      "King",
+      "Children"
+    ],
+    "action": "Running",
+    "caption": "[The king ran as fast as he could.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM082",
+    "filename": "The_Master-Maid_MM082.json",
+    "scene": "The giant bounds down the mountain, taking enormous strides. Each step covers what would take the king ten.",
+    "characters": [
+      "Giant"
+    ],
+    "action": "Running",
+    "caption": "[But the giant ran faster.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM083",
+    "filename": "The_Master-Maid_MM083.json",
+    "scene": "The king reaches a wide, rushing river. The water roars over rocks. There is no bridge or boat in sight.",
+    "characters": [
+      "King",
+      "Children"
+    ],
+    "action": "Stopping at river",
+    "caption": "[At last the king came to a river, and he could not get across.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM084",
+    "filename": "The_Master-Maid_MM084.json",
+    "scene": "The king remembers the ball of thread. He pulls it from his pocket, his hands shaking with desperation.",
+    "characters": [
+      "King"
+    ],
+    "action": "Pulling thread from pocket",
+    "caption": "[The Master-Maid had given him a ball of thread.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM085",
+    "filename": "The_Master-Maid_MM085.json",
+    "scene": "The king throws the ball of thread across the river. It arcs through the air, trailing white behind it.",
+    "characters": [
+      "King"
+    ],
+    "action": "Throwing thread",
+    "caption": "[And he threw it across the river.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM086",
+    "filename": "The_Master-Maid_MM086.json",
+    "scene": "The thread catches on the far bank and pulls tight, forming a bridge of white across the rushing water.",
+    "characters": [
+      "King"
+    ],
+    "action": "Pulling thread tight",
+    "caption": "[Then he pulled it tight.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM087",
+    "filename": "The_Master-Maid_MM087.json",
+    "scene": "The king steps onto the thread bridge with the children. They walk carefully across the narrow span above the water.",
+    "characters": [
+      "King",
+      "Children"
+    ],
+    "action": "Walking across thread",
+    "caption": "[And he and the children walked across it as if it were a bridge.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM088",
+    "filename": "The_Master-Maid_MM088.json",
+    "scene": "Meanwhile, back at the castle, the Master-Maid watches from a high window. She holds a pair of scissors.",
+    "characters": [
+      "Master-Maid"
+    ],
+    "action": "Watching from window",
+    "caption": "[The Master-Maid, who was watching from the castle.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM089",
+    "filename": "The_Master-Maid_MM089.json",
+    "scene": "The giant reaches the riverbank and sees the king crossing. He roars with fury and grabs the thread.",
+    "characters": [
+      "Giant"
+    ],
+    "action": "Grabbing thread",
+    "caption": "[When the giant came to the river, he also threw the ball of thread across.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM090",
+    "filename": "The_Master-Maid_MM090.json",
+    "scene": "The giant pulls the thread tight and sets his massive foot upon it. The thread sags under his weight.",
+    "characters": [
+      "Giant"
+    ],
+    "action": "Setting foot on thread",
+    "caption": "[And pulled it tight. But when he set his foot on it.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM091",
+    "filename": "The_Master-Maid_MM091.json",
+    "scene": "The Master-Maid lifts the scissors high. Her face is resolute. The thread stretches across the river below.",
+    "characters": [
+      "Master-Maid"
+    ],
+    "action": "Raising scissors",
+    "caption": "[The Master-Maid, who was watching from the castle, cut the thread.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM092",
+    "filename": "The_Master-Maid_MM092.json",
+    "scene": "The thread snaps. The giant plummets into the roaring river below. His arms flail wildly.",
+    "characters": [
+      "Giant"
+    ],
+    "action": "Falling into river",
+    "caption": "[And the giant fell into the river.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM093",
+    "filename": "The_Master-Maid_MM093.json",
+    "scene": "The giant's massive form disappears beneath the churning water. Bubbles rise, then nothing. The river flows on.",
+    "characters": [
+      "Giant"
+    ],
+    "action": "None",
+    "caption": "[And was drowned.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM094",
+    "filename": "The_Master-Maid_MM094.json",
+    "scene": "The king and children stand safely on the far bank. They look back at the river, now empty. The king breathes with relief.",
+    "characters": [
+      "King",
+      "Children"
+    ],
+    "action": "Standing on bank",
+    "caption": "[Then the king and the children came home.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM095",
+    "filename": "The_Master-Maid_MM095.json",
+    "scene": "The king walks the road home with the three children holding his hands. The sun sets behind them, painting the sky gold.",
+    "characters": [
+      "King",
+      "Children"
+    ],
+    "action": "Walking home",
+    "caption": "[None]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM096",
+    "filename": "The_Master-Maid_MM096.json",
+    "scene": "The palace comes into view. The king quickens his pace. The children run ahead toward the gate.",
+    "characters": [
+      "King",
+      "Children"
+    ],
+    "action": "Running toward palace",
+    "caption": "[None]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM097",
+    "filename": "The_Master-Maid_MM097.json",
+    "scene": "The queen stands at the palace door. She sees the children approaching and her hands fly to her face in disbelief.",
+    "characters": [
+      "Queen",
+      "Children"
+    ],
+    "action": "Queen seeing children",
+    "caption": "[And the queen was overjoyed to see them.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM098",
+    "filename": "The_Master-Maid_MM098.json",
+    "scene": "The queen runs to embrace her children. She holds them tightly, tears streaming down her face. The king watches, smiling.",
+    "characters": [
+      "Queen",
+      "Children",
+      "King"
+    ],
+    "action": "Queen embracing children",
+    "caption": "[None]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM099",
+    "filename": "The_Master-Maid_MM099.json",
+    "scene": "The family stands together in the courtyard. The king, queen, and three children are united at last. Light fills the scene.",
+    "characters": [
+      "King",
+      "Queen",
+      "Children"
+    ],
+    "action": "Standing together",
+    "caption": "[None]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM100",
+    "filename": "The_Master-Maid_MM100.json",
+    "scene": "The Master-Maid descends the mountain path, freed from the giant's castle. She walks toward the palace.",
+    "characters": [
+      "Master-Maid"
+    ],
+    "action": "Walking toward palace",
+    "caption": "[And the Master-Maid was made queen.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM101",
+    "filename": "The_Master-Maid_MM101.json",
+    "scene": "A grand ceremony in the throne room. The Master-Maid wears a crown and royal robes. The king and queen smile warmly.",
+    "characters": [
+      "Master-Maid",
+      "King",
+      "Queen"
+    ],
+    "action": "None",
+    "caption": "[None]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  },
+  {
+    "id": "The_Master-Maid_MM102",
+    "filename": "The_Master-Maid_MM102.json",
+    "scene": "The entire court gathers in celebration. Musicians play, banners hang, and the people cheer in the streets below.",
+    "characters": [
+      "Court",
+      "Musicians"
+    ],
+    "action": "Celebrating",
+    "caption": "[And they all lived happily ever after.]",
+    "pageDuration": 6,
+    "transitionDuration": 1,
+    "bgColor": "#f0ebe8",
+    "interpOrder": [],
+    "captioned": true
+  }
+]

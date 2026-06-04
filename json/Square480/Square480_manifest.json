@@ -4,78 +4,91 @@
   "width": 480,
   "height": 480,
   "defaultPageDuration": 6,
-  "defaultTransitionDuration": 0.5,
+  "defaultTransitionDuration": 1,
   "pages": [
     {
-      "id": "Square480_MPBRCG63",
-      "filename": "Square480_MPBRCG63.json",
-      "caption": "House||||||",
-      "pageDuration": 6,
+      "id": "Square480_MPEA6PLM",
+      "filename": "Square480_MPEA6PLM.json",
+      "caption": "This is Vincent's house.",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": true,
+      "captioned": true
+    },
+    {
+      "id": "Square480_MPFL2Z6Y",
+      "filename": "Square480_MPFL2Z6Y.json",
+      "caption": "",
+      "pageDuration": null,
       "transitionDuration": 1,
       "bgColor": "#f0ebe8",
-      "interpOrder": false,
-      "captioned": true
+      "interpOrder": true
     },
     {
-      "id": "Square480_MPDORWLM",
-      "filename": "Square480_MPDORWLM.json",
-      "caption": "This is Vincent.",
-      "pageDuration": 6,
-      "transitionDuration": 0.5,
-      "bgColor": "#f0ebe8",
-      "captioned": true
-    },
-    {
-      "id": "Square480_MPDP05BB",
-      "filename": "Square480_MPDP05BB.json",
-      "caption": "This is Vincent's house.",
+      "id": "Square480_MPH3HGC7",
+      "filename": "Square480_MPH3HGC7.json",
+      "caption": "",
       "pageDuration": null,
-      "transitionDuration": null,
+      "transitionDuration": 1,
       "bgColor": "#f0ebe8",
-      "captioned": true
+      "interpOrder": true
     },
     {
-      "id": "Square480_MPE5RJ7O",
-      "filename": "Square480_MPE5RJ7O.json",
-      "caption": "This is a one line caption.|This is two line.",
+      "id": "Square480_MPH3V3ET",
+      "filename": "Square480_MPH3V3ET.json",
+      "caption": "Say Hi to Noodles",
       "pageDuration": null,
-      "transitionDuration": null,
+      "transitionDuration": 1,
       "bgColor": "#f0ebe8",
+      "interpOrder": true,
       "captioned": true
     },
     {
-      "id": "Square480_MPE5YNM2",
-      "filename": "Square480_MPE5YNM2.json",
-      "caption": "This is a one line caption.",
+      "id": "Square480_MPH52YS3",
+      "filename": "Square480_MPH52YS3.json",
+      "caption": "",
       "pageDuration": null,
-      "transitionDuration": null,
+      "transitionDuration": 3,
       "bgColor": "#f0ebe8",
-      "captioned": true
+      "interpOrder": true
     },
     {
-      "id": "Square480_MPE6DIXL",
-      "filename": "Square480_MPE6DIXL.json",
-      "caption": "This is Vincent's house.",
-      "pageDuration": null,
-      "transitionDuration": null,
-      "bgColor": "#f0ebe8",
-      "captioned": true
-    },
-    {
-      "id": "Square480_MPE7JW6N",
-      "filename": "Square480_MPE7JW6N.json",
+      "id": "Square480_MPH5NG9D",
+      "filename": "Square480_MPH5NG9D.json",
       "caption": "",
       "pageDuration": null,
       "transitionDuration": null,
-      "bgColor": "#f0ebe8"
+      "bgColor": "#f0ebe8",
+      "interpOrder": true
     },
     {
-      "id": "Square480_MPE8A1QP",
-      "filename": "Square480_MPE8A1QP.json",
+      "id": "Square480_MPMQ5UR7",
+      "filename": "Square480_MPMQ5UR7.json",
       "caption": "",
       "pageDuration": null,
       "transitionDuration": null,
-      "bgColor": "#f0ebe8"
+      "bgColor": "#f0ebe8",
+      "interpOrder": true
+    },
+    {
+      "id": "Square480_MPRTTN1B",
+      "filename": "Square480_MPRTTN1B.json",
+      "caption": "Blugwrat",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": true,
+      "captioned": true
+    },
+    {
+      "id": "Square480_MPRU0PI5",
+      "filename": "Square480_MPRU0PI5.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": true
     }
   ],
   "captionFontSize": 24

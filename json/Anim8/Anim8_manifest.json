@@ -1,0 +1,56 @@
+{
+  "name": "Anim8",
+  "format": "square_720",
+  "width": 720,
+  "height": 720,
+  "defaultPageDuration": 5,
+  "defaultTransitionDuration": 5,
+  "pages": [
+    {
+      "id": "Anim8_MPRV1C7N",
+      "filename": "Anim8_MPRV1C7N.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": true
+    },
+    {
+      "id": "Anim8_MPRV9L02",
+      "filename": "Anim8_MPRV9L02.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": true
+    },
+    {
+      "id": "Anim8_MPRVBTWX",
+      "filename": "Anim8_MPRVBTWX.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": true
+    },
+    {
+      "id": "Anim8_MPRVCVF0",
+      "filename": "Anim8_MPRVCVF0.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": true
+    },
+    {
+      "id": "Anim8_MPRVDVW0",
+      "filename": "Anim8_MPRVDVW0.json",
+      "caption": "",
+      "pageDuration": null,
+      "transitionDuration": null,
+      "bgColor": "#f0ebe8",
+      "interpOrder": true
+    }
+  ],
+  "captionFontSize": 24
+}

@@ -746,7 +746,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let lastWheelY = null
   let palette = JSON.parse(localStorage.getItem('sketcher_palette') || '[]')
 
-  function drawColorWheel(brightness) {
+  function drawColorWheel(brightness, indicatorX, indicatorY) {
     const size = colorWheelCanvas.width
     const cx = size / 2, cy = size / 2, r = size / 2
     colorWheelCtx.clearRect(0, 0, size, size)
@@ -769,6 +769,18 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     colorWheelCtx.putImageData(imageData, 0, 0)
+    if (indicatorX != null && indicatorY != null) {
+      colorWheelCtx.beginPath()
+      colorWheelCtx.arc(indicatorX, indicatorY, 6, 0, Math.PI * 2)
+      colorWheelCtx.strokeStyle = 'white'
+      colorWheelCtx.lineWidth = 2
+      colorWheelCtx.stroke()
+      colorWheelCtx.beginPath()
+      colorWheelCtx.arc(indicatorX, indicatorY, 6, 0, Math.PI * 2)
+      colorWheelCtx.strokeStyle = 'black'
+      colorWheelCtx.lineWidth = 1
+      colorWheelCtx.stroke()
+    }
   }
 
   function getColorFromWheel(x, y) {
@@ -847,6 +859,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function openColorPopup(target) {
     colorPopupTarget = target
+    lastWheelX = null
+    lastWheelY = null
     document.getElementById('colorPopupTitle').textContent =
       target === 'mark' ? 'Mark Color' : target === 'fill' ? 'Fill Color' : 'Background Color'
     colorPreviewBox.style.background = target === 'mark' ? currentColor : target === 'fill' ? currentFillColor : currentBgColor
@@ -864,6 +878,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const rect = colorWheelCanvas.getBoundingClientRect()
     lastWheelX = (e.clientX - rect.left) * (colorWheelCanvas.width / rect.width)
     lastWheelY = (e.clientY - rect.top) * (colorWheelCanvas.height / rect.height)
+    drawColorWheel(parseInt(brightnessSlider.value), lastWheelX, lastWheelY)
     updateColorPreview(getColorFromWheel(lastWheelX, lastWheelY))
   })
 
@@ -872,13 +887,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const rect = colorWheelCanvas.getBoundingClientRect()
     lastWheelX = (e.clientX - rect.left) * (colorWheelCanvas.width / rect.width)
     lastWheelY = (e.clientY - rect.top) * (colorWheelCanvas.height / rect.height)
+    drawColorWheel(parseInt(brightnessSlider.value), lastWheelX, lastWheelY)
     updateColorPreview(getColorFromWheel(lastWheelX, lastWheelY))
   })
 
   brightnessSlider.addEventListener('input', () => {
-    drawColorWheel(parseInt(brightnessSlider.value))
     const x = lastWheelX ?? colorWheelCanvas.width / 2
     const y = lastWheelY ?? colorWheelCanvas.height / 2
+    drawColorWheel(parseInt(brightnessSlider.value), x, y)
     updateColorPreview(getColorFromWheel(x, y))
   })
 

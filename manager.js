@@ -380,17 +380,21 @@ function createPageItem(page, index) {
   // Caption Width % per page
   const capWLbl = document.createElement('span')
   capWLbl.textContent = 'w:'
-  capWLbl.title = 'Caption width as % of canvas width (null = use book default)'
+  capWLbl.title = 'Caption width as % of canvas width (empty = use book default)'
   capWLbl.style.cssText = 'font-size:11px;color:#777;white-space:nowrap;cursor:default;'
   const capWInp = document.createElement('input')
   capWInp.type = 'number'
   capWInp.value = page.captionWidth ?? ''
   capWInp.placeholder = activeManifest.defaultCaptionWidth ?? 70
+  capWInp.min = 10
+  capWInp.max = 100
   capWInp.title = capWLbl.title
   capWInp.style.cssText = 'width:40px;background:#333;border:1px solid #444;color:#ccc;padding:2px 4px;border-radius:3px;font-size:11px;text-align:center;'
   capWInp.addEventListener('click', e => e.stopPropagation())
   capWInp.addEventListener('change', async () => {
-    page.captionWidth = capWInp.value === '' ? null : parseInt(capWInp.value)
+    const raw = capWInp.value === '' ? null : Math.max(10, Math.min(100, parseInt(capWInp.value) || 70))
+    page.captionWidth = raw
+    capWInp.value = raw ?? ''
     await saveManifest()
   })
   durations.appendChild(capWLbl)

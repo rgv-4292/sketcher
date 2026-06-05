@@ -391,6 +391,11 @@ function createPageItem(page, index) {
   capWInp.title = capWLbl.title
   capWInp.style.cssText = 'width:40px;background:#333;border:1px solid #444;color:#ccc;padding:2px 4px;border-radius:3px;font-size:11px;text-align:center;'
   capWInp.addEventListener('click', e => e.stopPropagation())
+  capWInp.addEventListener('mousedown', () => {
+    if (capWInp.value === '') {
+      capWInp.value = activeManifest.defaultCaptionWidth ?? 70
+    }
+  })
   capWInp.addEventListener('change', async () => {
     const raw = capWInp.value === '' ? null : Math.max(10, Math.min(100, parseInt(capWInp.value) || 70))
     page.captionWidth = raw

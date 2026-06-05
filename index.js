@@ -1382,18 +1382,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const areaRect = areaEl.getBoundingClientRect()
     const fontSize = parseFloat(overlay.style.fontSize) || 24
 
+    // Resolve caption width: per-page override → book default → 70%
+    const entry = activeBookManifest && activePageId
+      ? activeBookManifest.pages.find(p => p.id === activePageId)
+      : null
+    const widthPct = entry && entry.captionWidth != null
+      ? entry.captionWidth
+      : (activeBookManifest.defaultCaptionWidth ?? 70)
+    const maxWidth = canvasRect.width * (widthPct / 100)
+
     // Measure text with an offscreen context using the caption font
     const measureCanvas = document.createElement('canvas')
     const measureCtx = measureCanvas.getContext('2d')
     measureCtx.font = `${fontSize}px OldNewspaperTypes, Arial`
 
-    const layout = computeCaptionLayout(measureCtx, _lastCaptionRaw, fontSize, canvasRect.width)
+    const layout = computeCaptionLayout(measureCtx, _lastCaptionRaw, fontSize, maxWidth)
 
     // Set pre-wrapped text so CSS doesn't re-wrap
     overlay.textContent = layout.lines.join('\n')
 
-    // Width: if text fits on one line, shrink to text width; else use canvas width
-    // The container width is already computed by computeCaptionLayout
     overlay.style.width = `${layout.width}px`
     overlay.style.left = `${canvasRect.left - areaRect.left + (canvasRect.width - layout.width) / 2}px`
     overlay.style.top = `${canvasRect.bottom - areaRect.top - layout.blockHeight}px`

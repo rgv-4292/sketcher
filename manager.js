@@ -1,6 +1,6 @@
 import { Mark } from './mark.js'
 import { Page } from './page.js'
-import { wrapText } from './caption.js'
+import { computeCaptionLayout } from './caption.js'
 
 const CACHE_KEY = 'sketcher_manager_cache'
 const ACTIVE_BOOK_KEY = 'sketcher_active_book'
@@ -175,6 +175,7 @@ function renderPagePanel() {
   document.getElementById('defaultPageDuration').value = activeManifest.defaultPageDuration
   document.getElementById('defaultTransDuration').value = activeManifest.defaultTransitionDuration
   document.getElementById('captionFontSize').value = activeManifest.captionFontSize || 24
+  document.getElementById('defaultCaptionWidth').value = activeManifest.defaultCaptionWidth ?? 70
 
   emptyState.style.display = activeManifest.pages.length === 0 ? 'flex' : 'none'
   pageList.style.display = activeManifest.pages.length > 0 ? 'flex' : 'none'
@@ -376,6 +377,25 @@ function createPageItem(page, index) {
   durations.appendChild(captionedLbl)
   durations.appendChild(captionedCb)
 
+  // Caption Width % per page
+  const capWLbl = document.createElement('span')
+  capWLbl.textContent = 'w:'
+  capWLbl.title = 'Caption width as % of canvas width (null = use book default)'
+  capWLbl.style.cssText = 'font-size:11px;color:#777;white-space:nowrap;cursor:default;'
+  const capWInp = document.createElement('input')
+  capWInp.type = 'number'
+  capWInp.value = page.captionWidth ?? ''
+  capWInp.placeholder = activeManifest.defaultCaptionWidth ?? 70
+  capWInp.title = capWLbl.title
+  capWInp.style.cssText = 'width:40px;background:#333;border:1px solid #444;color:#ccc;padding:2px 4px;border-radius:3px;font-size:11px;text-align:center;'
+  capWInp.addEventListener('click', e => e.stopPropagation())
+  capWInp.addEventListener('change', async () => {
+    page.captionWidth = capWInp.value === '' ? null : parseInt(capWInp.value)
+    await saveManifest()
+  })
+  durations.appendChild(capWLbl)
+  durations.appendChild(capWInp)
+
   const actions = document.createElement('div')
   actions.className = 'page-actions'
 
@@ -492,7 +512,7 @@ async function createNewPage() {
   setStatus('Creating page...')
   try {
     await api('savePage', { bookName: activeBook, pageId: id, pageData: emptyPage })
-    activeManifest.pages.push({ id, filename: `${id}.json`, caption: '', pageDuration: null, transitionDuration: null, bgColor: '#f0ebe8' })
+    activeManifest.pages.push({ id, filename: `${id}.json`, caption: '', pageDuration: null, transitionDuration: null, bgColor: '#f0ebe8', captionWidth: null })
     await saveManifest()
     renderPagePanel()
     setStatus(`Created ${id}`)
@@ -706,12 +726,12 @@ async function exportVideo() {
         pageVariants = []
         for (let v = 0; v < 3; v++) {
           renderPageToCanvas(pageJSONs[p], offscreen)
-          if (pageCaption) await drawCaption(offscreen, pageCaption, captionFontSize)
+          if (pageCaption) await drawCaption(offscreen, pageCaption, captionFontSize, entry.captionWidth)
           pageVariants.push(new Uint8Array(await (await canvasToBlob(offscreen)).arrayBuffer()))
         }
       } else {
         renderPageToCanvas(pageJSONs[p], offscreen)
-        if (pageCaption) await drawCaption(offscreen, pageCaption, captionFontSize)
+        if (pageCaption) await drawCaption(offscreen, pageCaption, captionFontSize, entry.captionWidth)
         pageVariants = [new Uint8Array(await (await canvasToBlob(offscreen)).arrayBuffer())]
       }
 
@@ -789,24 +809,18 @@ async function ensureCustomFont() {
 }
 
 // Draw caption text onto a canvas context.
-async function drawCaption(canvas, caption, fontSize) {
+async function drawCaption(canvas, caption, fontSize, captionWidthPct) {
   if (!caption) return
   await ensureCustomFont()
   const ctx = canvas.getContext('2d')
   const size = Math.max(8, fontSize || 24)
   const lineHeight = Math.round(size * 1.3)
-  const maxWidth = canvas.width - Math.round(size * 0.5)
+  const pct = captionWidthPct != null ? captionWidthPct : (activeManifest.defaultCaptionWidth ?? 70)
+  const maxWidth = canvas.width * (pct / 100)
   ctx.save()
   ctx.font = `${size}px OldNewspaperTypes, Arial`
 
-  const hardParagraphs = caption.replace(/\s*\|\s*/g, '\n').split('\n')
-  const allLines = []
-  for (const para of hardParagraphs) {
-    const trimmed = para.trim()
-    if (!trimmed) { allLines.push(''); continue }
-    const wrapped = wrapText(ctx, trimmed, maxWidth)
-    allLines.push(...wrapped)
-  }
+  const layout = computeCaptionLayout(ctx, caption, size, maxWidth)
 
   ctx.textAlign = 'center'
   ctx.textBaseline = 'bottom'
@@ -814,8 +828,8 @@ async function drawCaption(canvas, caption, fontSize) {
   ctx.shadowBlur = size * 0.4
   ctx.fillStyle = 'black'
   const x = canvas.width / 2
-  allLines.forEach((line, i) => {
-    const y = canvas.height - Math.round(size * 0.4) - (allLines.length - 1 - i) * lineHeight
+  layout.lines.forEach((line, i) => {
+    const y = canvas.height - Math.round(size * 0.4) - (layout.lines.length - 1 - i) * lineHeight
     ctx.fillText(line, x, y)
   })
   ctx.shadowBlur = 0
@@ -858,6 +872,7 @@ document.getElementById('saveBookSettingsBtn').addEventListener('click', async (
   activeManifest.defaultPageDuration = parseFloat(document.getElementById('defaultPageDuration').value) || 5
   activeManifest.defaultTransitionDuration = parseFloat(document.getElementById('defaultTransDuration').value) || 1
   activeManifest.captionFontSize = parseInt(document.getElementById('captionFontSize').value) || 24
+  activeManifest.defaultCaptionWidth = parseInt(document.getElementById('defaultCaptionWidth').value) || 70
   await saveManifest()
 })
 

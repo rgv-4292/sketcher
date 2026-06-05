@@ -143,6 +143,7 @@ exports.handler = async (event) => {
           height,
           defaultPageDuration: 5,
           defaultTransitionDuration: 1,
+          defaultCaptionWidth: 70,
           pages: []
         }
         const path = `${BASE_PATH}/${bookName}/${bookName}_manifest.json`

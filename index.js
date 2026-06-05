@@ -872,7 +872,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function renderPalette() {
     paletteRow.innerHTML = ''
-    for (let i = 0; i < 14; i++) {
+    for (let i = 0; i < 16; i++) {
       const swatch = document.createElement('div')
       swatch.className = 'palette-swatch' + (palette[i] ? ' filled' : '')
       swatch.style.background = palette[i] || 'transparent'
@@ -931,7 +931,7 @@ document.addEventListener('DOMContentLoaded', function () {
   paletteSaveBtn.addEventListener('pointerdown', () => {
     const color = colorPreviewBox.style.background
     if (!color) return
-    if (palette.length >= 14) palette.shift()
+    if (palette.length >= 16) palette.shift()
     palette.push(color)
     localStorage.setItem('sketcher_palette', JSON.stringify(palette))
     renderPalette()

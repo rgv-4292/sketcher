@@ -96,6 +96,14 @@
         }
 
         /* ── Canvas area ────────────────────────────────────────── */
+        #canvasCol {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            min-width: 0;
+        }
+
         #canvasArea {
             flex: 1;
             display: flex;
@@ -103,15 +111,12 @@
             justify-content: center;
             overflow: hidden;
             position: relative;
+            min-height: 0;
         }
 
         #refPanel {
             display: none;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(30,30,30,0.92);
+            background: rgba(30,30,30,0.95);
             color: #bbb;
             font-size: 11px;
             line-height: 1.45;
@@ -120,6 +125,7 @@
             max-height: 30%;
             overflow-y: auto;
             border-top: 1px solid #444;
+            flex-shrink: 0;
         }
 
         #refPanel .ref-label {
@@ -662,10 +668,12 @@
         </div><!-- /sidebar -->
 
         <!-- ── Canvas area ───────────────────────────────────────── -->
+        <div id="canvasCol">
         <div id="canvasArea">
             <div id="placementBanner">Placement mode — tap to place · ESC to cancel</div>
             <div id="captionOverlay" style="display:none;position:absolute;pointer-events:none;z-index:15;font-family:'OldNewspaperTypes',Arial,sans-serif;color:black;text-shadow:0 0 8px rgba(255,255,255,0.9),0 0 3px rgba(255,255,255,0.9);text-align:center;width:0;"></div>
             <canvas id="myCanvas" width="720" height="960" style="display:none;"></canvas>
+        </div>
             <div id="refPanel">
                 <div class="ref-row"><span class="ref-label">Scene</span><br><span id="refScene"></span></div>
                 <div class="ref-row"><span class="ref-label">Characters</span><br><span id="refChars"></span></div>

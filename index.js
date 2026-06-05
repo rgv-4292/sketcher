@@ -817,6 +817,35 @@ document.addEventListener('DOMContentLoaded', function () {
     return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)]
   }
 
+  function rgbToHsl(r, g, b) {
+    r /= 255; g /= 255; b /= 255
+    const max = Math.max(r, g, b), min = Math.min(r, g, b)
+    let h, s, l = (max + min) / 2
+    if (max === min) {
+      h = s = 0
+    } else {
+      const d = max - min
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
+      if (max === r) h = ((g - b) / d + (g < b ? 6 : 0)) / 6
+      else if (max === g) h = ((b - r) / d + 2) / 6
+      else h = ((r - g) / d + 4) / 6
+    }
+    return [h, s, l]
+  }
+
+  function setWheelFromColor(rgba) {
+    const match = rgba.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/)
+    if (!match) return
+    const [h, s] = rgbToHsl(parseInt(match[1]), parseInt(match[2]), parseInt(match[3]))
+    const size = colorWheelCanvas.width
+    const r = size / 2
+    const angle = h * Math.PI * 2
+    const dist = s * r
+    lastWheelX = size / 2 + Math.cos(angle) * dist
+    lastWheelY = size / 2 + Math.sin(angle) * dist
+    drawColorWheel(parseInt(brightnessSlider.value), lastWheelX, lastWheelY)
+  }
+
   function updateColorPreview(color) {
     colorPreviewBox.style.background = color
     if (colorPopupTarget === 'mark') {
@@ -851,6 +880,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (palette[i]) {
           updateColorPreview(palette[i])
           colorPreviewBox.style.background = palette[i]
+          setWheelFromColor(palette[i])
         }
       })
       paletteRow.appendChild(swatch)

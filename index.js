@@ -1255,6 +1255,7 @@ document.addEventListener('DOMContentLoaded', function () {
         page.layerOrder = page.layerOrder.length ? page.layerOrder : getLayerOrder()
         refreshLayerList()
         updateCaptionOverlay()
+        updateRefPanel()
         if (onionSkin) await renderOnionSkin()
         else clearOnionSkin()
       } else {
@@ -1343,6 +1344,7 @@ document.addEventListener('DOMContentLoaded', function () {
       page.layerOrder = page.layerOrder.length ? page.layerOrder : getLayerOrder()
       refreshLayerList()
       updateCaptionOverlay()
+      updateRefPanel()
       if (onionSkin) await renderOnionSkin()
       else clearOnionSkin()
     } catch (err) {
@@ -1370,6 +1372,20 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.style.whiteSpace = 'pre'
     overlay.style.display = 'block'
     requestAnimationFrame(() => requestAnimationFrame(() => positionCaptionOverlay()))
+  }
+
+  function updateRefPanel() {
+    const panel = document.getElementById('refPanel')
+    if (!activeBookManifest || !activePageId) { panel.style.display = 'none'; return }
+    const entry = activeBookManifest.pages.find(p => p.id === activePageId)
+    const scene = entry?.scene || ''
+    const chars = entry?.characters || ''
+    const action = entry?.action || ''
+    if (!scene && !chars && !action) { panel.style.display = 'none'; return }
+    document.getElementById('refScene').textContent = scene
+    document.getElementById('refChars').textContent = chars
+    document.getElementById('refAction').textContent = action
+    panel.style.display = 'block'
   }
 
   function positionCaptionOverlay() {

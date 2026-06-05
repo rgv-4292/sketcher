@@ -877,7 +877,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   brightnessSlider.addEventListener('input', () => {
     drawColorWheel(parseInt(brightnessSlider.value))
-    if (lastWheelX !== null) updateColorPreview(getColorFromWheel(lastWheelX, lastWheelY))
+    const x = lastWheelX ?? colorWheelCanvas.width / 2
+    const y = lastWheelY ?? colorWheelCanvas.height / 2
+    updateColorPreview(getColorFromWheel(x, y))
   })
 
   paletteSaveBtn.addEventListener('pointerdown', () => {

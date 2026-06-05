@@ -47,7 +47,7 @@
     },
     {
       "bgColor": "#f0ebe8",
-      "caption": "Her grandmother, who lived in another village, made her a present of a little red riding-hood",
+      "caption": "Her grandmother, |who lived in another village, |made her a present of a little red riding-hood",
       "id": "Little_Red_Riding_Hood_MM004",
       "filename": "Little_Red_Riding_Hood_MM004.json",
       "transitionDuration": 1,
@@ -57,7 +57,7 @@
       "characters": "None",
       "scene": "The interior of the home. A bright red riding-hood is draped over a chair, freshly made.",
       "action": "None",
-      "captionWidth": 60
+      "captionWidth": 64
     },
     {
       "bgColor": "#f0ebe8",

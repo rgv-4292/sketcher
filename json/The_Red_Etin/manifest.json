@@ -1,0 +1,426 @@
+{
+    "name":  "The Red Etin",
+    "format":  "png",
+    "width":  720,
+    "defaultTransitionDuration":  2000,
+    "captionFontSize":  14,
+    "pages":  [
+                  {
+                      "id":  "The_Red_Etin_MM001",
+                      "description":  "[Two humble cottages sit on farmland]",
+                      "caption":  "There were ance twa widows that lived on a small bit o\u0027 ground, which they rented from a farmer.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM001.json",
+                      "scene":  "[Two humble cottages sit on farmland]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM002",
+                      "description":  "[An old woman sends her eldest son to the well]",
+                      "caption":  "Ane of them had twa sons, and the other had ane; and by-and-by it was time for the wife that had twa sons to send them away to seeke their fortune.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM002.json",
+                      "scene":  "[An old woman sends her eldest son to the well]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM003",
+                      "description":  "[The son carries a broken can from the well]",
+                      "caption":  "So she told her eldest son ae day to take a can and bring her water from the well, that she might bake a cake for him; and however much or however little water he might bring, the cake would be great or sma\u0027 accordingly; and that cake was to be a\u0027 that she could gie him when he went on his travels.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM003.json",
+                      "scene":  "[The son carries a broken can from the well]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM004",
+                      "description":  "[The lad returns with a broken can, water spilled]",
+                      "caption":  "The lad gaed away wi\u0027 the can to the well, and filled it wi\u0027 water, and then came away hame again; but the can being broken the maist part of the water had run out before he got back.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM004.json",
+                      "scene":  "[The lad returns with a broken can, water spilled]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM005",
+                      "description":  "[The mother holds up a very small cake]",
+                      "caption":  "So his cake was very sma\u0027; yet sma\u0027 as it was, his mother asked if he was willing to take the half of it with her blessing, telling him that, if he chose rather to have the hale, he would only get it wi\u0027 her curse.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM005.json",
+                      "scene":  "[The mother holds up a very small cake]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM006",
+                      "description":  "[The young man takes the whole cake greedily]",
+                      "caption":  "The young man, thinking he might hae to travel a far way, and not knowing when or how he might get other provisions, said he would like to hae the hale cake, com of his mother\u0027s malison what like; so she gave him the hale cake, and her malison alang wi\u0027t.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM006.json",
+                      "scene":  "[The young man takes the whole cake greedily]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM007",
+                      "description":  "[He hands a knife to his younger brother]",
+                      "caption":  "Then he took his brither aside, and gave him a knife to keep till he should come back, desiring him to look at it every morning, and as lang as it continued to be clear, then he might be sure that the owner of it was well; but if it grew dim and rusty, then for certain some ill had befallen him.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM007.json",
+                      "scene":  "[He hands a knife to his younger brother]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM008",
+                      "description":  "[The young man walks alone down a long road]",
+                      "caption":  "So the young man set out to seek his fortune. And he gaed a\u0027 that day, and a\u0027 the next day; and on the third day, in the afternoon, he came up to where a shepherd was sitting with a flock o\u0027 sheep.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM008.json",
+                      "scene":  "[The young man walks alone down a long road]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM009",
+                      "description":  "[He approaches a shepherd with sheep on a hillside]",
+                      "caption":  "And he gaed up to the shepherd and asked him wha the sheep belanged to; and the man answered:",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM009.json",
+                      "scene":  "[He approaches a shepherd with sheep on a hillside]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM010",
+                      "description":  "[\"The Red Etin of Ireland\" in old lettering]",
+                      "caption":  "\"The Red Etin of Ireland Ance lived in Bellygan, And stole King Malcolm\u0027s daughter, The King of fair Scotland. He beats her, he binds her, He lays her on a band; And every day he dings her With a bright silver wand Like Julian the Roman He\u0027s one that fears no man. It\u0027s said there\u0027s ane predestinate To be his mortal foe; But that man is yet unborn And lang may it be so.\"",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM010.json",
+                      "scene":  "[\"The Red Etin of Ireland\" in old lettering]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM011",
+                      "description":  "[An old man with white hair herds swine]",
+                      "caption":  "The young man then went on his journey; and he had not gone far when he espied an old man with white locks herding a flock of swine; and he gaed up to him and asked whose swine these were, when the man answered:",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM011.json",
+                      "scene":  "[An old man with white hair herds swine]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM012",
+                      "description":  "[\"The Red Etin of Ireland\" repeats]",
+                      "caption":  "\"The Red Etin of Ireland\"--",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM012.json",
+                      "scene":  "[\"The Red Etin of Ireland\" repeats]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM013",
+                      "description":  "[An old man herds goats on a rocky hill]",
+                      "caption":  "Then the young man gaed on a bit farther, and came to another very old man herding goats; and when he asked whose goats they were, the answer was:",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM013.json",
+                      "scene":  "[An old man herds goats on a rocky hill]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM014",
+                      "description":  "[\"The Red Etin of Ireland\" repeats again]",
+                      "caption":  "\"The Red Etin of Ireland\"--",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM014.json",
+                      "scene":  "[\"The Red Etin of Ireland\" repeats again]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM015",
+                      "description":  "[The old man warns the traveler gravely]",
+                      "caption":  "This old man also told him to beware of the next beasts that he should meet, for they were of a very different kind from any he had yet seen.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM015.json",
+                      "scene":  "[The old man warns the traveler gravely]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM016",
+                      "description":  "[Dreadful two-headed beasts with horns fill the path]",
+                      "caption":  "So the young man went on, and by-and-by he saw a multitude of very dreadfu\u0027 beasts, ilk ane o\u0027 them wi\u0027 twa heads, and on every head four horns. And he was sore frightened, and ran away from them as fast as he could; and glad was he when he came to a castle that stood on a hillock, wi\u0027 the door standing wide to the wa\u0027.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM016.json",
+                      "scene":  "[Dreadful two-headed beasts with horns fill the path]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM017",
+                      "description":  "[He enters a castle with its door wide open]",
+                      "caption":  "And he gaed into the castle for shelter, and there he saw an auld wife sitting beside the kitchen fire.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM017.json",
+                      "scene":  "[He enters a castle with its door wide open]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM018",
+                      "description":  "[An old woman sits by a fireplace, looking worried]",
+                      "caption":  "He asked the wife if he might stay there for the night, as he was tired wi\u0027 a lang journey; and the wife said he might, but it was not a good place for him to be in, as it belanged to the Red Etin, who was a very terrible beast, wi\u0027 three heads, that spared no living man he could get hold of.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM018.json",
+                      "scene":  "[An old woman sits by a fireplace, looking worried]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM019",
+                      "description":  "[The young man pleads with the old woman to hide him]",
+                      "caption":  "The young man would have gone away, but he was afraid of the beasts on the outside of the castle; so he beseeched the old woman to conceal him as well as she could, and not to tell the Etin that he was there.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM019.json",
+                      "scene":  "[The young man pleads with the old woman to hide him]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM020",
+                      "description":  "[He hides in a secret hole near the fireplace]",
+                      "caption":  "He thought, if he could put over the night, he might get away in the morning without meeting wi\u0027 the beasts, and so escape. But he had not been long in his hidy-hole before the awful Etin came in; and nae sooner was he in than he was heard crying:",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM020.json",
+                      "scene":  "[He hides in a secret hole near the fireplace]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM021",
+                      "description":  "[A three-headed monster enters the castle doorway]",
+                      "caption":  "\"Snouk but and snouk ben, I find the smell of an earthly man; Be he living, or be he dead, His heart this night shall kitchen my bread.\"",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM021.json",
+                      "scene":  "[A three-headed monster enters the castle doorway]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM022",
+                      "description":  "[The monster sniffs the air with all three heads]",
+                      "caption":  "\"Snouk but and snouk ben, I find the smell of an earthly man; Be he living, or be he dead, His heart this night shall kitchen my bread.\"",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM022.json",
+                      "scene":  "[The monster sniffs the air with all three heads]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM023",
+                      "description":  "[The Etin drags the young man from his hiding place]",
+                      "caption":  "The monster soon found the poor young man, and pulled him from his hole. And when he had got him out he told him that if he could answer him three questions his life should be spared.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM023.json",
+                      "scene":  "[The Etin drags the young man from his hiding place]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM024",
+                      "description":  "[The Etin looms over the frightened youth]",
+                      "caption":  "The first was: Whether Ireland or Scotland was first inhabited? The second was: Whether man was made for woman, or woman for man? The third was: Whether men or brutes were made first?",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM024.json",
+                      "scene":  "[The Etin looms over the frightened youth]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM025",
+                      "description":  "[The young man stands speechless before the monster]",
+                      "caption":  "The lad not being able to answer one of these questions, the Red Etin took a mace and knocked him on the head, and turned him into a pillar of stone.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM025.json",
+                      "scene":  "[The young man stands speechless before the monster]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM026",
+                      "description":  "[A stone pillar stands where the young man was]",
+                      "caption":  "The lad not being able to answer one of these questions, the Red Etin took a mace and knocked him on the head, and turned him into a pillar of stone.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM026.json",
+                      "scene":  "[A stone pillar stands where the young man was]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM027",
+                      "description":  "[The younger brother looks at a rusted knife]",
+                      "caption":  "On the morning after this happened the younger brither took out the knife to look at it, and he was grieved to find it a\u0027 brown wi\u0027 rust.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM027.json",
+                      "scene":  "[The younger brother looks at a rusted knife]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM028",
+                      "description":  "[The young man tells his mother he must go]",
+                      "caption":  "He told his mother that the time was now come for him to go away upon his travels also; so she requested him to take the can to the well for water, that she might bake a cake for him.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM028.json",
+                      "scene":  "[The young man tells his mother he must go]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM029",
+                      "description":  "[He carries a broken can just as his brother did]",
+                      "caption":  "The can being broken, he brought hame as little water as the other had done, and the cake was as little. She asked whether he would have the hale cake wi\u0027 her malison, or the half wi\u0027 her blessing; and, like his brither, he thought it best to have the hale cake, come o\u0027 the malison what might. So he gaed away; and everything happened to him that had happened to his brother!",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM029.json",
+                      "scene":  "[He carries a broken can just as his brother did]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM030",
+                      "description":  "[A fairy appears to the second widow\u0027s son]",
+                      "caption":  "The other widow and her son heard of a\u0027 that had happened frae a fairy, and the young man determined that he would also go upon his travels, and see if he could do anything to relieve his twa friends.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM030.json",
+                      "scene":  "[A fairy appears to the second widow\u0027s son]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM031",
+                      "description":  "[The mother sends her son with a can to the well]",
+                      "caption":  "So his mother gave him a can to go to the well and bring home water, that she might bake him a cake for his journey. And he gaed, and as he was bringing hame the water, a raven owre abune his head cried to him to look, and he would see that the water was running out.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM031.json",
+                      "scene":  "[The mother sends her son with a can to the well]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM032",
+                      "description":  "[The young man patches the can with clay]",
+                      "caption":  "And he was a young man of sense, and seeing the water running out, he took some clay and patched up the holes, so that he brought home enough water to bake a large cake.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM032.json",
+                      "scene":  "[The young man patches the can with clay]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM033",
+                      "description":  "[The mother offers half a large cake with a blessing]",
+                      "caption":  "When his mother put it to him to take the half-cake wi\u0027 her blessing, he took it in preference to having the hale wi\u0027 her malison; and yet the half was bigger than what the other lads had got a\u0027thegither.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM033.json",
+                      "scene":  "[The mother offers half a large cake with a blessing]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM034",
+                      "description":  "[He meets an old woman on the road]",
+                      "caption":  "So he gaed away on his journey; and after he had traveled a far way he met wi\u0027 an auld woman, that asked him if he would give her a bit of his bannock.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM034.json",
+                      "scene":  "[He meets an old woman on the road]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM035",
+                      "description":  "[He breaks bread and shares with the old woman]",
+                      "caption":  "And he said he would gladly do that, and so he gave her a piece of the bannock; and for that she gied him a magical wand, that she said might yet be of service to him if he took care to use it rightly.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM035.json",
+                      "scene":  "[He breaks bread and shares with the old woman]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM036",
+                      "description":  "[The fairy woman vanishes in a flash of light]",
+                      "caption":  "Then the auld woman, who was a fairy, told him a great deal that whould happen to him, and what he ought to do in a\u0027 circumstances; and after that she vanished in an instant out o\u0027 his sight.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM036.json",
+                      "scene":  "[The fairy woman vanishes in a flash of light]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM037",
+                      "description":  "[He approaches the old man herding sheep]",
+                      "caption":  "He gaed on a great way farther, and then he came up to the old man herding the sheep; and when he asked whose sheep these were, the answer was:",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM037.json",
+                      "scene":  "[He approaches the old man herding sheep]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM038",
+                      "description":  "[\"The Red Etin of Ireland\" with new final lines]",
+                      "caption":  "\"The Red Etin of Ireland Ance lived in Bellygan, And stole King Malcolm\u0027s daughter, The King of fair Scotland. He beats her, he binds her, He lays her on a band; And every day he dings her With a bright silver wand. Like Julian the Roman, He\u0027s one that fears no man, But now I fear his end is near, And destiny at hand; And you\u0027re to be, I plainly see, The heir of all his land.\"",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM038.json",
+                      "scene":  "[\"The Red Etin of Ireland\" with new final lines]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM039",
+                      "description":  "[The young man meets shepherds with swine and goats]",
+                      "caption":  "(Repeat the same inquiries to the man attending the swine and the man attending the goats, with the same answer in each case.)",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM039.json",
+                      "scene":  "[The young man meets shepherds with swine and goats]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM040",
+                      "description":  "[He walks boldly through the two-headed beasts]",
+                      "caption":  "When he came to the place where the monstrous beasts were standing, he did not stop nor run away, but went boldly through among them. One came up roaring with open mouth to devour him, when he struck it with his wand, and laid it in an instant dead at his feet.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM040.json",
+                      "scene":  "[He walks boldly through the two-headed beasts]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM041",
+                      "description":  "[He strikes down a beast with his magical wand]",
+                      "caption":  "One came up roaring with open mouth to devour him, when he struck it with his wand, and laid it in an instant dead at his feet.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM041.json",
+                      "scene":  "[He strikes down a beast with his magical wand]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM042",
+                      "description":  "[He arrives at the Etin\u0027s castle and knocks]",
+                      "caption":  "He soon came to the Etin\u0027s castle, where he knocked, and was admitted. The auld woman that sat by the fire warned him of the terrible Etin, and what had been the fate of the twa brithers; but he was not to be daunted.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM042.json",
+                      "scene":  "[He arrives at the Etin\u0027s castle and knocks]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM043",
+                      "description":  "[The three-headed Etin enters, sniffing]",
+                      "caption":  "The monster soon came in, saying: \"Snouk but and snouk ben, I find the smell of an earthly man; Be he living, or be he dead, His heart shall be kitchen to my bread.\"",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM043.json",
+                      "scene":  "[The three-headed Etin enters, sniffing]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM044",
+                      "description":  "[The Etin confronts the brave young man]",
+                      "caption":  "He quickly espied the young man, and bade him come forth on the floor. And then he put the three questions to him, but the young man had been told everything by the good fairy, so he was able to answer all the questions.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM044.json",
+                      "scene":  "[The Etin confronts the brave young man]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM045",
+                      "description":  "[The young man answers the three questions]",
+                      "caption":  "When the Etin found this he knew that his power was gone. The young man then took up the axe and hewed off the monster\u0027s three heads.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM045.json",
+                      "scene":  "[The young man answers the three questions]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM046",
+                      "description":  "[The hero swings an axe at the monster]",
+                      "caption":  "The young man then took up the axe and hewed off the monster\u0027s three heads.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM046.json",
+                      "scene":  "[The hero swings an axe at the monster]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM047",
+                      "description":  "[The old woman opens door after door of imprisoned ladies]",
+                      "caption":  "He next asked the old woman to show him where the King\u0027s daughters lay; and the old woman took him upstairs and opened a great many doors, and out of every door came a beautiful lady who had been imprisoned there by the Etin; and ane o\u0027 the ladies was the King\u0027s daughter.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM047.json",
+                      "scene":  "[The old woman opens door after door of imprisoned ladies]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM048",
+                      "description":  "[Two stone pillars stand in a low room]",
+                      "caption":  "She also took him down into a low room, and there stood two stone pillars that he had only to touch wi\u0027 his wand, when his two friends and neighbors started into life.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM048.json",
+                      "scene":  "[Two stone pillars stand in a low room]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM049",
+                      "description":  "[The hero touches the pillars with his wand]",
+                      "caption":  "She also took him down into a low room, and there stood two stone pillars that he had only to touch wi\u0027 his wand, when his two friends and neighbors started into life.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM049.json",
+                      "scene":  "[The hero touches the pillars with his wand]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM050",
+                      "description":  "[The freed prisoners rejoice together]",
+                      "caption":  "And the hale o\u0027 the prisoners were overjoyed at their deliverance, which they all acknowledged to be owing to the prudent young man.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM050.json",
+                      "scene":  "[The freed prisoners rejoice together]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM051",
+                      "description":  "[A grand procession walks toward the King\u0027s Court]",
+                      "caption":  "Next day they a\u0027 set out for the King\u0027s Court, and a gallant company they made.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM051.json",
+                      "scene":  "[A grand procession walks toward the King\u0027s Court]"
+                  },
+                  {
+                      "id":  "The_Red_Etin_MM052",
+                      "description":  "[The King marries his daughter to the hero]",
+                      "caption":  "And the King married his daughter to the young man that had delivered her, and gave a noble\u0027s daughter to ilk ane o\u0027 the other young men; and so they a\u0027 lived happily a\u0027 the rest o\u0027 their days.",
+                      "interpOrder":  false,
+                      "filename":  "The_Red_Etin_MM052.json",
+                      "scene":  "[The King marries his daughter to the hero]"
+                  }
+              ],
+    "height":  720
+}

@@ -1,0 +1,1442 @@
+{
+  "width": 720,
+  "height": 720,
+  "format": "png",
+  "name": "A Voyage to Lilliput",
+  "captionFontSize": 14,
+  "defaultTransitionDuration": 2000,
+  "pages": [
+    {
+      "id": "A_Voyage_To_Lilliput_MM001",
+      "filename": "A_Voyage_To_Lilliput_MM001.json",
+      "interpOrder": false,
+      "caption": "My father had a small estate in Nottinghamshire, and I was the third of four sons.",
+      "description": "[Young man studies at Cambridge]",
+      "scene": "[Young man studies at Cambridge]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM002",
+      "filename": "A_Voyage_To_Lilliput_MM002.json",
+      "interpOrder": false,
+      "caption": "He sent me to Cambridge at fourteen years old, and after studying there three years I was bound apprentice to Mr. Bates, a famous surgeon in London.",
+      "description": "[Apprentice to surgeon in London]",
+      "scene": "[Apprentice to surgeon in London]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM003",
+      "filename": "A_Voyage_To_Lilliput_MM003.json",
+      "interpOrder": false,
+      "caption": "There, as my father now and then sent me small sums of money, I spent them in learning navigation, and other arts useful to those who travel, as I always believed it would be some time or other my fortune to do.",
+      "description": "[Young man learns navigation]",
+      "scene": "[Young man learns navigation]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM004",
+      "filename": "A_Voyage_To_Lilliput_MM004.json",
+      "interpOrder": false,
+      "caption": "Three years after my leaving him my good master, Mr. Bates, recommended me as ship's surgeon to the \"Swallow,\" on which I voyaged three years.",
+      "description": "[Ship sails from Bristol]",
+      "scene": "[Ship sails from Bristol]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM005",
+      "filename": "A_Voyage_To_Lilliput_MM005.json",
+      "interpOrder": false,
+      "caption": "When I came back I settled in London, and, having taken part of a small house, I married Miss Mary Burton, daughter of Mr. Edmund Burton, hosier.",
+      "description": "[Marriage and settling in London]",
+      "scene": "[Marriage and settling in London]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM006",
+      "filename": "A_Voyage_To_Lilliput_MM006.json",
+      "interpOrder": false,
+      "caption": "But my good master Bates died two years after; and as I had few friends my business began to fail, and I determined to go again to sea.",
+      "description": "[Master Bates dies, business fails]",
+      "scene": "[Master Bates dies, business fails]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM007",
+      "filename": "A_Voyage_To_Lilliput_MM007.json",
+      "interpOrder": false,
+      "caption": "After several voyages, I accepted an offer from Captain W. Pritchard, master of the \"Antelope,\" who was making a voyage to the South Sea.",
+      "description": "[Setting sail on the Antelope]",
+      "scene": "[Setting sail on the Antelope]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM008",
+      "filename": "A_Voyage_To_Lilliput_MM008.json",
+      "interpOrder": false,
+      "caption": "We set sail from Bristol, May 4, 1699; and our voyage at first was very prosperous.",
+      "description": "[Sailing toward the East Indies]",
+      "scene": "[Sailing toward the East Indies]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM009",
+      "filename": "A_Voyage_To_Lilliput_MM009.json",
+      "interpOrder": false,
+      "caption": "But in our passage to the East Indies we were driven by a violent storm to the north-west of Van Diemen's Land.",
+      "description": "[Ship driven onto a rock by storm]",
+      "scene": "[Ship driven onto a rock by storm]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM010",
+      "filename": "A_Voyage_To_Lilliput_MM010.json",
+      "interpOrder": false,
+      "caption": "Twelve of our crew died from hard labor and bad food, and the rest were in a very weak condition.",
+      "description": "[Crew weakened by hard labor]",
+      "scene": "[Crew weakened by hard labor]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM011",
+      "filename": "A_Voyage_To_Lilliput_MM011.json",
+      "interpOrder": false,
+      "caption": "On the 5th of November, the weather being very hazy, the seamen spied a rock within 120 yards of the ship; but the wind was so strong that we were driven straight upon it, and immediately split.",
+      "description": "[Ship splits upon the rock]",
+      "scene": "[Ship splits upon the rock]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM012",
+      "filename": "A_Voyage_To_Lilliput_MM012.json",
+      "interpOrder": false,
+      "caption": "Six of the crew, of whom I was one, letting down the boat, got clear of the ship, and we rowed about three leagues, till we could work no longer.",
+      "description": "[Men lower the boat and escape]",
+      "scene": "[Men lower the boat and escape]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM013",
+      "filename": "A_Voyage_To_Lilliput_MM013.json",
+      "interpOrder": false,
+      "caption": "We therefore trusted ourselves to the mercy of the waves; and in about half an hour the boat was upset by a sudden squall.",
+      "description": "[Boat upset by sudden squall]",
+      "scene": "[Boat upset by sudden squall]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM014",
+      "filename": "A_Voyage_To_Lilliput_MM014.json",
+      "interpOrder": false,
+      "caption": "What became of my companions in the boat, or those who escaped on the rock or were left in the vessel, I cannot tell; but I conclude they were all lost.",
+      "description": "[Swimming alone toward shore]",
+      "scene": "[Swimming alone toward shore]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM015",
+      "filename": "A_Voyage_To_Lilliput_MM015.json",
+      "interpOrder": false,
+      "caption": "For my part, I swam as fortune directed me, and was pushed forward by wind and tide; but when I was able to struggle no longer I found myself within my depth.",
+      "description": "[Finding shore at evening]",
+      "scene": "[Finding shore at evening]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM016",
+      "filename": "A_Voyage_To_Lilliput_MM016.json",
+      "interpOrder": false,
+      "caption": "I reached the shore at last, about eight o'clock in the evening, and advanced nearly half a mile inland, but could not discover any sign of inhabitants.",
+      "description": "[Lying down on soft grass]",
+      "scene": "[Lying down on soft grass]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM017",
+      "filename": "A_Voyage_To_Lilliput_MM017.json",
+      "interpOrder": false,
+      "caption": "I was extremely tired, and with the heat of the weather I found myself much inclined to sleep.",
+      "description": "[Falling into deep sleep]",
+      "scene": "[Falling into deep sleep]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM018",
+      "filename": "A_Voyage_To_Lilliput_MM018.json",
+      "interpOrder": false,
+      "caption": "I lay down on the grass, which was very short and soft, and slept sounder than ever I did in my life for about nine hours.",
+      "description": "[Lying on short soft grass]",
+      "scene": "[Lying on short soft grass]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM019",
+      "filename": "A_Voyage_To_Lilliput_MM019.json",
+      "interpOrder": false,
+      "caption": "When I woke, it was just daylight. I attempted to rise, but could not.",
+      "description": "[Waking at daylight, unable to rise]",
+      "scene": "[Waking at daylight, unable to rise]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM020",
+      "filename": "A_Voyage_To_Lilliput_MM020.json",
+      "interpOrder": false,
+      "caption": "For as I happened to be lying on my back, I found my arms and legs were fastened on each side to the ground; and my hair, which was long and thick, tied down in the same manner.",
+      "description": "[Arms and legs tied to the ground]",
+      "scene": "[Arms and legs tied to the ground]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM021",
+      "filename": "A_Voyage_To_Lilliput_MM021.json",
+      "interpOrder": false,
+      "caption": "I could only look upward.",
+      "description": "[Looking upward at the sky]",
+      "scene": "[Looking upward at the sky]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM022",
+      "filename": "A_Voyage_To_Lilliput_MM022.json",
+      "interpOrder": false,
+      "caption": "The sun began to grow hot, and the light hurt my eyes. I heard a confused noise about me, but could see nothing except the sky.",
+      "description": "[Feeling something alive on my leg]",
+      "scene": "[Feeling something alive on my leg]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM023",
+      "filename": "A_Voyage_To_Lilliput_MM023.json",
+      "interpOrder": false,
+      "caption": "In a little time I felt something alive and moving on my left leg, which, advancing gently over my breast, came almost up to my chin, when, bending my eyes downward, I perceived it to be a human creature, not six inches high, with a bow and arrow in his hands, and a quiver at his back.",
+      "description": "[Small creature six inches tall]",
+      "scene": "[Small creature six inches tall]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM024",
+      "filename": "A_Voyage_To_Lilliput_MM024.json",
+      "interpOrder": false,
+      "caption": "In the meantime I felt at least forty more following the first.",
+      "description": "[Forty more tiny creatures follow]",
+      "scene": "[Forty more tiny creatures follow]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM025",
+      "filename": "A_Voyage_To_Lilliput_MM025.json",
+      "interpOrder": false,
+      "caption": "I was in the utmost astonishment, and roared so loud that they all ran back in a fright; and some of them were hurt with the falls they got by leaping from my sides upon the ground.",
+      "description": "[Roaring in astonishment]",
+      "scene": "[Roaring in astonishment]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM026",
+      "filename": "A_Voyage_To_Lilliput_MM026.json",
+      "interpOrder": false,
+      "caption": "However, they soon returned, and one of them, who ventured so far as to get a full sight of my face, lifted up his hands in admiration.",
+      "description": "[Tiny people venture to approach]",
+      "scene": "[Tiny people venture to approach]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM027",
+      "filename": "A_Voyage_To_Lilliput_MM027.json",
+      "interpOrder": false,
+      "caption": "I lay all this while in great uneasiness; but at length, struggling to get loose, I succeeded in breaking the strings that fastened my left arm to the ground.",
+      "description": "[Struggling to break the strings]",
+      "scene": "[Struggling to break the strings]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM028",
+      "filename": "A_Voyage_To_Lilliput_MM028.json",
+      "interpOrder": false,
+      "caption": "And at the same time, with a violent pull that gave me extreme pain, I a little loosened the strings that tied down my hair, so that I was just able to turn my head about two inches.",
+      "description": "[Loosening hair strings]",
+      "scene": "[Loosening hair strings]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM029",
+      "filename": "A_Voyage_To_Lilliput_MM029.json",
+      "interpOrder": false,
+      "caption": "But the creatures ran off a second time before I could seize them, whereupon there was a great shout.",
+      "description": "[Tiny people flee in fright]",
+      "scene": "[Tiny people flee in fright]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM030",
+      "filename": "A_Voyage_To_Lilliput_MM030.json",
+      "interpOrder": false,
+      "caption": "And in an instant I felt above a hundred arrows discharged on my left hand, which pricked me like so many needles.",
+      "description": "[Hundred arrows discharged at Gulliver]",
+      "scene": "[Hundred arrows discharged at Gulliver]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM031",
+      "filename": "A_Voyage_To_Lilliput_MM031.json",
+      "interpOrder": false,
+      "caption": "Moreover, they shot another flight into the air, of which some fell on my face, which I immediately covered with my left hand.",
+      "description": "[Shower of arrows into the air]",
+      "scene": "[Shower of arrows into the air]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM032",
+      "filename": "A_Voyage_To_Lilliput_MM032.json",
+      "interpOrder": false,
+      "caption": "When this shower of arrows was over I groaned with grief and pain.",
+      "description": "[Groaning with grief and pain]",
+      "scene": "[Groaning with grief and pain]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM033",
+      "filename": "A_Voyage_To_Lilliput_MM033.json",
+      "interpOrder": false,
+      "caption": "And then, striving again to get loose, they discharged another flight of arrows larger than the first, and some of them tried to stab me with their spears; but by good luck I had on a leather jacket, which they could not pierce.",
+      "description": "[Arrows and spears strike the leather jacket]",
+      "scene": "[Arrows and spears strike the leather jacket]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM034",
+      "filename": "A_Voyage_To_Lilliput_MM034.json",
+      "interpOrder": false,
+      "caption": "By this time I thought it most prudent to lie still till night, when, my left hand being already loose, I could easily free myself.",
+      "description": "[Lying still until night]",
+      "scene": "[Lying still until night]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM035",
+      "filename": "A_Voyage_To_Lilliput_MM035.json",
+      "interpOrder": false,
+      "caption": "And about four yards from me, for more than an hour, there was a knocking, like people at work.",
+      "description": "[Watching a stage set up nearby]",
+      "scene": "[Watching a stage set up nearby]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM036",
+      "filename": "A_Voyage_To_Lilliput_MM036.json",
+      "interpOrder": false,
+      "caption": "From this, one of them, who seemed to be a person of quality, made me a long speech, of which I could not understand a word.",
+      "description": "[Gentleman of quality makes a speech]",
+      "scene": "[Gentleman of quality makes a speech]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM037",
+      "filename": "A_Voyage_To_Lilliput_MM037.json",
+      "interpOrder": false,
+      "caption": "I answered in few words, but in the most submissive manner; and, being almost famished with hunger, I could not help showing my impatience by putting my finger frequently to my mouth.",
+      "description": "[Gulliver answers submissively]",
+      "scene": "[Gulliver answers submissively]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM038",
+      "filename": "A_Voyage_To_Lilliput_MM038.json",
+      "interpOrder": false,
+      "caption": "He understood me very well, and, descending from the stage, commanded that several ladders should be set against my sides, on which more than a hundred of the inhabitants mounted, and walked toward my mouth with baskets full of food.",
+      "description": "[Hundred inhabitants bring baskets of food]",
+      "scene": "[Hundred inhabitants bring baskets of food]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM039",
+      "filename": "A_Voyage_To_Lilliput_MM039.json",
+      "interpOrder": false,
+      "caption": "There were legs and shoulders like mutton but smaller than the wings of a lark. I ate them two or three at a mouthful, and took three loaves at a time.",
+      "description": "[Eating tiny legs and shoulders]",
+      "scene": "[Eating tiny legs and shoulders]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM040",
+      "filename": "A_Voyage_To_Lilliput_MM040.json",
+      "interpOrder": false,
+      "caption": "I then made a sign that I wanted something to drink.",
+      "description": "[Gulliver asks for something to drink]",
+      "scene": "[Gulliver asks for something to drink]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM041",
+      "filename": "A_Voyage_To_Lilliput_MM041.json",
+      "interpOrder": false,
+      "caption": "They slung up one of their largest hogsheads, then rolled it toward my hand, and beat out the top.",
+      "description": "[Small hogshead of wine]",
+      "scene": "[Small hogshead of wine]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM042",
+      "filename": "A_Voyage_To_Lilliput_MM042.json",
+      "interpOrder": false,
+      "caption": "I drank it off at a draught, which I might well do, for it did not hold half a pint.",
+      "description": "[Gulliver drinks entire hogshead]",
+      "scene": "[Gulliver drinks entire hogshead]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM043",
+      "filename": "A_Voyage_To_Lilliput_MM043.json",
+      "interpOrder": false,
+      "caption": "They brought me a second hogshead, which I drank, and made signs for more; but they had none to give me.",
+      "description": "[Second hogshead brought]",
+      "scene": "[Second hogshead brought]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM044",
+      "filename": "A_Voyage_To_Lilliput_MM044.json",
+      "interpOrder": false,
+      "caption": "After some time there appeared before me a person of high rank from his Imperial Majesty.",
+      "description": "[Noble person approaches with retinue]",
+      "scene": "[Noble person approaches with retinue]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM045",
+      "filename": "A_Voyage_To_Lilliput_MM045.json",
+      "interpOrder": false,
+      "caption": "His Excellency, having mounted my right leg, advanced to my face, with about a dozen of his retinue, and spoke about ten minutes, often pointing forward, which, as I afterward found, was toward the capital city.",
+      "description": "[Excellency speaks toward the capital]",
+      "scene": "[Excellency speaks toward the capital]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM046",
+      "filename": "A_Voyage_To_Lilliput_MM046.json",
+      "interpOrder": false,
+      "caption": "I made a sign with my hand that was loose, putting it to the other, to show that I desired my liberty.",
+      "description": "[Gulliver signals desire for liberty]",
+      "scene": "[Gulliver signals desire for liberty]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM047",
+      "filename": "A_Voyage_To_Lilliput_MM047.json",
+      "interpOrder": false,
+      "caption": "He seemed to understand me well enough, for he shook his head, though he made other signs to let me know that I should have meat and drink enough, and very good treatment.",
+      "description": "[Excellency shakes his head]",
+      "scene": "[Excellency shakes his head]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM048",
+      "filename": "A_Voyage_To_Lilliput_MM048.json",
+      "interpOrder": false,
+      "caption": "But when I felt the smart of their arrows on my face and hands, which were all in blisters and observed likewise that the number of my enemies increased, I gave tokens to let them know that they might do with me what they pleased.",
+      "description": "[Gulliver decides to submit]",
+      "scene": "[Gulliver decides to submit]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM049",
+      "filename": "A_Voyage_To_Lilliput_MM049.json",
+      "interpOrder": false,
+      "caption": "Then they daubed my face and hands with a sweet-smelling ointment, which in a few minutes removed all the smarts of the arrows.",
+      "description": "[Sweet-smelling ointment applied]",
+      "scene": "[Sweet-smelling ointment applied]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM050",
+      "filename": "A_Voyage_To_Lilliput_MM050.json",
+      "interpOrder": false,
+      "caption": "The relief from pain and hunger made me drowsy, and presently I fell asleep.",
+      "description": "[Falling into deep sleep from wine]",
+      "scene": "[Falling into deep sleep from wine]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM051",
+      "filename": "A_Voyage_To_Lilliput_MM051.json",
+      "interpOrder": false,
+      "caption": "It seems that, when I was discovered sleeping on the ground after my landing, the Emperor had early notice of it, and determined that I should be tied in the manner I have related.",
+      "description": "[Carpenters build a wooden engine]",
+      "scene": "[Carpenters build a wooden engine]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM052",
+      "filename": "A_Voyage_To_Lilliput_MM052.json",
+      "interpOrder": false,
+      "caption": "Five hundred carpenters and engineers were immediately set to work to prepare the engine. It was a frame of wood, raised three inches from the ground, about seven feet long and four wide, moving upon twenty-two wheels.",
+      "description": "[Engine raised on twenty-two wheels]",
+      "scene": "[Engine raised on twenty-two wheels]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM053",
+      "filename": "A_Voyage_To_Lilliput_MM053.json",
+      "interpOrder": false,
+      "caption": "Eighty poles were erected for this purpose, and very strong cords fastened to bandages which the workmen had tied round my neck, hands, body, and legs.",
+      "description": "[Nine hundred men hoist Gulliver with pulleys]",
+      "scene": "[Nine hundred men hoist Gulliver with pulleys]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM054",
+      "filename": "A_Voyage_To_Lilliput_MM054.json",
+      "interpOrder": false,
+      "caption": "Nine hundred of the strongest men were employed to draw up these cords by pulleys fastened on the poles, and in less than three hours I was raised and slung into the engine, and there tied fast.",
+      "description": "[Gulliver raised onto the engine]",
+      "scene": "[Gulliver raised onto the engine]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM055",
+      "filename": "A_Voyage_To_Lilliput_MM055.json",
+      "interpOrder": false,
+      "caption": "Fifteen hundred of the Emperor's largest horses, each about four inches and a half high, were then employed to draw me toward the capital.",
+      "description": "[Fifteen hundred horses pull the carriage]",
+      "scene": "[Fifteen hundred horses pull the carriage]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM056",
+      "filename": "A_Voyage_To_Lilliput_MM056.json",
+      "interpOrder": false,
+      "caption": "But while all this was done I still lay in a deep sleep, and I did not wake till four hours after we began our journey.",
+      "description": "[Gulliver sleeps during the journey]",
+      "scene": "[Gulliver sleeps during the journey]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM057",
+      "filename": "A_Voyage_To_Lilliput_MM057.json",
+      "interpOrder": false,
+      "caption": "The Emperor and all his Court came out to meet us when we reached the capital; but his great officials would not suffer his Majesty to risk his person by mounting on my body.",
+      "description": "[Emperor and court come out to meet]",
+      "scene": "[Emperor and court come out to meet]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM058",
+      "filename": "A_Voyage_To_Lilliput_MM058.json",
+      "interpOrder": false,
+      "caption": "Near the great gate, through which I could easily creep, they fixed ninety-one chains, like those which hang to a lady's watch, which were locked to my left leg with thirty-six padlocks.",
+      "description": "[Chains locked to my left leg]",
+      "scene": "[Chains locked to my left leg]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM059",
+      "filename": "A_Voyage_To_Lilliput_MM059.json",
+      "interpOrder": false,
+      "caption": "And when the workmen found it was impossible for me to break loose, they cut all the strings that bound me.",
+      "description": "[Strings cut, Gulliver rises]",
+      "scene": "[Strings cut, Gulliver rises]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM060",
+      "filename": "A_Voyage_To_Lilliput_MM060.json",
+      "interpOrder": false,
+      "caption": "Then I rose up, feeling as melancholy as ever I did in my life.",
+      "description": "[Gulliver rises and walks]",
+      "scene": "[Gulliver rises and walks]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM061",
+      "filename": "A_Voyage_To_Lilliput_MM061.json",
+      "interpOrder": false,
+      "caption": "But the noise and astonishment of the people on seeing me rise and walk were inexpressible.",
+      "description": "[People astonished at Gulliver standing]",
+      "scene": "[People astonished at Gulliver standing]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM062",
+      "filename": "A_Voyage_To_Lilliput_MM062.json",
+      "interpOrder": false,
+      "caption": "The Emperor, advancing toward me from among his courtiers, all most magnificently clad, surveyed me with great admiration, but kept beyond the length of my chain.",
+      "description": "[Emperor surveys Gulliver with admiration]",
+      "scene": "[Emperor surveys Gulliver with admiration]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM063",
+      "filename": "A_Voyage_To_Lilliput_MM063.json",
+      "interpOrder": false,
+      "caption": "He was taller by about the breadth of my nail than any of his Court, which alone was enough to strike awe into the beholders, and graceful and majestic.",
+      "description": "[Emperor in golden helmet with sword]",
+      "scene": "[Emperor in golden helmet with sword]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM064",
+      "filename": "A_Voyage_To_Lilliput_MM064.json",
+      "interpOrder": false,
+      "caption": "The better to behold him, I lay down on my side, so that my face was level with his, and he stood three yards off.",
+      "description": "[Gulliver lies down to face the Emperor]",
+      "scene": "[Gulliver lies down to face the Emperor]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM065",
+      "filename": "A_Voyage_To_Lilliput_MM065.json",
+      "interpOrder": false,
+      "caption": "His dress was very simple; but he wore a light helmet of gold, adorned with jewels and a plume.",
+      "description": "[Emperor in simple dress with jeweled helmet]",
+      "scene": "[Emperor in simple dress with jeweled helmet]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM066",
+      "filename": "A_Voyage_To_Lilliput_MM066.json",
+      "interpOrder": false,
+      "caption": "He held his sword drawn in his hand, to defend himself if I should break loose; it was almost three inches long, and the hilt was of gold, enriched with diamonds.",
+      "description": "[Sword drawn, nearly three inches long]",
+      "scene": "[Sword drawn, nearly three inches long]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM067",
+      "filename": "A_Voyage_To_Lilliput_MM067.json",
+      "interpOrder": false,
+      "caption": "His voice was shrill, but very clear. His Imperial Majesty spoke often to me, and I answered; but neither of us could understand a word.",
+      "description": "[Neither understanding the other]",
+      "scene": "[Neither understanding the other]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM068",
+      "filename": "A_Voyage_To_Lilliput_MM068.json",
+      "interpOrder": false,
+      "caption": "After about two hours the Court retired, and I was left with a strong guard to keep away the crowd.",
+      "description": "[Court retires, guard remains]",
+      "scene": "[Court retires, guard remains]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM069",
+      "filename": "A_Voyage_To_Lilliput_MM069.json",
+      "interpOrder": false,
+      "caption": "Some of whom had had the impudence to shoot their arrows at me as I sat by the door of my house.",
+      "description": "[Impudent people shoot arrows]",
+      "scene": "[Impudent people shoot arrows]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM070",
+      "filename": "A_Voyage_To_Lilliput_MM070.json",
+      "interpOrder": false,
+      "caption": "But the colonel ordered six of them to be seized and delivered bound into my hands.",
+      "description": "[Six arrow-shooters seized]",
+      "scene": "[Six arrow-shooters seized]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM071",
+      "filename": "A_Voyage_To_Lilliput_MM071.json",
+      "interpOrder": false,
+      "caption": "I put five of them into my coat pocket; and as to the sixth, I made a face as if I would eat him alive.",
+      "description": "[Gulliver pretends to eat one]",
+      "scene": "[Gulliver pretends to eat one]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM072",
+      "filename": "A_Voyage_To_Lilliput_MM072.json",
+      "interpOrder": false,
+      "caption": "The poor man screamed terribly, and the colonel and his officers were much distressed, especially when they saw me take out my penknife.",
+      "description": "[Terrified prisoner screams]",
+      "scene": "[Terrified prisoner screams]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM073",
+      "filename": "A_Voyage_To_Lilliput_MM073.json",
+      "interpOrder": false,
+      "caption": "But I soon set them at ease, for, cutting the strings he was bound with, I put him gently on the ground, and away he ran.",
+      "description": "[Gulliver sets them free]",
+      "scene": "[Gulliver sets them free]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM074",
+      "filename": "A_Voyage_To_Lilliput_MM074.json",
+      "interpOrder": false,
+      "caption": "I treated the rest in the same manner, taking them one by one out of my pocket; and I saw that both the soldiers and people were delighted at this mark of my kindness.",
+      "description": "[People delighted by Gulliver's kindness]",
+      "scene": "[People delighted by Gulliver's kindness]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM075",
+      "filename": "A_Voyage_To_Lilliput_MM075.json",
+      "interpOrder": false,
+      "caption": "Toward night I got with some difficulty into my house, where I lay on the ground, as I had to do for a fortnight, till a bed was prepared for me out of six hundred beds of the ordinary measure.",
+      "description": "[Lying on the ground for a fortnight]",
+      "scene": "[Lying on the ground for a fortnight]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM076",
+      "filename": "A_Voyage_To_Lilliput_MM076.json",
+      "interpOrder": false,
+      "caption": "Six hundred servants were appointed me, and three hundred tailors made me a suit of clothes.",
+      "description": "[Six hundred servants attend Gulliver]",
+      "scene": "[Six hundred servants attend Gulliver]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM077",
+      "filename": "A_Voyage_To_Lilliput_MM077.json",
+      "interpOrder": false,
+      "caption": "Moreover, six of his Majesty's greatest scholars were employed to teach me their language, so that soon I was able to converse after a fashion with the Emperor.",
+      "description": "[Scholars teach Gulliver their language]",
+      "scene": "[Scholars teach Gulliver their language]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM078",
+      "filename": "A_Voyage_To_Lilliput_MM078.json",
+      "interpOrder": false,
+      "caption": "The first words I learned were to desire that he would please to give me my liberty, which I every day repeated on my knees.",
+      "description": "[Gulliver begs for liberty on his knees]",
+      "scene": "[Gulliver begs for liberty on his knees]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM079",
+      "filename": "A_Voyage_To_Lilliput_MM079.json",
+      "interpOrder": false,
+      "caption": "But he answered that this must be a work of time, and that first I must swear a peace with him and his kingdom.",
+      "description": "[Emperor says it must be a work of time]",
+      "scene": "[Emperor says it must be a work of time]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM080",
+      "filename": "A_Voyage_To_Lilliput_MM080.json",
+      "interpOrder": false,
+      "caption": "He told me also that by the laws of the nation I must be searched by two of his officers, and that as this could not be done without my help, he trusted them in my hands.",
+      "description": "[Two officers search Gulliver's pockets]",
+      "scene": "[Two officers search Gulliver's pockets]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM081",
+      "filename": "A_Voyage_To_Lilliput_MM081.json",
+      "interpOrder": false,
+      "caption": "I took up the two officers, and put them into my coat pockets.",
+      "description": "[Gulliver places officers in coat pockets]",
+      "scene": "[Gulliver places officers in coat pockets]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM082",
+      "filename": "A_Voyage_To_Lilliput_MM082.json",
+      "interpOrder": false,
+      "caption": "These gentlemen, having pen, ink, and paper about them, made an exact list of everything they saw.",
+      "description": "[Officers list everything they find]",
+      "scene": "[Officers list everything they find]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM083",
+      "filename": "A_Voyage_To_Lilliput_MM083.json",
+      "interpOrder": false,
+      "caption": "In the right coat pocket of the great Man-Mountain we found only one great piece of coarse cloth, large enough to cover the carpet of your Majesty's chief room of state.",
+      "description": "[Right pocket: piece of coarse cloth]",
+      "scene": "[Right pocket: piece of coarse cloth]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM084",
+      "filename": "A_Voyage_To_Lilliput_MM084.json",
+      "interpOrder": false,
+      "caption": "In the left pocket we saw a huge silver chest, with a silver cover, which we could not lift.",
+      "description": "[Left pocket: huge silver chest]",
+      "scene": "[Left pocket: huge silver chest]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM085",
+      "filename": "A_Voyage_To_Lilliput_MM085.json",
+      "interpOrder": false,
+      "caption": "In his right waistcoat pocket we found a number of white thin substances, folded one over another, about the size of three men, tied with a strong cable, and marked with black figures, which we humbly conceive to be writings.",
+      "description": "[Right waistcoat pocket: papers]",
+      "scene": "[Right waistcoat pocket: papers]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM086",
+      "filename": "A_Voyage_To_Lilliput_MM086.json",
+      "interpOrder": false,
+      "caption": "In the left there was a sort of engine, from the back of which extended twenty long poles, with which, we conjecture, the Man-Mountain combs his head.",
+      "description": "[Left pocket: engine with twenty poles]",
+      "scene": "[Left pocket: engine with twenty poles]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM087",
+      "filename": "A_Voyage_To_Lilliput_MM087.json",
+      "interpOrder": false,
+      "caption": "In the smaller pocket on the right side were several round flat pieces of white and red metal, of different sizes.",
+      "description": "[Right side: round metal pieces]",
+      "scene": "[Right side: round metal pieces]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM088",
+      "filename": "A_Voyage_To_Lilliput_MM088.json",
+      "interpOrder": false,
+      "caption": "From another pocket hung a huge silver chain, with a wonderful kind of engine fastened to it, a globe half silver and half of some transparent metal.",
+      "description": "[Silver chain with ticking engine]",
+      "scene": "[Silver chain with ticking engine]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM089",
+      "filename": "A_Voyage_To_Lilliput_MM089.json",
+      "interpOrder": false,
+      "caption": "This engine made an incessant noise, like a water-mill, and we conjecture it is either some unknown animal, or the god he worships.",
+      "description": "[Engine makes noise like watermill]",
+      "scene": "[Engine makes noise like watermill]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM090",
+      "filename": "A_Voyage_To_Lilliput_MM090.json",
+      "interpOrder": false,
+      "caption": "I had one private pocket which escaped their search, containing a pair of spectacles and a small spy-glass.",
+      "description": "[Gulliver keeps spectacles hidden]",
+      "scene": "[Gulliver keeps spectacles hidden]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM091",
+      "filename": "A_Voyage_To_Lilliput_MM091.json",
+      "interpOrder": false,
+      "caption": "My gentleness and good behavior gained so far on the Emperor and his Court, and, indeed, on the people in general, that I began to have hopes of getting my liberty in a short time.",
+      "description": "[Children play hide-and-seek in Gulliver's hair]",
+      "scene": "[Children play hide-and-seek in Gulliver's hair]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM092",
+      "filename": "A_Voyage_To_Lilliput_MM092.json",
+      "interpOrder": false,
+      "caption": "I would sometimes lie down and let five or six of them dance on my hand; and at last the boys and girls ventured to come and play at hide-and-seek in my hair.",
+      "description": "[Five or six dance on Gulliver's hand]",
+      "scene": "[Five or six dance on Gulliver's hand]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM093",
+      "filename": "A_Voyage_To_Lilliput_MM093.json",
+      "interpOrder": false,
+      "caption": "The horses of the army and of the royal stables were no longer shy, having been daily led before me; and one of the Emperor's huntsmen, on a large courser, took my foot, shoe and all.",
+      "description": "[Huntsman leaps on Gulliver's foot]",
+      "scene": "[Huntsman leaps on Gulliver's foot]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM094",
+      "filename": "A_Voyage_To_Lilliput_MM094.json",
+      "interpOrder": false,
+      "caption": "I took nine sticks, and fixed them firmly in the ground in a square. Then I took four other sticks, and tied them parallel at each corner, about two feet from the ground.",
+      "description": "[Gulliver creates handkerchief stage]",
+      "scene": "[Gulliver creates handkerchief stage]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM095",
+      "filename": "A_Voyage_To_Lilliput_MM095.json",
+      "interpOrder": false,
+      "caption": "I fastened my handkerchief to the nine sticks that stood erect, and extended it on all sides till it was as tight as the top of a drum.",
+      "description": "[Horsemen exercise on handkerchief]",
+      "scene": "[Horsemen exercise on handkerchief]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM096",
+      "filename": "A_Voyage_To_Lilliput_MM096.json",
+      "interpOrder": false,
+      "caption": "And I desired the Emperor to let a troop of his best horse, twenty-four in number, come and exercise upon this plain.",
+      "description": "[Emperor watches with delight]",
+      "scene": "[Emperor watches with delight]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM097",
+      "filename": "A_Voyage_To_Lilliput_MM097.json",
+      "interpOrder": false,
+      "caption": "Fortunately no accident happened, only once a fiery horse, pawing with his hoof, struck a hole in my handkerchief, and overthrew his rider and himself.",
+      "description": "[Fiery horse strikes a hole]",
+      "scene": "[Fiery horse strikes a hole]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM098",
+      "filename": "A_Voyage_To_Lilliput_MM098.json",
+      "interpOrder": false,
+      "caption": "But I immediately relieved them both, and covering the hole with one hand, I set down the troop with the other as I had taken them up.",
+      "description": "[Gulliver rescues horse and rider]",
+      "scene": "[Gulliver rescues horse and rider]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM099",
+      "filename": "A_Voyage_To_Lilliput_MM099.json",
+      "interpOrder": false,
+      "caption": "And the Emperor was so much delighted that he ordered this entertainment to be repeated several days, and persuaded the Empress herself to let me hold her in her chair within two yards of the stage.",
+      "description": "[Empress watches from her chair]",
+      "scene": "[Empress watches from her chair]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM100",
+      "filename": "A_Voyage_To_Lilliput_MM100.json",
+      "interpOrder": false,
+      "caption": "I had sent so many petitions for my liberty that his Majesty at length mentioned the matter in a full council.",
+      "description": "[Gulliver petitions for liberty]",
+      "scene": "[Gulliver petitions for liberty]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM101",
+      "filename": "A_Voyage_To_Lilliput_MM101.json",
+      "interpOrder": false,
+      "caption": "It was opposed by none except Skyresh Bolgolam, admiral of the realm, who was pleased without any provocation to be my mortal enemy.",
+      "description": "[Admiral opposes Gulliver's freedom]",
+      "scene": "[Admiral opposes Gulliver's freedom]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM102",
+      "filename": "A_Voyage_To_Lilliput_MM102.json",
+      "interpOrder": false,
+      "caption": "However, he agreed at length, though he succeeded in himself drawing up the conditions on which I should be set free.",
+      "description": "[Swearing oath of conditions]",
+      "scene": "[Swearing oath of conditions]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM103",
+      "filename": "A_Voyage_To_Lilliput_MM103.json",
+      "interpOrder": false,
+      "caption": "After they were read I was requested to swear to perform them in the method prescribed by their laws, which was to hold my right foot in my left hand.",
+      "description": "[Gulliver holds foot in left hand]",
+      "scene": "[Gulliver holds foot in left hand]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM104",
+      "filename": "A_Voyage_To_Lilliput_MM104.json",
+      "interpOrder": false,
+      "caption": "And to place the middle finger of my right hand on the crown of my head, and my thumb on the top of my right ear.",
+      "description": "[Hand on crown of head, thumb on ear]",
+      "scene": "[Hand on crown of head, thumb on ear]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM105",
+      "filename": "A_Voyage_To_Lilliput_MM105.json",
+      "interpOrder": false,
+      "caption": "But I have made a translation of the conditions, which I here offer to the public.",
+      "description": "[Articles of freedom read aloud]",
+      "scene": "[Articles of freedom read aloud]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM106",
+      "filename": "A_Voyage_To_Lilliput_MM106.json",
+      "interpOrder": false,
+      "caption": "I swore to these articles with great cheerfulness, whereupon my chains were immediately unlocked, and I was at full liberty.",
+      "description": "[Gulliver freed from chains]",
+      "scene": "[Gulliver freed from chains]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM107",
+      "filename": "A_Voyage_To_Lilliput_MM107.json",
+      "interpOrder": false,
+      "caption": "One morning, about a fortnight after I had obtained my freedom, Reldresal, the Emperor's secretary for private affairs, came to my house.",
+      "description": "[Reldresal visits Gulliver]",
+      "scene": "[Reldresal visits Gulliver]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM108",
+      "filename": "A_Voyage_To_Lilliput_MM108.json",
+      "interpOrder": false,
+      "caption": "He ordered his coach to wait at a distance, and desired that I would give him an hour's audience.",
+      "description": "[Gulliver holds Reldresal in his hand]",
+      "scene": "[Gulliver holds Reldresal in his hand]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM109",
+      "filename": "A_Voyage_To_Lilliput_MM109.json",
+      "interpOrder": false,
+      "caption": "I offered to lie down that he might the more conveniently reach my ear; but he chose rather to let me hold him in his hand during our conversation.",
+      "description": "[Gulliver begs for liberty]",
+      "scene": "[Gulliver begs for liberty]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM110",
+      "filename": "A_Voyage_To_Lilliput_MM110.json",
+      "interpOrder": false,
+      "caption": "He began with compliments on my liberty, but he added that, save for the present state of things at Court, perhaps I might not have obtained it so soon.",
+      "description": "[Reldresal explains the war with Blefuscu]",
+      "scene": "[Reldresal explains the war with Blefuscu]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM111",
+      "filename": "A_Voyage_To_Lilliput_MM111.json",
+      "interpOrder": false,
+      "caption": "For as to what we have heard you say, that there are other kingdoms in the world, inhabited by human creatures as large as yourself, our philosophers are very doubtful.",
+      "description": "[Story of the egg-breaking dispute]",
+      "scene": "[Story of the egg-breaking dispute]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM112",
+      "filename": "A_Voyage_To_Lilliput_MM112.json",
+      "interpOrder": false,
+      "caption": "It is allowed on all hands that the primitive way of breaking eggs was upon the larger end; but his present Majesty's grandfather, while he was a boy, going to eat an egg, and breaking it according to the ancient practice, happened to cut one of his fingers.",
+      "description": "[Big-endians versus Little-endians]",
+      "scene": "[Big-endians versus Little-endians]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM113",
+      "filename": "A_Voyage_To_Lilliput_MM113.json",
+      "interpOrder": false,
+      "caption": "Whereupon the Emperor, his father, made a law commanding all his subjects to break the smaller end of their eggs.",
+      "description": "[Law decreed to break at smaller end]",
+      "scene": "[Law decreed to break at smaller end]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM114",
+      "filename": "A_Voyage_To_Lilliput_MM114.json",
+      "interpOrder": false,
+      "caption": "The people so highly resented this law that there have been six rebellions raised on that account, wherein one emperor lost his life, and another his crown.",
+      "description": "[Six rebellions over eggs]",
+      "scene": "[Six rebellions over eggs]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM115",
+      "filename": "A_Voyage_To_Lilliput_MM115.json",
+      "interpOrder": false,
+      "caption": "But these rebels, the Bigendians, have found so much encouragement at the Emperor of Blefuscu's Court, to which they always fled for refuge.",
+      "description": "[Big-endians flee to Blefuscu]",
+      "scene": "[Big-endians flee to Blefuscu]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM116",
+      "filename": "A_Voyage_To_Lilliput_MM116.json",
+      "interpOrder": false,
+      "caption": "And now the Blefuscudians have equipped a large fleet, and are preparing to descend upon us.",
+      "description": "[Blefuscu prepares a fleet]",
+      "scene": "[Blefuscu prepares a fleet]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM117",
+      "filename": "A_Voyage_To_Lilliput_MM117.json",
+      "interpOrder": false,
+      "caption": "I desired the secretary to present my humble duty to the Emperor, and to let him know that I was ready, at the risk of my life, to defend him against all invaders.",
+      "description": "[Gulliver volunteers to defend Lilliput]",
+      "scene": "[Gulliver volunteers to defend Lilliput]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM118",
+      "filename": "A_Voyage_To_Lilliput_MM118.json",
+      "interpOrder": false,
+      "caption": "It was not long before I communicated to his Majesty the plan I formed for seizing the enemy's whole fleet.",
+      "description": "[Gulliver forms a plan to seize the fleet]",
+      "scene": "[Gulliver forms a plan to seize the fleet]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM119",
+      "filename": "A_Voyage_To_Lilliput_MM119.json",
+      "interpOrder": false,
+      "caption": "I walked toward the coast, where, lying down behind a hillock, I took out my spy-glass, and viewed the enemy's fleet at anchor.",
+      "description": "[Gulliver walks toward the coast]",
+      "scene": "[Gulliver walks toward the coast]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM120",
+      "filename": "A_Voyage_To_Lilliput_MM120.json",
+      "interpOrder": false,
+      "caption": "I then came back to my house and gave orders for a great quantity of the strongest cables and bars of iron.",
+      "description": "[Gulliver wades into the sea]",
+      "scene": "[Gulliver wades into the sea]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM121",
+      "filename": "A_Voyage_To_Lilliput_MM121.json",
+      "interpOrder": false,
+      "caption": "Having thus fixed fifty hooks to as many cables, I went back to the coast, and taking off my coat, shoes, and stockings, walked into the sea in my leather jacket.",
+      "description": "[Attaching hooks to ships]",
+      "scene": "[Attaching hooks to ships]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM122",
+      "filename": "A_Voyage_To_Lilliput_MM122.json",
+      "interpOrder": false,
+      "caption": "The enemy was so frightened when they saw me that they leaped out of their ships and swam ashore.",
+      "description": "[Enemy leapes from ships and swims ashore]",
+      "scene": "[Enemy leapes from ships and swims ashore]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM123",
+      "filename": "A_Voyage_To_Lilliput_MM123.json",
+      "interpOrder": false,
+      "caption": "Then, fastening a hook to the hole at the prow of each ship, I tied all the cords together at the end.",
+      "description": "[Gulliver fastens hooks to each ship]",
+      "scene": "[Gulliver fastens hooks to each ship]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM124",
+      "filename": "A_Voyage_To_Lilliput_MM124.json",
+      "interpOrder": false,
+      "caption": "Meanwhile the enemy discharged several thousand arrows, many of which stuck in my hands and face.",
+      "description": "[Arrows strike Gulliver's hands and face]",
+      "scene": "[Arrows strike Gulliver's hands and face]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM125",
+      "filename": "A_Voyage_To_Lilliput_MM125.json",
+      "interpOrder": false,
+      "caption": "My greatest fear was for my eyes, which I should have lost if I had not suddenly thought of the pair of spectacles which had escaped the Emperor's searchers.",
+      "description": "[Gulliver puts on spectacles for protection]",
+      "scene": "[Gulliver puts on spectacles for protection]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM126",
+      "filename": "A_Voyage_To_Lilliput_MM126.json",
+      "interpOrder": false,
+      "caption": "These I took out and fastened upon my nose, and thus armed went on with my work in spite of the arrows.",
+      "description": "[Gulliver cuts anchor cables with knife]",
+      "scene": "[Gulliver cuts anchor cables with knife]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM127",
+      "filename": "A_Voyage_To_Lilliput_MM127.json",
+      "interpOrder": false,
+      "caption": "Then, taking the knot in my hand, I began to pull; but not a ship would stir, for they were too fast held by their anchors.",
+      "description": "[Gulliver pulls fifty ships toward Lilliput]",
+      "scene": "[Gulliver pulls fifty ships toward Lilliput]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM128",
+      "filename": "A_Voyage_To_Lilliput_MM128.json",
+      "interpOrder": false,
+      "caption": "When the Blefuscudians saw the fleet moving in order, and me pulling at the end, they set up a scream of grief and despair.",
+      "description": "[Blefuscuans scream in despair]",
+      "scene": "[Blefuscuans scream in despair]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM129",
+      "filename": "A_Voyage_To_Lilliput_MM129.json",
+      "interpOrder": false,
+      "caption": "When I had got out of danger I stopped awhile to pick out the arrows that stuck in my hands and face.",
+      "description": "[Gulliver picks arrows from his hands]",
+      "scene": "[Gulliver picks arrows from his hands]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM130",
+      "filename": "A_Voyage_To_Lilliput_MM130.json",
+      "interpOrder": false,
+      "caption": "I then took off my spectacles, and after waiting about an hour, till the tide was a little fallen, I waded on to the royal port of Lilliput.",
+      "description": "[Wading toward the royal port]",
+      "scene": "[Wading toward the royal port]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM131",
+      "filename": "A_Voyage_To_Lilliput_MM131.json",
+      "interpOrder": false,
+      "caption": "The Emperor and his whole Court stood on the shore awaiting me.",
+      "description": "[Emperor waits on the shore]",
+      "scene": "[Emperor waits on the shore]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM132",
+      "filename": "A_Voyage_To_Lilliput_MM132.json",
+      "interpOrder": false,
+      "caption": "They saw the ships move forward in a large half-moon, but could not discern me, who, in the middle of the channel, was under water up to my neck.",
+      "description": "[Gulliver holds up the fleet cable]",
+      "scene": "[Gulliver holds up the fleet cable]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM133",
+      "filename": "A_Voyage_To_Lilliput_MM133.json",
+      "interpOrder": false,
+      "caption": "The Prince received me at my landing with all possible joy, and made me a Nardal on the spot, which is the highest title of honor among them.",
+      "description": "[Gulliver cries \"Long live the Emperor\"]",
+      "scene": "[Gulliver cries \"Long live the Emperor\"]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM134",
+      "filename": "A_Voyage_To_Lilliput_MM134.json",
+      "interpOrder": false,
+      "caption": "His Majesty desired that I would take some opportunity to bring all the rest of his enemy's ships into his ports, and seemed to think of nothing less than conquering the whole Empire of Blefuscu.",
+      "description": "[Gulliver refuses to conquer Blefuscu]",
+      "scene": "[Gulliver refuses to conquer Blefuscu]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM135",
+      "filename": "A_Voyage_To_Lilliput_MM135.json",
+      "interpOrder": false,
+      "caption": "But I plainly protested that I would never be the means of bringing a free and brave people into slavery; and though the wisest of the Ministers were of my opinion, my open refusal was so opposed to his Majesty's ambition that he could never forgive me.",
+      "description": "[Gulliver protests slavery]",
+      "scene": "[Gulliver protests slavery]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM136",
+      "filename": "A_Voyage_To_Lilliput_MM136.json",
+      "interpOrder": false,
+      "caption": "And from this time a plot began between himself and those of his Ministers who were my enemies, that nearly ended in my utter destruction.",
+      "description": "[Plot against Gulliver begins]",
+      "scene": "[Plot against Gulliver begins]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM137",
+      "filename": "A_Voyage_To_Lilliput_MM137.json",
+      "interpOrder": false,
+      "caption": "About three weeks after this exploit there arrived an embassy from Blefuscu, with humble offers of peace, which was soon concluded.",
+      "description": "[Ambassadors from Blefuscu arrive]",
+      "scene": "[Ambassadors from Blefuscu arrive]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM138",
+      "filename": "A_Voyage_To_Lilliput_MM138.json",
+      "interpOrder": false,
+      "caption": "Having been privately told that I had befriended them, they made me a visit, and paying me many compliments on my valor and generosity, invited me to their kingdom.",
+      "description": "[Ambassadors visit Gulliver]",
+      "scene": "[Ambassadors visit Gulliver]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM139",
+      "filename": "A_Voyage_To_Lilliput_MM139.json",
+      "interpOrder": false,
+      "caption": "I asked them to present my most humble respects to the Emperor their master, whose royal person I resolved to attend before I returned to my own country.",
+      "description": "[Gulliver asks permission to visit Blefuscu]",
+      "scene": "[Gulliver asks permission to visit Blefuscu]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM140",
+      "filename": "A_Voyage_To_Lilliput_MM140.json",
+      "interpOrder": false,
+      "caption": "Accordingly, the next time I had the honor to see our Emperor I desired his general permission to visit the Blefuscudian monarch.",
+      "description": "[Emperor grants permission coldly]",
+      "scene": "[Emperor grants permission coldly]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM141",
+      "filename": "A_Voyage_To_Lilliput_MM141.json",
+      "interpOrder": false,
+      "caption": "When I was just preparing to pay my respects to the Emperor of Blefuscu, a distinguished person at Court, to whom I had once done a great service, came to my house very privately at night.",
+      "description": "[Secret visitor arrives at night]",
+      "scene": "[Secret visitor arrives at night]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM142",
+      "filename": "A_Voyage_To_Lilliput_MM142.json",
+      "interpOrder": false,
+      "caption": "I put his lordship into my coat pocket, and, giving orders to a trusty servant to admit no one, I fastened the door, placed my visitor on the table, and sat down by it.",
+      "description": "[Gulliver places visitor on table]",
+      "scene": "[Gulliver places visitor on table]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM143",
+      "filename": "A_Voyage_To_Lilliput_MM143.json",
+      "interpOrder": false,
+      "caption": "His lordship's face was full of trouble; and he asked me to hear him with patience, in a matter that highly concerned my honor and my life.",
+      "description": "[Visitor's face full of trouble]",
+      "scene": "[Visitor's face full of trouble]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM144",
+      "filename": "A_Voyage_To_Lilliput_MM144.json",
+      "interpOrder": false,
+      "caption": "\"You are aware,\" he said, \"that Skyresh Bolgolam has been your mortal enemy ever since your arrival, and his hatred is increased since your great success against Blefuscu.\"",
+      "description": "[Charges of treason read aloud]",
+      "scene": "[Charges of treason read aloud]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM145",
+      "filename": "A_Voyage_To_Lilliput_MM145.json",
+      "interpOrder": false,
+      "caption": "That you, having brought the imperial fleet of Blefuscu into the royal port, were commanded by his Majesty to seize all the other ships, and put to death all the Bigendian exiles.",
+      "description": "[First charge: refusing to destroy Bigendians]",
+      "scene": "[First charge: refusing to destroy Bigendians]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM146",
+      "filename": "A_Voyage_To_Lilliput_MM146.json",
+      "interpOrder": false,
+      "caption": "Again, when ambassadors arrived from the Court of Blefuscu, like a false traitor, you aided and entertained them.",
+      "description": "[Second charge: aiding Blefuscudian ambassadors]",
+      "scene": "[Second charge: aiding Blefuscudian ambassadors]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM147",
+      "filename": "A_Voyage_To_Lilliput_MM147.json",
+      "interpOrder": false,
+      "caption": "Moreover, you are now preparing, contrary to the duty of a faithful subject, to voyage to the Court of Blefuscu.",
+      "description": "[Third charge: preparing to visit Blefuscu]",
+      "scene": "[Third charge: preparing to visit Blefuscu]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM148",
+      "filename": "A_Voyage_To_Lilliput_MM148.json",
+      "interpOrder": false,
+      "caption": "But Reldresal, secretary for private affairs, who has always proved himself your friend, suggested that if his Majesty would please to spare your life and only give orders to put out both your eyes.",
+      "description": "[Secretary suggests blinding Gulliver]",
+      "scene": "[Secretary suggests blinding Gulliver]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM149",
+      "filename": "A_Voyage_To_Lilliput_MM149.json",
+      "interpOrder": false,
+      "caption": "At this Bolgolam rose up in fury, wondering how the secretary dared desire to preserve the life of a traitor; and the treasurer, pointing out the expense of keeping you, also urged your death.",
+      "description": "[Admiral protests, treasurer urges death]",
+      "scene": "[Admiral protests, treasurer urges death]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM150",
+      "filename": "A_Voyage_To_Lilliput_MM150.json",
+      "interpOrder": false,
+      "caption": "But his Majesty was graciously pleased to say that since the council thought the loss of your eyes too easy a punishment, some other might afterward be inflicted.",
+      "description": "[Emperor decrees gradual starvation]",
+      "scene": "[Emperor decrees gradual starvation]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM151",
+      "filename": "A_Voyage_To_Lilliput_MM151.json",
+      "interpOrder": false,
+      "caption": "\"I leave you,\" said my friend, \"to consider what measures you will take; and, to escape suspicion, I must immediately return, as secretly as I came.\"",
+      "description": "[Gulliver left alone to ponder]",
+      "scene": "[Gulliver left alone to ponder]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM152",
+      "filename": "A_Voyage_To_Lilliput_MM152.json",
+      "interpOrder": false,
+      "caption": "At first I was bent on resistance; for while I had liberty I could easily with stones pelt the metropolis to pieces; but I soon rejected that idea with horror.",
+      "description": "[Gulliver resolves to flee]",
+      "scene": "[Gulliver resolves to flee]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM153",
+      "filename": "A_Voyage_To_Lilliput_MM153.json",
+      "interpOrder": false,
+      "caption": "Before the three days had passed I wrote a letter to my friend the secretary telling him of my resolution.",
+      "description": "[Writing letter to the secretary]",
+      "scene": "[Writing letter to the secretary]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM154",
+      "filename": "A_Voyage_To_Lilliput_MM154.json",
+      "interpOrder": false,
+      "caption": "And, without waiting for an answer, went to the coast, and entering the channel, between wading and swimming reached the port of Blefuscu.",
+      "description": "[Gulliver wades to Blefuscu]",
+      "scene": "[Gulliver wades to Blefuscu]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM155",
+      "filename": "A_Voyage_To_Lilliput_MM155.json",
+      "interpOrder": false,
+      "caption": "His Majesty, with the royal family and great officers of the Court, came out to receive me, and they entertained me in a manner suited to the generosity of so great a prince.",
+      "description": "[Emperor of Blefuscu receives Gulliver]",
+      "scene": "[Emperor of Blefuscu receives Gulliver]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM156",
+      "filename": "A_Voyage_To_Lilliput_MM156.json",
+      "interpOrder": false,
+      "caption": "Three days after my arrival, walking out of curiosity to the northeast coast of the island, I observed at some distance in the sea something that looked like a boat overturned.",
+      "description": "[Gulliver discovers a boat in the sea]",
+      "scene": "[Gulliver discovers a boat in the sea]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM157",
+      "filename": "A_Voyage_To_Lilliput_MM157.json",
+      "interpOrder": false,
+      "caption": "I pulled off my shoes and stockings, and wading two or three hundred yards, I plainly saw it to be a real boat.",
+      "description": "[Gulliver wades to inspect the boat]",
+      "scene": "[Gulliver wades to inspect the boat]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM158",
+      "filename": "A_Voyage_To_Lilliput_MM158.json",
+      "interpOrder": false,
+      "caption": "I returned immediately to the city for help, and after a huge amount of labor I managed to get my boat to the royal port of Blefuscu.",
+      "description": "[Gulliver brings boat to the royal port]",
+      "scene": "[Gulliver brings boat to the royal port]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM159",
+      "filename": "A_Voyage_To_Lilliput_MM159.json",
+      "interpOrder": false,
+      "caption": "Where a great crowd of people appeared, full of wonder at sight of so prodigious a vessel.",
+      "description": "[People marvel at the great vessel]",
+      "scene": "[People marvel at the great vessel]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM160",
+      "filename": "A_Voyage_To_Lilliput_MM160.json",
+      "interpOrder": false,
+      "caption": "I told the Emperor that my good fortune had thrown this boat in my way to carry me to some place whence I might return to my native country.",
+      "description": "[Gulliver begs leave to depart]",
+      "scene": "[Gulliver begs leave to depart]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM161",
+      "filename": "A_Voyage_To_Lilliput_MM161.json",
+      "interpOrder": false,
+      "caption": "And begged his orders for materials to fit it up, and leave to depart--which, after many kindly speeches, he was pleased to grant.",
+      "description": "[Emperor grants permission to leave]",
+      "scene": "[Emperor grants permission to leave]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM162",
+      "filename": "A_Voyage_To_Lilliput_MM162.json",
+      "interpOrder": false,
+      "caption": "Meanwhile the Emperor of Lilliput, uneasy at my long absence, sent a person of rank to inform the Emperor of Blefuscu of my disgrace.",
+      "description": "[Lilliput Emperor sends for Gulliver]",
+      "scene": "[Lilliput Emperor sends for Gulliver]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM163",
+      "filename": "A_Voyage_To_Lilliput_MM163.json",
+      "interpOrder": false,
+      "caption": "The Emperor of Blefuscu answered with many civil excuses. He said that as for sending me bound, his brother knew it was impossible.",
+      "description": "[Blefuscu Emperor refuses to send Gulliver back]",
+      "scene": "[Blefuscu Emperor refuses to send Gulliver back]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM164",
+      "filename": "A_Voyage_To_Lilliput_MM164.json",
+      "interpOrder": false,
+      "caption": "With this answer the messenger returned to Lilliput; and I hastened my departure, resolving never more to put confidence in princes.",
+      "description": "[Gulliver hastens his departure]",
+      "scene": "[Gulliver hastens his departure]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM165",
+      "filename": "A_Voyage_To_Lilliput_MM165.json",
+      "interpOrder": false,
+      "caption": "In about a month I was ready to take leave. The Emperor of Blefuscu, with the Empress and the royal family, came out of the palace.",
+      "description": "[Emperor of Blefuscu says farewell]",
+      "scene": "[Emperor of Blefuscu says farewell]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM166",
+      "filename": "A_Voyage_To_Lilliput_MM166.json",
+      "interpOrder": false,
+      "caption": "And I lay down on my face to kiss their hands, which they graciously gave me.",
+      "description": "[Gulliver kisses their hands]",
+      "scene": "[Gulliver kisses their hands]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM167",
+      "filename": "A_Voyage_To_Lilliput_MM167.json",
+      "interpOrder": false,
+      "caption": "His Majesty presented me with fifty purses of sprugs and his picture at full length, which I put immediately into one of my gloves.",
+      "description": "[Fifty purses of gold presented]",
+      "scene": "[Fifty purses of gold presented]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM168",
+      "filename": "A_Voyage_To_Lilliput_MM168.json",
+      "interpOrder": false,
+      "caption": "I stored the boat with meat and drink, and took six cows and two bulls alive, with as many ewes and rams, intending to carry them into my own country.",
+      "description": "[Cows, bulls, sheep, and rams loaded]",
+      "scene": "[Cows, bulls, sheep, and rams loaded]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM169",
+      "filename": "A_Voyage_To_Lilliput_MM169.json",
+      "interpOrder": false,
+      "caption": "Having thus prepared all things as well as I was able, I set sail.",
+      "description": "[Gulliver sets sail alone]",
+      "scene": "[Gulliver sets sail alone]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM170",
+      "filename": "A_Voyage_To_Lilliput_MM170.json",
+      "interpOrder": false,
+      "caption": "When I had made twenty-four leagues, by my reckoning, from the island of Blefuscu, I saw a sail steering to the northeast.",
+      "description": "[English ship spotted]",
+      "scene": "[English ship spotted]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM171",
+      "filename": "A_Voyage_To_Lilliput_MM171.json",
+      "interpOrder": false,
+      "caption": "I hailed her, but could get no answer; yet I found I gained upon her, for the wind slackened.",
+      "description": "[Gulliver hails the ship]",
+      "scene": "[Gulliver hails the ship]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM172",
+      "filename": "A_Voyage_To_Lilliput_MM172.json",
+      "interpOrder": false,
+      "caption": "And in half an hour she spied me, and discharged a gun. I came up with her between five and six in the evening, Sept. 26, 1701; but my heart leaped within me to see her English colors.",
+      "description": "[English colors fly]",
+      "scene": "[English colors fly]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM173",
+      "filename": "A_Voyage_To_Lilliput_MM173.json",
+      "interpOrder": false,
+      "caption": "I put my cows and sheep into my coat pockets, and got on board with all my little cargo.",
+      "description": "[Gulliver boards with his cargo]",
+      "scene": "[Gulliver boards with his cargo]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM174",
+      "filename": "A_Voyage_To_Lilliput_MM174.json",
+      "interpOrder": false,
+      "caption": "The captain received me with kindness, and asked me to tell him what place I came from last; but at my answer he thought I was raving.",
+      "description": "[Gulliver shows cattle to convince captain]",
+      "scene": "[Gulliver shows cattle to convince captain]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM175",
+      "filename": "A_Voyage_To_Lilliput_MM175.json",
+      "interpOrder": false,
+      "caption": "However, I took my black cattle and sheep out of my pocket, which, after great astonishment, clearly convinced him.",
+      "description": "[Arriving in England]",
+      "scene": "[Arriving in England]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM176",
+      "filename": "A_Voyage_To_Lilliput_MM176.json",
+      "interpOrder": false,
+      "caption": "We arrived in England on the 13th of April, 1702. I stayed two months with my wife and family.",
+      "description": "[Return to wife and family]",
+      "scene": "[Return to wife and family]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM177",
+      "filename": "A_Voyage_To_Lilliput_MM177.json",
+      "interpOrder": false,
+      "caption": "However, while in England I made great profit by showing my cattle to persons of quality and others.",
+      "description": "[Showing cattle to persons of quality]",
+      "scene": "[Showing cattle to persons of quality]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM178",
+      "filename": "A_Voyage_To_Lilliput_MM178.json",
+      "interpOrder": false,
+      "caption": "And before I began my second voyage I sold them for 600l. I left 1500l. with my wife, and fixed her in a good house.",
+      "description": "[Gulliver sells cattle and prepares second voyage]",
+      "scene": "[Gulliver sells cattle and prepares second voyage]"
+    },
+    {
+      "id": "A_Voyage_To_Lilliput_MM179",
+      "filename": "A_Voyage_To_Lilliput_MM179.json",
+      "interpOrder": false,
+      "caption": "Then taking leave of her and my boy and girl, with tears on both sides, I sailed on board the \"Adventure.\"",
+      "description": "[Gulliver sails away on the Adventure]",
+      "scene": "[Gulliver sails away on the Adventure]"
+    }
+  ]
+}

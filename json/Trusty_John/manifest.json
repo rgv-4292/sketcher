@@ -1,0 +1,794 @@
+{
+  "width": 720,
+  "height": 720,
+  "format": "png",
+  "name": "Trusty John",
+  "captionFontSize": 14,
+  "defaultTransitionDuration": 2000,
+  "pages": [
+    {
+      "id": "Trusty_John_MM001",
+      "filename": "Trusty_John_MM001.json",
+      "interpOrder": false,
+      "caption": "Once upon a time there was an old king who was so ill that he thought to himself, \"I am most likely on my death-bed.\".",
+      "description": "[Old king lies ill in bed]",
+      "scene": "Old king lies ill in bed"
+    },
+    {
+      "id": "Trusty_John_MM002",
+      "filename": "Trusty_John_MM002.json",
+      "interpOrder": false,
+      "caption": "Then he said, \"Send Trusty John to me.\".",
+      "description": "[King summons Trusty John]",
+      "scene": "King summons Trusty John"
+    },
+    {
+      "id": "Trusty_John_MM003",
+      "filename": "Trusty_John_MM003.json",
+      "interpOrder": false,
+      "caption": "Now Trusty John was his favorite servant, and was so called because all his life he had served him so faithfully.",
+      "description": "[John approaches the bed]",
+      "scene": "John approaches the bed"
+    },
+    {
+      "id": "Trusty_John_MM004",
+      "filename": "Trusty_John_MM004.json",
+      "interpOrder": false,
+      "caption": "When he approached the bed the King spake to him: \"Most trusty John, I feel my end is drawing near, and I could face it without a care were it not for my son.\".",
+      "description": "[King speaks to John]",
+      "scene": "King speaks to John"
+    },
+    {
+      "id": "Trusty_John_MM005",
+      "filename": "Trusty_John_MM005.json",
+      "interpOrder": false,
+      "caption": "He is still too young to decide everything for himself, and unless you promise me to instruct him in all he should know, and to be to him as a father, I shall not close my eyes in peace.\".",
+      "description": "[King worries about his son]",
+      "scene": "King worries about his son"
+    },
+    {
+      "id": "Trusty_John_MM006",
+      "filename": "Trusty_John_MM006.json",
+      "interpOrder": false,
+      "caption": "Then Trusty John answered: \"I will never desert him, and will serve him faithfully, even though it should cost me my life.\".",
+      "description": "[John makes his promise]",
+      "scene": "John makes his promise"
+    },
+    {
+      "id": "Trusty_John_MM007",
+      "filename": "Trusty_John_MM007.json",
+      "interpOrder": false,
+      "caption": "Then the old King said: \"Now I die comforted and in peace\"; and then he went on: \"After my death you must show him the whole castle, all the rooms and apartments and vaults, and all the treasures that lie in them.\".",
+      "description": "[King dies peacefully]",
+      "scene": "King dies peacefully"
+    },
+    {
+      "id": "Trusty_John_MM008",
+      "filename": "Trusty_John_MM008.json",
+      "interpOrder": false,
+      "caption": "But you must not show him the last room in the long passage, where the picture of the Princess of the Golden Roof is hidden.",
+      "description": "[King gives final warning]",
+      "scene": "King gives final warning"
+    },
+    {
+      "id": "Trusty_John_MM009",
+      "filename": "Trusty_John_MM009.json",
+      "interpOrder": false,
+      "caption": "When he beholds that picture he will fall violently in love with it and go off into a dead faint, and for her sake he will encounter many dangers; you must guard him from this.\".",
+      "description": "[King describes the danger]",
+      "scene": "King describes the danger"
+    },
+    {
+      "id": "Trusty_John_MM010",
+      "filename": "Trusty_John_MM010.json",
+      "interpOrder": false,
+      "caption": "And when Trusty John had again given the King his hand upon it the old man became silent, laid his head on the pillow, and died.",
+      "description": "[King gives his hand]",
+      "scene": "King gives his hand"
+    },
+    {
+      "id": "Trusty_John_MM011",
+      "filename": "Trusty_John_MM011.json",
+      "interpOrder": false,
+      "caption": "When the old King had been carried to his grave Trusty John told the young King what he had promised his father on his death-bed, and added: \"And I shall assuredly keep my word, and will be faithful to you as I have been to him, even though it should cost me my life.\".",
+      "description": "[Funeral procession]",
+      "scene": "Funeral procession"
+    },
+    {
+      "id": "Trusty_John_MM012",
+      "filename": "Trusty_John_MM012.json",
+      "interpOrder": false,
+      "caption": "Now when the time of mourning was over, Trusty John said to him: \"It is time you should see your inheritance. I will show you your ancestral castle.\".",
+      "description": "[John shows the castle]",
+      "scene": "John shows the castle"
+    },
+    {
+      "id": "Trusty_John_MM013",
+      "filename": "Trusty_John_MM013.json",
+      "interpOrder": false,
+      "caption": "So he took him over everything, and let him see all the riches and splendid apartments, only the one room where the picture was he did not open.",
+      "description": "[Grand rooms and treasures]",
+      "scene": "Grand rooms and treasures"
+    },
+    {
+      "id": "Trusty_John_MM014",
+      "filename": "Trusty_John_MM014.json",
+      "interpOrder": false,
+      "caption": "But the picture was placed so that if the door opened you gazed straight upon it, and it was so beautifully painted that you imagined it lived and moved, and that it was the most lovable and beautiful thing in the whole world.",
+      "description": "[The beautiful painting]",
+      "scene": "The beautiful painting"
+    },
+    {
+      "id": "Trusty_John_MM015",
+      "filename": "Trusty_John_MM015.json",
+      "interpOrder": false,
+      "caption": "But the young King noticed that Trusty John always missed one door, and said: \"Why do you never open this one for me?\".",
+      "description": "[Prince notices the locked door]",
+      "scene": "Prince notices the locked door"
+    },
+    {
+      "id": "Trusty_John_MM016",
+      "filename": "Trusty_John_MM016.json",
+      "interpOrder": false,
+      "caption": "\"There is something inside that would appall you,\" he answered.",
+      "description": "[John tries to dissuade him]",
+      "scene": "John tries to dissuade him"
+    },
+    {
+      "id": "Trusty_John_MM017",
+      "filename": "Trusty_John_MM017.json",
+      "interpOrder": false,
+      "caption": "But the King replied: \"I have seen the whole castle, and shall find out what is in there\"; and with these words he approached the door and wanted to force it open.",
+      "description": "[Prince demands entry]",
+      "scene": "Prince demands entry"
+    },
+    {
+      "id": "Trusty_John_MM018",
+      "filename": "Trusty_John_MM018.json",
+      "interpOrder": false,
+      "caption": "But Trusty John held him back, and said: \"I promised your father before his death that you shouldn't see what that room contains. It might bring both you and me to great grief.\".",
+      "description": "[John holds him back]",
+      "scene": "John holds him back"
+    },
+    {
+      "id": "Trusty_John_MM019",
+      "filename": "Trusty_John_MM019.json",
+      "interpOrder": false,
+      "caption": "\"Ah! no,\" answered the young King; \"if I don't get in, it will be my certain destruction; I should have no peace night or day till I had seen what was in the room with my own eyes.",
+      "description": "[Prince insists]",
+      "scene": "Prince insists"
+    },
+    {
+      "id": "Trusty_John_MM020",
+      "filename": "Trusty_John_MM020.json",
+      "interpOrder": false,
+      "caption": "Now I don't budge from the spot till you have opened the door.\".",
+      "description": "[Prince refuses to move]",
+      "scene": "Prince refuses to move"
+    },
+    {
+      "id": "Trusty_John_MM021",
+      "filename": "Trusty_John_MM021.json",
+      "interpOrder": false,
+      "caption": "Then Trusty John saw there was no way out of it, so with a heavy heart and many sighs he took the key from the big bunch.",
+      "description": "[John reluctantly takes the key]",
+      "scene": "John reluctantly takes the key"
+    },
+    {
+      "id": "Trusty_John_MM022",
+      "filename": "Trusty_John_MM022.json",
+      "interpOrder": false,
+      "caption": "When he had opened the door he stepped in first, and thought to cover the likeness so that the King might not perceive it; but it was hopeless: the King stood on tiptoe and looked over his shoulder.",
+      "description": "[John enters first]",
+      "scene": "John enters first"
+    },
+    {
+      "id": "Trusty_John_MM023",
+      "filename": "Trusty_John_MM023.json",
+      "interpOrder": false,
+      "caption": "And when he saw the picture of the maid, so beautiful and glittering with gold and precious stones, he fell swooning to the ground.",
+      "description": "[King sees the Princess's portrait]",
+      "scene": "King sees the Princess's portrait"
+    },
+    {
+      "id": "Trusty_John_MM024",
+      "filename": "Trusty_John_MM024.json",
+      "interpOrder": false,
+      "caption": "Trusty John lifted him up, carried him to bed, and thought sorrowfully: \"The curse has come upon us; gracious heaven! what will be the end of it all?\".",
+      "description": "[John revives the King]",
+      "scene": "John revives the King"
+    },
+    {
+      "id": "Trusty_John_MM025",
+      "filename": "Trusty_John_MM025.json",
+      "interpOrder": false,
+      "caption": "Then he poured wine down his throat till he came to himself again. The first words he spoke were: \"Oh! who is the original of the beautiful picture?\".",
+      "description": "[King asks about the picture]",
+      "scene": "King asks about the picture"
+    },
+    {
+      "id": "Trusty_John_MM026",
+      "filename": "Trusty_John_MM026.json",
+      "interpOrder": false,
+      "caption": "\"She is the Princess of the Golden Roof,\" answered Trusty John.",
+      "description": "[John reveals her identity]",
+      "scene": "John reveals her identity"
+    },
+    {
+      "id": "Trusty_John_MM027",
+      "filename": "Trusty_John_MM027.json",
+      "interpOrder": false,
+      "caption": "Then the King continued: \"My love for her is so great that if all the leaves on the trees had tongues they could not express it; my very life depends on my winning her. You are my most trusty John: you must stand by me.\".",
+      "description": "[King declares his love]",
+      "scene": "King declares his love"
+    },
+    {
+      "id": "Trusty_John_MM028",
+      "filename": "Trusty_John_MM028.json",
+      "interpOrder": false,
+      "caption": "The faithful servant pondered long how they were to set about the matter, for it was said to be difficult even to get into the presence of the Princess.",
+      "description": "[John devises a plan]",
+      "scene": "John devises a plan"
+    },
+    {
+      "id": "Trusty_John_MM029",
+      "filename": "Trusty_John_MM029.json",
+      "interpOrder": false,
+      "caption": "At length he hit upon a plan, and spoke to the King: \"All the things she has about her--tables, chairs, dishes, goblets, bowls, and all her household furniture--are made of gold. You have in your treasure five tons of gold; let the goldsmiths of your kingdom manufacture them into all manner of vases and vessels, into all sorts of birds and game and wonderful beasts; that will please her.\".",
+      "description": "[Gold treasures are made]",
+      "scene": "Gold treasures are made"
+    },
+    {
+      "id": "Trusty_John_MM030",
+      "filename": "Trusty_John_MM030.json",
+      "interpOrder": false,
+      "caption": "The King summoned all his goldsmiths, and they had to work hard day and night, till at length the most magnificent things were completed.",
+      "description": "[Goldsmiths work day and night]",
+      "scene": "Goldsmiths work day and night"
+    },
+    {
+      "id": "Trusty_John_MM031",
+      "filename": "Trusty_John_MM031.json",
+      "interpOrder": false,
+      "caption": "When a ship had been laden with them the faithful John disguised himself as a merchant, and the King had to do the same, so that they should be quite unrecognizable.",
+      "description": "[Ship laden with gold]",
+      "scene": "Ship laden with gold"
+    },
+    {
+      "id": "Trusty_John_MM032",
+      "filename": "Trusty_John_MM032.json",
+      "interpOrder": false,
+      "caption": "And so they crossed the seas and journeyed till they reached the town where the Princess of the Golden Roof dwelt.",
+      "description": "[Sailing to the Princess's kingdom]",
+      "scene": "Sailing to the Princess's kingdom"
+    },
+    {
+      "id": "Trusty_John_MM033",
+      "filename": "Trusty_John_MM033.json",
+      "interpOrder": false,
+      "caption": "Trusty John made the King remain behind on the ship and await his return. \"Perhaps,\" he said, \"I may bring the Princess back with me, so see that everything is in order; let the gold ornaments be arranged and the whole ship decorated.\".",
+      "description": "[John stays on the ship]",
+      "scene": "John stays on the ship"
+    },
+    {
+      "id": "Trusty_John_MM034",
+      "filename": "Trusty_John_MM034.json",
+      "interpOrder": false,
+      "caption": "Then he took a few of the gold things in his apron, went ashore, and proceeded straight to the palace. When he came to the courtyard he found a beautiful maiden standing at the well, drawing water with two golden pails.",
+      "description": "[John meets the maid at the well]",
+      "scene": "John meets the maid at the well"
+    },
+    {
+      "id": "Trusty_John_MM035",
+      "filename": "Trusty_John_MM035.json",
+      "interpOrder": false,
+      "caption": "And as she was about to carry away the glittering water she turned round and saw the stranger, and asked him who he was. Then he replied: \"I am a merchant,\" and opening his apron, he let her peep in. \"Oh! my,\" she cried; \"what beautiful gold wares!\".",
+      "description": "[The maid examines the gold]",
+      "scene": "The maid examines the gold"
+    },
+    {
+      "id": "Trusty_John_MM036",
+      "filename": "Trusty_John_MM036.json",
+      "interpOrder": false,
+      "caption": "She set down her pails, and examined one thing after the other. Then she said: \"The Princess must see this, she has such a fancy for gold things that she will buy up all you have.\" She took him by the hand and let him into the palace, for she was the lady's maid.",
+      "description": "[The maid takes him to the palace]",
+      "scene": "The maid takes him to the palace"
+    },
+    {
+      "id": "Trusty_John_MM037",
+      "filename": "Trusty_John_MM037.json",
+      "interpOrder": false,
+      "caption": "When the Princess had seen the wares she was quite enchanted, and said: \"They are all so beautifully made that I shall buy everything you have.\".",
+      "description": "[Princess is enchanted]",
+      "scene": "Princess is enchanted"
+    },
+    {
+      "id": "Trusty_John_MM038",
+      "filename": "Trusty_John_MM038.json",
+      "interpOrder": false,
+      "caption": "But Trusty John said: \"I am only the servant of a rich merchant, what I have here is nothing compared to what my master has on his ship; his merchandise is more artistic and costly than anything that has ever been made in gold before.\".",
+      "description": "[John speaks of greater treasures]",
+      "scene": "John speaks of greater treasures"
+    },
+    {
+      "id": "Trusty_John_MM039",
+      "filename": "Trusty_John_MM039.json",
+      "interpOrder": false,
+      "caption": "She desired to have everything brought up to her, but he said: \"There is such a quantity of things that it would take many days to bring them up, and they would take up so many rooms that you would have no space for them in your house.\".",
+      "description": "[Princess's curiosity grows]",
+      "scene": "Princess's curiosity grows"
+    },
+    {
+      "id": "Trusty_John_MM040",
+      "filename": "Trusty_John_MM040.json",
+      "interpOrder": false,
+      "caption": "Thus her desire and curiosity were excited to such an extent that at last she said: \"Take me to your ship; I shall go there myself and view your master's treasures.\".",
+      "description": "[Princess decides to visit the ship]",
+      "scene": "Princess decides to visit the ship"
+    },
+    {
+      "id": "Trusty_John_MM041",
+      "filename": "Trusty_John_MM041.json",
+      "interpOrder": false,
+      "caption": "Then Trusty John was quite delighted, and brought her to the ship; and the King, when he beheld her, saw that she was even more beautiful than her picture, and thought every moment that his heart would burst.",
+      "description": "[Princess boards the ship]",
+      "scene": "Princess boards the ship"
+    },
+    {
+      "id": "Trusty_John_MM042",
+      "filename": "Trusty_John_MM042.json",
+      "interpOrder": false,
+      "caption": "She stepped on to the ship, and the King led her inside. But Trusty John remained behind with the steersman, and ordered the ship to push off. \"Spread all sail, that we may fly on the ocean like a bird in the air.\".",
+      "description": "[Ship sets sail]",
+      "scene": "Ship sets sail"
+    },
+    {
+      "id": "Trusty_John_MM043",
+      "filename": "Trusty_John_MM043.json",
+      "interpOrder": false,
+      "caption": "Meanwhile the King showed the Princess inside all his gold wares, every single bit of it--dishes, goblets, bowls, the birds and game, and all the wonderful beasts. Many hours passed thus, and she was so happy that she did not notice that the ship was sailing away.",
+      "description": "[King shows the Princess his treasures]",
+      "scene": "King shows the Princess his treasures"
+    },
+    {
+      "id": "Trusty_John_MM044",
+      "filename": "Trusty_John_MM044.json",
+      "interpOrder": false,
+      "caption": "After she had seen the last thing she thanked the merchant and prepared to go home; but when she came to the ship's side she saw that they were on the high seas, far from land, and that the ship was speeding on its way under full canvas.",
+      "description": "[Princess discovers they are at sea]",
+      "scene": "Princess discovers they are at sea"
+    },
+    {
+      "id": "Trusty_John_MM045",
+      "filename": "Trusty_John_MM045.json",
+      "interpOrder": false,
+      "caption": "\"Oh!\" she cried in terror, \"I am deceived, carried away and betrayed into the power of a merchant; I would rather have died!\".",
+      "description": "[Princess cries out in terror]",
+      "scene": "Princess cries out in terror"
+    },
+    {
+      "id": "Trusty_John_MM046",
+      "filename": "Trusty_John_MM046.json",
+      "interpOrder": false,
+      "caption": "But the King seized her hand and spake: \"I am no merchant, but a king of as high birth as yourself; and it was my great love for you that made me carry you off by stratagem. The first time I saw your likeness I fell to the ground in a swoon.\".",
+      "description": "[King reveals his identity]",
+      "scene": "King reveals his identity"
+    },
+    {
+      "id": "Trusty_John_MM047",
+      "filename": "Trusty_John_MM047.json",
+      "interpOrder": false,
+      "caption": "When the Princess of the Golden Roof heard this she was comforted, and her heart went out to him, so that she willingly consented to become his wife.",
+      "description": "[Princess is comforted]",
+      "scene": "Princess is comforted"
+    },
+    {
+      "id": "Trusty_John_MM048",
+      "filename": "Trusty_John_MM048.json",
+      "interpOrder": false,
+      "caption": "Now it happened one day, while they were sailing on the high seas, that Trusty John, sitting on the forepart of the ship, fiddling away to himself, observed three ravens in the air flying toward him.",
+      "description": "[Three ravens fly overhead]",
+      "scene": "Three ravens fly overhead"
+    },
+    {
+      "id": "Trusty_John_MM049",
+      "filename": "Trusty_John_MM049.json",
+      "interpOrder": false,
+      "caption": "He ceased playing, and listened to what they were saying, for he understood their language.",
+      "description": "[John listens to the ravens]",
+      "scene": "John listens to the ravens"
+    },
+    {
+      "id": "Trusty_John_MM050",
+      "filename": "Trusty_John_MM050.json",
+      "interpOrder": false,
+      "caption": "The one croaked: \"Ah, ha! so he's bringing the Princess of the Golden Roof home.\" \"Yes,\" answered the second, \"but he's not got her yet.\" \"Yes, he has,\" spake the third, \"for she's sitting beside him on the ship.\".",
+      "description": "[First raven speaks]",
+      "scene": "First raven speaks"
+    },
+    {
+      "id": "Trusty_John_MM051",
+      "filename": "Trusty_John_MM051.json",
+      "interpOrder": false,
+      "caption": "Then number one began again and cried: \"That'll not help him! When they reach the land a chestnut horse will dash forward to greet them: the King will wish to mount it, and if he does it will gallop away with him, and disappear into the air, and he will never see his bride again.\".",
+      "description": "[Ravens predict the first danger]",
+      "scene": "Ravens predict the first danger"
+    },
+    {
+      "id": "Trusty_John_MM052",
+      "filename": "Trusty_John_MM052.json",
+      "interpOrder": false,
+      "caption": "\"Is there no escape for him?\" asked number two.",
+      "description": "[Second raven asks about escape]",
+      "scene": "Second raven asks about escape"
+    },
+    {
+      "id": "Trusty_John_MM053",
+      "filename": "Trusty_John_MM053.json",
+      "interpOrder": false,
+      "caption": "\"Oh! yes, if someone else mounts quickly and shoots the horse dead with the pistol that is sticking in the holster, then the young King is saved. But who's to do that? And anyone who knows it and tells him will be turned into stone from his feet to his knees.\".",
+      "description": "[Ravens reveal the solution]",
+      "scene": "Ravens reveal the solution"
+    },
+    {
+      "id": "Trusty_John_MM054",
+      "filename": "Trusty_John_MM054.json",
+      "interpOrder": false,
+      "caption": "Then spake number two: \"I know more than that: even if the horse is slain, the young King will still not keep his bride: when they enter the palace together they will find a ready-made wedding shirt in a cupboard, which looks as though it were woven of gold and silver, but is really made of nothing but sulphur and tar: when the King puts it on it will burn him to his marrow and bones.\".",
+      "description": "[Second raven tells of the second danger]",
+      "scene": "Second raven tells of the second danger"
+    },
+    {
+      "id": "Trusty_John_MM055",
+      "filename": "Trusty_John_MM055.json",
+      "interpOrder": false,
+      "caption": "Number three asked: \"Is there no way of escape, then?\".",
+      "description": "[Third raven asks about escape]",
+      "scene": "Third raven asks about escape"
+    },
+    {
+      "id": "Trusty_John_MM056",
+      "filename": "Trusty_John_MM056.json",
+      "interpOrder": false,
+      "caption": "\"Oh! yes,\" answered number two: \"If someone seizes the shirt with gloved hands and throws it into the fire, and lets it burn, then the young King is saved. But what's the good? Anyone knowing this and telling it will have half his body turned into stone, from his knees to his heart.\".",
+      "description": "[Solution to the second danger]",
+      "scene": "Solution to the second danger"
+    },
+    {
+      "id": "Trusty_John_MM057",
+      "filename": "Trusty_John_MM057.json",
+      "interpOrder": false,
+      "caption": "Then number three spake: \"I know yet more: though the bridal shirt too be burnt, the King hasn't even then secured his bride: when the dance is held after the wedding, and the young Queen is dancing, she will suddenly grow deadly white, and drop down like one dead, and unless some one lifts her up and draws three drops of blood from her right side, and spits them out again, she will die.\".",
+      "description": "[Third raven tells of the third danger]",
+      "scene": "Third raven tells of the third danger"
+    },
+    {
+      "id": "Trusty_John_MM058",
+      "filename": "Trusty_John_MM058.json",
+      "interpOrder": false,
+      "caption": "But if anyone who knows this betrays it, he will be turned into stone from the crown of his head to the soles of his feet.\".",
+      "description": "[Solution to the third danger]",
+      "scene": "Solution to the third danger"
+    },
+    {
+      "id": "Trusty_John_MM059",
+      "filename": "Trusty_John_MM059.json",
+      "interpOrder": false,
+      "caption": "When the ravens had thus conversed they fled onward, but Trusty John had taken it all in, and was sad and depressed from that time forward; for if he were silent to his master concerning what he had heard, he would involve him in misfortune; but if he took him into his confidence, then he himself would forfeit his life.",
+      "description": "[John is sad and conflicted]",
+      "scene": "John is sad and conflicted"
+    },
+    {
+      "id": "Trusty_John_MM060",
+      "filename": "Trusty_John_MM060.json",
+      "interpOrder": false,
+      "caption": "At last he said: \"I will stand by my master, though it should be my ruin.\".",
+      "description": "[John decides to sacrifice himself]",
+      "scene": "John decides to sacrifice himself"
+    },
+    {
+      "id": "Trusty_John_MM061",
+      "filename": "Trusty_John_MM061.json",
+      "interpOrder": false,
+      "caption": "Now when they drew near the land it came to pass just as the ravens had predicted, and a splendid chestnut horse bounded forward.",
+      "description": "[The chestnut horse appears]",
+      "scene": "The chestnut horse appears"
+    },
+    {
+      "id": "Trusty_John_MM062",
+      "filename": "Trusty_John_MM062.json",
+      "interpOrder": false,
+      "caption": "\"Capital!\" said the King; \"this animal shall carry me to my palace,\" and was about to mount.",
+      "description": "[King wants to mount]",
+      "scene": "King wants to mount"
+    },
+    {
+      "id": "Trusty_John_MM063",
+      "filename": "Trusty_John_MM063.json",
+      "interpOrder": false,
+      "caption": "But Trusty John was too sharp for him, and, springing up quickly, seized the pistol out of the holster and shot the horse dead.",
+      "description": "[John shoots the horse]",
+      "scene": "John shoots the horse"
+    },
+    {
+      "id": "Trusty_John_MM064",
+      "filename": "Trusty_John_MM064.json",
+      "interpOrder": false,
+      "caption": "Then the other servants of the King, who at no time looked favorably on Trusty John, cried out: \"What a sin to kill the beautiful beast that was to bear the King to his palace!\".",
+      "description": "[Servants complain]",
+      "scene": "Servants complain"
+    },
+    {
+      "id": "Trusty_John_MM065",
+      "filename": "Trusty_John_MM065.json",
+      "interpOrder": false,
+      "caption": "But the King spake: \"Silence! let him alone; he is ever my most trusty John. Who knows for what good end he may have done this thing?\".",
+      "description": "[King defends John]",
+      "scene": "King defends John"
+    },
+    {
+      "id": "Trusty_John_MM066",
+      "filename": "Trusty_John_MM066.json",
+      "interpOrder": false,
+      "caption": "So they went on their way and entered the palace, and there in the hall stood a cupboard in which lay the ready-made bridal shirt, looking for all the world as though it were made of gold and silver.",
+      "description": "[They enter the palace]",
+      "scene": "They enter the palace"
+    },
+    {
+      "id": "Trusty_John_MM067",
+      "filename": "Trusty_John_MM067.json",
+      "interpOrder": false,
+      "caption": "The young King went toward it and was about to take hold of it.",
+      "description": "[King reaches for the shirt]",
+      "scene": "King reaches for the shirt"
+    },
+    {
+      "id": "Trusty_John_MM068",
+      "filename": "Trusty_John_MM068.json",
+      "interpOrder": false,
+      "caption": "But Trusty John, pushing him aside, seized it with his gloved hands, threw it hastily into the fire, and let it burn.",
+      "description": "[John seizes and burns the shirt]",
+      "scene": "John seizes and burns the shirt"
+    },
+    {
+      "id": "Trusty_John_MM069",
+      "filename": "Trusty_John_MM069.json",
+      "interpOrder": false,
+      "caption": "The other servants commenced grumbling again, and said: \"See, he's actually burning the King's bridal shirt.\".",
+      "description": "[Servants grumble again]",
+      "scene": "Servants grumble again"
+    },
+    {
+      "id": "Trusty_John_MM070",
+      "filename": "Trusty_John_MM070.json",
+      "interpOrder": false,
+      "caption": "But the young King spoke: \"Who knows for what good purpose he does it? Let him alone, he is my most trusty John.\".",
+      "description": "[King defends John again]",
+      "scene": "King defends John again"
+    },
+    {
+      "id": "Trusty_John_MM071",
+      "filename": "Trusty_John_MM071.json",
+      "interpOrder": false,
+      "caption": "Then the wedding was celebrated, the dance began, and the bride joined in, but Trusty John watched her countenance carefully.",
+      "description": "[Wedding celebration and dance]",
+      "scene": "Wedding celebration and dance"
+    },
+    {
+      "id": "Trusty_John_MM072",
+      "filename": "Trusty_John_MM072.json",
+      "interpOrder": false,
+      "caption": "Of a sudden she grew deadly white, and fell to the ground as if she were dead.",
+      "description": "[Queen collapses]",
+      "scene": "Queen collapses"
+    },
+    {
+      "id": "Trusty_John_MM073",
+      "filename": "Trusty_John_MM073.json",
+      "interpOrder": false,
+      "caption": "He at once sprang hastily toward her, lifted her up, and bore her to a room, where he laid her down, and kneeling beside her he drew three drops of blood from her right side, and spat them out.",
+      "description": "[John revives the Queen]",
+      "scene": "John revives the Queen"
+    },
+    {
+      "id": "Trusty_John_MM074",
+      "filename": "Trusty_John_MM074.json",
+      "interpOrder": false,
+      "caption": "She soon breathed again and came to herself.",
+      "description": "[Queen breathes again]",
+      "scene": "Queen breathes again"
+    },
+    {
+      "id": "Trusty_John_MM075",
+      "filename": "Trusty_John_MM075.json",
+      "interpOrder": false,
+      "caption": "But the young King had watched the proceeding, and not knowing why Trusty John had acted as he did, he flew into a passion, and cried: \"Throw him into prison.\".",
+      "description": "[King is enraged]",
+      "scene": "King is enraged"
+    },
+    {
+      "id": "Trusty_John_MM076",
+      "filename": "Trusty_John_MM076.json",
+      "interpOrder": false,
+      "caption": "On the following morning sentence was passed on Trusty John, and he was condemned to be hanged.",
+      "description": "[John is condemned]",
+      "scene": "John is condemned"
+    },
+    {
+      "id": "Trusty_John_MM077",
+      "filename": "Trusty_John_MM077.json",
+      "interpOrder": false,
+      "caption": "As he stood on the gallows he said: \"Every one doomed to death has the right to speak once before he dies; and I too have that privilege?\".",
+      "description": "[John speaks on the gallows]",
+      "scene": "John speaks on the gallows"
+    },
+    {
+      "id": "Trusty_John_MM078",
+      "filename": "Trusty_John_MM078.json",
+      "interpOrder": false,
+      "caption": "\"Yes,\" said the King, \"it shall be granted to you.\".",
+      "description": "[King grants permission]",
+      "scene": "King grants permission"
+    },
+    {
+      "id": "Trusty_John_MM079",
+      "filename": "Trusty_John_MM079.json",
+      "interpOrder": false,
+      "caption": "So Trusty John spoke: \"I am unjustly condemned, for I have always been faithful to you\"; and he proceeded to relate how he had heard the ravens' conversation on the sea, and how he had to do all he did in order to save his master.",
+      "description": "[John tells the truth]",
+      "scene": "John tells the truth"
+    },
+    {
+      "id": "Trusty_John_MM080",
+      "filename": "Trusty_John_MM080.json",
+      "interpOrder": false,
+      "caption": "Then the King cried: \"Oh! my most trusty John, pardon! pardon! Take him down.\".",
+      "description": "[King cries for pardon]",
+      "scene": "King cries for pardon"
+    },
+    {
+      "id": "Trusty_John_MM081",
+      "filename": "Trusty_John_MM081.json",
+      "interpOrder": false,
+      "caption": "But as he uttered the last word Trusty John had fallen lifeless to the ground, and was a stone.",
+      "description": "[John falls and turns to stone]",
+      "scene": "John falls and turns to stone"
+    },
+    {
+      "id": "Trusty_John_MM082",
+      "filename": "Trusty_John_MM082.json",
+      "interpOrder": false,
+      "caption": "The King and Queen were in despair, and the King spake: \"Ah! how ill have I rewarded such great fidelity!\" and made them lift up the stone image and place it in his bedroom near his bed.",
+      "description": "[King and Queen mourn]",
+      "scene": "King and Queen mourn"
+    },
+    {
+      "id": "Trusty_John_MM083",
+      "filename": "Trusty_John_MM083.json",
+      "interpOrder": false,
+      "caption": "As often as he looked at it he wept and said: \"Oh! if I could only restore you to life, my most trusty John!\".",
+      "description": "[King weeps before the stone]",
+      "scene": "King weeps before the stone"
+    },
+    {
+      "id": "Trusty_John_MM084",
+      "filename": "Trusty_John_MM084.json",
+      "interpOrder": false,
+      "caption": "After a time the Queen gave birth to twins, two small sons, who throve and grew, and were a constant joy to her.",
+      "description": "[Twins are born]",
+      "scene": "Twins are born"
+    },
+    {
+      "id": "Trusty_John_MM085",
+      "filename": "Trusty_John_MM085.json",
+      "interpOrder": false,
+      "caption": "One day when the Queen was at church, and the two children sat and played with their father, he gazed again full of grief on the stone statue, and sighing, wailed: \"Oh, if I could only restore you to life, my most trusty John!\".",
+      "description": "[King laments before the stone]",
+      "scene": "King laments before the stone"
+    },
+    {
+      "id": "Trusty_John_MM086",
+      "filename": "Trusty_John_MM086.json",
+      "interpOrder": false,
+      "caption": "Suddenly the stone began to speak, and said: \"Yes, you can restore me to life again if you are prepared to sacrifice what you hold most dear.\".",
+      "description": "[Stone begins to speak]",
+      "scene": "Stone begins to speak"
+    },
+    {
+      "id": "Trusty_John_MM087",
+      "filename": "Trusty_John_MM087.json",
+      "interpOrder": false,
+      "caption": "And the King cried out: \"All I have in the world will I give up for your sake.\".",
+      "description": "[King offers everything]",
+      "scene": "King offers everything"
+    },
+    {
+      "id": "Trusty_John_MM088",
+      "filename": "Trusty_John_MM088.json",
+      "interpOrder": false,
+      "caption": "The stone continued: \"If you cut off with your own hand the heads of your two children, and smear me with their blood, I shall come back to life.\".",
+      "description": "[Stone demands sacrifice]",
+      "scene": "Stone demands sacrifice"
+    },
+    {
+      "id": "Trusty_John_MM089",
+      "filename": "Trusty_John_MM089.json",
+      "interpOrder": false,
+      "caption": "The King was aghast when he heard that he had himself to put his children to death; but when he thought of Trusty John's fidelity, and how he had even died for him, he drew his sword.",
+      "description": "[King is horrified]",
+      "scene": "King is horrified"
+    },
+    {
+      "id": "Trusty_John_MM090",
+      "filename": "Trusty_John_MM090.json",
+      "interpOrder": false,
+      "caption": "And with his own hand cut the heads off his children.",
+      "description": "[King sacrifices his children]",
+      "scene": "King sacrifices his children"
+    },
+    {
+      "id": "Trusty_John_MM091",
+      "filename": "Trusty_John_MM091.json",
+      "interpOrder": false,
+      "caption": "And when he had smeared the stone with their blood, life came back, and Trusty John stood once more safe and sound before him.",
+      "description": "[John is restored to life]",
+      "scene": "John is restored to life"
+    },
+    {
+      "id": "Trusty_John_MM092",
+      "filename": "Trusty_John_MM092.json",
+      "interpOrder": false,
+      "caption": "He spake to the King: \"Your loyalty shall be rewarded,\" and taking up the heads of the children, he placed them on their bodies, smeared the wounds with their blood, and in a minute they were all right again and jumping about as if nothing had happened.",
+      "description": "[John speaks to the King]",
+      "scene": "John speaks to the King"
+    },
+    {
+      "id": "Trusty_John_MM093",
+      "filename": "Trusty_John_MM093.json",
+      "interpOrder": false,
+      "caption": "Then the King was full of joy, and when he saw the Queen coming, he hid Trusty John and the two children in a big cupboard.",
+      "description": "[King is overjoyed]",
+      "scene": "King is overjoyed"
+    },
+    {
+      "id": "Trusty_John_MM094",
+      "filename": "Trusty_John_MM094.json",
+      "interpOrder": false,
+      "caption": "As she entered he said to her: \"Did you pray in church?\" \"Yes,\" she answered, \"but my thoughts dwelt constantly on Trusty John, and of what he has suffered for us.\".",
+      "description": "[King tells the Queen]",
+      "scene": "King tells the Queen"
+    },
+    {
+      "id": "Trusty_John_MM095",
+      "filename": "Trusty_John_MM095.json",
+      "interpOrder": false,
+      "caption": "Then he spake: \"Dear wife, we can restore him to life, but the price asked is our two little sons; we must sacrifice them.\".",
+      "description": "[King speaks of sacrifice]",
+      "scene": "King speaks of sacrifice"
+    },
+    {
+      "id": "Trusty_John_MM096",
+      "filename": "Trusty_John_MM096.json",
+      "interpOrder": false,
+      "caption": "The Queen grew white and her heart sank, but she replied: \"We owe it to him on account of his great fidelity.\".",
+      "description": "[Queen agrees]",
+      "scene": "Queen agrees"
+    },
+    {
+      "id": "Trusty_John_MM097",
+      "filename": "Trusty_John_MM097.json",
+      "interpOrder": false,
+      "caption": "Then he rejoiced that she was of the same mind as he had been, and going forward he opened the cupboard, and fetched the two children and Trusty John out, saying: \"God be praised! Trusty John is free once more, and we have our two small sons again.\".",
+      "description": "[King reveals the miracle]",
+      "scene": "King reveals the miracle"
+    },
+    {
+      "id": "Trusty_John_MM098",
+      "filename": "Trusty_John_MM098.json",
+      "interpOrder": false,
+      "caption": "Then he related to her all that had passed, and they lived together happily ever afterward.",
+      "description": "[Happy ending]",
+      "scene": "Happy ending"
+    }
+  ]
+}

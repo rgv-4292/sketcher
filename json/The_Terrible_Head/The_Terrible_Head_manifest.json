@@ -1,0 +1,706 @@
+{
+  "width": 720,
+  "height": 720,
+  "format": "png",
+  "name": "The Terrible Head",
+  "captionFontSize": 14,
+  "defaultTransitionDuration": 2000,
+  "pages": [
+    {
+      "id": "The_Terrible_Head_MM001",
+      "filename": "The_Terrible_Head_MM001.json",
+      "interpOrder": false,
+      "caption": "Once upon a time there was a king whose only child was a girl.",
+      "description": "[King stands beside his only child]",
+      "scene": "King stands beside his only child"
+    },
+    {
+      "id": "The_Terrible_Head_MM002",
+      "filename": "The_Terrible_Head_MM002.json",
+      "interpOrder": false,
+      "caption": "Now the King had been very anxious to have a son, or at least a grandson, to come after him, but he was told by a prophet whom he consulted that his own daughter's son should kill him.",
+      "description": "[Prophet delivers a terrible warning]",
+      "scene": "Prophet delivers a terrible warning"
+    },
+    {
+      "id": "The_Terrible_Head_MM003",
+      "filename": "The_Terrible_Head_MM003.json",
+      "interpOrder": false,
+      "caption": "This news terrified him so much that he determined never to let his daughter be married, for he thought it was better to have no grandson at all than to be killed by his grandson.",
+      "description": "[King recoils in horror at prophecy]",
+      "scene": "King recoils in horror at prophecy"
+    },
+    {
+      "id": "The_Terrible_Head_MM004",
+      "filename": "The_Terrible_Head_MM004.json",
+      "interpOrder": false,
+      "caption": "He therefore called his workmen together, and bade them dig a deep round hole in the earth, and then he had a prison of brass built in the hole, and then, when it was finished, he locked up his daughter.",
+      "description": "[Workmen dig deep hole in earth]",
+      "scene": "Workmen dig deep hole in earth"
+    },
+    {
+      "id": "The_Terrible_Head_MM005",
+      "filename": "The_Terrible_Head_MM005.json",
+      "interpOrder": false,
+      "caption": "No man ever saw her, and she never saw even the fields and the sea, but only the sky and the sun, for there was a wide open window in the roof of the house of brass.",
+      "description": "[Brass prison seen from above]",
+      "scene": "Brass prison seen from above"
+    },
+    {
+      "id": "The_Terrible_Head_MM006",
+      "filename": "The_Terrible_Head_MM006.json",
+      "interpOrder": false,
+      "caption": "So the Princess would sit looking up at the sky, and watching the clouds float across, and wondering whether she should ever get out of her prison.",
+      "description": "[Princess gazes up at passing clouds]",
+      "scene": "Princess gazes up at passing clouds"
+    },
+    {
+      "id": "The_Terrible_Head_MM007",
+      "filename": "The_Terrible_Head_MM007.json",
+      "interpOrder": false,
+      "caption": "Now one day it seemed to her that the sky opened above her, and a great shower of shining gold fell through the window in the roof, and lay glittering in her room.",
+      "description": "[Golden shower rains through window]",
+      "scene": "Golden shower rains through window"
+    },
+    {
+      "id": "The_Terrible_Head_MM008",
+      "filename": "The_Terrible_Head_MM008.json",
+      "interpOrder": false,
+      "caption": "Not very long after, the Princess had a baby, a little boy, but when the King her father heard of it he was very angry and afraid, for now the child was born that should be his death.",
+      "description": "[Princess cradles newborn son]",
+      "scene": "Princess cradles newborn son"
+    },
+    {
+      "id": "The_Terrible_Head_MM009",
+      "filename": "The_Terrible_Head_MM009.json",
+      "interpOrder": false,
+      "caption": "Yet, cowardly as he was, he had not quite the heart to kill the Princess and her baby outright, but he had them put in a huge brass-bound chest and thrust out to sea, that they might either be drowned or starved, or perhaps come to a country where they would be out of his way.",
+      "description": "[King orders chest cast to sea]",
+      "scene": "King orders chest cast to sea"
+    },
+    {
+      "id": "The_Terrible_Head_MM010",
+      "filename": "The_Terrible_Head_MM010.json",
+      "interpOrder": false,
+      "caption": "So the Princess and the baby floated and drifted in the chest on the sea all day and night, but the baby was not afraid of the waves nor of the wind, for he did not know that they could hurt him, and he slept quite soundly.",
+      "description": "[Chest drifts on restless waves]",
+      "scene": "Chest drifts on restless waves"
+    },
+    {
+      "id": "The_Terrible_Head_MM011",
+      "filename": "The_Terrible_Head_MM011.json",
+      "interpOrder": false,
+      "caption": "And the Princess sang a song over him, and this was her song:",
+      "description": "[Princess sings lullaby to sleeping child]",
+      "scene": "Princess sings lullaby to sleeping child"
+    },
+    {
+      "id": "The_Terrible_Head_MM012",
+      "filename": "The_Terrible_Head_MM012.json",
+      "interpOrder": false,
+      "caption": "Well, the daylight came at last, and the great chest was driven by the waves against the shore of an island.",
+      "description": "[Golden chest washes onto island shore]",
+      "scene": "Golden chest washes onto island shore"
+    },
+    {
+      "id": "The_Terrible_Head_MM013",
+      "filename": "The_Terrible_Head_MM013.json",
+      "interpOrder": false,
+      "caption": "There the brass-bound chest lay, with the Princess and her baby in it, till a man of that country came past, and saw it, and dragged it on to the beach, and when he had broken it open, behold! there was a beautiful lady and a little boy.",
+      "description": "[Kind man discovers the stranded chest]",
+      "scene": "Kind man discovers the stranded chest"
+    },
+    {
+      "id": "The_Terrible_Head_MM014",
+      "filename": "The_Terrible_Head_MM014.json",
+      "interpOrder": false,
+      "caption": "So he took them home, and was very kind to them, and brought up the boy till he was a young man.",
+      "description": "[Boy grows strong on the island]",
+      "scene": "Boy grows strong on the island"
+    },
+    {
+      "id": "The_Terrible_Head_MM015",
+      "filename": "The_Terrible_Head_MM015.json",
+      "interpOrder": false,
+      "caption": "Now when the boy had come to his full strength the King of that country fell in love with his mother, and wanted to marry her, but he knew that she would never part from her boy.",
+      "description": "[King gazes at the beautiful Princess]",
+      "scene": "King gazes at the beautiful Princess"
+    },
+    {
+      "id": "The_Terrible_Head_MM016",
+      "filename": "The_Terrible_Head_MM016.json",
+      "interpOrder": false,
+      "caption": "So he thought of a plan to get rid of the boy, and this was his plan: A great Queen of a country not far off was going to be married, and this king said that all his subjects must bring him wedding presents to give her.",
+      "description": "[King devises a treacherous scheme]",
+      "scene": "King devises a treacherous scheme"
+    },
+    {
+      "id": "The_Terrible_Head_MM017",
+      "filename": "The_Terrible_Head_MM017.json",
+      "interpOrder": false,
+      "caption": "And he made a feast to which he invited them all, and they all brought their presents; some brought gold cups, and some brought necklaces of gold and amber, and some brought beautiful horses; but the boy had nothing, though he was the son of a princess, for his mother had nothing to give him.",
+      "description": "[Guests arrive bearing golden gifts]",
+      "scene": "Guests arrive bearing golden gifts"
+    },
+    {
+      "id": "The_Terrible_Head_MM018",
+      "filename": "The_Terrible_Head_MM018.json",
+      "interpOrder": false,
+      "caption": "Then the rest of the company began to laugh at him, and the King said: \"If you have nothing else to give, at least you might go and fetch the Terrible Head.\"",
+      "description": "[King taunts the boy at the feast]",
+      "scene": "King taunts the boy at the feast"
+    },
+    {
+      "id": "The_Terrible_Head_MM019",
+      "filename": "The_Terrible_Head_MM019.json",
+      "interpOrder": false,
+      "caption": "The boy was proud, and spoke without thinking: \"Then I swear that I _will_ bring the Terrible Head, if it may be brought by a living man.",
+      "description": "[Boy proudly swears his oath]",
+      "scene": "Boy proudly swears his oath"
+    },
+    {
+      "id": "The_Terrible_Head_MM020",
+      "filename": "The_Terrible_Head_MM020.json",
+      "interpOrder": false,
+      "caption": "But of what head you speak I know not.\"",
+      "description": "[Boy questions what head they mean]",
+      "scene": "Boy questions what head they mean"
+    },
+    {
+      "id": "The_Terrible_Head_MM021",
+      "filename": "The_Terrible_Head_MM021.json",
+      "interpOrder": false,
+      "caption": "Then they told him that somewhere, a long way off, there dwelt three dreadful sisters, monstrous ogrish women, with golden wings and claws of brass, and with serpents growing on their heads instead of hair.",
+      "description": "[Company describes the monstrous sisters]",
+      "scene": "Company describes the monstrous sisters"
+    },
+    {
+      "id": "The_Terrible_Head_MM022",
+      "filename": "The_Terrible_Head_MM022.json",
+      "interpOrder": false,
+      "caption": "Now these women were so awful to look on that whoever saw them was turned at once into stone.",
+      "description": "[Terrifying sisters shown in visions]",
+      "scene": "Terrifying sisters shown in visions"
+    },
+    {
+      "id": "The_Terrible_Head_MM023",
+      "filename": "The_Terrible_Head_MM023.json",
+      "interpOrder": false,
+      "caption": "And two of them could not be put to death, but the youngest, whose face was very beautiful, could be killed, and it was _her_ head that the boy had promised to bring.",
+      "description": "[Youngest sister with beautiful face]",
+      "scene": "Youngest sister with beautiful face"
+    },
+    {
+      "id": "The_Terrible_Head_MM024",
+      "filename": "The_Terrible_Head_MM024.json",
+      "interpOrder": false,
+      "caption": "When he heard all this he was perhaps sorry that he had sworn to bring the Terrible Head, but he was determined to keep his oath. So he went out from the feast, where they all sat drinking and making merry, and he walked alone beside the sea in the dusk of the evening, at the place where the great chest, with himself and his mother in it, had been cast ashore.",
+      "description": "[Boy walks alone beside the sea]",
+      "scene": "Boy walks alone beside the sea"
+    },
+    {
+      "id": "The_Terrible_Head_MM025",
+      "filename": "The_Terrible_Head_MM025.json",
+      "interpOrder": false,
+      "caption": "There he went and sat down on a rock, looking toward the sea, and wondering how he should begin to fulfill his vow.",
+      "description": "[Boy sits troubled upon a rock]",
+      "scene": "Boy sits troubled upon a rock"
+    },
+    {
+      "id": "The_Terrible_Head_MM026",
+      "filename": "The_Terrible_Head_MM026.json",
+      "interpOrder": false,
+      "caption": "Then he felt some one touch him on the shoulder; and he turned, and saw a young man like a king's son, having with him a tall and beautiful lady, whose blue eyes shone like stars.",
+      "description": "[Magical stranger touches his shoulder]",
+      "scene": "Magical stranger touches his shoulder"
+    },
+    {
+      "id": "The_Terrible_Head_MM027",
+      "filename": "The_Terrible_Head_MM027.json",
+      "interpOrder": false,
+      "caption": "They were taller than mortal men, and the young man had a staff in his hand with golden wings on it, and two golden serpents twisted round it, and he had wings on his cap and on his shoes.",
+      "description": "[Winged man and blue-eyed lady]",
+      "scene": "Winged man and blue-eyed lady"
+    },
+    {
+      "id": "The_Terrible_Head_MM028",
+      "filename": "The_Terrible_Head_MM028.json",
+      "interpOrder": false,
+      "caption": "He spoke to the boy, and asked him why he was so unhappy; and the boy told him how he had sworn to bring the Terrible Head, and knew not how to begin to set about the adventure.",
+      "description": "[Strangers ask why boy is sad]",
+      "scene": "Strangers ask why boy is sad"
+    },
+    {
+      "id": "The_Terrible_Head_MM029",
+      "filename": "The_Terrible_Head_MM029.json",
+      "interpOrder": false,
+      "caption": "Then the beautiful lady also spoke, and said that \"it was a foolish oath and a hasty, but it might be kept if a brave man had sworn it.\" Then the boy answered that he was not afraid, if only he knew the way.",
+      "description": "[Lady speaks of keeping the oath]",
+      "scene": "Lady speaks of keeping the oath"
+    },
+    {
+      "id": "The_Terrible_Head_MM030",
+      "filename": "The_Terrible_Head_MM030.json",
+      "interpOrder": false,
+      "caption": "Then the lady said that to kill the dreadful woman with the golden wings and the brass claws, and to cut off her head, he needed three things: first, a Cap of Darkness, which would make him invisible when he wore it; next, a Sword of Sharpness, which would cleave iron at one blow; and last, the Shoes of Swiftness, with which he might fly in the air.",
+      "description": "[Lady lists three magical gifts]",
+      "scene": "Lady lists three magical gifts"
+    },
+    {
+      "id": "The_Terrible_Head_MM031",
+      "filename": "The_Terrible_Head_MM031.json",
+      "interpOrder": false,
+      "caption": "The boy answered that he knew not where such things were to be procured, and that, wanting them, he could only try and fail.",
+      "description": "[Boy admits he knows not the way]",
+      "scene": "Boy admits he knows not the way"
+    },
+    {
+      "id": "The_Terrible_Head_MM032",
+      "filename": "The_Terrible_Head_MM032.json",
+      "interpOrder": false,
+      "caption": "Then the young man, taking off his own shoes, said: \"First, you shall use these shoes till you have taken the Terrible Head, and then you must give them back to me.",
+      "description": "[Winged man offers his flying shoes]",
+      "scene": "Winged man offers his flying shoes"
+    },
+    {
+      "id": "The_Terrible_Head_MM033",
+      "filename": "The_Terrible_Head_MM033.json",
+      "interpOrder": false,
+      "caption": "And with these shoes you will fly as fleet as a bird, or a thought, over the land or over the waves of the sea, wherever the shoes know the way.",
+      "description": "[Shoes carry him over land and sea]",
+      "scene": "Shoes carry him over land and sea"
+    },
+    {
+      "id": "The_Terrible_Head_MM034",
+      "filename": "The_Terrible_Head_MM034.json",
+      "interpOrder": false,
+      "caption": "But there are ways which they do not know, roads beyond the borders of the world. And these roads have you to travel.",
+      "description": "[Roads beyond the world revealed]",
+      "scene": "Roads beyond the world revealed"
+    },
+    {
+      "id": "The_Terrible_Head_MM035",
+      "filename": "The_Terrible_Head_MM035.json",
+      "interpOrder": false,
+      "caption": "Now first you must go to the Three Gray Sisters, who live far off in the north, and are so very cold that they have only one eye and one tooth among the three.",
+      "description": "[Lady points to the frozen north]",
+      "scene": "Lady points to the frozen north"
+    },
+    {
+      "id": "The_Terrible_Head_MM036",
+      "filename": "The_Terrible_Head_MM036.json",
+      "interpOrder": false,
+      "caption": "You must creep up close to them, and as one of them passes the eye to the other you must seize it, and refuse to give it up till they have told you the way to the Three Fairies of the Garden, and _they_ will give you the Cap of Darkness and the Sword of Sharpness, and show you how to wing beyond this world to the land of the Terrible Head.",
+      "description": "[Lady explains the plan to steal the eye]",
+      "scene": "Lady explains the plan to steal the eye"
+    },
+    {
+      "id": "The_Terrible_Head_MM037",
+      "filename": "The_Terrible_Head_MM037.json",
+      "interpOrder": false,
+      "caption": "Then the beautiful lady said: \"Go forth at once, and do not return to say good-by to your mother, for these things must be done quickly, and the Shoes of Swiftness themselves will carry you to the land of the Three Gray Sisters--for they know the measure of that way.\"",
+      "description": "[Lady bids him depart at once]",
+      "scene": "Lady bids him depart at once"
+    },
+    {
+      "id": "The_Terrible_Head_MM038",
+      "filename": "The_Terrible_Head_MM038.json",
+      "interpOrder": false,
+      "caption": "So the boy thanked her, and he fastened on the Shoes of Swiftness, and turned to say good-by to the young man and the lady.",
+      "description": "[Boy fastens shoes and turns around]",
+      "scene": "Boy fastens shoes and turns around"
+    },
+    {
+      "id": "The_Terrible_Head_MM039",
+      "filename": "The_Terrible_Head_MM039.json",
+      "interpOrder": false,
+      "caption": "But, behold! they had vanished, he knew not how or where!",
+      "description": "[Helpers vanish into thin air]",
+      "scene": "Helpers vanish into thin air"
+    },
+    {
+      "id": "The_Terrible_Head_MM040",
+      "filename": "The_Terrible_Head_MM040.json",
+      "interpOrder": false,
+      "caption": "Then he leaped in the air to try the Shoes of Swiftness, and they carried him more swiftly than the wind, over the warm blue sea, over the happy lands of the south, over the northern peoples who drank mare's milk and lived in great wagons, wandering after their flocks.",
+      "description": "[Boy leaps into the sky]",
+      "scene": "Boy leaps into the sky"
+    },
+    {
+      "id": "The_Terrible_Head_MM041",
+      "filename": "The_Terrible_Head_MM041.json",
+      "interpOrder": false,
+      "caption": "Across the wide rivers, where the wild fowl rose and fled before him, and over the plains and the cold North Sea he went, over the fields of snow and the hills of ice, to a place where the world ends, and all water is frozen, and there are no men, nor beasts, nor any green grass.",
+      "description": "[Boy flies over frozen wilderness]",
+      "scene": "Boy flies over frozen wilderness"
+    },
+    {
+      "id": "The_Terrible_Head_MM042",
+      "filename": "The_Terrible_Head_MM042.json",
+      "interpOrder": false,
+      "caption": "There in a blue cave of the ice he found the Three Gray Sisters, the oldest of living things. Their hair was as white as the snow, and their flesh of an icy blue, and they mumbled and nodded in a kind of dream, and their frozen breath hung round them like a cloud.",
+      "description": "[Three Gray Sisters huddle in ice cave]",
+      "scene": "Three Gray Sisters huddle in ice cave"
+    },
+    {
+      "id": "The_Terrible_Head_MM043",
+      "filename": "The_Terrible_Head_MM043.json",
+      "interpOrder": false,
+      "caption": "Now the opening of the cave in the ice was narrow, and it was not easy to pass in without touching one of the Gray Sisters. But, floating on the Shoes of Swiftness, the boy just managed to steal in, and waited till one of the sisters said to another, who had their one eye:",
+      "description": "[Boy sneaks through narrow cave entrance]",
+      "scene": "Boy sneaks through narrow cave entrance"
+    },
+    {
+      "id": "The_Terrible_Head_MM044",
+      "filename": "The_Terrible_Head_MM044.json",
+      "interpOrder": false,
+      "caption": "\"Sister, what do you see? do you see old times coming back?\" \"No, sister.\" \"Then give _me_ the eye, for perhaps I can see farther than you.\" Then the first sister passed the eye to the second, but as the second groped for it the boy caught it cleverly out of her hand.",
+      "description": "[Gray Sisters pass the eye between them]",
+      "scene": "Gray Sisters pass the eye between them"
+    },
+    {
+      "id": "The_Terrible_Head_MM045",
+      "filename": "The_Terrible_Head_MM045.json",
+      "interpOrder": false,
+      "caption": "Then the boy slipped from behind them out of the cold cave into the air, and he laughed aloud.",
+      "description": "[Boy holds eye aloft, laughing]",
+      "scene": "Boy holds eye aloft, laughing"
+    },
+    {
+      "id": "The_Terrible_Head_MM046",
+      "filename": "The_Terrible_Head_MM046.json",
+      "interpOrder": false,
+      "caption": "When the gray women heard that laugh they began to weep, for now they knew that a stranger had robbed them, and that they could not help themselves, and their tears froze as they fell from the hollows where no eyes were, and rattled on the icy ground of the cave.",
+      "description": "[Gray Sisters weep frozen tears]",
+      "scene": "Gray Sisters weep frozen tears"
+    },
+    {
+      "id": "The_Terrible_Head_MM047",
+      "filename": "The_Terrible_Head_MM047.json",
+      "interpOrder": false,
+      "caption": "Then they began to implore the boy to give them their eye back again, and he could not help being sorry for them, they were so pitiful. But he said he would never give them the eye till they told him the way to the Fairies of the Garden.",
+      "description": "[Boy pities the weeping sisters]",
+      "scene": "Boy pities the weeping sisters"
+    },
+    {
+      "id": "The_Terrible_Head_MM048",
+      "filename": "The_Terrible_Head_MM048.json",
+      "interpOrder": false,
+      "caption": "Then they wrung their hands miserably, for they guessed why he had come, and how he was going to try to win the Terrible Head. Now the Dreadful Women were akin to the Three Gray Sisters, and it was hard for them to tell the boy the way. But at last they told him to keep always south, and with the land on his left and the sea on his right, till he reached the Island of the Fairies of the Garden.",
+      "description": "[Gray Sisters reluctantly reveal the path]",
+      "scene": "Gray Sisters reluctantly reveal the path"
+    },
+    {
+      "id": "The_Terrible_Head_MM049",
+      "filename": "The_Terrible_Head_MM049.json",
+      "interpOrder": false,
+      "caption": "Then he gave them back the eye, and they began to look out once more for the old times coming back again.",
+      "description": "[Boy returns eye and departs]",
+      "scene": "Boy returns eye and departs"
+    },
+    {
+      "id": "The_Terrible_Head_MM050",
+      "filename": "The_Terrible_Head_MM050.json",
+      "interpOrder": false,
+      "caption": "But the boy flew south between sea and land, keeping the land always on his left hand, till he saw a beautiful island crowned with flowering trees. There he alighted, and there he found the Three Fairies of the Garden.",
+      "description": "[Boy flies south toward flowering island]",
+      "scene": "Boy flies south toward flowering island"
+    },
+    {
+      "id": "The_Terrible_Head_MM051",
+      "filename": "The_Terrible_Head_MM051.json",
+      "interpOrder": false,
+      "caption": "They were like three very beautiful young women, dressed one in green, one in white, and one in red, and they were dancing and singing round an apple tree with apples of gold, and this was their song:",
+      "description": "[Three fairies dance around golden apple tree]",
+      "scene": "Three fairies dance around golden apple tree"
+    },
+    {
+      "id": "The_Terrible_Head_MM052",
+      "filename": "The_Terrible_Head_MM052.json",
+      "interpOrder": false,
+      "caption": "THE SONG OF THE WESTERN FAIRIES",
+      "description": "[Fairies sing and dance eternally]",
+      "scene": "Fairies sing and dance eternally"
+    },
+    {
+      "id": "The_Terrible_Head_MM053",
+      "filename": "The_Terrible_Head_MM053.json",
+      "interpOrder": false,
+      "caption": "These grave dancing fairies were very unlike the Grey Women, and they were glad to see the boy, and treated him kindly. Then they asked him why he had come; and he told them how he was sent to find the Sword of Sharpness and the Cap of Darkness.",
+      "description": "[Fairies greet the boy with kindness]",
+      "scene": "Fairies greet the boy with kindness"
+    },
+    {
+      "id": "The_Terrible_Head_MM054",
+      "filename": "The_Terrible_Head_MM054.json",
+      "interpOrder": false,
+      "caption": "And the fairies gave him these, and a wallet, and a shield, and belted the sword, which had a diamond blade, round his waist, and the cap they set on his head, and told him that now even they could not see him though they were fairies.",
+      "description": "[Fairies gift him the magical items]",
+      "scene": "Fairies gift him the magical items"
+    },
+    {
+      "id": "The_Terrible_Head_MM055",
+      "filename": "The_Terrible_Head_MM055.json",
+      "interpOrder": false,
+      "caption": "Then he took it off, and they each kissed him and wished him good fortune, and then they began again their eternal dance round the golden tree, for it is their business to guard it till the new times come, or till the world's ending.",
+      "description": "[Boy removes cap to be seen again]",
+      "scene": "Boy removes cap to be seen again"
+    },
+    {
+      "id": "The_Terrible_Head_MM056",
+      "filename": "The_Terrible_Head_MM056.json",
+      "interpOrder": false,
+      "caption": "So the boy put the cap on his head, and hung the wallet round his waist, and the shining shield on his shoulders, and flew beyond the great river that lies coiled like a serpent round the whole world.",
+      "description": "[Boy flies beyond the world-serpent river]",
+      "scene": "Boy flies beyond the world-serpent river"
+    },
+    {
+      "id": "The_Terrible_Head_MM057",
+      "filename": "The_Terrible_Head_MM057.json",
+      "interpOrder": false,
+      "caption": "And by the banks of that river, there he found the three Terrible Women all asleep beneath a poplar tree, and the dead poplar leaves lay all about them. Their golden wings were folded and their brass claws were crossed, and two of them slept with their hideous heads beneath their wings like birds, and the serpents in their hair writhed out from under the feathers of gold.",
+      "description": "[Terrible Women sleep beneath poplar tree]",
+      "scene": "Terrible Women sleep beneath poplar tree"
+    },
+    {
+      "id": "The_Terrible_Head_MM058",
+      "filename": "The_Terrible_Head_MM058.json",
+      "interpOrder": false,
+      "caption": "But the youngest slept between her two sisters, and she lay on her back, with her beautiful sad face turned to the sky; and though she slept her eyes were wide open.",
+      "description": "[Youngest sister sleeps with eyes open]",
+      "scene": "Youngest sister sleeps with eyes open"
+    },
+    {
+      "id": "The_Terrible_Head_MM059",
+      "filename": "The_Terrible_Head_MM059.json",
+      "interpOrder": false,
+      "caption": "If the boy had seen her he would have been changed into stone by the terror and the pity of it, she was so awful; but he had thought of a plan for killing her without looking on her face. As soon as he caught sight of the three from far off he took his shining shield from his shoulders, and held it up like a mirror, so that he saw the Dreadful Women reflected in it, and did not see the Terrible Head itself.",
+      "description": "[Boy reflects sisters in his shield]",
+      "scene": "Boy reflects sisters in his shield"
+    },
+    {
+      "id": "The_Terrible_Head_MM060",
+      "filename": "The_Terrible_Head_MM060.json",
+      "interpOrder": false,
+      "caption": "Then he came nearer and nearer, till he reckoned that he was within a sword's stroke of the youngest, and he guessed where he should strike a back blow behind him. Then he drew the Sword of Sharpness and struck once, and the Terrible Head was cut from the shoulders of the creature, and the blood leaped out and struck him like a blow.",
+      "description": "[Boy strikes a back blow with sword]",
+      "scene": "Boy strikes a back blow with sword"
+    },
+    {
+      "id": "The_Terrible_Head_MM061",
+      "filename": "The_Terrible_Head_MM061.json",
+      "interpOrder": false,
+      "caption": "But he thrust the Terrible Head into his wallet, and flew away without looking behind.",
+      "description": "[Boy thrusts head into wallet and flees]",
+      "scene": "Boy thrusts head into wallet and flees"
+    },
+    {
+      "id": "The_Terrible_Head_MM062",
+      "filename": "The_Terrible_Head_MM062.json",
+      "interpOrder": false,
+      "caption": "Then the two Dreadful Sisters who were left wakened, and rose in the air like great birds; and though they could not see him because of his Cap of Darkness, they flew after him up the wind, following by the scent through the clouds, like hounds hunting in a wood.",
+      "description": "[Two Dreadful Sisters rise in pursuit]",
+      "scene": "Two Dreadful Sisters rise in pursuit"
+    },
+    {
+      "id": "The_Terrible_Head_MM063",
+      "filename": "The_Terrible_Head_MM063.json",
+      "interpOrder": false,
+      "caption": "They came so close that he could hear the clatter of their golden wings, and their shrieks to each other: \"_here, here,_\" \"_no, there; this way he went,_\" as they chased him.",
+      "description": "[Sisters shriek and clash golden wings]",
+      "scene": "Sisters shriek and clash golden wings"
+    },
+    {
+      "id": "The_Terrible_Head_MM064",
+      "filename": "The_Terrible_Head_MM064.json",
+      "interpOrder": false,
+      "caption": "But the Shoes of Swiftness flew too fast for them, and at last their cries and the rattle of their wings died away as he crossed the great river that runs round the world.",
+      "description": "[Boy escapes across the world-river]",
+      "scene": "Boy escapes across the world-river"
+    },
+    {
+      "id": "The_Terrible_Head_MM065",
+      "filename": "The_Terrible_Head_MM065.json",
+      "interpOrder": false,
+      "caption": "Now when the horrible creatures were far in the distance, and the boy found himself on the right side of the river, he flew straight eastward, trying to seek his own country. But as he looked down from the air he saw a very strange sight--a beautiful girl chained to a stake at the high-water mark of the sea.",
+      "description": "[Boy spots girl chained at shore]",
+      "scene": "Boy spots girl chained at shore"
+    },
+    {
+      "id": "The_Terrible_Head_MM066",
+      "filename": "The_Terrible_Head_MM066.json",
+      "interpOrder": false,
+      "caption": "The girl was so frightened or so tired that she was only prevented from falling by the iron chain about her waist, and there she hung, as if she were dead.",
+      "description": "[Girl hangs lifeless on iron chain]",
+      "scene": "Girl hangs lifeless on iron chain"
+    },
+    {
+      "id": "The_Terrible_Head_MM067",
+      "filename": "The_Terrible_Head_MM067.json",
+      "interpOrder": false,
+      "caption": "The boy was very sorry for her and flew down and stood beside her. When he spoke she raised her head and looked round, but his voice only seemed to frighten her. Then he remembered that he was wearing the Cap of Darkness, and that she could only hear him, not see him. So he took it off, and there he stood before her, the handsomest young man she had ever seen in all her life, with short curly yellow hair, and blue eyes, and a laughing face.",
+      "description": "[Boy removes Cap of Darkness to appear]",
+      "scene": "Boy removes Cap of Darkness to appear"
+    },
+    {
+      "id": "The_Terrible_Head_MM068",
+      "filename": "The_Terrible_Head_MM068.json",
+      "interpOrder": false,
+      "caption": "And he thought her the most beautiful girl in the world. So first with one blow of the Sword of Sharpness he cut the iron chain that bound her, and then he asked her what she did there, and why men treated her so cruelly.",
+      "description": "[Boy cuts the chain with one blow]",
+      "scene": "Boy cuts the chain with one blow"
+    },
+    {
+      "id": "The_Terrible_Head_MM069",
+      "filename": "The_Terrible_Head_MM069.json",
+      "interpOrder": false,
+      "caption": "And she told him that she was the daughter of the King of that country, and that she was tied there to be eaten by a monstrous beast out of the sea; for the beast came and devoured a girl every day.",
+      "description": "[Girl tells of the sea beast]",
+      "scene": "Girl tells of the sea beast"
+    },
+    {
+      "id": "The_Terrible_Head_MM070",
+      "filename": "The_Terrible_Head_MM070.json",
+      "interpOrder": false,
+      "caption": "Now the lot had fallen on her; and as she was just saying this a long fierce head of a cruel sea creature rose out of the waves and snapped at the girl.",
+      "description": "[Rising head of sea creature]",
+      "scene": "Rising head of sea creature"
+    },
+    {
+      "id": "The_Terrible_Head_MM071",
+      "filename": "The_Terrible_Head_MM071.json",
+      "interpOrder": false,
+      "caption": "But the beast had been too greedy and too hurried, so he missed his aim the first time. Before he could rise and bite again the boy had whipped the Terrible Head out of his wallet and held it up.",
+      "description": "[Boy holds up the Terrible Head]",
+      "scene": "Boy holds up the Terrible Head"
+    },
+    {
+      "id": "The_Terrible_Head_MM072",
+      "filename": "The_Terrible_Head_MM072.json",
+      "interpOrder": false,
+      "caption": "And when the sea beast leaped out once more its eyes fell on the head, and instantly it was turned into a stone. And the stone beast is there on the sea-coast to this day.",
+      "description": "[Sea beast turned to stone]",
+      "scene": "Sea beast turned to stone"
+    },
+    {
+      "id": "The_Terrible_Head_MM073",
+      "filename": "The_Terrible_Head_MM073.json",
+      "interpOrder": false,
+      "caption": "Then the boy and the girl went to the palace of the King, her father, where everyone was weeping for her death, and they could hardly believe their eyes when they saw her come back well.",
+      "description": "[Couple arrives at the palace]",
+      "scene": "Couple arrives at the palace"
+    },
+    {
+      "id": "The_Terrible_Head_MM074",
+      "filename": "The_Terrible_Head_MM074.json",
+      "interpOrder": false,
+      "caption": "And the King and Queen made much of the boy, and could not contain themselves for delight when they found he wanted to marry their daughter.",
+      "description": "[King and Queen rejoice in delight]",
+      "scene": "King and Queen rejoice in delight"
+    },
+    {
+      "id": "The_Terrible_Head_MM075",
+      "filename": "The_Terrible_Head_MM075.json",
+      "interpOrder": false,
+      "caption": "So the two were married with the most splendid rejoicings, and when they had passed some time at court they went home in a ship to the boy's own country.",
+      "description": "[Grand wedding celebration]",
+      "scene": "Grand wedding celebration"
+    },
+    {
+      "id": "The_Terrible_Head_MM076",
+      "filename": "The_Terrible_Head_MM076.json",
+      "interpOrder": false,
+      "caption": "For he could not carry his bride through the air, so he took the Shoes of Swiftness, and the Cap of Darkness, and the Sword of Sharpness up to a lonely place in the hills. There he left them, and there they were found by the man and woman who had met him at home beside the sea, and had helped him to start on his journey.",
+      "description": "[Boy leaves gifts in lonely hills]",
+      "scene": "Boy leaves gifts in lonely hills"
+    },
+    {
+      "id": "The_Terrible_Head_MM077",
+      "filename": "The_Terrible_Head_MM077.json",
+      "interpOrder": false,
+      "caption": "When this had been done the boy and his bride set forth for home, and landed at the harbor of his native land. But whom should he meet in the very street of the town but his own mother, flying for her life from the wicked King, who now wished to kill her because he found that she would never marry him!",
+      "description": "[Mother flees through town streets]",
+      "scene": "Mother flees through town streets"
+    },
+    {
+      "id": "The_Terrible_Head_MM078",
+      "filename": "The_Terrible_Head_MM078.json",
+      "interpOrder": false,
+      "caption": "For if she had liked the King ill before, she liked him far worse now that he had caused her son to disappear so suddenly. She did not know, of course, where the boy had gone, but thought the King had slain him secretly. So now she was running for her very life, and the wicked King was following her with a sword in his hand.",
+      "description": "[King pursues mother with sword drawn]",
+      "scene": "King pursues mother with sword drawn"
+    },
+    {
+      "id": "The_Terrible_Head_MM079",
+      "filename": "The_Terrible_Head_MM079.json",
+      "interpOrder": false,
+      "caption": "Then, behold! she ran into her son's very arms, but he had only time to kiss her and step in front of her, when the King struck at him with his sword.",
+      "description": "[Mother runs into son's arms]",
+      "scene": "Mother runs into son's arms"
+    },
+    {
+      "id": "The_Terrible_Head_MM080",
+      "filename": "The_Terrible_Head_MM080.json",
+      "interpOrder": false,
+      "caption": "The boy caught the blow on his shield, and cried to the King: \"I swore to bring you the Terrible Head, and see how I keep my oath!\"",
+      "description": "[Boy catches blow on his shield]",
+      "scene": "Boy catches blow on his shield"
+    },
+    {
+      "id": "The_Terrible_Head_MM081",
+      "filename": "The_Terrible_Head_MM081.json",
+      "interpOrder": false,
+      "caption": "Then he drew forth the head from his wallet, and when the King's eyes fell on it, instantly he was turned into stone, just as he stood there with his sword lifted!",
+      "description": "[King turned to stone by the head]",
+      "scene": "King turned to stone by the head"
+    },
+    {
+      "id": "The_Terrible_Head_MM082",
+      "filename": "The_Terrible_Head_MM082.json",
+      "interpOrder": false,
+      "caption": "Now all the people rejoiced, because the wicked King should rule them no longer.",
+      "description": "[People celebrate their freedom]",
+      "scene": "People celebrate their freedom"
+    },
+    {
+      "id": "The_Terrible_Head_MM083",
+      "filename": "The_Terrible_Head_MM083.json",
+      "interpOrder": false,
+      "caption": "And they asked the boy to be their king, but he said no, he must take his mother home to her father's house. So the people chose for king the man who had been kind to his mother when first she was cast on the island in the great chest.",
+      "description": "[People crown the kind islander as king]",
+      "scene": "People crown the kind islander as king"
+    },
+    {
+      "id": "The_Terrible_Head_MM084",
+      "filename": "The_Terrible_Head_MM084.json",
+      "interpOrder": false,
+      "caption": "Presently the boy and his mother and his wife set sail for his mother's own country, from which she had been driven so unkindly.",
+      "description": "[Family sails for mother's homeland]",
+      "scene": "Family sails for mother's homeland"
+    },
+    {
+      "id": "The_Terrible_Head_MM085",
+      "filename": "The_Terrible_Head_MM085.json",
+      "interpOrder": false,
+      "caption": "But on the way they stayed at the court of a king, and it happened that he was holding games, and giving prizes to the best runners, boxers, and quoit-throwers. Then the boy would try his strength with the rest, but he threw the quoit so far that it went beyond what had ever been thrown before, and fell in the crowd, striking a man so that he died.",
+      "description": "[Boy throws the quoit at the games]",
+      "scene": "Boy throws the quoit at the games"
+    },
+    {
+      "id": "The_Terrible_Head_MM086",
+      "filename": "The_Terrible_Head_MM086.json",
+      "interpOrder": false,
+      "caption": "Now this man was no other than the father of the boy's mother, who had fled away from his own kingdom for fear his grandson should find him and kill him after all. Thus he was destroyed by his own cowardice and by chance, and thus the prophecy was fulfilled.",
+      "description": "[Grandfather struck down by the quoit]",
+      "scene": "Grandfather struck down by the quoit"
+    },
+    {
+      "id": "The_Terrible_Head_MM087",
+      "filename": "The_Terrible_Head_MM087.json",
+      "interpOrder": false,
+      "caption": "But the boy and his wife and his mother went back to the kingdom that was theirs, and lived long and happily after all their troubles.",
+      "description": "[Family lives happily ever after]",
+      "scene": "Family lives happily ever after"
+    }
+  ]
+}

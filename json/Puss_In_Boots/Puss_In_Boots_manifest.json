@@ -1,0 +1,554 @@
+{
+  "width": 720,
+  "height": 720,
+  "format": "png",
+  "name": "Puss In Boots",
+  "captionFontSize": 14,
+  "defaultTransitionDuration": 2000,
+  "pages": [
+    {
+      "id": "Puss_In_Boots_MM001",
+      "filename": "Puss_In_Boots_MM001.json",
+      "interpOrder": false,
+      "caption": "There was a miller who left no more estate to the three sons he had than his mill, his ass, and his cat.",
+      "description": "[An old miller on his deathbed]",
+      "scene": "An old miller on his deathbed"
+    },
+    {
+      "id": "Puss_In_Boots_MM002",
+      "filename": "Puss_In_Boots_MM002.json",
+      "interpOrder": false,
+      "caption": "The partition was soon made. Neither scrivener nor attorney was sent for. They would soon have eaten up all the poor patrimony.",
+      "description": "[Three sons divide the inheritance]",
+      "scene": "Three sons divide the inheritance"
+    },
+    {
+      "id": "Puss_In_Boots_MM003",
+      "filename": "Puss_In_Boots_MM003.json",
+      "interpOrder": false,
+      "caption": "The eldest had the mill, the second the ass, and the youngest nothing but the cat.",
+      "description": "[Eldest son receives the mill]",
+      "scene": "Eldest son receives the mill"
+    },
+    {
+      "id": "Puss_In_Boots_MM004",
+      "filename": "Puss_In_Boots_MM004.json",
+      "interpOrder": false,
+      "caption": "The poor young fellow was quite comfortless at having so poor a lot.",
+      "description": "[Youngest son laments his fate]",
+      "scene": "Youngest son laments his fate"
+    },
+    {
+      "id": "Puss_In_Boots_MM005",
+      "filename": "Puss_In_Boots_MM005.json",
+      "interpOrder": false,
+      "caption": "The Cat, who heard all this, but made as if he did not, said to him with a grave and serious air.",
+      "description": "[The cat speaks to his master]",
+      "scene": "The cat speaks to his master"
+    },
+    {
+      "id": "Puss_In_Boots_MM006",
+      "filename": "Puss_In_Boots_MM006.json",
+      "interpOrder": false,
+      "caption": "Do not thus afflict yourself, my good master. You have nothing else to do but to give me a bag and get a pair of boots made for me that I may scamper through the dirt and the brambles.",
+      "description": "[Cat requests boots and a bag]",
+      "scene": "Cat requests boots and a bag"
+    },
+    {
+      "id": "Puss_In_Boots_MM007",
+      "filename": "Puss_In_Boots_MM007.json",
+      "interpOrder": false,
+      "caption": "The Cat's master did not build very much upon what he said. When the Cat had what he asked for he booted himself very gallantly.",
+      "description": "[The master provides what was asked]",
+      "scene": "The master provides what was asked"
+    },
+    {
+      "id": "Puss_In_Boots_MM008",
+      "filename": "Puss_In_Boots_MM008.json",
+      "interpOrder": false,
+      "caption": "Putting his bag about his neck, he held the strings of it in his two forepaws and went into a warren where was great abundance of rabbits.",
+      "description": "[Cat enters the warren]",
+      "scene": "Cat enters the warren"
+    },
+    {
+      "id": "Puss_In_Boots_MM009",
+      "filename": "Puss_In_Boots_MM009.json",
+      "interpOrder": false,
+      "caption": "He put bran and sow-thistle into his bag, and stretching out at length, as if he had been dead, he waited for some young rabbits to come and rummage his bag.",
+      "description": "[Cat lies in wait with baited bag]",
+      "scene": "Cat lies in wait with baited bag"
+    },
+    {
+      "id": "Puss_In_Boots_MM010",
+      "filename": "Puss_In_Boots_MM010.json",
+      "interpOrder": false,
+      "caption": "Scarce was he lain down but he had what he wanted. A rash and foolish young rabbit jumped into his bag.",
+      "description": "[A foolish rabbit falls for the trick]",
+      "scene": "A foolish rabbit falls for the trick"
+    },
+    {
+      "id": "Puss_In_Boots_MM011",
+      "filename": "Puss_In_Boots_MM011.json",
+      "interpOrder": false,
+      "caption": "Monsieur Puss, immediately drawing close the strings, took and killed him without pity.",
+      "description": "[Cat catches and kills the rabbit]",
+      "scene": "Cat catches and kills the rabbit"
+    },
+    {
+      "id": "Puss_In_Boots_MM012",
+      "filename": "Puss_In_Boots_MM012.json",
+      "interpOrder": false,
+      "caption": "Proud of his prey, he went with it to the palace and asked to speak with his majesty.",
+      "description": "[Cat presents the rabbit to the king]",
+      "scene": "Cat presents the rabbit to the king"
+    },
+    {
+      "id": "Puss_In_Boots_MM013",
+      "filename": "Puss_In_Boots_MM013.json",
+      "interpOrder": false,
+      "caption": "He was shown upstairs into the King's apartment, and, making a low reverence, said to him.",
+      "description": "[Cat addresses the king]",
+      "scene": "Cat addresses the king"
+    },
+    {
+      "id": "Puss_In_Boots_MM014",
+      "filename": "Puss_In_Boots_MM014.json",
+      "interpOrder": false,
+      "caption": "I have brought you, sir, a rabbit of the warren, which my noble lord the Marquis of Carabas has commanded me to present to your majesty from him.",
+      "description": "[Cat names his master the Marquis of Carabas]",
+      "scene": "Cat names his master the Marquis of Carabas"
+    },
+    {
+      "id": "Puss_In_Boots_MM015",
+      "filename": "Puss_In_Boots_MM015.json",
+      "interpOrder": false,
+      "caption": "Tell thy master that I thank him and that he does me a great deal of pleasure.",
+      "description": "[The king accepts the gift]",
+      "scene": "The king accepts the gift"
+    },
+    {
+      "id": "Puss_In_Boots_MM016",
+      "filename": "Puss_In_Boots_MM016.json",
+      "interpOrder": false,
+      "caption": "Another time he went and hid himself among some standing corn, holding still his bag open, and when a brace of partridges ran into it he drew the strings and so caught them both.",
+      "description": "[Cat catches partridges]",
+      "scene": "Cat catches partridges"
+    },
+    {
+      "id": "Puss_In_Boots_MM017",
+      "filename": "Puss_In_Boots_MM017.json",
+      "interpOrder": false,
+      "caption": "He went and made a present of these to the king, as he had done before of the rabbit which he took in the warren.",
+      "description": "[Cat delivers partridges to the king]",
+      "scene": "Cat delivers partridges to the king"
+    },
+    {
+      "id": "Puss_In_Boots_MM018",
+      "filename": "Puss_In_Boots_MM018.json",
+      "interpOrder": false,
+      "caption": "The king, in like manner, received the partridges with great pleasure, and ordered him some money for drink.",
+      "description": "[The king rewards the cat]",
+      "scene": "The king rewards the cat"
+    },
+    {
+      "id": "Puss_In_Boots_MM019",
+      "filename": "Puss_In_Boots_MM019.json",
+      "interpOrder": false,
+      "caption": "The Cat continued for two or three months thus to carry his Majesty, from time to time, game of his master's taking.",
+      "description": "[Cat brings game regularly to the king]",
+      "scene": "Cat brings game regularly to the king"
+    },
+    {
+      "id": "Puss_In_Boots_MM020",
+      "filename": "Puss_In_Boots_MM020.json",
+      "interpOrder": false,
+      "caption": "One day in particular, when he knew for certain that he was to take the air along the river-side, with his daughter, the most beautiful princess in the world, he said to his master.",
+      "description": "[Cat informs his master of the king's plans]",
+      "scene": "Cat informs his master of the king's plans"
+    },
+    {
+      "id": "Puss_In_Boots_MM021",
+      "filename": "Puss_In_Boots_MM021.json",
+      "interpOrder": false,
+      "caption": "If you will follow my advice your fortune is made. You have nothing else to do but go and wash yourself in the river, in that part I shall show you, and leave the rest to me.",
+      "description": "[Cat instructs his master to wash in the river]",
+      "scene": "Cat instructs his master to wash in the river"
+    },
+    {
+      "id": "Puss_In_Boots_MM022",
+      "filename": "Puss_In_Boots_MM022.json",
+      "interpOrder": false,
+      "caption": "The Marquis of Carabas did what the Cat advised him to, without knowing why or wherefore.",
+      "description": "[The marquis follows the cat's advice]",
+      "scene": "The marquis follows the cat's advice"
+    },
+    {
+      "id": "Puss_In_Boots_MM023",
+      "filename": "Puss_In_Boots_MM023.json",
+      "interpOrder": false,
+      "caption": "While he was washing the King passed by.",
+      "description": "[The king passes by in his coach]",
+      "scene": "The king passes by in his coach"
+    },
+    {
+      "id": "Puss_In_Boots_MM024",
+      "filename": "Puss_In_Boots_MM024.json",
+      "interpOrder": false,
+      "caption": "The Cat began to cry out, Help! help! My Lord Marquis of Carabas is going to be drowned.",
+      "description": "[Cat cries out for help]",
+      "scene": "Cat cries out for help"
+    },
+    {
+      "id": "Puss_In_Boots_MM025",
+      "filename": "Puss_In_Boots_MM025.json",
+      "interpOrder": false,
+      "caption": "At this noise the King put his head out of the coach-window, and, finding it was the Cat who had so often brought him such good game, he commanded his guards to run immediately to the assistance of his Lordship the Marquis of Carabas.",
+      "description": "[The king orders rescue]",
+      "scene": "The king orders rescue"
+    },
+    {
+      "id": "Puss_In_Boots_MM026",
+      "filename": "Puss_In_Boots_MM026.json",
+      "interpOrder": false,
+      "caption": "While they were drawing the poor Marquis out of the river, the Cat came up to the coach and told the King that, while his master was washing, there came by some rogues, who went off with his clothes.",
+      "description": "[The cat explains the marquis was robbed]",
+      "scene": "The cat explains the marquis was robbed"
+    },
+    {
+      "id": "Puss_In_Boots_MM027",
+      "filename": "Puss_In_Boots_MM027.json",
+      "interpOrder": false,
+      "caption": "Though he had cried out, Thieves! thieves! several times, as loud as he could.",
+      "description": "[The cat claims thieves stole the clothes]",
+      "scene": "The cat claims thieves stole the clothes"
+    },
+    {
+      "id": "Puss_In_Boots_MM028",
+      "filename": "Puss_In_Boots_MM028.json",
+      "interpOrder": false,
+      "caption": "This cunning Cat had hidden them under a great stone.",
+      "description": "[The cat reveals the hidden clothes]",
+      "scene": "The cat reveals the hidden clothes"
+    },
+    {
+      "id": "Puss_In_Boots_MM029",
+      "filename": "Puss_In_Boots_MM029.json",
+      "interpOrder": false,
+      "caption": "The King immediately commanded the officers of his wardrobe to run and fetch one of his best suits for the Lord Marquis of Carabas.",
+      "description": "[The king provides fine clothes]",
+      "scene": "The king provides fine clothes"
+    },
+    {
+      "id": "Puss_In_Boots_MM030",
+      "filename": "Puss_In_Boots_MM030.json",
+      "interpOrder": false,
+      "caption": "The King caressed him after a very extraordinary manner, and as the fine clothes he had given him extremely set off his good mien, the King's daughter took a secret inclination to him.",
+      "description": "[The king caresses the marquis]",
+      "scene": "The king caresses the marquis"
+    },
+    {
+      "id": "Puss_In_Boots_MM031",
+      "filename": "Puss_In_Boots_MM031.json",
+      "interpOrder": false,
+      "caption": "The Marquis of Carabas had no sooner cast two or three respectful and somewhat tender glances but she fell in love with him to distraction.",
+      "description": "[The princess falls in love]",
+      "scene": "The princess falls in love"
+    },
+    {
+      "id": "Puss_In_Boots_MM032",
+      "filename": "Puss_In_Boots_MM032.json",
+      "interpOrder": false,
+      "caption": "The King would needs have him come into the coach and take part of the airing.",
+      "description": "[The king invites the marquis into the coach]",
+      "scene": "The king invites the marquis into the coach"
+    },
+    {
+      "id": "Puss_In_Boots_MM033",
+      "filename": "Puss_In_Boots_MM033.json",
+      "interpOrder": false,
+      "caption": "The Cat, quite overjoyed to see his project begin to succeed, marched on before, and, meeting with some countrymen, who were mowing a meadow, he said to them.",
+      "description": "[The cat goes ahead to threaten the mowers]",
+      "scene": "The cat goes ahead to threaten the mowers"
+    },
+    {
+      "id": "Puss_In_Boots_MM034",
+      "filename": "Puss_In_Boots_MM034.json",
+      "interpOrder": false,
+      "caption": "Good people, you who are mowing, if you do not tell the King that the meadow you mow belongs to my Lord Marquis of Carabas, you shall be chopped as small as herbs for the pot.",
+      "description": "[The cat threatens the mowers]",
+      "scene": "The cat threatens the mowers"
+    },
+    {
+      "id": "Puss_In_Boots_MM035",
+      "filename": "Puss_In_Boots_MM035.json",
+      "interpOrder": false,
+      "caption": "The King did not fail asking of the mowers to whom the meadow they were mowing belonged.",
+      "description": "[The king asks about the meadow]",
+      "scene": "The king asks about the meadow"
+    },
+    {
+      "id": "Puss_In_Boots_MM036",
+      "filename": "Puss_In_Boots_MM036.json",
+      "interpOrder": false,
+      "caption": "To my Lord Marquis of Carabas, answered they altogether, for the Cat's threats had made them terribly afraid.",
+      "description": "[The mowers claim the land belongs to the marquis]",
+      "scene": "The mowers claim the land belongs to the marquis"
+    },
+    {
+      "id": "Puss_In_Boots_MM037",
+      "filename": "Puss_In_Boots_MM037.json",
+      "interpOrder": false,
+      "caption": "You see, sir, this is a meadow which never fails to yield a plentiful harvest every year.",
+      "description": "[The marquis boasts of his meadow]",
+      "scene": "The marquis boasts of his meadow"
+    },
+    {
+      "id": "Puss_In_Boots_MM038",
+      "filename": "Puss_In_Boots_MM038.json",
+      "interpOrder": false,
+      "caption": "The Master Cat, who went still on before, met with some reapers, and said to them.",
+      "description": "[The cat confronts the reapers]",
+      "scene": "The cat confronts the reapers"
+    },
+    {
+      "id": "Puss_In_Boots_MM039",
+      "filename": "Puss_In_Boots_MM039.json",
+      "interpOrder": false,
+      "caption": "Good people, you who are reaping, if you do not tell the King that all this corn belongs to the Marquis of Carabas, you shall be chopped as small as herbs for the pot.",
+      "description": "[The cat threatens the reapers]",
+      "scene": "The cat threatens the reapers"
+    },
+    {
+      "id": "Puss_In_Boots_MM040",
+      "filename": "Puss_In_Boots_MM040.json",
+      "interpOrder": false,
+      "caption": "The King, who passed by a moment after, would needs know to whom all that corn, which he then saw, did belong.",
+      "description": "[The king questions the reapers]",
+      "scene": "The king questions the reapers"
+    },
+    {
+      "id": "Puss_In_Boots_MM041",
+      "filename": "Puss_In_Boots_MM041.json",
+      "interpOrder": false,
+      "caption": "To my Lord Marquis of Carabas, replied the reapers, and the King was very well pleased with it, as well as the Marquis, whom he congratulated thereupon.",
+      "description": "[The reapers claim the corn belongs to the marquis]",
+      "scene": "The reapers claim the corn belongs to the marquis"
+    },
+    {
+      "id": "Puss_In_Boots_MM042",
+      "filename": "Puss_In_Boots_MM042.json",
+      "interpOrder": false,
+      "caption": "The Master Cat, who went always before, said the same words to all he met, and the King was astonished at the vast estates of my Lord Marquis of Carabas.",
+      "description": "[The cat claims all the lands]",
+      "scene": "The cat claims all the lands"
+    },
+    {
+      "id": "Puss_In_Boots_MM043",
+      "filename": "Puss_In_Boots_MM043.json",
+      "interpOrder": false,
+      "caption": "Monsieur Puss came at last to a stately castle, the master of which was an ogre, the richest had ever been known.",
+      "description": "[The cat arrives at the ogre's castle]",
+      "scene": "The cat arrives at the ogre's castle"
+    },
+    {
+      "id": "Puss_In_Boots_MM044",
+      "filename": "Puss_In_Boots_MM044.json",
+      "interpOrder": false,
+      "caption": "The Cat, who had taken care to inform himself who this ogre was and what he could do, asked to speak with him, saying he could not pass so near his castle without having the honor of paying his respects to him.",
+      "description": "[The cat asks to speak with the ogre]",
+      "scene": "The cat asks to speak with the ogre"
+    },
+    {
+      "id": "Puss_In_Boots_MM045",
+      "filename": "Puss_In_Boots_MM045.json",
+      "interpOrder": false,
+      "caption": "The ogre received him as civilly as an ogre could do, and made him sit down.",
+      "description": "[The ogre receives the cat]",
+      "scene": "The ogre receives the cat"
+    },
+    {
+      "id": "Puss_In_Boots_MM046",
+      "filename": "Puss_In_Boots_MM046.json",
+      "interpOrder": false,
+      "caption": "I have been assured that you have the gift of being able to change yourself into all sorts of creatures you have a mind to.",
+      "description": "[The cat questions the ogre's powers]",
+      "scene": "The cat questions the ogre's powers"
+    },
+    {
+      "id": "Puss_In_Boots_MM047",
+      "filename": "Puss_In_Boots_MM047.json",
+      "interpOrder": false,
+      "caption": "That is true, answered the ogre very briskly; and to convince you, you shall see me now become a lion.",
+      "description": "[The ogre confirms his powers]",
+      "scene": "The ogre confirms his powers"
+    },
+    {
+      "id": "Puss_In_Boots_MM048",
+      "filename": "Puss_In_Boots_MM048.json",
+      "interpOrder": false,
+      "caption": "Puss was so sadly terrified at the sight of a lion so near him that he immediately got into the gutter.",
+      "description": "[The ogre transforms into a lion]",
+      "scene": "The ogre transforms into a lion"
+    },
+    {
+      "id": "Puss_In_Boots_MM049",
+      "filename": "Puss_In_Boots_MM049.json",
+      "interpOrder": false,
+      "caption": "Not without abundance of trouble and danger, because of his boots, which were of no use at all to him in walking upon the tiles.",
+      "description": "[The cat escapes onto the roof]",
+      "scene": "The cat escapes onto the roof"
+    },
+    {
+      "id": "Puss_In_Boots_MM050",
+      "filename": "Puss_In_Boots_MM050.json",
+      "interpOrder": false,
+      "caption": "A little while after, when Puss saw that the ogre had resumed his natural form, he came down, and owned he had been very much frightened.",
+      "description": "[The ogre returns to his natural form]",
+      "scene": "The ogre returns to his natural form"
+    },
+    {
+      "id": "Puss_In_Boots_MM051",
+      "filename": "Puss_In_Boots_MM051.json",
+      "interpOrder": false,
+      "caption": "I have been, moreover, informed, but I know not how to believe it, that you have also the power to take on you the shape of the smallest animals.",
+      "description": "[The cat doubts the ogre's smaller transformations]",
+      "scene": "The cat doubts the ogre's smaller transformations"
+    },
+    {
+      "id": "Puss_In_Boots_MM052",
+      "filename": "Puss_In_Boots_MM052.json",
+      "interpOrder": false,
+      "caption": "Impossible! cried the ogre; you shall see that presently.",
+      "description": "[The ogre boasts of his mouse form]",
+      "scene": "The ogre boasts of his mouse form"
+    },
+    {
+      "id": "Puss_In_Boots_MM053",
+      "filename": "Puss_In_Boots_MM053.json",
+      "interpOrder": false,
+      "caption": "And at the same time he changed himself into a mouse, and began to run about the floor.",
+      "description": "[The ogre transforms into a mouse]",
+      "scene": "The ogre transforms into a mouse"
+    },
+    {
+      "id": "Puss_In_Boots_MM054",
+      "filename": "Puss_In_Boots_MM054.json",
+      "interpOrder": false,
+      "caption": "Puss no sooner perceived this but he fell upon him and ate him up.",
+      "description": "[The cat devours the mouse]",
+      "scene": "The cat devours the mouse"
+    },
+    {
+      "id": "Puss_In_Boots_MM055",
+      "filename": "Puss_In_Boots_MM055.json",
+      "interpOrder": false,
+      "caption": "Meanwhile the King, who saw, as he passed, this fine castle of the ogre's, had a mind to go into it.",
+      "description": "[The king arrives at the castle]",
+      "scene": "The king arrives at the castle"
+    },
+    {
+      "id": "Puss_In_Boots_MM056",
+      "filename": "Puss_In_Boots_MM056.json",
+      "interpOrder": false,
+      "caption": "Puss, who heard the noise of his Majesty's coach running over the draw-bridge, ran out, and said to the King.",
+      "description": "[The cat welcomes the king]",
+      "scene": "The cat welcomes the king"
+    },
+    {
+      "id": "Puss_In_Boots_MM057",
+      "filename": "Puss_In_Boots_MM057.json",
+      "interpOrder": false,
+      "caption": "Your Majesty is welcome to this castle of my Lord Marquis of Carabas.",
+      "description": "[The cat invites the king inside]",
+      "scene": "The cat invites the king inside"
+    },
+    {
+      "id": "Puss_In_Boots_MM058",
+      "filename": "Puss_In_Boots_MM058.json",
+      "interpOrder": false,
+      "caption": "What! my Lord Marquis, and does this castle also belong to you? There can be nothing finer than this court and all the stately buildings which surround it.",
+      "description": "[The king is amazed by the castle]",
+      "scene": "The king is amazed by the castle"
+    },
+    {
+      "id": "Puss_In_Boots_MM059",
+      "filename": "Puss_In_Boots_MM059.json",
+      "interpOrder": false,
+      "caption": "Let us go into it, if you please.",
+      "description": "[The king enters the castle]",
+      "scene": "The king enters the castle"
+    },
+    {
+      "id": "Puss_In_Boots_MM060",
+      "filename": "Puss_In_Boots_MM060.json",
+      "interpOrder": false,
+      "caption": "The Marquis gave his hand to the Princess, and followed the King, who went first.",
+      "description": "[The marquis and princess enter together]",
+      "scene": "The marquis and princess enter together"
+    },
+    {
+      "id": "Puss_In_Boots_MM061",
+      "filename": "Puss_In_Boots_MM061.json",
+      "interpOrder": false,
+      "caption": "They passed into a spacious hall, where they found a magnificent collation, which the ogre had prepared for his friends.",
+      "description": "[They discover a magnificent feast]",
+      "scene": "They discover a magnificent feast"
+    },
+    {
+      "id": "Puss_In_Boots_MM062",
+      "filename": "Puss_In_Boots_MM062.json",
+      "interpOrder": false,
+      "caption": "Who were that very day to visit him, but dared not to enter, knowing the King was there.",
+      "description": "[The king's guests refuse to enter]",
+      "scene": "The king's guests refuse to enter"
+    },
+    {
+      "id": "Puss_In_Boots_MM063",
+      "filename": "Puss_In_Boots_MM063.json",
+      "interpOrder": false,
+      "caption": "His Majesty was perfectly charmed with the good qualities of my Lord Marquis of Carabas.",
+      "description": "[The king is charmed by the marquis]",
+      "scene": "The king is charmed by the marquis"
+    },
+    {
+      "id": "Puss_In_Boots_MM064",
+      "filename": "Puss_In_Boots_MM064.json",
+      "interpOrder": false,
+      "caption": "As was his daughter, who had fallen violently in love with him.",
+      "description": "[The princess falls in love]",
+      "scene": "The princess falls in love"
+    },
+    {
+      "id": "Puss_In_Boots_MM065",
+      "filename": "Puss_In_Boots_MM065.json",
+      "interpOrder": false,
+      "caption": "And, seeing the vast estate he possessed, said to him, after having drunk five or six glasses, It will be owing to yourself only, my Lord Marquis, if you are not my son-in-law.",
+      "description": "[The king proposes marriage]",
+      "scene": "The king proposes marriage"
+    },
+    {
+      "id": "Puss_In_Boots_MM066",
+      "filename": "Puss_In_Boots_MM066.json",
+      "interpOrder": false,
+      "caption": "The Marquis, making several low bows, accepted the honor which his Majesty conferred upon him.",
+      "description": "[The marquis accepts]",
+      "scene": "The marquis accepts"
+    },
+    {
+      "id": "Puss_In_Boots_MM067",
+      "filename": "Puss_In_Boots_MM067.json",
+      "interpOrder": false,
+      "caption": "And forthwith, that very same day, married the Princess.",
+      "description": "[The marquis marries the princess]",
+      "scene": "The marquis marries the princess"
+    },
+    {
+      "id": "Puss_In_Boots_MM068",
+      "filename": "Puss_In_Boots_MM068.json",
+      "interpOrder": false,
+      "caption": "Puss became a great lord, and never ran after mice any more but only for his diversion.",
+      "description": "[The cat becomes a great lord]",
+      "scene": "The cat becomes a great lord"
+    }
+  ]
+}

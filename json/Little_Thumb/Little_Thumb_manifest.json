@@ -1,0 +1,770 @@
+{
+  "width": 720,
+  "height": 720,
+  "format": "png",
+  "name": "Little Thumb",
+  "captionFontSize": 14,
+  "defaultTransitionDuration": 2000,
+  "pages": [
+    {
+      "id": "Little_Thumb_MM001",
+      "filename": "Little_Thumb_MM001.json",
+      "interpOrder": false,
+      "caption": "There was once a poor woodcutter who had seven sons, the youngest only seven.",
+      "description": "[A poor woodcutter and his wife]",
+      "scene": "A poor woodcutter and his wife"
+    },
+    {
+      "id": "Little_Thumb_MM002",
+      "filename": "Little_Thumb_MM002.json",
+      "interpOrder": false,
+      "caption": "He was very little, and when born no bigger than one's thumb, which made him be called Little Thumb.",
+      "description": "[Little Thumb is smaller than a thumb]",
+      "scene": "Little Thumb is smaller than a thumb"
+    },
+    {
+      "id": "Little_Thumb_MM003",
+      "filename": "Little_Thumb_MM003.json",
+      "interpOrder": false,
+      "caption": "The poor child bore the blame of whatsoever was done amiss in the house, and, guilty or not, was always in the wrong.",
+      "description": "[The boy is always blamed]",
+      "scene": "The boy is always blamed"
+    },
+    {
+      "id": "Little_Thumb_MM004",
+      "filename": "Little_Thumb_MM004.json",
+      "interpOrder": false,
+      "caption": "Little Thumb was more cunning and had a far greater share of wisdom than all his brothers put together.",
+      "description": "[A clever boy]",
+      "scene": "A clever boy"
+    },
+    {
+      "id": "Little_Thumb_MM005",
+      "filename": "Little_Thumb_MM005.json",
+      "interpOrder": false,
+      "caption": "There happened now to come a very bad year, and the famine was so great that these poor people resolved to rid themselves of their children.",
+      "description": "[Poverty and famine]",
+      "scene": "Poverty and famine"
+    },
+    {
+      "id": "Little_Thumb_MM006",
+      "filename": "Little_Thumb_MM006.json",
+      "interpOrder": false,
+      "caption": "One evening the fagot-maker said to his wife that he was resolved to lose them in the wood to-morrow.",
+      "description": "[The father speaks of his plan]",
+      "scene": "The father speaks of his plan"
+    },
+    {
+      "id": "Little_Thumb_MM007",
+      "filename": "Little_Thumb_MM007.json",
+      "interpOrder": false,
+      "caption": "The wife cried out in horror, but having considered what a grief it would be to see them perish with hunger, she at last consented.",
+      "description": "[The mother agrees]",
+      "scene": "The mother agrees"
+    },
+    {
+      "id": "Little_Thumb_MM008",
+      "filename": "Little_Thumb_MM008.json",
+      "interpOrder": false,
+      "caption": "Little Thumb heard every word that had been spoken, for he got up softly and hid himself under his father's stool.",
+      "description": "[Little Thumb listens]",
+      "scene": "Little Thumb listens"
+    },
+    {
+      "id": "Little_Thumb_MM009",
+      "filename": "Little_Thumb_MM009.json",
+      "interpOrder": false,
+      "caption": "He went to bed again, but did not sleep a wink all the rest of the night, thinking on what he had to do.",
+      "description": "[A sleepless night]",
+      "scene": "A sleepless night"
+    },
+    {
+      "id": "Little_Thumb_MM010",
+      "filename": "Little_Thumb_MM010.json",
+      "interpOrder": false,
+      "caption": "He got up early in the morning and went to the river-side, where he filled his pockets full of small white pebbles.",
+      "description": "[Gathering white pebbles]",
+      "scene": "Gathering white pebbles"
+    },
+    {
+      "id": "Little_Thumb_MM011",
+      "filename": "Little_Thumb_MM011.json",
+      "interpOrder": false,
+      "caption": "They all went abroad, but Little Thumb never told his brothers one syllable of what he knew.",
+      "description": "[The family walks into the forest]",
+      "scene": "The family walks into the forest"
+    },
+    {
+      "id": "Little_Thumb_MM012",
+      "filename": "Little_Thumb_MM012.json",
+      "interpOrder": false,
+      "caption": "They went into a very thick forest, where they could not see one another at ten paces distance.",
+      "description": "[Deep in the forest]",
+      "scene": "Deep in the forest"
+    },
+    {
+      "id": "Little_Thumb_MM013",
+      "filename": "Little_Thumb_MM013.json",
+      "interpOrder": false,
+      "caption": "The fagot-maker began to cut wood, and the children to gather up the sticks to make fagots.",
+      "description": "[The children gather sticks]",
+      "scene": "The children gather sticks"
+    },
+    {
+      "id": "Little_Thumb_MM014",
+      "filename": "Little_Thumb_MM014.json",
+      "interpOrder": false,
+      "caption": "Their father and mother, seeing them busy at their work, got away from them insensibly and ran away from them all at once.",
+      "description": "[The parents flee]",
+      "scene": "The parents flee"
+    },
+    {
+      "id": "Little_Thumb_MM015",
+      "filename": "Little_Thumb_MM015.json",
+      "interpOrder": false,
+      "caption": "When the children saw they were left alone, they began to cry as loud as they could.",
+      "description": "[Crying alone]",
+      "scene": "Crying alone"
+    },
+    {
+      "id": "Little_Thumb_MM016",
+      "filename": "Little_Thumb_MM016.json",
+      "interpOrder": false,
+      "caption": "Little Thumb let them cry on, knowing very well how to get home again by means of the little white pebbles he had dropped along the way.",
+      "description": "[Little Thumb has a plan]",
+      "scene": "Little Thumb has a plan"
+    },
+    {
+      "id": "Little_Thumb_MM017",
+      "filename": "Little_Thumb_MM017.json",
+      "interpOrder": false,
+      "caption": "He said to his brothers that he would lead them home again, only follow him.",
+      "description": "[Little Thumb leads the brothers home]",
+      "scene": "Little Thumb leads the brothers home"
+    },
+    {
+      "id": "Little_Thumb_MM018",
+      "filename": "Little_Thumb_MM018.json",
+      "interpOrder": false,
+      "caption": "They did so, and he brought them home by the very same way they came into the forest.",
+      "description": "[Following the pebble trail]",
+      "scene": "Following the pebble trail"
+    },
+    {
+      "id": "Little_Thumb_MM019",
+      "filename": "Little_Thumb_MM019.json",
+      "interpOrder": false,
+      "caption": "They dared not go in, but sat themselves down at the door, listening to what their father and mother were saying.",
+      "description": "[Waiting at the door]",
+      "scene": "Waiting at the door"
+    },
+    {
+      "id": "Little_Thumb_MM020",
+      "filename": "Little_Thumb_MM020.json",
+      "interpOrder": false,
+      "caption": "The very moment the fagot-maker and his wife reached home the lord of the manor sent them ten crowns, which he had owed them a long while.",
+      "description": "[A gift arrives]",
+      "scene": "A gift arrives"
+    },
+    {
+      "id": "Little_Thumb_MM021",
+      "filename": "Little_Thumb_MM021.json",
+      "interpOrder": false,
+      "caption": "This gave them new life, for the poor people were almost famished.",
+      "description": "[Relief from hunger]",
+      "scene": "Relief from hunger"
+    },
+    {
+      "id": "Little_Thumb_MM022",
+      "filename": "Little_Thumb_MM022.json",
+      "interpOrder": false,
+      "caption": "The fagot-maker sent his wife immediately to the butcher's.",
+      "description": "[A feast]",
+      "scene": "A feast"
+    },
+    {
+      "id": "Little_Thumb_MM023",
+      "filename": "Little_Thumb_MM023.json",
+      "interpOrder": false,
+      "caption": "When they had eaten, the woman said that she was sorry for their poor children.",
+      "description": "[The mother's regret]",
+      "scene": "The mother's regret"
+    },
+    {
+      "id": "Little_Thumb_MM024",
+      "filename": "Little_Thumb_MM024.json",
+      "interpOrder": false,
+      "caption": "She spoke so very loud that the children began to cry out all together: Here we are.",
+      "description": "[The children answer]",
+      "scene": "The children answer"
+    },
+    {
+      "id": "Little_Thumb_MM025",
+      "filename": "Little_Thumb_MM025.json",
+      "interpOrder": false,
+      "caption": "She ran immediately to open the door and hugged them, saying she was glad to see her dear children.",
+      "description": "[The door opens]",
+      "scene": "The door opens"
+    },
+    {
+      "id": "Little_Thumb_MM026",
+      "filename": "Little_Thumb_MM026.json",
+      "interpOrder": false,
+      "caption": "They sat down to supper, and ate with such a good appetite as pleased both father and mother.",
+      "description": "[Supper together]",
+      "scene": "Supper together"
+    },
+    {
+      "id": "Little_Thumb_MM027",
+      "filename": "Little_Thumb_MM027.json",
+      "interpOrder": false,
+      "caption": "The good folks were extremely glad to see their children once more at home.",
+      "description": "[Joy at home]",
+      "scene": "Joy at home"
+    },
+    {
+      "id": "Little_Thumb_MM028",
+      "filename": "Little_Thumb_MM028.json",
+      "interpOrder": false,
+      "caption": "This joy continued while the ten crowns lasted.",
+      "description": "[The money runs out]",
+      "scene": "The money runs out"
+    },
+    {
+      "id": "Little_Thumb_MM029",
+      "filename": "Little_Thumb_MM029.json",
+      "interpOrder": false,
+      "caption": "When the money was all gone, they fell again into their former uneasiness and resolved to lose them again.",
+      "description": "[Poverty returns]",
+      "scene": "Poverty returns"
+    },
+    {
+      "id": "Little_Thumb_MM030",
+      "filename": "Little_Thumb_MM030.json",
+      "interpOrder": false,
+      "caption": "Little Thumb got up very early in the morning to go and pick up some pebbles, but he found the house-door double-locked.",
+      "description": "[Little Thumb tries again]",
+      "scene": "Little Thumb tries again"
+    },
+    {
+      "id": "Little_Thumb_MM031",
+      "filename": "Little_Thumb_MM031.json",
+      "interpOrder": false,
+      "caption": "When their father had given each of them a piece of bread for their breakfast, Little Thumb fancied he might make use of this instead of the pebbles.",
+      "description": "[Bread instead of pebbles]",
+      "scene": "Bread instead of pebbles"
+    },
+    {
+      "id": "Little_Thumb_MM032",
+      "filename": "Little_Thumb_MM032.json",
+      "interpOrder": false,
+      "caption": "He put the bread in his pocket.",
+      "description": "[He puts the bread in his pocket]",
+      "scene": "He puts the bread in his pocket"
+    },
+    {
+      "id": "Little_Thumb_MM033",
+      "filename": "Little_Thumb_MM033.json",
+      "interpOrder": false,
+      "caption": "Their father and mother brought them into the thickest and most obscure part of the forest.",
+      "description": "[Deeper into the forest]",
+      "scene": "Deeper into the forest"
+    },
+    {
+      "id": "Little_Thumb_MM034",
+      "filename": "Little_Thumb_MM034.json",
+      "interpOrder": false,
+      "caption": "Little Thumb thought he could easily find the way again by means of his bread, which he had scattered all along as he came.",
+      "description": "[Birds eat the crumbs]",
+      "scene": "Birds eat the crumbs"
+    },
+    {
+      "id": "Little_Thumb_MM035",
+      "filename": "Little_Thumb_MM035.json",
+      "interpOrder": false,
+      "caption": "But he was very much surprised when he could not find so much as one crumb; the birds had come and eaten it up, every bit.",
+      "description": "[No crumbs left]",
+      "scene": "No crumbs left"
+    },
+    {
+      "id": "Little_Thumb_MM036",
+      "filename": "Little_Thumb_MM036.json",
+      "interpOrder": false,
+      "caption": "They were now in great affliction, for the farther they went the more they were out of their way.",
+      "description": "[Lost and afraid]",
+      "scene": "Lost and afraid"
+    },
+    {
+      "id": "Little_Thumb_MM037",
+      "filename": "Little_Thumb_MM037.json",
+      "interpOrder": false,
+      "caption": "Night now came on, and there arose a terribly high wind, which made them dreadfully afraid.",
+      "description": "[Night falls]",
+      "scene": "Night falls"
+    },
+    {
+      "id": "Little_Thumb_MM038",
+      "filename": "Little_Thumb_MM038.json",
+      "interpOrder": false,
+      "caption": "They fancied they heard on every side of them the howling of wolves coming to eat them up.",
+      "description": "[Wolves in the dark]",
+      "scene": "Wolves in the dark"
+    },
+    {
+      "id": "Little_Thumb_MM039",
+      "filename": "Little_Thumb_MM039.json",
+      "interpOrder": false,
+      "caption": "After this, it rained very hard, which wetted them to the skin.",
+      "description": "[Rain pours down]",
+      "scene": "Rain pours down"
+    },
+    {
+      "id": "Little_Thumb_MM040",
+      "filename": "Little_Thumb_MM040.json",
+      "interpOrder": false,
+      "caption": "Little Thumb climbed up to the top of a tree, to see if he could discover anything.",
+      "description": "[Little Thumb climbs a tree]",
+      "scene": "Little Thumb climbs a tree"
+    },
+    {
+      "id": "Little_Thumb_MM041",
+      "filename": "Little_Thumb_MM041.json",
+      "interpOrder": false,
+      "caption": "He saw at last a glimmering light, like that of a candle, but a long way from the forest.",
+      "description": "[A distant light]",
+      "scene": "A distant light"
+    },
+    {
+      "id": "Little_Thumb_MM042",
+      "filename": "Little_Thumb_MM042.json",
+      "interpOrder": false,
+      "caption": "They came at last to the house where this candle was, not without an abundance of fear.",
+      "description": "[The house of the ogre]",
+      "scene": "The house of the ogre"
+    },
+    {
+      "id": "Little_Thumb_MM043",
+      "filename": "Little_Thumb_MM043.json",
+      "interpOrder": false,
+      "caption": "They knocked at the door, and a good woman came and opened it.",
+      "description": "[They knock]",
+      "scene": "They knock"
+    },
+    {
+      "id": "Little_Thumb_MM044",
+      "filename": "Little_Thumb_MM044.json",
+      "interpOrder": false,
+      "caption": "Little Thumb told her they were poor children who had been lost in the forest, and desired to lodge there for God's sake.",
+      "description": "[Asking for shelter]",
+      "scene": "Asking for shelter"
+    },
+    {
+      "id": "Little_Thumb_MM045",
+      "filename": "Little_Thumb_MM045.json",
+      "interpOrder": false,
+      "caption": "The woman, seeing them so very pretty, began to weep and told them this house belonged to a cruel ogre who eats up little children.",
+      "description": "[The ogre's wife warns them]",
+      "scene": "The ogre's wife warns them"
+    },
+    {
+      "id": "Little_Thumb_MM046",
+      "filename": "Little_Thumb_MM046.json",
+      "interpOrder": false,
+      "caption": "Little Thumb said they would rather the gentleman should eat them than be devoured by the wolves.",
+      "description": "[Little Thumb's plea]",
+      "scene": "Little Thumb's plea"
+    },
+    {
+      "id": "Little_Thumb_MM047",
+      "filename": "Little_Thumb_MM047.json",
+      "interpOrder": false,
+      "caption": "The Ogre's wife let them come in and brought them to warm themselves at a very good fire.",
+      "description": "[The ogress lets them in]",
+      "scene": "The ogress lets them in"
+    },
+    {
+      "id": "Little_Thumb_MM048",
+      "filename": "Little_Thumb_MM048.json",
+      "interpOrder": false,
+      "caption": "There was a whole sheep upon the spit, roasting for the Ogre's supper.",
+      "description": "[Roasting for supper]",
+      "scene": "Roasting for supper"
+    },
+    {
+      "id": "Little_Thumb_MM049",
+      "filename": "Little_Thumb_MM049.json",
+      "interpOrder": false,
+      "caption": "As they began to be a little warm they heard three or four great raps at the door; this was the Ogre.",
+      "description": "[Knocking at the door]",
+      "scene": "Knocking at the door"
+    },
+    {
+      "id": "Little_Thumb_MM050",
+      "filename": "Little_Thumb_MM050.json",
+      "interpOrder": false,
+      "caption": "Upon this she hid them under the bed and went to open the door.",
+      "description": "[The children are hidden]",
+      "scene": "The children are hidden"
+    },
+    {
+      "id": "Little_Thumb_MM051",
+      "filename": "Little_Thumb_MM051.json",
+      "interpOrder": false,
+      "caption": "The Ogre presently asked if supper was ready and sat himself down to table.",
+      "description": "[The Ogre sits to eat]",
+      "scene": "The Ogre sits to eat"
+    },
+    {
+      "id": "Little_Thumb_MM052",
+      "filename": "Little_Thumb_MM052.json",
+      "interpOrder": false,
+      "caption": "He sniffed about to the right and left, saying: I smell fresh meat.",
+      "description": "[Fresh meat]",
+      "scene": "Fresh meat"
+    },
+    {
+      "id": "Little_Thumb_MM053",
+      "filename": "Little_Thumb_MM053.json",
+      "interpOrder": false,
+      "caption": "The Ogre said there was something here which he did not understand.",
+      "description": "[The Ogre suspects]",
+      "scene": "The Ogre suspects"
+    },
+    {
+      "id": "Little_Thumb_MM054",
+      "filename": "Little_Thumb_MM054.json",
+      "interpOrder": false,
+      "caption": "As he spoke these words he got up from the table and went directly to the bed.",
+      "description": "[He goes to the bed]",
+      "scene": "He goes to the bed"
+    },
+    {
+      "id": "Little_Thumb_MM055",
+      "filename": "Little_Thumb_MM055.json",
+      "interpOrder": false,
+      "caption": "He said he would not eat them up now, but save them for three ogres of his acquaintance.",
+      "description": "[The Ogre delays]",
+      "scene": "The Ogre delays"
+    },
+    {
+      "id": "Little_Thumb_MM056",
+      "filename": "Little_Thumb_MM056.json",
+      "interpOrder": false,
+      "caption": "The Ogre's wife gave them a good supper, but they were so much afraid they could not eat a bit.",
+      "description": "[A meal for the boys]",
+      "scene": "A meal for the boys"
+    },
+    {
+      "id": "Little_Thumb_MM057",
+      "filename": "Little_Thumb_MM057.json",
+      "interpOrder": false,
+      "caption": "As for the Ogre, he sat down again to drink, being highly pleased that he had got wherewithal to treat his friends.",
+      "description": "[The Ogre drinks]",
+      "scene": "The Ogre drinks"
+    },
+    {
+      "id": "Little_Thumb_MM058",
+      "filename": "Little_Thumb_MM058.json",
+      "interpOrder": false,
+      "caption": "He drank a dozen glasses more than ordinary, which got up into his head and obliged him to go to bed.",
+      "description": "[Drunken sleep]",
+      "scene": "Drunken sleep"
+    },
+    {
+      "id": "Little_Thumb_MM059",
+      "filename": "Little_Thumb_MM059.json",
+      "interpOrder": false,
+      "caption": "The Ogre had seven daughters, all little children, with little gray eyes, hooked noses, and very long sharp teeth.",
+      "description": "[Seven ogresses]",
+      "scene": "Seven ogresses"
+    },
+    {
+      "id": "Little_Thumb_MM060",
+      "filename": "Little_Thumb_MM060.json",
+      "interpOrder": false,
+      "caption": "They had been put to bed early, with every one a crown of gold upon her head.",
+      "description": "[Gold crowns]",
+      "scene": "Gold crowns"
+    },
+    {
+      "id": "Little_Thumb_MM061",
+      "filename": "Little_Thumb_MM061.json",
+      "interpOrder": false,
+      "caption": "Little Thumb observed that the Ogre's daughters had crowns of gold upon their heads.",
+      "description": "[Little Thumb swaps the hats]",
+      "scene": "Little Thumb swaps the hats"
+    },
+    {
+      "id": "Little_Thumb_MM062",
+      "filename": "Little_Thumb_MM062.json",
+      "interpOrder": false,
+      "caption": "He got up about midnight and took his brothers' bonnets and put them upon the heads of the seven little ogresses.",
+      "description": "[The switch]",
+      "scene": "The switch"
+    },
+    {
+      "id": "Little_Thumb_MM063",
+      "filename": "Little_Thumb_MM063.json",
+      "interpOrder": false,
+      "caption": "He took off their crowns of gold, which he put upon his own head and his brothers'.",
+      "description": "[The crowns taken]",
+      "scene": "The crowns taken"
+    },
+    {
+      "id": "Little_Thumb_MM064",
+      "filename": "Little_Thumb_MM064.json",
+      "interpOrder": false,
+      "caption": "The Ogre waking about midnight, threw himself hastily out of bed, taking his great knife.",
+      "description": "[The Ogre wakes]",
+      "scene": "The Ogre wakes"
+    },
+    {
+      "id": "Little_Thumb_MM065",
+      "filename": "Little_Thumb_MM065.json",
+      "interpOrder": false,
+      "caption": "He went up, groping all the way, into his daughters' chamber.",
+      "description": "[He enters the chamber]",
+      "scene": "He enters the chamber"
+    },
+    {
+      "id": "Little_Thumb_MM066",
+      "filename": "Little_Thumb_MM066.json",
+      "interpOrder": false,
+      "caption": "He came to the bed where the little boys lay, and, feeling the golden crowns, said he should have made a fine piece of work of it.",
+      "description": "[Finding the crowns]",
+      "scene": "Finding the crowns"
+    },
+    {
+      "id": "Little_Thumb_MM067",
+      "filename": "Little_Thumb_MM067.json",
+      "interpOrder": false,
+      "caption": "Then he went to the bed where the girls lay and, having found the boys' little bonnets, he cut the throats of all his seven daughters.",
+      "description": "[The terrible mistake]",
+      "scene": "The terrible mistake"
+    },
+    {
+      "id": "Little_Thumb_MM068",
+      "filename": "Little_Thumb_MM068.json",
+      "interpOrder": false,
+      "caption": "Well pleased with what he had done, he went to bed again to his wife.",
+      "description": "[The Ogre sleeps again]",
+      "scene": "The Ogre sleeps again"
+    },
+    {
+      "id": "Little_Thumb_MM069",
+      "filename": "Little_Thumb_MM069.json",
+      "interpOrder": false,
+      "caption": "As soon as Little Thumb heard the Ogre snore, he waked his brothers and bade them all put on their clothes presently and follow him.",
+      "description": "[Little Thumb wakes his brothers]",
+      "scene": "Little Thumb wakes his brothers"
+    },
+    {
+      "id": "Little_Thumb_MM070",
+      "filename": "Little_Thumb_MM070.json",
+      "interpOrder": false,
+      "caption": "They stole down softly into the garden and got over the wall.",
+      "description": "[Escape through the garden]",
+      "scene": "Escape through the garden"
+    },
+    {
+      "id": "Little_Thumb_MM071",
+      "filename": "Little_Thumb_MM071.json",
+      "interpOrder": false,
+      "caption": "They kept running about all night, and trembled all the while, without knowing which way they went.",
+      "description": "[Running through the night]",
+      "scene": "Running through the night"
+    },
+    {
+      "id": "Little_Thumb_MM072",
+      "filename": "Little_Thumb_MM072.json",
+      "interpOrder": false,
+      "caption": "The Ogre, when he awoke, said to his wife to go upstairs and dress those young rascals.",
+      "description": "[The Ogre discovers the trick]",
+      "scene": "The Ogre discovers the trick"
+    },
+    {
+      "id": "Little_Thumb_MM073",
+      "filename": "Little_Thumb_MM073.json",
+      "interpOrder": false,
+      "caption": "The wife was strangely astonished when she perceived her seven daughters killed and weltering in their blood.",
+      "description": "[A dreadful sight]",
+      "scene": "A dreadful sight"
+    },
+    {
+      "id": "Little_Thumb_MM074",
+      "filename": "Little_Thumb_MM074.json",
+      "interpOrder": false,
+      "caption": "The Ogre said the wretches should pay for it, and that instantly.",
+      "description": "[The Ogre's rage]",
+      "scene": "The Ogre's rage"
+    },
+    {
+      "id": "Little_Thumb_MM075",
+      "filename": "Little_Thumb_MM075.json",
+      "interpOrder": false,
+      "caption": "He threw a pitcher of water upon his wife's face and gave her his boots of seven leagues.",
+      "description": "[Boots of seven leagues]",
+      "scene": "Boots of seven leagues"
+    },
+    {
+      "id": "Little_Thumb_MM076",
+      "filename": "Little_Thumb_MM076.json",
+      "interpOrder": false,
+      "caption": "He went out and ran over a vast deal of ground, and came at last into the very road where the poor children were.",
+      "description": "[The chase]",
+      "scene": "The chase"
+    },
+    {
+      "id": "Little_Thumb_MM077",
+      "filename": "Little_Thumb_MM077.json",
+      "interpOrder": false,
+      "caption": "Little Thumb, seeing a hollow rock near the place where they were, made his brothers hide themselves in it.",
+      "description": "[Hiding in a rock]",
+      "scene": "Hiding in a rock"
+    },
+    {
+      "id": "Little_Thumb_MM078",
+      "filename": "Little_Thumb_MM078.json",
+      "interpOrder": false,
+      "caption": "The Ogre, who found himself much tired, went to sit down upon the rock where the little boys had hid themselves.",
+      "description": "[The Ogre rests]",
+      "scene": "The Ogre rests"
+    },
+    {
+      "id": "Little_Thumb_MM079",
+      "filename": "Little_Thumb_MM079.json",
+      "interpOrder": false,
+      "caption": "As it was impossible he could be more weary than he was, he fell asleep and began to snore so frightfully that the poor children were no less afraid.",
+      "description": "[Falling asleep]",
+      "scene": "Falling asleep"
+    },
+    {
+      "id": "Little_Thumb_MM080",
+      "filename": "Little_Thumb_MM080.json",
+      "interpOrder": false,
+      "caption": "Little Thumb told them that they should run away immediately toward home while the Ogre was asleep.",
+      "description": "[Little Thumb's order]",
+      "scene": "Little Thumb's order"
+    },
+    {
+      "id": "Little_Thumb_MM081",
+      "filename": "Little_Thumb_MM081.json",
+      "interpOrder": false,
+      "caption": "They took his advice and got home presently.",
+      "description": "[The brothers flee]",
+      "scene": "The brothers flee"
+    },
+    {
+      "id": "Little_Thumb_MM082",
+      "filename": "Little_Thumb_MM082.json",
+      "interpOrder": false,
+      "caption": "Little Thumb came up to the Ogre, pulled off his boots gently and put them on his own legs.",
+      "description": "[Little Thumb takes the boots]",
+      "scene": "Little Thumb takes the boots"
+    },
+    {
+      "id": "Little_Thumb_MM083",
+      "filename": "Little_Thumb_MM083.json",
+      "interpOrder": false,
+      "caption": "The boots were very long and large, but, as they were fairies, they had the gift of becoming big and little, according to the legs of those who wore them.",
+      "description": "[The magic boots]",
+      "scene": "The magic boots"
+    },
+    {
+      "id": "Little_Thumb_MM084",
+      "filename": "Little_Thumb_MM084.json",
+      "interpOrder": false,
+      "caption": "He went immediately to the Ogre's house, where he saw his wife crying bitterly.",
+      "description": "[He visits the ogre's house]",
+      "scene": "He visits the ogre's house"
+    },
+    {
+      "id": "Little_Thumb_MM085",
+      "filename": "Little_Thumb_MM085.json",
+      "interpOrder": false,
+      "caption": "Little Thumb told her that her husband was in very great danger, being taken by a gang of thieves.",
+      "description": "[Little Thumb lies]",
+      "scene": "Little Thumb lies"
+    },
+    {
+      "id": "Little_Thumb_MM086",
+      "filename": "Little_Thumb_MM086.json",
+      "interpOrder": false,
+      "caption": "The good woman gave him all she had, for this Ogre was a very good husband.",
+      "description": "[The treasure is given]",
+      "scene": "The treasure is given"
+    },
+    {
+      "id": "Little_Thumb_MM087",
+      "filename": "Little_Thumb_MM087.json",
+      "interpOrder": false,
+      "caption": "Little Thumb, having thus got all the Ogre's money, came home to his father's house.",
+      "description": "[He returns home]",
+      "scene": "He returns home"
+    },
+    {
+      "id": "Little_Thumb_MM088",
+      "filename": "Little_Thumb_MM088.json",
+      "interpOrder": false,
+      "caption": "He was received with abundance of joy.",
+      "description": "[The family rejoices]",
+      "scene": "The family rejoices"
+    },
+    {
+      "id": "Little_Thumb_MM089",
+      "filename": "Little_Thumb_MM089.json",
+      "interpOrder": false,
+      "caption": "He went to Court, where he was informed that they were in much pain about a certain army, which was two hundred leagues off.",
+      "description": "[At the king's court]",
+      "scene": "At the king's court"
+    },
+    {
+      "id": "Little_Thumb_MM090",
+      "filename": "Little_Thumb_MM090.json",
+      "interpOrder": false,
+      "caption": "He went to the King and told him that he would bring him news from the army before night.",
+      "description": "[Little Thumb speaks to the king]",
+      "scene": "Little Thumb speaks to the king"
+    },
+    {
+      "id": "Little_Thumb_MM091",
+      "filename": "Little_Thumb_MM091.json",
+      "interpOrder": false,
+      "caption": "The King promised him a great sum of money upon that condition.",
+      "description": "[The king's promise]",
+      "scene": "The king's promise"
+    },
+    {
+      "id": "Little_Thumb_MM092",
+      "filename": "Little_Thumb_MM092.json",
+      "interpOrder": false,
+      "caption": "Little Thumb was as good as his word, and returned that very same night with the news.",
+      "description": "[Little Thumb delivers]",
+      "scene": "Little Thumb delivers"
+    },
+    {
+      "id": "Little_Thumb_MM093",
+      "filename": "Little_Thumb_MM093.json",
+      "interpOrder": false,
+      "caption": "He got whatever he pleased, for the King paid him very well for carrying his orders to the army.",
+      "description": "[Fame and fortune]",
+      "scene": "Fame and fortune"
+    },
+    {
+      "id": "Little_Thumb_MM094",
+      "filename": "Little_Thumb_MM094.json",
+      "interpOrder": false,
+      "caption": "After having for some time carried on the business of a messenger, he went home to his father, where it was impossible to express the joy they were all in.",
+      "description": "[He returns to his father]",
+      "scene": "He returns to his father"
+    },
+    {
+      "id": "Little_Thumb_MM095",
+      "filename": "Little_Thumb_MM095.json",
+      "interpOrder": false,
+      "caption": "He made the whole family very easy, bought places for his father and brothers, and settled them very handsomely in the world.",
+      "description": "[A happy ending]",
+      "scene": "A happy ending"
+    }
+  ]
+}

@@ -20,6 +20,7 @@ Sketcher is a web-based canvas drawing and animation application for creating il
 | `viewer.html` / `viewer.js` | Animation playback viewer (click-to-advance, transitions) |
 | `page.js` | `Page` class — rendering, transition interpolation, buffer system |
 | `mark.js` | `Mark` class — individual strokes, fill modes, stipple, mask |
+| `caption.js` | Shared caption word-wrap module (`wrapText`, `computeCaptionLayout`) |
 | `netlify/functions/github.mjs` | Netlify serverless backend (GitHub API proxy) |
 | `perlin.js` | Simplex/Perlin noise (used for SVG import path distortion) |
 | `simplify.js` | Ramer-Douglas-Peucker polyline simplification (bundled, not currently imported) |
@@ -52,7 +53,7 @@ Sketcher is a web-based canvas drawing and animation application for creating il
 | **3x flicker** | Per-page toggle that renders 3 slightly different variants of the page for a sketchy flicker effect in video |
 | **Ghost preview** | Semi-transparent preview of imported marks during placement mode, rendered via `ImageBitmap` |
 | **Presets** | Saved drawing setting configurations stored in localStorage (up to 10) |
-| **Color palette** | User-saved color swatches (up to 14) in the color picker popup |
+| **Color palette** | User-saved color swatches (up to 16) in the color picker popup |
 
 ---
 
@@ -116,6 +117,7 @@ json/
   "defaultPageDuration": 5,           // Seconds per page display
   "defaultTransitionDuration": 1,     // Seconds per transition
   "captionFontSize": 24,              // Caption font size in pixels
+  "defaultCaptionWidth": 70,          // Caption wrapping width as % of canvas (10–100)
   "pages": [
     {
       "id": "BookName_XXXXX",
@@ -126,7 +128,11 @@ json/
       "bgColor": "#f0ebe8",
       "interpOrder": false,           // Mark matching mode
       "captioned": true,              // Show caption in video
-      "threeX": false                 // Triple-render flicker effect
+      "threeX": false,                // Triple-render flicker effect
+      "captionWidth": null,           // Per-page override null = use defaultCaptionWidth
+      "characters": "...",            // Reference metadata (optional)
+      "scene": "...",                 // Reference metadata (optional)
+      "action": "..."                 // Reference metadata (optional)
     }
   ]
 }
@@ -134,20 +140,21 @@ json/
 
 ### Extended MM Manifest (optional)
 
-The `_MM_manifest.json` variant adds per-page metadata for AI-assisted workflow:
+The `_MM_manifest.json` variant adds per-page metadata for AI-assisted workflow. These fields also appear in the standard manifest when present and are displayed in the Sketcher reference panel:
 
 ```json
 {
   "id": "...",
   "scene": "Scene description",
-  "characters": ["Character1", "Character2"],
+  "characters": "Character description",
   "action": "Action description",
   "caption": "...",
   "pageDuration": 6,
   "transitionDuration": 1,
   "bgColor": "#f0ebe8",
   "interpOrder": [],
-  "captioned": true
+  "captioned": true,
+  "captionWidth": null
 }
 ```
 
@@ -335,6 +342,7 @@ Located in `manager.js` → `exportVideo()`.
 - **movflags**: +faststart (web-friendly)
 - **Page limit**: 20 pages max per export
 - **Caption font**: OldNewspaperTypes, rendered with white shadow glow
+- **Caption width**: Per-page `captionWidth` % (fallback: book `defaultCaptionWidth`, then 70%)
 - **Line break**: `|` character in caption text
 
 ### ThreeX Flicker Effect
@@ -421,16 +429,19 @@ When `threeX` is enabled on a page:
 - Brightness slider (0–100%)
 - Target modes: Mark color, Fill color, Background color
 - Click/drag on wheel to select; brightness slider updates in real-time
+- Crosshair indicator shows selected position on wheel
+- Brightness slider updates current color even without prior wheel click (defaults to wheel center)
 
 ### Color Palette
 
-- Up to 14 saved swatches
+- Up to 16 saved swatches
 - Stored in `localStorage.sketcher_palette`
-- Click swatch to apply; "Save to Palette" adds current preview color
+- Click swatch to apply and move wheel indicator to matching hue/saturation; "Save to Palette" adds current preview color
 
 ### Color Conversion
 
 - `hslToRgb(h, s, l)`: Internal conversion for wheel rendering
+- `rgbToHsl(r, g, b)`: Reverse mapping for palette→wheel sync
 - `rgbaToHex(rgba)`: Converts rgba string to hex for background color
 - `interpolateColor(color1, color2, t)`: Per-channel RGBA interpolation for transitions
 - `lerpHexColor(hex1, hex2, t)`: Hex color interpolation for background transitions
@@ -484,15 +495,22 @@ When `threeX` is enabled on a page:
 - Per-page `interpOrder` checkbox
 - Per-page `captioned` checkbox
 - Per-page `3x` flicker toggle
+- Per-page caption width override (10–100% of canvas; null = use book default)
+- Book-level `defaultCaptionWidth` (default: 70%)
 
 ### Drawing UI
 - Collapsible left sidebar with props panel
-- Color wheel popup with brightness slider
-- Color palette (14 slots)
+- Color wheel popup with brightness slider and crosshair indicator
+- Color palette (16 slots) with click-to-apply and wheel sync
 - Presets (10 named slots)
 - Fill mode toggle buttons
 - All settings auto-persisted to localStorage
 - Undo/Redo (stack-based, single redo)
+
+### Reference Panel
+- Displays `scene`, `characters`, `action` metadata from manifest below canvas
+- Only shown when fields exist in the current page entry
+- Styled as dark semi-transparent bar at bottom of canvas column
 
 ### Layer System
 - Multi-layer support with named layers
@@ -508,6 +526,8 @@ When `threeX` is enabled on a page:
 - PNG export (per-page)
 - Video export (MP4 via ffmpeg.wasm)
 - Caption overlay with custom font (OldNewspaperTypes)
+- Caption word-wrap via shared `caption.js` module (identical logic for overlay + video export)
+- Caption wrapping width configurable per-page or per-book (default 70%)
 - Caption `|` = forced line break
 
 ### Playback
@@ -531,7 +551,7 @@ When `threeX` is enabled on a page:
 
 5. **localStorage thumbnails**: Per-key storage used because single JSON blob hits quota limits; eviction removes oldest 50% of thumbnails on quota error
 
-6. **Caption overlay positioning**: Needs double `requestAnimationFrame` deferral for correct positioning relative to the canvas element
+6. **Caption overlay positioning**: Needs double `requestAnimationFrame` deferral for correct positioning relative to the canvas element; wrapping width computed from per-page `captionWidth` % × canvas width
 
 7. **SVG import unit resolution**: `resolveSvgDimensions` handles mm/cm/in/pt/pc units and percentage-based dimensions, falling back to viewBox or default 744×1052
 
@@ -540,6 +560,8 @@ When `threeX` is enabled on a page:
 9. **Buffer invalidation**: Any mark addition, deletion, or transform change requires `invalidateBuffer()` followed by `render()` — missing either causes visual glitches
 
 10. **Video export page limit**: Capped at 20 pages per export to manage memory and encoding time
+
+11. **Canvas column layout**: `#canvasCol` wraps `#canvasArea` + `#refPanel` in a vertical flex column so the reference panel sits below the canvas without overlapping the drawing surface
 
 ---
 

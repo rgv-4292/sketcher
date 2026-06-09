@@ -3,7 +3,7 @@
   "height": 720,
   "format": "png",
   "name": "The Terrible Head",
-  "captionFontSize": 14,
+  "captionFontSize": 24,
   "defaultTransitionDuration": 2000,
   "pages": [
     {
@@ -789,5 +789,7 @@
       "scene": "Family lives happily ever after",
       "captioned": true
     }
-  ]
+  ],
+  "defaultPageDuration": 5,
+  "defaultCaptionWidth": 70
 }

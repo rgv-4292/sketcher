@@ -50,9 +50,18 @@
       "id": "Little_Red_Riding_Hood_MM006",
       "filename": "Little_Red_Riding_Hood_MM006.json",
       "interpOrder": false,
+<<<<<<< HEAD
       "caption": "which became the girl so extremely well that everybody called her",
       "description": "[A little girl wearing the red hood]",
       "scene": "A little girl wearing the red hood"
+=======
+      "captioned": true,
+      "pageDuration": 6,
+      "characters": "Mother",
+      "scene": "Inside the family kitchen. A mother stands at a wooden table, having just finished preparing custards in small dishes.",
+      "action": "Making custards",
+      "captionWidth": 64
+>>>>>>> a0240099b44e25157c4b997fba36369774bfafa1
     },
     {
       "id": "Little_Red_Riding_Hood_MM007",

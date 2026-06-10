@@ -54,6 +54,7 @@ Sketcher is a web-based canvas drawing and animation application for creating il
 | **Ghost preview** | Semi-transparent preview of imported marks during placement mode, rendered via `ImageBitmap` |
 | **Presets** | Saved drawing setting configurations stored in localStorage (up to 10) |
 | **Color palette** | User-saved color swatches (up to 16) in the color picker popup |
+| **Zoom / Pan** | Viewport scaling (0.25x–4.0x) via CSS transform; marks always render at native canvas resolution. Pan via Space+drag, middle-click, scroll bars, or two-finger touch |
 
 ---
 
@@ -448,6 +449,62 @@ When `threeX` is enabled on a page:
 
 ---
 
+## Zoom / Pan System
+
+### Architecture
+
+- **CSS transform** on canvas element (`transform: scale(zoomLevel)`)
+- Canvas wrapped in `#canvasWrapper` div sized to scaled dimensions
+- `#canvasArea` is scrollable (`overflow: auto`) with the wrapper inside
+- `transform-origin: 0 0` — canvas anchored top-left within wrapper
+- Marks always render at native canvas pixel resolution; zoom only affects display
+
+### Zoom Controls
+
+| Input | Behavior |
+|-------|----------|
+| `Ctrl+Scroll wheel` | Zoom centered on cursor position |
+| `Ctrl+Pinch` (trackpad) | Same as above |
+| `+` / `−` buttons (navbar) | Zoom centered on canvas center |
+| `Click zoom level display` | Reset to 100% |
+| `Ctrl+=` / `Ctrl+-` / `Ctrl+0` | Keyboard shortcuts |
+
+### Pan Controls
+
+| Input | Behavior |
+|-------|----------|
+| Scroll bars | Standard scroll in `#canvasArea` |
+| `Middle-click drag` | Pan viewport |
+| `Space+drag` | Pan viewport (grab cursor) |
+| `Two-finger touch` | Pan viewport (tablet) |
+
+### Touch / Tablet Support
+
+- **Stylus**: Always draws (pointer events with pressure)
+- **Two fingers**: Pinch-to-zoom and pan (via touch events)
+- **Pinch guard**: `pinchActive` flag prevents drawing during two-finger gestures
+- Strokes in progress are cancelled when second finger touches
+
+### Zoom Range
+
+- Min: 0.25x (full page view)
+- Max: 4.0x (fine detail)
+- Step: 0.15 per increment
+
+### Drawing Parameters at Zoom
+
+- `minDistance` and `distanceThreshold` operate in **canvas pixel space** — no zoom scaling needed
+- At high zoom, same screen movement covers fewer canvas pixels → finer point capture (desirable for detail)
+- All mark rendering parameters (`hatchAngle`, stipple radii, fill density, jitter) are zoom-independent
+
+### Key Code
+
+- `setZoom(newLevel, focusClientX, focusClientY)`: Updates transform, sizes wrapper, adjusts scroll to keep focus point stable
+- `getCanvasPoint()`: Works unchanged — `getBoundingClientRect()` returns transformed size
+- Caption overlay positioned relative to wrapper using scaled dimensions
+
+---
+
 ## Presets System
 
 - 10 preset slots (indices 0–9)
@@ -506,6 +563,7 @@ When `threeX` is enabled on a page:
 - Fill mode toggle buttons
 - All settings auto-persisted to localStorage
 - Undo/Redo (stack-based, single redo)
+- Zoom/Pan (0.25x–4.0x) with CSS transform, Ctrl+wheel, Space+drag, tablet pinch
 
 ### Reference Panel
 - Displays `scene`, `characters`, `action` metadata from manifest below canvas
@@ -562,6 +620,8 @@ When `threeX` is enabled on a page:
 10. **Video export page limit**: Capped at 20 pages per export to manage memory and encoding time
 
 11. **Canvas column layout**: `#canvasCol` wraps `#canvasArea` + `#refPanel` in a vertical flex column so the reference panel sits below the canvas without overlapping the drawing surface
+
+12. **Zoom is viewport-only**: CSS transform scales the display but not the canvas pixel buffer. `minDistance`, `distanceThreshold`, and all mark rendering parameters operate in canvas pixel space and are not affected by zoom. This means marks drawn at any zoom level render identically at 1x
 
 ---
 

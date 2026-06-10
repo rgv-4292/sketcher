@@ -47,6 +47,37 @@
         #navbar button:hover { background-color: #555; }
         #navbar button.active { background-color: #5a7a5a; }
 
+        #zoomControls {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            margin-left: auto;
+        }
+
+        #zoomControls button {
+            background: #444;
+            color: #ccc;
+            border: none;
+            padding: 4px 8px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        #zoomControls button:hover { background: #555; }
+
+        #zoomLevelDisplay {
+            color: #aaa;
+            font-size: 12px;
+            min-width: 40px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #zoomLevelDisplay:hover { color: #fff; }
+
         #colorIndicator {
             width: 26px;
             height: 26px;
@@ -106,13 +137,29 @@
 
         #canvasArea {
             flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
+            overflow: auto;
             position: relative;
             min-height: 0;
+            background: #1a1a1a;
         }
+
+        #canvasWrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        #canvasWrapper.zoomed {
+            margin: 40px;
+        }
+
+        #canvasArea canvas {
+            touch-action: none;
+            display: block;
+            transform-origin: 0 0;
+        }
+
+        #canvasArea.cursor-grab { cursor: grab; }
+        #canvasArea.cursor-grabbing { cursor: grabbing; }
 
         #refPanel {
             display: none;
@@ -143,8 +190,6 @@
         canvas {
             touch-action: none;
             display: block;
-            max-width: 100%;
-            max-height: 100%;
         }
 
         /* ── Section labels ─────────────────────────────────────── */
@@ -498,6 +543,11 @@
         <button id="nextPageBtn">▶</button>
         <button id="downloadButton">Save</button>
         <button id="loadButton">Load</button>
+        <div id="zoomControls">
+            <button id="zoomOutBtn" title="Zoom out (Ctrl+-)">−</button>
+            <span id="zoomLevelDisplay" title="Click to reset zoom">100%</span>
+            <button id="zoomInBtn" title="Zoom in (Ctrl++)">+</button>
+        </div>
     </div>
 
     <!-- ── Main layout ──────────────────────────────────────────── -->
@@ -670,9 +720,11 @@
         <!-- ── Canvas area ───────────────────────────────────────── -->
         <div id="canvasCol">
         <div id="canvasArea">
-            <div id="placementBanner">Placement mode — tap to place · ESC to cancel</div>
-            <div id="captionOverlay" style="display:none;position:absolute;pointer-events:none;z-index:15;font-family:'OldNewspaperTypes',Arial,sans-serif;color:black;text-shadow:0 0 8px rgba(255,255,255,0.9),0 0 3px rgba(255,255,255,0.9);text-align:center;width:0;"></div>
-            <canvas id="myCanvas" width="720" height="960" style="display:none;"></canvas>
+            <div id="canvasWrapper">
+                <div id="placementBanner">Placement mode — tap to place · ESC to cancel</div>
+                <div id="captionOverlay" style="display:none;position:absolute;pointer-events:none;z-index:15;font-family:'OldNewspaperTypes',Arial,sans-serif;color:black;text-shadow:0 0 8px rgba(255,255,255,0.9),0 0 3px rgba(255,255,255,0.9);text-align:center;width:0;"></div>
+                <canvas id="myCanvas" width="720" height="960" style="display:none;"></canvas>
+            </div>
         </div>
             <div id="refPanel">
                 <div class="ref-row"><span class="ref-label">Scene</span><br><span id="refScene"></span></div>

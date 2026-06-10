@@ -1127,6 +1127,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function startDrawing(event) {
     event.preventDefault()
+    // Don't start drawing during two-finger pinch/pan
+    if (pinchActive) return
     const pt = getCanvasPoint(event)
 
     // In placement mode, ignore pointerdown — placement fires on pointerup
@@ -1215,6 +1217,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (!drawing) return
+    if (!currentMark) { drawing = false; return }
     const pt = getCanvasPoint(event)
     const lpt = toLayerSpace(pt, activeLayer)
     const lastPoint = currentMark.points[currentMark.points.length - 1]
@@ -1245,6 +1248,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return
     }
     if (!drawing) return
+    if (!currentMark) { drawing = false; return }
     if (currentMark.points.length > 4) {
       currentMark.owner = activeLayer
       page.addMark(currentMark)
@@ -1285,6 +1289,12 @@ document.addEventListener('DOMContentLoaded', function () {
       page.canvasParams.width = activeBookManifest.width
       page.canvasParams.height = activeBookManifest.height
       canvas.style.display = 'block'
+
+      // Size wrapper and reset zoom for new book
+      setZoom(1.0)
+      canvasWrapper.style.width = canvas.width + 'px'
+      canvasWrapper.style.height = canvas.height + 'px'
+      canvasWrapper.classList.remove('zoomed')
 
       if (activePageId) {
         const pageRes = await fetch('/.netlify/functions/github', {
@@ -1440,10 +1450,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const overlay = document.getElementById('captionOverlay')
     if (overlay.style.display === 'none') return
     const canvasEl = document.getElementById('myCanvas')
-    const areaEl = document.getElementById('canvasArea')
-    if (!canvasEl || !areaEl) return
-    const canvasRect = canvasEl.getBoundingClientRect()
-    const areaRect = areaEl.getBoundingClientRect()
+    const wrapperEl = document.getElementById('canvasWrapper')
+    if (!canvasEl || !wrapperEl) return
     const fontSize = parseFloat(overlay.style.fontSize) || 24
 
     // Resolve caption width: per-page override → book default → 70%
@@ -1453,7 +1461,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const widthPct = entry && entry.captionWidth != null
       ? entry.captionWidth
       : (activeBookManifest.defaultCaptionWidth ?? 70)
-    const maxWidth = canvasRect.width * (widthPct / 100)
+
+    // Use scaled canvas dimensions for layout (wrapper is sized to scaled dims)
+    const scaledW = canvasEl.width * zoomLevel
+    const scaledH = canvasEl.height * zoomLevel
+    const maxWidth = scaledW * (widthPct / 100)
 
     // Measure text with an offscreen context using the caption font
     const measureCanvas = document.createElement('canvas')
@@ -1465,9 +1477,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set pre-wrapped text so CSS doesn't re-wrap
     overlay.textContent = layout.lines.join('\n')
 
+    // Position relative to wrapper (overlay is inside wrapper)
     overlay.style.width = `${layout.width}px`
-    overlay.style.left = `${canvasRect.left - areaRect.left + (canvasRect.width - layout.width) / 2}px`
-    overlay.style.top = `${canvasRect.bottom - areaRect.top - layout.blockHeight}px`
+    overlay.style.left = `${(scaledW - layout.width) / 2}px`
+    overlay.style.top = `${scaledH - layout.blockHeight}px`
   }
 
   // Keep caption positioned correctly when the window resizes
@@ -1475,7 +1488,7 @@ document.addEventListener('DOMContentLoaded', function () {
     positionCaptionOverlay()
     positionOnionCanvas()
   })
-  _captionResizeObs.observe(document.getElementById('canvasArea'))
+  _captionResizeObs.observe(document.getElementById('canvasWrapper'))
 
   // Remove the separate onion canvas — we draw on top of the main canvas after each render
   // Remove onionCanvas element from HTML and replace with an offscreen bitmap approach.
@@ -1674,6 +1687,184 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('bookBtn').addEventListener('pointerdown', async () => {
     if (unsavedChanges) await savePageToBook()
     window.location.href = 'manager.html'
+  })
+
+  // --- Zoom / Pan System ---
+  const ZOOM_MIN = 0.25
+  const ZOOM_MAX = 4.0
+  const ZOOM_STEP = 0.15
+  let zoomLevel = 1.0
+  const zoomDisplay = document.getElementById('zoomLevelDisplay')
+  const canvasArea = document.getElementById('canvasArea')
+  const canvasWrapper = document.getElementById('canvasWrapper')
+
+  function setZoom(newLevel, focusClientX, focusClientY) {
+    const prev = zoomLevel
+    zoomLevel = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, newLevel))
+    if (zoomLevel === prev) return
+
+    const canvasEl = canvas
+    const areaEl = canvasArea
+
+    // Focus point in canvas pixel space (before zoom)
+    let focusCanvasX = null, focusCanvasY = null
+    if (focusClientX != null && focusClientY != null) {
+      const rect = canvasEl.getBoundingClientRect()
+      focusCanvasX = (focusClientX - rect.left) * (canvasEl.width / rect.width)
+      focusCanvasY = (focusClientY - rect.top) * (canvasEl.height / rect.height)
+    }
+
+    // Apply CSS transform
+    canvasEl.style.transform = `scale(${zoomLevel})`
+
+    // Size wrapper to scaled dimensions
+    const scaledW = canvasEl.width * zoomLevel
+    const scaledH = canvasEl.height * zoomLevel
+    canvasWrapper.style.width = scaledW + 'px'
+    canvasWrapper.style.height = scaledH + 'px'
+    canvasWrapper.classList.toggle('zoomed', zoomLevel !== 1.0)
+
+    // Adjust scroll to keep focus point stable
+    if (focusCanvasX != null) {
+      const newScreenX = focusCanvasX * zoomLevel
+      const newScreenY = focusCanvasY * zoomLevel
+      areaEl.scrollLeft += newScreenX - (focusClientX - areaEl.getBoundingClientRect().left)
+      areaEl.scrollTop += newScreenY - (focusClientY - areaEl.getBoundingClientRect().top)
+    } else {
+      // Center on canvas when no focus point
+      areaEl.scrollLeft = (scaledW - areaEl.clientWidth) / 2
+      areaEl.scrollTop = (scaledH - areaEl.clientHeight) / 2
+    }
+
+    zoomDisplay.textContent = Math.round(zoomLevel * 100) + '%'
+    positionCaptionOverlay()
+  }
+
+  function zoomIn() { setZoom(zoomLevel + ZOOM_STEP) }
+  function zoomOut() { setZoom(zoomLevel - ZOOM_STEP) }
+  function zoomReset() { setZoom(1.0) }
+
+  document.getElementById('zoomInBtn').addEventListener('pointerdown', zoomIn)
+  document.getElementById('zoomOutBtn').addEventListener('pointerdown', zoomOut)
+  zoomDisplay.addEventListener('pointerdown', zoomReset)
+
+  // Ctrl+Scroll wheel zoom
+  canvasArea.addEventListener('wheel', (e) => {
+    if (!e.ctrlKey && !e.metaKey) return
+    e.preventDefault()
+    const delta = e.deltaY > 0 ? -ZOOM_STEP : ZOOM_STEP
+    setZoom(zoomLevel + delta, e.clientX, e.clientY)
+  }, { passive: false })
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return
+    if ((e.ctrlKey || e.metaKey) && e.key === '=') { e.preventDefault(); zoomIn() }
+    else if ((e.ctrlKey || e.metaKey) && e.key === '-') { e.preventDefault(); zoomOut() }
+    else if ((e.ctrlKey || e.metaKey) && e.key === '0') { e.preventDefault(); zoomReset() }
+    else if (e.key === ' ' && !spaceHeld) { spaceHeld = true; canvasArea.classList.add('cursor-grab') }
+  })
+
+  document.addEventListener('keyup', (e) => {
+    if (e.key === ' ') { spaceHeld = false; isPanning = false; canvasArea.classList.remove('cursor-grab', 'cursor-grabbing') }
+  })
+
+  // --- Pan: Space+drag / Middle-click drag ---
+  let spaceHeld = false
+  let isPanning = false
+  let panStartX = 0, panStartY = 0
+
+  canvasArea.addEventListener('pointerdown', (e) => {
+    if (e.button === 1 || (spaceHeld && e.button === 0)) {
+      e.preventDefault()
+      isPanning = true
+      panStartX = e.clientX
+      panStartY = e.clientY
+      canvasArea.classList.add('cursor-grabbing')
+      canvasArea.classList.remove('cursor-grab')
+      canvasArea.setPointerCapture(e.pointerId)
+    }
+  })
+
+  canvasArea.addEventListener('pointermove', (e) => {
+    if (!isPanning) return
+    e.preventDefault()
+    canvasArea.scrollLeft -= e.clientX - panStartX
+    canvasArea.scrollTop -= e.clientY - panStartY
+    panStartX = e.clientX
+    panStartY = e.clientY
+  })
+
+  canvasArea.addEventListener('pointerup', (e) => {
+    if (isPanning) {
+      isPanning = false
+      canvasArea.classList.remove('cursor-grabbing')
+      if (spaceHeld) canvasArea.classList.add('cursor-grab')
+    }
+  })
+
+  canvasArea.addEventListener('pointercancel', () => {
+    isPanning = false
+    canvasArea.classList.remove('cursor-grabbing', 'cursor-grab')
+  })
+
+  // Prevent middle-click default (auto-scroll)
+  canvasArea.addEventListener('mousedown', (e) => { if (e.button === 1) e.preventDefault() })
+
+  // --- Touch zoom/pan (tablet) ---
+  let activeTouches = []
+  let lastPinchDist = 0
+  let lastPinchCX = 0, lastPinchCY = 0
+  let touchPanStartX = 0, touchPanStartY = 0
+  let pinchActive = false
+
+  function getTouchDist(t1, t2) {
+    return Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY)
+  }
+
+  function getTouchCenter(t1, t2) {
+    return { x: (t1.clientX + t2.clientX) / 2, y: (t1.clientY + t2.clientY) / 2 }
+  }
+
+  canvasArea.addEventListener('touchstart', (e) => {
+    activeTouches = Array.from(e.touches)
+    if (activeTouches.length === 2) {
+      e.preventDefault()
+      pinchActive = true
+      lastPinchDist = getTouchDist(activeTouches[0], activeTouches[1])
+      const c = getTouchCenter(activeTouches[0], activeTouches[1])
+      lastPinchCX = c.x; lastPinchCY = c.y
+      touchPanStartX = c.x; touchPanStartY = c.y
+      // Cancel any in-progress stroke
+      if (drawing) { drawing = false; currentMark = null }
+    }
+  }, { passive: false })
+
+  canvasArea.addEventListener('touchmove', (e) => {
+    const touches = Array.from(e.touches)
+    if (touches.length === 2) {
+      e.preventDefault()
+      const dist = getTouchDist(touches[0], touches[1])
+      const c = getTouchCenter(touches[0], touches[1])
+
+      // Pinch zoom
+      if (lastPinchDist > 0) {
+        const scale = dist / lastPinchDist
+        setZoom(zoomLevel * scale, c.x, c.y)
+      }
+
+      // Two-finger pan
+      canvasArea.scrollLeft -= c.x - touchPanStartX
+      canvasArea.scrollTop -= c.y - touchPanStartY
+
+      lastPinchDist = dist
+      touchPanStartX = c.x; touchPanStartY = c.y
+    }
+  }, { passive: false })
+
+  canvasArea.addEventListener('touchend', (e) => {
+    activeTouches = Array.from(e.touches)
+    if (activeTouches.length < 2) { lastPinchDist = 0; pinchActive = false }
   })
 
   loadActiveBook()

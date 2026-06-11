@@ -1127,8 +1127,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function startDrawing(event) {
     event.preventDefault()
-    // Don't start drawing during two-finger pinch/pan
-    if (pinchActive) return
+    // Don't start drawing during pan, pinch, or middle-click
+    if (pinchActive || spaceHeld || event.button === 1) return
     const pt = getCanvasPoint(event)
 
     // In placement mode, ignore pointerdown — placement fires on pointerup

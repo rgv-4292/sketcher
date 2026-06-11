@@ -10,689 +10,2737 @@
       "id": "The_Forty_Thieves_MM001",
       "filename": "The_Forty_Thieves_MM001.json",
       "interpOrder": false,
-      "caption": "In a town in Persia there dwelt two brothers, one named Cassim, the other Ali Baba.",
-      "description": "[Ali Baba chopping wood in forest]",
-      "scene": "Introduction"
+      "captioned": true,
+      "caption": "In a town in Persia there dwelt two brothers, one named Cassim, the other Ali",
+      "description": "[woodcutter swinging axe in dappled light]",
+      "scene": "Ali Baba chopping wood in forest"
     },
     {
       "id": "The_Forty_Thieves_MM002",
       "filename": "The_Forty_Thieves_MM002.json",
       "interpOrder": false,
-      "caption": "Cassim was married to a rich wife and lived in plenty, while Ali Baba had to maintain his wife and children by cutting wood in a neighboring forest and selling it in the town.",
-      "description": "[Cassim living in luxury with wife]",
-      "scene": "Introduction"
+      "captioned": true,
+      "caption": "Baba.",
+      "description": "[sweat glistening on weathered brow]",
+      "scene": "Ali Baba chopping wood in forest"
     },
     {
       "id": "The_Forty_Thieves_MM003",
       "filename": "The_Forty_Thieves_MM003.json",
       "interpOrder": false,
-      "caption": "One day, when Ali Baba was in the forest, he saw a troop of men on horseback, coming toward him in a cloud of dust.",
-      "description": "[Forty horsemen approaching through dust]",
-      "scene": "Introduction"
+      "captioned": true,
+      "caption": "Cassim was married to a rich wife and lived in plenty, while Ali Baba had",
+      "description": "[rich merchant reclining on silk cushions]",
+      "scene": "Cassim living in luxury with wife"
     },
     {
       "id": "The_Forty_Thieves_MM004",
       "filename": "The_Forty_Thieves_MM004.json",
       "interpOrder": false,
-      "caption": "He was afraid they were robbers, and climbed into a tree for safety.",
-      "description": "[Ali Baba hiding in a tree]",
-      "scene": "Introduction"
+      "captioned": true,
+      "caption": "to maintain his wife and children by cutting wood in a neighboring forest and selling",
+      "description": "[servants carrying golden platters]",
+      "scene": "Cassim living in luxury with wife"
     },
     {
       "id": "The_Forty_Thieves_MM005",
       "filename": "The_Forty_Thieves_MM005.json",
       "interpOrder": false,
-      "caption": "When they came up to him and dismounted, he counted forty of them.",
-      "description": "[Forty thieves dismounting in forest]",
-      "scene": "Introduction"
+      "captioned": true,
+      "caption": "it in the town.",
+      "description": "[ornate room filled with treasures]",
+      "scene": "Cassim living in luxury with wife"
     },
     {
       "id": "The_Forty_Thieves_MM006",
       "filename": "The_Forty_Thieves_MM006.json",
       "interpOrder": false,
-      "caption": "They unbridled their horses and tied them to trees.",
-      "description": "[Thieves tying horses to trees]",
-      "scene": "Introduction"
+      "captioned": true,
+      "caption": "One day, when Ali Baba was in the forest, he saw a troop of men",
+      "description": "[cloud of dust on distant horizon]",
+      "scene": "Forty horsemen approaching through dust"
     },
     {
       "id": "The_Forty_Thieves_MM007",
       "filename": "The_Forty_Thieves_MM007.json",
       "interpOrder": false,
-      "caption": "The finest man among them, whom Ali Baba took to be their captain, went a little way among some bushes, and said: \"Open, Sesame!\" so plainly that Ali Baba heard him.",
-      "description": "[Captain speaking to bushes]",
-      "scene": "Introduction"
+      "captioned": true,
+      "caption": "on horseback,",
+      "description": "[armored riders galloping toward viewer]",
+      "scene": "Forty horsemen approaching through dust"
     },
     {
       "id": "The_Forty_Thieves_MM008",
       "filename": "The_Forty_Thieves_MM008.json",
       "interpOrder": false,
-      "caption": "A door opened in the rocks, and having made the troop go in, he followed them, and the door shut again of itself.",
-      "description": "[Rock door opening in cave entrance]",
-      "scene": "Introduction"
+      "captioned": true,
+      "caption": "coming toward him in a cloud of dust.",
+      "description": "[silhouettes emerging from golden haze]",
+      "scene": "Forty horsemen approaching through dust"
     },
     {
       "id": "The_Forty_Thieves_MM009",
       "filename": "The_Forty_Thieves_MM009.json",
       "interpOrder": false,
-      "caption": "They stayed some time inside, and Ali Baba, fearing they might come out and catch him, was forced to sit patiently in the tree.",
-      "description": "[Thieves inside treasure cave]",
-      "scene": "Introduction"
+      "captioned": true,
+      "caption": "He was afraid they were robbers, and climbed into a tree for safety.",
+      "description": "[fearful man crouching among leaves]",
+      "scene": "Ali Baba hiding in a tree"
     },
     {
       "id": "The_Forty_Thieves_MM010",
       "filename": "The_Forty_Thieves_MM010.json",
       "interpOrder": false,
-      "caption": "At last the door opened again, and the Forty Thieves came out.",
-      "description": "[Thieves exiting cave in order]",
-      "scene": "Introduction"
+      "captioned": true,
+      "caption": "When they came up to him and dismounted, he counted forty of them.",
+      "description": "[line of horsemen descending in clearing]",
+      "scene": "Forty thieves dismounting in forest"
     },
     {
       "id": "The_Forty_Thieves_MM011",
       "filename": "The_Forty_Thieves_MM011.json",
       "interpOrder": false,
-      "caption": "As the Captain went in last he came out first, and made them all pass by him; he then closed the door, saying: \"Shut, Sesame!\".",
-      "description": "[Captain closing cave door]",
-      "scene": "Discovery of Cave"
+      "captioned": true,
+      "caption": "They unbridled their horses and tied them to trees.",
+      "description": "[establishing shot of thieves tying horses to trees]",
+      "scene": "Thieves tying horses to trees"
     },
     {
       "id": "The_Forty_Thieves_MM012",
       "filename": "The_Forty_Thieves_MM012.json",
       "interpOrder": false,
-      "caption": "Every man bridled his horse and mounted, the Captain put himself at their head, and they returned as they came.",
-      "description": "[Thieves mounting horses and departing]",
-      "scene": "Discovery of Cave"
+      "captioned": true,
+      "caption": "The finest man among them, whom Ali Baba took to be their captain, went a",
+      "description": "[commander gesturing toward rock face]",
+      "scene": "Captain speaking to bushes"
     },
     {
       "id": "The_Forty_Thieves_MM013",
       "filename": "The_Forty_Thieves_MM013.json",
       "interpOrder": false,
-      "caption": "Then Ali Baba climbed down and went to the door concealed among the bushes, and said: \"Open, Sesame!\" and it flew open.",
-      "description": "[Ali Baba approaching hidden cave door]",
-      "scene": "Discovery of Cave"
+      "captioned": true,
+      "caption": "little way among some bushes, and said: \"Open, Sesame!\" so plainly that Ali Baba heard",
+      "description": "[men gathered behind awaiting orders]",
+      "scene": "Captain speaking to bushes"
     },
     {
       "id": "The_Forty_Thieves_MM014",
       "filename": "The_Forty_Thieves_MM014.json",
       "interpOrder": false,
-      "caption": "Ali Baba, who expected a dull, dismal place, was greatly surprised to find it large and well lighted, hollowed by the hand of man in the form of a vault, which received the light from an opening in the ceiling.",
-      "description": "[Ali Baba discovering treasure vault]",
-      "scene": "Discovery of Cave"
+      "captioned": true,
+      "caption": "him.",
+      "description": "[mysterious entrance hidden in stone]",
+      "scene": "Captain speaking to bushes"
     },
     {
       "id": "The_Forty_Thieves_MM015",
       "filename": "The_Forty_Thieves_MM015.json",
       "interpOrder": false,
-      "caption": "He saw rich bales of merchandise--silk, stuff-brocades, all piled together, and gold and silver in heaps, and money in leather purses.",
-      "description": "[Rich bales of silk and gold heaps]",
-      "scene": "Discovery of Cave"
+      "captioned": true,
+      "caption": "A door opened in the rocks, and having made the troop go in, he followed",
+      "description": "[massive stone grinding open slowly]",
+      "scene": "Rock door opening in cave entrance"
     },
     {
       "id": "The_Forty_Thieves_MM016",
       "filename": "The_Forty_Thieves_MM016.json",
       "interpOrder": false,
-      "caption": "He went in and the door shut behind him. He did not look at the silver, but brought out as many bags of gold as he thought his asses, which were browsing outside, could carry, loaded them with the bags, and hid it all with fagots.",
-      "description": "[Ali Baba loading gold onto asses]",
-      "scene": "Discovery of Cave"
+      "captioned": true,
+      "caption": "them,",
+      "description": "[golden light spilling from darkness]",
+      "scene": "Rock door opening in cave entrance"
     },
     {
       "id": "The_Forty_Thieves_MM017",
       "filename": "The_Forty_Thieves_MM017.json",
       "interpOrder": false,
-      "caption": "Using the words: \"Shut, Sesame!\" he closed the door and went home.",
-      "description": "[Ali Baba closing cave with magic words]",
-      "scene": "Discovery of Cave"
+      "captioned": true,
+      "caption": "and the door shut again of itself.",
+      "description": "[threshold between forest and treasure]",
+      "scene": "Rock door opening in cave entrance"
     },
     {
       "id": "The_Forty_Thieves_MM018",
       "filename": "The_Forty_Thieves_MM018.json",
       "interpOrder": false,
-      "caption": "Then he drove his asses into the yard, shut the gates, carried the money-bags to his wife, and emptied them out before her. He bade her keep the secret, and he would go and bury the gold.",
-      "description": "[Ali Baba emptying gold before wife]",
-      "scene": "Discovery of Cave"
+      "captioned": true,
+      "caption": "They stayed some time inside, and Ali Baba, fearing they might come out and catch",
+      "description": "[men marveling at mountain of gold]",
+      "scene": "Thieves inside treasure cave"
     },
     {
       "id": "The_Forty_Thieves_MM019",
       "filename": "The_Forty_Thieves_MM019.json",
       "interpOrder": false,
-      "caption": "\"Let me first measure it,\" said his wife. \"I will go borrow a measure of someone, while you dig the hole.\" So she ran to the wife of Cassim and borrowed a measure.",
-      "description": "[Wife borrowing measure from Cassim's wife]",
-      "scene": "Discovery of Cave"
+      "captioned": true,
+      "caption": "him,",
+      "description": "[candles illuminating vast underground vault]",
+      "scene": "Thieves inside treasure cave"
     },
     {
       "id": "The_Forty_Thieves_MM020",
       "filename": "The_Forty_Thieves_MM020.json",
       "interpOrder": false,
-      "caption": "Knowing Ali Baba's poverty, the sister was curious to find out what sort of grain his wife wished to measure, and artfully put some suet at the bottom of the measure. Ali Baba's wife went home and set the measure on the heap of gold, and filled it and emptied it often, to her great content.",
-      "description": "[Cassim's wife discovering gold piece]",
-      "scene": "Discovery of Cave"
+      "captioned": true,
+      "caption": "was forced to sit patiently in the tree.",
+      "description": "[hands reaching for glittering coins]",
+      "scene": "Thieves inside treasure cave"
     },
     {
       "id": "The_Forty_Thieves_MM021",
       "filename": "The_Forty_Thieves_MM021.json",
       "interpOrder": false,
-      "caption": "She then carried it back to her sister, without noticing that a piece of gold was sticking to it, which Cassim's wife perceived directly her back was turned. She grew very curious, and said to Cassim when he came home: \"Cassim, your brother is richer than you. He does not count his money, he measures it.\".",
-      "description": "[Cassim's wife showing gold to Cassim]",
-      "scene": "Cassim's Fate"
+      "captioned": true,
+      "caption": "At last the door opened again, and the Forty Thieves came out.",
+      "description": "[file of men stepping into daylight]",
+      "scene": "Thieves exiting cave in order"
     },
     {
       "id": "The_Forty_Thieves_MM022",
       "filename": "The_Forty_Thieves_MM022.json",
       "interpOrder": false,
-      "caption": "He begged her to explain this riddle, which she did by showing him the piece of money and telling him where she found it. Then Cassim grew so envious that he could not sleep, and went to his brother in the morning before sunrise. \"Ali Baba,\" he said, showing him the gold piece, \"you pretend to be poor and yet you measure gold.\".",
-      "description": "[Cassim confronting Ali Baba]",
-      "scene": "Cassim's Fate"
+      "captioned": true,
+      "caption": "As the Captain went in last he came out first, and made them all pass",
+      "description": "[commander speaking magic words]",
+      "scene": "Captain closing cave door"
     },
     {
       "id": "The_Forty_Thieves_MM023",
       "filename": "The_Forty_Thieves_MM023.json",
       "interpOrder": false,
-      "caption": "By this Ali Baba perceived that through his wife's folly Cassim and his wife knew their secret, so he confessed all and offered Cassim a share. \"That I expect,\" said Cassim; \"but I must know where to find the treasure, otherwise I will discover all, and you will lose all.\".",
-      "description": "[Ali Baba revealing secret to Cassim]",
-      "scene": "Cassim's Fate"
+      "captioned": true,
+      "caption": "by him;",
+      "description": "[stone door sealing shut]",
+      "scene": "Captain closing cave door"
     },
     {
       "id": "The_Forty_Thieves_MM024",
       "filename": "The_Forty_Thieves_MM024.json",
       "interpOrder": false,
-      "caption": "Ali Baba, more out of kindness than fear, told him of the cave, and the very words to use. Cassim left Ali Baba, meaning to be beforehand with him and get the treasure for himself. He rose early next morning, and set out with ten mules loaded with great chests.",
-      "description": "[Cassim traveling to cave with mules]",
-      "scene": "Cassim's Fate"
+      "captioned": true,
+      "caption": "he then closed the door, saying: \"Shut, Sesame!\"",
+      "description": "[hand pressed against rock face]",
+      "scene": "Captain closing cave door"
     },
     {
       "id": "The_Forty_Thieves_MM025",
       "filename": "The_Forty_Thieves_MM025.json",
       "interpOrder": false,
-      "caption": "He soon found the place, and the door in the rock. He said: \"Open, Sesame!\" and the door opened and shut behind him.",
-      "description": "[Cassim entering cave]",
-      "scene": "Cassim's Fate"
+      "captioned": true,
+      "caption": "Every man bridled his horse and mounted, the Captain put himself at their head, and",
+      "description": "[men swinging into saddles]",
+      "scene": "Thieves mounting horses and departing"
     },
     {
       "id": "The_Forty_Thieves_MM026",
       "filename": "The_Forty_Thieves_MM026.json",
       "interpOrder": false,
-      "caption": "He could have feasted his eyes all day on the treasures, but he now hastened to gather together as much of it as possible; but when he was ready to go he could not remember what to say for thinking of his great riches. Instead of \"Sesame,\" he said: \"Open, Barley!\" and the door remained fast.",
-      "description": "[Cassim trapped inside cave]",
-      "scene": "Cassim's Fate"
+      "captioned": true,
+      "caption": "they returned as they came.",
+      "description": "[cavalcade riding away through trees]",
+      "scene": "Thieves mounting horses and departing"
     },
     {
       "id": "The_Forty_Thieves_MM027",
       "filename": "The_Forty_Thieves_MM027.json",
       "interpOrder": false,
-      "caption": "He named several different sorts of grain, all but the right one, and the door still stuck fast. He was so frightened at the danger he was in that he had as much forgotten the word as if he had never heard it.",
-      "description": "[Cassim frantically guessing words]",
-      "scene": "Cassim's Fate"
+      "captioned": true,
+      "caption": "Then Ali Baba climbed down and went to the door concealed among the bushes, and",
+      "description": "[cautious figure creeping toward rock face]",
+      "scene": "Ali Baba approaching hidden cave door"
     },
     {
       "id": "The_Forty_Thieves_MM028",
       "filename": "The_Forty_Thieves_MM028.json",
       "interpOrder": false,
-      "caption": "About noon the robbers returned to their cave, and saw Cassim's mules roving about with great chests on their backs. This gave them the alarm; they drew their sabres, and went to the door, which opened on their Captain's saying: \"Open, Sesame!\".",
-      "description": "[Robbers discovering Cassim's mules]",
-      "scene": "Cassim's Fate"
+      "captioned": true,
+      "caption": "said:",
+      "description": "[whispering magic words with trembling lips]",
+      "scene": "Ali Baba approaching hidden cave door"
     },
     {
       "id": "The_Forty_Thieves_MM029",
       "filename": "The_Forty_Thieves_MM029.json",
       "interpOrder": false,
-      "caption": "Cassim, who had heard the trampling of their horses' feet, resolved to sell his life dearly, so when the door opened he leaped out and threw the Captain down.",
-      "description": "[Cassim leaping out to fight]",
-      "scene": "Cassim's Fate"
+      "captioned": true,
+      "caption": "\"Open, Sesame!\" and it flew open.",
+      "description": "[stone beginning to shift]",
+      "scene": "Ali Baba approaching hidden cave door"
     },
     {
       "id": "The_Forty_Thieves_MM030",
       "filename": "The_Forty_Thieves_MM030.json",
       "interpOrder": false,
-      "caption": "In vain, however, for the robbers with their sabres soon killed him.",
-      "description": "[Thieves killing Cassim with sabres]",
-      "scene": "Cassim's Fate"
+      "captioned": true,
+      "caption": "Ali Baba, who expected a dull, dismal place, was greatly surprised to find it large",
+      "description": "[wide-eyed man entering vast chamber]",
+      "scene": "Ali Baba discovering treasure vault"
     },
     {
       "id": "The_Forty_Thieves_MM031",
       "filename": "The_Forty_Thieves_MM031.json",
       "interpOrder": false,
-      "caption": "On entering the cave they saw all the bags laid ready, and could not imagine how anyone had got in without knowing their secret.",
-      "description": "[Thieves discovering prepared bags]",
-      "scene": "Morgiana's Cunning"
+      "captioned": true,
+      "caption": "and well lighted, hollowed by the hand of man in the form of a vault,",
+      "description": "[golden light reflecting off countless riches]",
+      "scene": "Ali Baba discovering treasure vault"
     },
     {
       "id": "The_Forty_Thieves_MM032",
       "filename": "The_Forty_Thieves_MM032.json",
       "interpOrder": false,
-      "caption": "They cut Cassim's body into four quarters, and nailed them up inside the cave, in order to frighten anyone who should venture in, and went away in search of more treasure.",
-      "description": "[Thieves nailing Cassim's quarters inside]",
-      "scene": "Morgiana's Cunning"
+      "captioned": true,
+      "caption": "which received the light from an opening in the ceiling.",
+      "description": "[astonishment frozen on weathered face]",
+      "scene": "Ali Baba discovering treasure vault"
     },
     {
       "id": "The_Forty_Thieves_MM033",
       "filename": "The_Forty_Thieves_MM033.json",
       "interpOrder": false,
-      "caption": "As night drew on Cassim's wife grew very uneasy, and ran to her brother-in-law, and told him where her husband had gone.",
-      "description": "[Cassim's wife running to Ali Baba]",
-      "scene": "Morgiana's Cunning"
+      "captioned": true,
+      "caption": "He saw rich bales of merchandise--silk, stuff-brocades, all piled together, and gold and silver in",
+      "description": "[mountains of folded brocade fabrics]",
+      "scene": "Rich bales of silk and gold heaps"
     },
     {
       "id": "The_Forty_Thieves_MM034",
       "filename": "The_Forty_Thieves_MM034.json",
       "interpOrder": false,
-      "caption": "Ali Baba did his best to comfort her, and set out to the forest in search of Cassim.",
-      "description": "[Ali Baba searching forest cave]",
-      "scene": "Morgiana's Cunning"
+      "captioned": true,
+      "caption": "heaps,",
+      "description": "[gold coins cascading in warm light]",
+      "scene": "Rich bales of silk and gold heaps"
     },
     {
       "id": "The_Forty_Thieves_MM035",
       "filename": "The_Forty_Thieves_MM035.json",
       "interpOrder": false,
-      "caption": "The first thing he saw on entering the cave was his dead brother.",
-      "description": "[Ali Baba discovering dead brother]",
-      "scene": "Morgiana's Cunning"
+      "captioned": true,
+      "caption": "and money in leather purses.",
+      "description": "[leather purses overflowing with treasure]",
+      "scene": "Rich bales of silk and gold heaps"
     },
     {
       "id": "The_Forty_Thieves_MM036",
       "filename": "The_Forty_Thieves_MM036.json",
       "interpOrder": false,
-      "caption": "Full of horror, he put the body on one of his asses, and bags of gold on the other two, and, covering all with some fagots, returned home.",
-      "description": "[Ali Baba carrying body on ass]",
-      "scene": "Morgiana's Cunning"
+      "captioned": true,
+      "caption": "He went in and the door shut behind him. He did not look at the",
+      "description": "[man lifting heavy bags onto pack animals]",
+      "scene": "Ali Baba loading gold onto asses"
     },
     {
       "id": "The_Forty_Thieves_MM037",
       "filename": "The_Forty_Thieves_MM037.json",
       "interpOrder": false,
-      "caption": "He drove the two asses laden with gold into his own yard, and led the other to Cassim's house. The door was opened by the slave Morgiana, whom he knew to be both brave and cunning. Unloading the ass, he said to her: \"This is the body of your master, who has been murdered, but whom we must bury as though he had died in his bed.\".",
-      "description": "[Ali Baba speaking with Morgiana]",
-      "scene": "Morgiana's Cunning"
+      "captioned": true,
+      "caption": "silver,",
+      "description": "[donkeys standing patiently nearby]",
+      "scene": "Ali Baba loading gold onto asses"
     },
     {
       "id": "The_Forty_Thieves_MM038",
       "filename": "The_Forty_Thieves_MM038.json",
       "interpOrder": false,
-      "caption": "I will speak with you again, but now tell your mistress I am come.\" The wife of Cassim, on learning the fate of her husband, broke out into cries and tears, but Ali Baba offered to take her to live with him and his wife if she would promise to keep his counsel and leave everything to Morgiana; whereupon she agreed, and dried her eyes.",
-      "description": "[Cassim's wife weeping]",
-      "scene": "Morgiana's Cunning"
+      "captioned": true,
+      "caption": "but brought out as many bags of gold as he thought his asses, which were",
+      "description": "[burden of wealth being prepared]",
+      "scene": "Ali Baba loading gold onto asses"
     },
     {
       "id": "The_Forty_Thieves_MM039",
       "filename": "The_Forty_Thieves_MM039.json",
       "interpOrder": false,
-      "caption": "Morgiana, meanwhile, sought an apothecary and asked him for some lozenges. \"My poor master,\" she said, \"can neither eat nor speak, and no one knows what his distemper is.\".",
-      "description": "[Morgiana visiting apothecary]",
-      "scene": "Morgiana's Cunning"
+      "captioned": true,
+      "caption": "browsing outside,",
+      "description": "[man lifting heavy bags onto pack animals]",
+      "scene": "Ali Baba loading gold onto asses"
     },
     {
       "id": "The_Forty_Thieves_MM040",
       "filename": "The_Forty_Thieves_MM040.json",
       "interpOrder": false,
-      "caption": "She carried home the lozenges and returned next day weeping, and asked for an essence only given to those just about to die. Thus, in the evening, no one was surprised to hear the wretched shrieks and cries of Cassim's wife and Morgiana, telling everyone that Cassim was dead.",
-      "description": "[Morgiana weeping and requesting essence]",
-      "scene": "Morgiana's Cunning"
+      "captioned": true,
+      "caption": "could carry, loaded them with the bags, and hid it all with fagots.",
+      "description": "[donkeys standing patiently nearby]",
+      "scene": "Ali Baba loading gold onto asses"
     },
     {
       "id": "The_Forty_Thieves_MM041",
       "filename": "The_Forty_Thieves_MM041.json",
       "interpOrder": false,
-      "caption": "The day after Morgiana went to an old cobbler near the gates of the town who opened his stall early, put a piece of gold in his hand, and bade him follow her with his needle and thread. Having bound his eyes with a handkerchief, she took him to the room where the body lay, pulled off the bandage, and bade him sew the quarters together, after which she covered his eyes again and led him home.",
-      "description": "[Morgiana leading blindfolded cobbler]",
-      "scene": "Thieves' Investigation"
+      "captioned": true,
+      "caption": "Using the words: \"Shut, Sesame!\" he closed the door and went home.",
+      "description": "[figure speaking farewell to stone door]",
+      "scene": "Ali Baba closing cave with magic words"
     },
     {
       "id": "The_Forty_Thieves_MM042",
       "filename": "The_Forty_Thieves_MM042.json",
       "interpOrder": false,
-      "caption": "Then they buried Cassim, and Morgiana his slave followed him to the grave, weeping and tearing her hair, while Cassim's wife stayed at home uttering lamentable cries. Next day she went to live with Ali Baba, who gave Cassim's shop to his eldest son.",
-      "description": "[Morgiana following funeral procession]",
-      "scene": "Thieves' Investigation"
+      "captioned": true,
+      "caption": "Then he drove his asses into the yard, shut the gates, carried the money-bags to",
+      "description": "[bags of coins spilling onto floor]",
+      "scene": "Ali Baba emptying gold before wife"
     },
     {
       "id": "The_Forty_Thieves_MM043",
       "filename": "The_Forty_Thieves_MM043.json",
       "interpOrder": false,
-      "caption": "The Forty Thieves, on their return to the cave, were much astonished to find Cassim's body gone and some of their money-bags. \"We are certainly discovered,\" said the Captain, \"and shall be undone if we cannot find out who it is that knows our secret.\".",
-      "description": "[Thieves discovering missing body]",
-      "scene": "Thieves' Investigation"
+      "captioned": true,
+      "caption": "his wife,",
+      "description": "[wife's astonished expression in lamplight]",
+      "scene": "Ali Baba emptying gold before wife"
     },
     {
       "id": "The_Forty_Thieves_MM044",
       "filename": "The_Forty_Thieves_MM044.json",
       "interpOrder": false,
-      "caption": "To this end one of you who is bold and artful must go into the city dressed as a traveler, and discover whom we have killed, and whether men talk of the strange manner of his death.\" One of the thieves started up and offered to do this, and after the rest had highly commended him for his bravery he disguised himself, and happened to enter the town at daybreak, just by Baba Mustapha's stall.",
-      "description": "[Thief disguised as traveler entering town]",
-      "scene": "Thieves' Investigation"
+      "captioned": true,
+      "caption": "and emptied them out before her. He bade her keep the secret, and he would",
+      "description": "[golden hoard spread across stone tiles]",
+      "scene": "Ali Baba emptying gold before wife"
     },
     {
       "id": "The_Forty_Thieves_MM045",
       "filename": "The_Forty_Thieves_MM045.json",
       "interpOrder": false,
-      "caption": "The thief bade him good-day, saying: \"Honest man, how can you possibly see to stitch at your age?\" \"Old as I am,\" replied the cobbler, \"I have very good eyes, and will you believe me when I tell you that I sewed a dead body together in a place where I had less light than I have now.\".",
-      "description": "[Thief questioning old cobbler]",
-      "scene": "Thieves' Investigation"
+      "captioned": true,
+      "caption": "go and bury the gold.",
+      "description": "[bags of coins spilling onto floor]",
+      "scene": "Ali Baba emptying gold before wife"
     },
     {
       "id": "The_Forty_Thieves_MM046",
       "filename": "The_Forty_Thieves_MM046.json",
       "interpOrder": false,
-      "caption": "The robber was overjoyed at his good fortune, and, giving him a piece of gold, desired to be shown the house where he stitched up the dead body.",
-      "description": "[Thief bribing cobbler with gold]",
-      "scene": "Thieves' Investigation"
+      "captioned": true,
+      "caption": "\"Let me first measure it,\" said his wife. \"I will go borrow a measure of",
+      "description": "[neighborly woman at doorway exchange]",
+      "scene": "Wife borrowing measure from Cassim's wife"
     },
     {
       "id": "The_Forty_Thieves_MM047",
       "filename": "The_Forty_Thieves_MM047.json",
       "interpOrder": false,
-      "caption": "At first Mustapha refused, saying that he had been blindfolded; but when the robber gave him another piece of gold he began to think he might remember the turnings if blindfolded as before. This means succeeded; the robber partly led him, and was partly guided by him, right in front of Cassim's house, the door of which the robber marked with a piece of chalk.",
-      "description": "[Blindfolded cobbler guiding thief]",
-      "scene": "Thieves' Investigation"
+      "captioned": true,
+      "caption": "someone,",
+      "description": "[wooden measuring vessel passed between hands]",
+      "scene": "Wife borrowing measure from Cassim's wife"
     },
     {
       "id": "The_Forty_Thieves_MM048",
       "filename": "The_Forty_Thieves_MM048.json",
       "interpOrder": false,
-      "caption": "Then, well pleased, he bade farewell to Baba Mustapha and returned to the forest.",
-      "description": "[Thief marking door with chalk]",
-      "scene": "Thieves' Investigation"
+      "captioned": true,
+      "caption": "while you dig the hole.\" So she ran to the wife of Cassim and borrowed",
+      "description": "[curiosity in sister-in-law's eyes]",
+      "scene": "Wife borrowing measure from Cassim's wife"
     },
     {
       "id": "The_Forty_Thieves_MM049",
       "filename": "The_Forty_Thieves_MM049.json",
       "interpOrder": false,
-      "caption": "By and by Morgiana, going out, saw the mark the robber had made, quickly guessed that some mischief was brewing, and fetching a piece of chalk marked two or three doors on each side, without saying anything to her master or mistress.",
-      "description": "[Morgiana discovering chalk mark]",
-      "scene": "Thieves' Investigation"
+      "captioned": true,
+      "caption": "a measure.",
+      "description": "[neighborly woman at doorway exchange]",
+      "scene": "Wife borrowing measure from Cassim's wife"
     },
     {
       "id": "The_Forty_Thieves_MM050",
       "filename": "The_Forty_Thieves_MM050.json",
       "interpOrder": false,
-      "caption": "The thief, meantime, told his comrades of his discovery. The Captain thanked him, and bade him show him the house he had marked. But when they came to it they saw that five or six of the houses were chalked in the same manner.",
-      "description": "[Thieves confused by multiple chalk marks]",
-      "scene": "Thieves' Investigation"
+      "captioned": true,
+      "caption": "Knowing Ali Baba's poverty, the sister was curious to find out what sort of grain",
+      "description": "[shiny coin stuck to bottom of measure]",
+      "scene": "Cassim's wife discovering gold piece"
     },
     {
       "id": "The_Forty_Thieves_MM051",
       "filename": "The_Forty_Thieves_MM051.json",
       "interpOrder": false,
-      "caption": "The guide was so confounded that he knew not what answer to make, and when they returned he was at once beheaded for having failed.",
-      "description": "[Thief beheaded for failure]",
-      "scene": "Oil Jar Plot"
+      "captioned": true,
+      "caption": "his wife wished to measure, and artfully put some suet at the bottom of the",
+      "description": "[woman's eyes widening with surprise]",
+      "scene": "Cassim's wife discovering gold piece"
     },
     {
       "id": "The_Forty_Thieves_MM052",
       "filename": "The_Forty_Thieves_MM052.json",
       "interpOrder": false,
-      "caption": "Another robber was dispatched, and, having won over Baba Mustapha, marked the house in red chalk; but Morgiana being again too clever for them, the second messenger was put to death also.",
-      "description": "[Second thief marking house in red]",
-      "scene": "Oil Jar Plot"
+      "captioned": true,
+      "caption": "measure.",
+      "description": "[secret revealed in simple kitchen]",
+      "scene": "Cassim's wife discovering gold piece"
     },
     {
       "id": "The_Forty_Thieves_MM053",
       "filename": "The_Forty_Thieves_MM053.json",
       "interpOrder": false,
-      "caption": "The Captain now resolved to go himself, but, wiser than the others, he did not mark the house, but looked at it so closely that he could not fail to remember it. He returned, and ordered his men to go into the neighboring villages and buy nineteen mules, and thirty-eight leather jars, all empty except one, which was full of oil.",
-      "description": "[Captain planning oil jar scheme]",
-      "scene": "Oil Jar Plot"
+      "captioned": true,
+      "caption": "Ali Baba's wife went home and set the measure on the heap of gold, and",
+      "description": "[shiny coin stuck to bottom of measure]",
+      "scene": "Cassim's wife discovering gold piece"
     },
     {
       "id": "The_Forty_Thieves_MM054",
       "filename": "The_Forty_Thieves_MM054.json",
       "interpOrder": false,
-      "caption": "The Captain put one of his men, fully armed, into each, rubbing the outside of the jars with oil from the full vessel. Then the nineteen mules were loaded with thirty-seven robbers in jars, and the jar of oil, and reached the town by dusk.",
-      "description": "[Captain loading robbers into jars]",
-      "scene": "Oil Jar Plot"
+      "captioned": true,
+      "caption": "filled it and emptied it often, to her great content.",
+      "description": "[woman's eyes widening with surprise]",
+      "scene": "Cassim's wife discovering gold piece"
     },
     {
       "id": "The_Forty_Thieves_MM055",
       "filename": "The_Forty_Thieves_MM055.json",
       "interpOrder": false,
-      "caption": "The Captain stopped his mules in front of Ali Baba's house, and said to Ali Baba, who was sitting outside for coolness: \"I have brought some oil from a distance to sell at to-morrow's market, but it is now so late that I know not where to pass the night, unless you will do me the favor to take me in.\".",
-      "description": "[Captain arriving at Ali Baba's house]",
-      "scene": "Oil Jar Plot"
+      "captioned": true,
+      "caption": "She then carried it back to her sister, without noticing that a piece of gold",
+      "description": "[envious brother examining golden coin]",
+      "scene": "Cassim's wife showing gold to Cassim"
     },
     {
       "id": "The_Forty_Thieves_MM056",
       "filename": "The_Forty_Thieves_MM056.json",
       "interpOrder": false,
-      "caption": "Though Ali Baba had seen the Captain of the robbers in the forest, he did not recognize him in the disguise of an oil merchant. He bade him welcome, opened his gates for the mules to enter, and went to Morgiana to bid her prepare a bed and supper for his guest.",
-      "description": "[Ali Baba welcoming oil merchant]",
-      "scene": "Oil Jar Plot"
+      "captioned": true,
+      "caption": "was sticking to it, which Cassim's wife perceived directly her back was turned. She grew",
+      "description": "[wife whispering urgently in his ear]",
+      "scene": "Cassim's wife showing gold to Cassim"
     },
     {
       "id": "The_Forty_Thieves_MM057",
       "filename": "The_Forty_Thieves_MM057.json",
       "interpOrder": false,
-      "caption": "He brought the stranger into his hall, and after they had supped went again to speak to Morgiana in the kitchen, while the Captain went into the yard under pretense of seeing after his mules, but really to tell his men what to do.",
-      "description": "[Captain signaling to men in jars]",
-      "scene": "Oil Jar Plot"
+      "captioned": true,
+      "caption": "very curious,",
+      "description": "[candlelight illuminating greed in his eyes]",
+      "scene": "Cassim's wife showing gold to Cassim"
     },
     {
       "id": "The_Forty_Thieves_MM058",
       "filename": "The_Forty_Thieves_MM058.json",
       "interpOrder": false,
-      "caption": "Beginning at the first jar and ending at the last, he said to each man: \"As soon as I throw some stones from the window of the chamber where I lie, cut the jars open with your knives and come out, and I will be with you in a trice.\".",
-      "description": "[Captain giving instructions to hidden men]",
-      "scene": "Oil Jar Plot"
+      "captioned": true,
+      "caption": "and said to Cassim when he came home: \"Cassim, your brother is richer than you.",
+      "description": "[envious brother examining golden coin]",
+      "scene": "Cassim's wife showing gold to Cassim"
     },
     {
       "id": "The_Forty_Thieves_MM059",
       "filename": "The_Forty_Thieves_MM059.json",
       "interpOrder": false,
-      "caption": "She then told Abdallah, her fellow-slave, to set on the pot to make some broth for her master, who had gone to bed. Meanwhile her lamp went out, and she had no more oil in the house. \"Do not be uneasy,\" said Abdallah; \"go into the yard and take some out of one of those jars.\" Morgiana thanked him for his advice, took the oil pot, and went into the yard. When she came to the first jar the robber inside said softly: \"Is it time?\".",
-      "description": "[Morgiana discovering man in jar]",
-      "scene": "Oil Jar Plot"
+      "captioned": true,
+      "caption": "He does not count his money, he measures it.\"",
+      "description": "[wife whispering urgently in his ear]",
+      "scene": "Cassim's wife showing gold to Cassim"
     },
     {
       "id": "The_Forty_Thieves_MM060",
       "filename": "The_Forty_Thieves_MM060.json",
       "interpOrder": false,
-      "caption": "Any other slave but Morgiana, on finding a man in the jar instead of the oil she wanted, would have screamed and made a noise; but she, knowing the danger her master was in, bethought herself of a plan, and answered quietly: \"Not yet, but presently.\" She went to all the jars, giving the same answer, till she came to the jar of oil.",
-      "description": "[Morgiana quietly answering hidden robbers]",
-      "scene": "Oil Jar Plot"
+      "captioned": true,
+      "caption": "He begged her to explain this riddle, which she did by showing him the piece",
+      "description": "[angry brother demanding answers at dawn]",
+      "scene": "Cassim confronting Ali Baba"
     },
     {
       "id": "The_Forty_Thieves_MM061",
       "filename": "The_Forty_Thieves_MM061.json",
       "interpOrder": false,
-      "caption": "She now saw that her master, thinking to entertain an oil merchant, had let thirty-eight robbers into his house. She filled her oil pot, went back to the kitchen, and, having lit her lamp, went again to the oil jar and filled a large kettle full of oil. When it boiled she went and poured enough oil into every jar to stifle and kill the robber inside.",
-      "description": "[Morgiana pouring boiling oil into jars]",
-      "scene": "Morgiana's Victory"
+      "captioned": true,
+      "caption": "of money and telling him where she found it. Then Cassim grew so envious that",
+      "description": "[Ali Baba's reluctant confession]",
+      "scene": "Cassim confronting Ali Baba"
     },
     {
       "id": "The_Forty_Thieves_MM062",
       "filename": "The_Forty_Thieves_MM062.json",
       "interpOrder": false,
-      "caption": "When this brave deed was done she went back to the kitchen, put out the fire and the lamp, and waited to see what would happen.",
-      "description": "[Morgiana waiting in darkness]",
-      "scene": "Morgiana's Victory"
+      "captioned": true,
+      "caption": "he could not sleep, and went to his brother in the morning before sunrise. \"Ali",
+      "description": "[tension between two brothers in courtyard]",
+      "scene": "Cassim confronting Ali Baba"
     },
     {
       "id": "The_Forty_Thieves_MM063",
       "filename": "The_Forty_Thieves_MM063.json",
       "interpOrder": false,
-      "caption": "In a quarter of an hour the Captain of the robbers awoke, got up, and opened the window. As all seemed quiet, he threw down some little pebbles which hit the jars. He listened, and as none of his men seemed to stir he grew uneasy, and went down into the yard. On going to the first jar and saying, \"Are you asleep?\" he smelt the hot boiled oil, and knew at once that his plot to murder Ali Baba and his household had been discovered.",
-      "description": "[Captain discovering dead robbers in jars]",
-      "scene": "Morgiana's Victory"
+      "captioned": true,
+      "caption": "Baba,\" he said, showing him the gold piece, \"you pretend to be poor and yet",
+      "description": "[angry brother demanding answers at dawn]",
+      "scene": "Cassim confronting Ali Baba"
     },
     {
       "id": "The_Forty_Thieves_MM064",
       "filename": "The_Forty_Thieves_MM064.json",
       "interpOrder": false,
-      "caption": "He found all the gang was dead, and, missing the oil out of the last jar, became aware of the manner of their death. He then forced the lock of a door leading into a garden, and climbing over several walls made his escape.",
-      "description": "[Captain escaping over garden walls]",
-      "scene": "Morgiana's Victory"
+      "captioned": true,
+      "caption": "you measure gold.\"",
+      "description": "[Ali Baba's reluctant confession]",
+      "scene": "Cassim confronting Ali Baba"
     },
     {
       "id": "The_Forty_Thieves_MM065",
       "filename": "The_Forty_Thieves_MM065.json",
       "interpOrder": false,
-      "caption": "Morgiana heard and saw all this, and, rejoicing at her success, went to bed and fell asleep.",
-      "description": "[Morgiana rejoicing in success]",
-      "scene": "Morgiana's Victory"
+      "captioned": true,
+      "caption": "By this Ali Baba perceived that through his wife's folly Cassim and his wife knew",
+      "description": "[brother sharing hidden truth reluctantly]",
+      "scene": "Ali Baba revealing secret to Cassim"
     },
     {
       "id": "The_Forty_Thieves_MM066",
       "filename": "The_Forty_Thieves_MM066.json",
       "interpOrder": false,
-      "caption": "At daybreak Ali Baba arose, and, seeing the oil jars still there, asked why the merchant had not gone with his mules. Morgiana bade him look in the first jar and see if there was any oil. Seeing a man, he started back in terror.",
-      "description": "[Ali Baba discovering man in jar]",
-      "scene": "Morgiana's Victory"
+      "captioned": true,
+      "caption": "their secret,",
+      "description": "[map being drawn in dust]",
+      "scene": "Ali Baba revealing secret to Cassim"
     },
     {
       "id": "The_Forty_Thieves_MM067",
       "filename": "The_Forty_Thieves_MM067.json",
       "interpOrder": false,
-      "caption": "\"Have no fear,\" said Morgiana; \"the man cannot harm you: he is dead.\" Ali Baba, when he had recovered somewhat from his astonishment, asked what had become of the merchant. \"Merchant!\" said she, \"he is no more a merchant than I am!\" and she told him the whole story, assuring him that it was a plot of the robbers of the forest, of whom only three were left, and that the white and red chalk marks had something to do with it.",
-      "description": "[Morgiana explaining the plot]",
-      "scene": "Morgiana's Victory"
+      "captioned": true,
+      "caption": "so he confessed all and offered Cassim a share. \"That I expect,\" said Cassim; \"but",
+      "description": "[trust weighed against greed]",
+      "scene": "Ali Baba revealing secret to Cassim"
     },
     {
       "id": "The_Forty_Thieves_MM068",
       "filename": "The_Forty_Thieves_MM068.json",
       "interpOrder": false,
-      "caption": "Ali Baba at once gave Morgiana her freedom, saying that he owed her his life. They then buried the bodies in Ali Baba's garden, while the mules were sold in the market by his slaves.",
-      "description": "[Ali Baba granting Morgiana freedom]",
-      "scene": "Morgiana's Victory"
+      "captioned": true,
+      "caption": "I must know where to find the treasure, otherwise I will discover all, and you",
+      "description": "[brother sharing hidden truth reluctantly]",
+      "scene": "Ali Baba revealing secret to Cassim"
     },
     {
       "id": "The_Forty_Thieves_MM069",
       "filename": "The_Forty_Thieves_MM069.json",
       "interpOrder": false,
-      "caption": "The Captain returned to his lonely cave, which seemed frightful to him without his lost companions, and firmly resolved to avenge them by killing Ali Baba. He dressed himself carefully, and went into the town, where he took lodgings in an inn.",
-      "description": "[Captain disguised as merchant in town]",
-      "scene": "Morgiana's Victory"
+      "captioned": true,
+      "caption": "will lose all.\"",
+      "description": "[map being drawn in dust]",
+      "scene": "Ali Baba revealing secret to Cassim"
     },
     {
       "id": "The_Forty_Thieves_MM070",
       "filename": "The_Forty_Thieves_MM070.json",
       "interpOrder": false,
-      "caption": "In the course of a great many journeys to the forest he carried away many rich stuffs and much fine linen, and set up a shop opposite that of Ali Baba's son. He called himself Cogia Hassan, and as he was both civil and well dressed he soon made friends with Ali Baba's son, and through him with Ali Baba, whom he was continually asking to sup with him.",
-      "description": "[Captain setting up shop opposite Ali Baba's son]",
-      "scene": "Morgiana's Victory"
+      "captioned": true,
+      "caption": "Ali Baba, more out of kindness than fear, told him of the cave, and the",
+      "description": "[laden pack animals winding up rocky path]",
+      "scene": "Cassim traveling to cave with mules"
     },
     {
       "id": "The_Forty_Thieves_MM071",
       "filename": "The_Forty_Thieves_MM071.json",
       "interpOrder": false,
-      "caption": "Ali Baba, wishing to return his kindness, invited him into his house and received him smiling, thanking him for his kindness to his son. When the merchant was about to take his leave Ali Baba stopped him, saying: \"Where are you going, sir, in such haste? Will you not stay and sup with me?\".",
-      "description": "[Ali Baba inviting merchant to supper]",
-      "scene": "Captain's Revenge"
+      "captioned": true,
+      "caption": "very words to use. Cassim left Ali Baba, meaning to be beforehand with him and",
+      "description": "[Cassim's determined stride ahead]",
+      "scene": "Cassim traveling to cave with mules"
     },
     {
       "id": "The_Forty_Thieves_MM072",
       "filename": "The_Forty_Thieves_MM072.json",
       "interpOrder": false,
-      "caption": "The merchant refused, saying that he had a reason; and, on Ali Baba's asking him what that was, he replied: \"It is, sir, that I can eat no victuals that have any salt in them.\" \"If that is all,\" said Ali Baba, \"let me tell you that there shall be no salt in either the meat or the bread that we eat to-night.\".",
-      "description": "[Merchant refusing salt at dinner]",
-      "scene": "Captain's Revenge"
+      "captioned": true,
+      "caption": "get the treasure for himself. He rose early next morning, and set out with ten",
+      "description": "[morning mist clinging to mountainside]",
+      "scene": "Cassim traveling to cave with mules"
     },
     {
       "id": "The_Forty_Thieves_MM073",
       "filename": "The_Forty_Thieves_MM073.json",
       "interpOrder": false,
-      "caption": "He went to give this order to Morgiana, who was much surprised. \"Who is this man,\" she said, \"who eats no salt with his meat?\" \"He is an honest man, Morgiana,\" returned her master; \"therefore do as I bid you.\" But she could not withstand a desire to see this strange man, so she helped Abdallah to carry up the dishes, and saw in a moment that Cogia Hassan was the robber Captain, and carried a dagger under his garment.",
-      "description": "[Morgiana questioning the no-salt guest]",
-      "scene": "Captain's Revenge"
+      "captioned": true,
+      "caption": "mules loaded with great chests.",
+      "description": "[laden pack animals winding up rocky path]",
+      "scene": "Cassim traveling to cave with mules"
     },
     {
       "id": "The_Forty_Thieves_MM074",
       "filename": "The_Forty_Thieves_MM074.json",
       "interpOrder": false,
-      "caption": "\"I am not surprised,\" she said to herself, \"that this wicked man, who intends to kill my master, will eat no salt with him; but I will hinder his plans.\".",
-      "description": "[Morgiana recognizing the disguised captain]",
-      "scene": "Captain's Revenge"
+      "captioned": true,
+      "caption": "He soon found the place, and the door in the rock. He said: \"Open, Sesame!\"",
+      "description": "[figure speaking magic words at rock face]",
+      "scene": "Cassim entering cave"
     },
     {
       "id": "The_Forty_Thieves_MM075",
       "filename": "The_Forty_Thieves_MM075.json",
       "interpOrder": false,
-      "caption": "She sent up the supper by Abdallah, while she made ready for one of the boldest acts that could be thought on. When the dessert had been served, Cogia Hassan was left alone with Ali Baba and his son, whom he thought to make drunk and then to murder them. Morgiana, meanwhile, put on a head-dress like a dancing-girl's, and clasped a girdle round her waist, from which hung a dagger with a silver hilt, and said to Abdallah: \"Take your tabor, and let us go and divert our master and his guest.\".",
-      "description": "[Morgiana dressing as dancing girl]",
-      "scene": "Captain's Revenge"
+      "captioned": true,
+      "caption": "and the door opened and shut behind him.",
+      "description": "[door opening to reveal riches]",
+      "scene": "Cassim entering cave"
     },
     {
       "id": "The_Forty_Thieves_MM076",
       "filename": "The_Forty_Thieves_MM076.json",
       "interpOrder": false,
-      "caption": "Abdallah took his tabor and played before Morgiana until they came to the door, where Abdallah stopped playing and Morgiana made a low courtesy. \"Come in, Morgiana,\" said Ali Baba, \"and let Cogia Hassan see what you can do\"; and, turning to Cogia Hassan, he said: \"She's my slave and my housekeeper.\".",
-      "description": "[Morgiana dancing with dagger]",
-      "scene": "Captain's Revenge"
+      "captioned": true,
+      "caption": "He could have feasted his eyes all day on the treasures, but he now hastened",
+      "description": "[panicked man pounding on sealed door]",
+      "scene": "Cassim trapped inside cave"
     },
     {
       "id": "The_Forty_Thieves_MM077",
       "filename": "The_Forty_Thieves_MM077.json",
       "interpOrder": false,
-      "caption": "Cogia Hassan was by no means pleased, for he feared that his chance of killing Ali Baba was gone for the present; but he pretended great eagerness to see Morgiana, and Abdallah began to play and Morgiana to dance.",
-      "description": "[Captain watching dance uneasily]",
-      "scene": "Captain's Revenge"
+      "captioned": true,
+      "caption": "to gather together as much of it as possible; but when he was ready to",
+      "description": "[echoes of forgotten words]",
+      "scene": "Cassim trapped inside cave"
     },
     {
       "id": "The_Forty_Thieves_MM078",
       "filename": "The_Forty_Thieves_MM078.json",
       "interpOrder": false,
-      "caption": "After she had performed several dances she drew her dagger and made passes with it, sometimes pointing it at her own breast, sometimes at her master's, as if it were part of the dance.",
-      "description": "[Morgiana pointing dagger during dance]",
-      "scene": "Captain's Revenge"
+      "captioned": true,
+      "caption": "go he could not remember what to say for thinking of his great riches. Instead",
+      "description": "[sweat beading on terrified forehead]",
+      "scene": "Cassim trapped inside cave"
     },
     {
       "id": "The_Forty_Thieves_MM079",
       "filename": "The_Forty_Thieves_MM079.json",
       "interpOrder": false,
-      "caption": "Suddenly, out of breath, she snatched the tabor from Abdallah with her left hand, and, holding the dagger in her right hand, held out the tabor to her master. Ali Baba and his son put a piece of gold into it, and Cogia Hassan, seeing that she was coming to him, pulled out his purse to make her a present, but while he was putting his hand into it Morgiana plunged the dagger into his heart.",
-      "description": "[Morgiana plunging dagger into captain's heart]",
-      "scene": "Captain's Revenge"
+      "captioned": true,
+      "caption": "of \"Sesame,\" he said: \"Open, Barley!\" and the door remained fast.",
+      "description": "[panicked man pounding on sealed door]",
+      "scene": "Cassim trapped inside cave"
     },
     {
       "id": "The_Forty_Thieves_MM080",
       "filename": "The_Forty_Thieves_MM080.json",
       "interpOrder": false,
-      "caption": "\"Unhappy girl!\" cried Ali Baba and his son, \"what have you done to ruin us?\".",
-      "description": "[Ali Baba and son crying out in shock]",
-      "scene": "Captain's Revenge"
+      "captioned": true,
+      "caption": "He named several different sorts of grain, all but the right one, and the door",
+      "description": "[desperate hands clawing at stone]",
+      "scene": "Cassim frantically guessing words"
     },
     {
       "id": "The_Forty_Thieves_MM081",
       "filename": "The_Forty_Thieves_MM081.json",
       "interpOrder": false,
-      "caption": "\"It was to preserve you, master, not to ruin you,\" answered Morgiana. \"See here,\" opening the false merchant's garment and showing the dagger; \"see what an enemy you have entertained! Remember, he would eat no salt with you, and what more would you have? Look at him! he is both the false oil merchant and the Captain of the Forty Thieves.\".",
-      "description": "[Morgiana revealing captain's dagger]",
-      "scene": "Happy Ending"
+      "captioned": true,
+      "caption": "still stuck fast. He was so frightened at the danger he was in that he",
+      "description": "[wrong incantations echoing in chamber]",
+      "scene": "Cassim frantically guessing words"
     },
     {
       "id": "The_Forty_Thieves_MM082",
       "filename": "The_Forty_Thieves_MM082.json",
       "interpOrder": false,
-      "caption": "Ali Baba was so grateful to Morgiana for thus saving his life that he offered her to his son in marriage, who readily consented, and a few days after the wedding was celebrated with greatest splendor.",
-      "description": "[Ali Baba offering Morgiana to his son]",
-      "scene": "Happy Ending"
+      "captioned": true,
+      "caption": "had as much forgotten the word as if he had never heard it.",
+      "description": "[panic rising with each failed attempt]",
+      "scene": "Cassim frantically guessing words"
     },
     {
       "id": "The_Forty_Thieves_MM083",
       "filename": "The_Forty_Thieves_MM083.json",
       "interpOrder": false,
-      "caption": "At the end of a year Ali Baba, hearing nothing of the two remaining robbers, judged they were dead, and set out to the cave.",
-      "description": "[Wedding celebration]",
-      "scene": "Happy Ending"
+      "captioned": true,
+      "caption": "About noon the robbers returned to their cave, and saw Cassim's mules roving about with",
+      "description": "[armed men surrounding abandoned animals]",
+      "scene": "Robbers discovering Cassim's mules"
     },
     {
       "id": "The_Forty_Thieves_MM084",
       "filename": "The_Forty_Thieves_MM084.json",
       "interpOrder": false,
-      "caption": "The door opened on his saying: \"Open Sesame!\" He went in, and saw that nobody had been there since the Captain left it.",
-      "description": "[Ali Baba entering cave with magic words]",
-      "scene": "Happy Ending"
+      "captioned": true,
+      "caption": "great chests on their backs. This gave them the alarm; they drew their sabres, and",
+      "description": "[swords drawn at unexpected sight]",
+      "scene": "Robbers discovering Cassim's mules"
     },
     {
       "id": "The_Forty_Thieves_MM085",
       "filename": "The_Forty_Thieves_MM085.json",
       "interpOrder": false,
-      "caption": "He brought away as much gold as he could carry, and returned to town.",
-      "description": "[Ali Baba carrying gold from cave]",
-      "scene": "Happy Ending"
+      "captioned": true,
+      "caption": "went to the door, which opened on their Captain's saying: \"Open, Sesame!\"",
+      "description": "[suspicion replacing confusion]",
+      "scene": "Robbers discovering Cassim's mules"
     },
     {
       "id": "The_Forty_Thieves_MM086",
       "filename": "The_Forty_Thieves_MM086.json",
       "interpOrder": false,
-      "caption": "He told his son the secret of the cave, which his son handed down in his turn, so the children and grandchildren of Ali Baba were rich to the end of their lives.",
-      "description": "[Ali Baba telling son the secret]",
-      "scene": "Happy Ending"
+      "captioned": true,
+      "caption": "Cassim, who had heard the trampling of their horses' feet, resolved to sell his life",
+      "description": "[man springing from doorway with knife]",
+      "scene": "Cassim leaping out to fight"
+    },
+    {
+      "id": "The_Forty_Thieves_MM087",
+      "filename": "The_Forty_Thieves_MM087.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "dearly,",
+      "description": "[desperate attack against overwhelming odds]",
+      "scene": "Cassim leaping out to fight"
+    },
+    {
+      "id": "The_Forty_Thieves_MM088",
+      "filename": "The_Forty_Thieves_MM088.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "so when the door opened he leaped out and threw the Captain down.",
+      "description": "[bravery born of certain doom]",
+      "scene": "Cassim leaping out to fight"
+    },
+    {
+      "id": "The_Forty_Thieves_MM089",
+      "filename": "The_Forty_Thieves_MM089.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "In vain, however, for the robbers with their sabres soon killed him.",
+      "description": "[blade glinting in torchlight]",
+      "scene": "Thieves killing Cassim with sabres"
+    },
+    {
+      "id": "The_Forty_Thieves_MM090",
+      "filename": "The_Forty_Thieves_MM090.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "On entering the cave they saw all the bags laid ready, and could not imagine",
+      "description": "[bandits finding evidence of intruder]",
+      "scene": "Thieves discovering prepared bags"
+    },
+    {
+      "id": "The_Forty_Thieves_MM091",
+      "filename": "The_Forty_Thieves_MM091.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "how anyone had got in without knowing their secret.",
+      "description": "[bags filled and ready for transport]",
+      "scene": "Thieves discovering prepared bags"
+    },
+    {
+      "id": "The_Forty_Thieves_MM092",
+      "filename": "The_Forty_Thieves_MM092.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "They cut Cassim's body into four quarters, and nailed them up inside the cave, in",
+      "description": "[grim work being done in darkness]",
+      "scene": "Thieves nailing Cassim's quarters inside"
+    },
+    {
+      "id": "The_Forty_Thieves_MM093",
+      "filename": "The_Forty_Thieves_MM093.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "order to frighten anyone who should venture in, and went away in search of more",
+      "description": "[warning to future intruders]",
+      "scene": "Thieves nailing Cassim's quarters inside"
+    },
+    {
+      "id": "The_Forty_Thieves_MM094",
+      "filename": "The_Forty_Thieves_MM094.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "treasure.",
+      "description": "[cave becoming tomb and message]",
+      "scene": "Thieves nailing Cassim's quarters inside"
+    },
+    {
+      "id": "The_Forty_Thieves_MM095",
+      "filename": "The_Forty_Thieves_MM095.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "As night drew on Cassim's wife grew very uneasy, and ran to her brother-in-law, and",
+      "description": "[terrified woman hastening through night]",
+      "scene": "Cassim's wife running to Ali Baba"
+    },
+    {
+      "id": "The_Forty_Thieves_MM096",
+      "filename": "The_Forty_Thieves_MM096.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "told him where her husband had gone.",
+      "description": "[lantern bobbing in urgent hands]",
+      "scene": "Cassim's wife running to Ali Baba"
+    },
+    {
+      "id": "The_Forty_Thieves_MM097",
+      "filename": "The_Forty_Thieves_MM097.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Ali Baba did his best to comfort her, and set out to the forest in",
+      "description": "[determined man following familiar path]",
+      "scene": "Ali Baba searching forest cave"
+    },
+    {
+      "id": "The_Forty_Thieves_MM098",
+      "filename": "The_Forty_Thieves_MM098.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "search of Cassim.",
+      "description": "[anxiety for brother in each step]",
+      "scene": "Ali Baba searching forest cave"
+    },
+    {
+      "id": "The_Forty_Thieves_MM099",
+      "filename": "The_Forty_Thieves_MM099.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The first thing he saw on entering the cave was his dead brother.",
+      "description": "[horror frozen on discovering face]",
+      "scene": "Ali Baba discovering dead brother"
+    },
+    {
+      "id": "The_Forty_Thieves_MM100",
+      "filename": "The_Forty_Thieves_MM100.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Full of horror, he put the body on one of his asses, and bags of",
+      "description": "[solemn figure leading burden through forest]",
+      "scene": "Ali Baba carrying body on ass"
+    },
+    {
+      "id": "The_Forty_Thieves_MM101",
+      "filename": "The_Forty_Thieves_MM101.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "gold on the other two, and, covering all with some fagots, returned home.",
+      "description": "[pack animal carrying tragic cargo]",
+      "scene": "Ali Baba carrying body on ass"
+    },
+    {
+      "id": "The_Forty_Thieves_MM102",
+      "filename": "The_Forty_Thieves_MM102.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He drove the two asses laden with gold into his own yard, and led the",
+      "description": "[clever servant receiving solemn instructions]",
+      "scene": "Ali Baba speaking with Morgiana"
+    },
+    {
+      "id": "The_Forty_Thieves_MM103",
+      "filename": "The_Forty_Thieves_MM103.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "other to Cassim's house. The door was opened by the slave Morgiana, whom he knew",
+      "description": "[loyalty burning in dark eyes]",
+      "scene": "Ali Baba speaking with Morgiana"
+    },
+    {
+      "id": "The_Forty_Thieves_MM104",
+      "filename": "The_Forty_Thieves_MM104.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to be both brave and cunning. Unloading the ass, he said to her: \"This is",
+      "description": "[plan forming between master and servant]",
+      "scene": "Ali Baba speaking with Morgiana"
+    },
+    {
+      "id": "The_Forty_Thieves_MM105",
+      "filename": "The_Forty_Thieves_MM105.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the body of your master, who has been murdered, but whom we must bury as",
+      "description": "[clever servant receiving solemn instructions]",
+      "scene": "Ali Baba speaking with Morgiana"
+    },
+    {
+      "id": "The_Forty_Thieves_MM106",
+      "filename": "The_Forty_Thieves_MM106.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "though he had died in his bed.\"",
+      "description": "[loyalty burning in dark eyes]",
+      "scene": "Ali Baba speaking with Morgiana"
+    },
+    {
+      "id": "The_Forty_Thieves_MM107",
+      "filename": "The_Forty_Thieves_MM107.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "I will speak with you again, but now tell your mistress I am come.\" The",
+      "description": "[woman overcome with grief at loss]",
+      "scene": "Cassim's wife weeping"
+    },
+    {
+      "id": "The_Forty_Thieves_MM108",
+      "filename": "The_Forty_Thieves_MM108.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "wife of Cassim, on learning the fate of her husband, broke out into cries and",
+      "description": "[tears streaming down anguished face]",
+      "scene": "Cassim's wife weeping"
+    },
+    {
+      "id": "The_Forty_Thieves_MM109",
+      "filename": "The_Forty_Thieves_MM109.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "tears,",
+      "description": "[mourning echoing through empty house]",
+      "scene": "Cassim's wife weeping"
+    },
+    {
+      "id": "The_Forty_Thieves_MM110",
+      "filename": "The_Forty_Thieves_MM110.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "but Ali Baba offered to take her to live with him and his wife if",
+      "description": "[woman overcome with grief at loss]",
+      "scene": "Cassim's wife weeping"
+    },
+    {
+      "id": "The_Forty_Thieves_MM111",
+      "filename": "The_Forty_Thieves_MM111.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "she would promise to keep his counsel and leave everything to Morgiana; whereupon she agreed,",
+      "description": "[tears streaming down anguished face]",
+      "scene": "Cassim's wife weeping"
+    },
+    {
+      "id": "The_Forty_Thieves_MM112",
+      "filename": "The_Forty_Thieves_MM112.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and dried her eyes.",
+      "description": "[mourning echoing through empty house]",
+      "scene": "Cassim's wife weeping"
+    },
+    {
+      "id": "The_Forty_Thieves_MM113",
+      "filename": "The_Forty_Thieves_MM113.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Morgiana, meanwhile, sought an apothecary and asked him for some lozenges. \"My poor master,\" she",
+      "description": "[servant girl bargaining for medicines]",
+      "scene": "Morgiana visiting apothecary"
+    },
+    {
+      "id": "The_Forty_Thieves_MM114",
+      "filename": "The_Forty_Thieves_MM114.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "said,",
+      "description": "[shrewd merchant dispensing remedies]",
+      "scene": "Morgiana visiting apothecary"
+    },
+    {
+      "id": "The_Forty_Thieves_MM115",
+      "filename": "The_Forty_Thieves_MM115.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"can neither eat nor speak, and no one knows what his distemper is.\"",
+      "description": "[performance of grief for watching eyes]",
+      "scene": "Morgiana visiting apothecary"
+    },
+    {
+      "id": "The_Forty_Thieves_MM116",
+      "filename": "The_Forty_Thieves_MM116.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She carried home the lozenges and returned next day weeping, and asked for an essence",
+      "description": "[tears flowing while making practical arrangements]",
+      "scene": "Morgiana weeping and requesting essence"
+    },
+    {
+      "id": "The_Forty_Thieves_MM117",
+      "filename": "The_Forty_Thieves_MM117.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "only given to those just about to die. Thus, in the evening, no one was",
+      "description": "[public mourning concealing private purpose]",
+      "scene": "Morgiana weeping and requesting essence"
+    },
+    {
+      "id": "The_Forty_Thieves_MM118",
+      "filename": "The_Forty_Thieves_MM118.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "surprised to hear the wretched shrieks and cries of Cassim's wife and Morgiana, telling everyone",
+      "description": "[wailing echoing through market streets]",
+      "scene": "Morgiana weeping and requesting essence"
+    },
+    {
+      "id": "The_Forty_Thieves_MM119",
+      "filename": "The_Forty_Thieves_MM119.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "that Cassim was dead.",
+      "description": "[tears flowing while making practical arrangements]",
+      "scene": "Morgiana weeping and requesting essence"
+    },
+    {
+      "id": "The_Forty_Thieves_MM120",
+      "filename": "The_Forty_Thieves_MM120.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The day after Morgiana went to an old cobbler near the gates of the town",
+      "description": "[old man guided by steady hand]",
+      "scene": "Morgiana leading blindfolded cobbler"
+    },
+    {
+      "id": "The_Forty_Thieves_MM121",
+      "filename": "The_Forty_Thieves_MM121.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "who opened his stall early, put a piece of gold in his hand, and bade",
+      "description": "[handkerchief binding trusting eyes]",
+      "scene": "Morgiana leading blindfolded cobbler"
+    },
+    {
+      "id": "The_Forty_Thieves_MM122",
+      "filename": "The_Forty_Thieves_MM122.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "him follow her with his needle and thread. Having bound his eyes with a handkerchief,",
+      "description": "[dark purpose in careful steps]",
+      "scene": "Morgiana leading blindfolded cobbler"
+    },
+    {
+      "id": "The_Forty_Thieves_MM123",
+      "filename": "The_Forty_Thieves_MM123.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "she took him to the room where the body lay, pulled off the bandage, and",
+      "description": "[old man guided by steady hand]",
+      "scene": "Morgiana leading blindfolded cobbler"
+    },
+    {
+      "id": "The_Forty_Thieves_MM124",
+      "filename": "The_Forty_Thieves_MM124.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "bade him sew the quarters together, after which she covered his eyes again and led",
+      "description": "[handkerchief binding trusting eyes]",
+      "scene": "Morgiana leading blindfolded cobbler"
+    },
+    {
+      "id": "The_Forty_Thieves_MM125",
+      "filename": "The_Forty_Thieves_MM125.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "him home.",
+      "description": "[dark purpose in careful steps]",
+      "scene": "Morgiana leading blindfolded cobbler"
+    },
+    {
+      "id": "The_Forty_Thieves_MM126",
+      "filename": "The_Forty_Thieves_MM126.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then they buried Cassim, and Morgiana his slave followed him to the grave, weeping and",
+      "description": "[veiled woman walking behind bier]",
+      "scene": "Morgiana following funeral procession"
+    },
+    {
+      "id": "The_Forty_Thieves_MM127",
+      "filename": "The_Forty_Thieves_MM127.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "tearing her hair, while Cassim's wife stayed at home uttering lamentable cries. Next day she",
+      "description": "[mourners dressed in deepest black]",
+      "scene": "Morgiana following funeral procession"
+    },
+    {
+      "id": "The_Forty_Thieves_MM128",
+      "filename": "The_Forty_Thieves_MM128.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "went to live with Ali Baba, who gave Cassim's shop to his eldest son.",
+      "description": "[final journey to quiet cemetery]",
+      "scene": "Morgiana following funeral procession"
+    },
+    {
+      "id": "The_Forty_Thieves_MM129",
+      "filename": "The_Forty_Thieves_MM129.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The Forty Thieves, on their return to the cave, were much astonished to find Cassim's",
+      "description": "[bandits finding empty cave in shock]",
+      "scene": "Thieves discovering missing body"
+    },
+    {
+      "id": "The_Forty_Thieves_MM130",
+      "filename": "The_Forty_Thieves_MM130.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "body gone and some of their money-bags. \"We are certainly discovered,\" said the Captain, \"and",
+      "description": "[evidence of interference everywhere]",
+      "scene": "Thieves discovering missing body"
+    },
+    {
+      "id": "The_Forty_Thieves_MM131",
+      "filename": "The_Forty_Thieves_MM131.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "shall be undone if we cannot find out who it is that knows our secret.\"",
+      "description": "[fury building among remaining men]",
+      "scene": "Thieves discovering missing body"
+    },
+    {
+      "id": "The_Forty_Thieves_MM132",
+      "filename": "The_Forty_Thieves_MM132.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "To this end one of you who is bold and artful must go into the",
+      "description": "[stranger passing through city gates]",
+      "scene": "Thief disguised as traveler entering town"
+    },
+    {
+      "id": "The_Forty_Thieves_MM133",
+      "filename": "The_Forty_Thieves_MM133.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "city dressed as a traveler, and discover whom we have killed, and whether men talk",
+      "description": "[disguise concealing deadly purpose]",
+      "scene": "Thief disguised as traveler entering town"
+    },
+    {
+      "id": "The_Forty_Thieves_MM134",
+      "filename": "The_Forty_Thieves_MM134.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "of the strange manner of his death.\" One of the thieves started up and offered",
+      "description": "[observant eyes scanning marketplace]",
+      "scene": "Thief disguised as traveler entering town"
+    },
+    {
+      "id": "The_Forty_Thieves_MM135",
+      "filename": "The_Forty_Thieves_MM135.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to do this, and after the rest had highly commended him for his bravery he",
+      "description": "[stranger passing through city gates]",
+      "scene": "Thief disguised as traveler entering town"
+    },
+    {
+      "id": "The_Forty_Thieves_MM136",
+      "filename": "The_Forty_Thieves_MM136.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "disguised himself,",
+      "description": "[disguise concealing deadly purpose]",
+      "scene": "Thief disguised as traveler entering town"
+    },
+    {
+      "id": "The_Forty_Thieves_MM137",
+      "filename": "The_Forty_Thieves_MM137.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and happened to enter the town at daybreak, just by Baba Mustapha's stall.",
+      "description": "[observant eyes scanning marketplace]",
+      "scene": "Thief disguised as traveler entering town"
+    },
+    {
+      "id": "The_Forty_Thieves_MM138",
+      "filename": "The_Forty_Thieves_MM138.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The thief bade him good-day, saying: \"Honest man, how can you possibly see to stitch",
+      "description": "[traveler leaning close to aged man]",
+      "scene": "Thief questioning old cobbler"
+    },
+    {
+      "id": "The_Forty_Thieves_MM139",
+      "filename": "The_Forty_Thieves_MM139.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "at your age?\" \"Old as I am,\" replied the cobbler, \"I have very good eyes,",
+      "description": "[gold coin glinting in palm]",
+      "scene": "Thief questioning old cobbler"
+    },
+    {
+      "id": "The_Forty_Thieves_MM140",
+      "filename": "The_Forty_Thieves_MM140.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and will you believe me when I tell you that I sewed a dead body",
+      "description": "[information being purchased with bright metal]",
+      "scene": "Thief questioning old cobbler"
+    },
+    {
+      "id": "The_Forty_Thieves_MM141",
+      "filename": "The_Forty_Thieves_MM141.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "together in a place where I had less light than I have now.\"",
+      "description": "[traveler leaning close to aged man]",
+      "scene": "Thief questioning old cobbler"
+    },
+    {
+      "id": "The_Forty_Thieves_MM142",
+      "filename": "The_Forty_Thieves_MM142.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The robber was overjoyed at his good fortune, and, giving him a piece of gold,",
+      "description": "[shiny coins exchanged for dark service]",
+      "scene": "Thief bribing cobbler with gold"
+    },
+    {
+      "id": "The_Forty_Thieves_MM143",
+      "filename": "The_Forty_Thieves_MM143.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "desired to be shown the house where he stitched up the dead body.",
+      "description": "[old man's eyes lighting with greed]",
+      "scene": "Thief bribing cobbler with gold"
+    },
+    {
+      "id": "The_Forty_Thieves_MM144",
+      "filename": "The_Forty_Thieves_MM144.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At first Mustapha refused, saying that he had been blindfolded; but when the robber gave",
+      "description": "[bound eyes navigating familiar streets]",
+      "scene": "Blindfolded cobbler guiding thief"
+    },
+    {
+      "id": "The_Forty_Thieves_MM145",
+      "filename": "The_Forty_Thieves_MM145.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "him another piece of gold he began to think he might remember the turnings if",
+      "description": "[unsteady steps retracing old path]",
+      "scene": "Blindfolded cobbler guiding thief"
+    },
+    {
+      "id": "The_Forty_Thieves_MM146",
+      "filename": "The_Forty_Thieves_MM146.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "blindfolded as before. This means succeeded; the robber partly led him, and was partly guided",
+      "description": "[finger pointing toward marked door]",
+      "scene": "Blindfolded cobbler guiding thief"
+    },
+    {
+      "id": "The_Forty_Thieves_MM147",
+      "filename": "The_Forty_Thieves_MM147.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "by him,",
+      "description": "[bound eyes navigating familiar streets]",
+      "scene": "Blindfolded cobbler guiding thief"
+    },
+    {
+      "id": "The_Forty_Thieves_MM148",
+      "filename": "The_Forty_Thieves_MM148.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "right in front of Cassim's house, the door of which the robber marked with a",
+      "description": "[unsteady steps retracing old path]",
+      "scene": "Blindfolded cobbler guiding thief"
+    },
+    {
+      "id": "The_Forty_Thieves_MM149",
+      "filename": "The_Forty_Thieves_MM149.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "piece of chalk.",
+      "description": "[finger pointing toward marked door]",
+      "scene": "Blindfolded cobbler guiding thief"
+    },
+    {
+      "id": "The_Forty_Thieves_MM150",
+      "filename": "The_Forty_Thieves_MM150.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then, well pleased, he bade farewell to Baba Mustapha and returned to the forest.",
+      "description": "[disguised figure crouching at threshold]",
+      "scene": "Thief marking door with chalk"
+    },
+    {
+      "id": "The_Forty_Thieves_MM151",
+      "filename": "The_Forty_Thieves_MM151.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "By and by Morgiana, going out, saw the mark the robber had made, quickly guessed",
+      "description": "[keen eyes spotting foreign symbol]",
+      "scene": "Morgiana discovering chalk mark"
+    },
+    {
+      "id": "The_Forty_Thieves_MM152",
+      "filename": "The_Forty_Thieves_MM152.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "that some mischief was brewing, and fetching a piece of chalk marked two or three",
+      "description": "[woman's expression sharpening with understanding]",
+      "scene": "Morgiana discovering chalk mark"
+    },
+    {
+      "id": "The_Forty_Thieves_MM153",
+      "filename": "The_Forty_Thieves_MM153.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "doors on each side, without saying anything to her master or mistress.",
+      "description": "[danger recognized in simple mark]",
+      "scene": "Morgiana discovering chalk mark"
+    },
+    {
+      "id": "The_Forty_Thieves_MM154",
+      "filename": "The_Forty_Thieves_MM154.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The thief, meantime, told his comrades of his discovery. The Captain thanked him, and bade",
+      "description": "[bewildered bandits staring at identical doors]",
+      "scene": "Thieves confused by multiple chalk marks"
+    },
+    {
+      "id": "The_Forty_Thieves_MM155",
+      "filename": "The_Forty_Thieves_MM155.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "him show him the house he had marked. But when they came to it they",
+      "description": "[plan thwarted by clever countermove]",
+      "scene": "Thieves confused by multiple chalk marks"
+    },
+    {
+      "id": "The_Forty_Thieves_MM156",
+      "filename": "The_Forty_Thieves_MM156.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "saw that five or six of the houses were chalked in the same manner.",
+      "description": "[frustration mounting among the group]",
+      "scene": "Thieves confused by multiple chalk marks"
+    },
+    {
+      "id": "The_Forty_Thieves_MM157",
+      "filename": "The_Forty_Thieves_MM157.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The guide was so confounded that he knew not what answer to make, and when",
+      "description": "[sword raised in dim torchlight]",
+      "scene": "Thief beheaded for failure"
+    },
+    {
+      "id": "The_Forty_Thieves_MM158",
+      "filename": "The_Forty_Thieves_MM158.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "they returned he was at once beheaded for having failed.",
+      "description": "[price of failure paid in blood]",
+      "scene": "Thief beheaded for failure"
+    },
+    {
+      "id": "The_Forty_Thieves_MM159",
+      "filename": "The_Forty_Thieves_MM159.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Another robber was dispatched, and, having won over Baba Mustapha, marked the house in red",
+      "description": "[crimson mark appearing on wooden door]",
+      "scene": "Second thief marking house in red"
+    },
+    {
+      "id": "The_Forty_Thieves_MM160",
+      "filename": "The_Forty_Thieves_MM160.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "chalk;",
+      "description": "[repeated pattern of attempted discovery]",
+      "scene": "Second thief marking house in red"
+    },
+    {
+      "id": "The_Forty_Thieves_MM161",
+      "filename": "The_Forty_Thieves_MM161.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "but Morgiana being again too clever for them, the second messenger was put to death",
+      "description": "[determined agent completing dark errand]",
+      "scene": "Second thief marking house in red"
+    },
+    {
+      "id": "The_Forty_Thieves_MM162",
+      "filename": "The_Forty_Thieves_MM162.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "also.",
+      "description": "[crimson mark appearing on wooden door]",
+      "scene": "Second thief marking house in red"
+    },
+    {
+      "id": "The_Forty_Thieves_MM163",
+      "filename": "The_Forty_Thieves_MM163.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The Captain now resolved to go himself, but, wiser than the others, he did not",
+      "description": "[commander hatching elaborate stratagem]",
+      "scene": "Captain planning oil jar scheme"
+    },
+    {
+      "id": "The_Forty_Thieves_MM164",
+      "filename": "The_Forty_Thieves_MM164.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "mark the house, but looked at it so closely that he could not fail to",
+      "description": "[maps and jars spread on table]",
+      "scene": "Captain planning oil jar scheme"
+    },
+    {
+      "id": "The_Forty_Thieves_MM165",
+      "filename": "The_Forty_Thieves_MM165.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "remember it.",
+      "description": "[cunning mind devising perfect trap]",
+      "scene": "Captain planning oil jar scheme"
+    },
+    {
+      "id": "The_Forty_Thieves_MM166",
+      "filename": "The_Forty_Thieves_MM166.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He returned, and ordered his men to go into the neighboring villages and buy nineteen",
+      "description": "[commander hatching elaborate stratagem]",
+      "scene": "Captain planning oil jar scheme"
+    },
+    {
+      "id": "The_Forty_Thieves_MM167",
+      "filename": "The_Forty_Thieves_MM167.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "mules,",
+      "description": "[maps and jars spread on table]",
+      "scene": "Captain planning oil jar scheme"
+    },
+    {
+      "id": "The_Forty_Thieves_MM168",
+      "filename": "The_Forty_Thieves_MM168.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and thirty-eight leather jars, all empty except one, which was full of oil.",
+      "description": "[cunning mind devising perfect trap]",
+      "scene": "Captain planning oil jar scheme"
+    },
+    {
+      "id": "The_Forty_Thieves_MM169",
+      "filename": "The_Forty_Thieves_MM169.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The Captain put one of his men, fully armed, into each, rubbing the outside of",
+      "description": "[armed men climbing into large vessels]",
+      "scene": "Captain loading robbers into jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM170",
+      "filename": "The_Forty_Thieves_MM170.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the jars with oil from the full vessel. Then the nineteen mules were loaded with",
+      "description": "[gleaming weapons hidden in darkness]",
+      "scene": "Captain loading robbers into jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM171",
+      "filename": "The_Forty_Thieves_MM171.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "thirty-seven robbers in jars, and the jar of oil, and reached the town by dusk.",
+      "description": "[oil being poured to complete disguise]",
+      "scene": "Captain loading robbers into jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM172",
+      "filename": "The_Forty_Thieves_MM172.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The Captain stopped his mules in front of Ali Baba's house, and said to Ali",
+      "description": "[merchant with caravan seeking lodging]",
+      "scene": "Captain arriving at Ali Baba's house"
+    },
+    {
+      "id": "The_Forty_Thieves_MM173",
+      "filename": "The_Forty_Thieves_MM173.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Baba,",
+      "description": "[false smile hiding deadly intent]",
+      "scene": "Captain arriving at Ali Baba's house"
+    },
+    {
+      "id": "The_Forty_Thieves_MM174",
+      "filename": "The_Forty_Thieves_MM174.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "who was sitting outside for coolness: \"I have brought some oil from a distance to",
+      "description": "[welcoming gates opening to danger]",
+      "scene": "Captain arriving at Ali Baba's house"
+    },
+    {
+      "id": "The_Forty_Thieves_MM175",
+      "filename": "The_Forty_Thieves_MM175.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "sell at to-morrow's market, but it is now so late that I know not where",
+      "description": "[merchant with caravan seeking lodging]",
+      "scene": "Captain arriving at Ali Baba's house"
+    },
+    {
+      "id": "The_Forty_Thieves_MM176",
+      "filename": "The_Forty_Thieves_MM176.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to pass the night, unless you will do me the favor to take me in.\"",
+      "description": "[false smile hiding deadly intent]",
+      "scene": "Captain arriving at Ali Baba's house"
+    },
+    {
+      "id": "The_Forty_Thieves_MM177",
+      "filename": "The_Forty_Thieves_MM177.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Though Ali Baba had seen the Captain of the robbers in the forest, he did",
+      "description": "[hospitable host greeting tired traveler]",
+      "scene": "Ali Baba welcoming oil merchant"
+    },
+    {
+      "id": "The_Forty_Thieves_MM178",
+      "filename": "The_Forty_Thieves_MM178.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "not recognize him in the disguise of an oil merchant. He bade him welcome, opened",
+      "description": "[gates opening wide for guest]",
+      "scene": "Ali Baba welcoming oil merchant"
+    },
+    {
+      "id": "The_Forty_Thieves_MM179",
+      "filename": "The_Forty_Thieves_MM179.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "his gates for the mules to enter, and went to Morgiana to bid her prepare",
+      "description": "[generosity extended to disguised foe]",
+      "scene": "Ali Baba welcoming oil merchant"
+    },
+    {
+      "id": "The_Forty_Thieves_MM180",
+      "filename": "The_Forty_Thieves_MM180.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a bed and supper for his guest.",
+      "description": "[hospitable host greeting tired traveler]",
+      "scene": "Ali Baba welcoming oil merchant"
+    },
+    {
+      "id": "The_Forty_Thieves_MM181",
+      "filename": "The_Forty_Thieves_MM181.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He brought the stranger into his hall, and after they had supped went again to",
+      "description": "[figure whispering to row of vessels]",
+      "scene": "Captain signaling to men in jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM182",
+      "filename": "The_Forty_Thieves_MM182.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "speak to Morgiana in the kitchen, while the Captain went into the yard under pretense",
+      "description": "[coded instructions passing in darkness]",
+      "scene": "Captain signaling to men in jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM183",
+      "filename": "The_Forty_Thieves_MM183.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "of seeing after his mules, but really to tell his men what to do.",
+      "description": "[sleeping household unaware of threat]",
+      "scene": "Captain signaling to men in jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM184",
+      "filename": "The_Forty_Thieves_MM184.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Beginning at the first jar and ending at the last, he said to each man:",
+      "description": "[commander leaning close to jar lids]",
+      "scene": "Captain giving instructions to hidden men"
+    },
+    {
+      "id": "The_Forty_Thieves_MM185",
+      "filename": "The_Forty_Thieves_MM185.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"As soon as I throw some stones from the window of the chamber where I",
+      "description": "[whispered orders to concealed warriors]",
+      "scene": "Captain giving instructions to hidden men"
+    },
+    {
+      "id": "The_Forty_Thieves_MM186",
+      "filename": "The_Forty_Thieves_MM186.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "lie,",
+      "description": "[plot advancing toward bloody climax]",
+      "scene": "Captain giving instructions to hidden men"
+    },
+    {
+      "id": "The_Forty_Thieves_MM187",
+      "filename": "The_Forty_Thieves_MM187.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "cut the jars open with your knives and come out, and I will be with",
+      "description": "[commander leaning close to jar lids]",
+      "scene": "Captain giving instructions to hidden men"
+    },
+    {
+      "id": "The_Forty_Thieves_MM188",
+      "filename": "The_Forty_Thieves_MM188.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "you in a trice.\"",
+      "description": "[whispered orders to concealed warriors]",
+      "scene": "Captain giving instructions to hidden men"
+    },
+    {
+      "id": "The_Forty_Thieves_MM189",
+      "filename": "The_Forty_Thieves_MM189.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She then told Abdallah, her fellow-slave, to set on the pot to make some broth",
+      "description": "[curious servant lifting jar lid]",
+      "scene": "Morgiana discovering man in jar"
+    },
+    {
+      "id": "The_Forty_Thieves_MM190",
+      "filename": "The_Forty_Thieves_MM190.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "for her master, who had gone to bed. Meanwhile her lamp went out, and she",
+      "description": "[startled eyes meeting armed figure]",
+      "scene": "Morgiana discovering man in jar"
+    },
+    {
+      "id": "The_Forty_Thieves_MM191",
+      "filename": "The_Forty_Thieves_MM191.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "had no more oil in the house. \"Do not be uneasy,\" said Abdallah; \"go into",
+      "description": "[discovery that changes everything]",
+      "scene": "Morgiana discovering man in jar"
+    },
+    {
+      "id": "The_Forty_Thieves_MM192",
+      "filename": "The_Forty_Thieves_MM192.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the yard and take some out of one of those jars.\" Morgiana thanked him for",
+      "description": "[curious servant lifting jar lid]",
+      "scene": "Morgiana discovering man in jar"
+    },
+    {
+      "id": "The_Forty_Thieves_MM193",
+      "filename": "The_Forty_Thieves_MM193.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "his advice,",
+      "description": "[startled eyes meeting armed figure]",
+      "scene": "Morgiana discovering man in jar"
+    },
+    {
+      "id": "The_Forty_Thieves_MM194",
+      "filename": "The_Forty_Thieves_MM194.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "took the oil pot, and went into the yard. When she came to the first",
+      "description": "[discovery that changes everything]",
+      "scene": "Morgiana discovering man in jar"
+    },
+    {
+      "id": "The_Forty_Thieves_MM195",
+      "filename": "The_Forty_Thieves_MM195.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "jar the robber inside said softly: \"Is it time?\"",
+      "description": "[curious servant lifting jar lid]",
+      "scene": "Morgiana discovering man in jar"
+    },
+    {
+      "id": "The_Forty_Thieves_MM196",
+      "filename": "The_Forty_Thieves_MM196.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Any other slave but Morgiana, on finding a man in the jar instead of the",
+      "description": "[clever woman whispering back to jars]",
+      "scene": "Morgiana quietly answering hidden robbers"
+    },
+    {
+      "id": "The_Forty_Thieves_MM197",
+      "filename": "The_Forty_Thieves_MM197.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "oil she wanted, would have screamed and made a noise; but she, knowing the danger",
+      "description": "[quick thinking preserving household safety]",
+      "scene": "Morgiana quietly answering hidden robbers"
+    },
+    {
+      "id": "The_Forty_Thieves_MM198",
+      "filename": "The_Forty_Thieves_MM198.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "her master was in, bethought herself of a plan, and answered quietly: \"Not yet, but",
+      "description": "[calm voice concealing urgent action]",
+      "scene": "Morgiana quietly answering hidden robbers"
+    },
+    {
+      "id": "The_Forty_Thieves_MM199",
+      "filename": "The_Forty_Thieves_MM199.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "presently.\" She went to all the jars, giving the same answer, till she came to",
+      "description": "[clever woman whispering back to jars]",
+      "scene": "Morgiana quietly answering hidden robbers"
+    },
+    {
+      "id": "The_Forty_Thieves_MM200",
+      "filename": "The_Forty_Thieves_MM200.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the jar of oil.",
+      "description": "[quick thinking preserving household safety]",
+      "scene": "Morgiana quietly answering hidden robbers"
+    },
+    {
+      "id": "The_Forty_Thieves_MM201",
+      "filename": "The_Forty_Thieves_MM201.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She now saw that her master, thinking to entertain an oil merchant, had let thirty-eight",
+      "description": "[stream of scalding liquid into vessels]",
+      "scene": "Morgiana pouring boiling oil into jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM202",
+      "filename": "The_Forty_Thieves_MM202.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "robbers into his house. She filled her oil pot, went back to the kitchen, and,",
+      "description": "[muffled cries silenced one by one]",
+      "scene": "Morgiana pouring boiling oil into jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM203",
+      "filename": "The_Forty_Thieves_MM203.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "having lit her lamp, went again to the oil jar and filled a large kettle",
+      "description": "[ruthless efficiency in dark courtyard]",
+      "scene": "Morgiana pouring boiling oil into jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM204",
+      "filename": "The_Forty_Thieves_MM204.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "full of oil. When it boiled she went and poured enough oil into every jar",
+      "description": "[stream of scalding liquid into vessels]",
+      "scene": "Morgiana pouring boiling oil into jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM205",
+      "filename": "The_Forty_Thieves_MM205.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to stifle and kill the robber inside.",
+      "description": "[muffled cries silenced one by one]",
+      "scene": "Morgiana pouring boiling oil into jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM206",
+      "filename": "The_Forty_Thieves_MM206.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When this brave deed was done she went back to the kitchen, put out the",
+      "description": "[patient figure crouched in shadows]",
+      "scene": "Morgiana waiting in darkness"
+    },
+    {
+      "id": "The_Forty_Thieves_MM207",
+      "filename": "The_Forty_Thieves_MM207.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "fire and the lamp, and waited to see what would happen.",
+      "description": "[listening for any sign of movement]",
+      "scene": "Morgiana waiting in darkness"
+    },
+    {
+      "id": "The_Forty_Thieves_MM208",
+      "filename": "The_Forty_Thieves_MM208.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "In a quarter of an hour the Captain of the robbers awoke, got up, and",
+      "description": "[horrified commander lifting jar lids]",
+      "scene": "Captain discovering dead robbers in jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM209",
+      "filename": "The_Forty_Thieves_MM209.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "opened the window. As all seemed quiet, he threw down some little pebbles which hit",
+      "description": "[fellow warriors slain by boiling oil]",
+      "scene": "Captain discovering dead robbers in jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM210",
+      "filename": "The_Forty_Thieves_MM210.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the jars.",
+      "description": "[plot unraveling in terrible discovery]",
+      "scene": "Captain discovering dead robbers in jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM211",
+      "filename": "The_Forty_Thieves_MM211.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He listened, and as none of his men seemed to stir he grew uneasy, and",
+      "description": "[horrified commander lifting jar lids]",
+      "scene": "Captain discovering dead robbers in jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM212",
+      "filename": "The_Forty_Thieves_MM212.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "went down into the yard. On going to the first jar and saying, \"Are you",
+      "description": "[fellow warriors slain by boiling oil]",
+      "scene": "Captain discovering dead robbers in jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM213",
+      "filename": "The_Forty_Thieves_MM213.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "asleep?\" he smelt the hot boiled oil, and knew at once that his plot to",
+      "description": "[plot unraveling in terrible discovery]",
+      "scene": "Captain discovering dead robbers in jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM214",
+      "filename": "The_Forty_Thieves_MM214.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "murder Ali Baba and his household had been discovered.",
+      "description": "[horrified commander lifting jar lids]",
+      "scene": "Captain discovering dead robbers in jars"
+    },
+    {
+      "id": "The_Forty_Thieves_MM215",
+      "filename": "The_Forty_Thieves_MM215.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He found all the gang was dead, and, missing the oil out of the last",
+      "description": "[desperate figure vaulting stone barriers]",
+      "scene": "Captain escaping over garden walls"
+    },
+    {
+      "id": "The_Forty_Thieves_MM216",
+      "filename": "The_Forty_Thieves_MM216.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "jar,",
+      "description": "[moonlight chasing fleeing form]",
+      "scene": "Captain escaping over garden walls"
+    },
+    {
+      "id": "The_Forty_Thieves_MM217",
+      "filename": "The_Forty_Thieves_MM217.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "became aware of the manner of their death. He then forced the lock of a",
+      "description": "[survivor vanishing into night]",
+      "scene": "Captain escaping over garden walls"
+    },
+    {
+      "id": "The_Forty_Thieves_MM218",
+      "filename": "The_Forty_Thieves_MM218.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "door leading into a garden, and climbing over several walls made his escape.",
+      "description": "[desperate figure vaulting stone barriers]",
+      "scene": "Captain escaping over garden walls"
+    },
+    {
+      "id": "The_Forty_Thieves_MM219",
+      "filename": "The_Forty_Thieves_MM219.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Morgiana heard and saw all this, and, rejoicing at her success, went to bed and",
+      "description": "[woman allowing herself quiet celebration]",
+      "scene": "Morgiana rejoicing in success"
+    },
+    {
+      "id": "The_Forty_Thieves_MM220",
+      "filename": "The_Forty_Thieves_MM220.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "fell asleep.",
+      "description": "[relief washing over tense features]",
+      "scene": "Morgiana rejoicing in success"
+    },
+    {
+      "id": "The_Forty_Thieves_MM221",
+      "filename": "The_Forty_Thieves_MM221.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At daybreak Ali Baba arose, and, seeing the oil jars still there, asked why the",
+      "description": "[shocked host peering into vessels]",
+      "scene": "Ali Baba discovering man in jar"
+    },
+    {
+      "id": "The_Forty_Thieves_MM222",
+      "filename": "The_Forty_Thieves_MM222.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "merchant had not gone with his mules. Morgiana bade him look in the first jar",
+      "description": "[dead warriors revealed in morning light]",
+      "scene": "Ali Baba discovering man in jar"
+    },
+    {
+      "id": "The_Forty_Thieves_MM223",
+      "filename": "The_Forty_Thieves_MM223.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and see if there was any oil. Seeing a man, he started back in terror.",
+      "description": "[gratitude dawning for faithful servant]",
+      "scene": "Ali Baba discovering man in jar"
+    },
+    {
+      "id": "The_Forty_Thieves_MM224",
+      "filename": "The_Forty_Thieves_MM224.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Have no fear,\" said Morgiana; \"the man cannot harm you: he is dead.\" Ali Baba,",
+      "description": "[loyal servant recounting night's events]",
+      "scene": "Morgiana explaining the plot"
+    },
+    {
+      "id": "The_Forty_Thieves_MM225",
+      "filename": "The_Forty_Thieves_MM225.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "when he had recovered somewhat from his astonishment, asked what had become of the merchant.",
+      "description": "[master listening with growing amazement]",
+      "scene": "Morgiana explaining the plot"
+    },
+    {
+      "id": "The_Forty_Thieves_MM226",
+      "filename": "The_Forty_Thieves_MM226.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Merchant!\" said she, \"he is no more a merchant than I am!\" and she told",
+      "description": "[truth unfolding in courtyard dawn]",
+      "scene": "Morgiana explaining the plot"
+    },
+    {
+      "id": "The_Forty_Thieves_MM227",
+      "filename": "The_Forty_Thieves_MM227.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "him the whole story, assuring him that it was a plot of the robbers of",
+      "description": "[loyal servant recounting night's events]",
+      "scene": "Morgiana explaining the plot"
+    },
+    {
+      "id": "The_Forty_Thieves_MM228",
+      "filename": "The_Forty_Thieves_MM228.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the forest,",
+      "description": "[master listening with growing amazement]",
+      "scene": "Morgiana explaining the plot"
+    },
+    {
+      "id": "The_Forty_Thieves_MM229",
+      "filename": "The_Forty_Thieves_MM229.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "of whom only three were left, and that the white and red chalk marks had",
+      "description": "[truth unfolding in courtyard dawn]",
+      "scene": "Morgiana explaining the plot"
+    },
+    {
+      "id": "The_Forty_Thieves_MM230",
+      "filename": "The_Forty_Thieves_MM230.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "something to do with it.",
+      "description": "[loyal servant recounting night's events]",
+      "scene": "Morgiana explaining the plot"
+    },
+    {
+      "id": "The_Forty_Thieves_MM231",
+      "filename": "The_Forty_Thieves_MM231.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Ali Baba at once gave Morgiana her freedom, saying that he owed her his life.",
+      "description": "[master speaking words of liberation]",
+      "scene": "Ali Baba granting Morgiana freedom"
+    },
+    {
+      "id": "The_Forty_Thieves_MM232",
+      "filename": "The_Forty_Thieves_MM232.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "They then buried the bodies in Ali Baba's garden, while the mules were sold in",
+      "description": "[woman's eyes filling with tears]",
+      "scene": "Ali Baba granting Morgiana freedom"
+    },
+    {
+      "id": "The_Forty_Thieves_MM233",
+      "filename": "The_Forty_Thieves_MM233.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the market by his slaves.",
+      "description": "[chains of servitude falling away]",
+      "scene": "Ali Baba granting Morgiana freedom"
+    },
+    {
+      "id": "The_Forty_Thieves_MM234",
+      "filename": "The_Forty_Thieves_MM234.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The Captain returned to his lonely cave, which seemed frightful to him without his lost",
+      "description": "[survivor reinventing appearance completely]",
+      "scene": "Captain disguised as merchant in town"
+    },
+    {
+      "id": "The_Forty_Thieves_MM235",
+      "filename": "The_Forty_Thieves_MM235.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "companions,",
+      "description": "[new name covering old identity]",
+      "scene": "Captain disguised as merchant in town"
+    },
+    {
+      "id": "The_Forty_Thieves_MM236",
+      "filename": "The_Forty_Thieves_MM236.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and firmly resolved to avenge them by killing Ali Baba. He dressed himself carefully, and",
+      "description": "[patient predator stalking prey]",
+      "scene": "Captain disguised as merchant in town"
+    },
+    {
+      "id": "The_Forty_Thieves_MM237",
+      "filename": "The_Forty_Thieves_MM237.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "went into the town, where he took lodgings in an inn.",
+      "description": "[survivor reinventing appearance completely]",
+      "scene": "Captain disguised as merchant in town"
+    },
+    {
+      "id": "The_Forty_Thieves_MM238",
+      "filename": "The_Forty_Thieves_MM238.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "In the course of a great many journeys to the forest he carried away many",
+      "description": "[false merchant establishing false business]",
+      "scene": "Captain setting up shop opposite Ali Baba's son"
+    },
+    {
+      "id": "The_Forty_Thieves_MM239",
+      "filename": "The_Forty_Thieves_MM239.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "rich stuffs and much fine linen, and set up a shop opposite that of Ali",
+      "description": "[watchful eyes across narrow street]",
+      "scene": "Captain setting up shop opposite Ali Baba's son"
+    },
+    {
+      "id": "The_Forty_Thieves_MM240",
+      "filename": "The_Forty_Thieves_MM240.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Baba's son.",
+      "description": "[long game of vengeance beginning]",
+      "scene": "Captain setting up shop opposite Ali Baba's son"
+    },
+    {
+      "id": "The_Forty_Thieves_MM241",
+      "filename": "The_Forty_Thieves_MM241.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He called himself Cogia Hassan, and as he was both civil and well dressed he",
+      "description": "[false merchant establishing false business]",
+      "scene": "Captain setting up shop opposite Ali Baba's son"
+    },
+    {
+      "id": "The_Forty_Thieves_MM242",
+      "filename": "The_Forty_Thieves_MM242.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "soon made friends with Ali Baba's son, and through him with Ali Baba, whom he",
+      "description": "[watchful eyes across narrow street]",
+      "scene": "Captain setting up shop opposite Ali Baba's son"
+    },
+    {
+      "id": "The_Forty_Thieves_MM243",
+      "filename": "The_Forty_Thieves_MM243.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "was continually asking to sup with him.",
+      "description": "[long game of vengeance beginning]",
+      "scene": "Captain setting up shop opposite Ali Baba's son"
+    },
+    {
+      "id": "The_Forty_Thieves_MM244",
+      "filename": "The_Forty_Thieves_MM244.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Ali Baba, wishing to return his kindness, invited him into his house and received him",
+      "description": "[hospitable family welcoming new friend]",
+      "scene": "Ali Baba inviting merchant to supper"
+    },
+    {
+      "id": "The_Forty_Thieves_MM245",
+      "filename": "The_Forty_Thieves_MM245.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "smiling,",
+      "description": "[table being set for honored guest]",
+      "scene": "Ali Baba inviting merchant to supper"
+    },
+    {
+      "id": "The_Forty_Thieves_MM246",
+      "filename": "The_Forty_Thieves_MM246.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "thanking him for his kindness to his son. When the merchant was about to take",
+      "description": "[danger accepted unknowingly into home]",
+      "scene": "Ali Baba inviting merchant to supper"
+    },
+    {
+      "id": "The_Forty_Thieves_MM247",
+      "filename": "The_Forty_Thieves_MM247.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "his leave Ali Baba stopped him, saying: \"Where are you going, sir, in such haste?",
+      "description": "[hospitable family welcoming new friend]",
+      "scene": "Ali Baba inviting merchant to supper"
+    },
+    {
+      "id": "The_Forty_Thieves_MM248",
+      "filename": "The_Forty_Thieves_MM248.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Will you not stay and sup with me?\"",
+      "description": "[table being set for honored guest]",
+      "scene": "Ali Baba inviting merchant to supper"
+    },
+    {
+      "id": "The_Forty_Thieves_MM249",
+      "filename": "The_Forty_Thieves_MM249.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The merchant refused, saying that he had a reason; and, on Ali Baba's asking him",
+      "description": "[guest declining offered food mysteriously]",
+      "scene": "Merchant refusing salt at dinner"
+    },
+    {
+      "id": "The_Forty_Thieves_MM250",
+      "filename": "The_Forty_Thieves_MM250.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "what that was, he replied: \"It is, sir, that I can eat no victuals that",
+      "description": "[strange refusal noted by household]",
+      "scene": "Merchant refusing salt at dinner"
+    },
+    {
+      "id": "The_Forty_Thieves_MM251",
+      "filename": "The_Forty_Thieves_MM251.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "have any salt in them.\" \"If that is all,\" said Ali Baba, \"let me tell",
+      "description": "[ancient custom hiding murderous intent]",
+      "scene": "Merchant refusing salt at dinner"
+    },
+    {
+      "id": "The_Forty_Thieves_MM252",
+      "filename": "The_Forty_Thieves_MM252.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "you that there shall be no salt in either the meat or the bread that",
+      "description": "[guest declining offered food mysteriously]",
+      "scene": "Merchant refusing salt at dinner"
+    },
+    {
+      "id": "The_Forty_Thieves_MM253",
+      "filename": "The_Forty_Thieves_MM253.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "we eat to-night.\"",
+      "description": "[strange refusal noted by household]",
+      "scene": "Merchant refusing salt at dinner"
+    },
+    {
+      "id": "The_Forty_Thieves_MM254",
+      "filename": "The_Forty_Thieves_MM254.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He went to give this order to Morgiana, who was much surprised. \"Who is this",
+      "description": "[suspicious servant studying visitor carefully]",
+      "scene": "Morgiana questioning the no-salt guest"
+    },
+    {
+      "id": "The_Forty_Thieves_MM255",
+      "filename": "The_Forty_Thieves_MM255.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "man,\" she said, \"who eats no salt with his meat?\" \"He is an honest man,",
+      "description": "[memory searching for familiar features]",
+      "scene": "Morgiana questioning the no-salt guest"
+    },
+    {
+      "id": "The_Forty_Thieves_MM256",
+      "filename": "The_Forty_Thieves_MM256.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Morgiana,\" returned her master; \"therefore do as I bid you.\" But she could not withstand",
+      "description": "[danger recognized in strange habit]",
+      "scene": "Morgiana questioning the no-salt guest"
+    },
+    {
+      "id": "The_Forty_Thieves_MM257",
+      "filename": "The_Forty_Thieves_MM257.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a desire to see this strange man, so she helped Abdallah to carry up the",
+      "description": "[suspicious servant studying visitor carefully]",
+      "scene": "Morgiana questioning the no-salt guest"
+    },
+    {
+      "id": "The_Forty_Thieves_MM258",
+      "filename": "The_Forty_Thieves_MM258.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "dishes,",
+      "description": "[memory searching for familiar features]",
+      "scene": "Morgiana questioning the no-salt guest"
+    },
+    {
+      "id": "The_Forty_Thieves_MM259",
+      "filename": "The_Forty_Thieves_MM259.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and saw in a moment that Cogia Hassan was the robber Captain, and carried a",
+      "description": "[danger recognized in strange habit]",
+      "scene": "Morgiana questioning the no-salt guest"
+    },
+    {
+      "id": "The_Forty_Thieves_MM260",
+      "filename": "The_Forty_Thieves_MM260.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "dagger under his garment.",
+      "description": "[suspicious servant studying visitor carefully]",
+      "scene": "Morgiana questioning the no-salt guest"
+    },
+    {
+      "id": "The_Forty_Thieves_MM261",
+      "filename": "The_Forty_Thieves_MM261.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"I am not surprised,\" she said to herself, \"that this wicked man, who intends to",
+      "description": "[sudden clarity in servant's eyes]",
+      "scene": "Morgiana recognizing the disguised captain"
+    },
+    {
+      "id": "The_Forty_Thieves_MM262",
+      "filename": "The_Forty_Thieves_MM262.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "kill my master, will eat no salt with him; but I will hinder his plans.\"",
+      "description": "[masked enemy revealed at last]",
+      "scene": "Morgiana recognizing the disguised captain"
+    },
+    {
+      "id": "The_Forty_Thieves_MM263",
+      "filename": "The_Forty_Thieves_MM263.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She sent up the supper by Abdallah, while she made ready for one of the",
+      "description": "[woman transforming appearance with purpose]",
+      "scene": "Morgiana dressing as dancing girl"
+    },
+    {
+      "id": "The_Forty_Thieves_MM264",
+      "filename": "The_Forty_Thieves_MM264.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "boldest acts that could be thought on. When the dessert had been served, Cogia Hassan",
+      "description": "[costume concealing hidden weapon]",
+      "scene": "Morgiana dressing as dancing girl"
+    },
+    {
+      "id": "The_Forty_Thieves_MM265",
+      "filename": "The_Forty_Thieves_MM265.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "was left alone with Ali Baba and his son, whom he thought to make drunk",
+      "description": "[performance about to begin]",
+      "scene": "Morgiana dressing as dancing girl"
+    },
+    {
+      "id": "The_Forty_Thieves_MM266",
+      "filename": "The_Forty_Thieves_MM266.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and then to murder them. Morgiana, meanwhile, put on a head-dress like a dancing-girl's, and",
+      "description": "[woman transforming appearance with purpose]",
+      "scene": "Morgiana dressing as dancing girl"
+    },
+    {
+      "id": "The_Forty_Thieves_MM267",
+      "filename": "The_Forty_Thieves_MM267.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "clasped a girdle round her waist, from which hung a dagger with a silver hilt,",
+      "description": "[costume concealing hidden weapon]",
+      "scene": "Morgiana dressing as dancing girl"
+    },
+    {
+      "id": "The_Forty_Thieves_MM268",
+      "filename": "The_Forty_Thieves_MM268.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and said to Abdallah: \"Take your tabor, and let us go and divert our master",
+      "description": "[performance about to begin]",
+      "scene": "Morgiana dressing as dancing girl"
+    },
+    {
+      "id": "The_Forty_Thieves_MM269",
+      "filename": "The_Forty_Thieves_MM269.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and his guest.\"",
+      "description": "[woman transforming appearance with purpose]",
+      "scene": "Morgiana dressing as dancing girl"
+    },
+    {
+      "id": "The_Forty_Thieves_MM270",
+      "filename": "The_Forty_Thieves_MM270.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Abdallah took his tabor and played before Morgiana until they came to the door, where",
+      "description": "[graceful movements hiding deadly intent]",
+      "scene": "Morgiana dancing with dagger"
+    },
+    {
+      "id": "The_Forty_Thieves_MM271",
+      "filename": "The_Forty_Thieves_MM271.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Abdallah stopped playing and Morgiana made a low courtesy. \"Come in, Morgiana,\" said Ali Baba,",
+      "description": "[blade flashing in candlelight]",
+      "scene": "Morgiana dancing with dagger"
+    },
+    {
+      "id": "The_Forty_Thieves_MM272",
+      "filename": "The_Forty_Thieves_MM272.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"and let Cogia Hassan see what you can do\"; and, turning to Cogia Hassan, he",
+      "description": "[entertainment masking assassination]",
+      "scene": "Morgiana dancing with dagger"
+    },
+    {
+      "id": "The_Forty_Thieves_MM273",
+      "filename": "The_Forty_Thieves_MM273.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "said:",
+      "description": "[graceful movements hiding deadly intent]",
+      "scene": "Morgiana dancing with dagger"
+    },
+    {
+      "id": "The_Forty_Thieves_MM274",
+      "filename": "The_Forty_Thieves_MM274.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"She's my slave and my housekeeper.\"",
+      "description": "[blade flashing in candlelight]",
+      "scene": "Morgiana dancing with dagger"
+    },
+    {
+      "id": "The_Forty_Thieves_MM275",
+      "filename": "The_Forty_Thieves_MM275.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Cogia Hassan was by no means pleased, for he feared that his chance of killing",
+      "description": "[disguised killer growing nervous]",
+      "scene": "Captain watching dance uneasily"
+    },
+    {
+      "id": "The_Forty_Thieves_MM276",
+      "filename": "The_Forty_Thieves_MM276.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Ali Baba was gone for the present; but he pretended great eagerness to see Morgiana,",
+      "description": "[suspicion stirring beneath confidence]",
+      "scene": "Captain watching dance uneasily"
+    },
+    {
+      "id": "The_Forty_Thieves_MM277",
+      "filename": "The_Forty_Thieves_MM277.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and Abdallah began to play and Morgiana to dance.",
+      "description": "[awareness of threat in dancer's eyes]",
+      "scene": "Captain watching dance uneasily"
+    },
+    {
+      "id": "The_Forty_Thieves_MM278",
+      "filename": "The_Forty_Thieves_MM278.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "After she had performed several dances she drew her dagger and made passes with it,",
+      "description": "[weapon becoming part of performance]",
+      "scene": "Morgiana pointing dagger during dance"
+    },
+    {
+      "id": "The_Forty_Thieves_MM279",
+      "filename": "The_Forty_Thieves_MM279.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "sometimes pointing it at her own breast, sometimes at her master's, as if it were",
+      "description": "[pointing at hearts with practiced grace]",
+      "scene": "Morgiana pointing dagger during dance"
+    },
+    {
+      "id": "The_Forty_Thieves_MM280",
+      "filename": "The_Forty_Thieves_MM280.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "part of the dance.",
+      "description": "[audience unaware of true purpose]",
+      "scene": "Morgiana pointing dagger during dance"
+    },
+    {
+      "id": "The_Forty_Thieves_MM281",
+      "filename": "The_Forty_Thieves_MM281.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Suddenly, out of breath, she snatched the tabor from Abdallah with her left hand, and,",
+      "description": "[final strike ending enemy's life]",
+      "scene": "Morgiana plunging dagger into captain's heart"
+    },
+    {
+      "id": "The_Forty_Thieves_MM282",
+      "filename": "The_Forty_Thieves_MM282.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "holding the dagger in her right hand, held out the tabor to her master. Ali",
+      "description": "[surprise frozen on dying face]",
+      "scene": "Morgiana plunging dagger into captain's heart"
+    },
+    {
+      "id": "The_Forty_Thieves_MM283",
+      "filename": "The_Forty_Thieves_MM283.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Baba and his son put a piece of gold into it, and Cogia Hassan, seeing",
+      "description": "[justice delivered by clever servant]",
+      "scene": "Morgiana plunging dagger into captain's heart"
+    },
+    {
+      "id": "The_Forty_Thieves_MM284",
+      "filename": "The_Forty_Thieves_MM284.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "that she was coming to him, pulled out his purse to make her a present,",
+      "description": "[final strike ending enemy's life]",
+      "scene": "Morgiana plunging dagger into captain's heart"
+    },
+    {
+      "id": "The_Forty_Thieves_MM285",
+      "filename": "The_Forty_Thieves_MM285.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "but while he was putting his hand into it Morgiana plunged the dagger into his",
+      "description": "[surprise frozen on dying face]",
+      "scene": "Morgiana plunging dagger into captain's heart"
+    },
+    {
+      "id": "The_Forty_Thieves_MM286",
+      "filename": "The_Forty_Thieves_MM286.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "heart.",
+      "description": "[justice delivered by clever servant]",
+      "scene": "Morgiana plunging dagger into captain's heart"
+    },
+    {
+      "id": "The_Forty_Thieves_MM287",
+      "filename": "The_Forty_Thieves_MM287.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Unhappy girl!\" cried Ali Baba and his son, \"what have you done to ruin us?\"",
+      "description": "[family recoiling at sudden violence]",
+      "scene": "Ali Baba and son crying out in shock"
+    },
+    {
+      "id": "The_Forty_Thieves_MM288",
+      "filename": "The_Forty_Thieves_MM288.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"It was to preserve you, master, not to ruin you,\" answered Morgiana. \"See here,\" opening",
+      "description": "[servant exposing hidden weapon]",
+      "scene": "Morgiana revealing captain's dagger"
+    },
+    {
+      "id": "The_Forty_Thieves_MM289",
+      "filename": "The_Forty_Thieves_MM289.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the false merchant's garment and showing the dagger; \"see what an enemy you have entertained!",
+      "description": "[truth about guest laid bare]",
+      "scene": "Morgiana revealing captain's dagger"
+    },
+    {
+      "id": "The_Forty_Thieves_MM290",
+      "filename": "The_Forty_Thieves_MM290.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Remember,",
+      "description": "[evidence of murderous intent]",
+      "scene": "Morgiana revealing captain's dagger"
+    },
+    {
+      "id": "The_Forty_Thieves_MM291",
+      "filename": "The_Forty_Thieves_MM291.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "he would eat no salt with you, and what more would you have? Look at",
+      "description": "[servant exposing hidden weapon]",
+      "scene": "Morgiana revealing captain's dagger"
+    },
+    {
+      "id": "The_Forty_Thieves_MM292",
+      "filename": "The_Forty_Thieves_MM292.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "him! he is both the false oil merchant and the Captain of the Forty Thieves.\"",
+      "description": "[truth about guest laid bare]",
+      "scene": "Morgiana revealing captain's dagger"
+    },
+    {
+      "id": "The_Forty_Thieves_MM293",
+      "filename": "The_Forty_Thieves_MM293.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Ali Baba was so grateful to Morgiana for thus saving his life that he offered",
+      "description": "[master proposing union of gratitude]",
+      "scene": "Ali Baba offering Morgiana to his son"
+    },
+    {
+      "id": "The_Forty_Thieves_MM294",
+      "filename": "The_Forty_Thieves_MM294.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "her to his son in marriage, who readily consented, and a few days after the",
+      "description": "[young man's eyes lighting with joy]",
+      "scene": "Ali Baba offering Morgiana to his son"
+    },
+    {
+      "id": "The_Forty_Thieves_MM295",
+      "filename": "The_Forty_Thieves_MM295.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "wedding was celebrated with greatest splendor.",
+      "description": "[reward for extraordinary loyalty]",
+      "scene": "Ali Baba offering Morgiana to his son"
+    },
+    {
+      "id": "The_Forty_Thieves_MM296",
+      "filename": "The_Forty_Thieves_MM296.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At the end of a year Ali Baba, hearing nothing of the two remaining robbers,",
+      "description": "[festive hall alive with music]",
+      "scene": "Wedding celebration"
+    },
+    {
+      "id": "The_Forty_Thieves_MM297",
+      "filename": "The_Forty_Thieves_MM297.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "judged they were dead, and set out to the cave.",
+      "description": "[joyous gathering celebrating union]",
+      "scene": "Wedding celebration"
+    },
+    {
+      "id": "The_Forty_Thieves_MM298",
+      "filename": "The_Forty_Thieves_MM298.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The door opened on his saying: \"Open Sesame!\" He went in, and saw that nobody",
+      "description": "[solemn figure returning to treasure]",
+      "scene": "Ali Baba entering cave with magic words"
+    },
+    {
+      "id": "The_Forty_Thieves_MM299",
+      "filename": "The_Forty_Thieves_MM299.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "had been there since the Captain left it.",
+      "description": "[door opening to familiar riches]",
+      "scene": "Ali Baba entering cave with magic words"
+    },
+    {
+      "id": "The_Forty_Thieves_MM300",
+      "filename": "The_Forty_Thieves_MM300.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He brought away as much gold as he could carry, and returned to town.",
+      "description": "[laden figure emerging from darkness]",
+      "scene": "Ali Baba carrying gold from cave"
+    },
+    {
+      "id": "The_Forty_Thieves_MM301",
+      "filename": "The_Forty_Thieves_MM301.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He told his son the secret of the cave, which his son handed down in",
+      "description": "[father passing wisdom to next generation]",
+      "scene": "Ali Baba telling son the secret"
+    },
+    {
+      "id": "The_Forty_Thieves_MM302",
+      "filename": "The_Forty_Thieves_MM302.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "his turn,",
+      "description": "[important knowledge shared in confidence]",
+      "scene": "Ali Baba telling son the secret"
+    },
+    {
+      "id": "The_Forty_Thieves_MM303",
+      "filename": "The_Forty_Thieves_MM303.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "so the children and grandchildren of Ali Baba were rich to the end of their",
+      "description": "[legacy secured through trusted lineage]",
+      "scene": "Ali Baba telling son the secret"
+    },
+    {
+      "id": "The_Forty_Thieves_MM304",
+      "filename": "The_Forty_Thieves_MM304.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "lives.",
+      "description": "[father passing wisdom to next generation]",
+      "scene": "Ali Baba telling son the secret"
     }
   ]
 }

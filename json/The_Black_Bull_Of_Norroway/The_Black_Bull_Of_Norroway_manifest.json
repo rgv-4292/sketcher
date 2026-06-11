@@ -2,7 +2,7 @@
   "width": 720,
   "height": 720,
   "format": "png",
-  "name": "The Black Bull of Norroway",
+  "name": "The Black Bull Of Norroway",
   "captionFontSize": 14,
   "defaultTransitionDuration": 2000,
   "pages": [
@@ -10,769 +10,1414 @@
       "id": "The_Black_Bull_Of_Norroway_MM001",
       "filename": "The_Black_Bull_Of_Norroway_MM001.json",
       "interpOrder": false,
+      "captioned": true,
       "caption": "And many a hunting song they sung, And song of game and glee.",
-      "description": "[Medieval minstrels singing at feast]",
-      "scene": "Opening verse with minstrels"
+      "description": "[minstrels sing at a grand feast]",
+      "scene": "Medieval minstrels singing at feast"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM002",
       "filename": "The_Black_Bull_Of_Norroway_MM002.json",
       "interpOrder": false,
+      "captioned": true,
       "caption": "Then tuned to plaintive strains their tongue, \"Of Scotland's luve and lee.\"",
-      "description": "[Song title displayed in ornate lettering]",
-      "scene": "Verse continues with Scottish ballad"
+      "description": "[ornate lettering fills the page]",
+      "scene": "Song title displayed in ornate lettering"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM003",
       "filename": "The_Black_Bull_Of_Norroway_MM003.json",
       "interpOrder": false,
+      "captioned": true,
       "caption": "To wilder measures next they turn \"The Black, Black Bull of Norroway!\"",
-      "description": "[Dark musical performance with dramatic tones]",
-      "scene": "Title song announced dramatically"
+      "description": "[dark performance with dramatic shadows]",
+      "scene": "Dark musical performance with dramatic tones"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM004",
       "filename": "The_Black_Bull_Of_Norroway_MM004.json",
       "interpOrder": false,
+      "captioned": true,
       "caption": "Sudden the tapers cease to burn, The minstrels cease to play.",
-      "description": "[Candles flickering and minstrels falling silent]",
-      "scene": "Dramatic pause in the music"
+      "description": "[candles gutter and die in darkness]",
+      "scene": "Candles flickering and minstrels falling silent"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM005",
       "filename": "The_Black_Bull_Of_Norroway_MM005.json",
       "interpOrder": false,
+      "captioned": true,
       "caption": "\"The Cout of Keeldar,\" by J. Leyden.",
-      "description": "[Title page with author attribution]",
-      "scene": "Story attribution"
+      "description": "[title page with author name]",
+      "scene": "Title page with author attribution"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM006",
       "filename": "The_Black_Bull_Of_Norroway_MM006.json",
       "interpOrder": false,
+      "captioned": true,
       "caption": "In Norroway, langsyne, there lived a certain lady, and she had three dochters.",
-      "description": "[Scottish cottage with three daughters]",
-      "scene": "Introduction of the three sisters"
+      "description": "[three daughters in a Scottish cottage]",
+      "scene": "Scottish cottage with three daughters"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM007",
       "filename": "The_Black_Bull_Of_Norroway_MM007.json",
       "interpOrder": false,
-      "caption": "The auldest o' them said to her mither: \"Mither, bake me a bannock, and roast me a collop, for I'm gaun awa' to seek my fortune.\"",
-      "description": "[Young woman speaking to her mother]",
-      "scene": "Eldest daughter asks to seek fortune"
+      "captioned": true,
+      "caption": "The auldest o' them said to her mither: \"Mither, bake me a bannock, and roast",
+      "description": "[eldest daughter speaks to her mother]",
+      "scene": "Young woman speaking to her mother"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM008",
       "filename": "The_Black_Bull_Of_Norroway_MM008.json",
       "interpOrder": false,
-      "caption": "Her mither did sae.",
-      "description": "[Mother preparing food]",
-      "scene": "Mother bakes the bannock"
+      "captioned": true,
+      "caption": "me a collop, for I'm gaun awa' to seek my fortune.\"",
+      "description": "[mother listens at the hearth]",
+      "scene": "Young woman speaking to her mother"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM009",
       "filename": "The_Black_Bull_Of_Norroway_MM009.json",
       "interpOrder": false,
-      "caption": "And the dochter gaed awa' to an auld witch washerwife and telled her purpose.",
-      "description": "[Witch washerwife at her cottage]",
-      "scene": "Daughter visits the old witch"
+      "captioned": true,
+      "caption": "Her mither did sae.",
+      "description": "[mother bakes bannock over the fire]",
+      "scene": "Mother preparing food"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM010",
       "filename": "The_Black_Bull_Of_Norroway_MM010.json",
       "interpOrder": false,
-      "caption": "The auld wife bade her stay that day, and gang and look out o' her back door, and see what she could see.",
-      "description": "[Old woman gazing through back door]",
-      "scene": "Witch instructs daughter to watch"
+      "captioned": true,
+      "caption": "And the dochter gaed awa' to an auld witch washerwife and telled her purpose.",
+      "description": "[daughter approaches witch's cottage]",
+      "scene": "Witch washerwife at her cottage"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM011",
       "filename": "The_Black_Bull_Of_Norroway_MM011.json",
       "interpOrder": false,
-      "caption": "She saw nocht the first day.",
-      "description": "[First daughter looking but seeing nothing]",
-      "scene": "First day of watching yields nothing"
+      "captioned": true,
+      "caption": "The auld wife bade her stay that day, and gang and look out o' her",
+      "description": "[old wife gestures toward back door]",
+      "scene": "Old woman gazing through back door"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM012",
       "filename": "The_Black_Bull_Of_Norroway_MM012.json",
       "interpOrder": false,
-      "caption": "The second day she did the same, and saw nocht.",
-      "description": "[Second day with empty view]",
-      "scene": "Second day also yields nothing"
+      "captioned": true,
+      "caption": "back door,",
+      "description": "[daughter stands at the doorway]",
+      "scene": "Old woman gazing through back door"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM013",
       "filename": "The_Black_Bull_Of_Norroway_MM013.json",
       "interpOrder": false,
-      "caption": "On the third day she looked again, and saw a coach-and-six coming along the road.",
-      "description": "[Coach and six horses approaching]",
-      "scene": "Coach and six arrives for eldest"
+      "captioned": true,
+      "caption": "and see what she could see.",
+      "description": "[daughter peers into the distance]",
+      "scene": "Old woman gazing through back door"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM014",
       "filename": "The_Black_Bull_Of_Norroway_MM014.json",
       "interpOrder": false,
-      "caption": "She ran in and telled the auld wife what she saw.",
-      "description": "[Daughter reporting to old wife]",
-      "scene": "Eldest reports the sighting"
+      "captioned": true,
+      "caption": "She saw nocht the first day.",
+      "description": "[empty road stretches before her]",
+      "scene": "First daughter looking but seeing nothing"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM015",
       "filename": "The_Black_Bull_Of_Norroway_MM015.json",
       "interpOrder": false,
-      "caption": "\"Aweel,\" quo' the auld wife, \"yon's for you.\"",
-      "description": "[Old wife with knowing smile]",
-      "scene": "Witch confirms the match"
+      "captioned": true,
+      "caption": "The second day she did the same, and saw nocht.",
+      "description": "[still nothing on the second day]",
+      "scene": "Second day with empty view"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM016",
       "filename": "The_Black_Bull_Of_Norroway_MM016.json",
       "interpOrder": false,
-      "caption": "Sae they took her into the coach, and galloped aff.",
-      "description": "[Daughter climbing into ornate coach]",
-      "scene": "Eldest departs in the coach"
+      "captioned": true,
+      "caption": "On the third day she looked again, and saw a coach-and-six coming along the road.",
+      "description": "[coach and six horses approach]",
+      "scene": "Coach and six horses approaching"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM017",
       "filename": "The_Black_Bull_Of_Norroway_MM017.json",
       "interpOrder": false,
-      "caption": "The second dochter next says to her mither: \"Mither, bake me a bannock, and roast me a collop, fur I'm gaun awa' to seek my fortune.\"",
-      "description": "[Second daughter approaching mother]",
-      "scene": "Second daughter asks to seek fortune"
+      "captioned": true,
+      "caption": "She ran in and telled the auld wife what she saw.",
+      "description": "[daughter rushes back to tell]",
+      "scene": "Daughter reporting to old wife"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM018",
       "filename": "The_Black_Bull_Of_Norroway_MM018.json",
       "interpOrder": false,
-      "caption": "Her mither did sae; and awa' she gaed to the auld wife, as her sister had dune.",
-      "description": "[Second daughter departing for witch]",
-      "scene": "Second daughter visits the witch"
+      "captioned": true,
+      "caption": "\"Aweel,\" quo' the auld wife, \"yon's for you.\"",
+      "description": "[old wife smiles knowingly]",
+      "scene": "Old wife with knowing smile"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM019",
       "filename": "The_Black_Bull_Of_Norroway_MM019.json",
       "interpOrder": false,
-      "caption": "On the third day she looked out o' the back door, and saw a coach-and-four coming along the road.",
-      "description": "[Coach and four approaching]",
-      "scene": "Coach and four arrives for second"
+      "captioned": true,
+      "caption": "Sae they took her into the coach, and galloped aff.",
+      "description": "[daughter climbs into the ornate coach]",
+      "scene": "Daughter climbing into ornate coach"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM020",
       "filename": "The_Black_Bull_Of_Norroway_MM020.json",
       "interpOrder": false,
-      "caption": "\"Aweel,\" quo' the auld wife, \"yon's for you.\" Sae they took her in, and aff they set.",
-      "description": "[Second daughter in coach departing]",
-      "scene": "Second daughter departs in coach"
+      "captioned": true,
+      "caption": "The second dochter next says to her mither: \"Mither, bake me a bannock, and roast",
+      "description": "[second daughter speaks to mother]",
+      "scene": "Second daughter approaching mother"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM021",
       "filename": "The_Black_Bull_Of_Norroway_MM021.json",
       "interpOrder": false,
-      "caption": "The third dochter says to her mither: \"Mither, bake me a bannock, and roast me a collop, for I'm gaun awa' to seek my fortune.\"",
-      "description": "[Third daughter speaking to mother]",
-      "scene": "Third daughter asks to seek fortune"
+      "captioned": true,
+      "caption": "me a collop, fur I'm gaun awa' to seek my fortune.\"",
+      "description": "[mother listens once more]",
+      "scene": "Second daughter approaching mother"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM022",
       "filename": "The_Black_Bull_Of_Norroway_MM022.json",
       "interpOrder": false,
-      "caption": "Her mither did sae; and awa' she gaed to the auld witch-wife.",
-      "description": "[Mother preparing third bannock]",
-      "scene": "Mother prepares third bannock"
+      "captioned": true,
+      "caption": "Her mither did sae; and awa' she gaed to the auld wife, as her sister",
+      "description": "[second daughter departs down the path]",
+      "scene": "Second daughter departing for witch"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM023",
       "filename": "The_Black_Bull_Of_Norroway_MM023.json",
       "interpOrder": false,
-      "caption": "She bade her look out o' her back door, and see what she could see.",
-      "description": "[Old wife instructing third daughter]",
-      "scene": "Witch gives same instructions"
+      "captioned": true,
+      "caption": "had dune.",
+      "description": "[cottage door closes behind her]",
+      "scene": "Second daughter departing for witch"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM024",
       "filename": "The_Black_Bull_Of_Norroway_MM024.json",
       "interpOrder": false,
-      "caption": "She did sae; and when she came back said she saw nocht.",
-      "description": "[Third daughter looking but seeing nothing]",
-      "scene": "Third daughter sees nothing first day"
+      "captioned": true,
+      "caption": "On the third day she looked out o' the back door, and saw a coach-and-four",
+      "description": "[coach and four horses appear]",
+      "scene": "Coach and four approaching"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM025",
       "filename": "The_Black_Bull_Of_Norroway_MM025.json",
       "interpOrder": false,
-      "caption": "The second day she did the same, and saw nocht.",
-      "description": "[Still no sighting the second day]",
-      "scene": "Second day also yields nothing"
+      "captioned": true,
+      "caption": "coming along the road.",
+      "description": "[horses trot down the lane]",
+      "scene": "Coach and four approaching"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM026",
       "filename": "The_Black_Bull_Of_Norroway_MM026.json",
       "interpOrder": false,
-      "caption": "The third day she looked again, and on coming back said to the auld wife she saw nocht but a muckle Black Bull coming roaring alang the road.",
-      "description": "[Black bull appearing on the road]",
-      "scene": "The Black Bull appears on the road"
+      "captioned": true,
+      "caption": "\"Aweel,\" quo' the auld wife, \"yon's for you.\" Sae they took her in, and aff",
+      "description": "[second daughter boards the coach]",
+      "scene": "Second daughter in coach departing"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM027",
       "filename": "The_Black_Bull_Of_Norroway_MM027.json",
       "interpOrder": false,
-      "caption": "\"Aweel,\" quo' the auld wife, \"yon's for you.\"",
-      "description": "[Old wife declares the bull for her]",
-      "scene": "Witch declares the bull is hers"
+      "captioned": true,
+      "caption": "they set.",
+      "description": "[coach rolls away down the road]",
+      "scene": "Second daughter in coach departing"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM028",
       "filename": "The_Black_Bull_Of_Norroway_MM028.json",
       "interpOrder": false,
-      "caption": "On hearing this she was next to distracted wi' grief and terror; but she was lifted up and set on his back, and awa' they went.",
-      "description": "[Daughter lifted onto bull's back]",
-      "scene": "Third daughter is lifted onto the bull"
+      "captioned": true,
+      "caption": "The third dochter says to her mither: \"Mither, bake me a bannock, and roast me",
+      "description": "[youngest daughter speaks to mother]",
+      "scene": "Third daughter speaking to mother"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM029",
       "filename": "The_Black_Bull_Of_Norroway_MM029.json",
       "interpOrder": false,
-      "caption": "Aye they traveled, and on they traveled, till the lady grew faint wi' hunger.",
-      "description": "[Bull traveling with lady on back]",
-      "scene": "Long journey begins, lady grows hungry"
+      "captioned": true,
+      "caption": "a collop,",
+      "description": "[mother's hands pause at the hearth]",
+      "scene": "Third daughter speaking to mother"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM030",
       "filename": "The_Black_Bull_Of_Norroway_MM030.json",
       "interpOrder": false,
-      "caption": "\"Eat out o' my right lug,\" says the Black Bull, \"and drink out o' my left lug, and set by your leavings.\"",
-      "description": "[Black bull offers sustenance]",
-      "scene": "Bull offers food and drink from his ears"
+      "captioned": true,
+      "caption": "for I'm gaun awa' to seek my fortune.\"",
+      "description": "[youngest daughter's determined face]",
+      "scene": "Third daughter speaking to mother"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM031",
       "filename": "The_Black_Bull_Of_Norroway_MM031.json",
       "interpOrder": false,
-      "caption": "Sae she did as he said, and was wonderfully refreshed.",
-      "description": "[Lady refreshed and continuing journey]",
-      "scene": "Lady is refreshed by the magical food"
+      "captioned": true,
+      "caption": "Her mither did sae; and awa' she gaed to the auld witch-wife.",
+      "description": "[mother bakes with trembling hands]",
+      "scene": "Mother preparing third bannock"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM032",
       "filename": "The_Black_Bull_Of_Norroway_MM032.json",
       "interpOrder": false,
-      "caption": "And lang they gaed, and sair they rade, till they came in sight o' a very big and bonny castle.",
-      "description": "[Journeying toward distant castle]",
-      "scene": "Castle comes into view in the distance"
+      "captioned": true,
+      "caption": "She bade her look out o' her back door, and see what she could see.",
+      "description": "[old wife points to the back door]",
+      "scene": "Old wife instructing third daughter"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM033",
       "filename": "The_Black_Bull_Of_Norroway_MM033.json",
       "interpOrder": false,
-      "caption": "\"Yonder we maun be this night,\" quo' the bull; \"for my auld brither lives yonder.\"",
-      "description": "[Bull announces brother's castle]",
-      "scene": "Bull explains it is his brother's castle"
+      "captioned": true,
+      "caption": "She did sae; and when she came back said she saw nocht.",
+      "description": "[daughter returns disappointed]",
+      "scene": "Third daughter looking but seeing nothing"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM034",
       "filename": "The_Black_Bull_Of_Norroway_MM034.json",
       "interpOrder": false,
-      "caption": "And presently they were at the place.",
-      "description": "[Arrival at grand castle]",
-      "scene": "Arrival at the first castle"
+      "captioned": true,
+      "caption": "The second day she did the same, and saw nocht.",
+      "description": "[empty horizon on the second day]",
+      "scene": "Still no sighting the second day"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM035",
       "filename": "The_Black_Bull_Of_Norroway_MM035.json",
       "interpOrder": false,
-      "caption": "They lifted her aff his back, and took her in, and sent him away to a park for the night.",
-      "description": "[Lifted down and taken inside]",
-      "scene": "Lady taken inside, bull sent to park"
+      "captioned": true,
+      "caption": "The third day she looked again, and on coming back said to the auld wife",
+      "description": "[daughter speaks with fear in her voice]",
+      "scene": "Black bull appearing on the road"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM036",
       "filename": "The_Black_Bull_Of_Norroway_MM036.json",
       "interpOrder": false,
-      "caption": "In the morning, when they brought the bull hame, they took the lady into a fine shining parlor.",
-      "description": "[Morning at shining parlor]",
-      "scene": "Lady brought to shining parlor"
+      "captioned": true,
+      "caption": "she saw nocht but a muckle Black Bull coming roaring alang the road.",
+      "description": "[massive black bull charges down the road]",
+      "scene": "Black bull appearing on the road"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM037",
       "filename": "The_Black_Bull_Of_Norroway_MM037.json",
       "interpOrder": false,
-      "caption": "And gave her a beautiful apple, telling her no to break it till she was in the greatest strait ever mortal was in in the world, and that wad bring her o't.",
-      "description": "[Gift of magical apple]",
-      "scene": "Lady receives the magical apple"
+      "captioned": true,
+      "caption": "\"Aweel,\" quo' the auld wife, \"yon's for you.\"",
+      "description": "[old wife nods with satisfaction]",
+      "scene": "Old wife declares the bull for her"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM038",
       "filename": "The_Black_Bull_Of_Norroway_MM038.json",
       "interpOrder": false,
-      "caption": "Again she was lifted on the bull's back.",
-      "description": "[Lifted onto bull again]",
-      "scene": "Lady remounts the bull"
+      "captioned": true,
+      "caption": "On hearing this she was next to distracted wi' grief and terror; but she was",
+      "description": "[daughter trembles with fear]",
+      "scene": "Daughter lifted onto bull's back"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM039",
       "filename": "The_Black_Bull_Of_Norroway_MM039.json",
       "interpOrder": false,
-      "caption": "And after she had ridden far, and farer than I can tell, they came in sight o' a far bonnier castle, and far farther awa' than the last.",
-      "description": "[Riding far to second castle]",
-      "scene": "Journey continues to second castle"
+      "captioned": true,
+      "caption": "lifted up and set on his back, and awa' they went.",
+      "description": "[bull carries her away into the wild]",
+      "scene": "Daughter lifted onto bull's back"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM040",
       "filename": "The_Black_Bull_Of_Norroway_MM040.json",
       "interpOrder": false,
-      "caption": "Says the bull till her: \"Yonder we maun be the night, for my second brither lives yonder.\"",
-      "description": "[Bull declares second brother's home]",
-      "scene": "Bull announces second brother's castle"
+      "captioned": true,
+      "caption": "Aye they traveled, and on they traveled, till the lady grew faint wi' hunger.",
+      "description": "[bull and lady traverse barren moorland]",
+      "scene": "Bull traveling with lady on back"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM041",
       "filename": "The_Black_Bull_Of_Norroway_MM041.json",
       "interpOrder": false,
-      "caption": "And they were at the place directly.",
-      "description": "[Arrival at second castle]",
-      "scene": "Arrival at the second castle"
+      "captioned": true,
+      "caption": "\"Eat out o' my right lug,\" says the Black Bull, \"and drink out o' my",
+      "description": "[bull speaks with gentle voice]",
+      "scene": "Black bull offers sustenance"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM042",
       "filename": "The_Black_Bull_Of_Norroway_MM042.json",
       "interpOrder": false,
-      "caption": "They lifted her down and took her in, and sent the bull to the field for the night.",
-      "description": "[Sent to field for the night]",
-      "scene": "Lady taken in, bull sent to field"
+      "captioned": true,
+      "caption": "left lug,",
+      "description": "[lady reaches toward the bull's ear]",
+      "scene": "Black bull offers sustenance"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM043",
       "filename": "The_Black_Bull_Of_Norroway_MM043.json",
       "interpOrder": false,
-      "caption": "In the morning they took the lady into a fine and rich room.",
-      "description": "[Morning in fine room]",
-      "scene": "Lady brought to fine room"
+      "captioned": true,
+      "caption": "and set by your leavings.\"",
+      "description": "[food and drink appear from the ear]",
+      "scene": "Black bull offers sustenance"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM044",
       "filename": "The_Black_Bull_Of_Norroway_MM044.json",
       "interpOrder": false,
-      "caption": "And gave her the finest pear she had ever seen, bidding her no to break it till she was in the greatest strait ever mortal could be in, and that wad get her out o't.",
-      "description": "[Gift of magical pear]",
-      "scene": "Lady receives the magical pear"
+      "captioned": true,
+      "caption": "Sae she did as he said, and was wonderfully refreshed.",
+      "description": "[lady eats and drinks, color returns]",
+      "scene": "Lady refreshed and continuing journey"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM045",
       "filename": "The_Black_Bull_Of_Norroway_MM045.json",
       "interpOrder": false,
-      "caption": "Again she was lifted and set on his back, and awa' they went.",
-      "description": "[Set upon bull for third journey]",
-      "scene": "Lady mounts bull for third journey"
+      "captioned": true,
+      "caption": "And lang they gaed, and sair they rade, till they came in sight o' a",
+      "description": "[distant castle appears on horizon]",
+      "scene": "Journeying toward distant castle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM046",
       "filename": "The_Black_Bull_Of_Norroway_MM046.json",
       "interpOrder": false,
-      "caption": "And lang they gaed, and sair they rade, till they came in sight o' the far biggest castle, and far farthest aff, they had yet seen.",
-      "description": "[Riding toward greatest castle]",
-      "scene": "Third and greatest castle comes into view"
+      "captioned": true,
+      "caption": "very big and bonny castle.",
+      "description": "[grand castle rises against the sky]",
+      "scene": "Journeying toward distant castle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM047",
       "filename": "The_Black_Bull_Of_Norroway_MM047.json",
       "interpOrder": false,
-      "caption": "\"We maun be yonder the night,\" says the bull, \"for my young brither lives yonder.\"",
-      "description": "[Bull names youngest brother]",
-      "scene": "Bull announces youngest brother's castle"
+      "captioned": true,
+      "caption": "\"Yonder we maun be this night,\" quo' the bull; \"for my auld brither lives yonder.\"",
+      "description": "[bull pauses before the castle gates]",
+      "scene": "Bull announces brother's castle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM048",
       "filename": "The_Black_Bull_Of_Norroway_MM048.json",
       "interpOrder": false,
-      "caption": "And they were there directly.",
-      "description": "[Arrival at third castle]",
-      "scene": "Arrival at the third castle"
+      "captioned": true,
+      "caption": "And presently they were at the place.",
+      "description": "[they arrive at the castle entrance]",
+      "scene": "Arrival at grand castle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM049",
       "filename": "The_Black_Bull_Of_Norroway_MM049.json",
       "interpOrder": false,
-      "caption": "They lifted her down, took her in, and sent the bull to the field for the night.",
-      "description": "[Sent to field again]",
-      "scene": "Lady taken in, bull sent to field"
+      "captioned": true,
+      "caption": "They lifted her aff his back, and took her in, and sent him away to",
+      "description": "[servants lift her down from the bull]",
+      "scene": "Lifted down and taken inside"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM050",
       "filename": "The_Black_Bull_Of_Norroway_MM050.json",
       "interpOrder": false,
-      "caption": "In the morning they took her into a room, the finest of a'.",
-      "description": "[Morning in finest room]",
-      "scene": "Lady brought to the finest room"
+      "captioned": true,
+      "caption": "a park for the night.",
+      "description": "[bull wanders into moonlit park]",
+      "scene": "Lifted down and taken inside"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM051",
       "filename": "The_Black_Bull_Of_Norroway_MM051.json",
       "interpOrder": false,
-      "caption": "And gied her a plum, telling her no to break it till she was in the greatest strait mortal could be in, and that wad get her out o't.",
-      "description": "[Gift of magical plum]",
-      "scene": "Lady receives the magical plum"
+      "captioned": true,
+      "caption": "In the morning, when they brought the bull hame, they took the lady into a",
+      "description": "[dawn light fills the parlor]",
+      "scene": "Morning at shining parlor"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM052",
       "filename": "The_Black_Bull_Of_Norroway_MM052.json",
       "interpOrder": false,
-      "caption": "Presently they brought hame the bull, set the lady on his back, and awa' they went.",
-      "description": "[Setting off on final journey]",
-      "scene": "Final departure with the bull"
+      "captioned": true,
+      "caption": "fine shining parlor.",
+      "description": "[lady enters the gleaming room]",
+      "scene": "Morning at shining parlor"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM053",
       "filename": "The_Black_Bull_Of_Norroway_MM053.json",
       "interpOrder": false,
-      "caption": "And aye they gaed, and on they rade, till they came to a dark and ugsome glen, where they stopped, and the lady lighted down.",
-      "description": "[Arriving at dark glen]",
-      "scene": "Arrival at the dark and fearsome glen"
+      "captioned": true,
+      "caption": "And gave her a beautiful apple, telling her no to break it till she was",
+      "description": "[servant presents golden apple]",
+      "scene": "Gift of magical apple"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM054",
       "filename": "The_Black_Bull_Of_Norroway_MM054.json",
       "interpOrder": false,
-      "caption": "Says the bull to her: \"Here ye maun stay till I gang and fight the deil.\"",
-      "description": "[Bull explains the battle]",
-      "scene": "Bull prepares to fight the devil"
+      "captioned": true,
+      "caption": "in the greatest strait ever mortal was in in the world, and that wad bring",
+      "description": "[lady holds the apple carefully]",
+      "scene": "Gift of magical apple"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM055",
       "filename": "The_Black_Bull_Of_Norroway_MM055.json",
       "interpOrder": false,
-      "caption": "Ye maun seat yoursel' on that stane, and move neither hand nor fit till I come back, else I'll never find ye again.",
-      "description": "[Bull instructs lady on stone]",
-      "scene": "Bull tells lady to sit on stone"
+      "captioned": true,
+      "caption": "her o't.",
+      "description": "[apple gleams in the morning light]",
+      "scene": "Gift of magical apple"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM056",
       "filename": "The_Black_Bull_Of_Norroway_MM056.json",
       "interpOrder": false,
-      "caption": "And if everything round about ye turns blue I hae beated the deil; but should a' things turn red he'll hae conquered me.",
-      "description": "[Bull explains victory signs]",
-      "scene": "Bull explains the signs of victory"
+      "captioned": true,
+      "caption": "Again she was lifted on the bull's back.",
+      "description": "[lady mounted once more on the bull]",
+      "scene": "Lifted onto bull again"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM057",
       "filename": "The_Black_Bull_Of_Norroway_MM057.json",
       "interpOrder": false,
-      "caption": "She set hersel' down on the stane, and by-and-by a' round her turned blue.",
-      "description": "[Lady sits on stone, world turns blue]",
-      "scene": "World turns blue as bull wins"
+      "captioned": true,
+      "caption": "And after she had ridden far, and farer than I can tell, they came in",
+      "description": "[bull and lady ride through wild landscape]",
+      "scene": "Riding far to second castle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM058",
       "filename": "The_Black_Bull_Of_Norroway_MM058.json",
       "interpOrder": false,
-      "caption": "O'ercome wi' joy, she lifted the ae fit and crossed it owre the ither, sae glad was she that her companion was victorious.",
-      "description": "[Lady crosses foot in joy]",
-      "scene": "Lady crosses her foot in joy"
+      "captioned": true,
+      "caption": "sight o' a far bonnier castle, and far farther awa' than the last.",
+      "description": "[even grander castle appears ahead]",
+      "scene": "Riding far to second castle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM059",
       "filename": "The_Black_Bull_Of_Norroway_MM059.json",
       "interpOrder": false,
-      "caption": "The bull returned and sought for but never could find her.",
-      "description": "[Bull returns but cannot find her]",
-      "scene": "Bull returns but she is gone"
+      "captioned": true,
+      "caption": "Says the bull till her: \"Yonder we maun be the night, for my second brither",
+      "description": "[bull indicates the second castle]",
+      "scene": "Bull declares second brother's home"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM060",
       "filename": "The_Black_Bull_Of_Norroway_MM060.json",
       "interpOrder": false,
-      "caption": "Lang she sat, and aye she grat, till she wearied.",
-      "description": "[Lady weeping alone]",
-      "scene": "Lady weeps alone on the stone"
+      "captioned": true,
+      "caption": "lives yonder.\"",
+      "description": "[towers gleam in the fading light]",
+      "scene": "Bull declares second brother's home"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM061",
       "filename": "The_Black_Bull_Of_Norroway_MM061.json",
       "interpOrder": false,
-      "caption": "At last she rase and gaed awa', she kedna whaur till.",
-      "description": "[Lady wandering lost]",
-      "scene": "Lady wanders off into the unknown"
+      "captioned": true,
+      "caption": "And they were at the place directly.",
+      "description": "[they arrive at the second castle]",
+      "scene": "Arrival at second castle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM062",
       "filename": "The_Black_Bull_Of_Norroway_MM062.json",
       "interpOrder": false,
-      "caption": "On she wandered till she came to a great hill o' glass, that she tried a' she could to climb, bat wasna able.",
-      "description": "[Discovering the glassy hill]",
-      "scene": "Lady discovers the glassy hill"
+      "captioned": true,
+      "caption": "They lifted her down and took her in, and sent the bull to the field",
+      "description": "[lady carried inside by servants]",
+      "scene": "Sent to field for the night"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM063",
       "filename": "The_Black_Bull_Of_Norroway_MM063.json",
       "interpOrder": false,
-      "caption": "Round the bottom o' the hill she gaed, sabbing and seeking a passage owre, till at last she came to a smith's house.",
-      "description": "[Circling the hill searching]",
-      "scene": "Lady circles the hill seeking passage"
+      "captioned": true,
+      "caption": "for the night.",
+      "description": "[bull stands alone in moonlit field]",
+      "scene": "Sent to field for the night"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM064",
       "filename": "The_Black_Bull_Of_Norroway_MM064.json",
       "interpOrder": false,
-      "caption": "And the smith promised, if she wad serve him seven years, he wad make her iron shoon, wherewi' she could climb owre the glassy hill.",
-      "description": "[Smith's house in the distance]",
-      "scene": "Smith offers iron shoes for seven years"
+      "captioned": true,
+      "caption": "In the morning they took the lady into a fine and rich room.",
+      "description": "[morning light fills richly decorated room]",
+      "scene": "Morning in fine room"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM065",
       "filename": "The_Black_Bull_Of_Norroway_MM065.json",
       "interpOrder": false,
-      "caption": "At seven years' end she got her iron shoon.",
-      "description": "[Seven years of service complete]",
-      "scene": "Seven years of service complete"
+      "captioned": true,
+      "caption": "And gave her the finest pear she had ever seen, bidding her no to break",
+      "description": "[servant presents luminous pear]",
+      "scene": "Gift of magical pear"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM066",
       "filename": "The_Black_Bull_Of_Norroway_MM066.json",
       "interpOrder": false,
-      "caption": "Clamb the glassy hill, and chanced to come to the auld washerwife's habitation.",
-      "description": "[Climbing the glassy hill]",
-      "scene": "Lady climbs the glassy hill"
+      "captioned": true,
+      "caption": "it till she was in the greatest strait ever mortal could be in, and that",
+      "description": "[lady cradles the pear]",
+      "scene": "Gift of magical pear"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM067",
       "filename": "The_Black_Bull_Of_Norroway_MM067.json",
       "interpOrder": false,
-      "caption": "There she was telled of a gallant young knight that had given in some bluidy sarks to wash, and whaever washed thae sarks was to be his wife.",
-      "description": "[Washing the bloody shirts]",
-      "scene": "Knight seeks wife through washing shirts"
+      "captioned": true,
+      "caption": "wad get her out o't.",
+      "description": "[pear glows faintly in her hands]",
+      "scene": "Gift of magical pear"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM068",
       "filename": "The_Black_Bull_Of_Norroway_MM068.json",
       "interpOrder": false,
-      "caption": "The auld wife had washed till she was tired, and then she set to her dochter, and baith washed, and they washed, and they better washed, in hopes of getting the young knight.",
-      "description": "[Old wife and daughter washing in vain]",
-      "scene": "Witch and daughter wash but fail"
+      "captioned": true,
+      "caption": "Again she was lifted and set on his back, and awa' they went.",
+      "description": "[lady mounted on bull once more]",
+      "scene": "Set upon bull for third journey"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM069",
       "filename": "The_Black_Bull_Of_Norroway_MM069.json",
       "interpOrder": false,
-      "caption": "But a' they could do they couldna bring out a stain.",
-      "description": "[Unable to remove any stain]",
-      "scene": "No stain can be removed by them"
+      "captioned": true,
+      "caption": "And lang they gaed, and sair they rade, till they came in sight o' the",
+      "description": "[they ride toward distant mountains]",
+      "scene": "Riding toward greatest castle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM070",
       "filename": "The_Black_Bull_Of_Norroway_MM070.json",
       "interpOrder": false,
-      "caption": "At length they set the stranger damosel to wark; and whenever she began the stains came out pure and clean.",
-      "description": "[Stranger begins washing successfully]",
-      "scene": "Lady washes shirts perfectly clean"
+      "captioned": true,
+      "caption": "far biggest castle, and far farthest aff, they had yet seen.",
+      "description": "[greatest castle towers above them]",
+      "scene": "Riding toward greatest castle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM071",
       "filename": "The_Black_Bull_Of_Norroway_MM071.json",
       "interpOrder": false,
-      "caption": "But the auld wife made the knight believe it was her dochter had washed the sarks.",
-      "description": "[Old wife takes credit for daughter]",
-      "scene": "Witch deceives the knight"
+      "captioned": true,
+      "caption": "\"We maun be yonder the night,\" says the bull, \"for my young brither lives yonder.\"",
+      "description": "[bull gestures toward youngest brother's castle]",
+      "scene": "Bull names youngest brother"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM072",
       "filename": "The_Black_Bull_Of_Norroway_MM072.json",
       "interpOrder": false,
-      "caption": "So the knight and the eldest dochter were to be married, and the stranger damosel was distracted at the thought of it, for she was deeply in love wi' him.",
-      "description": "[Knight and eldest daughter to wed]",
-      "scene": "Wedding plans begin, lady despairs"
+      "captioned": true,
+      "caption": "And they were there directly.",
+      "description": "[they arrive at the third castle]",
+      "scene": "Arrival at third castle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM073",
       "filename": "The_Black_Bull_Of_Norroway_MM073.json",
       "interpOrder": false,
-      "caption": "So she bethought her of her apple, and breaking it, found it filled with gold and precious jewelry, the richest she had ever seen.",
-      "description": "[Breaking the apple reveals gold]",
-      "scene": "Apple opens to reveal gold and jewels"
+      "captioned": true,
+      "caption": "They lifted her down, took her in, and sent the bull to the field for",
+      "description": "[lady enters the third castle]",
+      "scene": "Sent to field again"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM074",
       "filename": "The_Black_Bull_Of_Norroway_MM074.json",
       "interpOrder": false,
-      "caption": "\"All these,\" she said to the eldest dochter, \"I will give you, on condition that you put off your marriage for ae day, and allow me to go into his room alone at night.\"",
-      "description": "[Offering jewels for one night]",
-      "scene": "Lady bargains for one night alone"
+      "captioned": true,
+      "caption": "the night.",
+      "description": "[bull stands in the field at nightfall]",
+      "scene": "Sent to field again"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM075",
       "filename": "The_Black_Bull_Of_Norroway_MM075.json",
       "interpOrder": false,
-      "caption": "So the lady consented; but meanwhile the auld wife had prepared a sleeping-drink, and given it to the knight, wha drank it, and never wakened till next morning.",
-      "description": "[Old wife administers sleeping potion]",
-      "scene": "Knight given sleeping potion"
+      "captioned": true,
+      "caption": "In the morning they took her into a room, the finest of a'.",
+      "description": "[lady enters the most magnificent room]",
+      "scene": "Morning in finest room"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM076",
       "filename": "The_Black_Bull_Of_Norroway_MM076.json",
       "interpOrder": false,
-      "caption": "The lee-lang night ther damosel sabbed and sang:",
-      "description": "[All night singing her lament]",
-      "scene": "Lady sings all night long"
+      "captioned": true,
+      "caption": "And gied her a plum, telling her no to break it till she was in",
+      "description": "[servant presents perfect plum]",
+      "scene": "Gift of magical plum"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM077",
       "filename": "The_Black_Bull_Of_Norroway_MM077.json",
       "interpOrder": false,
-      "caption": "\"Seven lang years I served for thee, The glassy hill I clamb for thee, The bluidy shirt I wrang for thee; And wilt thou no wauken and turn to me?\"",
-      "description": "[Song of service and sacrifice]",
-      "scene": "Song of seven years service"
+      "captioned": true,
+      "caption": "the greatest strait mortal could be in, and that wad get her out o't.",
+      "description": "[lady holds the plum reverently]",
+      "scene": "Gift of magical plum"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM078",
       "filename": "The_Black_Bull_Of_Norroway_MM078.json",
       "interpOrder": false,
-      "caption": "Next day she kentna what to do for grief.",
-      "description": "[Second day of despair]",
-      "scene": "Lady despairs the next morning"
+      "captioned": true,
+      "caption": "Presently they brought hame the bull, set the lady on his back, and awa' they",
+      "description": "[lady mounted for the final journey]",
+      "scene": "Setting off on final journey"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM079",
       "filename": "The_Black_Bull_Of_Norroway_MM079.json",
       "interpOrder": false,
-      "caption": "She then brak the pear, and found it filled wi' jewelry far richer than the contents o' the apple.",
-      "description": "[Breaking the pear reveals richer jewels]",
-      "scene": "Pear reveals even richer jewels"
+      "captioned": true,
+      "caption": "went.",
+      "description": "[bull gallops into the wilderness]",
+      "scene": "Setting off on final journey"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM080",
       "filename": "The_Black_Bull_Of_Norroway_MM080.json",
       "interpOrder": false,
-      "caption": "Wi' thae jewels she bargained for permission to be a second night in the young knight's chamber.",
-      "description": "[Bargaining for second night]",
-      "scene": "Lady bargains for second night"
+      "captioned": true,
+      "caption": "And aye they gaed, and on they rade, till they came to a dark and",
+      "description": "[dark glen looms before them]",
+      "scene": "Arriving at dark glen"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM081",
       "filename": "The_Black_Bull_Of_Norroway_MM081.json",
       "interpOrder": false,
-      "caption": "But the auld wife gied him anither sleeping-drink, and he again sleepit till morning.",
-      "description": "[Old wife gives second sleeping potion]",
-      "scene": "Knight given sleeping potion again"
+      "captioned": true,
+      "caption": "ugsome glen,",
+      "description": "[shadowy ravine stretches ahead]",
+      "scene": "Arriving at dark glen"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM082",
       "filename": "The_Black_Bull_Of_Norroway_MM082.json",
       "interpOrder": false,
-      "caption": "A' night she kept sighing and singing as before:",
-      "description": "[Second night of sighing and singing]",
-      "scene": "Lady sighs and sings again"
+      "captioned": true,
+      "caption": "where they stopped, and the lady lighted down.",
+      "description": "[lady dismounts in the glen]",
+      "scene": "Arriving at dark glen"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM083",
       "filename": "The_Black_Bull_Of_Norroway_MM083.json",
       "interpOrder": false,
-      "caption": "But that day when he was out at the hunting, somebody asked him what noise and moaning was yon they heard all last night in his bedchamber.",
-      "description": "[Hunting reveals strange noises]",
-      "scene": "Hunters ask about the strange noises"
+      "captioned": true,
+      "caption": "Says the bull to her: \"Here ye maun stay till I gang and fight the",
+      "description": "[bull speaks solemnly to the lady]",
+      "scene": "Bull explains the battle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM084",
       "filename": "The_Black_Bull_Of_Norroway_MM084.json",
       "interpOrder": false,
-      "caption": "He said he heardna ony noise.",
-      "description": "[Knight hears nothing]",
-      "scene": "Knight denies hearing anything"
+      "captioned": true,
+      "caption": "deil.\"",
+      "description": "[dark shapes gather in the distance]",
+      "scene": "Bull explains the battle"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM085",
       "filename": "The_Black_Bull_Of_Norroway_MM085.json",
       "interpOrder": false,
-      "caption": "But they assured him there was sae; and he resolved to keep waking that night to try what he could hear.",
-      "description": "[Night watchers confirm the sounds]",
-      "scene": "Knight decides to stay awake"
+      "captioned": true,
+      "caption": "Ye maun seat yoursel' on that stane, and move neither hand nor fit till I",
+      "description": "[bull indicates the standing stone]",
+      "scene": "Bull instructs lady on stone"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM086",
       "filename": "The_Black_Bull_Of_Norroway_MM086.json",
       "interpOrder": false,
-      "caption": "That being the third night, and the damosel being between hope and despair.",
-      "description": "[Third night between hope and despair]",
-      "scene": "Third night of tension"
+      "captioned": true,
+      "caption": "come back,",
+      "description": "[lady sits upon the ancient stone]",
+      "scene": "Bull instructs lady on stone"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM087",
       "filename": "The_Black_Bull_Of_Norroway_MM087.json",
       "interpOrder": false,
-      "caption": "She brak her plum, and it held far the richest jewelry of the three.",
-      "description": "[Breaking the plum reveals finest jewels]",
-      "scene": "Plum reveals the finest jewels"
+      "captioned": true,
+      "caption": "else I'll never find ye again.",
+      "description": "[bull turns to face the darkness]",
+      "scene": "Bull instructs lady on stone"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM088",
       "filename": "The_Black_Bull_Of_Norroway_MM088.json",
       "interpOrder": false,
-      "caption": "She bargained as before; and the auld wife, as before, took in the sleeping-drink to the young knight's chamber; but he telled her he couldna drink it that night without sweetening.",
-      "description": "[Knight refuses the sleeping potion]",
-      "scene": "Knight pretends to drink the potion"
+      "captioned": true,
+      "caption": "And if everything round about ye turns blue I hae beated the deil; but should",
+      "description": "[bull charges into battle]",
+      "scene": "Bull explains victory signs"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM089",
       "filename": "The_Black_Bull_Of_Norroway_MM089.json",
       "interpOrder": false,
-      "caption": "And when she gaed awa' for some honey to sweeten it wi', he poured out the drink, and sae made the auld wife think he had drunk it.",
-      "description": "[Knight pours out the drink]",
-      "scene": "Knight secretly pours out the potion"
+      "captioned": true,
+      "caption": "a' things turn red he'll hae conquered me.",
+      "description": "[clash of horns echoes through the glen]",
+      "scene": "Bull explains victory signs"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM090",
       "filename": "The_Black_Bull_Of_Norroway_MM090.json",
       "interpOrder": false,
-      "caption": "They a' went to bed again, and the damosel began, as before, singing:",
-      "description": "[Damself begins third night singing]",
-      "scene": "Lady begins singing for the third time"
+      "captioned": true,
+      "caption": "She set hersel' down on the stane, and by-and-by a' round her turned blue.",
+      "description": "[world turns blue around the stone]",
+      "scene": "Lady sits on stone, world turns blue"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM091",
       "filename": "The_Black_Bull_Of_Norroway_MM091.json",
       "interpOrder": false,
-      "caption": "\"Seven lang years I served for thee, The glassy hill I clamb for thee, The bluidy shirt I wrang for thee; And wilt thou no wauken and turn to me?\"",
-      "description": "[Song of seven years service]",
-      "scene": "Song of seven years service repeated"
+      "captioned": true,
+      "caption": "O'ercome wi' joy, she lifted the ae fit and crossed it owre the ither, sae",
+      "description": "[lady crosses her foot in joy]",
+      "scene": "Lady crosses foot in joy"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM092",
       "filename": "The_Black_Bull_Of_Norroway_MM092.json",
       "interpOrder": false,
-      "caption": "He heard, and turned to her.",
-      "description": "[Knight hears and turns to her]",
-      "scene": "Knight finally hears and turns"
+      "captioned": true,
+      "caption": "glad was she that her companion was victorious.",
+      "description": "[joyful tears stream down her face]",
+      "scene": "Lady crosses foot in joy"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM093",
       "filename": "The_Black_Bull_Of_Norroway_MM093.json",
       "interpOrder": false,
-      "caption": "And she telled him a' that had befa'en her, and he telled her a' that had happened to him.",
-      "description": "[Full truth revealed at last]",
-      "scene": "Truth is finally revealed"
+      "captioned": true,
+      "caption": "The bull returned and sought for but never could find her.",
+      "description": "[bull searches desperately through the glen]",
+      "scene": "Bull returns but cannot find her"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM094",
       "filename": "The_Black_Bull_Of_Norroway_MM094.json",
       "interpOrder": false,
-      "caption": "And he caused the auld washerwife and her dochter to be burned.",
-      "description": "[Wicked washerwife punished]",
-      "scene": "Wicked witch and daughter are burned"
+      "captioned": true,
+      "caption": "Lang she sat, and aye she grat, till she wearied.",
+      "description": "[lady weeps alone on the stone]",
+      "scene": "Lady weeping alone"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM095",
       "filename": "The_Black_Bull_Of_Norroway_MM095.json",
       "interpOrder": false,
-      "caption": "And they were married, and he and she are living happy till this day, for aught I ken.",
-      "description": "[Wedding celebration]",
-      "scene": "Happily ever after"
+      "captioned": true,
+      "caption": "At last she rase and gaed awa', she kedna whaur till.",
+      "description": "[lady wanders lost through the wilderness]",
+      "scene": "Lady wandering lost"
     },
     {
       "id": "The_Black_Bull_Of_Norroway_MM096",
       "filename": "The_Black_Bull_Of_Norroway_MM096.json",
       "interpOrder": false,
+      "captioned": true,
+      "caption": "On she wandered till she came to a great hill o' glass, that she tried",
+      "description": "[glassy hill shines in the distance]",
+      "scene": "Discovering the glassy hill"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM097",
+      "filename": "The_Black_Bull_Of_Norroway_MM097.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a' she could to climb, bat wasna able.",
+      "description": "[lady slips on the glassy surface]",
+      "scene": "Discovering the glassy hill"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM098",
+      "filename": "The_Black_Bull_Of_Norroway_MM098.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Round the bottom o' the hill she gaed, sabbing and seeking a passage owre, till",
+      "description": "[lady circles the base of the hill]",
+      "scene": "Circling the hill searching"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM099",
+      "filename": "The_Black_Bull_Of_Norroway_MM099.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "at last she came to a smith's house.",
+      "description": "[smith's cottage appears ahead]",
+      "scene": "Circling the hill searching"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM100",
+      "filename": "The_Black_Bull_Of_Norroway_MM100.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And the smith promised, if she wad serve him seven years, he wad make her",
+      "description": "[smith speaks at his forge]",
+      "scene": "Smith's house in the distance"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM101",
+      "filename": "The_Black_Bull_Of_Norroway_MM101.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "iron shoon,",
+      "description": "[sparks fly from the anvil]",
+      "scene": "Smith's house in the distance"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM102",
+      "filename": "The_Black_Bull_Of_Norroway_MM102.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "wherewi' she could climb owre the glassy hill.",
+      "description": "[lady nods in agreement]",
+      "scene": "Smith's house in the distance"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM103",
+      "filename": "The_Black_Bull_Of_Norroway_MM103.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At seven years' end she got her iron shoon.",
+      "description": "[lady receives iron shoes from the smith]",
+      "scene": "Seven years of service complete"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM104",
+      "filename": "The_Black_Bull_Of_Norroway_MM104.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Clamb the glassy hill, and chanced to come to the auld washerwife's habitation.",
+      "description": "[lady climbs the glassy hill at last]",
+      "scene": "Climbing the glassy hill"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM105",
+      "filename": "The_Black_Bull_Of_Norroway_MM105.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "There she was telled of a gallant young knight that had given in some bluidy",
+      "description": "[bloody shirts hang on the line]",
+      "scene": "Washing the bloody shirts"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM106",
+      "filename": "The_Black_Bull_Of_Norroway_MM106.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "sarks to wash, and whaever washed thae sarks was to be his wife.",
+      "description": "[lady stares at the stained garments]",
+      "scene": "Washing the bloody shirts"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM107",
+      "filename": "The_Black_Bull_Of_Norroway_MM107.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The auld wife had washed till she was tired, and then she set to her",
+      "description": "[old wife scrubs without success]",
+      "scene": "Old wife and daughter washing in vain"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM108",
+      "filename": "The_Black_Bull_Of_Norroway_MM108.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "dochter,",
+      "description": "[eldest daughter takes over washing]",
+      "scene": "Old wife and daughter washing in vain"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM109",
+      "filename": "The_Black_Bull_Of_Norroway_MM109.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and baith washed, and they washed, and they better washed, in hopes of getting the",
+      "description": "[two women scrub vigorously]",
+      "scene": "Old wife and daughter washing in vain"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM110",
+      "filename": "The_Black_Bull_Of_Norroway_MM110.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "young knight.",
+      "description": "[blood stains remain stubborn]",
+      "scene": "Old wife and daughter washing in vain"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM111",
+      "filename": "The_Black_Bull_Of_Norroway_MM111.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But a' they could do they couldna bring out a stain.",
+      "description": "[red stains mock their efforts]",
+      "scene": "Unable to remove any stain"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM112",
+      "filename": "The_Black_Bull_Of_Norroway_MM112.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At length they set the stranger damosel to wark; and whenever she began the stains",
+      "description": "[stranger dips cloth in water]",
+      "scene": "Stranger begins washing successfully"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM113",
+      "filename": "The_Black_Bull_Of_Norroway_MM113.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "came out pure and clean.",
+      "description": "[blood vanishes at her touch]",
+      "scene": "Stranger begins washing successfully"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM114",
+      "filename": "The_Black_Bull_Of_Norroway_MM114.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But the auld wife made the knight believe it was her dochter had washed the",
+      "description": "[old wife gestures to her own daughter]",
+      "scene": "Old wife takes credit for daughter"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM115",
+      "filename": "The_Black_Bull_Of_Norroway_MM115.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "sarks.",
+      "description": "[knight believes the deception]",
+      "scene": "Old wife takes credit for daughter"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM116",
+      "filename": "The_Black_Bull_Of_Norroway_MM116.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So the knight and the eldest dochter were to be married, and the stranger damosel",
+      "description": "[wedding preparations begin]",
+      "scene": "Knight and eldest daughter to wed"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM117",
+      "filename": "The_Black_Bull_Of_Norroway_MM117.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "was distracted at the thought of it, for she was deeply in love wi' him.",
+      "description": "[lady weeps in the shadows]",
+      "scene": "Knight and eldest daughter to wed"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM118",
+      "filename": "The_Black_Bull_Of_Norroway_MM118.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So she bethought her of her apple, and breaking it, found it filled with gold",
+      "description": "[lady breaks the golden apple]",
+      "scene": "Breaking the apple reveals gold"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM119",
+      "filename": "The_Black_Bull_Of_Norroway_MM119.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and precious jewelry, the richest she had ever seen.",
+      "description": "[gold and jewels spill from the apple]",
+      "scene": "Breaking the apple reveals gold"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM120",
+      "filename": "The_Black_Bull_Of_Norroway_MM120.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"All these,\" she said to the eldest dochter, \"I will give you, on condition that",
+      "description": "[lady offers jewels to the elder sister]",
+      "scene": "Offering jewels for one night"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM121",
+      "filename": "The_Black_Bull_Of_Norroway_MM121.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "you put off your marriage for ae day, and allow me to go into his",
+      "description": "[eldest daughter considers the offer]",
+      "scene": "Offering jewels for one night"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM122",
+      "filename": "The_Black_Bull_Of_Norroway_MM122.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "room alone at night.\"",
+      "description": "[agreement is reached between them]",
+      "scene": "Offering jewels for one night"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM123",
+      "filename": "The_Black_Bull_Of_Norroway_MM123.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So the lady consented; but meanwhile the auld wife had prepared a sleeping-drink, and given",
+      "description": "[old wife pours potion into cup]",
+      "scene": "Old wife administers sleeping potion"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM124",
+      "filename": "The_Black_Bull_Of_Norroway_MM124.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "it to the knight, wha drank it, and never wakened till next morning.",
+      "description": "[knight drinks and falls into deep sleep]",
+      "scene": "Old wife administers sleeping potion"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM125",
+      "filename": "The_Black_Bull_Of_Norroway_MM125.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The lee-lang night ther damosel sabbed and sang:",
+      "description": "[lady weeps and sings beside sleeping knight]",
+      "scene": "All night singing her lament"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM126",
+      "filename": "The_Black_Bull_Of_Norroway_MM126.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Seven lang years I served for thee, The glassy hill I clamb for thee, The",
+      "description": "[lady sings by candlelight]",
+      "scene": "Song of service and sacrifice"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM127",
+      "filename": "The_Black_Bull_Of_Norroway_MM127.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "bluidy shirt I wrang for thee; And wilt thou no wauken and turn to me?\"",
+      "description": "[tears fall on the sleeping knight]",
+      "scene": "Song of service and sacrifice"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM128",
+      "filename": "The_Black_Bull_Of_Norroway_MM128.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Next day she kentna what to do for grief.",
+      "description": "[lady despairs in the morning light]",
+      "scene": "Second day of despair"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM129",
+      "filename": "The_Black_Bull_Of_Norroway_MM129.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She then brak the pear, and found it filled wi' jewelry far richer than the",
+      "description": "[lady breaks the luminous pear]",
+      "scene": "Breaking the pear reveals richer jewels"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM130",
+      "filename": "The_Black_Bull_Of_Norroway_MM130.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "contents o' the apple.",
+      "description": "[richer jewels cascade from the pear]",
+      "scene": "Breaking the pear reveals richer jewels"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM131",
+      "filename": "The_Black_Bull_Of_Norroway_MM131.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Wi' thae jewels she bargained for permission to be a second night in the young",
+      "description": "[lady bargains with the elder sister again]",
+      "scene": "Bargaining for second night"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM132",
+      "filename": "The_Black_Bull_Of_Norroway_MM132.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "knight's chamber.",
+      "description": "[night falls once more]",
+      "scene": "Bargaining for second night"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM133",
+      "filename": "The_Black_Bull_Of_Norroway_MM133.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But the auld wife gied him anither sleeping-drink, and he again sleepit till morning.",
+      "description": "[old wife pours second potion]",
+      "scene": "Old wife gives second sleeping potion"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM134",
+      "filename": "The_Black_Bull_Of_Norroway_MM134.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "A' night she kept sighing and singing as before:",
+      "description": "[lady sings again through the night]",
+      "scene": "Second night of sighing and singing"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM135",
+      "filename": "The_Black_Bull_Of_Norroway_MM135.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But that day when he was out at the hunting, somebody asked him what noise",
+      "description": "[knight returns from the hunt]",
+      "scene": "Hunting reveals strange noises"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM136",
+      "filename": "The_Black_Bull_Of_Norroway_MM136.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and moaning was yon they heard all last night in his bedchamber.",
+      "description": "[servants whisper to the knight]",
+      "scene": "Hunting reveals strange noises"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM137",
+      "filename": "The_Black_Bull_Of_Norroway_MM137.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He said he heardna ony noise.",
+      "description": "[knight shakes his head in confusion]",
+      "scene": "Knight hears nothing"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM138",
+      "filename": "The_Black_Bull_Of_Norroway_MM138.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But they assured him there was sae; and he resolved to keep waking that night",
+      "description": "[knight decides to stay awake]",
+      "scene": "Night watchers confirm the sounds"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM139",
+      "filename": "The_Black_Bull_Of_Norroway_MM139.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to try what he could hear.",
+      "description": "[knight waits in the darkness]",
+      "scene": "Night watchers confirm the sounds"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM140",
+      "filename": "The_Black_Bull_Of_Norroway_MM140.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "That being the third night, and the damosel being between hope and despair.",
+      "description": "[lady enters the chamber one last time]",
+      "scene": "Third night between hope and despair"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM141",
+      "filename": "The_Black_Bull_Of_Norroway_MM141.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She brak her plum, and it held far the richest jewelry of the three.",
+      "description": "[lady breaks the perfect plum]",
+      "scene": "Breaking the plum reveals finest jewels"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM142",
+      "filename": "The_Black_Bull_Of_Norroway_MM142.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She bargained as before; and the auld wife, as before, took in the sleeping-drink to",
+      "description": "[old wife carries the third potion]",
+      "scene": "Knight refuses the sleeping potion"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM143",
+      "filename": "The_Black_Bull_Of_Norroway_MM143.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the young knight's chamber; but he telled her he couldna drink it that night without",
+      "description": "[knight waves away the cup]",
+      "scene": "Knight refuses the sleeping potion"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM144",
+      "filename": "The_Black_Bull_Of_Norroway_MM144.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "sweetening.",
+      "description": "[old wife pauses at the door]",
+      "scene": "Knight refuses the sleeping potion"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM145",
+      "filename": "The_Black_Bull_Of_Norroway_MM145.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And when she gaed awa' for some honey to sweeten it wi', he poured out",
+      "description": "[knight pours the drink into a basin]",
+      "scene": "Knight pours out the drink"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM146",
+      "filename": "The_Black_Bull_Of_Norroway_MM146.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the drink,",
+      "description": "[liquid spills into the dark]",
+      "scene": "Knight pours out the drink"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM147",
+      "filename": "The_Black_Bull_Of_Norroway_MM147.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and sae made the auld wife think he had drunk it.",
+      "description": "[old wife returns to find empty cup]",
+      "scene": "Knight pours out the drink"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM148",
+      "filename": "The_Black_Bull_Of_Norroway_MM148.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "They a' went to bed again, and the damosel began, as before, singing:",
+      "description": "[lady begins her third night lament]",
+      "scene": "Damself begins third night singing"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM149",
+      "filename": "The_Black_Bull_Of_Norroway_MM149.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Seven lang years I served for thee, The glassy hill I clamb for thee, The",
+      "description": "[knight's eyes open in the darkness]",
+      "scene": "Song of seven years service"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM150",
+      "filename": "The_Black_Bull_Of_Norroway_MM150.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "bluidy shirt I wrang for thee; And wilt thou no wauken and turn to me?\"",
+      "description": "[knight sits up and listens]",
+      "scene": "Song of seven years service"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM151",
+      "filename": "The_Black_Bull_Of_Norroway_MM151.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He heard, and turned to her.",
+      "description": "[knight turns toward the singing voice]",
+      "scene": "Knight hears and turns to her"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM152",
+      "filename": "The_Black_Bull_Of_Norroway_MM152.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And she telled him a' that had befa'en her, and he telled her a' that",
+      "description": "[knight and lady face each other at last]",
+      "scene": "Full truth revealed at last"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM153",
+      "filename": "The_Black_Bull_Of_Norroway_MM153.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "had happened to him.",
+      "description": "[truth illuminates the dark chamber]",
+      "scene": "Full truth revealed at last"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM154",
+      "filename": "The_Black_Bull_Of_Norroway_MM154.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And he caused the auld washerwife and her dochter to be burned.",
+      "description": "[firelight flickers on the castle walls]",
+      "scene": "Wicked washerwife punished"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM155",
+      "filename": "The_Black_Bull_Of_Norroway_MM155.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And they were married, and he and she are living happy till this day, for",
+      "description": "[knight and lady wed in grand ceremony]",
+      "scene": "Wedding celebration"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM156",
+      "filename": "The_Black_Bull_Of_Norroway_MM156.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "aught I ken.",
+      "description": "[happy couple rules from their throne]",
+      "scene": "Wedding celebration"
+    },
+    {
+      "id": "The_Black_Bull_Of_Norroway_MM157",
+      "filename": "The_Black_Bull_Of_Norroway_MM157.json",
+      "interpOrder": false,
+      "captioned": true,
       "caption": "(1) Chambers, Popular Traditions of Scotland.",
-      "description": "[Source attribution]",
-      "scene": "Story source attribution"
+      "description": "[source attribution on final page]",
+      "scene": "Source attribution"
     }
   ]
 }

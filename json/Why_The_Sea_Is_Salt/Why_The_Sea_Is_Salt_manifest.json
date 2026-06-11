@@ -10,728 +10,1521 @@
       "id": "Why_The_Sea_Is_Salt_MM001",
       "filename": "Why_The_Sea_Is_Salt_MM001.json",
       "interpOrder": false,
-      "caption": "Once upon a time, long, long ago, there were two brothers, the one rich and the other poor.",
-      "description": "[A poor brother begging]",
+      "captioned": true,
+      "caption": "Once upon a time, long, long ago, there were two brothers, the one rich and",
+      "description": "[two brothers stand side by side]",
       "scene": "A poor brother begging"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM002",
       "filename": "Why_The_Sea_Is_Salt_MM002.json",
       "interpOrder": false,
-      "caption": "When Christmas Eve came, the poor one had not a bite in the house, either of meat or bread.",
-      "description": "[The poor brother on Christmas Eve]",
-      "scene": "The poor brother on Christmas Eve"
+      "captioned": true,
+      "caption": "the other poor.",
+      "description": "[contrast between fine clothes and rags]",
+      "scene": "A poor brother begging"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM003",
       "filename": "Why_The_Sea_Is_Salt_MM003.json",
       "interpOrder": false,
-      "caption": "So he went to his brother, and begged him, in God's name, to give him something for Christmas Day.",
-      "description": "[The poor brother approaching his brother]",
-      "scene": "The poor brother approaching his brother"
+      "captioned": true,
+      "caption": "When Christmas Eve came, the poor one had not a bite in the house, either",
+      "description": "[empty shelves in the cottage]",
+      "scene": "The poor brother on Christmas Eve"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM004",
       "filename": "Why_The_Sea_Is_Salt_MM004.json",
       "interpOrder": false,
-      "caption": "\"If you will do what I ask you, you shall have a whole ham,\" said he.",
-      "description": "[The rich brother with a ham]",
-      "scene": "The rich brother with a ham"
+      "captioned": true,
+      "caption": "of meat or bread.",
+      "description": "[empty cupboard gapes open]",
+      "scene": "The poor brother on Christmas Eve"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM005",
       "filename": "Why_The_Sea_Is_Salt_MM005.json",
       "interpOrder": false,
-      "caption": "The poor one immediately thanked him, and promised this.",
-      "description": "[The poor brother receiving the ham]",
-      "scene": "The poor brother receiving the ham"
+      "captioned": true,
+      "caption": "So he went to his brother, and begged him, in God's name, to give him",
+      "description": "[poor brother approaches rich brother's door]",
+      "scene": "The poor brother approaching his brother"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM006",
       "filename": "Why_The_Sea_Is_Salt_MM006.json",
       "interpOrder": false,
-      "caption": "\"Well, here is the ham, and now you must go straight to Dead Man's Hall,\" said the rich brother.",
-      "description": "[The rich brother throwing the ham]",
-      "scene": "The rich brother throwing the ham"
+      "captioned": true,
+      "caption": "something for Christmas Day.",
+      "description": "[rich brother looks down from his fine house]",
+      "scene": "The poor brother approaching his brother"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM007",
       "filename": "Why_The_Sea_Is_Salt_MM007.json",
       "interpOrder": false,
-      "caption": "\"Well, I will do what I have promised,\" said the other, and he took the ham and set off.",
-      "description": "[The poor brother setting off]",
-      "scene": "The poor brother setting off"
+      "captioned": true,
+      "caption": "\"If you will do what I ask you, you shall have a whole ham,\" said",
+      "description": "[rich brother holds up a glistening ham]",
+      "scene": "The rich brother with a ham"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM008",
       "filename": "Why_The_Sea_Is_Salt_MM008.json",
       "interpOrder": false,
-      "caption": "He went on and on for the livelong day, and at nightfall he came to a place where there was a bright light.",
-      "description": "[The poor brother walking all day]",
-      "scene": "The poor brother walking all day"
+      "captioned": true,
+      "caption": "he.",
+      "description": "[ham gleams in the doorway light]",
+      "scene": "The rich brother with a ham"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM009",
       "filename": "Why_The_Sea_Is_Salt_MM009.json",
       "interpOrder": false,
-      "caption": "\"I have no doubt this is the place,\" thought the man with the ham.",
-      "description": "[The poor brother arriving at a place]",
-      "scene": "The poor brother arriving at a place"
+      "captioned": true,
+      "caption": "The poor one immediately thanked him, and promised this.",
+      "description": "[poor brother reaches eagerly for the ham]",
+      "scene": "The poor brother receiving the ham"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM010",
       "filename": "Why_The_Sea_Is_Salt_MM010.json",
       "interpOrder": false,
-      "caption": "An old man with a long white beard was standing in the outhouse, chopping Yule logs.",
-      "description": "[An old man chopping Yule logs]",
-      "scene": "An old man chopping Yule logs"
+      "captioned": true,
+      "caption": "\"Well, here is the ham, and now you must go straight to Dead Man's Hall,\"",
+      "description": "[rich brother throws the ham]",
+      "scene": "The rich brother throwing the ham"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM011",
       "filename": "Why_The_Sea_Is_Salt_MM011.json",
       "interpOrder": false,
-      "caption": "\"Good-evening,\" said the man with the ham.",
-      "description": "[A greeting at the outhouse]",
-      "scene": "A greeting at the outhouse"
+      "captioned": true,
+      "caption": "said the rich brother.",
+      "description": "[poor brother catches the ham]",
+      "scene": "The rich brother throwing the ham"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM012",
       "filename": "Why_The_Sea_Is_Salt_MM012.json",
       "interpOrder": false,
-      "caption": "\"Good-evening to you. Where are you going at this late hour?\" said the man.",
-      "description": "[The old man asking the poor brother's business]",
-      "scene": "The old man asking the poor brother's business"
+      "captioned": true,
+      "caption": "\"Well, I will do what I have promised,\" said the other, and he took the",
+      "description": "[poor brother grips the ham tightly]",
+      "scene": "The poor brother setting off"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM013",
       "filename": "Why_The_Sea_Is_Salt_MM013.json",
       "interpOrder": false,
-      "caption": "\"I am going to Dead Man's Hall, if only I am on the right track,\" answered the poor man.",
-      "description": "[The poor brother explaining his journey]",
-      "scene": "The poor brother explaining his journey"
+      "captioned": true,
+      "caption": "ham and set off.",
+      "description": "[poor brother walks into the winter dusk]",
+      "scene": "The poor brother setting off"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM014",
       "filename": "Why_The_Sea_Is_Salt_MM014.json",
       "interpOrder": false,
-      "caption": "\"Oh! yes, you are right enough, for it is here,\" said the old man.",
-      "description": "[The old man giving advice]",
-      "scene": "The old man giving advice"
+      "captioned": true,
+      "caption": "He went on and on for the livelong day, and at nightfall he came to",
+      "description": "[poor brother trudges through snow]",
+      "scene": "The poor brother walking all day"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM015",
       "filename": "Why_The_Sea_Is_Salt_MM015.json",
       "interpOrder": false,
-      "caption": "\"When you get inside they will all want to buy your ham, for they don't get much meat to eat there.\"",
-      "description": "[The old man warning the poor brother about the mill]",
-      "scene": "The old man warning the poor brother about the mill"
+      "captioned": true,
+      "caption": "a place where there was a bright light.",
+      "description": "[glowing light shines through the darkness]",
+      "scene": "The poor brother walking all day"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM016",
       "filename": "Why_The_Sea_Is_Salt_MM016.json",
       "interpOrder": false,
-      "caption": "\"But you must not sell it unless you can get the hand-mill which stands behind the door for it.\"",
-      "description": "[The old man telling about the hand-mill]",
-      "scene": "The old man telling about the hand-mill"
+      "captioned": true,
+      "caption": "\"I have no doubt this is the place,\" thought the man with the ham.",
+      "description": "[poor brother approaches the light]",
+      "scene": "The poor brother arriving at a place"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM017",
       "filename": "Why_The_Sea_Is_Salt_MM017.json",
       "interpOrder": false,
-      "caption": "\"When you come out again I will teach you how to stop the hand-mill, which is useful for almost everything.\"",
-      "description": "[The old man teaching how to stop the mill]",
-      "scene": "The old man teaching how to stop the mill"
+      "captioned": true,
+      "caption": "An old man with a long white beard was standing in the outhouse, chopping Yule",
+      "description": "[old man chops logs in the outhouse]",
+      "scene": "An old man chopping Yule logs"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM018",
       "filename": "Why_The_Sea_Is_Salt_MM018.json",
       "interpOrder": false,
-      "caption": "So the man with the ham thanked the other for his good advice, and rapped at the door.",
-      "description": "[The poor brother thanking the old man]",
-      "scene": "The poor brother thanking the old man"
+      "captioned": true,
+      "caption": "logs.",
+      "description": "[axe falls on the Yule log]",
+      "scene": "An old man chopping Yule logs"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM019",
       "filename": "Why_The_Sea_Is_Salt_MM019.json",
       "interpOrder": false,
-      "caption": "When he got in, everything happened just as the old man had said it would.",
-      "description": "[The crowd gathering around the poor man]",
-      "scene": "The crowd gathering around the poor man"
+      "captioned": true,
+      "caption": "\"Good-evening,\" said the man with the ham.",
+      "description": "[poor brother greets the old man]",
+      "scene": "A greeting at the outhouse"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM020",
       "filename": "Why_The_Sea_Is_Salt_MM020.json",
       "interpOrder": false,
-      "caption": "All the people, great and small, came round him like ants on an ant-hill, and each tried to outbid the other for the ham.",
-      "description": "[People trying to buy the ham]",
-      "scene": "People trying to buy the ham"
+      "captioned": true,
+      "caption": "\"Good-evening to you. Where are you going at this late hour?\" said the man.",
+      "description": "[old man pauses his chopping]",
+      "scene": "The old man asking the poor brother's business"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM021",
       "filename": "Why_The_Sea_Is_Salt_MM021.json",
       "interpOrder": false,
-      "caption": "\"By rights my old woman and I ought to have it for our Christmas dinner, but, since you have set your hearts upon it, I must just give it up to you,\" said the man.",
-      "description": "[The poor brother offering the ham]",
-      "scene": "The poor brother offering the ham"
+      "captioned": true,
+      "caption": "\"I am going to Dead Man's Hall, if only I am on the right track,\"",
+      "description": "[poor brother explains his journey]",
+      "scene": "The poor brother explaining his journey"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM022",
       "filename": "Why_The_Sea_Is_Salt_MM022.json",
       "interpOrder": false,
-      "caption": "\"But, if I sell it, I will have the hand-mill which is standing there behind the door.\"",
-      "description": "[The poor brother demanding the hand-mill]",
-      "scene": "The poor brother demanding the hand-mill"
+      "captioned": true,
+      "caption": "answered the poor man.",
+      "description": "[old man listens carefully]",
+      "scene": "The poor brother explaining his journey"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM023",
       "filename": "Why_The_Sea_Is_Salt_MM023.json",
       "interpOrder": false,
-      "caption": "At first they would not hear of this, and haggled and bargained with the man, but he stuck to what he had said.",
-      "description": "[The people reluctantly giving up the mill]",
-      "scene": "The people reluctantly giving up the mill"
+      "captioned": true,
+      "caption": "\"Oh! yes, you are right enough, for it is here,\" said the old man.",
+      "description": "[old man gestures toward the house]",
+      "scene": "The old man giving advice"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM024",
       "filename": "Why_The_Sea_Is_Salt_MM024.json",
       "interpOrder": false,
-      "caption": "The people were forced to give him the hand-mill.",
-      "description": "[The poor brother receiving the hand-mill]",
-      "scene": "The poor brother receiving the hand-mill"
+      "captioned": true,
+      "caption": "\"When you get inside they will all want to buy your ham, for they don't",
+      "description": "[old man leans close to whisper]",
+      "scene": "The old man warning the poor brother about the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM025",
       "filename": "Why_The_Sea_Is_Salt_MM025.json",
       "interpOrder": false,
-      "caption": "When the man came out again into the yard, he asked the old wood-cutter how he was to stop the hand-mill.",
-      "description": "[The poor brother asking the old man how to stop the mill]",
-      "scene": "The poor brother asking the old man how to stop the mill"
+      "captioned": true,
+      "caption": "get much meat to eat there.\"",
+      "description": "[poor brother nods understanding]",
+      "scene": "The old man warning the poor brother about the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM026",
       "filename": "Why_The_Sea_Is_Salt_MM026.json",
       "interpOrder": false,
-      "caption": "And when he had learned that, he thanked him and set off home with all the speed he could.",
-      "description": "[The poor brother learning to stop the mill]",
-      "scene": "The poor brother learning to stop the mill"
+      "captioned": true,
+      "caption": "\"But you must not sell it unless you can get the hand-mill which stands behind",
+      "description": "[old man points toward the door]",
+      "scene": "The old man telling about the hand-mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM027",
       "filename": "Why_The_Sea_Is_Salt_MM027.json",
       "interpOrder": false,
-      "caption": "But he did not get there until after the clock had struck twelve on Christmas Eve.",
-      "description": "[The poor brother arriving home late]",
-      "scene": "The poor brother arriving home late"
+      "captioned": true,
+      "caption": "the door for it.\"",
+      "description": "[hand-mill glows faintly in the shadows]",
+      "scene": "The old man telling about the hand-mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM028",
       "filename": "Why_The_Sea_Is_Salt_MM028.json",
       "interpOrder": false,
-      "caption": "\"Where in the world have you been?\" said the old woman.",
-      "description": "[The old woman waiting at home]",
-      "scene": "The old woman waiting at home"
+      "captioned": true,
+      "caption": "\"When you come out again I will teach you how to stop the hand-mill, which",
+      "description": "[old man demonstrates the stopping motion]",
+      "scene": "The old man teaching how to stop the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM029",
       "filename": "Why_The_Sea_Is_Salt_MM029.json",
       "interpOrder": false,
-      "caption": "\"Here I have sat waiting hour after hour, and have not even two sticks to lay across each other under the Christmas porridge-pot.\"",
-      "description": "[The old woman complaining]",
-      "scene": "The old woman complaining"
+      "captioned": true,
+      "caption": "is useful for almost everything.\"",
+      "description": "[poor brother memorizes the words]",
+      "scene": "The old man teaching how to stop the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM030",
       "filename": "Why_The_Sea_Is_Salt_MM030.json",
       "interpOrder": false,
-      "caption": "\"Oh! I could not come before; I had something of importance to see about, and a long way to go, too; but now you shall just see!\" said the man.",
-      "description": "[The poor brother showing the hand-mill]",
-      "scene": "The poor brother showing the hand-mill"
+      "captioned": true,
+      "caption": "So the man with the ham thanked the other for his good advice, and rapped",
+      "description": "[poor brother thanks the old man]",
+      "scene": "The poor brother thanking the old man"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM031",
       "filename": "Why_The_Sea_Is_Salt_MM031.json",
       "interpOrder": false,
-      "caption": "And then he set the hand-mill on the table, and bade it first grind light, then a table-cloth.",
-      "description": "[The man setting the hand-mill on the table]",
-      "scene": "The man setting the hand-mill on the table"
+      "captioned": true,
+      "caption": "at the door.",
+      "description": "[poor brother knocks on the heavy door]",
+      "scene": "The poor brother thanking the old man"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM032",
       "filename": "Why_The_Sea_Is_Salt_MM032.json",
       "interpOrder": false,
-      "caption": "And then meat, and beer, and everything else that was good for a Christmas Eve's supper; and the mill ground all that he ordered.",
-      "description": "[The mill grinding meat and beer]",
-      "scene": "The mill grinding meat and beer"
+      "captioned": true,
+      "caption": "When he got in, everything happened just as the old man had said it would.",
+      "description": "[dead creatures crowd around him]",
+      "scene": "The crowd gathering around the poor man"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM033",
       "filename": "Why_The_Sea_Is_Salt_MM033.json",
       "interpOrder": false,
-      "caption": "\"Bless me!\" said the old woman as one thing after another appeared.",
-      "description": "[The old woman amazed]",
-      "scene": "The old woman amazed"
+      "captioned": true,
+      "caption": "All the people, great and small, came round him like ants on an ant-hill, and",
+      "description": "[ghostly figures reach for the ham]",
+      "scene": "People trying to buy the ham"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM034",
       "filename": "Why_The_Sea_Is_Salt_MM034.json",
       "interpOrder": false,
-      "caption": "And she wanted to know where her husband had got the mill from, but he would not tell her that.",
-      "description": "[The old woman asking where the mill came from]",
-      "scene": "The old woman asking where the mill came from"
+      "captioned": true,
+      "caption": "each tried to outbid the other for the ham.",
+      "description": "[bidding grows heated among the dead]",
+      "scene": "People trying to buy the ham"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM035",
       "filename": "Why_The_Sea_Is_Salt_MM035.json",
       "interpOrder": false,
-      "caption": "\"Never mind where I got it; you can see that it is a good one, and the water that turns it will never freeze,\" said the man.",
-      "description": "[The man keeping the mill a secret]",
-      "scene": "The man keeping the mill a secret"
+      "captioned": true,
+      "caption": "\"By rights my old woman and I ought to have it for our Christmas dinner,",
+      "description": "[poor brother holds the ham high]",
+      "scene": "The poor brother offering the ham"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM036",
       "filename": "Why_The_Sea_Is_Salt_MM036.json",
       "interpOrder": false,
-      "caption": "So he ground meat and drink, and all kinds of good things, to last all Christmas-tide.",
-      "description": "[The man grinding food for Christmas]",
-      "scene": "The man grinding food for Christmas"
+      "captioned": true,
+      "caption": "but, since you have set your hearts upon it, I must just give it up",
+      "description": "[dead creatures lean forward eagerly]",
+      "scene": "The poor brother offering the ham"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM037",
       "filename": "Why_The_Sea_Is_Salt_MM037.json",
       "interpOrder": false,
-      "caption": "And on the third day he invited all his friends to come to a feast.",
-      "description": "[The man inviting friends to a feast]",
-      "scene": "The man inviting friends to a feast"
+      "captioned": true,
+      "caption": "to you,\" said the man.",
+      "description": "[poor brother makes his deal]",
+      "scene": "The poor brother offering the ham"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM038",
       "filename": "Why_The_Sea_Is_Salt_MM038.json",
       "interpOrder": false,
-      "caption": "Now when the rich brother saw all that there was at the banquet and in the house, he was both vexed and angry.",
-      "description": "[The rich brother seeing the feast]",
-      "scene": "The rich brother seeing the feast"
+      "captioned": true,
+      "caption": "\"But, if I sell it, I will have the hand-mill which is standing there behind",
+      "description": "[poor brother points to the mill]",
+      "scene": "The poor brother demanding the hand-mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM039",
       "filename": "Why_The_Sea_Is_Salt_MM039.json",
       "interpOrder": false,
-      "caption": "For he grudged everything his brother had.",
-      "description": "[The rich brother's jealousy]",
-      "scene": "The rich brother's jealousy"
+      "captioned": true,
+      "caption": "the door.\"",
+      "description": "[hand-mill stands in the shadows]",
+      "scene": "The poor brother demanding the hand-mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM040",
       "filename": "Why_The_Sea_Is_Salt_MM040.json",
       "interpOrder": false,
-      "caption": "\"On Christmas Eve he was so poor that he came to me and begged for a trifle, for God's sake, and now he gives a feast as if he were both a count and a king!\" thought he.",
-      "description": "[The rich brother thinking of his brother's poverty]",
-      "scene": "The rich brother thinking of his brother's poverty"
+      "captioned": true,
+      "caption": "At first they would not hear of this, and haggled and bargained with the man,",
+      "description": "[dead creatures protest the deal]",
+      "scene": "The people reluctantly giving up the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM041",
       "filename": "Why_The_Sea_Is_Salt_MM041.json",
       "interpOrder": false,
-      "caption": "\"But, for heaven's sake, tell me where you got your riches from,\" said he to his brother.",
-      "description": "[The rich brother demanding to know]",
-      "scene": "The rich brother demanding to know"
+      "captioned": true,
+      "caption": "but he stuck to what he had said.",
+      "description": "[poor brother stands firm]",
+      "scene": "The people reluctantly giving up the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM042",
       "filename": "Why_The_Sea_Is_Salt_MM042.json",
       "interpOrder": false,
-      "caption": "\"From behind the door,\" said he who owned the mill, for he did not choose to satisfy his brother on that point.",
-      "description": "[The poor brother's evasive answer]",
-      "scene": "The poor brother's evasive answer"
+      "captioned": true,
+      "caption": "The people were forced to give him the hand-mill.",
+      "description": "[poor brother receives the hand-mill]",
+      "scene": "The poor brother receiving the hand-mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM043",
       "filename": "Why_The_Sea_Is_Salt_MM043.json",
       "interpOrder": false,
-      "caption": "But later in the evening, when he had taken a drop too much, he could not refrain from telling how he had come by the hand-mill.",
-      "description": "[The poor brother revealing the secret]",
-      "scene": "The poor brother revealing the secret"
+      "captioned": true,
+      "caption": "When the man came out again into the yard, he asked the old wood-cutter how",
+      "description": "[poor brother finds old man in the yard]",
+      "scene": "The poor brother asking the old man how to stop the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM044",
       "filename": "Why_The_Sea_Is_Salt_MM044.json",
       "interpOrder": false,
-      "caption": "\"There you see what has brought me all my wealth!\" said he, and brought out the mill, and made it grind first one thing and then another.",
-      "description": "[The poor brother showing off the mill]",
-      "scene": "The poor brother showing off the mill"
+      "captioned": true,
+      "caption": "he was to stop the hand-mill.",
+      "description": "[old man whispers the secret words]",
+      "scene": "The poor brother asking the old man how to stop the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM045",
       "filename": "Why_The_Sea_Is_Salt_MM045.json",
       "interpOrder": false,
-      "caption": "When the brother saw that, he insisted on having the mill, and after a great deal of persuasion got it.",
-      "description": "[The rich brother insisting on having the mill]",
-      "scene": "The rich brother insisting on having the mill"
+      "captioned": true,
+      "caption": "And when he had learned that, he thanked him and set off home with all",
+      "description": "[poor brother hurries away with the mill]",
+      "scene": "The poor brother learning to stop the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM046",
       "filename": "Why_The_Sea_Is_Salt_MM046.json",
       "interpOrder": false,
-      "caption": "But he had to give three hundred dollars for it.",
-      "description": "[The rich brother paying for the mill]",
-      "scene": "The rich brother paying for the mill"
+      "captioned": true,
+      "caption": "the speed he could.",
+      "description": "[poor brother runs through the snow]",
+      "scene": "The poor brother learning to stop the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM047",
       "filename": "Why_The_Sea_Is_Salt_MM047.json",
       "interpOrder": false,
-      "caption": "And the poor brother was to keep it till the haymaking was over.",
-      "description": "[The poor brother keeping the mill temporarily]",
-      "scene": "The poor brother keeping the mill temporarily"
+      "captioned": true,
+      "caption": "But he did not get there until after the clock had struck twelve on Christmas",
+      "description": "[clock strikes midnight]",
+      "scene": "The poor brother arriving home late"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM048",
       "filename": "Why_The_Sea_Is_Salt_MM048.json",
       "interpOrder": false,
-      "caption": "For he thought: \"If I keep it as long as that, I can make it grind meat and drink that will last many a long year.\"",
-      "description": "[The poor brother's plan]",
-      "scene": "The poor brother's plan"
+      "captioned": true,
+      "caption": "Eve.",
+      "description": "[poor brother arrives at his door]",
+      "scene": "The poor brother arriving home late"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM049",
       "filename": "Why_The_Sea_Is_Salt_MM049.json",
       "interpOrder": false,
-      "caption": "And when hay-harvest came the rich brother got it, but the other had taken good care not to teach him how to stop it.",
-      "description": "[The hay harvest arriving]",
-      "scene": "The hay harvest arriving"
+      "captioned": true,
+      "caption": "\"Where in the world have you been?\" said the old woman.",
+      "description": "[wife scolds him at the door]",
+      "scene": "The old woman waiting at home"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM050",
       "filename": "Why_The_Sea_Is_Salt_MM050.json",
       "interpOrder": false,
-      "caption": "It was evening when the rich man got the mill home, and in the morning he bade the old woman go out and spread the hay after the mowers.",
-      "description": "[The rich brother getting the mill home]",
-      "scene": "The rich brother getting the mill home"
+      "captioned": true,
+      "caption": "\"Here I have sat waiting hour after hour, and have not even two sticks to",
+      "description": "[empty hearth glows coldly]",
+      "scene": "The old woman complaining"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM051",
       "filename": "Why_The_Sea_Is_Salt_MM051.json",
       "interpOrder": false,
-      "caption": "So, when dinner-time drew near, he set the mill on the kitchen-table, and said: \"Grind herrings and milk pottage, and do it both quickly and well.\"",
-      "description": "[The rich brother setting the mill to work]",
-      "scene": "The rich brother setting the mill to work"
+      "captioned": true,
+      "caption": "lay across each other under the Christmas porridge-pot.\"",
+      "description": "[cold fireplace mocks the holiday]",
+      "scene": "The old woman complaining"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM052",
       "filename": "Why_The_Sea_Is_Salt_MM052.json",
       "interpOrder": false,
-      "caption": "So the mill began to grind herrings and milk pottage, and first all the dishes and tubs were filled.",
-      "description": "[The mill beginning to grind]",
-      "scene": "The mill beginning to grind"
+      "captioned": true,
+      "caption": "\"Oh! I could not come before; I had something of importance to see about, and",
+      "description": "[poor brother sets hand-mill on table]",
+      "scene": "The poor brother showing the hand-mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM053",
       "filename": "Why_The_Sea_Is_Salt_MM053.json",
       "interpOrder": false,
-      "caption": "And then it came out all over the kitchen-floor.",
-      "description": "[The pottage flooding the kitchen]",
-      "scene": "The pottage flooding the kitchen"
+      "captioned": true,
+      "caption": "a long way to go, too; but now you shall just see!\" said the man.",
+      "description": "[poor brother grins with excitement]",
+      "scene": "The poor brother showing the hand-mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM054",
       "filename": "Why_The_Sea_Is_Salt_MM054.json",
       "interpOrder": false,
-      "caption": "The man twisted and turned it, and did all he could to make the mill stop.",
-      "description": "[The man trying to stop the mill]",
-      "scene": "The man trying to stop the mill"
+      "captioned": true,
+      "caption": "And then he set the hand-mill on the table, and bade it first grind light,",
+      "description": "[hand-mill begins to glow]",
+      "scene": "The man setting the hand-mill on the table"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM055",
       "filename": "Why_The_Sea_Is_Salt_MM055.json",
       "interpOrder": false,
-      "caption": "But, howsoever he turned it and screwed it, the mill went on grinding.",
-      "description": "[The mill grinding uncontrollably]",
-      "scene": "The mill grinding uncontrollably"
+      "captioned": true,
+      "caption": "then a table-cloth.",
+      "description": "[table-cloth appears from the mill]",
+      "scene": "The man setting the hand-mill on the table"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM056",
       "filename": "Why_The_Sea_Is_Salt_MM056.json",
       "interpOrder": false,
-      "caption": "And in a short time the pottage rose so high that the man was like to be drowned.",
-      "description": "[The pottage rising dangerously]",
-      "scene": "The pottage rising dangerously"
+      "captioned": true,
+      "caption": "And then meat, and beer, and everything else that was good for a Christmas Eve's",
+      "description": "[feast materializes from the mill]",
+      "scene": "The mill grinding meat and beer"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM057",
       "filename": "Why_The_Sea_Is_Salt_MM057.json",
       "interpOrder": false,
-      "caption": "So he threw open the parlor door, but it was not long before the mill had ground the parlor full too.",
-      "description": "[The man opening the parlor door]",
-      "scene": "The man opening the parlor door"
+      "captioned": true,
+      "caption": "supper;",
+      "description": "[dishes fill with steaming food]",
+      "scene": "The mill grinding meat and beer"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM058",
       "filename": "Why_The_Sea_Is_Salt_MM058.json",
       "interpOrder": false,
-      "caption": "And it was with difficulty and danger that the man could go through the stream of pottage and get hold of the door-latch.",
-      "description": "[The man fleeing through the pottage]",
-      "scene": "The man fleeing through the pottage"
+      "captioned": true,
+      "caption": "and the mill ground all that he ordered.",
+      "description": "[poor brother stops the mill with a word]",
+      "scene": "The mill grinding meat and beer"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM059",
       "filename": "Why_The_Sea_Is_Salt_MM059.json",
       "interpOrder": false,
-      "caption": "When he got the door open, he did not stay long in the room, but ran out.",
-      "description": "[The man running outside]",
-      "scene": "The man running outside"
+      "captioned": true,
+      "caption": "\"Bless me!\" said the old woman as one thing after another appeared.",
+      "description": "[wife stares in amazement]",
+      "scene": "The old woman amazed"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM060",
       "filename": "Why_The_Sea_Is_Salt_MM060.json",
       "interpOrder": false,
-      "caption": "And the herrings and pottage came after him, and it streamed out over both farm and field.",
-      "description": "[The pottage streaming outside]",
-      "scene": "The pottage streaming outside"
+      "captioned": true,
+      "caption": "And she wanted to know where her husband had got the mill from, but he",
+      "description": "[wife reaches for the mill]",
+      "scene": "The old woman asking where the mill came from"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM061",
       "filename": "Why_The_Sea_Is_Salt_MM061.json",
       "interpOrder": false,
-      "caption": "Now the old woman, who was out spreading the hay, began to think dinner was long in coming.",
-      "description": "[The old woman coming home from the hayfield]",
-      "scene": "The old woman coming home from the hayfield"
+      "captioned": true,
+      "caption": "would not tell her that.",
+      "description": "[husband shakes his head]",
+      "scene": "The old woman asking where the mill came from"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM062",
       "filename": "Why_The_Sea_Is_Salt_MM062.json",
       "interpOrder": false,
-      "caption": "And said to the women and the mowers: \"Though the master does not call us home, we may as well go.\"",
-      "description": "[The old woman suggesting they go home]",
-      "scene": "The old woman suggesting they go home"
+      "captioned": true,
+      "caption": "\"Never mind where I got it; you can see that it is a good one,",
+      "description": "[husband guards the mill's secret]",
+      "scene": "The man keeping the mill a secret"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM063",
       "filename": "Why_The_Sea_Is_Salt_MM063.json",
       "interpOrder": false,
-      "caption": "So they began to straggle homeward, but when they had got a little way up the hill.",
-      "description": "[The workers heading home]",
-      "scene": "The workers heading home"
+      "captioned": true,
+      "caption": "and the water that turns it will never freeze,\" said the man.",
+      "description": "[mill glows with inner warmth]",
+      "scene": "The man keeping the mill a secret"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM064",
       "filename": "Why_The_Sea_Is_Salt_MM064.json",
       "interpOrder": false,
-      "caption": "They met the herrings and pottage and bread, all pouring forth and winding about one over the other.",
-      "description": "[The workers meeting the flood of food]",
-      "scene": "The workers meeting the flood of food"
+      "captioned": true,
+      "caption": "So he ground meat and drink, and all kinds of good things, to last all",
+      "description": "[food and drink pile high around them]",
+      "scene": "The man grinding food for Christmas"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM065",
       "filename": "Why_The_Sea_Is_Salt_MM065.json",
       "interpOrder": false,
-      "caption": "And the man himself in front of the flood.",
-      "description": "[The man fleeing before the flood]",
-      "scene": "The man fleeing before the flood"
+      "captioned": true,
+      "caption": "Christmas-tide.",
+      "description": "[provisions fill the cottage to the rafters]",
+      "scene": "The man grinding food for Christmas"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM066",
       "filename": "Why_The_Sea_Is_Salt_MM066.json",
       "interpOrder": false,
-      "caption": "\"Would to heaven that each of you had a hundred stomachs! Take care that you are not drowned in the pottage!\" he cried.",
-      "description": "[The man warning the workers]",
-      "scene": "The man warning the workers"
+      "captioned": true,
+      "caption": "And on the third day he invited all his friends to come to a feast.",
+      "description": "[poor brother sends out invitations]",
+      "scene": "The man inviting friends to a feast"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM067",
       "filename": "Why_The_Sea_Is_Salt_MM067.json",
       "interpOrder": false,
-      "caption": "As he went by them as if Mischief were at his heels, down to where his brother dwelt.",
-      "description": "[The man running to his brother]",
-      "scene": "The man running to his brother"
+      "captioned": true,
+      "caption": "Now when the rich brother saw all that there was at the banquet and in",
+      "description": "[rich brother gazes at the feast in disbelief]",
+      "scene": "The rich brother seeing the feast"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM068",
       "filename": "Why_The_Sea_Is_Salt_MM068.json",
       "interpOrder": false,
-      "caption": "Then he begged him, for God's sake, to take the mill back again, and that in an instant.",
-      "description": "[The man begging for help]",
-      "scene": "The man begging for help"
+      "captioned": true,
+      "caption": "the house,",
+      "description": "[tables groan with food and drink]",
+      "scene": "The rich brother seeing the feast"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM069",
       "filename": "Why_The_Sea_Is_Salt_MM069.json",
       "interpOrder": false,
-      "caption": "For, said he: \"If it grind one hour more the whole district will be destroyed by herrings and pottage.\"",
-      "description": "[The man's warning]",
-      "scene": "The man's warning"
+      "captioned": true,
+      "caption": "he was both vexed and angry.",
+      "description": "[rich brother's face darkens with jealousy]",
+      "scene": "The rich brother seeing the feast"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM070",
       "filename": "Why_The_Sea_Is_Salt_MM070.json",
       "interpOrder": false,
-      "caption": "But the brother would not take it until the other paid him three hundred dollars, and that he was obliged to do.",
-      "description": "[The poor brother demanding payment]",
-      "scene": "The poor brother demanding payment"
+      "captioned": true,
+      "caption": "For he grudged everything his brother had.",
+      "description": "[rich brother glares at the abundance]",
+      "scene": "The rich brother's jealousy"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM071",
       "filename": "Why_The_Sea_Is_Salt_MM071.json",
       "interpOrder": false,
-      "caption": "Now the poor brother had both the money and the mill again.",
-      "description": "[The poor brother with money and mill]",
-      "scene": "The poor brother with money and mill"
+      "captioned": true,
+      "caption": "\"On Christmas Eve he was so poor that he came to me and begged for",
+      "description": "[rich brother mutters to himself]",
+      "scene": "The rich brother thinking of his brother's poverty"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM072",
       "filename": "Why_The_Sea_Is_Salt_MM072.json",
       "interpOrder": false,
-      "caption": "So it was not long before he had a farmhouse much finer than that in which his brother lived.",
-      "description": "[The poor brother building a fine house]",
-      "scene": "The poor brother building a fine house"
+      "captioned": true,
+      "caption": "a trifle,",
+      "description": "[memory of the begging brother fades]",
+      "scene": "The rich brother thinking of his brother's poverty"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM073",
       "filename": "Why_The_Sea_Is_Salt_MM073.json",
       "interpOrder": false,
-      "caption": "But the mill ground him so much money that he covered it with plates of gold.",
-      "description": "[The mill covering the house with gold]",
-      "scene": "The mill covering the house with gold"
+      "captioned": true,
+      "caption": "for God's sake, and now he gives a feast as if he were both a",
+      "description": "[rich brother clenches his fists]",
+      "scene": "The rich brother thinking of his brother's poverty"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM074",
       "filename": "Why_The_Sea_Is_Salt_MM074.json",
       "interpOrder": false,
-      "caption": "And the farmhouse lay close by the sea-shore, so it shone and glittered far out to sea.",
-      "description": "[The golden farmhouse by the sea]",
-      "scene": "The golden farmhouse by the sea"
+      "captioned": true,
+      "caption": "count and a king!\" thought he.",
+      "description": "[rich brother storms toward his brother]",
+      "scene": "The rich brother thinking of his brother's poverty"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM075",
       "filename": "Why_The_Sea_Is_Salt_MM075.json",
       "interpOrder": false,
-      "caption": "Everyone who sailed by there now had to be put in to visit the rich man in the gold farmhouse.",
-      "description": "[Sailors visiting the rich man]",
-      "scene": "Sailors visiting the rich man"
+      "captioned": true,
+      "caption": "\"But, for heaven's sake, tell me where you got your riches from,\" said he to",
+      "description": "[rich brother confronts poor brother]",
+      "scene": "The rich brother demanding to know"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM076",
       "filename": "Why_The_Sea_Is_Salt_MM076.json",
       "interpOrder": false,
-      "caption": "And everyone wanted to see the wonderful mill, for the report of it spread far and wide.",
-      "description": "[People wanting to see the mill]",
-      "scene": "People wanting to see the mill"
+      "captioned": true,
+      "caption": "his brother.",
+      "description": "[poor brother hesitates to answer]",
+      "scene": "The rich brother demanding to know"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM077",
       "filename": "Why_The_Sea_Is_Salt_MM077.json",
       "interpOrder": false,
-      "caption": "After a long, long time came also a skipper who wished to see the mill.",
-      "description": "[A skipper arriving]",
-      "scene": "A skipper arriving"
+      "captioned": true,
+      "caption": "\"From behind the door,\" said he who owned the mill, for he did not choose",
+      "description": "[poor brother gestures vaguely]",
+      "scene": "The poor brother's evasive answer"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM078",
       "filename": "Why_The_Sea_Is_Salt_MM078.json",
       "interpOrder": false,
-      "caption": "He asked if it could make salt. \"Yes, it could make salt,\" said he who owned it.",
-      "description": "[The skipper asking about salt]",
-      "scene": "The skipper asking about salt"
+      "captioned": true,
+      "caption": "to satisfy his brother on that point.",
+      "description": "[rich brother frowns with frustration]",
+      "scene": "The poor brother's evasive answer"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM079",
       "filename": "Why_The_Sea_Is_Salt_MM079.json",
       "interpOrder": false,
-      "caption": "And when the skipper heard that, he wished with all his might and main to have the mill, let it cost what it might.",
-      "description": "[The skipper desiring the mill]",
-      "scene": "The skipper desiring the mill"
+      "captioned": true,
+      "caption": "But later in the evening, when he had taken a drop too much, he could",
+      "description": "[poor brother drinks deeply at the feast]",
+      "scene": "The poor brother revealing the secret"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM080",
       "filename": "Why_The_Sea_Is_Salt_MM080.json",
       "interpOrder": false,
-      "caption": "For, he thought, if he had it, he would get off having to sail far away over the perilous sea for freights of salt.",
-      "description": "[The skipper's thoughts]",
-      "scene": "The skipper's thoughts"
+      "captioned": true,
+      "caption": "not refrain from telling how he had come by the hand-mill.",
+      "description": "[poor brother gestures toward the mill]",
+      "scene": "The poor brother revealing the secret"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM081",
       "filename": "Why_The_Sea_Is_Salt_MM081.json",
       "interpOrder": false,
-      "caption": "At first the man would not hear of parting with it, but the skipper begged and prayed.",
-      "description": "[The rich man refusing to sell]",
-      "scene": "The rich man refusing to sell"
+      "captioned": true,
+      "caption": "\"There you see what has brought me all my wealth!\" said he, and brought out",
+      "description": "[poor brother proudly displays the mill]",
+      "scene": "The poor brother showing off the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM082",
       "filename": "Why_The_Sea_Is_Salt_MM082.json",
       "interpOrder": false,
-      "caption": "And at last the man sold it to him, and got many, many thousand dollars for it.",
-      "description": "[The skipper buying the mill]",
-      "scene": "The skipper buying the mill"
+      "captioned": true,
+      "caption": "the mill,",
+      "description": "[mill glows on the table]",
+      "scene": "The poor brother showing off the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM083",
       "filename": "Why_The_Sea_Is_Salt_MM083.json",
       "interpOrder": false,
-      "caption": "When the skipper had got the mill on his back he did not stay there long, for he was so afraid that the man would change his mind.",
-      "description": "[The skipper fleeing with the mill]",
-      "scene": "The skipper fleeing with the mill"
+      "captioned": true,
+      "caption": "and made it grind first one thing and then another.",
+      "description": "[mill produces food and drink on command]",
+      "scene": "The poor brother showing off the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM084",
       "filename": "Why_The_Sea_Is_Salt_MM084.json",
       "interpOrder": false,
-      "caption": "And he had no time to ask how he was to stop it grinding, but got on board his ship as fast as he could.",
-      "description": "[The skipper not learning how to stop it]",
-      "scene": "The skipper not learning how to stop it"
+      "captioned": true,
+      "caption": "When the brother saw that, he insisted on having the mill, and after a great",
+      "description": "[rich brother reaches for the mill]",
+      "scene": "The rich brother insisting on having the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM085",
       "filename": "Why_The_Sea_Is_Salt_MM085.json",
       "interpOrder": false,
-      "caption": "When he had gone a little way out to sea he took the mill on deck. \"Grind salt, and grind both quickly and well,\" said the skipper.",
-      "description": "[The skipper setting the mill to work at sea]",
-      "scene": "The skipper setting the mill to work at sea"
+      "captioned": true,
+      "caption": "deal of persuasion got it.",
+      "description": "[rich brother pressures his brother]",
+      "scene": "The rich brother insisting on having the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM086",
       "filename": "Why_The_Sea_Is_Salt_MM086.json",
       "interpOrder": false,
-      "caption": "So the mill began to grind salt, till it spouted out like water.",
-      "description": "[The mill grinding salt]",
-      "scene": "The mill grinding salt"
+      "captioned": true,
+      "caption": "But he had to give three hundred dollars for it.",
+      "description": "[coins change hands reluctantly]",
+      "scene": "The rich brother paying for the mill"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM087",
       "filename": "Why_The_Sea_Is_Salt_MM087.json",
       "interpOrder": false,
-      "caption": "And when the skipper had got the ship filled he wanted to stop the mill.",
-      "description": "[The ship filling with salt]",
-      "scene": "The ship filling with salt"
+      "captioned": true,
+      "caption": "And the poor brother was to keep it till the haymaking was over.",
+      "description": "[poor brother holds the mill temporarily]",
+      "scene": "The poor brother keeping the mill temporarily"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM088",
       "filename": "Why_The_Sea_Is_Salt_MM088.json",
       "interpOrder": false,
-      "caption": "But whichsoever way he turned it, and how much soever he tried, it went on grinding.",
-      "description": "[The skipper unable to stop the mill]",
-      "scene": "The skipper unable to stop the mill"
+      "captioned": true,
+      "caption": "For he thought: \"If I keep it as long as that, I can make it",
+      "description": "[poor brother plots in the shadows]",
+      "scene": "The poor brother's plan"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM089",
       "filename": "Why_The_Sea_Is_Salt_MM089.json",
       "interpOrder": false,
-      "caption": "And the heap of salt grew higher and higher, until at last the ship sank.",
-      "description": "[The heap of salt growing higher]",
-      "scene": "The heap of salt growing higher"
+      "captioned": true,
+      "caption": "grind meat and drink that will last many a long year.\"",
+      "description": "[poor brother grinds provisions for the future]",
+      "scene": "The poor brother's plan"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM090",
       "filename": "Why_The_Sea_Is_Salt_MM090.json",
       "interpOrder": false,
-      "caption": "There lies the mill at the bottom of the sea, and still, day by day, it grinds on.",
-      "description": "[The mill at the bottom of the sea]",
-      "scene": "The mill at the bottom of the sea"
+      "captioned": true,
+      "caption": "And when hay-harvest came the rich brother got it, but the other had taken good",
+      "description": "[rich brother receives the mill at last]",
+      "scene": "The hay harvest arriving"
     },
     {
       "id": "Why_The_Sea_Is_Salt_MM091",
       "filename": "Why_The_Sea_Is_Salt_MM091.json",
       "interpOrder": false,
+      "captioned": true,
+      "caption": "care not to teach him how to stop it.",
+      "description": "[poor brother watches with secret smile]",
+      "scene": "The hay harvest arriving"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM092",
+      "filename": "Why_The_Sea_Is_Salt_MM092.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "It was evening when the rich man got the mill home, and in the morning",
+      "description": "[rich brother carries mill home at dusk]",
+      "scene": "The rich brother getting the mill home"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM093",
+      "filename": "Why_The_Sea_Is_Salt_MM093.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "he bade the old woman go out and spread the hay after the mowers.",
+      "description": "[rich brother sends wife to the fields]",
+      "scene": "The rich brother getting the mill home"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM094",
+      "filename": "Why_The_Sea_Is_Salt_MM094.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So, when dinner-time drew near, he set the mill on the kitchen-table, and said: \"Grind",
+      "description": "[rich brother commands the mill]",
+      "scene": "The rich brother setting the mill to work"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM095",
+      "filename": "Why_The_Sea_Is_Salt_MM095.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "herrings and milk pottage, and do it both quickly and well.\"",
+      "description": "[mill begins to grind without stopping]",
+      "scene": "The rich brother setting the mill to work"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM096",
+      "filename": "Why_The_Sea_Is_Salt_MM096.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So the mill began to grind herrings and milk pottage, and first all the dishes",
+      "description": "[dishes overflow with pottage]",
+      "scene": "The mill beginning to grind"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM097",
+      "filename": "Why_The_Sea_Is_Salt_MM097.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and tubs were filled.",
+      "description": "[tubs brim with herring and pottage]",
+      "scene": "The mill beginning to grind"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM098",
+      "filename": "Why_The_Sea_Is_Salt_MM098.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And then it came out all over the kitchen-floor.",
+      "description": "[pottage floods across the floor]",
+      "scene": "The pottage flooding the kitchen"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM099",
+      "filename": "Why_The_Sea_Is_Salt_MM099.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The man twisted and turned it, and did all he could to make the mill",
+      "description": "[rich brother desperately twists the mill]",
+      "scene": "The man trying to stop the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM100",
+      "filename": "Why_The_Sea_Is_Salt_MM100.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "stop.",
+      "description": "[mill grinds on despite his efforts]",
+      "scene": "The man trying to stop the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM101",
+      "filename": "Why_The_Sea_Is_Salt_MM101.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But, howsoever he turned it and screwed it, the mill went on grinding.",
+      "description": "[pottage rises to his knees]",
+      "scene": "The mill grinding uncontrollably"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM102",
+      "filename": "Why_The_Sea_Is_Salt_MM102.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And in a short time the pottage rose so high that the man was like",
+      "description": "[pottage reaches his waist]",
+      "scene": "The pottage rising dangerously"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM103",
+      "filename": "Why_The_Sea_Is_Salt_MM103.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to be drowned.",
+      "description": "[rich brother struggles in the flood]",
+      "scene": "The pottage rising dangerously"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM104",
+      "filename": "Why_The_Sea_Is_Salt_MM104.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So he threw open the parlor door, but it was not long before the mill",
+      "description": "[rich brother flings open the parlor door]",
+      "scene": "The man opening the parlor door"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM105",
+      "filename": "Why_The_Sea_Is_Salt_MM105.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "had ground the parlor full too.",
+      "description": "[pottage pours into the parlor]",
+      "scene": "The man opening the parlor door"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM106",
+      "filename": "Why_The_Sea_Is_Salt_MM106.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And it was with difficulty and danger that the man could go through the stream",
+      "description": "[rich brother wades through rising pottage]",
+      "scene": "The man fleeing through the pottage"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM107",
+      "filename": "Why_The_Sea_Is_Salt_MM107.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "of pottage and get hold of the door-latch.",
+      "description": "[rich brother reaches for the door handle]",
+      "scene": "The man fleeing through the pottage"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM108",
+      "filename": "Why_The_Sea_Is_Salt_MM108.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When he got the door open, he did not stay long in the room, but",
+      "description": "[rich brother escapes into the yard]",
+      "scene": "The man running outside"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM109",
+      "filename": "Why_The_Sea_Is_Salt_MM109.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "ran out.",
+      "description": "[rich brother flees through the door]",
+      "scene": "The man running outside"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM110",
+      "filename": "Why_The_Sea_Is_Salt_MM110.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And the herrings and pottage came after him, and it streamed out over both farm",
+      "description": "[flood of food pours from the house]",
+      "scene": "The pottage streaming outside"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM111",
+      "filename": "Why_The_Sea_Is_Salt_MM111.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and field.",
+      "description": "[pottage spreads across the fields]",
+      "scene": "The pottage streaming outside"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM112",
+      "filename": "Why_The_Sea_Is_Salt_MM112.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Now the old woman, who was out spreading the hay, began to think dinner was",
+      "description": "[wife looks up from her work]",
+      "scene": "The old woman coming home from the hayfield"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM113",
+      "filename": "Why_The_Sea_Is_Salt_MM113.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "long in coming.",
+      "description": "[wife glances toward the house]",
+      "scene": "The old woman coming home from the hayfield"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM114",
+      "filename": "Why_The_Sea_Is_Salt_MM114.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And said to the women and the mowers: \"Though the master does not call us",
+      "description": "[wife calls to the workers]",
+      "scene": "The old woman suggesting they go home"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM115",
+      "filename": "Why_The_Sea_Is_Salt_MM115.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "home,",
+      "description": "[workers pause their mowing]",
+      "scene": "The old woman suggesting they go home"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM116",
+      "filename": "Why_The_Sea_Is_Salt_MM116.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "we may as well go.\"",
+      "description": "[workers set down their scythes]",
+      "scene": "The old woman suggesting they go home"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM117",
+      "filename": "Why_The_Sea_Is_Salt_MM117.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So they began to straggle homeward, but when they had got a little way up",
+      "description": "[workers head toward the house]",
+      "scene": "The workers heading home"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM118",
+      "filename": "Why_The_Sea_Is_Salt_MM118.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the hill.",
+      "description": "[workers climb the rise toward home]",
+      "scene": "The workers heading home"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM119",
+      "filename": "Why_The_Sea_Is_Salt_MM119.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "They met the herrings and pottage and bread, all pouring forth and winding about one",
+      "description": "[workers encounter the flood of food]",
+      "scene": "The workers meeting the flood of food"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM120",
+      "filename": "Why_The_Sea_Is_Salt_MM120.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "over the other.",
+      "description": "[food flows around their feet]",
+      "scene": "The workers meeting the flood of food"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM121",
+      "filename": "Why_The_Sea_Is_Salt_MM121.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And the man himself in front of the flood.",
+      "description": "[rich brother runs before the torrent]",
+      "scene": "The man fleeing before the flood"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM122",
+      "filename": "Why_The_Sea_Is_Salt_MM122.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Would to heaven that each of you had a hundred stomachs! Take care that you",
+      "description": "[rich brother warns the workers]",
+      "scene": "The man warning the workers"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM123",
+      "filename": "Why_The_Sea_Is_Salt_MM123.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "are not drowned in the pottage!\" he cried.",
+      "description": "[workers scatter before the flood]",
+      "scene": "The man warning the workers"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM124",
+      "filename": "Why_The_Sea_Is_Salt_MM124.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "As he went by them as if Mischief were at his heels, down to where",
+      "description": "[rich brother runs toward his brother's house]",
+      "scene": "The man running to his brother"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM125",
+      "filename": "Why_The_Sea_Is_Salt_MM125.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "his brother dwelt.",
+      "description": "[brother's house appears in the distance]",
+      "scene": "The man running to his brother"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM126",
+      "filename": "Why_The_Sea_Is_Salt_MM126.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then he begged him, for God's sake, to take the mill back again, and that",
+      "description": "[rich brother begs his brother]",
+      "scene": "The man begging for help"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM127",
+      "filename": "Why_The_Sea_Is_Salt_MM127.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "in an instant.",
+      "description": "[poor brother listens calmly]",
+      "scene": "The man begging for help"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM128",
+      "filename": "Why_The_Sea_Is_Salt_MM128.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "For, said he: \"If it grind one hour more the whole district will be destroyed",
+      "description": "[rich brother gestures at the approaching flood]",
+      "scene": "The man's warning"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM129",
+      "filename": "Why_The_Sea_Is_Salt_MM129.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "by herrings and pottage.\"",
+      "description": "[pottage creeps closer across the fields]",
+      "scene": "The man's warning"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM130",
+      "filename": "Why_The_Sea_Is_Salt_MM130.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But the brother would not take it until the other paid him three hundred dollars,",
+      "description": "[poor brother demands payment first]",
+      "scene": "The poor brother demanding payment"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM131",
+      "filename": "Why_The_Sea_Is_Salt_MM131.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and that he was obliged to do.",
+      "description": "[rich brother pays reluctantly]",
+      "scene": "The poor brother demanding payment"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM132",
+      "filename": "Why_The_Sea_Is_Salt_MM132.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Now the poor brother had both the money and the mill again.",
+      "description": "[poor brother holds coins and mill]",
+      "scene": "The poor brother with money and mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM133",
+      "filename": "Why_The_Sea_Is_Salt_MM133.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So it was not long before he had a farmhouse much finer than that in",
+      "description": "[fine farmhouse rises on the hillside]",
+      "scene": "The poor brother building a fine house"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM134",
+      "filename": "Why_The_Sea_Is_Salt_MM134.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "which his brother lived.",
+      "description": "[new house dwarfs the old one]",
+      "scene": "The poor brother building a fine house"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM135",
+      "filename": "Why_The_Sea_Is_Salt_MM135.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But the mill ground him so much money that he covered it with plates of",
+      "description": "[gold plates cover the farmhouse]",
+      "scene": "The mill covering the house with gold"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM136",
+      "filename": "Why_The_Sea_Is_Salt_MM136.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "gold.",
+      "description": "[golden farmhouse gleams in the sun]",
+      "scene": "The mill covering the house with gold"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM137",
+      "filename": "Why_The_Sea_Is_Salt_MM137.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And the farmhouse lay close by the sea-shore, so it shone and glittered far out",
+      "description": "[golden house reflects on the water]",
+      "scene": "The golden farmhouse by the sea"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM138",
+      "filename": "Why_The_Sea_Is_Salt_MM138.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to sea.",
+      "description": "[light sparkles across the waves]",
+      "scene": "The golden farmhouse by the sea"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM139",
+      "filename": "Why_The_Sea_Is_Salt_MM139.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Everyone who sailed by there now had to be put in to visit the rich",
+      "description": "[sailors row toward the golden house]",
+      "scene": "Sailors visiting the rich man"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM140",
+      "filename": "Why_The_Sea_Is_Salt_MM140.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "man in the gold farmhouse.",
+      "description": "[sailors step ashore at the golden house]",
+      "scene": "Sailors visiting the rich man"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM141",
+      "filename": "Why_The_Sea_Is_Salt_MM141.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And everyone wanted to see the wonderful mill, for the report of it spread far",
+      "description": "[visitors crowd around the mill]",
+      "scene": "People wanting to see the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM142",
+      "filename": "Why_The_Sea_Is_Salt_MM142.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and wide.",
+      "description": "[rumors of the mill travel across the sea]",
+      "scene": "People wanting to see the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM143",
+      "filename": "Why_The_Sea_Is_Salt_MM143.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "After a long, long time came also a skipper who wished to see the mill.",
+      "description": "[skipper arrives at the golden house]",
+      "scene": "A skipper arriving"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM144",
+      "filename": "Why_The_Sea_Is_Salt_MM144.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He asked if it could make salt. \"Yes, it could make salt,\" said he who",
+      "description": "[skipper examines the mill closely]",
+      "scene": "The skipper asking about salt"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM145",
+      "filename": "Why_The_Sea_Is_Salt_MM145.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "owned it.",
+      "description": "[rich man nods proudly]",
+      "scene": "The skipper asking about salt"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM146",
+      "filename": "Why_The_Sea_Is_Salt_MM146.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And when the skipper heard that, he wished with all his might and main to",
+      "description": "[skipper's eyes light up with desire]",
+      "scene": "The skipper desiring the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM147",
+      "filename": "Why_The_Sea_Is_Salt_MM147.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "have the mill, let it cost what it might.",
+      "description": "[skipper reaches for his purse]",
+      "scene": "The skipper desiring the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM148",
+      "filename": "Why_The_Sea_Is_Salt_MM148.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "For, he thought, if he had it, he would get off having to sail far",
+      "description": "[skipper imagines grinding salt at sea]",
+      "scene": "The skipper's thoughts"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM149",
+      "filename": "Why_The_Sea_Is_Salt_MM149.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "away over the perilous sea for freights of salt.",
+      "description": "[ships toss on dangerous waves]",
+      "scene": "The skipper's thoughts"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM150",
+      "filename": "Why_The_Sea_Is_Salt_MM150.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At first the man would not hear of parting with it, but the skipper begged",
+      "description": "[rich man shakes his head]",
+      "scene": "The rich man refusing to sell"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM151",
+      "filename": "Why_The_Sea_Is_Salt_MM151.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and prayed.",
+      "description": "[skipper pleads earnestly]",
+      "scene": "The rich man refusing to sell"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM152",
+      "filename": "Why_The_Sea_Is_Salt_MM152.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And at last the man sold it to him, and got many, many thousand dollars",
+      "description": "[rich man accepts a fortune in coins]",
+      "scene": "The skipper buying the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM153",
+      "filename": "Why_The_Sea_Is_Salt_MM153.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "for it.",
+      "description": "[coins堆满 the table]",
+      "scene": "The skipper buying the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM154",
+      "filename": "Why_The_Sea_Is_Salt_MM154.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When the skipper had got the mill on his back he did not stay there",
+      "description": "[skipper hurries away with the mill]",
+      "scene": "The skipper fleeing with the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM155",
+      "filename": "Why_The_Sea_Is_Salt_MM155.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "long,",
+      "description": "[skipper races toward his ship]",
+      "scene": "The skipper fleeing with the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM156",
+      "filename": "Why_The_Sea_Is_Salt_MM156.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "for he was so afraid that the man would change his mind.",
+      "description": "[skipper glances back nervously]",
+      "scene": "The skipper fleeing with the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM157",
+      "filename": "Why_The_Sea_Is_Salt_MM157.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And he had no time to ask how he was to stop it grinding, but",
+      "description": "[skipper forgets to ask the stopping words]",
+      "scene": "The skipper not learning how to stop it"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM158",
+      "filename": "Why_The_Sea_Is_Salt_MM158.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "got on board his ship as fast as he could.",
+      "description": "[skipper boards his ship with the mill]",
+      "scene": "The skipper not learning how to stop it"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM159",
+      "filename": "Why_The_Sea_Is_Salt_MM159.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When he had gone a little way out to sea he took the mill on",
+      "description": "[skipper sets mill on the ship's deck]",
+      "scene": "The skipper setting the mill to work at sea"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM160",
+      "filename": "Why_The_Sea_Is_Salt_MM160.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "deck.",
+      "description": "[mill stands ready on the rolling deck]",
+      "scene": "The skipper setting the mill to work at sea"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM161",
+      "filename": "Why_The_Sea_Is_Salt_MM161.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Grind salt, and grind both quickly and well,\" said the skipper.",
+      "description": "[skipper commands the mill]",
+      "scene": "The skipper setting the mill to work at sea"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM162",
+      "filename": "Why_The_Sea_Is_Salt_MM162.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So the mill began to grind salt, till it spouted out like water.",
+      "description": "[salt pours from the mill in streams]",
+      "scene": "The mill grinding salt"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM163",
+      "filename": "Why_The_Sea_Is_Salt_MM163.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And when the skipper had got the ship filled he wanted to stop the mill.",
+      "description": "[skipper tries to halt the mill]",
+      "scene": "The ship filling with salt"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM164",
+      "filename": "Why_The_Sea_Is_Salt_MM164.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But whichsoever way he turned it, and how much soever he tried, it went on",
+      "description": "[skipper twists and turns the mill in vain]",
+      "scene": "The skipper unable to stop the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM165",
+      "filename": "Why_The_Sea_Is_Salt_MM165.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "grinding.",
+      "description": "[salt buries the deck under its weight]",
+      "scene": "The skipper unable to stop the mill"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM166",
+      "filename": "Why_The_Sea_Is_Salt_MM166.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And the heap of salt grew higher and higher, until at last the ship sank.",
+      "description": "[ship sinks beneath mountains of salt]",
+      "scene": "The heap of salt growing higher"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM167",
+      "filename": "Why_The_Sea_Is_Salt_MM167.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "There lies the mill at the bottom of the sea, and still, day by day,",
+      "description": "[mill grinds on beneath the waves]",
+      "scene": "The mill at the bottom of the sea"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM168",
+      "filename": "Why_The_Sea_Is_Salt_MM168.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "it grinds on.",
+      "description": "[salt continues to pour from the mill underwater]",
+      "scene": "The mill at the bottom of the sea"
+    },
+    {
+      "id": "Why_The_Sea_Is_Salt_MM169",
+      "filename": "Why_The_Sea_Is_Salt_MM169.json",
+      "interpOrder": false,
+      "captioned": true,
       "caption": "And that is why the sea is salt.",
-      "description": "[The sea becoming salty]",
+      "description": "[waves crash with salty foam]",
       "scene": "The sea becoming salty"
     }
   ]

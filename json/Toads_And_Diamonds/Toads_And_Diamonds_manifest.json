@@ -2,7 +2,7 @@
   "width": 720,
   "height": 720,
   "format": "png",
-  "name": "Toads and Diamonds",
+  "name": "Toads And Diamonds",
   "captionFontSize": 14,
   "defaultTransitionDuration": 2000,
   "pages": [
@@ -10,337 +10,730 @@
       "id": "Toads_And_Diamonds_MM001",
       "filename": "Toads_And_Diamonds_MM001.json",
       "interpOrder": false,
+      "captioned": true,
       "caption": "THERE was once upon a time a widow who had two daughters.",
-      "description": "[Two sisters with their mother]",
-      "scene": "Cottage interior with mother and two daughters"
+      "description": "[wide shot of widow with two daughters]",
+      "scene": "Two sisters with their mother"
     },
     {
       "id": "Toads_And_Diamonds_MM002",
       "filename": "Toads_And_Diamonds_MM002.json",
       "interpOrder": false,
-      "caption": "The eldest was so much like her in the face and humor that whoever looked upon the daughter saw the mother.",
-      "description": "[Eldest daughter resembling mother]",
-      "scene": "Eldest daughter with mother's features"
+      "captioned": true,
+      "caption": "The eldest was so much like her in the face and humor that whoever looked",
+      "description": "[eldest daughter mirroring mother's expression]",
+      "scene": "Eldest daughter resembling mother"
     },
     {
       "id": "Toads_And_Diamonds_MM003",
       "filename": "Toads_And_Diamonds_MM003.json",
       "interpOrder": false,
-      "caption": "They were both so disagreeable and so proud that there was no living with them.",
-      "description": "[Proud and disagreeable women]",
-      "scene": "Mother and eldest with haughty expressions"
+      "captioned": true,
+      "caption": "upon the daughter saw the mother.",
+      "description": "[side-by-side resemblance of mother and eldest]",
+      "scene": "Eldest daughter resembling mother"
     },
     {
       "id": "Toads_And_Diamonds_MM004",
       "filename": "Toads_And_Diamonds_MM004.json",
       "interpOrder": false,
-      "caption": "The youngest, who was the very picture of her father for courtesy and sweetness of temper, was withal one of the most beautiful girls ever seen.",
-      "description": "[Beautiful youngest daughter]",
-      "scene": "Youngest daughter with gentle expression"
+      "captioned": true,
+      "caption": "They were both so disagreeable and so proud that there was no living with them.",
+      "description": "[proud and disagreeable women turned away]",
+      "scene": "Proud and disagreeable women"
     },
     {
       "id": "Toads_And_Diamonds_MM005",
       "filename": "Toads_And_Diamonds_MM005.json",
       "interpOrder": false,
-      "caption": "As people naturally love their own likeness, this mother even doted on her eldest daughter and at the same time had a horrible aversion for the youngest.",
-      "description": "[Mother doting on eldest]",
-      "scene": "Mother favoring eldest daughter"
+      "captioned": true,
+      "caption": "The youngest, who was the very picture of her father for courtesy and sweetness of",
+      "description": "[youngest daughter with gentle demeanor]",
+      "scene": "Beautiful youngest daughter"
     },
     {
       "id": "Toads_And_Diamonds_MM006",
       "filename": "Toads_And_Diamonds_MM006.json",
       "interpOrder": false,
-      "caption": "She made her eat in the kitchen and work continually.",
-      "description": "[Youngest working in kitchen]",
-      "scene": "Youngest daughter cooking and cleaning"
+      "captioned": true,
+      "caption": "temper,",
+      "description": "[close-up of kind gentle face]",
+      "scene": "Beautiful youngest daughter"
     },
     {
       "id": "Toads_And_Diamonds_MM007",
       "filename": "Toads_And_Diamonds_MM007.json",
       "interpOrder": false,
-      "caption": "Among other things, this poor child was forced twice a day to draw water above a mile and a-half off the house, and bring home a pitcher full of it.",
-      "description": "[Girl carrying pitcher to fountain]",
-      "scene": "Girl walking with pitcher on road"
+      "captioned": true,
+      "caption": "was withal one of the most beautiful girls ever seen.",
+      "description": "[radiant beauty of youngest daughter]",
+      "scene": "Beautiful youngest daughter"
     },
     {
       "id": "Toads_And_Diamonds_MM008",
       "filename": "Toads_And_Diamonds_MM008.json",
       "interpOrder": false,
-      "caption": "One day, as she was at this fountain, there came to her a poor woman, who begged of her to let her drink.",
-      "description": "[Beggar woman at fountain]",
-      "scene": "Fountain with poor old woman begging"
+      "captioned": true,
+      "caption": "As people naturally love their own likeness, this mother even doted on her eldest daughter",
+      "description": "[mother doting on eldest daughter]",
+      "scene": "Mother doting on eldest"
     },
     {
       "id": "Toads_And_Diamonds_MM009",
       "filename": "Toads_And_Diamonds_MM009.json",
       "interpOrder": false,
-      "caption": "Oh! ay, with all my heart, Goody, said this pretty little girl.",
-      "description": "[Girl offering water kindly]",
-      "scene": "Girl smiling and offering water"
+      "captioned": true,
+      "caption": "and at the same time had a horrible aversion for the youngest.",
+      "description": "[mother turning away from youngest]",
+      "scene": "Mother doting on eldest"
     },
     {
       "id": "Toads_And_Diamonds_MM010",
       "filename": "Toads_And_Diamonds_MM010.json",
       "interpOrder": false,
-      "caption": "and rinsing immediately the pitcher, she took up some water from the clearest place of the fountain, and gave it to her, holding up the pitcher all the while, that she might drink the easier.",
-      "description": "[Rinsing pitcher and giving water]",
-      "scene": "Girl pouring water for the old woman"
+      "captioned": true,
+      "caption": "She made her eat in the kitchen and work continually.",
+      "description": "[youngest working alone in kitchen]",
+      "scene": "Youngest working in kitchen"
     },
     {
       "id": "Toads_And_Diamonds_MM011",
       "filename": "Toads_And_Diamonds_MM011.json",
       "interpOrder": false,
-      "caption": "The good woman, having drunk, said to her: You are so very pretty, my dear, so good and so mannerly, that I cannot help giving you a gift.",
-      "description": "[Fairy revealing herself]",
-      "scene": "Old woman speaking kindly to girl"
+      "captioned": true,
+      "caption": "Among other things, this poor child was forced twice a day to draw water above",
+      "description": "[girl carrying heavy pitcher on path]",
+      "scene": "Girl carrying pitcher to fountain"
     },
     {
       "id": "Toads_And_Diamonds_MM012",
       "filename": "Toads_And_Diamonds_MM012.json",
       "interpOrder": false,
-      "caption": "For this was a fairy, who had taken the form of a poor country woman, to see how far the civility and good manners of this pretty girl would go.",
-      "description": "[Fairy in disguise of country woman]",
-      "scene": "Fairy in poor woman's disguise"
+      "captioned": true,
+      "caption": "a mile and a-half off the house, and bring home a pitcher full of it.",
+      "description": "[girl walking long distance with pitcher]",
+      "scene": "Girl carrying pitcher to fountain"
     },
     {
       "id": "Toads_And_Diamonds_MM013",
       "filename": "Toads_And_Diamonds_MM013.json",
       "interpOrder": false,
-      "caption": "I will give you for a gift, continued the Fairy, that, at every word you speak, there shall come out of your mouth either a flower or a jewel.",
-      "description": "[Fairy granting gift]",
-      "scene": "Fairy granting magical gift"
+      "captioned": true,
+      "caption": "One day, as she was at this fountain, there came to her a poor woman,",
+      "description": "[beggar woman approaching fountain]",
+      "scene": "Beggar woman at fountain"
     },
     {
       "id": "Toads_And_Diamonds_MM014",
       "filename": "Toads_And_Diamonds_MM014.json",
       "interpOrder": false,
-      "caption": "When this pretty girl came home her mother scolded her for staying so long at the fountain.",
-      "description": "[Mother scolding girl]",
-      "scene": "Mother angrily confronting daughter"
+      "captioned": true,
+      "caption": "who begged of her to let her drink.",
+      "description": "[beggar woman pleading for water]",
+      "scene": "Beggar woman at fountain"
     },
     {
       "id": "Toads_And_Diamonds_MM015",
       "filename": "Toads_And_Diamonds_MM015.json",
       "interpOrder": false,
-      "caption": "I beg your pardon, mamma, said the poor girl, for not making more haste.",
-      "description": "[Girl apologizing]",
-      "scene": "Girl bowing apologetically"
+      "captioned": true,
+      "caption": "Oh! ay, with all my heart, Goody, said this pretty little girl.",
+      "description": "[girl offering water with kind smile]",
+      "scene": "Girl offering water kindly"
     },
     {
       "id": "Toads_And_Diamonds_MM016",
       "filename": "Toads_And_Diamonds_MM016.json",
       "interpOrder": false,
-      "caption": "And in speaking these words there came out of her mouth two roses, two pearls, and two diamonds.",
-      "description": "[Roses pearls and diamonds from mouth]",
-      "scene": "Flowers and jewels falling from girl's lips"
+      "captioned": true,
+      "caption": "and rinsing immediately the pitcher, she took up some water from the clearest place of",
+      "description": "[girl rinsing pitcher at fountain]",
+      "scene": "Rinsing pitcher and giving water"
     },
     {
       "id": "Toads_And_Diamonds_MM017",
       "filename": "Toads_And_Diamonds_MM017.json",
       "interpOrder": false,
-      "caption": "What is it I see there? said the mother, quite astonished. I think I see pearls and diamonds come out of the girl's mouth.",
-      "description": "[Mother astonished]",
-      "scene": "Mother staring in amazement"
+      "captioned": true,
+      "caption": "the fountain,",
+      "description": "[crystal clear water filling pitcher]",
+      "scene": "Rinsing pitcher and giving water"
     },
     {
       "id": "Toads_And_Diamonds_MM018",
       "filename": "Toads_And_Diamonds_MM018.json",
       "interpOrder": false,
-      "caption": "How happens this, child? This was the first time she had ever called her child.",
-      "description": "[First time calling her child]",
-      "scene": "Mother speaking gently for first time"
+      "captioned": true,
+      "caption": "and gave it to her, holding up the pitcher all the while, that she might",
+      "description": "[girl holding pitcher for woman to drink]",
+      "scene": "Rinsing pitcher and giving water"
     },
     {
       "id": "Toads_And_Diamonds_MM019",
       "filename": "Toads_And_Diamonds_MM019.json",
       "interpOrder": false,
-      "caption": "The poor creature told her frankly all the matter, not without dropping out infinite numbers of diamonds.",
-      "description": "[Girl explaining the gift]",
-      "scene": "Girl speaking with diamonds falling"
+      "captioned": true,
+      "caption": "drink the easier.",
+      "description": "[woman drinking while girl holds pitcher]",
+      "scene": "Rinsing pitcher and giving water"
     },
     {
       "id": "Toads_And_Diamonds_MM020",
       "filename": "Toads_And_Diamonds_MM020.json",
       "interpOrder": false,
-      "caption": "In good faith, cried the mother, I must send my child thither. Come hither, Fanny; look what comes out of thy sister's mouth when she speaks.",
-      "description": "[Mother sending elder daughter]",
-      "scene": "Mother calling Fanny to see"
+      "captioned": true,
+      "caption": "The good woman, having drunk, said to her: You are so very pretty, my dear,",
+      "description": "[fairy revealing true form]",
+      "scene": "Fairy revealing herself"
     },
     {
       "id": "Toads_And_Diamonds_MM021",
       "filename": "Toads_And_Diamonds_MM021.json",
       "interpOrder": false,
-      "caption": "Wouldst not thou be glad, my dear, to have the same gift given thee? Thou hast nothing else to do but go and draw water out of the fountain.",
-      "description": "[Mother instructing Fanny]",
-      "scene": "Mother pointing toward fountain"
+      "captioned": true,
+      "caption": "so good and so mannerly, that I cannot help giving you a gift.",
+      "description": "[fairy speaking with warmth]",
+      "scene": "Fairy revealing herself"
     },
     {
       "id": "Toads_And_Diamonds_MM022",
       "filename": "Toads_And_Diamonds_MM022.json",
       "interpOrder": false,
-      "caption": "It would be a very fine sight indeed, said this ill-bred minx, to see me go draw water.",
-      "description": "[Fanny refusing rudely]",
-      "scene": "Fanny with arms crossed, refusing"
+      "captioned": true,
+      "caption": "For this was a fairy, who had taken the form of a poor country woman,",
+      "description": "[fairy in country woman disguise]",
+      "scene": "Fairy in disguise of country woman"
     },
     {
       "id": "Toads_And_Diamonds_MM023",
       "filename": "Toads_And_Diamonds_MM023.json",
       "interpOrder": false,
-      "caption": "You shall go, hussy! said the mother; and this minute.",
-      "description": "[Mother forcing Fanny]",
-      "scene": "Mother pointing sternly at Fanny"
+      "captioned": true,
+      "caption": "to see how far the civility and good manners of this pretty girl would go.",
+      "description": "[fairy observing girl's kindness]",
+      "scene": "Fairy in disguise of country woman"
     },
     {
       "id": "Toads_And_Diamonds_MM024",
       "filename": "Toads_And_Diamonds_MM024.json",
       "interpOrder": false,
-      "caption": "So away she went, but grumbling all the way, taking with her the best silver tankard in the house.",
-      "description": "[Fanny grumbling with silver tankard]",
-      "scene": "Fanny walking with silver tankard"
+      "captioned": true,
+      "caption": "I will give you for a gift, continued the Fairy, that, at every word you",
+      "description": "[fairy raising hand to grant gift]",
+      "scene": "Fairy granting gift"
     },
     {
       "id": "Toads_And_Diamonds_MM025",
       "filename": "Toads_And_Diamonds_MM025.json",
       "interpOrder": false,
-      "caption": "She was no sooner at the fountain than she saw coming out of the wood a lady most gloriously dressed, who came up to her, and asked to drink.",
-      "description": "[Fairy as princess at fountain]",
-      "scene": "Gorgeous lady emerging from woods"
+      "captioned": true,
+      "caption": "speak,",
+      "description": "[fairy's hand gesturing toward girl]",
+      "scene": "Fairy granting gift"
     },
     {
       "id": "Toads_And_Diamonds_MM026",
       "filename": "Toads_And_Diamonds_MM026.json",
       "interpOrder": false,
-      "caption": "This was, you must know, the very fairy who appeared to her sister, but now had taken the air and dress of a princess, to see how far this girl's rudeness would go.",
-      "description": "[Fairy disguised as princess]",
-      "scene": "Fairy in princess disguise"
+      "captioned": true,
+      "caption": "there shall come out of your mouth either a flower or a jewel.",
+      "description": "[flowers and jewels emerging from mouth]",
+      "scene": "Fairy granting gift"
     },
     {
       "id": "Toads_And_Diamonds_MM027",
       "filename": "Toads_And_Diamonds_MM027.json",
       "interpOrder": false,
-      "caption": "Am I come hither, said the proud, saucy one, to serve you with water, pray? I suppose the silver tankard was brought purely for your ladyship, was it?",
-      "description": "[Fanny speaking haughtily]",
-      "scene": "Fanny speaking rudely to princess"
+      "captioned": true,
+      "caption": "When this pretty girl came home her mother scolded her for staying so long at",
+      "description": "[mother scolding girl at doorstep]",
+      "scene": "Mother scolding girl"
     },
     {
       "id": "Toads_And_Diamonds_MM028",
       "filename": "Toads_And_Diamonds_MM028.json",
       "interpOrder": false,
-      "caption": "However, you may drink out of it, if you have a fancy.",
-      "description": "[Fanny offering tankard disdainfully]",
-      "scene": "Fanny reluctantly holding out tankard"
+      "captioned": true,
+      "caption": "the fountain.",
+      "description": "[mother pointing angrily at girl]",
+      "scene": "Mother scolding girl"
     },
     {
       "id": "Toads_And_Diamonds_MM029",
       "filename": "Toads_And_Diamonds_MM029.json",
       "interpOrder": false,
-      "caption": "You are not over and above mannerly, answered the Fairy, without putting herself in a passion. Well, then, since you have so little breeding, and are so disobliging, I give you for a gift that at every word you speak there shall come out of your mouth a snake or a toad.",
-      "description": "[Fairy pronouncing curse]",
-      "scene": "Fairy speaking with magical glow"
+      "captioned": true,
+      "caption": "I beg your pardon, mamma, said the poor girl, for not making more haste.",
+      "description": "[girl speaking apologetically]",
+      "scene": "Girl apologizing"
     },
     {
       "id": "Toads_And_Diamonds_MM030",
       "filename": "Toads_And_Diamonds_MM030.json",
       "interpOrder": false,
-      "caption": "So soon as her mother saw her coming she cried out: Well, daughter?",
-      "description": "[Mother greeting returning daughter]",
-      "scene": "Mother waiting at door"
+      "captioned": true,
+      "caption": "And in speaking these words there came out of her mouth two roses, two pearls,",
+      "description": "[roses and pearls falling from mouth]",
+      "scene": "Roses pearls and diamonds from mouth"
     },
     {
       "id": "Toads_And_Diamonds_MM031",
       "filename": "Toads_And_Diamonds_MM031.json",
       "interpOrder": false,
-      "caption": "Well, mother? answered the pert hussy, throwing out of her mouth two vipers and two toads.",
-      "description": "[Fanny responding with vipers and toads]",
-      "scene": "Snakes and toads falling from Fanny's mouth"
+      "captioned": true,
+      "caption": "and two diamonds.",
+      "description": "[diamonds sparkling on floor]",
+      "scene": "Roses pearls and diamonds from mouth"
     },
     {
       "id": "Toads_And_Diamonds_MM032",
       "filename": "Toads_And_Diamonds_MM032.json",
       "interpOrder": false,
-      "caption": "Oh! mercy, cried the mother; what is it I see? Oh! it is that wretch her sister who has occasioned all this; but she shall pay for it.",
-      "description": "[Mother horrified]",
-      "scene": "Mother recoiling in horror"
+      "captioned": true,
+      "caption": "What is it I see there? said the mother, quite astonished. I think I see",
+      "description": "[mother astonished at jewels]",
+      "scene": "Mother astonished"
     },
     {
       "id": "Toads_And_Diamonds_MM033",
       "filename": "Toads_And_Diamonds_MM033.json",
       "interpOrder": false,
-      "caption": "and immediately she ran to beat her.",
-      "description": "[Mother running to beat elder daughter]",
-      "scene": "Mother chasing eldest daughter"
+      "captioned": true,
+      "caption": "pearls and diamonds come out of the girl's mouth.",
+      "description": "[mother staring at scattered jewels]",
+      "scene": "Mother astonished"
     },
     {
       "id": "Toads_And_Diamonds_MM034",
       "filename": "Toads_And_Diamonds_MM034.json",
       "interpOrder": false,
-      "caption": "The poor child fled away from her, and went to hide herself in the forest, not far from thence.",
-      "description": "[Girl fleeing into forest]",
-      "scene": "Girl running into dark forest"
+      "captioned": true,
+      "caption": "How happens this, child? This was the first time she had ever called her child.",
+      "description": "[mother speaking tenderly for first time]",
+      "scene": "First time calling her child"
     },
     {
       "id": "Toads_And_Diamonds_MM035",
       "filename": "Toads_And_Diamonds_MM035.json",
       "interpOrder": false,
-      "caption": "The King's son, then on his return from hunting, met her, and seeing her so very pretty, asked her what she did there alone and why she cried.",
-      "description": "[King's son meeting girl in forest]",
-      "scene": "Prince on horseback finding crying girl"
+      "captioned": true,
+      "caption": "The poor creature told her frankly all the matter, not without dropping out infinite numbers",
+      "description": "[girl explaining while diamonds fall]",
+      "scene": "Girl explaining the gift"
     },
     {
       "id": "Toads_And_Diamonds_MM036",
       "filename": "Toads_And_Diamonds_MM036.json",
       "interpOrder": false,
-      "caption": "Alas! sir, my mamma has turned me out of doors.",
-      "description": "[Girl explaining her plight]",
-      "scene": "Girl weeping before prince"
+      "captioned": true,
+      "caption": "of diamonds.",
+      "description": "[diamonds spilling from girl's lips]",
+      "scene": "Girl explaining the gift"
     },
     {
       "id": "Toads_And_Diamonds_MM037",
       "filename": "Toads_And_Diamonds_MM037.json",
       "interpOrder": false,
-      "caption": "The King's son, who saw five or six pearls and as many diamonds come out of her mouth, desired her to tell him how that happened.",
-      "description": "[Prince seeing jewels from her mouth]",
-      "scene": "Prince amazed at jewels falling"
+      "captioned": true,
+      "caption": "In good faith, cried the mother, I must send my child thither. Come hither, Fanny;",
+      "description": "[mother summoning elder daughter]",
+      "scene": "Mother sending elder daughter"
     },
     {
       "id": "Toads_And_Diamonds_MM038",
       "filename": "Toads_And_Diamonds_MM038.json",
       "interpOrder": false,
-      "caption": "She thereupon told him the whole story; and so the King's son fell in love with her.",
-      "description": "[Girl telling her story]",
-      "scene": "Girl narrating with prince listening"
+      "captioned": true,
+      "caption": "look what comes out of thy sister's mouth when she speaks.",
+      "description": "[mother pointing at jewels on floor]",
+      "scene": "Mother sending elder daughter"
     },
     {
       "id": "Toads_And_Diamonds_MM039",
       "filename": "Toads_And_Diamonds_MM039.json",
       "interpOrder": false,
-      "caption": "and, considering himself that such a gift was worth more than any marriage portion, conducted her to the palace of the King his father, and there married her.",
-      "description": "[Prince taking girl to palace]",
-      "scene": "Prince leading girl to royal palace"
+      "captioned": true,
+      "caption": "Wouldst not thou be glad, my dear, to have the same gift given thee? Thou",
+      "description": "[mother instructing Fanny]",
+      "scene": "Mother instructing Fanny"
     },
     {
       "id": "Toads_And_Diamonds_MM040",
       "filename": "Toads_And_Diamonds_MM040.json",
       "interpOrder": false,
-      "caption": "As for the sister, she made herself so much hated that her own mother turned her off.",
-      "description": "[Sister rejected and alone]",
-      "scene": "Fanny being cast out by mother"
+      "captioned": true,
+      "caption": "hast nothing else to do but go and draw water out of the fountain.",
+      "description": "[mother pointing toward fountain]",
+      "scene": "Mother instructing Fanny"
     },
     {
       "id": "Toads_And_Diamonds_MM041",
       "filename": "Toads_And_Diamonds_MM041.json",
       "interpOrder": false,
-      "caption": "and the miserable wretch, having wandered about a good while without finding anybody to take her in.",
-      "description": "[Sister wandering in woods]",
-      "scene": "Fanny wandering alone in forest"
+      "captioned": true,
+      "caption": "It would be a very fine sight indeed, said this ill-bred minx, to see me",
+      "description": "[Fanny refusing rudely]",
+      "scene": "Fanny refusing rudely"
     },
     {
       "id": "Toads_And_Diamonds_MM042",
       "filename": "Toads_And_Diamonds_MM042.json",
       "interpOrder": false,
+      "captioned": true,
+      "caption": "go draw water.",
+      "description": "[Fanny turning away in disdain]",
+      "scene": "Fanny refusing rudely"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM043",
+      "filename": "Toads_And_Diamonds_MM043.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "You shall go, hussy! said the mother; and this minute.",
+      "description": "[mother forcing Fanny out]",
+      "scene": "Mother forcing Fanny"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM044",
+      "filename": "Toads_And_Diamonds_MM044.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So away she went, but grumbling all the way, taking with her the best silver",
+      "description": "[Fanny grumbling with silver tankard]",
+      "scene": "Fanny grumbling with silver tankard"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM045",
+      "filename": "Toads_And_Diamonds_MM045.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "tankard in the house.",
+      "description": "[Fanny carrying silver tankard resentfully]",
+      "scene": "Fanny grumbling with silver tankard"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM046",
+      "filename": "Toads_And_Diamonds_MM046.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She was no sooner at the fountain than she saw coming out of the wood",
+      "description": "[fairy as princess emerging from wood]",
+      "scene": "Fairy as princess at fountain"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM047",
+      "filename": "Toads_And_Diamonds_MM047.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a lady most gloriously dressed, who came up to her, and asked to drink.",
+      "description": "[gloriously dressed lady requesting drink]",
+      "scene": "Fairy as princess at fountain"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM048",
+      "filename": "Toads_And_Diamonds_MM048.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "This was, you must know, the very fairy who appeared to her sister, but now",
+      "description": "[fairy recognized in princess disguise]",
+      "scene": "Fairy disguised as princess"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM049",
+      "filename": "Toads_And_Diamonds_MM049.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "had taken the air and dress of a princess, to see how far this girl's",
+      "description": "[fairy in full princess regalia]",
+      "scene": "Fairy disguised as princess"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM050",
+      "filename": "Toads_And_Diamonds_MM050.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "rudeness would go.",
+      "description": "[fairy observing Fanny's rudeness]",
+      "scene": "Fairy disguised as princess"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM051",
+      "filename": "Toads_And_Diamonds_MM051.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Am I come hither, said the proud, saucy one, to serve you with water, pray?",
+      "description": "[Fanny speaking haughtily]",
+      "scene": "Fanny speaking haughtily"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM052",
+      "filename": "Toads_And_Diamonds_MM052.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "I suppose the silver tankard was brought purely for your ladyship, was it?",
+      "description": "[Fanny sneering at request]",
+      "scene": "Fanny speaking haughtily"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM053",
+      "filename": "Toads_And_Diamonds_MM053.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "However, you may drink out of it, if you have a fancy.",
+      "description": "[Fanny offering tankard disdainfully]",
+      "scene": "Fanny offering tankard disdainfully"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM054",
+      "filename": "Toads_And_Diamonds_MM054.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "You are not over and above mannerly, answered the Fairy, without putting herself in a",
+      "description": "[fairy pronouncing curse calmly]",
+      "scene": "Fairy pronouncing curse"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM055",
+      "filename": "Toads_And_Diamonds_MM055.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "passion.",
+      "description": "[fairy's expression turning stern]",
+      "scene": "Fairy pronouncing curse"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM056",
+      "filename": "Toads_And_Diamonds_MM056.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Well, then, since you have so little breeding, and are so disobliging, I give you",
+      "description": "[fairy raising hand in judgment]",
+      "scene": "Fairy pronouncing curse"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM057",
+      "filename": "Toads_And_Diamonds_MM057.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "for a gift that at every word you speak there shall come out of your",
+      "description": "[fairy pointing at Fanny]",
+      "scene": "Fairy pronouncing curse"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM058",
+      "filename": "Toads_And_Diamonds_MM058.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "mouth a snake or a toad.",
+      "description": "[toads and snakes emerging from mouth]",
+      "scene": "Fairy pronouncing curse"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM059",
+      "filename": "Toads_And_Diamonds_MM059.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So soon as her mother saw her coming she cried out: Well, daughter?",
+      "description": "[mother greeting returning Fanny]",
+      "scene": "Mother greeting returning daughter"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM060",
+      "filename": "Toads_And_Diamonds_MM060.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Well, mother? answered the pert hussy, throwing out of her mouth two vipers and two",
+      "description": "[vipers and toads spewing from Fanny]",
+      "scene": "Fanny responding with vipers and toads"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM061",
+      "filename": "Toads_And_Diamonds_MM061.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "toads.",
+      "description": "[toads landing on ground]",
+      "scene": "Fanny responding with vipers and toads"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM062",
+      "filename": "Toads_And_Diamonds_MM062.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Oh! mercy, cried the mother; what is it I see? Oh! it is that wretch",
+      "description": "[mother horrified at toads]",
+      "scene": "Mother horrified"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM063",
+      "filename": "Toads_And_Diamonds_MM063.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "her sister who has occasioned all this; but she shall pay for it.",
+      "description": "[mother blaming youngest daughter]",
+      "scene": "Mother horrified"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM064",
+      "filename": "Toads_And_Diamonds_MM064.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and immediately she ran to beat her.",
+      "description": "[mother running to beat youngest]",
+      "scene": "Mother running to beat elder daughter"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM065",
+      "filename": "Toads_And_Diamonds_MM065.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The poor child fled away from her, and went to hide herself in the forest,",
+      "description": "[girl fleeing into dark forest]",
+      "scene": "Girl fleeing into forest"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM066",
+      "filename": "Toads_And_Diamonds_MM066.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "not far from thence.",
+      "description": "[girl hiding among forest trees]",
+      "scene": "Girl fleeing into forest"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM067",
+      "filename": "Toads_And_Diamonds_MM067.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The King's son, then on his return from hunting, met her, and seeing her so",
+      "description": "[king's son meeting girl in forest]",
+      "scene": "King's son meeting girl in forest"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM068",
+      "filename": "Toads_And_Diamonds_MM068.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "very pretty,",
+      "description": "[prince gazing at beautiful girl]",
+      "scene": "King's son meeting girl in forest"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM069",
+      "filename": "Toads_And_Diamonds_MM069.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "asked her what she did there alone and why she cried.",
+      "description": "[prince asking girl why she weeps]",
+      "scene": "King's son meeting girl in forest"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM070",
+      "filename": "Toads_And_Diamonds_MM070.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Alas! sir, my mamma has turned me out of doors.",
+      "description": "[girl explaining her plight]",
+      "scene": "Girl explaining her plight"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM071",
+      "filename": "Toads_And_Diamonds_MM071.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The King's son, who saw five or six pearls and as many diamonds come out",
+      "description": "[prince seeing jewels fall from mouth]",
+      "scene": "Prince seeing jewels from her mouth"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM072",
+      "filename": "Toads_And_Diamonds_MM072.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "of her mouth, desired her to tell him how that happened.",
+      "description": "[prince marveling at diamonds]",
+      "scene": "Prince seeing jewels from her mouth"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM073",
+      "filename": "Toads_And_Diamonds_MM073.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She thereupon told him the whole story; and so the King's son fell in love",
+      "description": "[girl telling her story to prince]",
+      "scene": "Girl telling her story"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM074",
+      "filename": "Toads_And_Diamonds_MM074.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "with her.",
+      "description": "[prince falling in love]",
+      "scene": "Girl telling her story"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM075",
+      "filename": "Toads_And_Diamonds_MM075.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and, considering himself that such a gift was worth more than any marriage portion, conducted",
+      "description": "[prince escorting girl toward palace]",
+      "scene": "Prince taking girl to palace"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM076",
+      "filename": "Toads_And_Diamonds_MM076.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "her to the palace of the King his father, and there married her.",
+      "description": "[wedding ceremony at palace]",
+      "scene": "Prince taking girl to palace"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM077",
+      "filename": "Toads_And_Diamonds_MM077.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "As for the sister, she made herself so much hated that her own mother turned",
+      "description": "[sister rejected and alone]",
+      "scene": "Sister rejected and alone"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM078",
+      "filename": "Toads_And_Diamonds_MM078.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "her off.",
+      "description": "[sister cast out from home]",
+      "scene": "Sister rejected and alone"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM079",
+      "filename": "Toads_And_Diamonds_MM079.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and the miserable wretch, having wandered about a good while without finding anybody to take",
+      "description": "[sister wandering alone in woods]",
+      "scene": "Sister wandering in woods"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM080",
+      "filename": "Toads_And_Diamonds_MM080.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "her in.",
+      "description": "[sister lost and hopeless in forest]",
+      "scene": "Sister wandering in woods"
+    },
+    {
+      "id": "Toads_And_Diamonds_MM081",
+      "filename": "Toads_And_Diamonds_MM081.json",
+      "interpOrder": false,
+      "captioned": true,
       "caption": "went to a corner of the wood, and there died.",
-      "description": "[Sister dying in the wood]",
-      "scene": "Fanny lying lifeless in forest"
+      "description": "[sister dying alone in wood]",
+      "scene": "Sister dying in the wood"
     }
   ]
 }

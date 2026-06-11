@@ -1,0 +1,379 @@
+{
+  "width": 720,
+  "height": 720,
+  "format": "png",
+  "name": "The Norka",
+  "captionFontSize": 14,
+  "defaultTransitionDuration": 2000,
+  "pages": [
+    {
+      "id": "The_Norka_MM001",
+      "filename": "The_Norka_MM001.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Once upon a time there lived a King and Queen.",
+      "description": "[wide shot of king queen and three sons]",
+      "scene": "King and queen with three sons on throne"
+    },
+    {
+      "id": "The_Norka_MM002",
+      "filename": "The_Norka_MM002.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Well, the eldest son undertook the task.",
+      "description": "[eldest son entering dimly lit tavern]",
+      "scene": "Eldest son walks into a tavern at night"
+    },
+    {
+      "id": "The_Norka_MM003",
+      "filename": "The_Norka_MM003.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Well, on the third day the youngest son undertook the task.",
+      "description": "[youngest son sitting on grass with weapons]",
+      "scene": "Youngest son sits on grass with weapons"
+    },
+    {
+      "id": "The_Norka_MM004",
+      "filename": "The_Norka_MM004.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Presently the midnight hour sounded.",
+      "description": "[Norka crashing through fence at midnight]",
+      "scene": "The Norka crashes through the fence at midnight"
+    },
+    {
+      "id": "The_Norka_MM005",
+      "filename": "The_Norka_MM005.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The Prince went home, told his father all that had happened, and asked him to",
+      "description": "[prince speaking to father at hearth]",
+      "scene": "Prince tells his father what happened"
+    },
+    {
+      "id": "The_Norka_MM006",
+      "filename": "The_Norka_MM006.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "have a leather rope plaited, long enough to reach to the other world.",
+      "description": "[prince gesturing length of rope]",
+      "scene": "Prince tells his father what happened"
+    },
+    {
+      "id": "The_Norka_MM007",
+      "filename": "The_Norka_MM007.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "His brothers lowered him accordingly, and when he had reached the other world, underneath the",
+      "description": "[brothers lowering prince into pit]",
+      "scene": "Brothers lower the prince into a dark pit"
+    },
+    {
+      "id": "The_Norka_MM008",
+      "filename": "The_Norka_MM008.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "earth,",
+      "description": "[prince descending into darkness]",
+      "scene": "Brothers lower the prince into a dark pit"
+    },
+    {
+      "id": "The_Norka_MM009",
+      "filename": "The_Norka_MM009.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "he went on his way.",
+      "description": "[prince walking through underground passage]",
+      "scene": "Brothers lower the prince into a dark pit"
+    },
+    {
+      "id": "The_Norka_MM010",
+      "filename": "The_Norka_MM010.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He mounted the horse and rode on—rode and rode, until he saw standing before him",
+      "description": "[prince riding through underground world]",
+      "scene": "Prince Ivan rides through underground world"
+    },
+    {
+      "id": "The_Norka_MM011",
+      "filename": "The_Norka_MM011.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a palace made of copper.",
+      "description": "[copper palace gleaming ahead]",
+      "scene": "Prince Ivan rides through underground world"
+    },
+    {
+      "id": "The_Norka_MM012",
+      "filename": "The_Norka_MM012.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Presently there came in a lady, more beautiful than can be imagined anywhere but in",
+      "description": "[beautiful lady appearing in palace doorway]",
+      "scene": "A beautiful lady appears in the palace"
+    },
+    {
+      "id": "The_Norka_MM013",
+      "filename": "The_Norka_MM013.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a fairy tale, who said: 'Thou who art in my house, name thyself! If thou",
+      "description": "[lady speaking with commanding gesture]",
+      "scene": "A beautiful lady appears in the palace"
+    },
+    {
+      "id": "The_Norka_MM014",
+      "filename": "The_Norka_MM014.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "art an old man, thou shalt be my father; if a middle-aged man, my brother;",
+      "description": "[lady gesturing toward prince]",
+      "scene": "A beautiful lady appears in the palace"
+    },
+    {
+      "id": "The_Norka_MM015",
+      "filename": "The_Norka_MM015.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "but if a young man, thou shalt be my husband dear. And if thou art",
+      "description": "[lady extending hand to prince]",
+      "scene": "A beautiful lady appears in the palace"
+    },
+    {
+      "id": "The_Norka_MM016",
+      "filename": "The_Norka_MM016.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a woman,",
+      "description": "[lady stepping forward expectantly]",
+      "scene": "A beautiful lady appears in the palace"
+    },
+    {
+      "id": "The_Norka_MM017",
+      "filename": "The_Norka_MM017.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and an old one, thou shalt be my grandmother; if middle-aged, my mother; and if",
+      "description": "[lady speaking gently]",
+      "scene": "A beautiful lady appears in the palace"
+    },
+    {
+      "id": "The_Norka_MM018",
+      "filename": "The_Norka_MM018.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a girl,",
+      "description": "[lady smiling at young visitor]",
+      "scene": "A beautiful lady appears in the palace"
+    },
+    {
+      "id": "The_Norka_MM019",
+      "filename": "The_Norka_MM019.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "thou shalt be my own sister.'",
+      "description": "[lady opening arms in welcome]",
+      "scene": "A beautiful lady appears in the palace"
+    },
+    {
+      "id": "The_Norka_MM020",
+      "filename": "The_Norka_MM020.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So he went on to the youngest sister, who lived in a golden palace.",
+      "description": "[prince approaching golden palace]",
+      "scene": "Prince meets youngest sister in golden palace"
+    },
+    {
+      "id": "The_Norka_MM021",
+      "filename": "The_Norka_MM021.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And when the Prince came to the blue sea, he looked—there slept the Norka on",
+      "description": "[prince seeing Norka sleeping on sea stone]",
+      "scene": "Prince slays the Norka sleeping on a stone at sea"
+    },
+    {
+      "id": "The_Norka_MM022",
+      "filename": "The_Norka_MM022.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a stone in the middle of the sea; and when it snored, the water was",
+      "description": "[Norka snoring with waves rippling]",
+      "scene": "Prince slays the Norka sleeping on a stone at sea"
+    },
+    {
+      "id": "The_Norka_MM023",
+      "filename": "The_Norka_MM023.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "agitated for seven miles around.",
+      "description": "[water agitated in wide circle around stone]",
+      "scene": "Prince slays the Norka sleeping on a stone at sea"
+    },
+    {
+      "id": "The_Norka_MM024",
+      "filename": "The_Norka_MM024.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "After killing the beast, the Prince went back again, picking up all the three sisters",
+      "description": "[prince gathering three sisters to leave]",
+      "scene": "Prince gathers the three sisters to leave"
+    },
+    {
+      "id": "The_Norka_MM025",
+      "filename": "The_Norka_MM025.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "by the way, with the intention of taking them out into the upper world: for",
+      "description": "[four travelers walking together]",
+      "scene": "Prince gathers the three sisters to leave"
+    },
+    {
+      "id": "The_Norka_MM026",
+      "filename": "The_Norka_MM026.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "they all loved him and would not be separated from him.",
+      "description": "[sisters clinging to prince devotedly]",
+      "scene": "Prince gathers the three sisters to leave"
+    },
+    {
+      "id": "The_Norka_MM027",
+      "filename": "The_Norka_MM027.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So when they had agreed on this, they lowered the rope.",
+      "description": "[brothers cutting rope above pit]",
+      "scene": "Brothers cut the rope, leaving prince below"
+    },
+    {
+      "id": "The_Norka_MM028",
+      "filename": "The_Norka_MM028.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Well, he walked and walked.",
+      "description": "[prince walking alone through storm]",
+      "scene": "Storm breaks over the prince"
+    },
+    {
+      "id": "The_Norka_MM029",
+      "filename": "The_Norka_MM029.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Presently there came flying a bird—such a big one that the light was blotted out",
+      "description": "[giant bird arriving with wings spread]",
+      "scene": "A giant bird arrives to shelter her young"
+    },
+    {
+      "id": "The_Norka_MM030",
+      "filename": "The_Norka_MM030.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "by it.",
+      "description": "[bird's shadow blotting out light]",
+      "scene": "A giant bird arrives to shelter her young"
+    },
+    {
+      "id": "The_Norka_MM031",
+      "filename": "The_Norka_MM031.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "All this the Prince did.",
+      "description": "[great bird carrying prince on back]",
+      "scene": "The great bird carries prince back to the world above"
+    },
+    {
+      "id": "The_Norka_MM032",
+      "filename": "The_Norka_MM032.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Having entered into the service of this master, the Prince began to ask what was",
+      "description": "[prince speaking with tailor at work]",
+      "scene": "Prince speaks with the tailor"
+    },
+    {
+      "id": "The_Norka_MM033",
+      "filename": "The_Norka_MM033.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "going on in that country.",
+      "description": "[prince listening intently to news]",
+      "scene": "Prince speaks with the tailor"
+    },
+    {
+      "id": "The_Norka_MM034",
+      "filename": "The_Norka_MM034.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So the tailor went.",
+      "description": "[prince transforming eggs at midnight]",
+      "scene": "Prince transforms eggs into palaces at midnight"
+    },
+    {
+      "id": "The_Norka_MM035",
+      "filename": "The_Norka_MM035.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Early in the morning his master awoke, and behold! there hung such robes as he",
+      "description": "[master awaking to shimmering robes]",
+      "scene": "Gold and silver robes displayed"
+    },
+    {
+      "id": "The_Norka_MM036",
+      "filename": "The_Norka_MM036.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "had never seen before, all shining with gold and silver and precious stones.",
+      "description": "[robes shining with gold and jewels]",
+      "scene": "Gold and silver robes displayed"
+    },
+    {
+      "id": "The_Norka_MM037",
+      "filename": "The_Norka_MM037.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "By the time the princely workman had gone the round of all the artificers, the",
+      "description": "[princesses receiving wedding garments]",
+      "scene": "Princesses receive their wedding garments"
+    },
+    {
+      "id": "The_Norka_MM038",
+      "filename": "The_Norka_MM038.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Princesses had received what they had asked for; all their clothes were just like what",
+      "description": "[princesses admiring identical garments]",
+      "scene": "Princesses receive their wedding garments"
+    },
+    {
+      "id": "The_Norka_MM039",
+      "filename": "The_Norka_MM039.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "they had been in the other world.",
+      "description": "[princesses comparing garments to memory]",
+      "scene": "Princesses receive their wedding garments"
+    },
+    {
+      "id": "The_Norka_MM040",
+      "filename": "The_Norka_MM040.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He gave her leave, and she went and began bestowing alms upon them, and examining",
+      "description": "[youngest bride examining beggars closely]",
+      "scene": "Youngest bride recognizes the prince as a beggar"
+    },
+    {
+      "id": "The_Norka_MM041",
+      "filename": "The_Norka_MM041.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "them closely.",
+      "description": "[bride recognizing prince among beggars]",
+      "scene": "Youngest bride recognizes the prince as a beggar"
+    }
+  ]
+}

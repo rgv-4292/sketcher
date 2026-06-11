@@ -1,0 +1,3142 @@
+{
+  "width": 720,
+  "height": 720,
+  "format": "png",
+  "name": "Soria Moria Castle",
+  "captionFontSize": 14,
+  "defaultTransitionDuration": 2000,
+  "pages": [
+    {
+      "id": "Soria_Moria_Castle_MM001",
+      "filename": "Soria_Moria_Castle_MM001.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "There was once upon a time a couple of folks who had a son called",
+      "description": "[lazy youth playing in hearth ashes]",
+      "scene": "Young boy raking ashes by fireplace"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM002",
+      "filename": "Soria_Moria_Castle_MM002.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor.",
+      "description": "[embers glowing around idle hands]",
+      "scene": "Young boy raking ashes by fireplace"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM003",
+      "filename": "Soria_Moria_Castle_MM003.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Ever since he had been a little boy he had been unwilling to do any",
+      "description": "[slouching figure avoiding all work]",
+      "scene": "Lazy boy sits in chimney corner"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM004",
+      "filename": "Soria_Moria_Castle_MM004.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "work,",
+      "description": "[ash-covered face reflecting firelight]",
+      "scene": "Lazy boy sits in chimney corner"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM005",
+      "filename": "Soria_Moria_Castle_MM005.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and had just sat raking about among the ashes.",
+      "description": "[refusal to participate in life]",
+      "scene": "Lazy boy sits in chimney corner"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM006",
+      "filename": "Soria_Moria_Castle_MM006.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "His parents sent him away to learn several things, but Halvor stayed nowhere, for when",
+      "description": "[establishing shot of parents send him away repeatedly]",
+      "scene": "Parents send him away repeatedly"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM007",
+      "filename": "Soria_Moria_Castle_MM007.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "he had been gone two or three days he always ran away from his master,",
+      "description": "[close-up detail of parents send him away repeatedly]",
+      "scene": "Parents send him away repeatedly"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM008",
+      "filename": "Soria_Moria_Castle_MM008.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "hurried off home, and sat down in the chimney corner to grub among the ashes",
+      "description": "[characters in parents send him away repeatedly]",
+      "scene": "Parents send him away repeatedly"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM009",
+      "filename": "Soria_Moria_Castle_MM009.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "again.",
+      "description": "[wide view of parents send him away repeatedly]",
+      "scene": "Parents send him away repeatedly"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM010",
+      "filename": "Soria_Moria_Castle_MM010.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "One day, however, a sea captain came and asked Halvor if he hadn't a fancy",
+      "description": "[establishing shot of sea captain speaks to halvor]",
+      "scene": "Sea captain speaks to Halvor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM011",
+      "filename": "Soria_Moria_Castle_MM011.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to come with him and go to sea, and behold foreign lands.",
+      "description": "[close-up detail of sea captain speaks to halvor]",
+      "scene": "Sea captain speaks to Halvor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM012",
+      "filename": "Soria_Moria_Castle_MM012.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And Halvor had a fancy for that, so he was not long in getting ready.",
+      "description": "[establishing shot of halvor boards the sailing ship]",
+      "scene": "Halvor boards the sailing ship"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM013",
+      "filename": "Soria_Moria_Castle_MM013.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "How long they sailed I have no idea, but after a long, long time there",
+      "description": "[establishing shot of ship tossed in terrible storm]",
+      "scene": "Ship tossed in terrible storm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM014",
+      "filename": "Soria_Moria_Castle_MM014.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "was a terrible storm, and when it was over and all had become calm again,",
+      "description": "[close-up detail of ship tossed in terrible storm]",
+      "scene": "Ship tossed in terrible storm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM015",
+      "filename": "Soria_Moria_Castle_MM015.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "they knew not where they were, for they had been driven away to a strange",
+      "description": "[characters in ship tossed in terrible storm]",
+      "scene": "Ship tossed in terrible storm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM016",
+      "filename": "Soria_Moria_Castle_MM016.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "coast of which none of them had any knowledge.",
+      "description": "[wide view of ship tossed in terrible storm]",
+      "scene": "Ship tossed in terrible storm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM017",
+      "filename": "Soria_Moria_Castle_MM017.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "As there was no wind at all they lay there becalmed, and Halvor asked the",
+      "description": "[establishing shot of ship becalmed on unknown shore]",
+      "scene": "Ship becalmed on unknown shore"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM018",
+      "filename": "Soria_Moria_Castle_MM018.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "skipper to give him leave to go on shore to look about him, for he",
+      "description": "[close-up detail of ship becalmed on unknown shore]",
+      "scene": "Ship becalmed on unknown shore"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM019",
+      "filename": "Soria_Moria_Castle_MM019.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "would much rather do that than lie there and sleep.",
+      "description": "[characters in ship becalmed on unknown shore]",
+      "scene": "Ship becalmed on unknown shore"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM020",
+      "filename": "Soria_Moria_Castle_MM020.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Dost thou think that thou art fit to go where people can see thee?' said",
+      "description": "[establishing shot of captain mocks his ragged clothes]",
+      "scene": "Captain mocks his ragged clothes"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM021",
+      "filename": "Soria_Moria_Castle_MM021.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the skipper;",
+      "description": "[close-up detail of captain mocks his ragged clothes]",
+      "scene": "Captain mocks his ragged clothes"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM022",
+      "filename": "Soria_Moria_Castle_MM022.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'thou hast no clothes but those rags thou art going about in!'",
+      "description": "[characters in captain mocks his ragged clothes]",
+      "scene": "Captain mocks his ragged clothes"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM023",
+      "filename": "Soria_Moria_Castle_MM023.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor still begged for leave, and at last got it, but he was to come",
+      "description": "[establishing shot of halvor begs to go ashore]",
+      "scene": "Halvor begs to go ashore"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM024",
+      "filename": "Soria_Moria_Castle_MM024.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "back at once if the wind began to rise.",
+      "description": "[close-up detail of halvor begs to go ashore]",
+      "scene": "Halvor begs to go ashore"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM025",
+      "filename": "Soria_Moria_Castle_MM025.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So he went on shore, and it was a delightful country; whithersoever he went there",
+      "description": "[establishing shot of halvor walks through pleasant countryside]",
+      "scene": "Halvor walks through pleasant countryside"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM026",
+      "filename": "Soria_Moria_Castle_MM026.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "were wide plains with fields and meadows, but as for people, there were none to",
+      "description": "[close-up detail of halvor walks through pleasant countryside]",
+      "scene": "Halvor walks through pleasant countryside"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM027",
+      "filename": "Soria_Moria_Castle_MM027.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "be seen.",
+      "description": "[characters in halvor walks through pleasant countryside]",
+      "scene": "Halvor walks through pleasant countryside"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM028",
+      "filename": "Soria_Moria_Castle_MM028.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The wind began to rise, but Halvor thought that he had not seen enough yet,",
+      "description": "[establishing shot of halvor follows smooth highway]",
+      "scene": "Halvor follows smooth highway"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM029",
+      "filename": "Soria_Moria_Castle_MM029.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and that he would like to walk about a little longer, to try if he",
+      "description": "[close-up detail of halvor follows smooth highway]",
+      "scene": "Halvor follows smooth highway"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM030",
+      "filename": "Soria_Moria_Castle_MM030.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "could not meet somebody.",
+      "description": "[characters in halvor follows smooth highway]",
+      "scene": "Halvor follows smooth highway"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM031",
+      "filename": "Soria_Moria_Castle_MM031.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So after a while he came to a great highway, which was so smooth that",
+      "description": "[establishing shot of gleaming castle appears in distance]",
+      "scene": "Gleaming castle appears in distance"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM032",
+      "filename": "Soria_Moria_Castle_MM032.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "an egg might have been rolled along it without breaking.",
+      "description": "[close-up detail of gleaming castle appears in distance]",
+      "scene": "Gleaming castle appears in distance"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM033",
+      "filename": "Soria_Moria_Castle_MM033.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor followed this, and when evening drew near he saw a big castle far away",
+      "description": "[establishing shot of fear grows as he approaches]",
+      "scene": "Fear grows as he approaches"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM034",
+      "filename": "Soria_Moria_Castle_MM034.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "in the distance, and there were lights in it.",
+      "description": "[close-up detail of fear grows as he approaches]",
+      "scene": "Fear grows as he approaches"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM035",
+      "filename": "Soria_Moria_Castle_MM035.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So as he had now been walking the whole day and had not brought anything",
+      "description": "[establishing shot of halvor enters magnificent kitchen]",
+      "scene": "Halvor enters magnificent kitchen"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM036",
+      "filename": "Soria_Moria_Castle_MM036.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to eat away with him, he was frightfully hungry.",
+      "description": "[close-up detail of halvor enters magnificent kitchen]",
+      "scene": "Halvor enters magnificent kitchen"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM037",
+      "filename": "Soria_Moria_Castle_MM037.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "A fire was burning in the castle, and Halvor went into the kitchen, which was",
+      "description": "[establishing shot of a fire burns in the castle kitchen]",
+      "scene": "A fire burns in the castle kitchen"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM038",
+      "filename": "Soria_Moria_Castle_MM038.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "more magnificent than any kitchen he had ever yet beheld.",
+      "description": "[close-up detail of a fire burns in the castle kitchen]",
+      "scene": "A fire burns in the castle kitchen"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM039",
+      "filename": "Soria_Moria_Castle_MM039.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "There were vessels of gold and silver, but not one human being was to be",
+      "description": "[establishing shot of vessels of gold and silver]",
+      "scene": "Vessels of gold and silver"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM040",
+      "filename": "Soria_Moria_Castle_MM040.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "seen.",
+      "description": "[close-up detail of vessels of gold and silver]",
+      "scene": "Vessels of gold and silver"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM041",
+      "filename": "Soria_Moria_Castle_MM041.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When Halvor had stood there for some time, and no one had come out, he",
+      "description": "[establishing shot of halvor opens door to princess]",
+      "scene": "Halvor opens door to Princess"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM042",
+      "filename": "Soria_Moria_Castle_MM042.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "went in and opened a door, and inside a Princess was sitting at her wheel",
+      "description": "[close-up detail of halvor opens door to princess]",
+      "scene": "Halvor opens door to Princess"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM043",
+      "filename": "Soria_Moria_Castle_MM043.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "spinning.",
+      "description": "[characters in halvor opens door to princess]",
+      "scene": "Halvor opens door to Princess"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM044",
+      "filename": "Soria_Moria_Castle_MM044.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Nay!' she cried, 'can Christian folk dare to come hither?",
+      "description": "[establishing shot of princess cries out in alarm]",
+      "scene": "Princess cries out in alarm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM045",
+      "filename": "Soria_Moria_Castle_MM045.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But the best thing that you can do is to go away again, for if",
+      "description": "[establishing shot of princess warns of the troll]",
+      "scene": "Princess warns of the Troll"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM046",
+      "filename": "Soria_Moria_Castle_MM046.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "not the Troll will devour you.",
+      "description": "[close-up detail of princess warns of the troll]",
+      "scene": "Princess warns of the Troll"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM047",
+      "filename": "Soria_Moria_Castle_MM047.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "A Troll with three heads lives here.'",
+      "description": "[establishing shot of a troll with three heads lives here]",
+      "scene": "A Troll with three heads lives here"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM048",
+      "filename": "Soria_Moria_Castle_MM048.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'I should have been just as well pleased if he had had four heads more,",
+      "description": "[establishing shot of halvor refuses to leave]",
+      "scene": "Halvor refuses to leave"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM049",
+      "filename": "Soria_Moria_Castle_MM049.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "for I should have enjoyed seeing the fellow,' said the youth; 'and I won't go",
+      "description": "[close-up detail of halvor refuses to leave]",
+      "scene": "Halvor refuses to leave"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM050",
+      "filename": "Soria_Moria_Castle_MM050.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "away,",
+      "description": "[characters in halvor refuses to leave]",
+      "scene": "Halvor refuses to leave"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM051",
+      "filename": "Soria_Moria_Castle_MM051.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "for I have done no harm, but you must give me something to eat, for",
+      "description": "[wide view of halvor refuses to leave]",
+      "scene": "Halvor refuses to leave"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM052",
+      "filename": "Soria_Moria_Castle_MM052.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "I am frightfully hungry.'",
+      "description": "[intimate moment in halvor refuses to leave]",
+      "scene": "Halvor refuses to leave"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM053",
+      "filename": "Soria_Moria_Castle_MM053.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When Halvor had eaten his fill, the Princess told him to try if he could",
+      "description": "[establishing shot of princess offers the troll's sword]",
+      "scene": "Princess offers the Troll's sword"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM054",
+      "filename": "Soria_Moria_Castle_MM054.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "wield the sword which was hanging on the wall, but he could not wield it,",
+      "description": "[close-up detail of princess offers the troll's sword]",
+      "scene": "Princess offers the Troll's sword"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM055",
+      "filename": "Soria_Moria_Castle_MM055.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "nor could he even lift it up.",
+      "description": "[characters in princess offers the troll's sword]",
+      "scene": "Princess offers the Troll's sword"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM056",
+      "filename": "Soria_Moria_Castle_MM056.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Well, then, you must take a drink out of that bottle which is hanging by",
+      "description": "[establishing shot of princess points to the flask]",
+      "scene": "Princess points to the flask"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM057",
+      "filename": "Soria_Moria_Castle_MM057.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "its side,",
+      "description": "[close-up detail of princess points to the flask]",
+      "scene": "Princess points to the flask"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM058",
+      "filename": "Soria_Moria_Castle_MM058.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "for that's what the Troll does whenever he goes out and wants to use the",
+      "description": "[characters in princess points to the flask]",
+      "scene": "Princess points to the flask"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM059",
+      "filename": "Soria_Moria_Castle_MM059.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "sword,' said the Princess.",
+      "description": "[wide view of princess points to the flask]",
+      "scene": "Princess points to the flask"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM060",
+      "filename": "Soria_Moria_Castle_MM060.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor took a draught, and in a moment he was able to swing the sword",
+      "description": "[establishing shot of halvor drinks and swings the sword]",
+      "scene": "Halvor drinks and swings the sword"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM061",
+      "filename": "Soria_Moria_Castle_MM061.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "about with perfect ease.",
+      "description": "[close-up detail of halvor drinks and swings the sword]",
+      "scene": "Halvor drinks and swings the sword"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM062",
+      "filename": "Soria_Moria_Castle_MM062.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And now he thought it was high time for the Troll to make his appearance,",
+      "description": "[establishing shot of troll arrives panting]",
+      "scene": "Troll arrives panting"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM063",
+      "filename": "Soria_Moria_Castle_MM063.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and at that very moment he came, panting for breath.",
+      "description": "[close-up detail of troll arrives panting]",
+      "scene": "Troll arrives panting"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM064",
+      "filename": "Soria_Moria_Castle_MM064.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor got behind the door.",
+      "description": "[establishing shot of halvor hides behind the door]",
+      "scene": "Halvor hides behind the door"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM065",
+      "filename": "Soria_Moria_Castle_MM065.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Hutetu!' said the Troll as he put his head in at the door. 'It smells",
+      "description": "[establishing shot of troll announces smell of christian blood]",
+      "scene": "Troll announces smell of Christian blood"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM066",
+      "filename": "Soria_Moria_Castle_MM066.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "just as if there were Christian man's blood here!'",
+      "description": "[close-up detail of troll announces smell of christian blood]",
+      "scene": "Troll announces smell of Christian blood"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM067",
+      "filename": "Soria_Moria_Castle_MM067.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Yes, you shall learn that there is!' said Halvor, and cut off all his heads.",
+      "description": "[establishing shot of halvor cuts off the troll's heads]",
+      "scene": "Halvor cuts off the Troll's heads"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM068",
+      "filename": "Soria_Moria_Castle_MM068.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The Princess was so rejoiced to be free that she danced and sang, but then",
+      "description": "[establishing shot of princess dances and sings with joy]",
+      "scene": "Princess dances and sings with joy"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM069",
+      "filename": "Soria_Moria_Castle_MM069.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "she remembered her sisters, and said: 'If my sisters were but free too!'",
+      "description": "[close-up detail of princess dances and sings with joy]",
+      "scene": "Princess dances and sings with joy"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM070",
+      "filename": "Soria_Moria_Castle_MM070.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Where are they?' asked Halvor.",
+      "description": "[establishing shot of halvor asks where the sisters are]",
+      "scene": "Halvor asks where the sisters are"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM071",
+      "filename": "Soria_Moria_Castle_MM071.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So she told him where they were.",
+      "description": "[establishing shot of she tells of two more castles]",
+      "scene": "She tells of two more castles"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM072",
+      "filename": "Soria_Moria_Castle_MM072.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "One of them had been taken away by a Troll to his castle, which was",
+      "description": "[establishing shot of six miles off, another castle]",
+      "scene": "Six miles off, another castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM073",
+      "filename": "Soria_Moria_Castle_MM073.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "six miles off, and the other had been carried off to a castle which was",
+      "description": "[close-up detail of six miles off, another castle]",
+      "scene": "Six miles off, another castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM074",
+      "filename": "Soria_Moria_Castle_MM074.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "nine miles farther off still.",
+      "description": "[characters in six miles off, another castle]",
+      "scene": "Six miles off, another castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM075",
+      "filename": "Soria_Moria_Castle_MM075.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'But now,' said she, 'you must first help me to get this dead body away",
+      "description": "[establishing shot of halvor clears the dead body away]",
+      "scene": "Halvor clears the dead body away"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM076",
+      "filename": "Soria_Moria_Castle_MM076.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "from here.'",
+      "description": "[close-up detail of halvor clears the dead body away]",
+      "scene": "Halvor clears the dead body away"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM077",
+      "filename": "Soria_Moria_Castle_MM077.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor was so strong that he cleared everything away, and made all clean and tidy",
+      "description": "[establishing shot of halvor cleans the castle]",
+      "scene": "Halvor cleans the castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM078",
+      "filename": "Soria_Moria_Castle_MM078.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "very quickly.",
+      "description": "[close-up detail of halvor cleans the castle]",
+      "scene": "Halvor cleans the castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM079",
+      "filename": "Soria_Moria_Castle_MM079.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So then they ate and drank, and were happy, and next morning he set off",
+      "description": "[establishing shot of they eat and drink together]",
+      "scene": "They eat and drink together"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM080",
+      "filename": "Soria_Moria_Castle_MM080.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "in the grey light of dawn.",
+      "description": "[close-up detail of they eat and drink together]",
+      "scene": "They eat and drink together"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM081",
+      "filename": "Soria_Moria_Castle_MM081.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He gave himself no rest, but walked or ran the livelong day.",
+      "description": "[establishing shot of halvor walks all day]",
+      "scene": "Halvor walks all day"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM082",
+      "filename": "Soria_Moria_Castle_MM082.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When he came in sight of the castle he was again just a little afraid.",
+      "description": "[establishing shot of second castle appears, more splendid]",
+      "scene": "Second castle appears, more splendid"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM083",
+      "filename": "Soria_Moria_Castle_MM083.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "It was much more splendid than the other, but here too there was not a",
+      "description": "[establishing shot of second princess cries out]",
+      "scene": "Second Princess cries out"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM084",
+      "filename": "Soria_Moria_Castle_MM084.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "human being to be seen.",
+      "description": "[close-up detail of second princess cries out]",
+      "scene": "Second Princess cries out"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM085",
+      "filename": "Soria_Moria_Castle_MM085.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So Halvor went into the kitchen, and did not linger there either, but went straight",
+      "description": "[establishing shot of halvor goes straight inside]",
+      "scene": "Halvor goes straight inside"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM086",
+      "filename": "Soria_Moria_Castle_MM086.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "in.",
+      "description": "[close-up detail of halvor goes straight inside]",
+      "scene": "Halvor goes straight inside"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM087",
+      "filename": "Soria_Moria_Castle_MM087.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Nay! do Christian folk dare to come here?' cried the second Princess. 'I know not",
+      "description": "[establishing shot of second princess warns of six-headed troll]",
+      "scene": "Second Princess warns of six-headed Troll"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM088",
+      "filename": "Soria_Moria_Castle_MM088.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "how long it is since I myself came, but during all that time I have",
+      "description": "[close-up detail of second princess warns of six-headed troll]",
+      "scene": "Second Princess warns of six-headed Troll"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM089",
+      "filename": "Soria_Moria_Castle_MM089.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "never seen a Christian man.",
+      "description": "[characters in second princess warns of six-headed troll]",
+      "scene": "Second Princess warns of six-headed Troll"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM090",
+      "filename": "Soria_Moria_Castle_MM090.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "It will be better for you to depart at once, for a Troll lives here",
+      "description": "[establishing shot of a troll with six heads]",
+      "scene": "A Troll with six heads"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM091",
+      "filename": "Soria_Moria_Castle_MM091.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "who has six heads.'",
+      "description": "[close-up detail of a troll with six heads]",
+      "scene": "A Troll with six heads"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM092",
+      "filename": "Soria_Moria_Castle_MM092.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'No, I shall not go,' said Halvor; 'even if he had six more I would",
+      "description": "[establishing shot of halvor refuses again]",
+      "scene": "Halvor refuses again"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM093",
+      "filename": "Soria_Moria_Castle_MM093.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "not.'",
+      "description": "[close-up detail of halvor refuses again]",
+      "scene": "Halvor refuses again"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM094",
+      "filename": "Soria_Moria_Castle_MM094.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'He will swallow you up alive,' said the Princess.",
+      "description": "[establishing shot of princess says troll will devour him]",
+      "scene": "Princess says Troll will devour him"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM095",
+      "filename": "Soria_Moria_Castle_MM095.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But she spoke to no purpose, for Halvor would not go; he was not afraid",
+      "description": "[establishing shot of halvor asks for food and drink]",
+      "scene": "Halvor asks for food and drink"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM096",
+      "filename": "Soria_Moria_Castle_MM096.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "of the Troll, but he wanted some meat and drink, for he was hungry after",
+      "description": "[close-up detail of halvor asks for food and drink]",
+      "scene": "Halvor asks for food and drink"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM097",
+      "filename": "Soria_Moria_Castle_MM097.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "his journey.",
+      "description": "[characters in halvor asks for food and drink]",
+      "scene": "Halvor asks for food and drink"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM098",
+      "filename": "Soria_Moria_Castle_MM098.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So she gave him as much as he would have, and then she once more",
+      "description": "[establishing shot of princess tries sword, then flask]",
+      "scene": "Princess tries sword, then flask"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM099",
+      "filename": "Soria_Moria_Castle_MM099.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "tried to make him go away.",
+      "description": "[close-up detail of princess tries sword, then flask]",
+      "scene": "Princess tries sword, then flask"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM100",
+      "filename": "Soria_Moria_Castle_MM100.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'No,' said Halvor, 'I will not go, for I have not done anything wrong, and",
+      "description": "[establishing shot of halvor tests the sword]",
+      "scene": "Halvor tests the sword"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM101",
+      "filename": "Soria_Moria_Castle_MM101.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "I have no reason to be afraid.'",
+      "description": "[close-up detail of halvor tests the sword]",
+      "scene": "Halvor tests the sword"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM102",
+      "filename": "Soria_Moria_Castle_MM102.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Soon afterwards the Troll came, and he was so large and stout that he was",
+      "description": "[establishing shot of six-headed troll forces through door]",
+      "scene": "Six-headed Troll forces through door"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM103",
+      "filename": "Soria_Moria_Castle_MM103.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "forced to go sideways to get through the door.",
+      "description": "[close-up detail of six-headed troll forces through door]",
+      "scene": "Six-headed Troll forces through door"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM104",
+      "filename": "Soria_Moria_Castle_MM104.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When the Troll got his first head in he cried: 'Hutetu! It smells of a",
+      "description": "[establishing shot of troll smells christian blood]",
+      "scene": "Troll smells Christian blood"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM105",
+      "filename": "Soria_Moria_Castle_MM105.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Christian man's blood here!'",
+      "description": "[close-up detail of troll smells christian blood]",
+      "scene": "Troll smells Christian blood"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM106",
+      "filename": "Soria_Moria_Castle_MM106.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "With that Halvor cut off the first head, and so on with all the rest.",
+      "description": "[establishing shot of halvor cuts off all six heads]",
+      "scene": "Halvor cuts off all six heads"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM107",
+      "filename": "Soria_Moria_Castle_MM107.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The Princess was now exceedingly delighted, but then she remembered her sisters, and wished that",
+      "description": "[establishing shot of princess rejoices and thinks of sisters]",
+      "scene": "Princess rejoices and thinks of sisters"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM108",
+      "filename": "Soria_Moria_Castle_MM108.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "they too were free.",
+      "description": "[close-up detail of princess rejoices and thinks of sisters]",
+      "scene": "Princess rejoices and thinks of sisters"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM109",
+      "filename": "Soria_Moria_Castle_MM109.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor thought that might be managed, and wanted to set off immediately; but first he",
+      "description": "[establishing shot of halvor sets out again at dawn]",
+      "scene": "Halvor sets out again at dawn"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM110",
+      "filename": "Soria_Moria_Castle_MM110.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "had to help the Princess to remove the Troll's body, so it was not until",
+      "description": "[close-up detail of halvor sets out again at dawn]",
+      "scene": "Halvor sets out again at dawn"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM111",
+      "filename": "Soria_Moria_Castle_MM111.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "morning that he set forth on his way.",
+      "description": "[characters in halvor sets out again at dawn]",
+      "scene": "Halvor sets out again at dawn"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM112",
+      "filename": "Soria_Moria_Castle_MM112.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "It was a long way to the castle, and he both walked and ran to",
+      "description": "[establishing shot of third castle, most magnificent of all]",
+      "scene": "Third castle, most magnificent of all"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM113",
+      "filename": "Soria_Moria_Castle_MM113.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "get there in time.",
+      "description": "[close-up detail of third castle, most magnificent of all]",
+      "scene": "Third castle, most magnificent of all"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM114",
+      "filename": "Soria_Moria_Castle_MM114.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Late in the evening he caught sight of it, and it was very much more",
+      "description": "[establishing shot of halvor enters the third castle]",
+      "scene": "Halvor enters the third castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM115",
+      "filename": "Soria_Moria_Castle_MM115.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "magnificent than either of the others.",
+      "description": "[close-up detail of halvor enters the third castle]",
+      "scene": "Halvor enters the third castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM116",
+      "filename": "Soria_Moria_Castle_MM116.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And this time he was not in the least afraid, but went into the kitchen,",
+      "description": "[establishing shot of beautiful princess at spinning wheel]",
+      "scene": "Beautiful Princess at spinning wheel"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM117",
+      "filename": "Soria_Moria_Castle_MM117.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and then straight on inside the castle.",
+      "description": "[close-up detail of beautiful princess at spinning wheel]",
+      "scene": "Beautiful Princess at spinning wheel"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM118",
+      "filename": "Soria_Moria_Castle_MM118.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "There a Princess was sitting, who was so beautiful that there was never anyone to",
+      "description": "[establishing shot of princess is most beautiful of all]",
+      "scene": "Princess is most beautiful of all"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM119",
+      "filename": "Soria_Moria_Castle_MM119.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "equal her.",
+      "description": "[close-up detail of princess is most beautiful of all]",
+      "scene": "Princess is most beautiful of all"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM120",
+      "filename": "Soria_Moria_Castle_MM120.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She too said what the others had said, that no Christian folk had ever been",
+      "description": "[establishing shot of she warns of nine-headed troll]",
+      "scene": "She warns of nine-headed Troll"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM121",
+      "filename": "Soria_Moria_Castle_MM121.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "there since she had come, and entreated him to go away again, or else the",
+      "description": "[close-up detail of she warns of nine-headed troll]",
+      "scene": "She warns of nine-headed Troll"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM122",
+      "filename": "Soria_Moria_Castle_MM122.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Troll would swallow him up alive.",
+      "description": "[characters in she warns of nine-headed troll]",
+      "scene": "She warns of nine-headed Troll"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM123",
+      "filename": "Soria_Moria_Castle_MM123.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The Troll had nine heads, she told him.",
+      "description": "[establishing shot of nine heads this time]",
+      "scene": "Nine heads this time"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM124",
+      "filename": "Soria_Moria_Castle_MM124.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Yes, and if he had nine added to the nine, and then nine more still,",
+      "description": "[establishing shot of halvor stands firm]",
+      "scene": "Halvor stands firm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM125",
+      "filename": "Soria_Moria_Castle_MM125.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "I would not go away,' said Halvor, and went and stood by the stove.",
+      "description": "[close-up detail of halvor stands firm]",
+      "scene": "Halvor stands firm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM126",
+      "filename": "Soria_Moria_Castle_MM126.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The Princess begged him very prettily to go lest the Troll should devour him; but",
+      "description": "[establishing shot of princess begs him to go]",
+      "scene": "Princess begs him to go"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM127",
+      "filename": "Soria_Moria_Castle_MM127.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor said,",
+      "description": "[close-up detail of princess begs him to go]",
+      "scene": "Princess begs him to go"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM128",
+      "filename": "Soria_Moria_Castle_MM128.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Let him come when he will.'",
+      "description": "[characters in princess begs him to go]",
+      "scene": "Princess begs him to go"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM129",
+      "filename": "Soria_Moria_Castle_MM129.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So she gave him the Troll's sword, and bade him take a drink from the",
+      "description": "[establishing shot of she gives him the sword and flask]",
+      "scene": "She gives him the sword and flask"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM130",
+      "filename": "Soria_Moria_Castle_MM130.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "flask to enable him to wield it.",
+      "description": "[close-up detail of she gives him the sword and flask]",
+      "scene": "She gives him the sword and flask"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM131",
+      "filename": "Soria_Moria_Castle_MM131.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At that same moment the Troll came, breathing hard, and he was ever so much",
+      "description": "[establishing shot of nine-headed troll arrives]",
+      "scene": "Nine-headed Troll arrives"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM132",
+      "filename": "Soria_Moria_Castle_MM132.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "bigger and stouter than either of the others, and he too was forced to go",
+      "description": "[close-up detail of nine-headed troll arrives]",
+      "scene": "Nine-headed Troll arrives"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM133",
+      "filename": "Soria_Moria_Castle_MM133.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "sideways to get in through the door.",
+      "description": "[characters in nine-headed troll arrives]",
+      "scene": "Nine-headed Troll arrives"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM134",
+      "filename": "Soria_Moria_Castle_MM134.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Hutetu! what a smell of Christian blood there is here!' said he.",
+      "description": "[establishing shot of troll declares smell of blood]",
+      "scene": "Troll declares smell of blood"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM135",
+      "filename": "Soria_Moria_Castle_MM135.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then Halvor cut off the first head, and after that the others, but the last",
+      "description": "[establishing shot of halvor cuts off nine heads]",
+      "scene": "Halvor cuts off nine heads"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM136",
+      "filename": "Soria_Moria_Castle_MM136.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "was the toughest of them all, and it was the hardest work that Halvor had",
+      "description": "[close-up detail of halvor cuts off nine heads]",
+      "scene": "Halvor cuts off nine heads"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM137",
+      "filename": "Soria_Moria_Castle_MM137.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "ever done to get it off, but he still believed that he would have strength",
+      "description": "[characters in halvor cuts off nine heads]",
+      "scene": "Halvor cuts off nine heads"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM138",
+      "filename": "Soria_Moria_Castle_MM138.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "enough to do it.",
+      "description": "[wide view of halvor cuts off nine heads]",
+      "scene": "Halvor cuts off nine heads"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM139",
+      "filename": "Soria_Moria_Castle_MM139.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And now all the Princesses came to the castle, and were together again, and they",
+      "description": "[establishing shot of all three princesses reunited]",
+      "scene": "All three Princesses reunited"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM140",
+      "filename": "Soria_Moria_Castle_MM140.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "were happier than they had ever been in their lives.",
+      "description": "[close-up detail of all three princesses reunited]",
+      "scene": "All three Princesses reunited"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM141",
+      "filename": "Soria_Moria_Castle_MM141.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And they were delighted with Halvor, and he with them, and he was to choose",
+      "description": "[establishing shot of halvor to choose a bride]",
+      "scene": "Halvor to choose a bride"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM142",
+      "filename": "Soria_Moria_Castle_MM142.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the one he liked best; but of the three sisters the youngest loved him best.",
+      "description": "[close-up detail of halvor to choose a bride]",
+      "scene": "Halvor to choose a bride"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM143",
+      "filename": "Soria_Moria_Castle_MM143.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But Halvor went about and was so strange and so mournful and quiet that the",
+      "description": "[establishing shot of halvor grows sad and quiet]",
+      "scene": "Halvor grows sad and quiet"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM144",
+      "filename": "Soria_Moria_Castle_MM144.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Princesses asked what it was that he longed for, and if he did not like",
+      "description": "[close-up detail of halvor grows sad and quiet]",
+      "scene": "Halvor grows sad and quiet"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM145",
+      "filename": "Soria_Moria_Castle_MM145.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to be with them.",
+      "description": "[characters in halvor grows sad and quiet]",
+      "scene": "Halvor grows sad and quiet"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM146",
+      "filename": "Soria_Moria_Castle_MM146.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He said that he did like to be with them, for they had enough to",
+      "description": "[establishing shot of he longs for his parents]",
+      "scene": "He longs for his parents"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM147",
+      "filename": "Soria_Moria_Castle_MM147.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "live on,",
+      "description": "[close-up detail of he longs for his parents]",
+      "scene": "He longs for his parents"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM148",
+      "filename": "Soria_Moria_Castle_MM148.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and he was very comfortable there; but he longed to go home, for his father",
+      "description": "[characters in he longs for his parents]",
+      "scene": "He longs for his parents"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM149",
+      "filename": "Soria_Moria_Castle_MM149.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and mother were alive, and he had a great desire to see them again.",
+      "description": "[wide view of he longs for his parents]",
+      "scene": "He longs for his parents"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM150",
+      "filename": "Soria_Moria_Castle_MM150.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "They thought that this might easily be done.",
+      "description": "[establishing shot of princesses agree to help]",
+      "scene": "Princesses agree to help"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM151",
+      "filename": "Soria_Moria_Castle_MM151.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'You shall go and return in perfect safety if you will follow our advice,' said",
+      "description": "[establishing shot of they give him a magic ring]",
+      "scene": "They give him a magic ring"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM152",
+      "filename": "Soria_Moria_Castle_MM152.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the Princesses.",
+      "description": "[close-up detail of they give him a magic ring]",
+      "scene": "They give him a magic ring"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM153",
+      "filename": "Soria_Moria_Castle_MM153.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then they dressed him so splendidly that he was like a King's son; and they",
+      "description": "[establishing shot of ring lets him travel by wishing]",
+      "scene": "Ring lets him travel by wishing"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM154",
+      "filename": "Soria_Moria_Castle_MM154.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "put a ring on his finger, and it was one which would enable him to",
+      "description": "[close-up detail of ring lets him travel by wishing]",
+      "scene": "Ring lets him travel by wishing"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM155",
+      "filename": "Soria_Moria_Castle_MM155.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "go there and back again by wishing, but they told him that he must not",
+      "description": "[characters in ring lets him travel by wishing]",
+      "scene": "Ring lets him travel by wishing"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM156",
+      "filename": "Soria_Moria_Castle_MM156.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "throw it away, or name their names; for if he did, all his magnificence would",
+      "description": "[wide view of ring lets him travel by wishing]",
+      "scene": "Ring lets him travel by wishing"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM157",
+      "filename": "Soria_Moria_Castle_MM157.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "be at an end, and then he would never see them more.",
+      "description": "[intimate moment in ring lets him travel by wishing]",
+      "scene": "Ring lets him travel by wishing"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM158",
+      "filename": "Soria_Moria_Castle_MM158.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'If I were but at home again, or if home were but here!' said Halvor,",
+      "description": "[establishing shot of halvor wishes himself home]",
+      "scene": "Halvor wishes himself home"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM159",
+      "filename": "Soria_Moria_Castle_MM159.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and no sooner had he wished this than it was granted.",
+      "description": "[close-up detail of halvor wishes himself home]",
+      "scene": "Halvor wishes himself home"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM160",
+      "filename": "Soria_Moria_Castle_MM160.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor was standing outside his father and mother's cottage before he knew what he was",
+      "description": "[establishing shot of he stands outside his parents' cottage]",
+      "scene": "He stands outside his parents' cottage"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM161",
+      "filename": "Soria_Moria_Castle_MM161.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "about.",
+      "description": "[close-up detail of he stands outside his parents' cottage]",
+      "scene": "He stands outside his parents' cottage"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM162",
+      "filename": "Soria_Moria_Castle_MM162.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The darkness of night was coming on, and when the father and mother saw such",
+      "description": "[establishing shot of parents bow to the stranger]",
+      "scene": "Parents bow to the stranger"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM163",
+      "filename": "Soria_Moria_Castle_MM163.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a splendid and stately stranger walk in, they were so startled that they both began",
+      "description": "[close-up detail of parents bow to the stranger]",
+      "scene": "Parents bow to the stranger"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM164",
+      "filename": "Soria_Moria_Castle_MM164.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to bow and curtsey.",
+      "description": "[characters in parents bow to the stranger]",
+      "scene": "Parents bow to the stranger"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM165",
+      "filename": "Soria_Moria_Castle_MM165.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor then inquired if he could stay there and have lodging for the night.",
+      "description": "[establishing shot of halvor asks for lodging]",
+      "scene": "Halvor asks for lodging"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM166",
+      "filename": "Soria_Moria_Castle_MM166.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "No, that he certainly could not. 'We can give you no such accommodation,' they said,",
+      "description": "[establishing shot of parents send him to the farm]",
+      "scene": "Parents send him to the farm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM167",
+      "filename": "Soria_Moria_Castle_MM167.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'for we have none of the things that are needful when a great lord like",
+      "description": "[close-up detail of parents send him to the farm]",
+      "scene": "Parents send him to the farm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM168",
+      "filename": "Soria_Moria_Castle_MM168.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "you is to be entertained.",
+      "description": "[characters in parents send him to the farm]",
+      "scene": "Parents send him to the farm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM169",
+      "filename": "Soria_Moria_Castle_MM169.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "It will be better for you to go up to the farm. It is not",
+      "description": "[establishing shot of they point to chimney-pots in distance]",
+      "scene": "They point to chimney-pots in distance"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM170",
+      "filename": "Soria_Moria_Castle_MM170.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "far off,",
+      "description": "[close-up detail of they point to chimney-pots in distance]",
+      "scene": "They point to chimney-pots in distance"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM171",
+      "filename": "Soria_Moria_Castle_MM171.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "you can see the chimney-pots from here, and there they have plenty of everything.'",
+      "description": "[characters in they point to chimney-pots in distance]",
+      "scene": "They point to chimney-pots in distance"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM172",
+      "filename": "Soria_Moria_Castle_MM172.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor would not hear of that, he was absolutely determined to stay where he was;",
+      "description": "[establishing shot of halvor insists on staying]",
+      "scene": "Halvor insists on staying"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM173",
+      "filename": "Soria_Moria_Castle_MM173.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "but the old folks stuck to what they had said, and told him that he",
+      "description": "[close-up detail of halvor insists on staying]",
+      "scene": "Halvor insists on staying"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM174",
+      "filename": "Soria_Moria_Castle_MM174.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "was to go to the farm, where he could get both meat and drink, whereas",
+      "description": "[characters in halvor insists on staying]",
+      "scene": "Halvor insists on staying"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM175",
+      "filename": "Soria_Moria_Castle_MM175.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "they themselves had not even a chair to offer him.",
+      "description": "[wide view of halvor insists on staying]",
+      "scene": "Halvor insists on staying"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM176",
+      "filename": "Soria_Moria_Castle_MM176.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'No,' said Halvor, 'I will not go up there till early to-morrow morning; let me",
+      "description": "[establishing shot of halvor sits on the hearth]",
+      "scene": "Halvor sits on the hearth"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM177",
+      "filename": "Soria_Moria_Castle_MM177.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "stay here to-night. I can sit down on the hearth.'",
+      "description": "[close-up detail of halvor sits on the hearth]",
+      "scene": "Halvor sits on the hearth"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM178",
+      "filename": "Soria_Moria_Castle_MM178.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "They could say nothing against that, so Halvor sat down on the hearth, and began",
+      "description": "[establishing shot of he rakes among the ashes again]",
+      "scene": "He rakes among the ashes again"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM179",
+      "filename": "Soria_Moria_Castle_MM179.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to rake about among the ashes just as he had done before, when he lay",
+      "description": "[close-up detail of he rakes among the ashes again]",
+      "scene": "He rakes among the ashes again"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM180",
+      "filename": "Soria_Moria_Castle_MM180.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "there idling away his time.",
+      "description": "[characters in he rakes among the ashes again]",
+      "scene": "He rakes among the ashes again"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM181",
+      "filename": "Soria_Moria_Castle_MM181.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "They chattered much about many things, and told Halvor of this and of that, and",
+      "description": "[establishing shot of parents tell of their lost son]",
+      "scene": "Parents tell of their lost son"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM182",
+      "filename": "Soria_Moria_Castle_MM182.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "at last he asked them if they had never had any child.",
+      "description": "[close-up detail of parents tell of their lost son]",
+      "scene": "Parents tell of their lost son"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM183",
+      "filename": "Soria_Moria_Castle_MM183.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Yes,' they said; they had had a boy who was called Halvor, but they did",
+      "description": "[establishing shot of they speak of halvor]",
+      "scene": "They speak of Halvor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM184",
+      "filename": "Soria_Moria_Castle_MM184.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "not know where he had gone, and they could not even say whether he were",
+      "description": "[close-up detail of they speak of halvor]",
+      "scene": "They speak of Halvor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM185",
+      "filename": "Soria_Moria_Castle_MM185.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "dead or alive.",
+      "description": "[characters in they speak of halvor]",
+      "scene": "They speak of Halvor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM186",
+      "filename": "Soria_Moria_Castle_MM186.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Could I be he?' said Halvor.",
+      "description": "[establishing shot of 'could i be he?']",
+      "scene": "'Could I be he?'"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM187",
+      "filename": "Soria_Moria_Castle_MM187.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'I should know him well enough,' said the old woman rising. 'Our Halvor was so",
+      "description": "[establishing shot of mother rises to look]",
+      "scene": "Mother rises to look"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM188",
+      "filename": "Soria_Moria_Castle_MM188.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "idle and slothful that he never did anything at all, and he was so ragged",
+      "description": "[close-up detail of mother rises to look]",
+      "scene": "Mother rises to look"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM189",
+      "filename": "Soria_Moria_Castle_MM189.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "that one hole ran into another all over his clothes.",
+      "description": "[characters in mother rises to look]",
+      "scene": "Mother rises to look"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM190",
+      "filename": "Soria_Moria_Castle_MM190.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Such a fellow as he was could never turn into such a man as you",
+      "description": "[establishing shot of she cannot believe it]",
+      "scene": "She cannot believe it"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM191",
+      "filename": "Soria_Moria_Castle_MM191.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "are,",
+      "description": "[close-up detail of she cannot believe it]",
+      "scene": "She cannot believe it"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM192",
+      "filename": "Soria_Moria_Castle_MM192.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "sir.'",
+      "description": "[characters in she cannot believe it]",
+      "scene": "She cannot believe it"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM193",
+      "filename": "Soria_Moria_Castle_MM193.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "In a short time the old woman had to go to the fireplace to stir",
+      "description": "[establishing shot of firelight reveals halvor's face]",
+      "scene": "Firelight reveals Halvor's face"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM194",
+      "filename": "Soria_Moria_Castle_MM194.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the fire,",
+      "description": "[close-up detail of firelight reveals halvor's face]",
+      "scene": "Firelight reveals Halvor's face"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM195",
+      "filename": "Soria_Moria_Castle_MM195.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and when the blaze lit up Halvor, as it used to do when he was",
+      "description": "[characters in firelight reveals halvor's face]",
+      "scene": "Firelight reveals Halvor's face"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM196",
+      "filename": "Soria_Moria_Castle_MM196.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "at home raking up the ashes, she knew him again.",
+      "description": "[wide view of firelight reveals halvor's face]",
+      "scene": "Firelight reveals Halvor's face"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM197",
+      "filename": "Soria_Moria_Castle_MM197.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Good Heavens! is that you, Halvor?' said she, and such great gladness fell on the",
+      "description": "[establishing shot of 'good heavens, is that you halvor?']",
+      "scene": "'Good Heavens, is that you Halvor?'"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM198",
+      "filename": "Soria_Moria_Castle_MM198.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "old parents that there were no bounds to it.",
+      "description": "[close-up detail of 'good heavens, is that you halvor?']",
+      "scene": "'Good Heavens, is that you Halvor?'"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM199",
+      "filename": "Soria_Moria_Castle_MM199.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And now he had to relate everything that had befallen him, and the old woman",
+      "description": "[establishing shot of halvor tells his story]",
+      "scene": "Halvor tells his story"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM200",
+      "filename": "Soria_Moria_Castle_MM200.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "was so delighted with him that she would take him up to the farm at",
+      "description": "[close-up detail of halvor tells his story]",
+      "scene": "Halvor tells his story"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM201",
+      "filename": "Soria_Moria_Castle_MM201.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "once to show him to the girls who had formerly looked down on him so.",
+      "description": "[characters in halvor tells his story]",
+      "scene": "Halvor tells his story"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM202",
+      "filename": "Soria_Moria_Castle_MM202.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She went there first, and Halvor followed her. When she got there she told them",
+      "description": "[establishing shot of mother runs to the farm]",
+      "scene": "Mother runs to the farm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM203",
+      "filename": "Soria_Moria_Castle_MM203.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "how Halvor had come home again, and now they should just see how magnificent he",
+      "description": "[close-up detail of mother runs to the farm]",
+      "scene": "Mother runs to the farm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM204",
+      "filename": "Soria_Moria_Castle_MM204.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "was.",
+      "description": "[characters in mother runs to the farm]",
+      "scene": "Mother runs to the farm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM205",
+      "filename": "Soria_Moria_Castle_MM205.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'He looks like a prince,' she said.",
+      "description": "[wide view of mother runs to the farm]",
+      "scene": "Mother runs to the farm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM206",
+      "filename": "Soria_Moria_Castle_MM206.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'We shall see that he is just the same ragamuffin that he was before,' said",
+      "description": "[establishing shot of girls scoff at the news]",
+      "scene": "Girls scoff at the news"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM207",
+      "filename": "Soria_Moria_Castle_MM207.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the girls,",
+      "description": "[close-up detail of girls scoff at the news]",
+      "scene": "Girls scoff at the news"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM208",
+      "filename": "Soria_Moria_Castle_MM208.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "tossing their heads.",
+      "description": "[characters in girls scoff at the news]",
+      "scene": "Girls scoff at the news"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM209",
+      "filename": "Soria_Moria_Castle_MM209.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At that same moment Halvor entered, and the girls were so astonished that they left",
+      "description": "[establishing shot of halvor enters in splendor]",
+      "scene": "Halvor enters in splendor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM210",
+      "filename": "Soria_Moria_Castle_MM210.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "their kirtles lying in the chimney corner, and ran away in nothing but their petticoats.",
+      "description": "[close-up detail of halvor enters in splendor]",
+      "scene": "Halvor enters in splendor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM211",
+      "filename": "Soria_Moria_Castle_MM211.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When they came in again they were so shamefaced that they hardly dared to look",
+      "description": "[establishing shot of girls are shamefaced]",
+      "scene": "Girls are shamefaced"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM212",
+      "filename": "Soria_Moria_Castle_MM212.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "at Halvor,",
+      "description": "[close-up detail of girls are shamefaced]",
+      "scene": "Girls are shamefaced"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM213",
+      "filename": "Soria_Moria_Castle_MM213.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "towards whom they had always been so proud and haughty before.",
+      "description": "[characters in girls are shamefaced]",
+      "scene": "Girls are shamefaced"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM214",
+      "filename": "Soria_Moria_Castle_MM214.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Ay, ay! you have always thought that you were so pretty and dainty that no",
+      "description": "[establishing shot of halvor boasts of the princesses]",
+      "scene": "Halvor boasts of the Princesses"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM215",
+      "filename": "Soria_Moria_Castle_MM215.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "one was equal to you,' said Halvor, 'but you should just see the eldest Princess",
+      "description": "[close-up detail of halvor boasts of the princesses]",
+      "scene": "Halvor boasts of the Princesses"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM216",
+      "filename": "Soria_Moria_Castle_MM216.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "whom I set free.",
+      "description": "[characters in halvor boasts of the princesses]",
+      "scene": "Halvor boasts of the Princesses"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM217",
+      "filename": "Soria_Moria_Castle_MM217.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "You look like herds-women compared with her, and the second Princess is also much prettier",
+      "description": "[establishing shot of he describes their beauty]",
+      "scene": "He describes their beauty"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM218",
+      "filename": "Soria_Moria_Castle_MM218.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "than you;",
+      "description": "[close-up detail of he describes their beauty]",
+      "scene": "He describes their beauty"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM219",
+      "filename": "Soria_Moria_Castle_MM219.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "but the youngest, who is my sweetheart, is more beautiful than either sun or moon.",
+      "description": "[characters in he describes their beauty]",
+      "scene": "He describes their beauty"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM220",
+      "filename": "Soria_Moria_Castle_MM220.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "I wish to Heaven they were here, and then you would see them.'",
+      "description": "[establishing shot of he wishes them there]",
+      "scene": "He wishes them there"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM221",
+      "filename": "Soria_Moria_Castle_MM221.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Scarcely had he said this before they were standing by his side, but then he",
+      "description": "[establishing shot of princesses appear at his side]",
+      "scene": "Princesses appear at his side"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM222",
+      "filename": "Soria_Moria_Castle_MM222.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "was very sorrowful, for the words which they had said to him came to his",
+      "description": "[close-up detail of princesses appear at his side]",
+      "scene": "Princesses appear at his side"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM223",
+      "filename": "Soria_Moria_Castle_MM223.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "mind.",
+      "description": "[characters in princesses appear at his side]",
+      "scene": "Princesses appear at his side"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM224",
+      "filename": "Soria_Moria_Castle_MM224.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Up at the farm a great feast was made ready for the Princesses, and much",
+      "description": "[establishing shot of feast at the farm]",
+      "scene": "Feast at the farm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM225",
+      "filename": "Soria_Moria_Castle_MM225.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "respect paid to them, but they would not stay there.",
+      "description": "[close-up detail of feast at the farm]",
+      "scene": "Feast at the farm"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM226",
+      "filename": "Soria_Moria_Castle_MM226.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'We want to go down to your parents,' they said to Halvor, 'so we will",
+      "description": "[establishing shot of princesses want to visit the cottage]",
+      "scene": "Princesses want to visit the cottage"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM227",
+      "filename": "Soria_Moria_Castle_MM227.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "go out and look about us.'",
+      "description": "[close-up detail of princesses want to visit the cottage]",
+      "scene": "Princesses want to visit the cottage"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM228",
+      "filename": "Soria_Moria_Castle_MM228.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He followed them out, and they came to a large pond outside the farm-house. Very",
+      "description": "[establishing shot of they sit by a green bank near a pond]",
+      "scene": "They sit by a green bank near a pond"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM229",
+      "filename": "Soria_Moria_Castle_MM229.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "near the water there was a pretty green bank, and there the Princesses said they",
+      "description": "[close-up detail of they sit by a green bank near a pond]",
+      "scene": "They sit by a green bank near a pond"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM230",
+      "filename": "Soria_Moria_Castle_MM230.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "would sit down and while away an hour, for they thought that it would be",
+      "description": "[characters in they sit by a green bank near a pond]",
+      "scene": "They sit by a green bank near a pond"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM231",
+      "filename": "Soria_Moria_Castle_MM231.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "pleasant to sit and look out over the water, they said.",
+      "description": "[wide view of they sit by a green bank near a pond]",
+      "scene": "They sit by a green bank near a pond"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM232",
+      "filename": "Soria_Moria_Castle_MM232.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "There they sat down, and when they had sat for a short time the youngest",
+      "description": "[establishing shot of youngest princess combs his hair]",
+      "scene": "Youngest Princess combs his hair"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM233",
+      "filename": "Soria_Moria_Castle_MM233.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Princess said,",
+      "description": "[close-up detail of youngest princess combs his hair]",
+      "scene": "Youngest Princess combs his hair"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM234",
+      "filename": "Soria_Moria_Castle_MM234.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'I may as well comb your hair a little, Halvor.'",
+      "description": "[characters in youngest princess combs his hair]",
+      "scene": "Youngest Princess combs his hair"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM235",
+      "filename": "Soria_Moria_Castle_MM235.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So Halvor laid his head down on her lap, and she combed it, and it",
+      "description": "[establishing shot of halvor falls asleep on her lap]",
+      "scene": "Halvor falls asleep on her lap"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM236",
+      "filename": "Soria_Moria_Castle_MM236.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "was not long before he fell asleep.",
+      "description": "[close-up detail of halvor falls asleep on her lap]",
+      "scene": "Halvor falls asleep on her lap"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM237",
+      "filename": "Soria_Moria_Castle_MM237.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then she took her ring from him and put another in its place, and then",
+      "description": "[establishing shot of she swaps the ring on his finger]",
+      "scene": "She swaps the ring on his finger"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM238",
+      "filename": "Soria_Moria_Castle_MM238.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "she said to her sisters: 'Hold me as I am holding you.",
+      "description": "[close-up detail of she swaps the ring on his finger]",
+      "scene": "She swaps the ring on his finger"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM239",
+      "filename": "Soria_Moria_Castle_MM239.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "I would that we were at Soria Moria Castle.'",
+      "description": "[establishing shot of princesses vanish to soria moria castle]",
+      "scene": "Princesses vanish to Soria Moria Castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM240",
+      "filename": "Soria_Moria_Castle_MM240.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When Halvor awoke he knew that he had lost the Princesses, and began to weep",
+      "description": "[establishing shot of halvor awakens alone]",
+      "scene": "Halvor awakens alone"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM241",
+      "filename": "Soria_Moria_Castle_MM241.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and lament,",
+      "description": "[close-up detail of halvor awakens alone]",
+      "scene": "Halvor awakens alone"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM242",
+      "filename": "Soria_Moria_Castle_MM242.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and was so unhappy that he could not be comforted.",
+      "description": "[characters in halvor awakens alone]",
+      "scene": "Halvor awakens alone"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM243",
+      "filename": "Soria_Moria_Castle_MM243.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "In spite of all his father's and mother's entreaties, he would not stay, but bade",
+      "description": "[establishing shot of he bids farewell to his parents]",
+      "scene": "He bids farewell to his parents"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM244",
+      "filename": "Soria_Moria_Castle_MM244.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "them farewell,",
+      "description": "[close-up detail of he bids farewell to his parents]",
+      "scene": "He bids farewell to his parents"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM245",
+      "filename": "Soria_Moria_Castle_MM245.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "saying that he would never see them more, for if he did not find the",
+      "description": "[characters in he bids farewell to his parents]",
+      "scene": "He bids farewell to his parents"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM246",
+      "filename": "Soria_Moria_Castle_MM246.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Princess again he did not think it worth while to live.",
+      "description": "[wide view of he bids farewell to his parents]",
+      "scene": "He bids farewell to his parents"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM247",
+      "filename": "Soria_Moria_Castle_MM247.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He again had three hundred dollars, which he put into his pocket and went on",
+      "description": "[establishing shot of halvor sets out with three hundred dollars]",
+      "scene": "Halvor sets out with three hundred dollars"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM248",
+      "filename": "Soria_Moria_Castle_MM248.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "his way.",
+      "description": "[close-up detail of halvor sets out with three hundred dollars]",
+      "scene": "Halvor sets out with three hundred dollars"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM249",
+      "filename": "Soria_Moria_Castle_MM249.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When he had walked some distance he met a man with a tolerably good horse.",
+      "description": "[establishing shot of he meets a man with a horse]",
+      "scene": "He meets a man with a horse"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM250",
+      "filename": "Soria_Moria_Castle_MM250.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor longed to buy it, and began to bargain with the man.",
+      "description": "[establishing shot of halvor bargains for the horse]",
+      "scene": "Halvor bargains for the horse"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM251",
+      "filename": "Soria_Moria_Castle_MM251.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Well, I have not exactly been thinking of selling him,' said the man, 'but if",
+      "description": "[establishing shot of man describes the horse]",
+      "scene": "Man describes the horse"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM252",
+      "filename": "Soria_Moria_Castle_MM252.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "we could agree, perhaps—'",
+      "description": "[close-up detail of man describes the horse]",
+      "scene": "Man describes the horse"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM253",
+      "filename": "Soria_Moria_Castle_MM253.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At last they agreed about the price, and Halvor laid his bag on the horse,",
+      "description": "[establishing shot of they agree on a price]",
+      "scene": "They agree on a price"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM254",
+      "filename": "Soria_Moria_Castle_MM254.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and sometimes he walked and sometimes he rode.",
+      "description": "[close-up detail of they agree on a price]",
+      "scene": "They agree on a price"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM255",
+      "filename": "Soria_Moria_Castle_MM255.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "In the evening he came to a green field, where stood a great tree, under",
+      "description": "[establishing shot of halvor sleeps under a great tree]",
+      "scene": "Halvor sleeps under a great tree"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM256",
+      "filename": "Soria_Moria_Castle_MM256.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "which he seated himself.",
+      "description": "[close-up detail of halvor sleeps under a great tree]",
+      "scene": "Halvor sleeps under a great tree"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM257",
+      "filename": "Soria_Moria_Castle_MM257.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then he let the horse loose and lay down to sleep, but before he did",
+      "description": "[establishing shot of he lets the horse loose]",
+      "scene": "He lets the horse loose"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM258",
+      "filename": "Soria_Moria_Castle_MM258.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "that he took his bag off the horse.",
+      "description": "[close-up detail of he lets the horse loose]",
+      "scene": "He lets the horse loose"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM259",
+      "filename": "Soria_Moria_Castle_MM259.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At daybreak he set off again, for he did not feel as if he could",
+      "description": "[establishing shot of he travels through great wood]",
+      "scene": "He travels through great wood"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM260",
+      "filename": "Soria_Moria_Castle_MM260.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "take any rest. So he walked and rode the whole day, through a great wood",
+      "description": "[close-up detail of he travels through great wood]",
+      "scene": "He travels through great wood"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM261",
+      "filename": "Soria_Moria_Castle_MM261.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "where there were many green places which gleamed very prettily among the trees.",
+      "description": "[characters in he travels through great wood]",
+      "scene": "He travels through great wood"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM262",
+      "filename": "Soria_Moria_Castle_MM262.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So he walked and he rode, and it seemed to him that the wood would",
+      "description": "[establishing shot of he sees a light through the trees]",
+      "scene": "He sees a light through the trees"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM263",
+      "filename": "Soria_Moria_Castle_MM263.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "never come to an end. But on the evening of the second day he saw",
+      "description": "[close-up detail of he sees a light through the trees]",
+      "scene": "He sees a light through the trees"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM264",
+      "filename": "Soria_Moria_Castle_MM264.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a light shining through the trees.",
+      "description": "[characters in he sees a light through the trees]",
+      "scene": "He sees a light through the trees"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM265",
+      "filename": "Soria_Moria_Castle_MM265.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When he got to the place where the light had come from, he saw a",
+      "description": "[establishing shot of he finds a wretched little cottage]",
+      "scene": "He finds a wretched little cottage"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM266",
+      "filename": "Soria_Moria_Castle_MM266.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "wretched little cottage, and through a small pane of glass he saw a couple of",
+      "description": "[close-up detail of he finds a wretched little cottage]",
+      "scene": "He finds a wretched little cottage"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM267",
+      "filename": "Soria_Moria_Castle_MM267.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "old folks inside.",
+      "description": "[characters in he finds a wretched little cottage]",
+      "scene": "He finds a wretched little cottage"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM268",
+      "filename": "Soria_Moria_Castle_MM268.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "They were very old, and as grey-headed as a pigeon, and the old woman had",
+      "description": "[establishing shot of very old grey-headed couple]",
+      "scene": "Very old grey-headed couple"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM269",
+      "filename": "Soria_Moria_Castle_MM269.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "such a long nose that she sat in the chimney corner and used it to",
+      "description": "[close-up detail of very old grey-headed couple]",
+      "scene": "Very old grey-headed couple"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM270",
+      "filename": "Soria_Moria_Castle_MM270.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "stir the fire.",
+      "description": "[characters in very old grey-headed couple]",
+      "scene": "Very old grey-headed couple"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM271",
+      "filename": "Soria_Moria_Castle_MM271.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Good evening! good evening!' said the old hag; 'but what errand have you that can",
+      "description": "[establishing shot of old woman greets him]",
+      "scene": "Old woman greets him"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM272",
+      "filename": "Soria_Moria_Castle_MM272.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "bring you here?",
+      "description": "[close-up detail of old woman greets him]",
+      "scene": "Old woman greets him"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM273",
+      "filename": "Soria_Moria_Castle_MM273.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "No Christian folk have been here for more than a hundred years.'",
+      "description": "[establishing shot of no christian folk for a hundred years]",
+      "scene": "No Christian folk for a hundred years"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM274",
+      "filename": "Soria_Moria_Castle_MM274.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So Halvor told her that he wanted to get to Soria Moria Castle, and inquired",
+      "description": "[establishing shot of halvor asks way to soria moria castle]",
+      "scene": "Halvor asks way to Soria Moria Castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM275",
+      "filename": "Soria_Moria_Castle_MM275.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "if she knew the way thither.",
+      "description": "[close-up detail of halvor asks way to soria moria castle]",
+      "scene": "Halvor asks way to Soria Moria Castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM276",
+      "filename": "Soria_Moria_Castle_MM276.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'No,' said the old woman, 'that I do not, but the Moon will be here",
+      "description": "[establishing shot of old woman will ask the moon]",
+      "scene": "Old woman will ask the Moon"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM277",
+      "filename": "Soria_Moria_Castle_MM277.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "presently,",
+      "description": "[close-up detail of old woman will ask the moon]",
+      "scene": "Old woman will ask the Moon"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM278",
+      "filename": "Soria_Moria_Castle_MM278.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and I will ask her, and she will know.",
+      "description": "[characters in old woman will ask the moon]",
+      "scene": "Old woman will ask the Moon"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM279",
+      "filename": "Soria_Moria_Castle_MM279.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She can easily see it, for she shines on all things.'",
+      "description": "[establishing shot of moon sees all things]",
+      "scene": "Moon sees all things"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM280",
+      "filename": "Soria_Moria_Castle_MM280.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So when the Moon stood clear and bright above the tree-tops the old woman went",
+      "description": "[establishing shot of moon rises above the tree-tops]",
+      "scene": "Moon rises above the tree-tops"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM281",
+      "filename": "Soria_Moria_Castle_MM281.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "out.",
+      "description": "[close-up detail of moon rises above the tree-tops]",
+      "scene": "Moon rises above the tree-tops"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM282",
+      "filename": "Soria_Moria_Castle_MM282.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Moon! Moon!' she screamed. 'Canst thou tell me the way to Soria Moria Castle?'",
+      "description": "[establishing shot of she cries out to the moon]",
+      "scene": "She cries out to the Moon"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM283",
+      "filename": "Soria_Moria_Castle_MM283.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'No,' said the Moon, 'that I can't, for when I shone there, there was a",
+      "description": "[establishing shot of moon cannot tell]",
+      "scene": "Moon cannot tell"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM284",
+      "filename": "Soria_Moria_Castle_MM284.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "cloud before me.'",
+      "description": "[close-up detail of moon cannot tell]",
+      "scene": "Moon cannot tell"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM285",
+      "filename": "Soria_Moria_Castle_MM285.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Wait a little longer,' said the old woman to Halvor, 'for the West Wind will",
+      "description": "[establishing shot of old woman says to wait]",
+      "scene": "Old woman says to wait"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM286",
+      "filename": "Soria_Moria_Castle_MM286.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "presently be here, and he will know it, for he breathes gently or blows into",
+      "description": "[close-up detail of old woman says to wait]",
+      "scene": "Old woman says to wait"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM287",
+      "filename": "Soria_Moria_Castle_MM287.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "every corner.'",
+      "description": "[characters in old woman says to wait]",
+      "scene": "Old woman says to wait"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM288",
+      "filename": "Soria_Moria_Castle_MM288.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'What! have you a horse too?' she said when she came in again. 'Oh! let",
+      "description": "[establishing shot of old woman offers magic boots]",
+      "scene": "Old woman offers magic boots"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM289",
+      "filename": "Soria_Moria_Castle_MM289.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the poor creature loose in our bit of fenced-in pasture, and don't let it stand",
+      "description": "[close-up detail of old woman offers magic boots]",
+      "scene": "Old woman offers magic boots"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM290",
+      "filename": "Soria_Moria_Castle_MM290.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "there starving at our very door.",
+      "description": "[characters in old woman offers magic boots]",
+      "scene": "Old woman offers magic boots"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM291",
+      "filename": "Soria_Moria_Castle_MM291.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But won't you exchange him with me? We have a pair of old boots here",
+      "description": "[establishing shot of she trades boots for the horse]",
+      "scene": "She trades boots for the horse"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM292",
+      "filename": "Soria_Moria_Castle_MM292.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "with which you can go fifteen quarters of a mile at each step. You shall",
+      "description": "[close-up detail of she trades boots for the horse]",
+      "scene": "She trades boots for the horse"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM293",
+      "filename": "Soria_Moria_Castle_MM293.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "have them for the horse, and then you will be able to get sooner to",
+      "description": "[characters in she trades boots for the horse]",
+      "scene": "She trades boots for the horse"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM294",
+      "filename": "Soria_Moria_Castle_MM294.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Soria Moria Castle.'",
+      "description": "[wide view of she trades boots for the horse]",
+      "scene": "She trades boots for the horse"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM295",
+      "filename": "Soria_Moria_Castle_MM295.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor consented to this at once, and the old woman was so delighted with the",
+      "description": "[establishing shot of halvor agrees to the trade]",
+      "scene": "Halvor agrees to the trade"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM296",
+      "filename": "Soria_Moria_Castle_MM296.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "horse that she was ready to dance. 'For now I, too, shall be able to",
+      "description": "[close-up detail of halvor agrees to the trade]",
+      "scene": "Halvor agrees to the trade"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM297",
+      "filename": "Soria_Moria_Castle_MM297.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "ride to church,' she said.",
+      "description": "[characters in halvor agrees to the trade]",
+      "scene": "Halvor agrees to the trade"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM298",
+      "filename": "Soria_Moria_Castle_MM298.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Halvor could take no rest, and wanted to set off immediately; but the old woman",
+      "description": "[establishing shot of halvor wants to leave immediately]",
+      "scene": "Halvor wants to leave immediately"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM299",
+      "filename": "Soria_Moria_Castle_MM299.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "said that there was no need to hasten. 'Lie down on the bench and sleep",
+      "description": "[close-up detail of halvor wants to leave immediately]",
+      "scene": "Halvor wants to leave immediately"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM300",
+      "filename": "Soria_Moria_Castle_MM300.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a little,",
+      "description": "[characters in halvor wants to leave immediately]",
+      "scene": "Halvor wants to leave immediately"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM301",
+      "filename": "Soria_Moria_Castle_MM301.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "for we have no bed to offer you,' said she, 'and I will watch for",
+      "description": "[wide view of halvor wants to leave immediately]",
+      "scene": "Halvor wants to leave immediately"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM302",
+      "filename": "Soria_Moria_Castle_MM302.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the coming of the West Wind.'",
+      "description": "[intimate moment in halvor wants to leave immediately]",
+      "scene": "Halvor wants to leave immediately"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM303",
+      "filename": "Soria_Moria_Castle_MM303.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Ere long came the West Wind, roaring so loud that the walls creaked.",
+      "description": "[establishing shot of west wind arrives with roar]",
+      "scene": "West Wind arrives with roar"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM304",
+      "filename": "Soria_Moria_Castle_MM304.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The old woman went out and cried: 'West Wind! West Wind! Canst thou tell me",
+      "description": "[establishing shot of old woman asks the west wind]",
+      "scene": "Old woman asks the West Wind"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM305",
+      "filename": "Soria_Moria_Castle_MM305.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the way to Soria Moria Castle?",
+      "description": "[close-up detail of old woman asks the west wind]",
+      "scene": "Old woman asks the West Wind"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM306",
+      "filename": "Soria_Moria_Castle_MM306.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Yes, I know it well,' said the West Wind. 'I am just on my way",
+      "description": "[establishing shot of west wind knows the way]",
+      "scene": "West Wind knows the way"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM307",
+      "filename": "Soria_Moria_Castle_MM307.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "there to dry the clothes for the wedding which is to take place.",
+      "description": "[close-up detail of west wind knows the way]",
+      "scene": "West Wind knows the way"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM308",
+      "filename": "Soria_Moria_Castle_MM308.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "If he is fleet of foot he can go with me.'",
+      "description": "[establishing shot of west wind offers to carry halvor]",
+      "scene": "West Wind offers to carry Halvor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM309",
+      "filename": "Soria_Moria_Castle_MM309.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Out ran Halvor.",
+      "description": "[establishing shot of halvor runs after the west wind]",
+      "scene": "Halvor runs after the West Wind"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM310",
+      "filename": "Soria_Moria_Castle_MM310.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'You will have to make haste if you mean to go with me,' said the",
+      "description": "[establishing shot of 'make haste if you mean to go with me']",
+      "scene": "'Make haste if you mean to go with me'"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM311",
+      "filename": "Soria_Moria_Castle_MM311.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "West Wind;",
+      "description": "[close-up detail of 'make haste if you mean to go with me']",
+      "scene": "'Make haste if you mean to go with me'"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM312",
+      "filename": "Soria_Moria_Castle_MM312.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and away it went over hill and dale, and moor and morass, and Halvor had",
+      "description": "[characters in 'make haste if you mean to go with me']",
+      "scene": "'Make haste if you mean to go with me'"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM313",
+      "filename": "Soria_Moria_Castle_MM313.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "enough to do to keep up with it.",
+      "description": "[wide view of 'make haste if you mean to go with me']",
+      "scene": "'Make haste if you mean to go with me'"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM314",
+      "filename": "Soria_Moria_Castle_MM314.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Well, now I have no time to stay with you any longer,' said the West",
+      "description": "[establishing shot of west wind must go on ahead]",
+      "scene": "West Wind must go on ahead"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM315",
+      "filename": "Soria_Moria_Castle_MM315.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Wind,",
+      "description": "[close-up detail of west wind must go on ahead]",
+      "scene": "West Wind must go on ahead"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM316",
+      "filename": "Soria_Moria_Castle_MM316.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'for I must first go and tear down a bit of spruce fir before I",
+      "description": "[characters in west wind must go on ahead]",
+      "scene": "West Wind must go on ahead"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM317",
+      "filename": "Soria_Moria_Castle_MM317.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "go to the bleaching-ground to dry the clothes.",
+      "description": "[wide view of west wind must go on ahead]",
+      "scene": "West Wind must go on ahead"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM318",
+      "filename": "Soria_Moria_Castle_MM318.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But just go along the side of the hill, and you will come to some",
+      "description": "[establishing shot of west wind gives directions]",
+      "scene": "West Wind gives directions"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM319",
+      "filename": "Soria_Moria_Castle_MM319.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "girls who are standing there washing clothes, and then you will not have to walk",
+      "description": "[close-up detail of west wind gives directions]",
+      "scene": "West Wind gives directions"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM320",
+      "filename": "Soria_Moria_Castle_MM320.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "far before you are at Soria Moria Castle.'",
+      "description": "[characters in west wind gives directions]",
+      "scene": "West Wind gives directions"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM321",
+      "filename": "Soria_Moria_Castle_MM321.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Shortly afterwards Halvor came to the girls who were standing washing, and they asked him",
+      "description": "[establishing shot of halvor meets girls washing]",
+      "scene": "Halvor meets girls washing"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM322",
+      "filename": "Soria_Moria_Castle_MM322.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "if he had seen anything of the West Wind, who was to come there to",
+      "description": "[close-up detail of halvor meets girls washing]",
+      "scene": "Halvor meets girls washing"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM323",
+      "filename": "Soria_Moria_Castle_MM323.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "dry the clothes for the wedding.",
+      "description": "[characters in halvor meets girls washing]",
+      "scene": "Halvor meets girls washing"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM324",
+      "filename": "Soria_Moria_Castle_MM324.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Yes,' said Halvor, 'he has only gone to break down a bit of spruce fir.",
+      "description": "[establishing shot of halvor tells them west wind is coming]",
+      "scene": "Halvor tells them West Wind is coming"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM325",
+      "filename": "Soria_Moria_Castle_MM325.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "It won't be long before he is here.'",
+      "description": "[close-up detail of halvor tells them west wind is coming]",
+      "scene": "Halvor tells them West Wind is coming"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM326",
+      "filename": "Soria_Moria_Castle_MM326.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And then he asked them the way to Soria Moria Castle. They put him in",
+      "description": "[establishing shot of girls direct him to castle]",
+      "scene": "Girls direct him to castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM327",
+      "filename": "Soria_Moria_Castle_MM327.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the right way, and when he came in front of the castle it was so",
+      "description": "[close-up detail of girls direct him to castle]",
+      "scene": "Girls direct him to castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM328",
+      "filename": "Soria_Moria_Castle_MM328.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "full of horses and people that it swarmed with them.",
+      "description": "[characters in girls direct him to castle]",
+      "scene": "Girls direct him to castle"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM329",
+      "filename": "Soria_Moria_Castle_MM329.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But Halvor was so ragged and torn with following the West Wind through bushes and",
+      "description": "[establishing shot of halvor stays to one side]",
+      "scene": "Halvor stays to one side"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM330",
+      "filename": "Soria_Moria_Castle_MM330.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "bogs that he kept on one side, and would not go among the crowd until",
+      "description": "[close-up detail of halvor stays to one side]",
+      "scene": "Halvor stays to one side"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM331",
+      "filename": "Soria_Moria_Castle_MM331.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the last day, when the feast was to be held at noon.",
+      "description": "[characters in halvor stays to one side]",
+      "scene": "Halvor stays to one side"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM332",
+      "filename": "Soria_Moria_Castle_MM332.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So when, as was the usage and custom, all were to drink to the bride",
+      "description": "[establishing shot of wedding feast begins]",
+      "scene": "Wedding feast begins"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM333",
+      "filename": "Soria_Moria_Castle_MM333.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and the young girls who were present, the cup-bearer filled the cup for each in",
+      "description": "[close-up detail of wedding feast begins]",
+      "scene": "Wedding feast begins"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM334",
+      "filename": "Soria_Moria_Castle_MM334.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "turn,",
+      "description": "[characters in wedding feast begins]",
+      "scene": "Wedding feast begins"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM335",
+      "filename": "Soria_Moria_Castle_MM335.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "both bride and bridegroom, and knights and servants.",
+      "description": "[wide view of wedding feast begins]",
+      "scene": "Wedding feast begins"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM336",
+      "filename": "Soria_Moria_Castle_MM336.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And at last, after a very long time, he came to Halvor.",
+      "description": "[establishing shot of cup reaches halvor]",
+      "scene": "Cup reaches Halvor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM337",
+      "filename": "Soria_Moria_Castle_MM337.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He drank their health, and then slipped the ring which the Princess had put on",
+      "description": "[establishing shot of halvor sends the ring in a glass]",
+      "scene": "Halvor sends the ring in a glass"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM338",
+      "filename": "Soria_Moria_Castle_MM338.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "his finger when they were sitting by the waterside into the glass, and ordered the",
+      "description": "[close-up detail of halvor sends the ring in a glass]",
+      "scene": "Halvor sends the ring in a glass"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM339",
+      "filename": "Soria_Moria_Castle_MM339.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "cup-bearer to carry the glass to the bride from him and greet her.",
+      "description": "[characters in halvor sends the ring in a glass]",
+      "scene": "Halvor sends the ring in a glass"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM340",
+      "filename": "Soria_Moria_Castle_MM340.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then the Princess at once rose up from the table, and said, 'Who is most",
+      "description": "[establishing shot of princess recognizes the ring]",
+      "scene": "Princess recognizes the ring"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM341",
+      "filename": "Soria_Moria_Castle_MM341.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "worthy to have one of us—he who has delivered us from the Trolls or he",
+      "description": "[close-up detail of princess recognizes the ring]",
+      "scene": "Princess recognizes the ring"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM342",
+      "filename": "Soria_Moria_Castle_MM342.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "who is sitting here as bridegroom?'",
+      "description": "[characters in princess recognizes the ring]",
+      "scene": "Princess recognizes the ring"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM343",
+      "filename": "Soria_Moria_Castle_MM343.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "There could be but one opinion as to that, everyone thought, and when Halvor heard",
+      "description": "[establishing shot of everyone agrees it is halvor]",
+      "scene": "Everyone agrees it is Halvor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM344",
+      "filename": "Soria_Moria_Castle_MM344.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "what they said he was not long in flinging off his beggar's rags and arraying",
+      "description": "[close-up detail of everyone agrees it is halvor]",
+      "scene": "Everyone agrees it is Halvor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM345",
+      "filename": "Soria_Moria_Castle_MM345.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "himself as a bridegroom.",
+      "description": "[characters in everyone agrees it is halvor]",
+      "scene": "Everyone agrees it is Halvor"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM346",
+      "filename": "Soria_Moria_Castle_MM346.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "'Yes, he is the right one,' cried the youngest Princess when she caught sight of",
+      "description": "[establishing shot of princess claims halvor as her own]",
+      "scene": "Princess claims Halvor as her own"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM347",
+      "filename": "Soria_Moria_Castle_MM347.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "him;",
+      "description": "[close-up detail of princess claims halvor as her own]",
+      "scene": "Princess claims Halvor as her own"
+    },
+    {
+      "id": "Soria_Moria_Castle_MM348",
+      "filename": "Soria_Moria_Castle_MM348.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "so she flung the other out of the window and held her wedding with Halvor.",
+      "description": "[characters in princess claims halvor as her own]",
+      "scene": "Princess claims Halvor as her own"
+    }
+  ]
+}

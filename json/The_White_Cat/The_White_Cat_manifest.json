@@ -10,232 +10,270 @@
       "id": "The_White_Cat_MM001",
       "filename": "The_White_Cat_MM001.json",
       "interpOrder": false,
-      "caption": "The old king sat upon his throne and told his three sons he could rule no longer.",
-      "description": "[A king sits on his throne]",
+      "captioned": true,
+      "caption": "The old king sat upon his throne and told his three sons he could rule",
+      "description": "[wide shot of aging king on throne]",
       "scene": "A king sits on his throne"
     },
     {
       "id": "The_White_Cat_MM002",
       "filename": "The_White_Cat_MM002.json",
       "interpOrder": false,
-      "caption": "He would give the kingdom to whichever son shot an arrow farthest.",
-      "description": "[Three princes standing before him]",
-      "scene": "Three princes standing before him"
+      "captioned": true,
+      "caption": "no longer.",
+      "description": "[close-up of king's weary face]",
+      "scene": "A king sits on his throne"
     },
     {
       "id": "The_White_Cat_MM003",
       "filename": "The_White_Cat_MM003.json",
       "interpOrder": false,
-      "caption": "The eldest prince shot his arrow and it flew a great distance.",
-      "description": "[The eldest prince draws his bow]",
-      "scene": "The eldest prince draws his bow"
+      "captioned": true,
+      "caption": "He would give the kingdom to whichever son shot an arrow farthest.",
+      "description": "[three princes standing before throne]",
+      "scene": "Three princes standing before him"
     },
     {
       "id": "The_White_Cat_MM004",
       "filename": "The_White_Cat_MM004.json",
       "interpOrder": false,
-      "caption": "But the arrow fell in a meadow and did not satisfy the king.",
-      "description": "[Arrow lands in a meadow]",
-      "scene": "Arrow lands in a meadow"
+      "captioned": true,
+      "caption": "The eldest prince shot his arrow and it flew a great distance.",
+      "description": "[eldest prince drawing bowstring taut]",
+      "scene": "The eldest prince draws his bow"
     },
     {
       "id": "The_White_Cat_MM005",
       "filename": "The_White_Cat_MM005.json",
       "interpOrder": false,
-      "caption": "The middle prince shot his arrow and it flew farther than his brother's.",
-      "description": "[The middle prince draws his bow]",
-      "scene": "The middle prince draws his bow"
+      "captioned": true,
+      "caption": "But the arrow fell in a meadow and did not satisfy the king.",
+      "description": "[arrow landing in distant meadow]",
+      "scene": "Arrow lands in a meadow"
     },
     {
       "id": "The_White_Cat_MM006",
       "filename": "The_White_Cat_MM006.json",
       "interpOrder": false,
-      "caption": "His arrow landed in a river but still the king was not content.",
-      "description": "[Arrow lands in a river]",
-      "scene": "Arrow lands in a river"
+      "captioned": true,
+      "caption": "The middle prince shot his arrow and it flew farther than his brother's.",
+      "description": "[middle prince releasing arrow mid-flight]",
+      "scene": "The middle prince draws his bow"
     },
     {
       "id": "The_White_Cat_MM007",
       "filename": "The_White_Cat_MM007.json",
       "interpOrder": false,
-      "caption": "The youngest prince shot his arrow but it did not come back to him.",
-      "description": "[The youngest prince draws his bow]",
-      "scene": "The youngest prince draws his bow"
+      "captioned": true,
+      "caption": "His arrow landed in a river but still the king was not content.",
+      "description": "[arrow splashing into river]",
+      "scene": "Arrow lands in a river"
     },
     {
       "id": "The_White_Cat_MM008",
       "filename": "The_White_Cat_MM008.json",
       "interpOrder": false,
-      "caption": "His arrow flew into the branches of a dark oak tree and vanished.",
-      "description": "[Arrow disappears into a dark oak]",
-      "scene": "Arrow disappears into a dark oak"
+      "captioned": true,
+      "caption": "The youngest prince shot his arrow but it did not come back to him.",
+      "description": "[youngest prince aiming skyward]",
+      "scene": "The youngest prince draws his bow"
     },
     {
       "id": "The_White_Cat_MM009",
       "filename": "The_White_Cat_MM009.json",
       "interpOrder": false,
-      "caption": "The prince climbed the tree and found his arrow wedged in a hollow.",
-      "description": "[The prince climbs the tree]",
-      "scene": "The prince climbs the tree"
+      "captioned": true,
+      "caption": "His arrow flew into the branches of a dark oak tree and vanished.",
+      "description": "[arrow vanishing into dark oak branches]",
+      "scene": "Arrow disappears into a dark oak"
     },
     {
       "id": "The_White_Cat_MM010",
       "filename": "The_White_Cat_MM010.json",
       "interpOrder": false,
-      "caption": "There sat a beautiful white cat with eyes that seemed to know him.",
-      "description": "[A white cat sits in the branches]",
-      "scene": "A white cat sits in the branches"
+      "captioned": true,
+      "caption": "The prince climbed the tree and found his arrow wedged in a hollow.",
+      "description": "[prince peering into tree hollow]",
+      "scene": "The prince climbs the tree"
     },
     {
       "id": "The_White_Cat_MM011",
       "filename": "The_White_Cat_MM011.json",
       "interpOrder": false,
-      "caption": "The white cat told the prince she had been waiting for him.",
-      "description": "[The prince holds his arrow]",
-      "scene": "The prince holds his arrow"
+      "captioned": true,
+      "caption": "There sat a beautiful white cat with eyes that seemed to know him.",
+      "description": "[white cat perched in branches with knowing eyes]",
+      "scene": "A white cat sits in the branches"
     },
     {
       "id": "The_White_Cat_MM012",
       "filename": "The_White_Cat_MM012.json",
       "interpOrder": false,
-      "caption": "She begged the prince to cut off her head and he was reluctant.",
-      "description": "[The white cat bows her head]",
-      "scene": "The white cat bows her head"
+      "captioned": true,
+      "caption": "The white cat told the prince she had been waiting for him.",
+      "description": "[prince holding arrow listening to cat]",
+      "scene": "The prince holds his arrow"
     },
     {
       "id": "The_White_Cat_MM013",
       "filename": "The_White_Cat_MM013.json",
       "interpOrder": false,
-      "caption": "The prince struck and the white cat's head fell to the ground.",
-      "description": "[The prince raises his sword]",
-      "scene": "The prince raises his sword"
+      "captioned": true,
+      "caption": "She begged the prince to cut off her head and he was reluctant.",
+      "description": "[white cat bowing head before prince]",
+      "scene": "The white cat bows her head"
     },
     {
       "id": "The_White_Cat_MM014",
       "filename": "The_White_Cat_MM014.json",
       "interpOrder": false,
-      "caption": "In a flash of light the cat was transformed into a beautiful girl.",
-      "description": "[A bright flash of light]",
-      "scene": "A bright flash of light"
+      "captioned": true,
+      "caption": "The prince struck and the white cat's head fell to the ground.",
+      "description": "[prince raising sword overhead]",
+      "scene": "The prince raises his sword"
     },
     {
       "id": "The_White_Cat_MM015",
       "filename": "The_White_Cat_MM015.json",
       "interpOrder": false,
-      "caption": "She was a princess enchanted by fairies and she thanked the prince.",
-      "description": "[A princess stands before the prince]",
-      "scene": "A princess stands before the prince"
+      "captioned": true,
+      "caption": "In a flash of light the cat was transformed into a beautiful girl.",
+      "description": "[bright flash transforming cat to girl]",
+      "scene": "A bright flash of light"
     },
     {
       "id": "The_White_Cat_MM016",
       "filename": "The_White_Cat_MM016.json",
       "interpOrder": false,
-      "caption": "She led the prince to a magnificent castle filled with gold and jewels.",
-      "description": "[The princess takes his hand]",
-      "scene": "The princess takes his hand"
+      "captioned": true,
+      "caption": "She was a princess enchanted by fairies and she thanked the prince.",
+      "description": "[princess standing before prince in gratitude]",
+      "scene": "A princess stands before the prince"
     },
     {
       "id": "The_White_Cat_MM017",
       "filename": "The_White_Cat_MM017.json",
       "interpOrder": false,
-      "caption": "Her riches were beyond measure and the prince was amazed at her wealth.",
-      "description": "[The castle gleams with light]",
-      "scene": "The castle gleams with light"
+      "captioned": true,
+      "caption": "She led the prince to a magnificent castle filled with gold and jewels.",
+      "description": "[princess taking prince's hand toward castle]",
+      "scene": "The princess takes his hand"
     },
     {
       "id": "The_White_Cat_MM018",
       "filename": "The_White_Cat_MM018.json",
       "interpOrder": false,
-      "caption": "They were married and the princess brought her great wealth to the kingdom.",
-      "description": "[The prince and princess marry]",
-      "scene": "The prince and princess marry"
+      "captioned": true,
+      "caption": "Her riches were beyond measure and the prince was amazed at her wealth.",
+      "description": "[castle interior gleaming with light]",
+      "scene": "The castle gleams with light"
     },
     {
       "id": "The_White_Cat_MM019",
       "filename": "The_White_Cat_MM019.json",
       "interpOrder": false,
-      "caption": "The youngest prince became king and the land flourished under his rule.",
-      "description": "[The king smiles with pride]",
-      "scene": "The king smiles with pride"
+      "captioned": true,
+      "caption": "They were married and the princess brought her great wealth to the kingdom.",
+      "description": "[prince and princess exchanging vows]",
+      "scene": "The prince and princess marry"
     },
     {
       "id": "The_White_Cat_MM020",
       "filename": "The_White_Cat_MM020.json",
       "interpOrder": false,
-      "caption": "The elder brothers grew jealous of his fortune and plotted against him.",
-      "description": "[The two older brothers watch]",
-      "scene": "The two older brothers watch"
+      "captioned": true,
+      "caption": "The youngest prince became king and the land flourished under his rule.",
+      "description": "[newly crowned king smiling with pride]",
+      "scene": "The king smiles with pride"
     },
     {
       "id": "The_White_Cat_MM021",
       "filename": "The_White_Cat_MM021.json",
       "interpOrder": false,
-      "caption": "They planned to overthrow the youngest brother and take the kingdom.",
-      "description": "[The brothers meet in secret]",
-      "scene": "The brothers meet in secret"
+      "captioned": true,
+      "caption": "The elder brothers grew jealous of his fortune and plotted against him.",
+      "description": "[two brothers watching with jealous eyes]",
+      "scene": "The two older brothers watch"
     },
     {
       "id": "The_White_Cat_MM022",
       "filename": "The_White_Cat_MM022.json",
       "interpOrder": false,
-      "caption": "They sent a message telling the prince he must go to war.",
-      "description": "[The brothers send a messenger]",
-      "scene": "The brothers send a messenger"
+      "captioned": true,
+      "caption": "They planned to overthrow the youngest brother and take the kingdom.",
+      "description": "[brothers meeting in shadowy chamber]",
+      "scene": "The brothers meet in secret"
     },
     {
       "id": "The_White_Cat_MM023",
       "filename": "The_White_Cat_MM023.json",
       "interpOrder": false,
-      "caption": "The white cat princess told the prince to trust her and be brave.",
-      "description": "[The prince prepares to leave]",
-      "scene": "The prince prepares to leave"
+      "captioned": true,
+      "caption": "They sent a message telling the prince he must go to war.",
+      "description": "[messenger delivering sealed letter]",
+      "scene": "The brothers send a messenger"
     },
     {
       "id": "The_White_Cat_MM024",
       "filename": "The_White_Cat_MM024.json",
       "interpOrder": false,
-      "caption": "The prince rode into danger but the princess's magic protected him from harm.",
-      "description": "[The prince rides away]",
-      "scene": "The prince rides away"
+      "captioned": true,
+      "caption": "The white cat princess told the prince to trust her and be brave.",
+      "description": "[princess speaking words of encouragement]",
+      "scene": "The prince prepares to leave"
     },
     {
       "id": "The_White_Cat_MM025",
       "filename": "The_White_Cat_MM025.json",
       "interpOrder": false,
-      "caption": "Each time the brothers tried to harm him the white cat's magic saved him.",
-      "description": "[The brothers attack with swords]",
-      "scene": "The brothers attack with swords"
+      "captioned": true,
+      "caption": "The prince rode into danger but the princess's magic protected him from harm.",
+      "description": "[prince riding away on white horse]",
+      "scene": "The prince rides away"
     },
     {
       "id": "The_White_Cat_MM026",
       "filename": "The_White_Cat_MM026.json",
       "interpOrder": false,
-      "caption": "The princess called upon the fairies to help her husband in his fight.",
-      "description": "[The princess casts a spell]",
-      "scene": "The princess casts a spell"
+      "captioned": true,
+      "caption": "Each time the brothers tried to harm him the white cat's magic saved him.",
+      "description": "[brothers attacking with swords]",
+      "scene": "The brothers attack with swords"
     },
     {
       "id": "The_White_Cat_MM027",
       "filename": "The_White_Cat_MM027.json",
       "interpOrder": false,
-      "caption": "The brothers were defeated and the prince returned home as a hero.",
-      "description": "[The brothers surrender]",
-      "scene": "The brothers surrender"
+      "captioned": true,
+      "caption": "The princess called upon the fairies to help her husband in his fight.",
+      "description": "[princess casting protective spell]",
+      "scene": "The princess casts a spell"
     },
     {
       "id": "The_White_Cat_MM028",
       "filename": "The_White_Cat_MM028.json",
       "interpOrder": false,
-      "caption": "The princess restored him to his full power and they ruled wisely.",
-      "description": "[The prince and princess embrace]",
-      "scene": "The prince and princess embrace"
+      "captioned": true,
+      "caption": "The brothers were defeated and the prince returned home as a hero.",
+      "description": "[brothers surrendering in defeat]",
+      "scene": "The brothers surrender"
     },
     {
       "id": "The_White_Cat_MM029",
       "filename": "The_White_Cat_MM029.json",
       "interpOrder": false,
+      "captioned": true,
+      "caption": "The princess restored him to his full power and they ruled wisely.",
+      "description": "[prince and princess embracing]",
+      "scene": "The prince and princess embrace"
+    },
+    {
+      "id": "The_White_Cat_MM030",
+      "filename": "The_White_Cat_MM030.json",
+      "interpOrder": false,
+      "captioned": true,
       "caption": "They lived happily together and the kingdom knew nothing but joy.",
-      "description": "[The castle glows at sunset]",
+      "description": "[castle glowing at golden sunset]",
       "scene": "The castle glows at sunset"
     }
   ]

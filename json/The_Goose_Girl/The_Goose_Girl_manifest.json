@@ -2,93 +2,1791 @@
   "width": 720,
   "height": 720,
   "format": "png",
-  "name": "The Goose-Girl",
+  "name": "The Goose Girl",
   "captionFontSize": 14,
   "defaultTransitionDuration": 2000,
   "pages": [
-    {"id": "The_Goose_Girl_MM001", "filename": "The_Goose_Girl_MM001.json", "interpOrder": false, "caption": "Once upon a time an old queen, whose husband had been dead for many years, had a beautiful daughter.", "description": "[Old queen gives daughter royal trousseau]", "scene": "castle interior"},
-    {"id": "The_Goose_Girl_MM002", "filename": "The_Goose_Girl_MM002.json", "interpOrder": false, "caption": "When she grew up she was betrothed to a prince who lived a great way off.", "description": "[Princess departs on horseback for foreign kingdom]", "scene": "countryside road"},
-    {"id": "The_Goose_Girl_MM003", "filename": "The_Goose_Girl_MM003.json", "interpOrder": false, "caption": "Now, when the time drew near for her to be married and to depart into a foreign kingdom, her old mother gave her much costly baggage, and many ornaments, gold and silver, trinkets and knicknacks, and, in fact, everything that belonged to a royal trousseau, for she loved her daughter very dearly.", "description": "[Queen cuts fingers and bleeds onto white cloth]", "scene": "bedroom"},
-    {"id": "The_Goose_Girl_MM004", "filename": "The_Goose_Girl_MM004.json", "interpOrder": false, "caption": "She gave her a waiting-maid also, who was to ride with her and hand her over to the bridegroom, and she provided each of them with a horse for the journey.", "description": "[Waiting-maid receives a horse for journey]", "scene": "stable yard"},
-    {"id": "The_Goose_Girl_MM005", "filename": "The_Goose_Girl_MM005.json", "interpOrder": false, "caption": "Now the Princess's horse was called Falada, and could speak.", "description": "[Falada the speaking horse introduced]", "scene": "stable yard"},
-    {"id": "The_Goose_Girl_MM006", "filename": "The_Goose_Girl_MM006.json", "interpOrder": false, "caption": "When the hour for departure drew near the old mother went to her bedroom, and taking a small knife she cut her fingers till they bled; then she held a white rag under them, and letting three drops of blood fall into it, she gave it to her daughter, and said: \"Dear child, take great care of this rag: it may be of use to you on the journey.\"", "description": "[Mother gives daughter the blood rag]", "scene": "bedroom"},
-    {"id": "The_Goose_Girl_MM007", "filename": "The_Goose_Girl_MM007.json", "interpOrder": false, "caption": "So they took a sad farewell of each other, and the Princess stuck the rag in front of her dress, mounted her horse, and set forth on the journey to her bridegroom's kingdom.", "description": "[Princess and maid ride through countryside]", "scene": "countryside road"},
-    {"id": "The_Goose_Girl_MM008", "filename": "The_Goose_Girl_MM008.json", "interpOrder": false, "caption": "After they had ridden for about an hour the Princess began to feel very thirsty, and said to her waiting-maid: \"Pray get down and fetch me some water in my golden cup out of yonder stream: I would like a drink.\"", "description": "[Princess drinks from stream as maid refuses]", "scene": "stream by road"},
-    {"id": "The_Goose_Girl_MM009", "filename": "The_Goose_Girl_MM009.json", "interpOrder": false, "caption": "\"If you're thirsty,\" said the maid, \"dismount yourself, and lie down by the water and drink; I don't mean to be your servant any longer.\"", "description": "[Maid tells princess to get water herself]", "scene": "stream by road"},
-    {"id": "The_Goose_Girl_MM010", "filename": "The_Goose_Girl_MM010.json", "interpOrder": false, "caption": "The Princess was so thirsty that she got down, bent over the stream, and drank, for she wasn't allowed to drink out of the golden goblet.", "description": "[Princess bends to drink from stream]", "scene": "stream bank"},
-    {"id": "The_Goose_Girl_MM011", "filename": "The_Goose_Girl_MM011.json", "interpOrder": false, "caption": "As she drank she murmured: \"Oh! heaven, what am I to do?\" and the three drops of blood replied:", "description": "[Three drops of blood speak from the rag]", "scene": "stream bank"},
-    {"id": "The_Goose_Girl_MM012", "filename": "The_Goose_Girl_MM012.json", "interpOrder": false, "caption": "\"If your mother only knew, Her heart would surely break in two.\"", "description": "[Verse: If your mother only knew]", "scene": "stream bank"},
-    {"id": "The_Goose_Girl_MM013", "filename": "The_Goose_Girl_MM013.json", "interpOrder": false, "caption": "But the Princess was meek, and said nothing about her maid's rude behavior, and quietly mounted her horse again.", "description": "[Princess says nothing and remounts]", "scene": "countryside road"},
-    {"id": "The_Goose_Girl_MM014", "filename": "The_Goose_Girl_MM014.json", "interpOrder": false, "caption": "They rode on their way for several miles, but the day was hot, and the sun's rays smote fiercely on them, so that the Princess was soon overcome by thirst again.", "description": "[They ride on in the hot sun]", "scene": "sunlit road"},
-    {"id": "The_Goose_Girl_MM015", "filename": "The_Goose_Girl_MM015.json", "interpOrder": false, "caption": "And as they passed a brook she called once more to her waiting-maid: \"Pray get down and give me a drink from my golden cup,\" for she had long ago forgotten her maid's rude words.", "description": "[Princess asks maid for drink again]", "scene": "brookside"},
-    {"id": "The_Goose_Girl_MM016", "filename": "The_Goose_Girl_MM016.json", "interpOrder": false, "caption": "But the waiting-maid replied, more haughtily even than before: \"If you want a drink, you can dismount and get it; I don't mean to be your servant.\"", "description": "[Maid refuses more haughtily]", "scene": "brookside"},
-    {"id": "The_Goose_Girl_MM017", "filename": "The_Goose_Girl_MM017.json", "interpOrder": false, "caption": "Then the Princess was compelled by her thirst to get down, and bending over the flowing water she cried and said: \"Oh! heaven, what am I to do?\" and the three drops of blood replied:", "description": "[Princess drinks and cries to heaven]", "scene": "brookside"},
-    {"id": "The_Goose_Girl_MM018", "filename": "The_Goose_Girl_MM018.json", "interpOrder": false, "caption": "\"If your mother only knew, Her heart would surely break in two.\"", "description": "[Verse: If your mother only knew]", "scene": "brookside"},
-    {"id": "The_Goose_Girl_MM019", "filename": "The_Goose_Girl_MM019.json", "interpOrder": false, "caption": "And as she drank thus, and leaned right over the water, the rag containing the three drops of blood fell from her bosom and floated down the stream, and she in her anxiety never even noticed her loss.", "description": "[Rag with blood drops floats away]", "scene": "brookside"},
-    {"id": "The_Goose_Girl_MM020", "filename": "The_Goose_Girl_MM020.json", "interpOrder": false, "caption": "But the waiting-maid had observed it with delight, as she knew it gave her power over the bride, for in losing the drops of blood the Princess had become weak and powerless.", "description": "[Maid delights in princess's loss]", "scene": "brookside"},
-    {"id": "The_Goose_Girl_MM021", "filename": "The_Goose_Girl_MM021.json", "interpOrder": false, "caption": "When she wished to get on her horse Falada again, the waiting-maid called out: \"I mean to ride Falada: you must mount my beast\"; and this too she had to submit to.", "description": "[Maid commands princess to switch horses]", "scene": "roadside"},
-    {"id": "The_Goose_Girl_MM022", "filename": "The_Goose_Girl_MM022.json", "interpOrder": false, "caption": "Then the waiting-maid commanded her harshly to take off her royal robes, and to put on her common ones, and finally she made her swear by heaven not to say a word about the matter when they reached the palace; and if she hadn't taken this oath she would have been killed on the spot.", "description": "[Maid forces princess to change clothes]", "scene": "roadside"},
-    {"id": "The_Goose_Girl_MM023", "filename": "The_Goose_Girl_MM023.json", "interpOrder": false, "caption": "But Falada observed everything, and laid it all to heart.", "description": "[Falada observes everything]", "scene": "roadside"},
-    {"id": "The_Goose_Girl_MM024", "filename": "The_Goose_Girl_MM024.json", "interpOrder": false, "caption": "The waiting-maid now mounted Falada, and the real bride the worse horse, and so they continued their journey till at length they arrived at the palace yard.", "description": "[They arrive at the palace yard]", "scene": "palace courtyard"},
-    {"id": "The_Goose_Girl_MM025", "filename": "The_Goose_Girl_MM025.json", "interpOrder": false, "caption": "There was great rejoicing over the arrival, and the Prince sprang forward to meet them, and taking the waiting-maid for his bride, he lifted her down from her horse and led her upstairs to the royal chamber.", "description": "[Prince meets the false bride]", "scene": "palace courtyard"},
-    {"id": "The_Goose_Girl_MM026", "filename": "The_Goose_Girl_MM026.json", "interpOrder": false, "caption": "In the meantime the real Princess was left standing below in the courtyard.", "description": "[Real princess stands in courtyard]", "scene": "palace courtyard"},
-    {"id": "The_Goose_Girl_MM027", "filename": "The_Goose_Girl_MM027.json", "interpOrder": false, "caption": "The old King, who was looking out of his window, beheld her in this plight, and it struck him how sweet and gentle, even beautiful, she looked.", "description": "[Old king sees the princess from window]", "scene": "palace window"},
-    {"id": "The_Goose_Girl_MM028", "filename": "The_Goose_Girl_MM028.json", "interpOrder": false, "caption": "He went at once to the royal chamber, and asked the bride who it was she had brought with her and had left thus standing in the court below.", "description": "[King asks about the standing girl]", "scene": "royal chamber"},
-    {"id": "The_Goose_Girl_MM029", "filename": "The_Goose_Girl_MM029.json", "interpOrder": false, "caption": "\"Oh!\" replied the bride, \"I brought her with me to keep me company on the journey; give the girl something to do, that she may not be idle.\"", "description": "[False bride dismisses princess]", "scene": "royal chamber"},
-    {"id": "The_Goose_Girl_MM030", "filename": "The_Goose_Girl_MM030.json", "interpOrder": false, "caption": "But the old King had no work for her, and couldn't think of anything; so he said, \"I've a small boy who looks after the geese, she'd better help him.\"", "description": "[King sends girl to herd geese]", "scene": "royal chamber"},
-    {"id": "The_Goose_Girl_MM031", "filename": "The_Goose_Girl_MM031.json", "interpOrder": false, "caption": "The youth's name was Curdken, and the real bride was made to assist him in herding geese.", "description": "[Curdkin and goose-girl introduced]", "scene": "palace courtyard"},
-    {"id": "The_Goose_Girl_MM032", "filename": "The_Goose_Girl_MM032.json", "interpOrder": false, "caption": "Soon after this the false bride said to the Prince: \"Dearest husband, I pray you grant me a favor.\" He answered: \"That I will.\" \"Then let the slaughterer cut off the head of the horse I rode here upon, because it behaved very badly on the journey.\"", "description": "[False bride demands Falada's death]", "scene": "royal chamber"},
-    {"id": "The_Goose_Girl_MM033", "filename": "The_Goose_Girl_MM033.json", "interpOrder": false, "caption": "But the truth was she was afraid lest the horse should speak and tell how she had treated the Princess. She carried her point, and the faithful Falada was doomed to die.", "description": "[Princess begs slaughterer to save Falada's head]", "scene": "slaughterhouse"},
-    {"id": "The_Goose_Girl_MM034", "filename": "The_Goose_Girl_MM034.json", "interpOrder": false, "caption": "When the news came to the ears of the real Princess she went to the slaughterer, and secretly promised him a piece of gold if he would do something for her.", "description": "[Princess pays slaughterer to hang head on gate]", "scene": "slaughterhouse"},
-    {"id": "The_Goose_Girl_MM035", "filename": "The_Goose_Girl_MM035.json", "interpOrder": false, "caption": "There was in the town a large dark gate, through which she had to pass night and morning with the geese; would he \"kindly hang up Falada's head there, that she might see it once again?\" The slaughterer said he would do as she desired, chopped off the head, and nailed it firmly over the gateway.", "description": "[Falada's head hung over gateway]", "scene": "town gate"},
-    {"id": "The_Goose_Girl_MM036", "filename": "The_Goose_Girl_MM036.json", "interpOrder": false, "caption": "Early next morning, as she and Curdken were driving their flock through the gate, she said as she passed under:", "description": "[Princess passes under gate speaking to head]", "scene": "town gate"},
-    {"id": "The_Goose_Girl_MM037", "filename": "The_Goose_Girl_MM037.json", "interpOrder": false, "caption": "\"Oh! Falada, 'tis you hang there\"; and the head replied:", "description": "[Verse: Oh Falada tis you hang there]", "scene": "town gate"},
-    {"id": "The_Goose_Girl_MM038", "filename": "The_Goose_Girl_MM038.json", "interpOrder": false, "caption": "\"'Tis you; pass under, Princess fair: If your mother only knew, Her heart would surely break in two.\"", "description": "[Verse: Tis you pass under Princess fair]", "scene": "town gate"},
-    {"id": "The_Goose_Girl_MM039", "filename": "The_Goose_Girl_MM039.json", "interpOrder": false, "caption": "Then she left the tower and drove the geese into a field.", "description": "[Princess drives geese to common]", "scene": "open field"},
-    {"id": "The_Goose_Girl_MM040", "filename": "The_Goose_Girl_MM040.json", "interpOrder": false, "caption": "And when they had reached the common where the geese fed she sat down and unloosed her hair, which was of pure gold.", "description": "[Princess sits and unlooses golden hair]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM041", "filename": "The_Goose_Girl_MM041.json", "interpOrder": false, "caption": "Curdken loved to see it glitter in the sun, and wanted much to pull some hair out.", "description": "[Curdken admires golden hair]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM042", "filename": "The_Goose_Girl_MM042.json", "interpOrder": false, "caption": "Then she spoke: \"Wind, wind, gently sway, Blow Curdken's hat away; Let him chase o'er field and wold Till my locks of ruddy gold, Now astray and hanging down, Be combed and plaited in a crown.\"", "description": "[Verse: Wind wind gently sway]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM043", "filename": "The_Goose_Girl_MM043.json", "interpOrder": false, "caption": "Then a gust of wind blew Curdken's hat away, and he had to chase it over hill and dale.", "description": "[Wind blows Curdken's hat away]", "scene": "open field"},
-    {"id": "The_Goose_Girl_MM044", "filename": "The_Goose_Girl_MM044.json", "interpOrder": false, "caption": "When he returned from the pursuit she had finished her combing and curling, and his chance of getting any hair was gone.", "description": "[Princess finishes combing hair]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM045", "filename": "The_Goose_Girl_MM045.json", "interpOrder": false, "caption": "Curdken was very angry, and wouldn't speak to her. So they herded the geese till evening and then went home.", "description": "[Curdken angry and silent]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM046", "filename": "The_Goose_Girl_MM046.json", "interpOrder": false, "caption": "The next morning, as they passed under the gate, the girl said:", "description": "[Second morning, princess passes under gate]", "scene": "town gate"},
-    {"id": "The_Goose_Girl_MM047", "filename": "The_Goose_Girl_MM047.json", "interpOrder": false, "caption": "\"Oh! Falada, 'tis you hang there\"; and the head replied:", "description": "[Verse: Oh Falada tis you hang there]", "scene": "town gate"},
-    {"id": "The_Goose_Girl_MM048", "filename": "The_Goose_Girl_MM048.json", "interpOrder": false, "caption": "\"'Tis you; pass under, Princess fair: If your mother only knew, Her heart would surely break in two.\"", "description": "[Verse: Tis you pass under Princess fair]", "scene": "town gate"},
-    {"id": "The_Goose_Girl_MM049", "filename": "The_Goose_Girl_MM049.json", "interpOrder": false, "caption": "Then she went on her way till she came to the common, where she sat down and began to comb out her hair.", "description": "[Princess sits on common again]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM050", "filename": "The_Goose_Girl_MM050.json", "interpOrder": false, "caption": "Then Curdken ran up to her and wanted to grasp some of the hair from her head, but she called out hastily:", "description": "[Curdken tries to grab her hair]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM051", "filename": "The_Goose_Girl_MM051.json", "interpOrder": false, "caption": "\"Wind, wind, gently sway, Blow Curdken's hat away; Let him chase o'er field and wold Till my locks of ruddy gold, Now astray and hanging down, Be combed and plaited in a crown.\"", "description": "[Verse: Wind wind gently sway]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM052", "filename": "The_Goose_Girl_MM052.json", "interpOrder": false, "caption": "Then a puff of wind came and blew Curdken's hat far away, so that he had to run after it.", "description": "[Wind blows hat far away]", "scene": "open field"},
-    {"id": "The_Goose_Girl_MM053", "filename": "The_Goose_Girl_MM053.json", "interpOrder": false, "caption": "And when he returned she had long finished putting up her golden locks, and he couldn't get any hair; so they watched the geese till it was dark.", "description": "[Princess finishes putting up hair]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM054", "filename": "The_Goose_Girl_MM054.json", "interpOrder": false, "caption": "But that evening when they got home Curdken went to the old King, and said: \"I refuse to herd geese any longer with that girl.\"", "description": "[Curdken complains to the old King]", "scene": "royal hall"},
-    {"id": "The_Goose_Girl_MM055", "filename": "The_Goose_Girl_MM055.json", "interpOrder": false, "caption": "\"For what reason?\" asked the old King.", "description": "[King asks reason]", "scene": "royal hall"},
-    {"id": "The_Goose_Girl_MM056", "filename": "The_Goose_Girl_MM056.json", "interpOrder": false, "caption": "\"Because she does nothing but annoy me all day long,\" replied Curdken; and he proceeded to relate all her iniquities, and said: \"Every morning as we drive the flock through the dark gate she says to a horse's head that hangs on the wall:", "description": "[Curdken tells about Falada and wind]", "scene": "royal hall"},
-    {"id": "The_Goose_Girl_MM057", "filename": "The_Goose_Girl_MM057.json", "interpOrder": false, "caption": "\"Oh! Falada, 'tis you hang there\"; and the head replies:", "description": "[Verse: Oh Falada tis you hang there]", "scene": "royal hall"},
-    {"id": "The_Goose_Girl_MM058", "filename": "The_Goose_Girl_MM058.json", "interpOrder": false, "caption": "\"'Tis you; pass under, Princess fair: If your mother only knew, Her heart would surely break in two.\"", "description": "[Verse: Tis you pass under Princess fair]", "scene": "royal hall"},
-    {"id": "The_Goose_Girl_MM059", "filename": "The_Goose_Girl_MM059.json", "interpOrder": false, "caption": "And Curdken went on to tell what passed on the common where the geese fed, and how he had always to chase his hat.", "description": "[Curdken tells about the wind and hat]", "scene": "royal hall"},
-    {"id": "The_Goose_Girl_MM060", "filename": "The_Goose_Girl_MM060.json", "interpOrder": false, "caption": "The old King bade him go and drive forth his flock as usual next day; and when morning came he himself took up his position behind the dark gate.", "description": "[King decides to watch]", "scene": "town gate"},
-    {"id": "The_Goose_Girl_MM061", "filename": "The_Goose_Girl_MM061.json", "interpOrder": false, "caption": "And heard how the goose-girl greeted Falada.", "description": "[King hears goose-girl greet Falada]", "scene": "town gate"},
-    {"id": "The_Goose_Girl_MM062", "filename": "The_Goose_Girl_MM062.json", "interpOrder": false, "caption": "Then he followed her through the field, and hid himself behind a bush on the common.", "description": "[King hides behind bush on common]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM063", "filename": "The_Goose_Girl_MM063.json", "interpOrder": false, "caption": "He soon saw with his own eyes how the goose-boy and the goose-girl looked after the geese, and how after a time the maiden sat down and loosed her hair, that glittered like gold, and repeated:", "description": "[King watches princess comb golden hair]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM064", "filename": "The_Goose_Girl_MM064.json", "interpOrder": false, "caption": "\"Wind, wind, gently sway, Blow Curdken's hat away; Let him chase o'er field and wold Till my locks of ruddy gold Now astray and hanging down, Be combed and plaited in a crown.\"", "description": "[Verse: Wind wind gently sway]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM065", "filename": "The_Goose_Girl_MM065.json", "interpOrder": false, "caption": "Then a gust of wind came and blew Curdken's hat away, so that he had to fly over hill and dale after it, and the girl in the meantime quietly combed and plaited her hair.", "description": "[King watches hat blow away]", "scene": "common field"},
-    {"id": "The_Goose_Girl_MM066", "filename": "The_Goose_Girl_MM066.json", "interpOrder": false, "caption": "All this the old King observed, and returned to the palace without anyone having noticed him.", "description": "[King returns to palace unnoticed]", "scene": "palace entrance"},
-    {"id": "The_Goose_Girl_MM067", "filename": "The_Goose_Girl_MM067.json", "interpOrder": false, "caption": "In the evening when the goose-girl came home he called her aside, and asked her why she behaved as she did.", "description": "[King calls goose-girl aside]", "scene": "palace corridor"},
-    {"id": "The_Goose_Girl_MM068", "filename": "The_Goose_Girl_MM068.json", "interpOrder": false, "caption": "\"I may not tell you why; how dare I confide my woes to anyone? for I swore not to by heaven, otherwise I should have lost my life.\"", "description": "[Princess cannot tell her story]", "scene": "palace corridor"},
-    {"id": "The_Goose_Girl_MM069", "filename": "The_Goose_Girl_MM069.json", "interpOrder": false, "caption": "The old King begged her to tell him all, and left her no peace, but he could get nothing out of her.", "description": "[King begs her to speak]", "scene": "palace corridor"},
-    {"id": "The_Goose_Girl_MM070", "filename": "The_Goose_Girl_MM070.json", "interpOrder": false, "caption": "At last he said: \"Well, if you won't tell me, confide your trouble to the iron stove there,\" and he went away.", "description": "[King tells her to confide in iron stove]", "scene": "room with iron stove"},
-    {"id": "The_Goose_Girl_MM071", "filename": "The_Goose_Girl_MM071.json", "interpOrder": false, "caption": "Then she crept to the stove, and began to sob and cry and to pour out her poor little heart, and said: \"Here I sit, deserted by all the world, I who am a king's daughter, and a false waiting-maid has forced me to take off my own clothes, and has taken my place with my bridegroom, while I have to fulfill the lowly office of goose-girl.", "description": "[Princess tells her story to the stove]", "scene": "room with iron stove"},
-    {"id": "The_Goose_Girl_MM072", "filename": "The_Goose_Girl_MM072.json", "interpOrder": false, "caption": "If my mother only knew Her heart would surely break in two.\"", "description": "[Verse: If my mother only knew]", "scene": "room with iron stove"},
-    {"id": "The_Goose_Girl_MM073", "filename": "The_Goose_Girl_MM073.json", "interpOrder": false, "caption": "But the old King stood outside at the stove chimney, and listened to her words.", "description": "[King listens outside chimney]", "scene": "outside chimney"},
-    {"id": "The_Goose_Girl_MM074", "filename": "The_Goose_Girl_MM074.json", "interpOrder": false, "caption": "Then he entered the room again, and bidding her leave the stove, he ordered royal apparel to be put on her, in which she looked amazingly lovely.", "description": "[King orders royal apparel for princess]", "scene": "royal chamber"},
-    {"id": "The_Goose_Girl_MM075", "filename": "The_Goose_Girl_MM075.json", "interpOrder": false, "caption": "Then he summoned his son, and revealed to him that he had got the false bride, who was nothing but a waiting-maid, while the real one, in the guise of the ex-goose-girl, was standing at his side.", "description": "[King reveals truth to his son]", "scene": "royal chamber"},
-    {"id": "The_Goose_Girl_MM076", "filename": "The_Goose_Girl_MM076.json", "interpOrder": false, "caption": "The young King rejoiced from his heart when he saw her beauty and learned how good she was.", "description": "[Young king rejoices at true bride]", "scene": "royal chamber"},
-    {"id": "The_Goose_Girl_MM077", "filename": "The_Goose_Girl_MM077.json", "interpOrder": false, "caption": "And a great banquet was prepared, to which everyone was bidden.", "description": "[Banquet is prepared]", "scene": "banquet hall"},
-    {"id": "The_Goose_Girl_MM078", "filename": "The_Goose_Girl_MM078.json", "interpOrder": false, "caption": "The bridegroom sat at the head of the table, the Princess on one side of him and the waiting-maid on the other.", "description": "[Princess and waiting-maid sit on either side]", "scene": "banquet table"},
-    {"id": "The_Goose_Girl_MM079", "filename": "The_Goose_Girl_MM079.json", "interpOrder": false, "caption": "But she was so dazzled that she did not recognize the Princess in her glittering garments.", "description": "[False bride dazzled and does not recognize princess]", "scene": "banquet hall"},
-    {"id": "The_Goose_Girl_MM080", "filename": "The_Goose_Girl_MM080.json", "interpOrder": false, "caption": "Now when they had eaten and drunk, and were merry, the old King asked the waiting-maid to solve a knotty point for him.", "description": "[King asks waiting-maid to solve riddle]", "scene": "banquet hall"},
-    {"id": "The_Goose_Girl_MM081", "filename": "The_Goose_Girl_MM081.json", "interpOrder": false, "caption": "\"What,\" said he, \"should be done to a certain person who has deceived everyone?\" and he proceeded to relate the whole story, ending up with, \"Now what sentence should be passed?\"", "description": "[King tells story of deception]", "scene": "banquet hall"},
-    {"id": "The_Goose_Girl_MM082", "filename": "The_Goose_Girl_MM082.json", "interpOrder": false, "caption": "Then the false bride answered: \"She deserves to be put stark naked into a barrel lined with sharp nails, which should be dragged by two white horses up and down the street till she is dead.\"", "description": "[False bride sentences herself]", "scene": "banquet hall"},
-    {"id": "The_Goose_Girl_MM083", "filename": "The_Goose_Girl_MM083.json", "interpOrder": false, "caption": "\"You are the person,\" said the King, \"and you have passed sentence on yourself; and even so it shall be done to you.\"", "description": "[King declares sentence upon her]", "scene": "banquet hall"},
-    {"id": "The_Goose_Girl_MM084", "filename": "The_Goose_Girl_MM084.json", "interpOrder": false, "caption": "And when the sentence had been carried out the young King was married to his real bride, and both reigned over the kingdom in peace and happiness.", "description": "[King and queen reign in peace]", "scene": "throne room"}
+    {
+      "id": "The_Goose_Girl_MM001",
+      "filename": "The_Goose_Girl_MM001.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Once upon a time an old queen, whose husband had been dead for many years,",
+      "description": "[old queen gives daughter royal trousseau]",
+      "scene": "Old queen gives daughter royal trousseau"
+    },
+    {
+      "id": "The_Goose_Girl_MM002",
+      "filename": "The_Goose_Girl_MM002.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "had a beautiful daughter.",
+      "description": "[deep focus on old queen gives daughter royal]",
+      "scene": "Old queen gives daughter royal trousseau"
+    },
+    {
+      "id": "The_Goose_Girl_MM003",
+      "filename": "The_Goose_Girl_MM003.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When she grew up she was betrothed to a prince who lived a great way",
+      "description": "[princess departs on horseback for foreign kingdom]",
+      "scene": "Princess departs on horseback for foreign kingdom"
+    },
+    {
+      "id": "The_Goose_Girl_MM004",
+      "filename": "The_Goose_Girl_MM004.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "off.",
+      "description": "[dramatic view of princess departs on horseback]",
+      "scene": "Princess departs on horseback for foreign kingdom"
+    },
+    {
+      "id": "The_Goose_Girl_MM005",
+      "filename": "The_Goose_Girl_MM005.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Now, when the time drew near for her to be married and to depart into",
+      "description": "[queen cuts fingers and bleeds onto white cloth]",
+      "scene": "Queen cuts fingers and bleeds onto white cloth"
+    },
+    {
+      "id": "The_Goose_Girl_MM006",
+      "filename": "The_Goose_Girl_MM006.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a foreign kingdom, her old mother gave her much costly baggage, and many ornaments, gold",
+      "description": "[warm view of queen cuts fingers and bleeds]",
+      "scene": "Queen cuts fingers and bleeds onto white cloth"
+    },
+    {
+      "id": "The_Goose_Girl_MM007",
+      "filename": "The_Goose_Girl_MM007.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and silver,",
+      "description": "[medium shot of queen cuts fingers and bleeds]",
+      "scene": "Queen cuts fingers and bleeds onto white cloth"
+    },
+    {
+      "id": "The_Goose_Girl_MM008",
+      "filename": "The_Goose_Girl_MM008.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "trinkets and knicknacks, and, in fact, everything that belonged to a royal trousseau, for she",
+      "description": "[moonlit view of queen cuts fingers and bleeds]",
+      "scene": "Queen cuts fingers and bleeds onto white cloth"
+    },
+    {
+      "id": "The_Goose_Girl_MM009",
+      "filename": "The_Goose_Girl_MM009.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "loved her daughter very dearly.",
+      "description": "[warm view of queen cuts fingers and bleeds]",
+      "scene": "Queen cuts fingers and bleeds onto white cloth"
+    },
+    {
+      "id": "The_Goose_Girl_MM010",
+      "filename": "The_Goose_Girl_MM010.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "She gave her a waiting-maid also, who was to ride with her and hand her",
+      "description": "[waiting-maid receives a horse for journey]",
+      "scene": "Waiting-maid receives a horse for journey"
+    },
+    {
+      "id": "The_Goose_Girl_MM011",
+      "filename": "The_Goose_Girl_MM011.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "over to the bridegroom, and she provided each of them with a horse for the",
+      "description": "[frame 10 of waiting-maid receives a horse]",
+      "scene": "Waiting-maid receives a horse for journey"
+    },
+    {
+      "id": "The_Goose_Girl_MM012",
+      "filename": "The_Goose_Girl_MM012.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "journey.",
+      "description": "[establishing shot of waiting-maid receives a horse]",
+      "scene": "Waiting-maid receives a horse for journey"
+    },
+    {
+      "id": "The_Goose_Girl_MM013",
+      "filename": "The_Goose_Girl_MM013.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Now the Princess's horse was called Falada, and could speak.",
+      "description": "[falada the speaking horse introduced]",
+      "scene": "Falada the speaking horse introduced"
+    },
+    {
+      "id": "The_Goose_Girl_MM014",
+      "filename": "The_Goose_Girl_MM014.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When the hour for departure drew near the old mother went to her bedroom, and",
+      "description": "[mother gives daughter the blood rag]",
+      "scene": "Mother gives daughter the blood rag"
+    },
+    {
+      "id": "The_Goose_Girl_MM015",
+      "filename": "The_Goose_Girl_MM015.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "taking a small knife she cut her fingers till they bled; then she held a",
+      "description": "[low angle of mother gives daughter the blood]",
+      "scene": "Mother gives daughter the blood rag"
+    },
+    {
+      "id": "The_Goose_Girl_MM016",
+      "filename": "The_Goose_Girl_MM016.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "white rag under them, and letting three drops of blood fall into it, she gave",
+      "description": "[misty view of mother gives daughter the blood]",
+      "scene": "Mother gives daughter the blood rag"
+    },
+    {
+      "id": "The_Goose_Girl_MM017",
+      "filename": "The_Goose_Girl_MM017.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "it to her daughter, and said: \"Dear child, take great care of this rag: it",
+      "description": "[cool view of mother gives daughter the blood]",
+      "scene": "Mother gives daughter the blood rag"
+    },
+    {
+      "id": "The_Goose_Girl_MM018",
+      "filename": "The_Goose_Girl_MM018.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "may be of use to you on the journey.\"",
+      "description": "[low angle of mother gives daughter the blood]",
+      "scene": "Mother gives daughter the blood rag"
+    },
+    {
+      "id": "The_Goose_Girl_MM019",
+      "filename": "The_Goose_Girl_MM019.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So they took a sad farewell of each other, and the Princess stuck the rag",
+      "description": "[princess and maid ride through countryside]",
+      "scene": "Princess and maid ride through countryside"
+    },
+    {
+      "id": "The_Goose_Girl_MM020",
+      "filename": "The_Goose_Girl_MM020.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "in front of her dress, mounted her horse, and set forth on the journey to",
+      "description": "[backlit view of princess and maid ride through]",
+      "scene": "Princess and maid ride through countryside"
+    },
+    {
+      "id": "The_Goose_Girl_MM021",
+      "filename": "The_Goose_Girl_MM021.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "her bridegroom's kingdom.",
+      "description": "[dramatic view of princess and maid ride through]",
+      "scene": "Princess and maid ride through countryside"
+    },
+    {
+      "id": "The_Goose_Girl_MM022",
+      "filename": "The_Goose_Girl_MM022.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "After they had ridden for about an hour the Princess began to feel very thirsty,",
+      "description": "[princess drinks from stream as maid refuses]",
+      "scene": "Princess drinks from stream as maid refuses"
+    },
+    {
+      "id": "The_Goose_Girl_MM023",
+      "filename": "The_Goose_Girl_MM023.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and said to her waiting-maid: \"Pray get down and fetch me some water in my",
+      "description": "[misty view of princess drinks from stream as]",
+      "scene": "Princess drinks from stream as maid refuses"
+    },
+    {
+      "id": "The_Goose_Girl_MM024",
+      "filename": "The_Goose_Girl_MM024.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "golden cup out of yonder stream: I would like a drink.\"",
+      "description": "[cool view of princess drinks from stream as]",
+      "scene": "Princess drinks from stream as maid refuses"
+    },
+    {
+      "id": "The_Goose_Girl_MM025",
+      "filename": "The_Goose_Girl_MM025.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"If you're thirsty,\" said the maid, \"dismount yourself, and lie down by the water and",
+      "description": "[maid tells princess to get water herself]",
+      "scene": "Maid tells princess to get water herself"
+    },
+    {
+      "id": "The_Goose_Girl_MM026",
+      "filename": "The_Goose_Girl_MM026.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "drink;",
+      "description": "[deep focus on maid tells princess to get]",
+      "scene": "Maid tells princess to get water herself"
+    },
+    {
+      "id": "The_Goose_Girl_MM027",
+      "filename": "The_Goose_Girl_MM027.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "I don't mean to be your servant any longer.\"",
+      "description": "[two shot of maid tells princess to get]",
+      "scene": "Maid tells princess to get water herself"
+    },
+    {
+      "id": "The_Goose_Girl_MM028",
+      "filename": "The_Goose_Girl_MM028.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The Princess was so thirsty that she got down, bent over the stream, and drank,",
+      "description": "[princess bends to drink from stream]",
+      "scene": "Princess bends to drink from stream"
+    },
+    {
+      "id": "The_Goose_Girl_MM029",
+      "filename": "The_Goose_Girl_MM029.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "for she wasn't allowed to drink out of the golden goblet.",
+      "description": "[sweeping view of princess bends to drink from]",
+      "scene": "Princess bends to drink from stream"
+    },
+    {
+      "id": "The_Goose_Girl_MM030",
+      "filename": "The_Goose_Girl_MM030.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "As she drank she murmured: \"Oh! heaven, what am I to do?\" and the three",
+      "description": "[three drops of blood speak from the rag]",
+      "scene": "Three drops of blood speak from the rag"
+    },
+    {
+      "id": "The_Goose_Girl_MM031",
+      "filename": "The_Goose_Girl_MM031.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "drops of blood replied:",
+      "description": "[cool view of three drops of blood speak]",
+      "scene": "Three drops of blood speak from the rag"
+    },
+    {
+      "id": "The_Goose_Girl_MM032",
+      "filename": "The_Goose_Girl_MM032.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"If your mother only knew, Her heart would surely break in two.\"",
+      "description": "[verse: if your mother only knew]",
+      "scene": "Verse: If your mother only knew"
+    },
+    {
+      "id": "The_Goose_Girl_MM033",
+      "filename": "The_Goose_Girl_MM033.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But the Princess was meek, and said nothing about her maid's rude behavior, and quietly",
+      "description": "[princess says nothing and remounts]",
+      "scene": "Princess says nothing and remounts"
+    },
+    {
+      "id": "The_Goose_Girl_MM034",
+      "filename": "The_Goose_Girl_MM034.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "mounted her horse again.",
+      "description": "[two shot of princess says nothing and remounts]",
+      "scene": "Princess says nothing and remounts"
+    },
+    {
+      "id": "The_Goose_Girl_MM035",
+      "filename": "The_Goose_Girl_MM035.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "They rode on their way for several miles, but the day was hot, and the",
+      "description": "[they ride on in the hot sun]",
+      "scene": "They ride on in the hot sun"
+    },
+    {
+      "id": "The_Goose_Girl_MM036",
+      "filename": "The_Goose_Girl_MM036.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "sun's rays smote fiercely on them, so that the Princess was soon overcome by thirst",
+      "description": "[close-up of they ride]",
+      "scene": "They ride on in the hot sun"
+    },
+    {
+      "id": "The_Goose_Girl_MM037",
+      "filename": "The_Goose_Girl_MM037.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "again.",
+      "description": "[backlit view of they ride]",
+      "scene": "They ride on in the hot sun"
+    },
+    {
+      "id": "The_Goose_Girl_MM038",
+      "filename": "The_Goose_Girl_MM038.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And as they passed a brook she called once more to her waiting-maid: \"Pray get",
+      "description": "[princess asks maid for drink again]",
+      "scene": "Princess asks maid for drink again"
+    },
+    {
+      "id": "The_Goose_Girl_MM039",
+      "filename": "The_Goose_Girl_MM039.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "down and give me a drink from my golden cup,\" for she had long ago",
+      "description": "[low angle of princess asks maid for drink]",
+      "scene": "Princess asks maid for drink again"
+    },
+    {
+      "id": "The_Goose_Girl_MM040",
+      "filename": "The_Goose_Girl_MM040.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "forgotten her maid's rude words.",
+      "description": "[misty view of princess asks maid for drink]",
+      "scene": "Princess asks maid for drink again"
+    },
+    {
+      "id": "The_Goose_Girl_MM041",
+      "filename": "The_Goose_Girl_MM041.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But the waiting-maid replied, more haughtily even than before: \"If you want a drink, you",
+      "description": "[maid refuses more haughtily]",
+      "scene": "Maid refuses more haughtily"
+    },
+    {
+      "id": "The_Goose_Girl_MM042",
+      "filename": "The_Goose_Girl_MM042.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "can dismount and get it; I don't mean to be your servant.\"",
+      "description": "[silhouette of maid refuses more haughtily]",
+      "scene": "Maid refuses more haughtily"
+    },
+    {
+      "id": "The_Goose_Girl_MM043",
+      "filename": "The_Goose_Girl_MM043.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then the Princess was compelled by her thirst to get down, and bending over the",
+      "description": "[princess drinks and cries to heaven]",
+      "scene": "Princess drinks and cries to heaven"
+    },
+    {
+      "id": "The_Goose_Girl_MM044",
+      "filename": "The_Goose_Girl_MM044.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "flowing water she cried and said: \"Oh! heaven, what am I to do?\" and the",
+      "description": "[backlit view of princess drinks and cries]",
+      "scene": "Princess drinks and cries to heaven"
+    },
+    {
+      "id": "The_Goose_Girl_MM045",
+      "filename": "The_Goose_Girl_MM045.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "three drops of blood replied:",
+      "description": "[dramatic view of princess drinks and cries]",
+      "scene": "Princess drinks and cries to heaven"
+    },
+    {
+      "id": "The_Goose_Girl_MM046",
+      "filename": "The_Goose_Girl_MM046.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"If your mother only knew, Her heart would surely break in two.\"",
+      "description": "[moonlit view of verse: if your mother only]",
+      "scene": "Verse: If your mother only knew"
+    },
+    {
+      "id": "The_Goose_Girl_MM047",
+      "filename": "The_Goose_Girl_MM047.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And as she drank thus, and leaned right over the water, the rag containing the",
+      "description": "[rag with blood drops floats away]",
+      "scene": "Rag with blood drops floats away"
+    },
+    {
+      "id": "The_Goose_Girl_MM048",
+      "filename": "The_Goose_Girl_MM048.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "three drops of blood fell from her bosom and floated down the stream, and she",
+      "description": "[sun-dappled view of rag with blood drops floats]",
+      "scene": "Rag with blood drops floats away"
+    },
+    {
+      "id": "The_Goose_Girl_MM049",
+      "filename": "The_Goose_Girl_MM049.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "in her anxiety never even noticed her loss.",
+      "description": "[shadowy view of rag with blood drops floats]",
+      "scene": "Rag with blood drops floats away"
+    },
+    {
+      "id": "The_Goose_Girl_MM050",
+      "filename": "The_Goose_Girl_MM050.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But the waiting-maid had observed it with delight, as she knew it gave her power",
+      "description": "[maid delights in princess's loss]",
+      "scene": "Maid delights in princess's loss"
+    },
+    {
+      "id": "The_Goose_Girl_MM051",
+      "filename": "The_Goose_Girl_MM051.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "over the bride, for in losing the drops of blood the Princess had become weak",
+      "description": "[intimate view of maid delights in princess's loss]",
+      "scene": "Maid delights in princess's loss"
+    },
+    {
+      "id": "The_Goose_Girl_MM052",
+      "filename": "The_Goose_Girl_MM052.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and powerless.",
+      "description": "[maid delights in princess's loss]",
+      "scene": "Maid delights in princess's loss"
+    },
+    {
+      "id": "The_Goose_Girl_MM053",
+      "filename": "The_Goose_Girl_MM053.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When she wished to get on her horse Falada again, the waiting-maid called out: \"I",
+      "description": "[maid commands princess to switch horses]",
+      "scene": "Maid commands princess to switch horses"
+    },
+    {
+      "id": "The_Goose_Girl_MM054",
+      "filename": "The_Goose_Girl_MM054.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "mean to ride Falada: you must mount my beast\"; and this too she had to",
+      "description": "[warm view of maid commands princess to switch]",
+      "scene": "Maid commands princess to switch horses"
+    },
+    {
+      "id": "The_Goose_Girl_MM055",
+      "filename": "The_Goose_Girl_MM055.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "submit to.",
+      "description": "[medium shot of maid commands princess to switch]",
+      "scene": "Maid commands princess to switch horses"
+    },
+    {
+      "id": "The_Goose_Girl_MM056",
+      "filename": "The_Goose_Girl_MM056.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then the waiting-maid commanded her harshly to take off her royal robes, and to put",
+      "description": "[maid forces princess to change clothes]",
+      "scene": "Maid forces princess to change clothes"
+    },
+    {
+      "id": "The_Goose_Girl_MM057",
+      "filename": "The_Goose_Girl_MM057.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "on her common ones, and finally she made her swear by heaven not to say",
+      "description": "[radiant view of maid forces princess to change]",
+      "scene": "Maid forces princess to change clothes"
+    },
+    {
+      "id": "The_Goose_Girl_MM058",
+      "filename": "The_Goose_Girl_MM058.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "a word about the matter when they reached the palace; and if she hadn't taken",
+      "description": "[profile view of maid forces princess to change]",
+      "scene": "Maid forces princess to change clothes"
+    },
+    {
+      "id": "The_Goose_Girl_MM059",
+      "filename": "The_Goose_Girl_MM059.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "this oath she would have been killed on the spot.",
+      "description": "[soft focus on maid forces princess to change]",
+      "scene": "Maid forces princess to change clothes"
+    },
+    {
+      "id": "The_Goose_Girl_MM060",
+      "filename": "The_Goose_Girl_MM060.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But Falada observed everything, and laid it all to heart.",
+      "description": "[falada observes everything]",
+      "scene": "Falada observes everything"
+    },
+    {
+      "id": "The_Goose_Girl_MM061",
+      "filename": "The_Goose_Girl_MM061.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The waiting-maid now mounted Falada, and the real bride the worse horse, and so they",
+      "description": "[they arrive at the palace yard]",
+      "scene": "They arrive at the palace yard"
+    },
+    {
+      "id": "The_Goose_Girl_MM062",
+      "filename": "The_Goose_Girl_MM062.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "continued their journey till at length they arrived at the palace yard.",
+      "description": "[medium shot of they arrive at the palace]",
+      "scene": "They arrive at the palace yard"
+    },
+    {
+      "id": "The_Goose_Girl_MM063",
+      "filename": "The_Goose_Girl_MM063.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "There was great rejoicing over the arrival, and the Prince sprang forward to meet them,",
+      "description": "[prince meets the false bride]",
+      "scene": "Prince meets the false bride"
+    },
+    {
+      "id": "The_Goose_Girl_MM064",
+      "filename": "The_Goose_Girl_MM064.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and taking the waiting-maid for his bride, he lifted her down from her horse and",
+      "description": "[high angle of prince meets the false bride]",
+      "scene": "Prince meets the false bride"
+    },
+    {
+      "id": "The_Goose_Girl_MM065",
+      "filename": "The_Goose_Girl_MM065.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "led her upstairs to the royal chamber.",
+      "description": "[sun-dappled view of prince meets the false bride]",
+      "scene": "Prince meets the false bride"
+    },
+    {
+      "id": "The_Goose_Girl_MM066",
+      "filename": "The_Goose_Girl_MM066.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "In the meantime the real Princess was left standing below in the courtyard.",
+      "description": "[real princess stands in courtyard]",
+      "scene": "Real princess stands in courtyard"
+    },
+    {
+      "id": "The_Goose_Girl_MM067",
+      "filename": "The_Goose_Girl_MM067.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The old King, who was looking out of his window, beheld her in this plight,",
+      "description": "[old king sees the princess from window]",
+      "scene": "Old king sees the princess from window"
+    },
+    {
+      "id": "The_Goose_Girl_MM068",
+      "filename": "The_Goose_Girl_MM068.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and it struck him how sweet and gentle, even beautiful, she looked.",
+      "description": "[backlit view of old king sees the princess]",
+      "scene": "Old king sees the princess from window"
+    },
+    {
+      "id": "The_Goose_Girl_MM069",
+      "filename": "The_Goose_Girl_MM069.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He went at once to the royal chamber, and asked the bride who it was",
+      "description": "[king asks about the standing girl]",
+      "scene": "King asks about the standing girl"
+    },
+    {
+      "id": "The_Goose_Girl_MM070",
+      "filename": "The_Goose_Girl_MM070.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "she had brought with her and had left thus standing in the court below.",
+      "description": "[moonlit view of king asks about the standing]",
+      "scene": "King asks about the standing girl"
+    },
+    {
+      "id": "The_Goose_Girl_MM071",
+      "filename": "The_Goose_Girl_MM071.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Oh!\" replied the bride, \"I brought her with me to keep me company on the",
+      "description": "[false bride dismisses princess]",
+      "scene": "False bride dismisses princess"
+    },
+    {
+      "id": "The_Goose_Girl_MM072",
+      "filename": "The_Goose_Girl_MM072.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "journey;",
+      "description": "[sun-dappled view of false bride dismisses princess]",
+      "scene": "False bride dismisses princess"
+    },
+    {
+      "id": "The_Goose_Girl_MM073",
+      "filename": "The_Goose_Girl_MM073.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "give the girl something to do, that she may not be idle.\"",
+      "description": "[shadowy view of false bride dismisses princess]",
+      "scene": "False bride dismisses princess"
+    },
+    {
+      "id": "The_Goose_Girl_MM074",
+      "filename": "The_Goose_Girl_MM074.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But the old King had no work for her, and couldn't think of anything; so",
+      "description": "[king sends girl to herd geese]",
+      "scene": "King sends girl to herd geese"
+    },
+    {
+      "id": "The_Goose_Girl_MM075",
+      "filename": "The_Goose_Girl_MM075.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "he said,",
+      "description": "[intimate view of king sends girl to herd]",
+      "scene": "King sends girl to herd geese"
+    },
+    {
+      "id": "The_Goose_Girl_MM076",
+      "filename": "The_Goose_Girl_MM076.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"I've a small boy who looks after the geese, she'd better help him.\"",
+      "description": "[king sends girl to herd geese]",
+      "scene": "King sends girl to herd geese"
+    },
+    {
+      "id": "The_Goose_Girl_MM077",
+      "filename": "The_Goose_Girl_MM077.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The youth's name was Curdken, and the real bride was made to assist him in",
+      "description": "[curdkin and goose-girl introduced]",
+      "scene": "Curdkin and goose-girl introduced"
+    },
+    {
+      "id": "The_Goose_Girl_MM078",
+      "filename": "The_Goose_Girl_MM078.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "herding geese.",
+      "description": "[warm view of curdkin and goose-girl introduced]",
+      "scene": "Curdkin and goose-girl introduced"
+    },
+    {
+      "id": "The_Goose_Girl_MM079",
+      "filename": "The_Goose_Girl_MM079.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Soon after this the false bride said to the Prince: \"Dearest husband, I pray you",
+      "description": "[false bride demands falada's death]",
+      "scene": "False bride demands Falada's death"
+    },
+    {
+      "id": "The_Goose_Girl_MM080",
+      "filename": "The_Goose_Girl_MM080.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "grant me a favor.\" He answered: \"That I will.\" \"Then let the slaughterer cut off",
+      "description": "[shadowy view of false bride demands falada's death]",
+      "scene": "False bride demands Falada's death"
+    },
+    {
+      "id": "The_Goose_Girl_MM081",
+      "filename": "The_Goose_Girl_MM081.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the head of the horse I rode here upon, because it behaved very badly on",
+      "description": "[high angle of false bride demands falada's death]",
+      "scene": "False bride demands Falada's death"
+    },
+    {
+      "id": "The_Goose_Girl_MM082",
+      "filename": "The_Goose_Girl_MM082.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the journey.\"",
+      "description": "[sun-dappled view of false bride demands falada's death]",
+      "scene": "False bride demands Falada's death"
+    },
+    {
+      "id": "The_Goose_Girl_MM083",
+      "filename": "The_Goose_Girl_MM083.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But the truth was she was afraid lest the horse should speak and tell how",
+      "description": "[princess begs slaughterer to save falada's head]",
+      "scene": "Princess begs slaughterer to save Falada's head"
+    },
+    {
+      "id": "The_Goose_Girl_MM084",
+      "filename": "The_Goose_Girl_MM084.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "she had treated the Princess. She carried her point, and the faithful Falada was doomed",
+      "description": "[close-up of princess begs slaughterer to save]",
+      "scene": "Princess begs slaughterer to save Falada's head"
+    },
+    {
+      "id": "The_Goose_Girl_MM085",
+      "filename": "The_Goose_Girl_MM085.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to die.",
+      "description": "[backlit view of princess begs slaughterer to save]",
+      "scene": "Princess begs slaughterer to save Falada's head"
+    },
+    {
+      "id": "The_Goose_Girl_MM086",
+      "filename": "The_Goose_Girl_MM086.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When the news came to the ears of the real Princess she went to the",
+      "description": "[princess pays slaughterer to hang head on gate]",
+      "scene": "Princess pays slaughterer to hang head on gate"
+    },
+    {
+      "id": "The_Goose_Girl_MM087",
+      "filename": "The_Goose_Girl_MM087.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "slaughterer,",
+      "description": "[low angle of princess pays slaughterer to hang]",
+      "scene": "Princess pays slaughterer to hang head on gate"
+    },
+    {
+      "id": "The_Goose_Girl_MM088",
+      "filename": "The_Goose_Girl_MM088.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and secretly promised him a piece of gold if he would do something for her.",
+      "description": "[misty view of princess pays slaughterer to hang]",
+      "scene": "Princess pays slaughterer to hang head on gate"
+    },
+    {
+      "id": "The_Goose_Girl_MM089",
+      "filename": "The_Goose_Girl_MM089.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "There was in the town a large dark gate, through which she had to pass",
+      "description": "[falada's head hung over gateway]",
+      "scene": "Falada's head hung over gateway"
+    },
+    {
+      "id": "The_Goose_Girl_MM090",
+      "filename": "The_Goose_Girl_MM090.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "night and morning with the geese; would he \"kindly hang up Falada's head there, that",
+      "description": "[silhouette of falada's head hung over gateway]",
+      "scene": "Falada's head hung over gateway"
+    },
+    {
+      "id": "The_Goose_Girl_MM091",
+      "filename": "The_Goose_Girl_MM091.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "she might see it once again?\" The slaughterer said he would do as she desired,",
+      "description": "[deep focus on falada's head hung over gateway]",
+      "scene": "Falada's head hung over gateway"
+    },
+    {
+      "id": "The_Goose_Girl_MM092",
+      "filename": "The_Goose_Girl_MM092.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "chopped off the head, and nailed it firmly over the gateway.",
+      "description": "[two shot of falada's head hung over gateway]",
+      "scene": "Falada's head hung over gateway"
+    },
+    {
+      "id": "The_Goose_Girl_MM093",
+      "filename": "The_Goose_Girl_MM093.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Early next morning, as she and Curdken were driving their flock through the gate, she",
+      "description": "[princess passes under gate speaking to head]",
+      "scene": "Princess passes under gate speaking to head"
+    },
+    {
+      "id": "The_Goose_Girl_MM094",
+      "filename": "The_Goose_Girl_MM094.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "said as she passed under:",
+      "description": "[moonlit view of princess passes under gate speaking]",
+      "scene": "Princess passes under gate speaking to head"
+    },
+    {
+      "id": "The_Goose_Girl_MM095",
+      "filename": "The_Goose_Girl_MM095.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Oh! Falada, 'tis you hang there\"; and the head replied:",
+      "description": "[verse: oh falada tis you hang there]",
+      "scene": "Verse: Oh Falada tis you hang there"
+    },
+    {
+      "id": "The_Goose_Girl_MM096",
+      "filename": "The_Goose_Girl_MM096.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"'Tis you; pass under, Princess fair: If your mother only knew, Her heart would surely",
+      "description": "[verse: tis you pass under princess fair]",
+      "scene": "Verse: Tis you pass under Princess fair"
+    },
+    {
+      "id": "The_Goose_Girl_MM097",
+      "filename": "The_Goose_Girl_MM097.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "break in two.\"",
+      "description": "[soft focus on verse: tis you pass under]",
+      "scene": "Verse: Tis you pass under Princess fair"
+    },
+    {
+      "id": "The_Goose_Girl_MM098",
+      "filename": "The_Goose_Girl_MM098.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then she left the tower and drove the geese into a field.",
+      "description": "[princess drives geese to common]",
+      "scene": "Princess drives geese to common"
+    },
+    {
+      "id": "The_Goose_Girl_MM099",
+      "filename": "The_Goose_Girl_MM099.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And when they had reached the common where the geese fed she sat down and",
+      "description": "[princess sits and unlooses golden hair]",
+      "scene": "Princess sits and unlooses golden hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM100",
+      "filename": "The_Goose_Girl_MM100.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "unloosed her hair, which was of pure gold.",
+      "description": "[dramatic view of princess sits and unlooses golden]",
+      "scene": "Princess sits and unlooses golden hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM101",
+      "filename": "The_Goose_Girl_MM101.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Curdken loved to see it glitter in the sun, and wanted much to pull some",
+      "description": "[curdken admires golden hair]",
+      "scene": "Curdken admires golden hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM102",
+      "filename": "The_Goose_Girl_MM102.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "hair out.",
+      "description": "[warm view of curdken admires golden hair]",
+      "scene": "Curdken admires golden hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM103",
+      "filename": "The_Goose_Girl_MM103.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then she spoke: \"Wind, wind, gently sway, Blow Curdken's hat away; Let him chase o'er",
+      "description": "[verse: wind wind gently sway]",
+      "scene": "Verse: Wind wind gently sway"
+    },
+    {
+      "id": "The_Goose_Girl_MM104",
+      "filename": "The_Goose_Girl_MM104.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "field and wold Till my locks of ruddy gold, Now astray and hanging down, Be",
+      "description": "[shadowy view of verse: wind wind gently sway]",
+      "scene": "Verse: Wind wind gently sway"
+    },
+    {
+      "id": "The_Goose_Girl_MM105",
+      "filename": "The_Goose_Girl_MM105.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "combed and plaited in a crown.\"",
+      "description": "[high angle of verse: wind wind gently sway]",
+      "scene": "Verse: Wind wind gently sway"
+    },
+    {
+      "id": "The_Goose_Girl_MM106",
+      "filename": "The_Goose_Girl_MM106.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then a gust of wind blew Curdken's hat away, and he had to chase it",
+      "description": "[wind blows curdken's hat away]",
+      "scene": "Wind blows Curdken's hat away"
+    },
+    {
+      "id": "The_Goose_Girl_MM107",
+      "filename": "The_Goose_Girl_MM107.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "over hill and dale.",
+      "description": "[frame 106 of wind blows curdken's hat away]",
+      "scene": "Wind blows Curdken's hat away"
+    },
+    {
+      "id": "The_Goose_Girl_MM108",
+      "filename": "The_Goose_Girl_MM108.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When he returned from the pursuit she had finished her combing and curling, and his",
+      "description": "[princess finishes combing hair]",
+      "scene": "Princess finishes combing hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM109",
+      "filename": "The_Goose_Girl_MM109.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "chance of getting any hair was gone.",
+      "description": "[wide shot of princess finishes combing hair]",
+      "scene": "Princess finishes combing hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM110",
+      "filename": "The_Goose_Girl_MM110.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Curdken was very angry, and wouldn't speak to her. So they herded the geese till",
+      "description": "[curdken angry and silent]",
+      "scene": "Curdken angry and silent"
+    },
+    {
+      "id": "The_Goose_Girl_MM111",
+      "filename": "The_Goose_Girl_MM111.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "evening and then went home.",
+      "description": "[low angle of curdken angry and silent]",
+      "scene": "Curdken angry and silent"
+    },
+    {
+      "id": "The_Goose_Girl_MM112",
+      "filename": "The_Goose_Girl_MM112.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The next morning, as they passed under the gate, the girl said:",
+      "description": "[second morning, princess passes under gate]",
+      "scene": "Second morning, princess passes under gate"
+    },
+    {
+      "id": "The_Goose_Girl_MM113",
+      "filename": "The_Goose_Girl_MM113.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Oh! Falada, 'tis you hang there\"; and the head replied:",
+      "description": "[profile view of verse: oh falada tis you]",
+      "scene": "Verse: Oh Falada tis you hang there"
+    },
+    {
+      "id": "The_Goose_Girl_MM114",
+      "filename": "The_Goose_Girl_MM114.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"'Tis you; pass under, Princess fair: If your mother only knew, Her heart would surely",
+      "description": "[soft focus on verse: tis you pass under]",
+      "scene": "Verse: Tis you pass under Princess fair"
+    },
+    {
+      "id": "The_Goose_Girl_MM115",
+      "filename": "The_Goose_Girl_MM115.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "break in two.\"",
+      "description": "[radiant view of verse: tis you pass under]",
+      "scene": "Verse: Tis you pass under Princess fair"
+    },
+    {
+      "id": "The_Goose_Girl_MM116",
+      "filename": "The_Goose_Girl_MM116.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then she went on her way till she came to the common, where she sat",
+      "description": "[princess sits on common again]",
+      "scene": "Princess sits on common again"
+    },
+    {
+      "id": "The_Goose_Girl_MM117",
+      "filename": "The_Goose_Girl_MM117.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "down and began to comb out her hair.",
+      "description": "[golden hour view of princess sits on common]",
+      "scene": "Princess sits on common again"
+    },
+    {
+      "id": "The_Goose_Girl_MM118",
+      "filename": "The_Goose_Girl_MM118.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then Curdken ran up to her and wanted to grasp some of the hair from",
+      "description": "[curdken tries to grab her hair]",
+      "scene": "Curdken tries to grab her hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM119",
+      "filename": "The_Goose_Girl_MM119.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "her head,",
+      "description": "[misty view of curdken tries to grab her]",
+      "scene": "Curdken tries to grab her hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM120",
+      "filename": "The_Goose_Girl_MM120.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "but she called out hastily:",
+      "description": "[cool view of curdken tries to grab her]",
+      "scene": "Curdken tries to grab her hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM121",
+      "filename": "The_Goose_Girl_MM121.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Wind, wind, gently sway, Blow Curdken's hat away; Let him chase o'er field and wold",
+      "description": "[low angle of verse: wind wind gently sway]",
+      "scene": "Verse: Wind wind gently sway"
+    },
+    {
+      "id": "The_Goose_Girl_MM122",
+      "filename": "The_Goose_Girl_MM122.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Till my locks of ruddy gold, Now astray and hanging down, Be combed and plaited",
+      "description": "[misty view of verse: wind wind gently sway]",
+      "scene": "Verse: Wind wind gently sway"
+    },
+    {
+      "id": "The_Goose_Girl_MM123",
+      "filename": "The_Goose_Girl_MM123.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "in a crown.\"",
+      "description": "[cool view of verse: wind wind gently sway]",
+      "scene": "Verse: Wind wind gently sway"
+    },
+    {
+      "id": "The_Goose_Girl_MM124",
+      "filename": "The_Goose_Girl_MM124.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then a puff of wind came and blew Curdken's hat far away, so that he",
+      "description": "[wind blows hat far away]",
+      "scene": "Wind blows hat far away"
+    },
+    {
+      "id": "The_Goose_Girl_MM125",
+      "filename": "The_Goose_Girl_MM125.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "had to run after it.",
+      "description": "[sweeping view of wind blows hat far away]",
+      "scene": "Wind blows hat far away"
+    },
+    {
+      "id": "The_Goose_Girl_MM126",
+      "filename": "The_Goose_Girl_MM126.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And when he returned she had long finished putting up her golden locks, and he",
+      "description": "[princess finishes putting up hair]",
+      "scene": "Princess finishes putting up hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM127",
+      "filename": "The_Goose_Girl_MM127.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "couldn't get any hair; so they watched the geese till it was dark.",
+      "description": "[cool view of princess finishes putting up hair]",
+      "scene": "Princess finishes putting up hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM128",
+      "filename": "The_Goose_Girl_MM128.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But that evening when they got home Curdken went to the old King, and said:",
+      "description": "[curdken complains to the old king]",
+      "scene": "Curdken complains to the old King"
+    },
+    {
+      "id": "The_Goose_Girl_MM129",
+      "filename": "The_Goose_Girl_MM129.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"I refuse to herd geese any longer with that girl.\"",
+      "description": "[radiant view of curdken complains to the old]",
+      "scene": "Curdken complains to the old King"
+    },
+    {
+      "id": "The_Goose_Girl_MM130",
+      "filename": "The_Goose_Girl_MM130.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"For what reason?\" asked the old King.",
+      "description": "[king asks reason]",
+      "scene": "King asks reason"
+    },
+    {
+      "id": "The_Goose_Girl_MM131",
+      "filename": "The_Goose_Girl_MM131.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Because she does nothing but annoy me all day long,\" replied Curdken; and he proceeded",
+      "description": "[curdken tells about falada and wind]",
+      "scene": "Curdken tells about Falada and wind"
+    },
+    {
+      "id": "The_Goose_Girl_MM132",
+      "filename": "The_Goose_Girl_MM132.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to relate all her iniquities, and said: \"Every morning as we drive the flock through",
+      "description": "[close-up of curdken tells about falada]",
+      "scene": "Curdken tells about Falada and wind"
+    },
+    {
+      "id": "The_Goose_Girl_MM133",
+      "filename": "The_Goose_Girl_MM133.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the dark gate she says to a horse's head that hangs on the wall:",
+      "description": "[backlit view of curdken tells about falada]",
+      "scene": "Curdken tells about Falada and wind"
+    },
+    {
+      "id": "The_Goose_Girl_MM134",
+      "filename": "The_Goose_Girl_MM134.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Oh! Falada, 'tis you hang there'; and the head replies:",
+      "description": "[golden hour view of verse: oh falada tis]",
+      "scene": "Verse: Oh Falada tis you hang there"
+    },
+    {
+      "id": "The_Goose_Girl_MM135",
+      "filename": "The_Goose_Girl_MM135.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"'Tis you; pass under, Princess fair: If your mother only knew, Her heart would surely",
+      "description": "[close-up of verse: tis you pass under]",
+      "scene": "Verse: Tis you pass under Princess fair"
+    },
+    {
+      "id": "The_Goose_Girl_MM136",
+      "filename": "The_Goose_Girl_MM136.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "break in two.'\"",
+      "description": "[backlit view of verse: tis you pass under]",
+      "scene": "Verse: Tis you pass under Princess fair"
+    },
+    {
+      "id": "The_Goose_Girl_MM137",
+      "filename": "The_Goose_Girl_MM137.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And Curdken went on to tell what passed on the common where the geese fed,",
+      "description": "[curdken tells about the wind and hat]",
+      "scene": "Curdken tells about the wind and hat"
+    },
+    {
+      "id": "The_Goose_Girl_MM138",
+      "filename": "The_Goose_Girl_MM138.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and how he had always to chase his hat.",
+      "description": "[silhouette of curdken tells about the wind]",
+      "scene": "Curdken tells about the wind and hat"
+    },
+    {
+      "id": "The_Goose_Girl_MM139",
+      "filename": "The_Goose_Girl_MM139.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The old King bade him go and drive forth his flock as usual next day;",
+      "description": "[king decides to watch]",
+      "scene": "King decides to watch"
+    },
+    {
+      "id": "The_Goose_Girl_MM140",
+      "filename": "The_Goose_Girl_MM140.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and when morning came he himself took up his position behind the dark gate.",
+      "description": "[backlit view of king decides to watch]",
+      "scene": "King decides to watch"
+    },
+    {
+      "id": "The_Goose_Girl_MM141",
+      "filename": "The_Goose_Girl_MM141.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And heard how the goose-girl greeted Falada.",
+      "description": "[king hears goose-girl greet falada]",
+      "scene": "King hears goose-girl greet Falada"
+    },
+    {
+      "id": "The_Goose_Girl_MM142",
+      "filename": "The_Goose_Girl_MM142.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then he followed her through the field, and hid himself behind a bush on the",
+      "description": "[king hides behind bush on common]",
+      "scene": "King hides behind bush on common"
+    },
+    {
+      "id": "The_Goose_Girl_MM143",
+      "filename": "The_Goose_Girl_MM143.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "common.",
+      "description": "[misty view of king hides behind bush on]",
+      "scene": "King hides behind bush on common"
+    },
+    {
+      "id": "The_Goose_Girl_MM144",
+      "filename": "The_Goose_Girl_MM144.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He soon saw with his own eyes how the goose-boy and the goose-girl looked after",
+      "description": "[king watches princess comb golden hair]",
+      "scene": "King watches princess comb golden hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM145",
+      "filename": "The_Goose_Girl_MM145.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the geese,",
+      "description": "[soft focus on king watches princess comb golden]",
+      "scene": "King watches princess comb golden hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM146",
+      "filename": "The_Goose_Girl_MM146.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and how after a time the maiden sat down and loosed her hair, that glittered",
+      "description": "[radiant view of king watches princess comb golden]",
+      "scene": "King watches princess comb golden hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM147",
+      "filename": "The_Goose_Girl_MM147.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "like gold,",
+      "description": "[profile view of king watches princess comb golden]",
+      "scene": "King watches princess comb golden hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM148",
+      "filename": "The_Goose_Girl_MM148.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and repeated:",
+      "description": "[soft focus on king watches princess comb golden]",
+      "scene": "King watches princess comb golden hair"
+    },
+    {
+      "id": "The_Goose_Girl_MM149",
+      "filename": "The_Goose_Girl_MM149.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Wind, wind, gently sway, Blow Curdken's hat away; Let him chase o'er field and wold",
+      "description": "[high angle of verse: wind wind gently sway]",
+      "scene": "Verse: Wind wind gently sway"
+    },
+    {
+      "id": "The_Goose_Girl_MM150",
+      "filename": "The_Goose_Girl_MM150.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Till my locks of ruddy gold Now astray and hanging down, Be combed and plaited",
+      "description": "[sun-dappled view of verse: wind wind gently sway]",
+      "scene": "Verse: Wind wind gently sway"
+    },
+    {
+      "id": "The_Goose_Girl_MM151",
+      "filename": "The_Goose_Girl_MM151.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "in a crown.\"",
+      "description": "[shadowy view of verse: wind wind gently sway]",
+      "scene": "Verse: Wind wind gently sway"
+    },
+    {
+      "id": "The_Goose_Girl_MM152",
+      "filename": "The_Goose_Girl_MM152.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then a gust of wind came and blew Curdken's hat away, so that he had",
+      "description": "[king watches hat blow away]",
+      "scene": "King watches hat blow away"
+    },
+    {
+      "id": "The_Goose_Girl_MM153",
+      "filename": "The_Goose_Girl_MM153.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to fly over hill and dale after it, and the girl in the meantime quietly",
+      "description": "[radiant view of king watches hat blow away]",
+      "scene": "King watches hat blow away"
+    },
+    {
+      "id": "The_Goose_Girl_MM154",
+      "filename": "The_Goose_Girl_MM154.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "combed and plaited her hair.",
+      "description": "[profile view of king watches hat blow away]",
+      "scene": "King watches hat blow away"
+    },
+    {
+      "id": "The_Goose_Girl_MM155",
+      "filename": "The_Goose_Girl_MM155.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "All this the old King observed, and returned to the palace without anyone having noticed",
+      "description": "[king returns to palace unnoticed]",
+      "scene": "King returns to palace unnoticed"
+    },
+    {
+      "id": "The_Goose_Girl_MM156",
+      "filename": "The_Goose_Girl_MM156.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "him.",
+      "description": "[close-up of king returns to palace unnoticed]",
+      "scene": "King returns to palace unnoticed"
+    },
+    {
+      "id": "The_Goose_Girl_MM157",
+      "filename": "The_Goose_Girl_MM157.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "In the evening when the goose-girl came home he called her aside, and asked her",
+      "description": "[king calls goose-girl aside]",
+      "scene": "King calls goose-girl aside"
+    },
+    {
+      "id": "The_Goose_Girl_MM158",
+      "filename": "The_Goose_Girl_MM158.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "why she behaved as she did.",
+      "description": "[medium shot of king calls goose-girl aside]",
+      "scene": "King calls goose-girl aside"
+    },
+    {
+      "id": "The_Goose_Girl_MM159",
+      "filename": "The_Goose_Girl_MM159.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"I may not tell you why; how dare I confide my woes to anyone? for",
+      "description": "[princess cannot tell her story]",
+      "scene": "Princess cannot tell her story"
+    },
+    {
+      "id": "The_Goose_Girl_MM160",
+      "filename": "The_Goose_Girl_MM160.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "I swore not to by heaven, otherwise I should have lost my life.\"",
+      "description": "[high angle of princess cannot tell her story]",
+      "scene": "Princess cannot tell her story"
+    },
+    {
+      "id": "The_Goose_Girl_MM161",
+      "filename": "The_Goose_Girl_MM161.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The old King begged her to tell him all, and left her no peace, but",
+      "description": "[king begs her to speak]",
+      "scene": "King begs her to speak"
+    },
+    {
+      "id": "The_Goose_Girl_MM162",
+      "filename": "The_Goose_Girl_MM162.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "he could get nothing out of her.",
+      "description": "[silhouette of king begs her to speak]",
+      "scene": "King begs her to speak"
+    },
+    {
+      "id": "The_Goose_Girl_MM163",
+      "filename": "The_Goose_Girl_MM163.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At last he said: \"Well, if you won't tell me, confide your trouble to the",
+      "description": "[king tells her to confide in iron stove]",
+      "scene": "King tells her to confide in iron stove"
+    },
+    {
+      "id": "The_Goose_Girl_MM164",
+      "filename": "The_Goose_Girl_MM164.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "iron stove there,\" and he went away.",
+      "description": "[backlit view of king tells her to confide]",
+      "scene": "King tells her to confide in iron stove"
+    },
+    {
+      "id": "The_Goose_Girl_MM165",
+      "filename": "The_Goose_Girl_MM165.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then she crept to the stove, and began to sob and cry and to pour",
+      "description": "[princess tells her story to the stove]",
+      "scene": "Princess tells her story to the stove"
+    },
+    {
+      "id": "The_Goose_Girl_MM166",
+      "filename": "The_Goose_Girl_MM166.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "out her poor little heart, and said: \"Here I sit, deserted by all the world,",
+      "description": "[moonlit view of princess tells her story]",
+      "scene": "Princess tells her story to the stove"
+    },
+    {
+      "id": "The_Goose_Girl_MM167",
+      "filename": "The_Goose_Girl_MM167.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "I who am a king's daughter, and a false waiting-maid has forced me to take",
+      "description": "[warm view of princess tells her story]",
+      "scene": "Princess tells her story to the stove"
+    },
+    {
+      "id": "The_Goose_Girl_MM168",
+      "filename": "The_Goose_Girl_MM168.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "off my own clothes, and has taken my place with my bridegroom, while I have",
+      "description": "[medium shot of princess tells her story]",
+      "scene": "Princess tells her story to the stove"
+    },
+    {
+      "id": "The_Goose_Girl_MM169",
+      "filename": "The_Goose_Girl_MM169.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to fulfill the lowly office of goose-girl.",
+      "description": "[moonlit view of princess tells her story]",
+      "scene": "Princess tells her story to the stove"
+    },
+    {
+      "id": "The_Goose_Girl_MM170",
+      "filename": "The_Goose_Girl_MM170.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"If my mother only knew Her heart would surely break in two.\"",
+      "description": "[verse: if my mother only knew]",
+      "scene": "Verse: If my mother only knew"
+    },
+    {
+      "id": "The_Goose_Girl_MM171",
+      "filename": "The_Goose_Girl_MM171.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But the old King stood outside at the stove chimney, and listened to her words.",
+      "description": "[king listens outside chimney]",
+      "scene": "King listens outside chimney"
+    },
+    {
+      "id": "The_Goose_Girl_MM172",
+      "filename": "The_Goose_Girl_MM172.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then he entered the room again, and bidding her leave the stove, he ordered royal",
+      "description": "[king orders royal apparel for princess]",
+      "scene": "King orders royal apparel for princess"
+    },
+    {
+      "id": "The_Goose_Girl_MM173",
+      "filename": "The_Goose_Girl_MM173.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "apparel to be put on her, in which she looked amazingly lovely.",
+      "description": "[sweeping view of king orders royal apparel]",
+      "scene": "King orders royal apparel for princess"
+    },
+    {
+      "id": "The_Goose_Girl_MM174",
+      "filename": "The_Goose_Girl_MM174.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then he summoned his son, and revealed to him that he had got the false",
+      "description": "[king reveals truth to his son]",
+      "scene": "King reveals truth to his son"
+    },
+    {
+      "id": "The_Goose_Girl_MM175",
+      "filename": "The_Goose_Girl_MM175.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "bride,",
+      "description": "[cool view of king reveals truth to his]",
+      "scene": "King reveals truth to his son"
+    },
+    {
+      "id": "The_Goose_Girl_MM176",
+      "filename": "The_Goose_Girl_MM176.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "who was nothing but a waiting-maid, while the real one, in the guise of the",
+      "description": "[low angle of king reveals truth to his]",
+      "scene": "King reveals truth to his son"
+    },
+    {
+      "id": "The_Goose_Girl_MM177",
+      "filename": "The_Goose_Girl_MM177.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "ex-goose-girl,",
+      "description": "[misty view of king reveals truth to his]",
+      "scene": "King reveals truth to his son"
+    },
+    {
+      "id": "The_Goose_Girl_MM178",
+      "filename": "The_Goose_Girl_MM178.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "was standing at his side.",
+      "description": "[cool view of king reveals truth to his]",
+      "scene": "King reveals truth to his son"
+    },
+    {
+      "id": "The_Goose_Girl_MM179",
+      "filename": "The_Goose_Girl_MM179.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The young King rejoiced from his heart when he saw her beauty and learned how",
+      "description": "[young king rejoices at true bride]",
+      "scene": "Young king rejoices at true bride"
+    },
+    {
+      "id": "The_Goose_Girl_MM180",
+      "filename": "The_Goose_Girl_MM180.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "good she was.",
+      "description": "[close-up of young king rejoices at true]",
+      "scene": "Young king rejoices at true bride"
+    },
+    {
+      "id": "The_Goose_Girl_MM181",
+      "filename": "The_Goose_Girl_MM181.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And a great banquet was prepared, to which everyone was bidden.",
+      "description": "[banquet is prepared]",
+      "scene": "Banquet is prepared"
+    },
+    {
+      "id": "The_Goose_Girl_MM182",
+      "filename": "The_Goose_Girl_MM182.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The bridegroom sat at the head of the table, the Princess on one side of",
+      "description": "[princess and waiting-maid sit on either side]",
+      "scene": "Princess and waiting-maid sit on either side"
+    },
+    {
+      "id": "The_Goose_Girl_MM183",
+      "filename": "The_Goose_Girl_MM183.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "him and the waiting-maid on the other.",
+      "description": "[low angle of princess and waiting-maid sit]",
+      "scene": "Princess and waiting-maid sit on either side"
+    },
+    {
+      "id": "The_Goose_Girl_MM184",
+      "filename": "The_Goose_Girl_MM184.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "But she was so dazzled that she did not recognize the Princess in her glittering",
+      "description": "[false bride dazzled and does not recognize princess]",
+      "scene": "False bride dazzled and does not recognize princess"
+    },
+    {
+      "id": "The_Goose_Girl_MM185",
+      "filename": "The_Goose_Girl_MM185.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "garments.",
+      "description": "[profile view of false bride dazzled and does]",
+      "scene": "False bride dazzled and does not recognize princess"
+    },
+    {
+      "id": "The_Goose_Girl_MM186",
+      "filename": "The_Goose_Girl_MM186.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Now when they had eaten and drunk, and were merry, the old King asked the",
+      "description": "[king asks waiting-maid to solve riddle]",
+      "scene": "King asks waiting-maid to solve riddle"
+    },
+    {
+      "id": "The_Goose_Girl_MM187",
+      "filename": "The_Goose_Girl_MM187.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "waiting-maid to solve a knotty point for him.",
+      "description": "[establishing shot of king asks waiting-maid to solve]",
+      "scene": "King asks waiting-maid to solve riddle"
+    },
+    {
+      "id": "The_Goose_Girl_MM188",
+      "filename": "The_Goose_Girl_MM188.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"What,\" said he, \"should be done to a certain person who has deceived everyone?\" and",
+      "description": "[king tells story of deception]",
+      "scene": "King tells story of deception"
+    },
+    {
+      "id": "The_Goose_Girl_MM189",
+      "filename": "The_Goose_Girl_MM189.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "he proceeded to relate the whole story, ending up with, \"Now what sentence should be",
+      "description": "[golden hour view of king tells story]",
+      "scene": "King tells story of deception"
+    },
+    {
+      "id": "The_Goose_Girl_MM190",
+      "filename": "The_Goose_Girl_MM190.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "passed?\"",
+      "description": "[sweeping view of king tells story of deception]",
+      "scene": "King tells story of deception"
+    },
+    {
+      "id": "The_Goose_Girl_MM191",
+      "filename": "The_Goose_Girl_MM191.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then the false bride answered: \"She deserves to be put stark naked into a barrel",
+      "description": "[false bride sentences herself]",
+      "scene": "False bride sentences herself"
+    },
+    {
+      "id": "The_Goose_Girl_MM192",
+      "filename": "The_Goose_Girl_MM192.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "lined with sharp nails, which should be dragged by two white horses up and down",
+      "description": "[sun-dappled view of false bride sentences herself]",
+      "scene": "False bride sentences herself"
+    },
+    {
+      "id": "The_Goose_Girl_MM193",
+      "filename": "The_Goose_Girl_MM193.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the street till she is dead.\"",
+      "description": "[shadowy view of false bride sentences herself]",
+      "scene": "False bride sentences herself"
+    },
+    {
+      "id": "The_Goose_Girl_MM194",
+      "filename": "The_Goose_Girl_MM194.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"You are the person,\" said the King, \"and you have passed sentence on yourself; and",
+      "description": "[king declares sentence upon her]",
+      "scene": "King declares sentence upon her"
+    },
+    {
+      "id": "The_Goose_Girl_MM195",
+      "filename": "The_Goose_Girl_MM195.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "even so it shall be done to you.\"",
+      "description": "[intimate view of king declares sentence upon her]",
+      "scene": "King declares sentence upon her"
+    },
+    {
+      "id": "The_Goose_Girl_MM196",
+      "filename": "The_Goose_Girl_MM196.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And when the sentence had been carried out the young King was married to his",
+      "description": "[king and queen reign in peace]",
+      "scene": "King and queen reign in peace"
+    },
+    {
+      "id": "The_Goose_Girl_MM197",
+      "filename": "The_Goose_Girl_MM197.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "real bride,",
+      "description": "[sweeping view of king and queen reign]",
+      "scene": "King and queen reign in peace"
+    },
+    {
+      "id": "The_Goose_Girl_MM198",
+      "filename": "The_Goose_Girl_MM198.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and both reigned over the kingdom in peace and happiness.",
+      "description": "[wide shot of king and queen reign]",
+      "scene": "King and queen reign in peace"
+    }
   ]
 }

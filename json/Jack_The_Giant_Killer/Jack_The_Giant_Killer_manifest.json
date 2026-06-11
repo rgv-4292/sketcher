@@ -2,7 +2,7 @@
   "width": 720,
   "height": 720,
   "format": "png",
-  "name": "Jack the Giant-Killer",
+  "name": "Jack The Giant Killer",
   "captionFontSize": 14,
   "defaultTransitionDuration": 2000,
   "pages": [
@@ -10,568 +10,1224 @@
       "id": "Jack_The_Giant_Killer_MM001",
       "filename": "Jack_The_Giant_Killer_MM001.json",
       "interpOrder": false,
-      "caption": "In the reign of the famous King Arthur there lived in Cornwall a lad named Jack, who was a boy of a bold temper, and took delight in hearing or reading of conjurers, giants, and fairies.",
-      "description": "[Young Jack stands in a medieval village]",
+      "captioned": true,
+      "caption": "In the reign of the famous King Arthur there lived in Cornwall a lad named",
+      "description": "[wide establishing shot of medieval village]",
       "scene": "Young Jack stands in a medieval village"
     },
     {
       "id": "Jack_The_Giant_Killer_MM002",
       "filename": "Jack_The_Giant_Killer_MM002.json",
       "interpOrder": false,
-      "caption": "In those days there lived on St. Michael's Mount, off Cornwall, a huge giant, eighteen feet high and nine feet round.",
-      "description": "[Giant looms over St. Michael's Mount]",
-      "scene": "Giant looms over St. Michael's Mount"
+      "captioned": true,
+      "caption": "Jack,",
+      "description": "[close-up of young man's face]",
+      "scene": "Young Jack stands in a medieval village"
     },
     {
       "id": "Jack_The_Giant_Killer_MM003",
       "filename": "Jack_The_Giant_Killer_MM003.json",
       "interpOrder": false,
-      "caption": "He dwelt in a gloomy cavern on the top of the mountain, and used to wade over to the mainland in search of prey.",
-      "description": "[Giant carries oxen and sheep from mainland]",
-      "scene": "Giant carries oxen and sheep from mainland"
+      "captioned": true,
+      "caption": "who was a boy of a bold temper, and took delight in hearing or reading",
+      "description": "[Jack holding an open storybook]",
+      "scene": "Young Jack stands in a medieval village"
     },
     {
       "id": "Jack_The_Giant_Killer_MM004",
       "filename": "Jack_The_Giant_Killer_MM004.json",
       "interpOrder": false,
-      "caption": "When he would throw half a dozen oxen upon his back, and tie three times as many sheep and hogs round his waist.",
-      "description": "[Giant loads cattle on his back]",
-      "scene": "Giant loads cattle on his back"
+      "captioned": true,
+      "caption": "of conjurers,",
+      "description": "[illustrated page showing a sorcerer]",
+      "scene": "Young Jack stands in a medieval village"
     },
     {
       "id": "Jack_The_Giant_Killer_MM005",
       "filename": "Jack_The_Giant_Killer_MM005.json",
       "interpOrder": false,
-      "caption": "The giant had done this for many years when Jack resolved to destroy him.",
-      "description": "[Jack resolves to fight the giant]",
-      "scene": "Jack resolves to fight the giant"
+      "captioned": true,
+      "caption": "giants, and fairies.",
+      "description": "[illustrated page with giant and fairy figures]",
+      "scene": "Young Jack stands in a medieval village"
     },
     {
       "id": "Jack_The_Giant_Killer_MM006",
       "filename": "Jack_The_Giant_Killer_MM006.json",
       "interpOrder": false,
-      "caption": "Jack took a horn, a shovel, a pickaxe, his armor, and a dark lantern, and one winter's evening he went to the mount.",
-      "description": "[Jack gathers tools and marches to the mount]",
-      "scene": "Jack gathers tools and marches to the mount"
+      "captioned": true,
+      "caption": "In those days there lived on St. Michael's Mount, off Cornwall, a huge giant, eighteen",
+      "description": "[wide shot of St. Michael's Mount rising from sea]",
+      "scene": "Giant looms over St. Michael's Mount"
     },
     {
       "id": "Jack_The_Giant_Killer_MM007",
       "filename": "Jack_The_Giant_Killer_MM007.json",
       "interpOrder": false,
-      "caption": "There he dug a pit twenty-two feet deep and twenty broad.",
-      "description": "[Jack digs a deep pit in the ground]",
-      "scene": "Jack digs a deep pit in the ground"
+      "captioned": true,
+      "caption": "feet high and nine feet round.",
+      "description": "[low-angle shot of towering giant]",
+      "scene": "Giant looms over St. Michael's Mount"
     },
     {
       "id": "Jack_The_Giant_Killer_MM008",
       "filename": "Jack_The_Giant_Killer_MM008.json",
       "interpOrder": false,
-      "caption": "He covered the top over so as to make it look like solid ground.",
-      "description": "[Jack covers pit with branches and soil]",
-      "scene": "Jack covers pit with branches and soil"
+      "captioned": true,
+      "caption": "He dwelt in a gloomy cavern on the top of the mountain, and used to",
+      "description": "[dark cavern entrance on mountain peak]",
+      "scene": "Giant carries oxen and sheep from mainland"
     },
     {
       "id": "Jack_The_Giant_Killer_MM009",
       "filename": "Jack_The_Giant_Killer_MM009.json",
       "interpOrder": false,
-      "caption": "He then blew his horn so loudly that the giant awoke and came out of his den crying out.",
-      "description": "[Jack blows his horn to wake the giant]",
-      "scene": "Jack blows his horn to wake the giant"
+      "captioned": true,
+      "caption": "wade over to the mainland in search of prey.",
+      "description": "[giant striding through shallow water]",
+      "scene": "Giant carries oxen and sheep from mainland"
     },
     {
       "id": "Jack_The_Giant_Killer_MM010",
       "filename": "Jack_The_Giant_Killer_MM010.json",
       "interpOrder": false,
-      "caption": "\"You saucy villain! you shall pay for this! I'll broil you for my breakfast!\"",
-      "description": "[Giant emerges from cavern in fury]",
-      "scene": "Giant emerges from cavern in fury"
+      "captioned": true,
+      "caption": "When he would throw half a dozen oxen upon his back, and tie three times",
+      "description": "[giant lifting oxen onto massive shoulders]",
+      "scene": "Giant loads cattle on his back"
     },
     {
       "id": "Jack_The_Giant_Killer_MM011",
       "filename": "Jack_The_Giant_Killer_MM011.json",
       "interpOrder": false,
-      "caption": "He had just finished, when, taking one step further, he tumbled headlong into the pit.",
-      "description": "[Giant tumbles headlong into the pit]",
-      "scene": "Giant tumbles headlong into the pit"
+      "captioned": true,
+      "caption": "as many sheep and hogs round his waist.",
+      "description": "[sheep and hogs bound around giant's waist]",
+      "scene": "Giant loads cattle on his back"
     },
     {
       "id": "Jack_The_Giant_Killer_MM012",
       "filename": "Jack_The_Giant_Killer_MM012.json",
       "interpOrder": false,
-      "caption": "And Jack struck him a blow on the head with his pickaxe which killed him.",
-      "description": "[Jack strikes the giant with his pickaxe]",
-      "scene": "Jack strikes the giant with his pickaxe"
+      "captioned": true,
+      "caption": "The giant had done this for many years when Jack resolved to destroy him.",
+      "description": "[Jack clenching fists with determination]",
+      "scene": "Jack resolves to fight the giant"
     },
     {
       "id": "Jack_The_Giant_Killer_MM013",
       "filename": "Jack_The_Giant_Killer_MM013.json",
       "interpOrder": false,
-      "caption": "Jack then returned home to cheer his friends with the news.",
-      "description": "[Jack returns home victorious]",
-      "scene": "Jack returns home victorious"
+      "captioned": true,
+      "caption": "Jack took a horn, a shovel, a pickaxe, his armor, and a dark lantern, and",
+      "description": "[Jack holding tools and lantern at night]",
+      "scene": "Jack gathers tools and marches to the mount"
     },
     {
       "id": "Jack_The_Giant_Killer_MM014",
       "filename": "Jack_The_Giant_Killer_MM014.json",
       "interpOrder": false,
-      "caption": "Another giant, called Blunderbore, vowed to be revenged on Jack if ever he should have him in his power.",
-      "description": "[Giant Blunderbore appears in a lonely wood]",
-      "scene": "Giant Blunderbore appears in a lonely wood"
+      "captioned": true,
+      "caption": "one winter's evening he went to the mount.",
+      "description": "[lone figure walking at dusk toward distant mount]",
+      "scene": "Jack gathers tools and marches to the mount"
     },
     {
       "id": "Jack_The_Giant_Killer_MM015",
       "filename": "Jack_The_Giant_Killer_MM015.json",
       "interpOrder": false,
-      "caption": "Jack was passing through a wood, and being weary, sat down and went to sleep.",
-      "description": "[Jack falls asleep in the forest]",
-      "scene": "Jack falls asleep in the forest"
+      "captioned": true,
+      "caption": "There he dug a pit twenty-two feet deep and twenty broad.",
+      "description": "[Jack digging deep pit with pickaxe]",
+      "scene": "Jack digs a deep pit in the ground"
     },
     {
       "id": "Jack_The_Giant_Killer_MM016",
       "filename": "Jack_The_Giant_Killer_MM016.json",
       "interpOrder": false,
-      "caption": "The giant, passing by and seeing Jack, carried him to his castle.",
-      "description": "[Giant carries sleeping Jack to his castle]",
-      "scene": "Giant carries sleeping Jack to his castle"
+      "captioned": true,
+      "caption": "He covered the top over so as to make it look like solid ground.",
+      "description": "[branches laid across hidden pit]",
+      "scene": "Jack covers pit with branches and soil"
     },
     {
       "id": "Jack_The_Giant_Killer_MM017",
       "filename": "Jack_The_Giant_Killer_MM017.json",
       "interpOrder": false,
-      "caption": "Where he locked him up in a large room, the floor of which was covered with the bodies, skulls and bones of men and women.",
-      "description": "[Room filled with skulls and bones]",
-      "scene": "Room filled with skulls and bones"
+      "captioned": true,
+      "caption": "He then blew his horn so loudly that the giant awoke and came out of",
+      "description": "[giant emerging from dark cave entrance]",
+      "scene": "Jack blows his horn to wake the giant"
     },
     {
       "id": "Jack_The_Giant_Killer_MM018",
       "filename": "Jack_The_Giant_Killer_MM018.json",
       "interpOrder": false,
-      "caption": "Soon after the giant went to fetch his brother who was likewise a giant, to take a meal off his flesh.",
-      "description": "[Jack sees two giants approaching]",
-      "scene": "Jack sees two giants approaching"
+      "captioned": true,
+      "caption": "his den crying out.",
+      "description": "[giant bellowing with rage in moonlight]",
+      "scene": "Jack blows his horn to wake the giant"
     },
     {
       "id": "Jack_The_Giant_Killer_MM019",
       "filename": "Jack_The_Giant_Killer_MM019.json",
       "interpOrder": false,
-      "caption": "Jack, perceiving in one corner of the room a strong cord, took courage, and making a slip-knot at each end, he threw them over their heads.",
-      "description": "[Jack ties rope nooses over giants' heads]",
-      "scene": "Jack ties rope nooses over giants' heads"
+      "captioned": true,
+      "caption": "\"You saucy villain! you shall pay for this! I'll broil you for my breakfast!\"",
+      "description": "[giant shaking fist in fury]",
+      "scene": "Giant emerges from cavern in fury"
     },
     {
       "id": "Jack_The_Giant_Killer_MM020",
       "filename": "Jack_The_Giant_Killer_MM020.json",
       "interpOrder": false,
-      "caption": "He tied it to the window-bars; he then pulled till he had choked them.",
-      "description": "[Jack pulls rope and hangs the giants]",
-      "scene": "Jack pulls rope and hangs the giants"
+      "captioned": true,
+      "caption": "He had just finished, when, taking one step further, he tumbled headlong into the pit.",
+      "description": "[giant falling into concealed pit]",
+      "scene": "Giant tumbles headlong into the pit"
     },
     {
       "id": "Jack_The_Giant_Killer_MM021",
       "filename": "Jack_The_Giant_Killer_MM021.json",
       "interpOrder": false,
-      "caption": "When they were black in the face he slid down the rope and stabbed them to the heart.",
-      "description": "[Jack stabs the giants with his sword]",
-      "scene": "Jack stabs the giants with his sword"
+      "captioned": true,
+      "caption": "And Jack struck him a blow on the head with his pickaxe which killed him.",
+      "description": "[Jack swinging pickaxe downward into pit]",
+      "scene": "Jack strikes the giant with his pickaxe"
     },
     {
       "id": "Jack_The_Giant_Killer_MM022",
       "filename": "Jack_The_Giant_Killer_MM022.json",
       "interpOrder": false,
-      "caption": "Jack next took a great bunch of keys from the pocket of Blunderbore, and in one of them found three ladies tied up by the hair of their heads.",
-      "description": "[Jack finds three starving ladies]",
-      "scene": "Jack finds three starving ladies"
+      "captioned": true,
+      "caption": "Jack then returned home to cheer his friends with the news.",
+      "description": "[Jack walking victoriously toward village at dawn]",
+      "scene": "Jack returns home victorious"
     },
     {
       "id": "Jack_The_Giant_Killer_MM023",
       "filename": "Jack_The_Giant_Killer_MM023.json",
       "interpOrder": false,
-      "caption": "They told him that their husbands had been killed by the giants, who had then condemned them to be starved to death.",
-      "description": "[Jack frees the ladies from their bonds]",
-      "scene": "Jack frees the ladies from their bonds"
+      "captioned": true,
+      "caption": "Another giant, called Blunderbore, vowed to be revenged on Jack if ever he should have",
+      "description": "[sinister giant brooding in dark wood]",
+      "scene": "Giant Blunderbore appears in a lonely wood"
     },
     {
       "id": "Jack_The_Giant_Killer_MM024",
       "filename": "Jack_The_Giant_Killer_MM024.json",
       "interpOrder": false,
-      "caption": "\"Ladies,\" said Jack, \"I have put an end to the monster and his wicked brother; and I give you this castle and all the riches it contains.\"",
-      "description": "[Jack gives castle and keys to the ladies]",
-      "scene": "Jack gives castle and keys to the ladies"
+      "captioned": true,
+      "caption": "him in his power.",
+      "description": "[close-up of giant's menacing eyes]",
+      "scene": "Giant Blunderbore appears in a lonely wood"
     },
     {
       "id": "Jack_The_Giant_Killer_MM025",
       "filename": "Jack_The_Giant_Killer_MM025.json",
       "interpOrder": false,
-      "caption": "He then very politely gave them the keys of the castle, and went further on his journey to Wales.",
-      "description": "[Jack travels onward to Wales]",
-      "scene": "Jack travels onward to Wales"
+      "captioned": true,
+      "caption": "Jack was passing through a wood, and being weary, sat down and went to sleep.",
+      "description": "[Jack asleep beneath a gnarled oak tree]",
+      "scene": "Jack falls asleep in the forest"
     },
     {
       "id": "Jack_The_Giant_Killer_MM026",
       "filename": "Jack_The_Giant_Killer_MM026.json",
       "interpOrder": false,
-      "caption": "As Jack had but little money, he went on as fast as possible. At length he came to a handsome house.",
-      "description": "[Jack arrives at a handsome Welsh house]",
-      "scene": "Jack arrives at a handsome Welsh house"
+      "captioned": true,
+      "caption": "The giant, passing by and seeing Jack, carried him to his castle.",
+      "description": "[giant carrying sleeping Jack toward stone castle]",
+      "scene": "Giant carries sleeping Jack to his castle"
     },
     {
       "id": "Jack_The_Giant_Killer_MM027",
       "filename": "Jack_The_Giant_Killer_MM027.json",
       "interpOrder": false,
-      "caption": "Jack knocked at the door, when there came forth a Welsh giant. Jack said he was a traveler who had lost his way.",
-      "description": "[Welsh giant welcomes Jack to his home]",
-      "scene": "Welsh giant welcomes Jack to his home"
+      "captioned": true,
+      "caption": "Where he locked him up in a large room, the floor of which was covered",
+      "description": "[giant locking heavy iron door]",
+      "scene": "Room filled with skulls and bones"
     },
     {
       "id": "Jack_The_Giant_Killer_MM028",
       "filename": "Jack_The_Giant_Killer_MM028.json",
       "interpOrder": false,
-      "caption": "Jack took off his clothes quickly, but though he was weary he could not go to sleep.",
-      "description": "[Jack lies in bed listening to the giant]",
-      "scene": "Jack lies in bed listening to the giant"
+      "captioned": true,
+      "caption": "with the bodies, skulls and bones of men and women.",
+      "description": "[room floor littered with human skulls]",
+      "scene": "Room filled with skulls and bones"
     },
     {
       "id": "Jack_The_Giant_Killer_MM029",
       "filename": "Jack_The_Giant_Killer_MM029.json",
       "interpOrder": false,
-      "caption": "\"Though here you lodge with me this night, You shall not see the morning light; My club shall dash your brains out quite.\"",
-      "description": "[Giant chants a threatening rhyme]",
-      "scene": "Giant chants a threatening rhyme"
+      "captioned": true,
+      "caption": "Soon after the giant went to fetch his brother who was likewise a giant, to",
+      "description": "[two giants approaching through woodland]",
+      "scene": "Jack sees two giants approaching"
     },
     {
       "id": "Jack_The_Giant_Killer_MM030",
       "filename": "Jack_The_Giant_Killer_MM030.json",
       "interpOrder": false,
-      "caption": "\"Say you so?\" thought Jack. Then, getting out of bed, he groped about the room, and found a large thick billet of wood.",
-      "description": "[Jack places a log in his bed]",
-      "scene": "Jack places a log in his bed"
+      "captioned": true,
+      "caption": "take a meal off his flesh.",
+      "description": "[two towering giants side by side]",
+      "scene": "Jack sees two giants approaching"
     },
     {
       "id": "Jack_The_Giant_Killer_MM031",
       "filename": "Jack_The_Giant_Killer_MM031.json",
       "interpOrder": false,
-      "caption": "The giant, about midnight, entered the apartment, and with his bludgeon struck many blows on the bed.",
-      "description": "[Giant strikes the log with his bludgeon]",
-      "scene": "Giant strikes the log with his bludgeon"
+      "captioned": true,
+      "caption": "Jack, perceiving in one corner of the room a strong cord, took courage, and making",
+      "description": "[Jack reaching for thick rope in corner]",
+      "scene": "Jack ties rope nooses over giants' heads"
     },
     {
       "id": "Jack_The_Giant_Killer_MM032",
       "filename": "Jack_The_Giant_Killer_MM032.json",
       "interpOrder": false,
-      "caption": "Early in the morning Jack put a bold face upon the matter, and walked into the giant's room to thank him for his lodging.",
-      "description": "[Jack emerges unharmed in the morning]",
-      "scene": "Jack emerges unharmed in the morning"
+      "captioned": true,
+      "caption": "a slip-knot at each end, he threw them over their heads.",
+      "description": "[nooses descending over sleeping giants]",
+      "scene": "Jack ties rope nooses over giants' heads"
     },
     {
       "id": "Jack_The_Giant_Killer_MM033",
       "filename": "Jack_The_Giant_Killer_MM033.json",
       "interpOrder": false,
-      "caption": "The giant started when he saw him, and began to stammer out: \"Oh! dear me; is it you?\"",
-      "description": "[Giant stammers in confusion]",
-      "scene": "Giant stammers in confusion"
+      "captioned": true,
+      "caption": "He tied it to the window-bars; he then pulled till he had choked them.",
+      "description": "[Jack pulling rope taut against window bars]",
+      "scene": "Jack pulls rope and hangs the giants"
     },
     {
       "id": "Jack_The_Giant_Killer_MM034",
       "filename": "Jack_The_Giant_Killer_MM034.json",
       "interpOrder": false,
-      "caption": "\"Nothing to speak of,\" said Jack, carelessly; \"a rat, I believe, gave me three or four slaps with its tail.\"",
-      "description": "[Jack downplays the night's events]",
-      "scene": "Jack downplays the night's events"
+      "captioned": true,
+      "caption": "When they were black in the face he slid down the rope and stabbed them",
+      "description": "[Jack descending rope with drawn sword]",
+      "scene": "Jack stabs the giants with his sword"
     },
     {
       "id": "Jack_The_Giant_Killer_MM035",
       "filename": "Jack_The_Giant_Killer_MM035.json",
       "interpOrder": false,
-      "caption": "The giant wondered more and more at this; yet he did not answer a word, but went to bring two great bowls of hasty-pudding for their breakfast.",
-      "description": "[Giant brings bowls of hasty-pudding]",
-      "scene": "Giant brings bowls of hasty-pudding"
+      "captioned": true,
+      "caption": "to the heart.",
+      "description": "[sword plunging into giant's chest]",
+      "scene": "Jack stabs the giants with his sword"
     },
     {
       "id": "Jack_The_Giant_Killer_MM036",
       "filename": "Jack_The_Giant_Killer_MM036.json",
       "interpOrder": false,
-      "caption": "Jack wanted to make the giant believe that he could eat as much as himself, so he contrived to button a leathern bag inside his coat.",
-      "description": "[Jack hides pudding in a leathern bag]",
-      "scene": "Jack hides pudding in a leathern bag"
+      "captioned": true,
+      "caption": "Jack next took a great bunch of keys from the pocket of Blunderbore, and in",
+      "description": "[Jack holding large ring of rusty keys]",
+      "scene": "Jack finds three starving ladies"
     },
     {
       "id": "Jack_The_Giant_Killer_MM037",
       "filename": "Jack_The_Giant_Killer_MM037.json",
       "interpOrder": false,
-      "caption": "\"Now I will show you a fine trick. I can cure all wounds with a touch; I could cut off my head in one minute, and the next put it sound again on my shoulders.\"",
-      "description": "[Jack reveals his trick to the giant]",
-      "scene": "Jack reveals his trick to the giant"
+      "captioned": true,
+      "caption": "one of them found three ladies tied up by the hair of their heads.",
+      "description": "[three emaciated women bound to wall]",
+      "scene": "Jack finds three starving ladies"
     },
     {
       "id": "Jack_The_Giant_Killer_MM038",
       "filename": "Jack_The_Giant_Killer_MM038.json",
       "interpOrder": false,
-      "caption": "He then took hold of the knife, ripped up the leathern bag, and all the hasty-pudding tumbled out upon the floor.",
-      "description": "[Jack rips open the bag, pudding spills out]",
-      "scene": "Jack rips open the bag, pudding spills out"
+      "captioned": true,
+      "caption": "They told him that their husbands had been killed by the giants, who had then",
+      "description": "[ladies weeping while speaking to Jack]",
+      "scene": "Jack frees the ladies from their bonds"
     },
     {
       "id": "Jack_The_Giant_Killer_MM039",
       "filename": "Jack_The_Giant_Killer_MM039.json",
       "interpOrder": false,
-      "caption": "\"Ods splutter hur nails!\" cried the Welsh giant, who was ashamed to be outdone by such a little fellow as Jack, so he snatched up the knife, plunged it into his own stomach, and in a moment dropped down dead.",
-      "description": "[Welsh giant stabs himself in despair]",
-      "scene": "Welsh giant stabs himself in despair"
+      "captioned": true,
+      "caption": "condemned them to be starved to death.",
+      "description": "[Jack cutting ropes binding the women]",
+      "scene": "Jack frees the ladies from their bonds"
     },
     {
       "id": "Jack_The_Giant_Killer_MM040",
       "filename": "Jack_The_Giant_Killer_MM040.json",
       "interpOrder": false,
-      "caption": "Jack, having hitherto been successful in all his undertakings, resolved not to be idle in future; he therefore furnished himself with a horse, a cap of knowledge, a sword of sharpness, shoes of swiftness, and an invisible coat.",
-      "description": "[Jack equips himself with magical items]",
-      "scene": "Jack equips himself with magical items"
+      "captioned": true,
+      "caption": "\"Ladies,\" said Jack, \"I have put an end to the monster and his wicked brother;",
+      "description": "[Jack addressing three grateful ladies]",
+      "scene": "Jack gives castle and keys to the ladies"
     },
     {
       "id": "Jack_The_Giant_Killer_MM041",
       "filename": "Jack_The_Giant_Killer_MM041.json",
       "interpOrder": false,
-      "caption": "He traveled over high hills, and on the third day he came to a large and spacious forest through which his road lay.",
-      "description": "[Jack enters a great forest]",
-      "scene": "Jack enters a great forest"
+      "captioned": true,
+      "caption": "and I give you this castle and all the riches it contains.\"",
+      "description": "[Jack handing key ring to eldest lady]",
+      "scene": "Jack gives castle and keys to the ladies"
     },
     {
       "id": "Jack_The_Giant_Killer_MM042",
       "filename": "Jack_The_Giant_Killer_MM042.json",
       "interpOrder": false,
-      "caption": "Scarcely had he entered the forest when he beheld a monstrous giant dragging along by the hair of their heads a handsome knight and his lady.",
-      "description": "[Giant drags a knight and lady by their hair]",
-      "scene": "Giant drags a knight and lady by their hair"
+      "captioned": true,
+      "caption": "He then very politely gave them the keys of the castle, and went further on",
+      "description": "[Jack departing through castle gate]",
+      "scene": "Jack travels onward to Wales"
     },
     {
       "id": "Jack_The_Giant_Killer_MM043",
       "filename": "Jack_The_Giant_Killer_MM043.json",
       "interpOrder": false,
-      "caption": "Jack alighted from his horse, and tying him to an oak tree, put on his invisible coat, under which he carried his sword of sharpness.",
-      "description": "[Jack puts on his invisible coat]",
-      "scene": "Jack puts on his invisible coat"
+      "captioned": true,
+      "caption": "his journey to Wales.",
+      "description": "[Jack walking along winding country road]",
+      "scene": "Jack travels onward to Wales"
     },
     {
       "id": "Jack_The_Giant_Killer_MM044",
       "filename": "Jack_The_Giant_Killer_MM044.json",
       "interpOrder": false,
-      "caption": "When he came up to the giant he made several strokes at him, but could not reach his body, but wounded his thighs in several places.",
-      "description": "[Jack fights the giant invisibly]",
-      "scene": "Jack fights the giant invisibly"
+      "captioned": true,
+      "caption": "As Jack had but little money, he went on as fast as possible. At length",
+      "description": "[Jack hurrying along a dusty path]",
+      "scene": "Jack arrives at a handsome Welsh house"
     },
     {
       "id": "Jack_The_Giant_Killer_MM045",
       "filename": "Jack_The_Giant_Killer_MM045.json",
       "interpOrder": false,
-      "caption": "At length, putting both hands to his sword and aiming with all his might, he cut off both his legs.",
-      "description": "[Jack cuts off the giant's legs]",
-      "scene": "Jack cuts off the giant's legs"
+      "captioned": true,
+      "caption": "he came to a handsome house.",
+      "description": "[handsome stone house in Welsh countryside]",
+      "scene": "Jack arrives at a handsome Welsh house"
     },
     {
       "id": "Jack_The_Giant_Killer_MM046",
       "filename": "Jack_The_Giant_Killer_MM046.json",
       "interpOrder": false,
-      "caption": "Then Jack, setting his foot upon his neck, plunged his sword into the giant's body, when the monster gave a groan and expired.",
-      "description": "[Jack stabs the giant through the heart]",
-      "scene": "Jack stabs the giant through the heart"
+      "captioned": true,
+      "caption": "Jack knocked at the door, when there came forth a Welsh giant. Jack said he",
+      "description": "[Jack speaking at doorway to towering giant]",
+      "scene": "Welsh giant welcomes Jack to his home"
     },
     {
       "id": "Jack_The_Giant_Killer_MM047",
       "filename": "Jack_The_Giant_Killer_MM047.json",
       "interpOrder": false,
-      "caption": "The knight and his lady thanked Jack for their deliverance, and invited him to their house, to receive a proper reward for his services.",
-      "description": "[Knight and lady thank Jack]",
-      "scene": "Knight and lady thank Jack"
+      "captioned": true,
+      "caption": "was a traveler who had lost his way.",
+      "description": "[Jack gesturing as a weary traveler]",
+      "scene": "Welsh giant welcomes Jack to his home"
     },
     {
       "id": "Jack_The_Giant_Killer_MM048",
       "filename": "Jack_The_Giant_Killer_MM048.json",
       "interpOrder": false,
-      "caption": "\"No,\" said Jack, \"I cannot be easy till I find out this monster's habitation.\"",
-      "description": "[Jack seeks the giant's habitation]",
-      "scene": "Jack seeks the giant's habitation"
+      "captioned": true,
+      "caption": "Jack took off his clothes quickly, but though he was weary he could not go",
+      "description": "[Jack lying in bed in dark bedroom]",
+      "scene": "Jack lies in bed listening to the giant"
     },
     {
       "id": "Jack_The_Giant_Killer_MM049",
       "filename": "Jack_The_Giant_Killer_MM049.json",
       "interpOrder": false,
-      "caption": "So, taking the knight's directions, he mounted his horse and soon after came in sight of another giant, who was sitting on a block of timber.",
-      "description": "[Second giant sits on a block of timber]",
-      "scene": "Second giant sits on a block of timber"
+      "captioned": true,
+      "caption": "to sleep.",
+      "description": "[Jack's wide eyes staring in darkness]",
+      "scene": "Jack lies in bed listening to the giant"
     },
     {
       "id": "Jack_The_Giant_Killer_MM050",
       "filename": "Jack_The_Giant_Killer_MM050.json",
       "interpOrder": false,
-      "caption": "Jack approached and aimed a blow at the giant's head, but, missing his aim, he only cut off his nose.",
-      "description": "[Jack misses and cuts off the giant's nose]",
-      "scene": "Jack misses and cuts off the giant's nose"
+      "captioned": true,
+      "caption": "\"Though here you lodge with me this night, You shall not see the morning light;",
+      "description": "[shadowy giant chanting in moonlit room]",
+      "scene": "Giant chants a threatening rhyme"
     },
     {
       "id": "Jack_The_Giant_Killer_MM051",
       "filename": "Jack_The_Giant_Killer_MM051.json",
       "interpOrder": false,
-      "caption": "On this the giant seized his club and laid about him most unmercifully.",
-      "description": "[Giant swings his club wildly]",
-      "scene": "Giant swings his club wildly"
+      "captioned": true,
+      "caption": "My club shall dash your brains out quite.\"",
+      "description": "[giant raising heavy wooden club]",
+      "scene": "Giant chants a threatening rhyme"
     },
     {
       "id": "Jack_The_Giant_Killer_MM052",
       "filename": "Jack_The_Giant_Killer_MM052.json",
       "interpOrder": false,
-      "caption": "\"Nay,\" said Jack, \"if this be the case I'd better dispatch you!\" so, jumping upon the block, he stabbed him in the back.",
-      "description": "[Jack jumps on block and stabs the giant]",
-      "scene": "Jack jumps on block and stabs the giant"
+      "captioned": true,
+      "caption": "\"Say you so?\" thought Jack. Then, getting out of bed, he groped about the room,",
+      "description": "[Jack groping through dark room]",
+      "scene": "Jack places a log in his bed"
     },
     {
       "id": "Jack_The_Giant_Killer_MM053",
       "filename": "Jack_The_Giant_Killer_MM053.json",
       "interpOrder": false,
-      "caption": "Jack then proceeded on his journey, and traveled over hills and dales, till arriving at the foot of a high mountain he knocked at the door of a lonely house.",
-      "description": "[Jack arrives at a lonely hermitage]",
-      "scene": "Jack arrives at a lonely hermitage"
+      "captioned": true,
+      "caption": "and found a large thick billet of wood.",
+      "description": "[Jack discovering a thick wooden log]",
+      "scene": "Jack places a log in his bed"
     },
     {
       "id": "Jack_The_Giant_Killer_MM054",
       "filename": "Jack_The_Giant_Killer_MM054.json",
       "interpOrder": false,
-      "caption": "When Jack was seated the hermit thus addressed him: \"My son, on the top of this mountain is an enchanted castle, kept by the giant Galligantus and a vile magician.\"",
-      "description": "[Hermit warns Jack of the enchanted castle]",
-      "scene": "Hermit warns Jack of the enchanted castle"
+      "captioned": true,
+      "caption": "The giant, about midnight, entered the apartment, and with his bludgeon struck many blows on",
+      "description": "[giant swinging club at bed in darkness]",
+      "scene": "Giant strikes the log with his bludgeon"
     },
     {
       "id": "Jack_The_Giant_Killer_MM055",
       "filename": "Jack_The_Giant_Killer_MM055.json",
       "interpOrder": false,
-      "caption": "\"I lament the fate of a duke's daughter, whom they seized as she was walking in her father's garden, and brought hither transformed into a deer.\"",
-      "description": "[Hermit tells of a duke's daughter transformed]",
-      "scene": "Hermit tells of a duke's daughter transformed"
+      "captioned": true,
+      "caption": "the bed.",
+      "description": "[splintered wood flying from bed frame]",
+      "scene": "Giant strikes the log with his bludgeon"
     },
     {
       "id": "Jack_The_Giant_Killer_MM056",
       "filename": "Jack_The_Giant_Killer_MM056.json",
       "interpOrder": false,
-      "caption": "Jack promised that in the morning, at the risk of his life, he would break the enchantment.",
-      "description": "[Jack promises to break the enchantment]",
-      "scene": "Jack promises to break the enchantment"
+      "captioned": true,
+      "caption": "Early in the morning Jack put a bold face upon the matter, and walked into",
+      "description": "[Jack emerging unharmed at dawn]",
+      "scene": "Jack emerges unharmed in the morning"
     },
     {
       "id": "Jack_The_Giant_Killer_MM057",
       "filename": "Jack_The_Giant_Killer_MM057.json",
       "interpOrder": false,
-      "caption": "And after a sound sleep he rose early, put on his invisible coat, and got ready for the attempt.",
-      "description": "[Jack climbs toward the enchanted castle]",
-      "scene": "Jack climbs toward the enchanted castle"
+      "captioned": true,
+      "caption": "the giant's room to thank him for his lodging.",
+      "description": "[Jack casually entering giant's room]",
+      "scene": "Jack emerges unharmed in the morning"
     },
     {
       "id": "Jack_The_Giant_Killer_MM058",
       "filename": "Jack_The_Giant_Killer_MM058.json",
       "interpOrder": false,
-      "caption": "When he had climbed to the top of the mountain he saw two fiery griffins, but he passed between them without the least fear of danger.",
-      "description": "[Jack passes between two fiery griffins]",
-      "scene": "Jack passes between two fiery griffins"
+      "captioned": true,
+      "caption": "The giant started when he saw him, and began to stammer out: \"Oh! dear me;",
+      "description": "[giant's shocked face as Jack appears alive]",
+      "scene": "Giant stammers in confusion"
     },
     {
       "id": "Jack_The_Giant_Killer_MM059",
       "filename": "Jack_The_Giant_Killer_MM059.json",
       "interpOrder": false,
-      "caption": "On the castle gate he found a golden trumpet, under which were written these lines.",
-      "description": "[Jack finds golden trumpet at the castle gate]",
-      "scene": "Jack finds golden trumpet at the castle gate"
+      "captioned": true,
+      "caption": "is it you?\"",
+      "description": "[close-up of giant's bewildered expression]",
+      "scene": "Giant stammers in confusion"
     },
     {
       "id": "Jack_The_Giant_Killer_MM060",
       "filename": "Jack_The_Giant_Killer_MM060.json",
       "interpOrder": false,
-      "caption": "\"Whoever can this trumpet blow Shall cause the giant's overthrow.\"",
-      "description": "[Inscription on the trumpet]",
-      "scene": "Inscription on the trumpet"
+      "captioned": true,
+      "caption": "\"Nothing to speak of,\" said Jack, carelessly; \"a rat, I believe, gave me three or",
+      "description": "[Jack speaking with a smirk]",
+      "scene": "Jack downplays the night's events"
     },
     {
       "id": "Jack_The_Giant_Killer_MM061",
       "filename": "Jack_The_Giant_Killer_MM061.json",
       "interpOrder": false,
-      "caption": "As soon as Jack had read this he seized the trumpet and blew a shrill blast, which made the gates fly open and the very castle itself tremble.",
-      "description": "[Jack blows the trumpet with a shrill blast]",
-      "scene": "Jack blows the trumpet with a shrill blast"
+      "captioned": true,
+      "caption": "four slaps with its tail.\"",
+      "description": "[Jack waving hand dismissively]",
+      "scene": "Jack downplays the night's events"
     },
     {
       "id": "Jack_The_Giant_Killer_MM062",
       "filename": "Jack_The_Giant_Killer_MM062.json",
       "interpOrder": false,
-      "caption": "The giant and the conjurer now knew that their wicked course was at an end, and they stood biting their thumbs and shaking with fear.",
-      "description": "[Giant and magician tremble with fear]",
-      "scene": "Giant and magician tremble with fear"
+      "captioned": true,
+      "caption": "The giant wondered more and more at this; yet he did not answer a word,",
+      "description": "[giant scratching head in puzzlement]",
+      "scene": "Giant brings bowls of hasty-pudding"
     },
     {
       "id": "Jack_The_Giant_Killer_MM063",
       "filename": "Jack_The_Giant_Killer_MM063.json",
       "interpOrder": false,
-      "caption": "Jack, with his sword of sharpness, soon killed the giant.",
-      "description": "[Jack slays the giant with his sword]",
-      "scene": "Jack slays the giant with his sword"
+      "captioned": true,
+      "caption": "but went to bring two great bowls of hasty-pudding for their breakfast.",
+      "description": "[giant carrying two steaming bowls]",
+      "scene": "Giant brings bowls of hasty-pudding"
     },
     {
       "id": "Jack_The_Giant_Killer_MM064",
       "filename": "Jack_The_Giant_Killer_MM064.json",
       "interpOrder": false,
-      "caption": "And the magician was then carried away by a whirlwind.",
-      "description": "[Magician carried away by a whirlwind]",
-      "scene": "Magician carried away by a whirlwind"
+      "captioned": true,
+      "caption": "Jack wanted to make the giant believe that he could eat as much as himself,",
+      "description": "[Jack eyeing giant's enormous bowl]",
+      "scene": "Jack hides pudding in a leathern bag"
     },
     {
       "id": "Jack_The_Giant_Killer_MM065",
       "filename": "Jack_The_Giant_Killer_MM065.json",
       "interpOrder": false,
-      "caption": "And every knight and beautiful lady who had been changed into birds and beasts returned to their proper shapes.",
-      "description": "[Enchanted prisoners return to human form]",
-      "scene": "Enchanted prisoners return to human form"
+      "captioned": true,
+      "caption": "so he contrived to button a leathern bag inside his coat.",
+      "description": "[Jack secretly pushing bag inside coat]",
+      "scene": "Jack hides pudding in a leathern bag"
     },
     {
       "id": "Jack_The_Giant_Killer_MM066",
       "filename": "Jack_The_Giant_Killer_MM066.json",
       "interpOrder": false,
-      "caption": "The castle vanished away like smoke.",
-      "description": "[Enchanted castle vanishes like smoke]",
-      "scene": "Enchanted castle vanishes like smoke"
+      "captioned": true,
+      "caption": "\"Now I will show you a fine trick. I can cure all wounds with a",
+      "description": "[Jack holding up a knife with flair]",
+      "scene": "Jack reveals his trick to the giant"
     },
     {
       "id": "Jack_The_Giant_Killer_MM067",
       "filename": "Jack_The_Giant_Killer_MM067.json",
       "interpOrder": false,
-      "caption": "And the head of the giant Galligantus was then sent to King Arthur.",
-      "description": "[Jack sends giant's head to King Arthur]",
-      "scene": "Jack sends giant's head to King Arthur"
+      "captioned": true,
+      "caption": "touch;",
+      "description": "[Jack pressing knife to his chest]",
+      "scene": "Jack reveals his trick to the giant"
     },
     {
       "id": "Jack_The_Giant_Killer_MM068",
       "filename": "Jack_The_Giant_Killer_MM068.json",
       "interpOrder": false,
-      "caption": "The knights and ladies rested that night at the old man's hermitage, and next day they set out for the Court.",
-      "description": "[Knights and ladies travel to the King's Court]",
-      "scene": "Knights and ladies travel to the King's Court"
+      "captioned": true,
+      "caption": "I could cut off my head in one minute, and the next put it sound",
+      "description": "[Jack holding blade at his throat]",
+      "scene": "Jack reveals his trick to the giant"
     },
     {
       "id": "Jack_The_Giant_Killer_MM069",
       "filename": "Jack_The_Giant_Killer_MM069.json",
       "interpOrder": false,
-      "caption": "Jack then went up to the King, and gave his Majesty an account of all his fierce battles.",
-      "description": "[Jack recounts his adventures to the King]",
-      "scene": "Jack recounts his adventures to the King"
+      "captioned": true,
+      "caption": "again on my shoulders.\"",
+      "description": "[Jack gesturing to his neck]",
+      "scene": "Jack reveals his trick to the giant"
     },
     {
       "id": "Jack_The_Giant_Killer_MM070",
       "filename": "Jack_The_Giant_Killer_MM070.json",
       "interpOrder": false,
-      "caption": "Jack's fame had now spread through the whole country, and at the King's desire the duke gave him his daughter in marriage.",
-      "description": "[Jack receives the duke's daughter's hand in marriage]",
-      "scene": "Jack receives the duke's daughter's hand in marriage"
+      "captioned": true,
+      "caption": "He then took hold of the knife, ripped up the leathern bag, and all the",
+      "description": "[knife slicing open hidden leather bag]",
+      "scene": "Jack rips open the bag, pudding spills out"
     },
     {
       "id": "Jack_The_Giant_Killer_MM071",
       "filename": "Jack_The_Giant_Killer_MM071.json",
       "interpOrder": false,
-      "caption": "After this the King gave him a large estate, on which he and his lady lived the rest of their days in joy and contentment.",
-      "description": "[Jack and his lady live happily ever after]",
+      "captioned": true,
+      "caption": "hasty-pudding tumbled out upon the floor.",
+      "description": "[pudding cascading onto stone floor]",
+      "scene": "Jack rips open the bag, pudding spills out"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM072",
+      "filename": "Jack_The_Giant_Killer_MM072.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Ods splutter hur nails!\" cried the Welsh giant, who was ashamed to be outdone by",
+      "description": "[giant turning red with rage and shame]",
+      "scene": "Welsh giant stabs himself in despair"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM073",
+      "filename": "Jack_The_Giant_Killer_MM073.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "such a little fellow as Jack, so he snatched up the knife, plunged it into",
+      "description": "[giant seizing knife from table]",
+      "scene": "Welsh giant stabs himself in despair"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM074",
+      "filename": "Jack_The_Giant_Killer_MM074.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "his own stomach, and in a moment dropped down dead.",
+      "description": "[giant collapsing to the floor]",
+      "scene": "Welsh giant stabs himself in despair"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM075",
+      "filename": "Jack_The_Giant_Killer_MM075.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Jack, having hitherto been successful in all his undertakings, resolved not to be idle in",
+      "description": "[Jack standing with arms folded resolutely]",
+      "scene": "Jack equips himself with magical items"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM076",
+      "filename": "Jack_The_Giant_Killer_MM076.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "future;",
+      "description": "[Jack gazing toward distant horizon]",
+      "scene": "Jack equips himself with magical items"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM077",
+      "filename": "Jack_The_Giant_Killer_MM077.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "he therefore furnished himself with a horse, a cap of knowledge, a sword of sharpness,",
+      "description": "[Jack on horseback wearing magical cap]",
+      "scene": "Jack equips himself with magical items"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM078",
+      "filename": "Jack_The_Giant_Killer_MM078.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "shoes of swiftness, and an invisible coat.",
+      "description": "[Jack wearing shimmering invisible coat]",
+      "scene": "Jack equips himself with magical items"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM079",
+      "filename": "Jack_The_Giant_Killer_MM079.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "He traveled over high hills, and on the third day he came to a large",
+      "description": "[Jack riding through mountain pass]",
+      "scene": "Jack enters a great forest"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM080",
+      "filename": "Jack_The_Giant_Killer_MM080.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and spacious forest through which his road lay.",
+      "description": "[dense forest stretching endlessly ahead]",
+      "scene": "Jack enters a great forest"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM081",
+      "filename": "Jack_The_Giant_Killer_MM081.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Scarcely had he entered the forest when he beheld a monstrous giant dragging along by",
+      "description": "[giant dragging captives through undergrowth]",
+      "scene": "Giant drags a knight and lady by their hair"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM082",
+      "filename": "Jack_The_Giant_Killer_MM082.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the hair of their heads a handsome knight and his lady.",
+      "description": "[knight and lady struggling in giant's grip]",
+      "scene": "Giant drags a knight and lady by their hair"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM083",
+      "filename": "Jack_The_Giant_Killer_MM083.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Jack alighted from his horse, and tying him to an oak tree, put on his",
+      "description": "[Jack fastening reins to tree trunk]",
+      "scene": "Jack puts on his invisible coat"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM084",
+      "filename": "Jack_The_Giant_Killer_MM084.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "invisible coat,",
+      "description": "[Jack's form becoming translucent]",
+      "scene": "Jack puts on his invisible coat"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM085",
+      "filename": "Jack_The_Giant_Killer_MM085.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "under which he carried his sword of sharpness.",
+      "description": "[glinting sword visible beneath shimmering cloak]",
+      "scene": "Jack puts on his invisible coat"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM086",
+      "filename": "Jack_The_Giant_Killer_MM086.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When he came up to the giant he made several strokes at him, but could",
+      "description": "[giant recoiling from invisible blows]",
+      "scene": "Jack fights the giant invisibly"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM087",
+      "filename": "Jack_The_Giant_Killer_MM087.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "not reach his body, but wounded his thighs in several places.",
+      "description": "[cuts appearing on giant's legs from unseen blade]",
+      "scene": "Jack fights the giant invisibly"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM088",
+      "filename": "Jack_The_Giant_Killer_MM088.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "At length, putting both hands to his sword and aiming with all his might, he",
+      "description": "[two-handed sword swing aimed at giant's legs]",
+      "scene": "Jack cuts off the giant's legs"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM089",
+      "filename": "Jack_The_Giant_Killer_MM089.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "cut off both his legs.",
+      "description": "[giant toppling as legs are severed]",
+      "scene": "Jack cuts off the giant's legs"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM090",
+      "filename": "Jack_The_Giant_Killer_MM090.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Then Jack, setting his foot upon his neck, plunged his sword into the giant's body,",
+      "description": "[Jack standing on giant's neck with sword raised]",
+      "scene": "Jack stabs the giant through the heart"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM091",
+      "filename": "Jack_The_Giant_Killer_MM091.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "when the monster gave a groan and expired.",
+      "description": "[giant's final shudder as life fades]",
+      "scene": "Jack stabs the giant through the heart"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM092",
+      "filename": "Jack_The_Giant_Killer_MM092.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The knight and his lady thanked Jack for their deliverance, and invited him to their",
+      "description": "[knight and lady bowing gratefully to Jack]",
+      "scene": "Knight and lady thank Jack"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM093",
+      "filename": "Jack_The_Giant_Killer_MM093.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "house,",
+      "description": "[lady gesturing toward their home in distance]",
+      "scene": "Knight and lady thank Jack"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM094",
+      "filename": "Jack_The_Giant_Killer_MM094.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to receive a proper reward for his services.",
+      "description": "[Jack smiling modestly at their gratitude]",
+      "scene": "Knight and lady thank Jack"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM095",
+      "filename": "Jack_The_Giant_Killer_MM095.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"No,\" said Jack, \"I cannot be easy till I find out this monster's habitation.\"",
+      "description": "[Jack shaking head and pointing into forest]",
+      "scene": "Jack seeks the giant's habitation"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM096",
+      "filename": "Jack_The_Giant_Killer_MM096.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "So, taking the knight's directions, he mounted his horse and soon after came in sight",
+      "description": "[Jack riding toward distant timber block]",
+      "scene": "Second giant sits on a block of timber"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM097",
+      "filename": "Jack_The_Giant_Killer_MM097.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "of another giant, who was sitting on a block of timber.",
+      "description": "[massive giant seated on huge log]",
+      "scene": "Second giant sits on a block of timber"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM098",
+      "filename": "Jack_The_Giant_Killer_MM098.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Jack approached and aimed a blow at the giant's head, but, missing his aim, he",
+      "description": "[sword slashing at giant's face]",
+      "scene": "Jack misses and cuts off the giant's nose"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM099",
+      "filename": "Jack_The_Giant_Killer_MM099.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "only cut off his nose.",
+      "description": "[severed nose falling to ground]",
+      "scene": "Jack misses and cuts off the giant's nose"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM100",
+      "filename": "Jack_The_Giant_Killer_MM100.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "On this the giant seized his club and laid about him most unmercifully.",
+      "description": "[giant swinging club wildly in rage]",
+      "scene": "Giant swings his club wildly"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM101",
+      "filename": "Jack_The_Giant_Killer_MM101.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Nay,\" said Jack, \"if this be the case I'd better dispatch you!\" so, jumping upon",
+      "description": "[Jack leaping onto timber block]",
+      "scene": "Jack jumps on block and stabs the giant"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM102",
+      "filename": "Jack_The_Giant_Killer_MM102.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the block,",
+      "description": "[Jack mid-leap onto the block]",
+      "scene": "Jack jumps on block and stabs the giant"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM103",
+      "filename": "Jack_The_Giant_Killer_MM103.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "he stabbed him in the back.",
+      "description": "[sword thrust into giant's back]",
+      "scene": "Jack jumps on block and stabs the giant"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM104",
+      "filename": "Jack_The_Giant_Killer_MM104.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Jack then proceeded on his journey, and traveled over hills and dales, till arriving at",
+      "description": "[Jack riding across rolling countryside]",
+      "scene": "Jack arrives at a lonely hermitage"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM105",
+      "filename": "Jack_The_Giant_Killer_MM105.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the foot of a high mountain he knocked at the door of a lonely house.",
+      "description": "[Jack knocking on hermit's cottage door]",
+      "scene": "Jack arrives at a lonely hermitage"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM106",
+      "filename": "Jack_The_Giant_Killer_MM106.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When Jack was seated the hermit thus addressed him: \"My son, on the top of",
+      "description": "[Jack seated across from aged hermit]",
+      "scene": "Hermit warns Jack of the enchanted castle"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM107",
+      "filename": "Jack_The_Giant_Killer_MM107.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "this mountain is an enchanted castle, kept by the giant Galligantus and a vile magician.\"",
+      "description": "[hermit pointing to dark castle on mountaintop]",
+      "scene": "Hermit warns Jack of the enchanted castle"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM108",
+      "filename": "Jack_The_Giant_Killer_MM108.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"I lament the fate of a duke's daughter, whom they seized as she was walking",
+      "description": "[hermit gesturing with sorrowful expression]",
+      "scene": "Hermit tells of a duke's daughter transformed"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM109",
+      "filename": "Jack_The_Giant_Killer_MM109.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "in her father's garden, and brought hither transformed into a deer.\"",
+      "description": "[vision of beautiful woman becoming a deer]",
+      "scene": "Hermit tells of a duke's daughter transformed"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM110",
+      "filename": "Jack_The_Giant_Killer_MM110.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Jack promised that in the morning, at the risk of his life, he would break",
+      "description": "[Jack clasping hermit's hand in promise]",
+      "scene": "Jack promises to break the enchantment"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM111",
+      "filename": "Jack_The_Giant_Killer_MM111.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "the enchantment.",
+      "description": "[Jack's face lit by candlelight resolve]",
+      "scene": "Jack promises to break the enchantment"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM112",
+      "filename": "Jack_The_Giant_Killer_MM112.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And after a sound sleep he rose early, put on his invisible coat, and got",
+      "description": "[Jack donning shimmering coat at dawn]",
+      "scene": "Jack climbs toward the enchanted castle"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM113",
+      "filename": "Jack_The_Giant_Killer_MM113.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "ready for the attempt.",
+      "description": "[Jack testing grip on sword hilt]",
+      "scene": "Jack climbs toward the enchanted castle"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM114",
+      "filename": "Jack_The_Giant_Killer_MM114.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "When he had climbed to the top of the mountain he saw two fiery griffins,",
+      "description": "[two griffins flanking mountain pass entrance]",
+      "scene": "Jack passes between two fiery griffins"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM115",
+      "filename": "Jack_The_Giant_Killer_MM115.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "but he passed between them without the least fear of danger.",
+      "description": "[Jack walking calmly between roaring griffins]",
+      "scene": "Jack passes between two fiery griffins"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM116",
+      "filename": "Jack_The_Giant_Killer_MM116.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "On the castle gate he found a golden trumpet, under which were written these lines.",
+      "description": "[golden trumpet mounted on iron gate]",
+      "scene": "Jack finds golden trumpet at the castle gate"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM117",
+      "filename": "Jack_The_Giant_Killer_MM117.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "\"Whoever can this trumpet blow Shall cause the giant's overthrow.\"",
+      "description": "[inscribed words beneath the trumpet]",
+      "scene": "Inscription on the trumpet"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM118",
+      "filename": "Jack_The_Giant_Killer_MM118.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "As soon as Jack had read this he seized the trumpet and blew a shrill",
+      "description": "[Jack raising trumpet to his lips]",
+      "scene": "Jack blows the trumpet with a shrill blast"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM119",
+      "filename": "Jack_The_Giant_Killer_MM119.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "blast,",
+      "description": "[sound waves emanating from trumpet]",
+      "scene": "Jack blows the trumpet with a shrill blast"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM120",
+      "filename": "Jack_The_Giant_Killer_MM120.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "which made the gates fly open and the very castle itself tremble.",
+      "description": "[castle gates bursting open with force]",
+      "scene": "Jack blows the trumpet with a shrill blast"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM121",
+      "filename": "Jack_The_Giant_Killer_MM121.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The giant and the conjurer now knew that their wicked course was at an end,",
+      "description": "[giant and magician exchanging fearful glances]",
+      "scene": "Giant and magician tremble with fear"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM122",
+      "filename": "Jack_The_Giant_Killer_MM122.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "and they stood biting their thumbs and shaking with fear.",
+      "description": "[giant and magician trembling and biting nails]",
+      "scene": "Giant and magician tremble with fear"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM123",
+      "filename": "Jack_The_Giant_Killer_MM123.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Jack, with his sword of sharpness, soon killed the giant.",
+      "description": "[Jack slashing giant with gleaming sword]",
+      "scene": "Jack slays the giant with his sword"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM124",
+      "filename": "Jack_The_Giant_Killer_MM124.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And the magician was then carried away by a whirlwind.",
+      "description": "[magician spiraling upward in dark whirlwind]",
+      "scene": "Magician carried away by a whirlwind"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM125",
+      "filename": "Jack_The_Giant_Killer_MM125.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And every knight and beautiful lady who had been changed into birds and beasts returned",
+      "description": "[animals transforming back into people]",
+      "scene": "Enchanted prisoners return to human form"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM126",
+      "filename": "Jack_The_Giant_Killer_MM126.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "to their proper shapes.",
+      "description": "[joyful group of restored knights and ladies]",
+      "scene": "Enchanted prisoners return to human form"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM127",
+      "filename": "Jack_The_Giant_Killer_MM127.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The castle vanished away like smoke.",
+      "description": "[castle dissolving into wisps of smoke]",
+      "scene": "Enchanted castle vanishes like smoke"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM128",
+      "filename": "Jack_The_Giant_Killer_MM128.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "And the head of the giant Galligantus was then sent to King Arthur.",
+      "description": "[giant's head presented before King Arthur's throne]",
+      "scene": "Jack sends giant's head to King Arthur"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM129",
+      "filename": "Jack_The_Giant_Killer_MM129.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "The knights and ladies rested that night at the old man's hermitage, and next day",
+      "description": "[group resting peacefully in hermit's cottage]",
+      "scene": "Knights and ladies travel to the King's Court"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM130",
+      "filename": "Jack_The_Giant_Killer_MM130.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "they set out for the Court.",
+      "description": "[procession departing along morning road]",
+      "scene": "Knights and ladies travel to the King's Court"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM131",
+      "filename": "Jack_The_Giant_Killer_MM131.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Jack then went up to the King, and gave his Majesty an account of all",
+      "description": "[Jack kneeling before King Arthur]",
+      "scene": "Jack recounts his adventures to the King"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM132",
+      "filename": "Jack_The_Giant_Killer_MM132.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "his fierce battles.",
+      "description": "[King listening intently to Jack's tale]",
+      "scene": "Jack recounts his adventures to the King"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM133",
+      "filename": "Jack_The_Giant_Killer_MM133.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "Jack's fame had now spread through the whole country, and at the King's desire the",
+      "description": "[Jack standing honored before the court]",
+      "scene": "Jack receives the duke's daughter's hand in marriage"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM134",
+      "filename": "Jack_The_Giant_Killer_MM134.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "duke gave him his daughter in marriage.",
+      "description": "[duke placing daughter's hand in Jack's]",
+      "scene": "Jack receives the duke's daughter's hand in marriage"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM135",
+      "filename": "Jack_The_Giant_Killer_MM135.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "After this the King gave him a large estate, on which he and his lady",
+      "description": "[King presenting deed of land to Jack]",
+      "scene": "Jack and his lady live happily ever after"
+    },
+    {
+      "id": "Jack_The_Giant_Killer_MM136",
+      "filename": "Jack_The_Giant_Killer_MM136.json",
+      "interpOrder": false,
+      "captioned": true,
+      "caption": "lived the rest of their days in joy and contentment.",
+      "description": "[Jack and bride in sunlit garden of estate]",
       "scene": "Jack and his lady live happily ever after"
     }
   ]

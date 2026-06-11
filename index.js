@@ -1281,6 +1281,7 @@ document.addEventListener('DOMContentLoaded', function () {
         body: JSON.stringify({ operation: 'getManifest', bookName: activeBookName })
       })
       const data = await res.json()
+      if (!data.manifest) { console.error('No manifest in response:', data); return }
       activeBookManifest = data.manifest
       updateBookIndicator()
 

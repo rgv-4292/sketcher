@@ -1690,7 +1690,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- Zoom / Pan System ---
   const ZOOM_MIN = 0.25
-  const ZOOM_MAX = 4.0
+  const ZOOM_MAX = 8.0
   const ZOOM_STEP = 0.15
   let zoomLevel = 1.0
   const zoomDisplay = document.getElementById('zoomLevelDisplay')

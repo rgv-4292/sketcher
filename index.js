@@ -1438,12 +1438,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!activeBookManifest || !activePageId) { panel.style.display = 'none'; return }
     const entry = activeBookManifest.pages.find(p => p.id === activePageId)
     const scene = entry?.scene || ''
-    const chars = entry?.characters || ''
-    const action = entry?.action || ''
-    if (!scene && !chars && !action) { panel.style.display = 'none'; return }
+    const desc = entry?.description || ''
+    if (!scene && !desc) { panel.style.display = 'none'; return }
     document.getElementById('refScene').textContent = scene
-    document.getElementById('refChars').textContent = chars
-    document.getElementById('refAction').textContent = action
+    document.getElementById('refDesc').textContent = desc
     panel.style.display = 'block'
   }
 
